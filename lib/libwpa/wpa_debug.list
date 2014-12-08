@@ -1,0 +1,13 @@
+
+wpa_debug.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <eloop_cancel_timeout>:
+   0:	020c      	movi.n	a2, 0
+   2:	f00d      	ret.n
+
+00000004 <eloop_register_timeout>:
+   4:	020c      	movi.n	a2, 0
+   6:	f00d      	ret.n

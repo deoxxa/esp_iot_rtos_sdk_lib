@@ -1,0 +1,138 @@
+
+ieee80211_crypto_tkip.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <.irom0.text>:
+	...
+   8:	fffe51        	l32r	a5, 0 <.irom0.text>
+   b:	404800        	ssai	8
+   e:	7558      	l32i.n	a5, a5, 28
+  10:	fffdb1        	l32r	a11, 4 <.irom0.text+0x4>
+  13:	0375a7        	bbci	a5, 26, 1a <.irom0.text+0x1a>
+  16:	020c      	movi.n	a2, 0
+  18:	f00d      	ret.n
+  1a:	252272        	l32i	a7, a2, 148
+  1d:	0b13a2        	l16ui	a10, a3, 22
+  20:	1358      	l32i.n	a5, a3, 4
+  22:	1b98      	l32i.n	a9, a11, 4
+  24:	1588      	l32i.n	a8, a5, 4
+  26:	1bb8      	l32i.n	a11, a11, 4
+  28:	c08890        	sub	a8, a8, a9
+  2b:	242292        	l32i	a9, a2, 144
+  2e:	aaba      	add.n	a10, a10, a11
+  30:	817790        	src	a7, a7, a9
+  33:	f95c      	movi.n	a9, 95
+  35:	1589      	s32i.n	a8, a5, 4
+  37:	0b53a2        	s16i	a10, a3, 22
+  3a:	109790        	and	a9, a7, a9
+  3d:	0a2c      	movi.n	a10, 32
+  3f:	2064a0        	or	a6, a4, a10
+  42:	004872        	s8i	a7, a8, 0
+  45:	2099a0        	or	a9, a9, a10
+  48:	014892        	s8i	a9, a8, 1
+  4b:	242252        	l32i	a5, a2, 144
+  4e:	034862        	s8i	a6, a8, 3
+  51:	024852        	s8i	a5, a8, 2
+  54:	242242        	l32i	a4, a2, 144
+  57:	252232        	l32i	a3, a2, 148
+  5a:	404010        	ssai	16
+  5d:	813340        	src	a3, a3, a4
+  60:	044832        	s8i	a3, a8, 4
+  63:	2422b2        	l32i	a11, a2, 144
+  66:	2522a2        	l32i	a10, a2, 148
+  69:	404810        	ssai	24
+  6c:	81aab0        	src	a10, a10, a11
+  6f:	0548a2        	s8i	a10, a8, 5
+  72:	252292        	l32i	a9, a2, 148
+  75:	064892        	s8i	a9, a8, 6
+  78:	252272        	l32i	a7, a2, 148
+  7b:	417870        	srli	a7, a7, 8
+  7e:	074872        	s8i	a7, a8, 7
+  81:	242262        	l32i	a6, a2, 144
+  84:	252232        	l32i	a3, a2, 148
+  87:	461b      	addi.n	a4, a6, 1
+  89:	01b467        	bgeu	a4, a6, 8e <.irom0.text+0x8e>
+  8c:	331b      	addi.n	a3, a3, 1
+  8e:	256232        	s32i	a3, a2, 148
+  91:	246242        	s32i	a4, a2, 144
+  94:	120c      	movi.n	a2, 1
+  96:	f00d      	ret.n
+	...
+  a0:	f0c112        	addi	a1, a1, -16
+  a3:	1388      	l32i.n	a8, a3, 4
+  a5:	1109      	s32i.n	a0, a1, 4
+  a7:	1808      	l32i.n	a0, a8, 4
+  a9:	fffb61        	l32r	a6, 98 <.irom0.text+0x98>
+  ac:	740a      	add.n	a7, a4, a0
+  ae:	030752        	l8ui	a5, a7, 3
+  b1:	7668      	l32i.n	a6, a6, 28
+  b3:	045550        	extui	a5, a5, 5, 1
+  b6:	099516        	beqz	a5, 153 <.irom0.text+0x153>
+  b9:	056a60        	extui	a6, a6, 26, 1
+  bc:	093656        	bnez	a6, 153 <.irom0.text+0x153>
+  bf:	060762        	l8ui	a6, a7, 6
+  c2:	070752        	l8ui	a5, a7, 7
+  c5:	000092        	l8ui	a9, a0, 0
+  c8:	8ca0a2        	movi	a10, 140
+  cb:	1099a0        	and	a9, a9, a10
+  ce:	115580        	slli	a5, a5, 8
+  d1:	205560        	or	a5, a5, a6
+  d4:	88a0a2        	movi	a10, 136
+  d7:	000762        	l8ui	a6, a7, 0
+  da:	1199a7        	bne	a9, a10, ef <.irom0.text+0xef>
+  dd:	0100b2        	l8ui	a11, a0, 1
+  e0:	14b0b0        	extui	a11, a11, 0, 2
+  e3:	fdcbb2        	addi	a11, a11, -3
+  e6:	074b56        	bnez	a11, 15e <.irom0.text+0x15e>
+  e9:	1e0002        	l8ui	a0, a0, 30
+  ec:	001c46        	j	161 <.irom0.text+0x161>
+  ef:	001c      	movi.n	a0, 16
+  f1:	116680        	slli	a6, a6, 8
+  f4:	020792        	l8ui	a9, a7, 2
+  f7:	0507a2        	l8ui	a10, a7, 5
+  fa:	0407b2        	l8ui	a11, a7, 4
+  fd:	01aa80        	slli	a10, a10, 24
+ 100:	11bb00        	slli	a11, a11, 16
+ 103:	f47050        	extui	a7, a5, 0, 16
+ 106:	206690        	or	a6, a6, a9
+ 109:	20bb60        	or	a11, a11, a6
+ 10c:	b09020        	addx8	a9, a0, a2
+ 10f:	20aab0        	or	a10, a10, a11
+ 112:	ffe2b1        	l32r	a11, 9c <.irom0.text+0x9c>
+ 115:	0199      	s32i.n	a9, a1, 0
+ 117:	1b79      	s32i.n	a7, a11, 4
+ 119:	0ba9      	s32i.n	a10, a11, 0
+ 11b:	29b8      	l32i.n	a11, a9, 8
+ 11d:	3998      	l32i.n	a9, a9, 12
+ 11f:	000c      	movi.n	a0, 0
+ 121:	073977        	bltu	a9, a7, 12c <.irom0.text+0x12c>
+ 124:	029977        	bne	a9, a7, 12a <.irom0.text+0x12a>
+ 127:	013ba7        	bltu	a11, a10, 12c <.irom0.text+0x12c>
+ 12a:	100c      	movi.n	a0, 1
+ 12c:	30ec      	bnez.n	a0, 153 <.irom0.text+0x153>
+ 12e:	0108      	l32i.n	a0, a1, 0
+ 130:	0b13b2        	l16ui	a11, a3, 22
+ 133:	20a9      	s32i.n	a10, a0, 8
+ 135:	3079      	s32i.n	a7, a0, 12
+ 137:	262202        	l32i	a0, a2, 152
+ 13a:	1868      	l32i.n	a6, a8, 4
+ 13c:	1058      	l32i.n	a5, a0, 4
+ 13e:	2008      	l32i.n	a0, a0, 8
+ 140:	945a      	add.n	a9, a4, a5
+ 142:	669a      	add.n	a6, a6, a9
+ 144:	005a      	add.n	a0, a0, a5
+ 146:	c0bb00        	sub	a11, a11, a0
+ 149:	1869      	s32i.n	a6, a8, 4
+ 14b:	100c      	movi.n	a0, 1
+ 14d:	0b53b2        	s16i	a11, a3, 22
+ 150:	000046        	j	155 <.irom0.text+0x155>
+ 153:	000c      	movi.n	a0, 0
+ 155:	002d      	mov.n	a2, a0
+ 157:	1108      	l32i.n	a0, a1, 4
+ 159:	10c112        	addi	a1, a1, 16
+ 15c:	f00d      	ret.n
+ 15e:	180002        	l8ui	a0, a0, 24
+ 161:	340000        	extui	a0, a0, 0, 4
+ 164:	ffe246        	j	f1 <.irom0.text+0xf1>

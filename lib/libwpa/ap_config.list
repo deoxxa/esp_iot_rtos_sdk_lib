@@ -1,0 +1,303 @@
+
+ap_config.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <hostapd_config_defaults_bss-0x8>:
+   0:	015180        	slli	a5, a1, 24
+   3:	ffff00        	excw
+	...
+
+00000008 <hostapd_config_defaults_bss>:
+   8:	ffff41        	l32r	a4, 4 <hostapd_config_defaults_bss-0x4>
+   b:	2ca132        	movi	a3, 0x12c
+   e:	450c      	movi.n	a5, 4
+  10:	060c      	movi.n	a6, 0
+  12:	fffb71        	l32r	a7, 0 <hostapd_config_defaults_bss-0x8>
+  15:	58a282        	movi	a8, 0x258
+  18:	190c      	movi.n	a9, 1
+  1a:	3a0c      	movi.n	a10, 3
+  1c:	2b0c      	movi.n	a11, 2
+  1e:	1d62b2        	s32i	a11, a2, 116
+  21:	2162b2        	s32i	a11, a2, 132
+  24:	2362b2        	s32i	a11, a2, 140
+  27:	2462b2        	s32i	a11, a2, 144
+  2a:	12b9      	s32i.n	a11, a2, 4
+  2c:	32b9      	s32i.n	a11, a2, 12
+  2e:	1f62a2        	s32i	a10, a2, 124
+  31:	1c6292        	s32i	a9, a2, 112
+  34:	256282        	s32i	a8, a2, 148
+  37:	276272        	s32i	a7, a2, 156
+  3a:	296262        	s32i	a6, a2, 164
+  3d:	0259      	s32i.n	a5, a2, 0
+  3f:	1b6232        	s32i	a3, a2, 108
+  42:	2d6232        	s32i	a3, a2, 180
+  45:	655242        	s16i	a4, a2, 202
+  48:	f37c      	movi.n	a3, -1
+  4a:	2f6232        	s32i	a3, a2, 188
+  4d:	f00d      	ret.n
+	...
+
+00000060 <hostapd_config_defaults>:
+  60:	64a022        	movi	a2, 100
+  63:	f0c112        	addi	a1, a1, -16
+  66:	11c9      	s32i.n	a12, a1, 4
+  68:	21d9      	s32i.n	a13, a1, 8
+  6a:	0109      	s32i.n	a0, a1, 0
+  6c:	fff901        	l32r	a0, 50 <hostapd_config_defaults_bss+0x48>
+  6f:	0000c0        	callx0	a0
+  72:	02dd      	mov.n	a13, a2
+  74:	cca022        	movi	a2, 204
+  77:	fff701        	l32r	a0, 54 <hostapd_config_defaults_bss+0x4c>
+  7a:	0000c0        	callx0	a0
+  7d:	02cd      	mov.n	a12, a2
+  7f:	3dbc      	beqz.n	a13, b6 <hostapd_config_defaults+0x56>
+  81:	12bc      	beqz.n	a2, b6 <hostapd_config_defaults+0x56>
+  83:	000005        	call0	84 <hostapd_config_defaults+0x24>
+  86:	0dc9      	s32i.n	a12, a13, 0
+  88:	c03c      	movi.n	a0, 60
+  8a:	ffa022        	movi	a2, 255
+  8d:	c30c      	movi.n	a3, 12
+  8f:	64a042        	movi	a4, 100
+  92:	150c      	movi.n	a5, 1
+  94:	f67c      	movi.n	a6, -1
+  96:	4d69      	s32i.n	a6, a13, 16
+  98:	5d69      	s32i.n	a6, a13, 20
+  9a:	2d59      	s32i.n	a5, a13, 8
+  9c:	184d52        	s8i	a5, a13, 24
+  9f:	065d42        	s16i	a4, a13, 12
+  a2:	225d32        	s16i	a3, a13, 68
+  a5:	cd29      	s32i.n	a2, a13, 48
+  a7:	dd09      	s32i.n	a0, a13, 52
+  a9:	0108      	l32i.n	a0, a1, 0
+  ab:	0d2d      	mov.n	a2, a13
+  ad:	11c8      	l32i.n	a12, a1, 4
+  af:	21d8      	l32i.n	a13, a1, 8
+  b1:	10c112        	addi	a1, a1, 16
+  b4:	f00d      	ret.n
+  b6:	0d2d      	mov.n	a2, a13
+  b8:	ffe801        	l32r	a0, 58 <hostapd_config_defaults_bss+0x50>
+  bb:	0000c0        	callx0	a0
+  be:	0c2d      	mov.n	a2, a12
+  c0:	ffe701        	l32r	a0, 5c <hostapd_config_defaults_bss+0x54>
+  c3:	0000c0        	callx0	a0
+  c6:	0d0c      	movi.n	a13, 0
+  c8:	fff746        	j	a9 <hostapd_config_defaults+0x49>
+  cb:	000000        	ill
+	...
+
+000000d0 <hostapd_mac_comp>:
+  d0:	640c      	movi.n	a4, 6
+  d2:	f0c112        	addi	a1, a1, -16
+  d5:	0109      	s32i.n	a0, a1, 0
+  d7:	fffd01        	l32r	a0, cc <hostapd_config_defaults+0x6c>
+  da:	0000c0        	callx0	a0
+  dd:	0108      	l32i.n	a0, a1, 0
+  df:	10c112        	addi	a1, a1, 16
+  e2:	f00d      	ret.n
+	...
+
+000000f0 <hostapd_mac_comp_empty>:
+  f0:	fffd31        	l32r	a3, e4 <hostapd_mac_comp+0x14>
+  f3:	640c      	movi.n	a4, 6
+  f5:	f0c112        	addi	a1, a1, -16
+  f8:	2129      	s32i.n	a2, a1, 8
+  fa:	3109      	s32i.n	a0, a1, 12
+  fc:	012d      	mov.n	a2, a1
+  fe:	fffa01        	l32r	a0, e8 <hostapd_mac_comp+0x18>
+ 101:	0000c0        	callx0	a0
+ 104:	2128      	l32i.n	a2, a1, 8
+ 106:	013d      	mov.n	a3, a1
+ 108:	640c      	movi.n	a4, 6
+ 10a:	fff801        	l32r	a0, ec <hostapd_mac_comp+0x1c>
+ 10d:	0000c0        	callx0	a0
+ 110:	3108      	l32i.n	a0, a1, 12
+ 112:	10c112        	addi	a1, a1, 16
+ 115:	f00d      	ret.n
+	...
+ 123:	c11200        	mul16u	a1, a2, a0
+ 126:	0129f0        	slli	a2, a9, 17
+ 129:	1109      	s32i.n	a0, a1, 4
+ 12b:	023c      	movi.n	a2, 48
+ 12d:	fffb01        	l32r	a0, 11c <hostapd_mac_comp_empty+0x2c>
+ 130:	0000c0        	callx0	a0
+ 133:	0108      	l32i.n	a0, a1, 0
+ 135:	a029      	s32i.n	a2, a0, 40
+ 137:	32cc      	bnez.n	a2, 13e <hostapd_mac_comp_empty+0x4e>
+ 139:	f27c      	movi.n	a2, -1
+ 13b:	000386        	j	14d <hostapd_mac_comp_empty+0x5d>
+ 13e:	228b      	addi.n	a2, a2, 8
+ 140:	fff631        	l32r	a3, 118 <hostapd_mac_comp_empty+0x28>
+ 143:	042c      	movi.n	a4, 32
+ 145:	fff601        	l32r	a0, 120 <hostapd_mac_comp_empty+0x30>
+ 148:	0000c0        	callx0	a0
+ 14b:	020c      	movi.n	a2, 0
+ 14d:	1108      	l32i.n	a0, a1, 4
+ 14f:	10c112        	addi	a1, a1, 16
+ 152:	f00d      	ret.n
+
+00000154 <hostapd_setup_wpa_psk>:
+ 154:	f0c112        	addi	a1, a1, -16
+ 157:	1109      	s32i.n	a0, a1, 4
+ 159:	f208      	l32i.n	a0, a2, 60
+ 15b:	a09c      	beqz.n	a0, 179 <hostapd_setup_wpa_psk+0x25>
+ 15d:	e208      	l32i.n	a0, a2, 56
+ 15f:	0129      	s32i.n	a2, a1, 0
+ 161:	00dc      	bnez.n	a0, 175 <hostapd_setup_wpa_psk+0x21>
+ 163:	10c222        	addi	a2, a2, 16
+ 166:	fffbc5        	call0	124 <hostapd_mac_comp_empty+0x34>
+ 169:	0042d6        	bgez	a2, 171 <hostapd_setup_wpa_psk+0x1d>
+ 16c:	f27c      	movi.n	a2, -1
+ 16e:	000246        	j	17b <hostapd_setup_wpa_psk+0x27>
+ 171:	0108      	l32i.n	a0, a1, 0
+ 173:	e008      	l32i.n	a0, a0, 56
+ 175:	120c      	movi.n	a2, 1
+ 177:	1029      	s32i.n	a2, a0, 4
+ 179:	020c      	movi.n	a2, 0
+ 17b:	1108      	l32i.n	a0, a1, 4
+ 17d:	10c112        	addi	a1, a1, 16
+ 180:	f00d      	ret.n
+ 182:	000000        	ill
+ 185:	000000        	ill
+
+00000188 <hostapd_wep_key_cmp>:
+ 188:	f0c112        	addi	a1, a1, -16
+ 18b:	21c9      	s32i.n	a12, a1, 8
+ 18d:	000342        	l8ui	a4, a3, 0
+ 190:	1109      	s32i.n	a0, a1, 4
+ 192:	000202        	l8ui	a0, a2, 0
+ 195:	31d9      	s32i.n	a13, a1, 12
+ 197:	389047        	bne	a0, a4, 1d3 <hostapd_wep_key_cmp+0x4b>
+ 19a:	a368      	l32i.n	a6, a3, 40
+ 19c:	a258      	l32i.n	a5, a2, 40
+ 19e:	03cd      	mov.n	a12, a3
+ 1a0:	2f9567        	bne	a5, a6, 1d3 <hostapd_wep_key_cmp+0x4b>
+ 1a3:	02dd      	mov.n	a13, a2
+ 1a5:	10c272        	addi	a7, a2, 16
+ 1a8:	0179      	s32i.n	a7, a1, 0
+ 1aa:	5d48      	l32i.n	a4, a13, 20
+ 1ac:	5c88      	l32i.n	a8, a12, 20
+ 1ae:	219847        	bne	a8, a4, 1d3 <hostapd_wep_key_cmp+0x4b>
+ 1b1:	1d28      	l32i.n	a2, a13, 4
+ 1b3:	1c38      	l32i.n	a3, a12, 4
+ 1b5:	fff301        	l32r	a0, 184 <hostapd_setup_wpa_psk+0x30>
+ 1b8:	0000c0        	callx0	a0
+ 1bb:	42dc      	bnez.n	a2, 1d3 <hostapd_wep_key_cmp+0x4b>
+ 1bd:	cc4b      	addi.n	a12, a12, 4
+ 1bf:	0198      	l32i.n	a9, a1, 0
+ 1c1:	dd4b      	addi.n	a13, a13, 4
+ 1c3:	e39d97        	bne	a13, a9, 1aa <hostapd_wep_key_cmp+0x22>
+ 1c6:	020c      	movi.n	a2, 0
+ 1c8:	21c8      	l32i.n	a12, a1, 8
+ 1ca:	31d8      	l32i.n	a13, a1, 12
+ 1cc:	1108      	l32i.n	a0, a1, 4
+ 1ce:	10c112        	addi	a1, a1, 16
+ 1d1:	f00d      	ret.n
+ 1d3:	120c      	movi.n	a2, 1
+ 1d5:	fffbc6        	j	1c8 <hostapd_wep_key_cmp+0x40>
+ 1d8:	000000        	ill
+	...
+
+000001dc <hostapd_maclist_found>:
+ 1dc:	d0c112        	addi	a1, a1, -48
+ 1df:	51e9      	s32i.n	a14, a1, 20
+ 1e1:	2109      	s32i.n	a0, a1, 8
+ 1e3:	8149      	s32i.n	a4, a1, 32
+ 1e5:	41d9      	s32i.n	a13, a1, 16
+ 1e7:	61f9      	s32i.n	a15, a1, 24
+ 1e9:	31c9      	s32i.n	a12, a1, 12
+ 1eb:	04fd      	mov.n	a15, a4
+ 1ed:	c30b      	addi.n	a12, a3, -1
+ 1ef:	041c96        	bltz	a12, 234 <hostapd_maclist_found+0x58>
+ 1f2:	0d0c      	movi.n	a13, 0
+ 1f4:	1159      	s32i.n	a5, a1, 4
+ 1f6:	0129      	s32i.n	a2, a1, 0
+ 1f8:	640c      	movi.n	a4, 6
+ 1fa:	0cda      	add.n	a0, a12, a13
+ 1fc:	0138      	l32i.n	a3, a1, 0
+ 1fe:	e01b      	addi.n	a14, a0, 1
+ 200:	b3e000        	movgez	a14, a0, a0
+ 203:	21e1e0        	srai	a14, a14, 1
+ 206:	902ee0        	addx2	a2, a14, a14
+ 209:	a02230        	addx4	a2, a2, a3
+ 20c:	0f3d      	mov.n	a3, a15
+ 20e:	7129      	s32i.n	a2, a1, 28
+ 210:	fff201        	l32r	a0, 1d8 <hostapd_wep_key_cmp+0x50>
+ 213:	0000c0        	callx0	a0
+ 216:	d2cc      	bnez.n	a2, 227 <hostapd_maclist_found+0x4b>
+ 218:	1128      	l32i.n	a2, a1, 4
+ 21a:	7138      	l32i.n	a3, a1, 28
+ 21c:	228c      	beqz.n	a2, 222 <hostapd_maclist_found+0x46>
+ 21e:	2338      	l32i.n	a3, a3, 8
+ 220:	0239      	s32i.n	a3, a2, 0
+ 222:	120c      	movi.n	a2, 1
+ 224:	000386        	j	236 <hostapd_maclist_found+0x5a>
+ 227:	0042d6        	bgez	a2, 22f <hostapd_maclist_found+0x53>
+ 22a:	de1b      	addi.n	a13, a14, 1
+ 22c:	000046        	j	231 <hostapd_maclist_found+0x55>
+ 22f:	ce0b      	addi.n	a12, a14, -1
+ 231:	c3acd7        	bge	a12, a13, 1f8 <hostapd_maclist_found+0x1c>
+ 234:	020c      	movi.n	a2, 0
+ 236:	31c8      	l32i.n	a12, a1, 12
+ 238:	41d8      	l32i.n	a13, a1, 16
+ 23a:	51e8      	l32i.n	a14, a1, 20
+ 23c:	61f8      	l32i.n	a15, a1, 24
+ 23e:	2108      	l32i.n	a0, a1, 8
+ 240:	30c112        	addi	a1, a1, 48
+ 243:	f00d      	ret.n
+ 245:	000000        	ill
+
+00000248 <hostapd_rate_found>:
+ 248:	129c      	beqz.n	a2, 25d <hostapd_rate_found+0x15>
+ 24a:	0268      	l32i.n	a6, a2, 0
+ 24c:	00d696        	bltz	a6, 25d <hostapd_rate_found+0x15>
+ 24f:	039637        	bne	a6, a3, 256 <hostapd_rate_found+0xe>
+ 252:	120c      	movi.n	a2, 1
+ 254:	f00d      	ret.n
+ 256:	1268      	l32i.n	a6, a2, 4
+ 258:	224b      	addi.n	a2, a2, 4
+ 25a:	ff16d6        	bgez	a6, 24f <hostapd_rate_found+0x7>
+ 25d:	020c      	movi.n	a2, 0
+ 25f:	f00d      	ret.n
+ 261:	000000        	ill
+ 264:	000000        	ill
+	...
+
+00000268 <hostapd_get_psk>:
+ 268:	e0c112        	addi	a1, a1, -32
+ 26b:	21c9      	s32i.n	a12, a1, 8
+ 26d:	31d9      	s32i.n	a13, a1, 12
+ 26f:	41e9      	s32i.n	a14, a1, 16
+ 271:	1109      	s32i.n	a0, a1, 4
+ 273:	04ed      	mov.n	a14, a4
+ 275:	100c      	movi.n	a0, 1
+ 277:	0d0c      	movi.n	a13, 0
+ 279:	e2c8      	l32i.n	a12, a2, 56
+ 27b:	83d040        	moveqz	a13, a0, a4
+ 27e:	9cac      	beqz.n	a12, 2ab <hostapd_get_psk+0x43>
+ 280:	0139      	s32i.n	a3, a1, 0
+ 282:	8d9c      	beqz.n	a13, 29e <hostapd_get_psk+0x36>
+ 284:	1c28      	l32i.n	a2, a12, 4
+ 286:	f2cc      	bnez.n	a2, 299 <hostapd_get_psk+0x31>
+ 288:	28cc22        	addi	a2, a12, 40
+ 28b:	0138      	l32i.n	a3, a1, 0
+ 28d:	640c      	movi.n	a4, 6
+ 28f:	fff501        	l32r	a0, 264 <hostapd_rate_found+0x1c>
+ 292:	0000c0        	callx0	a0
+ 295:	100c      	movi.n	a0, 1
+ 297:	32cc      	bnez.n	a2, 29e <hostapd_get_psk+0x36>
+ 299:	2c8b      	addi.n	a2, a12, 8
+ 29b:	000386        	j	2ad <hostapd_get_psk+0x45>
+ 29e:	3c8b      	addi.n	a3, a12, 8
+ 2a0:	c03e30        	sub	a3, a14, a3
+ 2a3:	0cc8      	l32i.n	a12, a12, 0
+ 2a5:	83d030        	moveqz	a13, a0, a3
+ 2a8:	fd6c56        	bnez	a12, 282 <hostapd_get_psk+0x1a>
+ 2ab:	020c      	movi.n	a2, 0
+ 2ad:	21c8      	l32i.n	a12, a1, 8
+ 2af:	31d8      	l32i.n	a13, a1, 12
+ 2b1:	41e8      	l32i.n	a14, a1, 16
+ 2b3:	1108      	l32i.n	a0, a1, 4
+ 2b5:	20c112        	addi	a1, a1, 32
+ 2b8:	f00d      	ret.n

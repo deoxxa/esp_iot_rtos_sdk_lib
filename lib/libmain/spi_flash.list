@@ -1,0 +1,352 @@
+
+spi_flash.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <SPIReadModeCnfig-0x2c>:
+   0:	ff          	.byte 0xff
+   1:	9f          	.byte 0x9f
+   2:	6f          	.byte 0x6f
+   3:	fe          	.byte 0xfe
+   4:	000200        	excw
+   7:	200060        	or	a0, a0, a6
+   a:	000000        	ill
+   d:	000000        	ill
+  10:	000200        	excw
+  13:	200060        	or	a0, a0, a6
+  16:	000100        	excw
+  19:	001020        	excw
+  1c:	802000        	add	a2, a0, a0
+  1f:	600000        	neg	a0, a0
+	...
+
+0000002c <SPIReadModeCnfig>:
+  2c:	f0c112        	addi	a1, a1, -16
+  2f:	0109      	s32i.n	a0, a1, 0
+  31:	11c9      	s32i.n	a12, a1, 4
+  33:	fff341        	l32r	a4, 0 <SPIReadModeCnfig-0x2c>
+  36:	fff331        	l32r	a3, 4 <SPIReadModeCnfig-0x28>
+  39:	0020c0        	memw
+  3c:	2308      	l32i.n	a0, a3, 8
+  3e:	100040        	and	a0, a0, a4
+  41:	0020c0        	memw
+  44:	2309      	s32i.n	a0, a3, 8
+  46:	fff101        	l32r	a0, c <SPIReadModeCnfig-0x20>
+  49:	046216        	beqz	a2, 93 <SPIReadModeCnfig+0x67>
+  4c:	491226        	beqi	a2, 1, 99 <SPIReadModeCnfig+0x6d>
+  4f:	4c2226        	beqi	a2, 2, 9f <SPIReadModeCnfig+0x73>
+  52:	4f3226        	beqi	a2, 3, a5 <SPIReadModeCnfig+0x79>
+  55:	fcc262        	addi	a6, a2, -4
+  58:	ffec51        	l32r	a5, 8 <SPIReadModeCnfig-0x24>
+  5b:	0c0c      	movi.n	a12, 0
+  5d:	83c560        	moveqz	a12, a5, a6
+  60:	42ac      	beqz.n	a2, 88 <SPIReadModeCnfig+0x5c>
+  62:	221226        	beqi	a2, 1, 88 <SPIReadModeCnfig+0x5c>
+  65:	002d      	mov.n	a2, a0
+  67:	ffef01        	l32r	a0, 24 <SPIReadModeCnfig-0x8>
+  6a:	0000c0        	callx0	a0
+  6d:	0020c0        	memw
+  70:	ffe881        	l32r	a8, 10 <SPIReadModeCnfig-0x1c>
+  73:	2878      	l32i.n	a7, a8, 8
+  75:	2077c0        	or	a7, a7, a12
+  78:	0020c0        	memw
+  7b:	2879      	s32i.n	a7, a8, 8
+  7d:	020c      	movi.n	a2, 0
+  7f:	11c8      	l32i.n	a12, a1, 4
+  81:	0108      	l32i.n	a0, a1, 0
+  83:	10c112        	addi	a1, a1, 16
+  86:	f00d      	ret.n
+  88:	002d      	mov.n	a2, a0
+  8a:	ffe701        	l32r	a0, 28 <SPIReadModeCnfig-0x4>
+  8d:	0000c0        	callx0	a0
+  90:	fff646        	j	6d <SPIReadModeCnfig+0x41>
+  93:	ffe0c1        	l32r	a12, 14 <SPIReadModeCnfig-0x18>
+  96:	fff186        	j	60 <SPIReadModeCnfig+0x34>
+  99:	ffdfc1        	l32r	a12, 18 <SPIReadModeCnfig-0x14>
+  9c:	fff006        	j	60 <SPIReadModeCnfig+0x34>
+  9f:	ffdfc1        	l32r	a12, 1c <SPIReadModeCnfig-0x10>
+  a2:	ffee86        	j	60 <SPIReadModeCnfig+0x34>
+  a5:	ffdec1        	l32r	a12, 20 <SPIReadModeCnfig-0xc>
+  a8:	ffed06        	j	60 <SPIReadModeCnfig+0x34>
+	...
+
+000000d8 <SPIWrite>:
+  d8:	045d      	mov.n	a5, a4
+  da:	d0c112        	addi	a1, a1, -48
+  dd:	41c9      	s32i.n	a12, a1, 16
+  df:	61e9      	s32i.n	a14, a1, 24
+  e1:	9139      	s32i.n	a3, a1, 36
+  e3:	3109      	s32i.n	a0, a1, 12
+  e5:	fff141        	l32r	a4, ac <SPIReadModeCnfig+0x80>
+  e8:	71f9      	s32i.n	a15, a1, 28
+  ea:	51d9      	s32i.n	a13, a1, 20
+  ec:	03fd      	mov.n	a15, a3
+  ee:	02dd      	mov.n	a13, a2
+  f0:	1408      	l32i.n	a0, a4, 4
+  f2:	252a      	add.n	a2, a5, a2
+  f4:	023027        	bltu	a0, a2, fa <SPIWrite+0x22>
+  f7:	002046        	j	17c <SPIWrite+0xa4>
+  fa:	120c      	movi.n	a2, 1
+  fc:	001b46        	j	16d <SPIWrite+0x95>
+  ff:	ffec21        	l32r	a2, b0 <SPIReadModeCnfig+0x84>
+ 102:	0d3d      	mov.n	a3, a13
+ 104:	0f4d      	mov.n	a4, a15
+ 106:	0c5d      	mov.n	a5, a12
+ 108:	ffee01        	l32r	a0, c0 <SPIReadModeCnfig+0x94>
+ 10b:	0000c0        	callx0	a0
+ 10e:	fe8256        	bnez	a2, fa <SPIWrite+0x22>
+ 111:	2128      	l32i.n	a2, a1, 8
+ 113:	0e3d      	mov.n	a3, a14
+ 115:	c022c0        	sub	a2, a2, a12
+ 118:	0129      	s32i.n	a2, a1, 0
+ 11a:	ffea01        	l32r	a0, c4 <SPIReadModeCnfig+0x98>
+ 11d:	0000c0        	callx0	a0
+ 120:	1129      	s32i.n	a2, a1, 4
+ 122:	f2ac      	beqz.n	a2, 155 <SPIWrite+0x7d>
+ 124:	030c      	movi.n	a3, 0
+ 126:	8139      	s32i.n	a3, a1, 32
+ 128:	ffe321        	l32r	a2, b4 <SPIReadModeCnfig+0x88>
+ 12b:	3dca      	add.n	a3, a13, a12
+ 12d:	0e5d      	mov.n	a5, a14
+ 12f:	4142c0        	srli	a4, a12, 2
+ 132:	a044f0        	addx4	a4, a4, a15
+ 135:	ffe401        	l32r	a0, c8 <SPIReadModeCnfig+0x9c>
+ 138:	0000c0        	callx0	a0
+ 13b:	fbb256        	bnez	a2, fa <SPIWrite+0x22>
+ 13e:	ceca      	add.n	a12, a14, a12
+ 140:	8168      	l32i.n	a6, a1, 32
+ 142:	1158      	l32i.n	a5, a1, 4
+ 144:	761b      	addi.n	a7, a6, 1
+ 146:	746070        	extui	a6, a7, 0, 8
+ 149:	8169      	s32i.n	a6, a1, 32
+ 14b:	d99567        	bne	a5, a6, 128 <SPIWrite+0x50>
+ 14e:	2188      	l32i.n	a8, a1, 8
+ 150:	c088c0        	sub	a8, a8, a12
+ 153:	0189      	s32i.n	a8, a1, 0
+ 155:	3dca      	add.n	a3, a13, a12
+ 157:	ffd821        	l32r	a2, b8 <SPIReadModeCnfig+0x8c>
+ 15a:	0158      	l32i.n	a5, a1, 0
+ 15c:	4142c0        	srli	a4, a12, 2
+ 15f:	a044f0        	addx4	a4, a4, a15
+ 162:	ffda01        	l32r	a0, cc <SPIReadModeCnfig+0xa0>
+ 165:	0000c0        	callx0	a0
+ 168:	f8e256        	bnez	a2, fa <SPIWrite+0x22>
+ 16b:	020c      	movi.n	a2, 0
+ 16d:	41c8      	l32i.n	a12, a1, 16
+ 16f:	51d8      	l32i.n	a13, a1, 20
+ 171:	61e8      	l32i.n	a14, a1, 24
+ 173:	71f8      	l32i.n	a15, a1, 28
+ 175:	3108      	l32i.n	a0, a1, 12
+ 177:	30c112        	addi	a1, a1, 48
+ 17a:	f00d      	ret.n
+ 17c:	0d2d      	mov.n	a2, a13
+ 17e:	44e8      	l32i.n	a14, a4, 16
+ 180:	2159      	s32i.n	a5, a1, 8
+ 182:	0e3d      	mov.n	a3, a14
+ 184:	ffd301        	l32r	a0, d0 <SPIReadModeCnfig+0xa4>
+ 187:	0000c0        	callx0	a0
+ 18a:	2158      	l32i.n	a5, a1, 8
+ 18c:	c0ce20        	sub	a12, a14, a2
+ 18f:	0235c7        	bltu	a5, a12, 195 <SPIWrite+0xbd>
+ 192:	ffda46        	j	ff <SPIWrite+0x27>
+ 195:	0f4d      	mov.n	a4, a15
+ 197:	0d3d      	mov.n	a3, a13
+ 199:	ffc821        	l32r	a2, bc <SPIReadModeCnfig+0x90>
+ 19c:	ffce01        	l32r	a0, d4 <SPIReadModeCnfig+0xa8>
+ 19f:	0000c0        	callx0	a0
+ 1a2:	f54256        	bnez	a2, fa <SPIWrite+0x22>
+ 1a5:	fff086        	j	16b <SPIWrite+0x93>
+	...
+
+000001b0 <SPIRead>:
+ 1b0:	045d      	mov.n	a5, a4
+ 1b2:	037d      	mov.n	a7, a3
+ 1b4:	f0c112        	addi	a1, a1, -16
+ 1b7:	0109      	s32i.n	a0, a1, 0
+ 1b9:	023d      	mov.n	a3, a2
+ 1bb:	074d      	mov.n	a4, a7
+ 1bd:	fffa21        	l32r	a2, 1a8 <SPIWrite+0xd0>
+ 1c0:	fffb01        	l32r	a0, 1ac <SPIWrite+0xd4>
+ 1c3:	0000c0        	callx0	a0
+ 1c6:	040c      	movi.n	a4, 0
+ 1c8:	0138      	l32i.n	a3, a1, 0
+ 1ca:	100c      	movi.n	a0, 1
+ 1cc:	10c112        	addi	a1, a1, 16
+ 1cf:	830420        	moveqz	a0, a4, a2
+ 1d2:	002d      	mov.n	a2, a0
+ 1d4:	030d      	mov.n	a0, a3
+ 1d6:	f00d      	ret.n
+	...
+
+000001f0 <SPIEraseSector>:
+ 1f0:	f0c112        	addi	a1, a1, -16
+ 1f3:	fff931        	l32r	a3, 1d8 <SPIRead+0x28>
+ 1f6:	11c9      	s32i.n	a12, a1, 4
+ 1f8:	02cd      	mov.n	a12, a2
+ 1fa:	0109      	s32i.n	a0, a1, 0
+ 1fc:	1328      	l32i.n	a2, a3, 4
+ 1fe:	3338      	l32i.n	a3, a3, 12
+ 200:	fff901        	l32r	a0, 1e4 <SPIRead+0x34>
+ 203:	0000c0        	callx0	a0
+ 206:	1fbc27        	bgeu	a12, a2, 229 <SPIEraseSector+0x39>
+ 209:	fff421        	l32r	a2, 1dc <SPIRead+0x2c>
+ 20c:	fff701        	l32r	a0, 1e8 <SPIRead+0x38>
+ 20f:	0000c0        	callx0	a0
+ 212:	32dc      	bnez.n	a2, 229 <SPIEraseSector+0x39>
+ 214:	fff321        	l32r	a2, 1e0 <SPIRead+0x30>
+ 217:	3238      	l32i.n	a3, a2, 12
+ 219:	8233c0        	mull	a3, a3, a12
+ 21c:	fff401        	l32r	a0, 1ec <SPIRead+0x3c>
+ 21f:	0000c0        	callx0	a0
+ 222:	32cc      	bnez.n	a2, 229 <SPIEraseSector+0x39>
+ 224:	020c      	movi.n	a2, 0
+ 226:	000046        	j	22b <SPIEraseSector+0x3b>
+ 229:	120c      	movi.n	a2, 1
+ 22b:	11c8      	l32i.n	a12, a1, 4
+ 22d:	0108      	l32i.n	a0, a1, 0
+ 22f:	10c112        	addi	a1, a1, 16
+ 232:	f00d      	ret.n
+ 234:	000000        	ill
+ 237:	020000        	excw
+ 23a:	006000        	rsil	a0, 0
+ 23d:	100000        	and	a0, a0, a0
+ 240:	ff          	.byte 0xff
+ 241:	ff          	.byte 0xff
+ 242:	ff          	.byte 0xff
+	...
+
+00000250 <spi_flash_get_id>:
+ 250:	f0c112        	addi	a1, a1, -16
+ 253:	0109      	s32i.n	a0, a1, 0
+ 255:	fffb01        	l32r	a0, 244 <SPIEraseSector+0x54>
+ 258:	0000c0        	callx0	a0
+ 25b:	fff621        	l32r	a2, 234 <SPIEraseSector+0x44>
+ 25e:	fffa01        	l32r	a0, 248 <SPIEraseSector+0x58>
+ 261:	0000c0        	callx0	a0
+ 264:	040c      	movi.n	a4, 0
+ 266:	fff401        	l32r	a0, 238 <SPIEraseSector+0x48>
+ 269:	0020c0        	memw
+ 26c:	106042        	s32i	a4, a0, 64
+ 26f:	fff331        	l32r	a3, 23c <SPIEraseSector+0x4c>
+ 272:	0020c0        	memw
+ 275:	0039      	s32i.n	a3, a0, 0
+ 277:	0020c0        	memw
+ 27a:	0028      	l32i.n	a2, a0, 0
+ 27c:	628c      	beqz.n	a2, 286 <spi_flash_get_id+0x36>
+ 27e:	0020c0        	memw
+ 281:	0058      	l32i.n	a5, a0, 0
+ 283:	ff7556        	bnez	a5, 27e <spi_flash_get_id+0x2e>
+ 286:	ffee71        	l32r	a7, 240 <SPIEraseSector+0x50>
+ 289:	0020c0        	memw
+ 28c:	020c      	movi.n	a2, 0
+ 28e:	030c      	movi.n	a3, 0
+ 290:	102062        	l32i	a6, a0, 64
+ 293:	140c      	movi.n	a4, 1
+ 295:	106670        	and	a6, a6, a7
+ 298:	1169      	s32i.n	a6, a1, 4
+ 29a:	ffec01        	l32r	a0, 24c <SPIEraseSector+0x5c>
+ 29d:	0000c0        	callx0	a0
+ 2a0:	0188      	l32i.n	a8, a1, 0
+ 2a2:	1128      	l32i.n	a2, a1, 4
+ 2a4:	080d      	mov.n	a0, a8
+ 2a6:	10c112        	addi	a1, a1, 16
+ 2a9:	f00d      	ret.n
+	...
+
+000002bc <spi_flash_erase_sector>:
+ 2bc:	f0c112        	addi	a1, a1, -16
+ 2bf:	0129      	s32i.n	a2, a1, 0
+ 2c1:	2109      	s32i.n	a0, a1, 8
+ 2c3:	fffa01        	l32r	a0, 2ac <spi_flash_get_id+0x5c>
+ 2c6:	0000c0        	callx0	a0
+ 2c9:	fff901        	l32r	a0, 2b0 <spi_flash_get_id+0x60>
+ 2cc:	0000c0        	callx0	a0
+ 2cf:	0128      	l32i.n	a2, a1, 0
+ 2d1:	000005        	call0	2d4 <spi_flash_erase_sector+0x18>
+ 2d4:	030c      	movi.n	a3, 0
+ 2d6:	1129      	s32i.n	a2, a1, 4
+ 2d8:	140c      	movi.n	a4, 1
+ 2da:	020c      	movi.n	a2, 0
+ 2dc:	fff601        	l32r	a0, 2b4 <spi_flash_get_id+0x64>
+ 2df:	0000c0        	callx0	a0
+ 2e2:	fff501        	l32r	a0, 2b8 <spi_flash_get_id+0x68>
+ 2e5:	0000c0        	callx0	a0
+ 2e8:	2138      	l32i.n	a3, a1, 8
+ 2ea:	1128      	l32i.n	a2, a1, 4
+ 2ec:	030d      	mov.n	a0, a3
+ 2ee:	10c112        	addi	a1, a1, 16
+ 2f1:	f00d      	ret.n
+	...
+
+00000304 <spi_flash_write>:
+ 304:	f0c112        	addi	a1, a1, -16
+ 307:	1109      	s32i.n	a0, a1, 4
+ 309:	31d9      	s32i.n	a13, a1, 12
+ 30b:	21c9      	s32i.n	a12, a1, 8
+ 30d:	03dd      	mov.n	a13, a3
+ 30f:	04cd      	mov.n	a12, a4
+ 311:	33cc      	bnez.n	a3, 318 <spi_flash_write+0x14>
+ 313:	120c      	movi.n	a2, 1
+ 315:	000e46        	j	352 <spi_flash_write+0x4e>
+ 318:	0129      	s32i.n	a2, a1, 0
+ 31a:	300c      	movi.n	a0, 3
+ 31c:	070047        	bnone	a0, a4, 327 <spi_flash_write+0x23>
+ 31f:	400c      	movi.n	a0, 4
+ 321:	41c240        	srli	a12, a4, 2
+ 324:	a0cc00        	addx4	a12, a12, a0
+ 327:	fff301        	l32r	a0, 2f4 <spi_flash_erase_sector+0x38>
+ 32a:	0000c0        	callx0	a0
+ 32d:	fff201        	l32r	a0, 2f8 <spi_flash_erase_sector+0x3c>
+ 330:	0000c0        	callx0	a0
+ 333:	0c4d      	mov.n	a4, a12
+ 335:	0d3d      	mov.n	a3, a13
+ 337:	0128      	l32i.n	a2, a1, 0
+ 339:	000005        	call0	33c <spi_flash_write+0x38>
+ 33c:	030c      	movi.n	a3, 0
+ 33e:	02cd      	mov.n	a12, a2
+ 340:	140c      	movi.n	a4, 1
+ 342:	020c      	movi.n	a2, 0
+ 344:	ffee01        	l32r	a0, 2fc <spi_flash_erase_sector+0x40>
+ 347:	0000c0        	callx0	a0
+ 34a:	ffed01        	l32r	a0, 300 <spi_flash_erase_sector+0x44>
+ 34d:	0000c0        	callx0	a0
+ 350:	0c2d      	mov.n	a2, a12
+ 352:	21c8      	l32i.n	a12, a1, 8
+ 354:	31d8      	l32i.n	a13, a1, 12
+ 356:	1108      	l32i.n	a0, a1, 4
+ 358:	10c112        	addi	a1, a1, 16
+ 35b:	f00d      	ret.n
+	...
+
+00000370 <spi_flash_read>:
+ 370:	f0c112        	addi	a1, a1, -16
+ 373:	2109      	s32i.n	a0, a1, 8
+ 375:	0149      	s32i.n	a4, a1, 0
+ 377:	31c9      	s32i.n	a12, a1, 12
+ 379:	1129      	s32i.n	a2, a1, 4
+ 37b:	03cd      	mov.n	a12, a3
+ 37d:	33cc      	bnez.n	a3, 384 <spi_flash_read+0x14>
+ 37f:	120c      	movi.n	a2, 1
+ 381:	000a86        	j	3af <spi_flash_read+0x3f>
+ 384:	fff701        	l32r	a0, 360 <spi_flash_write+0x5c>
+ 387:	0000c0        	callx0	a0
+ 38a:	fff601        	l32r	a0, 364 <spi_flash_write+0x60>
+ 38d:	0000c0        	callx0	a0
+ 390:	0c3d      	mov.n	a3, a12
+ 392:	1128      	l32i.n	a2, a1, 4
+ 394:	0148      	l32i.n	a4, a1, 0
+ 396:	000005        	call0	398 <spi_flash_read+0x28>
+ 399:	030c      	movi.n	a3, 0
+ 39b:	02cd      	mov.n	a12, a2
+ 39d:	140c      	movi.n	a4, 1
+ 39f:	020c      	movi.n	a2, 0
+ 3a1:	fff101        	l32r	a0, 368 <spi_flash_write+0x64>
+ 3a4:	0000c0        	callx0	a0
+ 3a7:	fff101        	l32r	a0, 36c <spi_flash_write+0x68>
+ 3aa:	0000c0        	callx0	a0
+ 3ad:	0c2d      	mov.n	a2, a12
+ 3af:	31c8      	l32i.n	a12, a1, 12
+ 3b1:	2108      	l32i.n	a0, a1, 8
+ 3b3:	10c112        	addi	a1, a1, 16
+ 3b6:	f00d      	ret.n

@@ -1,0 +1,1745 @@
+
+wdev.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <wDev_ProcessFiq-0x3c8>:
+   0:	000000        	ill
+   3:	000800        	excw
+	...
+  16:	120000        	excw
+  19:	49e0c1        	l32r	a12, fffd279c <wDevDisableRx+0xfffd1da4>
+  1c:	215911        	l32r	a1, fffc8580 <wDevDisableRx+0xfffc7b88>
+  1f:	3169      	s32i.n	a6, a1, 12
+  21:	0129      	s32i.n	a2, a1, 0
+  23:	4109      	s32i.n	a0, a1, 16
+  25:	720c      	movi.n	a2, 7
+  27:	fff901        	l32r	a0, c <wDev_ProcessFiq-0x3bc>
+  2a:	0000c0        	callx0	a0
+  2d:	02dc      	bnez.n	a2, 41 <wDev_ProcessFiq-0x387>
+  2f:	fff421        	l32r	a2, 0 <wDev_ProcessFiq-0x3c8>
+  32:	fff431        	l32r	a3, 4 <wDev_ProcessFiq-0x3c4>
+  35:	f2a042        	movi	a4, 242
+  38:	fff601        	l32r	a0, 10 <wDev_ProcessFiq-0x3b8>
+  3b:	0000c0        	callx0	a0
+  3e:	ffff06        	j	3e <wDev_ProcessFiq-0x38a>
+  41:	2198      	l32i.n	a9, a1, 8
+  43:	31b8      	l32i.n	a11, a1, 12
+  45:	fff051        	l32r	a5, 8 <wDev_ProcessFiq-0x3c0>
+  48:	8208      	l32i.n	a0, a2, 32
+  4a:	0138      	l32i.n	a3, a1, 0
+  4c:	2039      	s32i.n	a3, a0, 8
+  4e:	0558      	l32i.n	a5, a5, 0
+  50:	1138      	l32i.n	a3, a1, 4
+  52:	0015a2        	l16ui	a10, a5, 0
+  55:	1588      	l32i.n	a8, a5, 4
+  57:	10b9      	s32i.n	a11, a0, 4
+  59:	c0aa90        	sub	a10, a10, a9
+  5c:	0055a2        	s16i	a10, a5, 0
+  5f:	2239      	s32i.n	a3, a2, 8
+  61:	1289      	s32i.n	a8, a2, 4
+  63:	065292        	s16i	a9, a2, 12
+  66:	1888      	l32i.n	a8, a8, 4
+  68:	4289      	s32i.n	a8, a2, 16
+  6a:	bfa072        	movi	a7, 191
+  6d:	000c      	movi.n	a0, 0
+  6f:	0020c0        	memw
+  72:	030362        	l8ui	a6, a3, 3
+  75:	106670        	and	a6, a6, a7
+  78:	0020c0        	memw
+  7b:	034362        	s8i	a6, a3, 3
+  7e:	2348      	l32i.n	a4, a3, 8
+  80:	1549      	s32i.n	a4, a5, 4
+  82:	2309      	s32i.n	a0, a3, 8
+  84:	ffe401        	l32r	a0, 14 <wDev_ProcessFiq-0x3b4>
+  87:	0000c0        	callx0	a0
+  8a:	4108      	l32i.n	a0, a1, 16
+  8c:	20c112        	addi	a1, a1, 32
+  8f:	f00d      	ret.n
+	...
+  99:	000000        	ill
+  9c:	026d      	mov.n	a6, a2
+  9e:	fffd71        	l32r	a7, 94 <wDev_ProcessFiq-0x334>
+  a1:	034d      	mov.n	a4, a3
+  a3:	f0c112        	addi	a1, a1, -16
+  a6:	0109      	s32i.n	a0, a1, 0
+  a8:	fffc31        	l32r	a3, 98 <wDev_ProcessFiq-0x330>
+  ab:	2258      	l32i.n	a5, a2, 8
+  ad:	0338      	l32i.n	a3, a3, 0
+  af:	1728      	l32i.n	a2, a7, 4
+  b1:	1759      	s32i.n	a5, a7, 4
+  b3:	001302        	l16ui	a0, a3, 0
+  b6:	050c      	movi.n	a5, 0
+  b8:	c00040        	sub	a0, a0, a4
+  bb:	2659      	s32i.n	a5, a6, 8
+  bd:	005302        	s16i	a0, a3, 0
+  c0:	063d      	mov.n	a3, a6
+  c2:	000005        	call0	c4 <wDev_ProcessFiq-0x304>
+  c5:	0108      	l32i.n	a0, a1, 0
+  c7:	10c112        	addi	a1, a1, 16
+  ca:	f00d      	ret.n
+	...
+  d4:	0008      	l32i.n	a0, a0, 0
+  d6:	000000        	ill
+  d9:	000000        	ill
+  dc:	ff          	.byte 0xff
+  dd:	ff          	.byte 0xff
+  de:	ff          	.byte 0xff
+  df:	000000        	ill
+  e2:	080000        	excw
+  e5:	000000        	ill
+  e8:	0040c4        	excw
+  eb:	001000        	excw
+	...
+ 112:	120000        	excw
+ 115:	d9e0c1        	l32r	a12, ffff6898 <wDevDisableRx+0xffff5ea0>
+ 118:	613941        	l32r	a4, fffd85fc <wDevDisableRx+0xfffd7c04>
+ 11b:	ffecd1        	l32r	a13, cc <wDev_ProcessFiq-0x2fc>
+ 11e:	1149      	s32i.n	a4, a1, 4
+ 120:	0dd8      	l32i.n	a13, a13, 0
+ 122:	2109      	s32i.n	a0, a1, 8
+ 124:	1dd8      	l32i.n	a13, a13, 4
+ 126:	51e9      	s32i.n	a14, a1, 20
+ 128:	1dd8      	l32i.n	a13, a13, 4
+ 12a:	31c9      	s32i.n	a12, a1, 12
+ 12c:	070de2        	l8ui	a14, a13, 7
+ 12f:	02cd      	mov.n	a12, a2
+ 131:	04e3e0        	extui	a14, a14, 3, 1
+ 134:	fff201        	l32r	a0, fc <wDev_ProcessFiq-0x2cc>
+ 137:	0000c0        	callx0	a0
+ 13a:	020d      	mov.n	a0, a2
+ 13c:	02dc      	bnez.n	a2, 150 <wDev_ProcessFiq-0x278>
+ 13e:	ffe421        	l32r	a2, d0 <wDev_ProcessFiq-0x2f8>
+ 141:	ffe431        	l32r	a3, d4 <wDev_ProcessFiq-0x2f4>
+ 144:	43a142        	movi	a4, 0x143
+ 147:	ffee01        	l32r	a0, 100 <wDev_ProcessFiq-0x2c8>
+ 14a:	0000c0        	callx0	a0
+ 14d:	ffff06        	j	14d <wDev_ProcessFiq-0x27b>
+ 150:	061d82        	l16ui	a8, a13, 12
+ 153:	060032        	l8ui	a3, a0, 6
+ 156:	0129      	s32i.n	a2, a1, 0
+ 158:	0a0d42        	l8ui	a4, a13, 10
+ 15b:	f0a022        	movi	a2, 240
+ 15e:	104420        	and	a4, a4, a2
+ 161:	343030        	extui	a3, a3, 0, 4
+ 164:	203340        	or	a3, a3, a4
+ 167:	0a4d32        	s8i	a3, a13, 10
+ 16a:	7eec      	bnez.n	a14, 195 <wDev_ProcessFiq-0x233>
+ 16c:	030da2        	l8ui	a10, a13, 3
+ 16f:	ffda01        	l32r	a0, d8 <wDev_ProcessFiq-0x2f0>
+ 172:	04b4a0        	extui	a11, a10, 4, 1
+ 175:	02ea47        	bbsi	a10, 4, 17b <wDev_ProcessFiq-0x24d>
+ 178:	7d6a57        	bbci	a10, 5, 1f9 <wDev_ProcessFiq-0x1cf>
+ 17b:	349080        	extui	a9, a8, 0, 4
+ 17e:	0a1916        	beqz	a9, 223 <wDev_ProcessFiq-0x1a5>
+ 181:	fcc942        	addi	a4, a9, -4
+ 184:	0d3416        	beqz	a4, 25b <wDev_ProcessFiq-0x16d>
+ 187:	f8c952        	addi	a5, a9, -8
+ 18a:	107516        	beqz	a5, 295 <wDev_ProcessFiq-0x133>
+ 18d:	5c2062        	l32i	a6, a0, 0x170
+ 190:	661b      	addi.n	a6, a6, 1
+ 192:	5c6062        	s32i	a6, a0, 0x170
+ 195:	180c      	movi.n	a8, 1
+ 197:	000246        	j	1a4 <wDev_ProcessFiq-0x224>
+ 19a:	180c      	movi.n	a8, 1
+ 19c:	582072        	l32i	a7, a0, 0x160
+ 19f:	771b      	addi.n	a7, a7, 1
+ 1a1:	586072        	s32i	a7, a0, 0x160
+ 1a4:	888c      	beqz.n	a8, 1b0 <wDev_ProcessFiq-0x218>
+ 1a6:	0c2d      	mov.n	a2, a12
+ 1a8:	6138      	l32i.n	a3, a1, 24
+ 1aa:	ffef05        	call0	9c <wDev_ProcessFiq-0x32c>
+ 1ad:	000ec6        	j	1ec <wDev_ProcessFiq-0x1dc>
+ 1b0:	ffcb91        	l32r	a9, dc <wDev_ProcessFiq-0x2ec>
+ 1b3:	0020c0        	memw
+ 1b6:	011c82        	l16ui	a8, a12, 2
+ 1b9:	118800        	slli	a8, a8, 16
+ 1bc:	0020c0        	memw
+ 1bf:	001ca2        	l16ui	a10, a12, 0
+ 1c2:	2088a0        	or	a8, a8, a10
+ 1c5:	108890        	and	a8, a8, a9
+ 1c8:	418c80        	srli	a8, a8, 12
+ 1cb:	08dc      	bnez.n	a8, 1df <wDev_ProcessFiq-0x1e9>
+ 1cd:	ffc421        	l32r	a2, e0 <wDev_ProcessFiq-0x2e8>
+ 1d0:	ffc531        	l32r	a3, e4 <wDev_ProcessFiq-0x2e4>
+ 1d3:	07a242        	movi	a4, 0x207
+ 1d6:	ffcb01        	l32r	a0, 104 <wDev_ProcessFiq-0x2c4>
+ 1d9:	0000c0        	callx0	a0
+ 1dc:	ffff06        	j	1dc <wDev_ProcessFiq-0x1ec>
+ 1df:	0c4d      	mov.n	a4, a12
+ 1e1:	0e3d      	mov.n	a3, a14
+ 1e3:	0128      	l32i.n	a2, a1, 0
+ 1e5:	6158      	l32i.n	a5, a1, 24
+ 1e7:	1168      	l32i.n	a6, a1, 4
+ 1e9:	ffe2c5        	call0	18 <wDev_ProcessFiq-0x3b0>
+ 1ec:	31c8      	l32i.n	a12, a1, 12
+ 1ee:	41d8      	l32i.n	a13, a1, 16
+ 1f0:	51e8      	l32i.n	a14, a1, 20
+ 1f2:	2108      	l32i.n	a0, a1, 8
+ 1f4:	20c112        	addi	a1, a1, 32
+ 1f7:	f00d      	ret.n
+ 1f9:	05ea67        	bbsi	a10, 6, 202 <wDev_ProcessFiq-0x1c6>
+ 1fc:	4197a0        	srli	a9, a10, 7
+ 1ff:	0aa916        	beqz	a9, 2ad <wDev_ProcessFiq-0x11b>
+ 202:	5a20b2        	l32i	a11, a0, 0x168
+ 205:	349080        	extui	a9, a8, 0, 4
+ 208:	06e916        	beqz	a9, 27a <wDev_ProcessFiq-0x14e>
+ 20b:	0a4926        	beqi	a9, 4, 219 <wDev_ProcessFiq-0x1af>
+ 20e:	7e8926        	beqi	a9, 8, 290 <wDev_ProcessFiq-0x138>
+ 211:	5c20a2        	l32i	a10, a0, 0x170
+ 214:	aa1b      	addi.n	a10, a10, 1
+ 216:	5c60a2        	s32i	a10, a0, 0x170
+ 219:	180c      	movi.n	a8, 1
+ 21b:	bb1b      	addi.n	a11, a11, 1
+ 21d:	5a60b2        	s32i	a11, a0, 0x168
+ 220:	ffe006        	j	1a4 <wDev_ProcessFiq-0x224>
+ 223:	10d820        	and	a13, a8, a2
+ 226:	29ed66        	bnei	a13, 128, 253 <wDev_ProcessFiq-0x175>
+ 229:	f6db16        	beqz	a11, 19a <wDev_ProcessFiq-0x22e>
+ 22c:	0426a0        	extui	a2, a10, 6, 1
+ 22f:	f67216        	beqz	a2, 19a <wDev_ProcessFiq-0x22e>
+ 232:	ffad41        	l32r	a4, e8 <wDev_ProcessFiq-0x2e0>
+ 235:	000422        	l8ui	a2, a4, 0
+ 238:	a30c      	movi.n	a3, 10
+ 23a:	221b      	addi.n	a2, a2, 1
+ 23c:	742020        	extui	a2, a2, 0, 8
+ 23f:	004422        	s8i	a2, a4, 0
+ 242:	ffb101        	l32r	a0, 108 <wDev_ProcessFiq-0x2c0>
+ 245:	0000c0        	callx0	a0
+ 248:	72cc      	bnez.n	a2, 253 <wDev_ProcessFiq-0x175>
+ 24a:	ffa821        	l32r	a2, ec <wDev_ProcessFiq-0x2dc>
+ 24d:	ffaf01        	l32r	a0, 10c <wDev_ProcessFiq-0x2bc>
+ 250:	0000c0        	callx0	a0
+ 253:	ffa701        	l32r	a0, f0 <wDev_ProcessFiq-0x2d8>
+ 256:	080c      	movi.n	a8, 0
+ 258:	ffd006        	j	19c <wDev_ProcessFiq-0x22c>
+ 25b:	109820        	and	a9, a8, a2
+ 25e:	5be926        	beqi	a9, 128, 2bd <wDev_ProcessFiq-0x10b>
+ 261:	90a032        	movi	a3, 144
+ 264:	6d1937        	beq	a9, a3, 2d5 <wDev_ProcessFiq-0xf3>
+ 267:	a0a042        	movi	a4, 160
+ 26a:	5a1947        	beq	a9, a4, 2c8 <wDev_ProcessFiq-0x100>
+ 26d:	572052        	l32i	a5, a0, 0x15c
+ 270:	551b      	addi.n	a5, a5, 1
+ 272:	576052        	s32i	a5, a0, 0x15c
+ 275:	180c      	movi.n	a8, 1
+ 277:	ffca46        	j	1a4 <wDev_ProcessFiq-0x224>
+ 27a:	749080        	extui	a9, a8, 0, 8
+ 27d:	0fd926        	beqi	a9, 64, 290 <wDev_ProcessFiq-0x138>
+ 280:	065c      	movi.n	a6, 80
+ 282:	931967        	beq	a9, a6, 219 <wDev_ProcessFiq-0x1af>
+ 285:	90e966        	bnei	a9, 128, 219 <wDev_ProcessFiq-0x1af>
+ 288:	5b2072        	l32i	a7, a0, 0x16c
+ 28b:	771b      	addi.n	a7, a7, 1
+ 28d:	5b6072        	s32i	a7, a0, 0x16c
+ 290:	080c      	movi.n	a8, 0
+ 292:	ffe146        	j	21b <wDev_ProcessFiq-0x1ad>
+ 295:	ff9791        	l32r	a9, f4 <wDev_ProcessFiq-0x2d4>
+ 298:	592982        	l32i	a8, a9, 0x164
+ 29b:	0d2d      	mov.n	a2, a13
+ 29d:	881b      	addi.n	a8, a8, 1
+ 29f:	596982        	s32i	a8, a9, 0x164
+ 2a2:	ff9b01        	l32r	a0, 110 <wDev_ProcessFiq-0x2b8>
+ 2a5:	0000c0        	callx0	a0
+ 2a8:	080c      	movi.n	a8, 0
+ 2aa:	ffbd86        	j	1a4 <wDev_ProcessFiq-0x224>
+ 2ad:	ff9281        	l32r	a8, f8 <wDev_ProcessFiq-0x2d0>
+ 2b0:	510882        	l8ui	a8, a8, 81
+ 2b3:	190c      	movi.n	a9, 1
+ 2b5:	880b      	addi.n	a8, a8, -1
+ 2b7:	938980        	movnez	a8, a9, a8
+ 2ba:	ffb986        	j	1a4 <wDev_ProcessFiq-0x224>
+ 2bd:	542092        	l32i	a9, a0, 0x150
+ 2c0:	991b      	addi.n	a9, a9, 1
+ 2c2:	546092        	s32i	a9, a0, 0x150
+ 2c5:	ffeb06        	j	275 <wDev_ProcessFiq-0x153>
+ 2c8:	5620a2        	l32i	a10, a0, 0x158
+ 2cb:	080c      	movi.n	a8, 0
+ 2cd:	aa1b      	addi.n	a10, a10, 1
+ 2cf:	5660a2        	s32i	a10, a0, 0x158
+ 2d2:	ffb386        	j	1a4 <wDev_ProcessFiq-0x224>
+ 2d5:	5520b2        	l32i	a11, a0, 0x154
+ 2d8:	bb1b      	addi.n	a11, a11, 1
+ 2da:	5560b2        	s32i	a11, a0, 0x154
+ 2dd:	ffe506        	j	275 <wDev_ProcessFiq-0x153>
+ 2e0:	0040c5        	call0	6f0 <Tx_Copy2Queue+0x10>
+ 2e3:	010400        	slli	a0, a4, 32
+ 2e6:	000000        	ill
+ 2e9:	fe          	.byte 0xfe
+ 2ea:	ef          	.byte 0xef
+ 2eb:	3f          	.byte 0x3f
+ 2ec:	f20a00        	excw
+ 2ef:	3f          	.byte 0x3f
+ 2f0:	000104        	excw
+ 2f3:	fe0000        	excw
+ 2f6:	003ff1        	l32r	a15, fffc03f4 <wDevDisableRx+0xfffbf9fc>
+ 2f9:	000000        	ill
+ 2fc:	f1fe00        	excw
+ 2ff:	3f          	.byte 0x3f
+ 300:	f20e00        	excw
+ 303:	3f          	.byte 0x3f
+ 304:	000000        	ill
+ 307:	000000        	ill
+ 30a:	000003        	excw
+ 30d:	0e          	.byte 0xe
+ 30e:	003ff2        	excw
+ 311:	000400        	excw
+ 314:	040000        	extui	a0, a0, 0, 1
+ 317:	ffff00        	excw
+ 31a:	fffb      	addi.n	a15, a15, 15
+ 31c:	040000        	extui	a0, a0, 0, 1
+ 31f:	002400        	excw
+ 322:	000000        	ill
+ 325:	000400        	excw
+	...
+ 334:	0008      	l32i.n	a0, a0, 0
+ 336:	000000        	ill
+ 339:	000000        	ill
+ 33c:	0008      	l32i.n	a0, a0, 0
+ 33e:	000000        	ill
+ 341:	000000        	ill
+ 344:	0008      	l32i.n	a0, a0, 0
+ 346:	000000        	ill
+ 349:	000000        	ill
+ 34c:	0008      	l32i.n	a0, a0, 0
+ 34e:	000000        	ill
+ 351:	000000        	ill
+ 354:	0008      	l32i.n	a0, a0, 0
+ 356:	000000        	ill
+ 359:	000000        	ill
+ 35c:	0008      	l32i.n	a0, a0, 0
+ 35e:	000000        	ill
+ 361:	000000        	ill
+ 364:	0008      	l32i.n	a0, a0, 0
+ 366:	000000        	ill
+ 369:	000000        	ill
+ 36c:	0008      	l32i.n	a0, a0, 0
+ 36e:	000000        	ill
+ 371:	000000        	ill
+ 374:	0008      	l32i.n	a0, a0, 0
+	...
+
+000003c8 <wDev_ProcessFiq>:
+ 3c8:	ffc631        	l32r	a3, 2e0 <wDev_ProcessFiq-0xe8>
+ 3cb:	d0c112        	addi	a1, a1, -48
+ 3ce:	51c9      	s32i.n	a12, a1, 20
+ 3d0:	61d9      	s32i.n	a13, a1, 24
+ 3d2:	71e9      	s32i.n	a14, a1, 28
+ 3d4:	81f9      	s32i.n	a15, a1, 32
+ 3d6:	4109      	s32i.n	a0, a1, 16
+ 3d8:	ffc361        	l32r	a6, 2e4 <wDev_ProcessFiq-0xe4>
+ 3db:	096c      	movi.n	a9, -32
+ 3dd:	ffc281        	l32r	a8, 2e8 <wDev_ProcessFiq-0xe0>
+ 3e0:	0020c0        	memw
+ 3e3:	802872        	l32i	a7, a8, 0x200
+ 3e6:	107790        	and	a7, a7, a9
+ 3e9:	0020c0        	memw
+ 3ec:	ffc0d1        	l32r	a13, 2ec <wDev_ProcessFiq-0xdc>
+ 3ef:	806872        	s32i	a7, a8, 0x200
+ 3f2:	150c      	movi.n	a5, 1
+ 3f4:	000302        	l8ui	a0, a3, 0
+ 3f7:	804652        	s8i	a5, a6, 128
+ 3fa:	001b      	addi.n	a0, a0, 1
+ 3fc:	004302        	s8i	a0, a3, 0
+ 3ff:	0020c0        	memw
+ 402:	882dc2        	l32i	a12, a13, 0x220
+ 405:	5cdc      	bnez.n	a12, 41e <wDev_ProcessFiq+0x56>
+ 407:	4108      	l32i.n	a0, a1, 16
+ 409:	51c8      	l32i.n	a12, a1, 20
+ 40b:	61d8      	l32i.n	a13, a1, 24
+ 40d:	71e8      	l32i.n	a14, a1, 28
+ 40f:	81f8      	l32i.n	a15, a1, 32
+ 411:	ffb7b1        	l32r	a11, 2f0 <wDev_ProcessFiq-0xd8>
+ 414:	0a0c      	movi.n	a10, 0
+ 416:	804ba2        	s8i	a10, a11, 128
+ 419:	30c112        	addi	a1, a1, 48
+ 41c:	f00d      	ret.n
+ 41e:	0020c0        	memw
+ 421:	a12de2        	l32i	a14, a13, 0x284
+ 424:	0020c0        	memw
+ 427:	896dc2        	s32i	a12, a13, 0x224
+ 42a:	05fcc0        	extui	a15, a12, 28, 1
+ 42d:	1a3f56        	bnez	a15, 5d4 <wDev_ProcessFiq+0x20c>
+ 430:	6b6c87        	bbci	a12, 8, 49f <wDev_ProcessFiq+0xd7>
+ 433:	0020c0        	memw
+ 436:	ffaf21        	l32r	a2, 2f4 <wDev_ProcessFiq-0xd4>
+ 439:	ffaf01        	l32r	a0, 2f8 <wDev_ProcessFiq-0xd0>
+ 43c:	872222        	l32i	a2, a2, 0x21c
+ 43f:	1008      	l32i.n	a0, a0, 4
+ 441:	c00020        	sub	a0, a0, a2
+ 444:	17a056        	bnez	a0, 5c2 <wDev_ProcessFiq+0x1fa>
+ 447:	0020c0        	memw
+ 44a:	ffac31        	l32r	a3, 2fc <wDev_ProcessFiq-0xcc>
+ 44d:	8523f2        	l32i	a15, a3, 0x214
+ 450:	0020c0        	memw
+ 453:	ffab41        	l32r	a4, 300 <wDev_ProcessFiq-0xc8>
+ 456:	bf2442        	l32i	a4, a4, 0x2fc
+ 459:	2149      	s32i.n	a4, a1, 8
+ 45b:	0020c0        	memw
+ 45e:	862332        	l32i	a3, a3, 0x218
+ 461:	743030        	extui	a3, a3, 0, 8
+ 464:	3139      	s32i.n	a3, a1, 12
+ 466:	ffc401        	l32r	a0, 378 <wDev_ProcessFiq-0x50>
+ 469:	0000c0        	callx0	a0
+ 46c:	c052f0        	sub	a5, a2, a15
+ 46f:	1bb556        	bnez	a5, 62e <wDev_ProcessFiq+0x266>
+ 472:	1caf16        	beqz	a15, 640 <wDev_ProcessFiq+0x278>
+ 475:	2f68      	l32i.n	a6, a15, 8
+ 477:	1d7616        	beqz	a6, 652 <wDev_ProcessFiq+0x28a>
+ 47a:	0020c0        	memw
+ 47d:	030f72        	l8ui	a7, a15, 3
+ 480:	647070        	extui	a7, a7, 0, 7
+ 483:	417670        	srli	a7, a7, 6
+ 486:	770b      	addi.n	a7, a7, -1
+ 488:	17e756        	bnez	a7, 60a <wDev_ProcessFiq+0x242>
+ 48b:	0f2d      	mov.n	a2, a15
+ 48d:	3138      	l32i.n	a3, a1, 12
+ 48f:	2148      	l32i.n	a4, a1, 8
+ 491:	ffc805        	call0	114 <wDev_ProcessFiq-0x2b4>
+ 494:	ff9c91        	l32r	a9, 304 <wDev_ProcessFiq-0xc4>
+ 497:	522982        	l32i	a8, a9, 0x148
+ 49a:	881b      	addi.n	a8, a8, 1
+ 49c:	526982        	s32i	a8, a9, 0x148
+ 49f:	ff9a91        	l32r	a9, 308 <wDev_ProcessFiq-0xc0>
+ 4a2:	1709c7        	bnone	a9, a12, 4bd <wDev_ProcessFiq+0xf5>
+ 4a5:	8b6c      	movi.n	a11, -24
+ 4a7:	342ce0        	extui	a2, a14, 12, 4
+ 4aa:	82b2b0        	mull	a11, a2, a11
+ 4ad:	bbda      	add.n	a11, a11, a13
+ 4af:	0020c0        	memw
+ 4b2:	0a0c      	movi.n	a10, 0
+ 4b4:	f06ba2        	s32i	a10, a11, 0x3c0
+ 4b7:	ffb101        	l32r	a0, 37c <wDev_ProcessFiq-0x4c>
+ 4ba:	0000c0        	callx0	a0
+ 4bd:	02fc37        	bbsi	a12, 19, 4c3 <wDev_ProcessFiq+0xfb>
+ 4c0:	002f06        	j	580 <wDev_ProcessFiq+0x1b8>
+ 4c3:	0020c0        	memw
+ 4c6:	ff9101        	l32r	a0, 30c <wDev_ProcessFiq-0xbc>
+ 4c9:	1008      	l32i.n	a0, a0, 4
+ 4cb:	34fce0        	extui	a15, a14, 12, 4
+ 4ce:	057087        	bbci	a0, 24, 4d7 <wDev_ProcessFiq+0x10f>
+ 4d1:	750000        	extui	a0, a0, 16, 8
+ 4d4:	000086        	j	4da <wDev_ProcessFiq+0x112>
+ 4d7:	7fa002        	movi	a0, 127
+ 4da:	1109      	s32i.n	a0, a1, 4
+ 4dc:	078fb6        	bltui	a15, 8, 4e7 <wDev_ProcessFiq+0x11f>
+ 4df:	1109      	s32i.n	a0, a1, 4
+ 4e1:	f6cf32        	addi	a3, a15, -10
+ 4e4:	0fe356        	bnez	a3, 5e6 <wDev_ProcessFiq+0x21e>
+ 4e7:	ffa601        	l32r	a0, 380 <wDev_ProcessFiq-0x48>
+ 4ea:	0000c0        	callx0	a0
+ 4ed:	ff8851        	l32r	a5, 310 <wDev_ProcessFiq-0xb8>
+ 4f0:	105c50        	and	a5, a12, a5
+ 4f3:	0159      	s32i.n	a5, a1, 0
+ 4f5:	a2dc      	bnez.n	a2, 513 <wDev_ProcessFiq+0x14b>
+ 4f7:	ff8761        	l32r	a6, 314 <wDev_ProcessFiq-0xb4>
+ 4fa:	150c67        	bnone	a12, a6, 513 <wDev_ProcessFiq+0x14b>
+ 4fd:	0f2d      	mov.n	a2, a15
+ 4ff:	ffa101        	l32r	a0, 384 <wDev_ProcessFiq-0x44>
+ 502:	0000c0        	callx0	a0
+ 505:	ff8481        	l32r	a8, 318 <wDev_ProcessFiq-0xb0>
+ 508:	ff8571        	l32r	a7, 31c <wDev_ProcessFiq-0xac>
+ 50b:	10cc80        	and	a12, a12, a8
+ 50e:	107c70        	and	a7, a12, a7
+ 511:	0179      	s32i.n	a7, a1, 0
+ 513:	350ce0        	extui	a0, a14, 28, 4
+ 516:	054016        	beqz	a0, 56e <wDev_ProcessFiq+0x1a6>
+ 519:	411026        	beqi	a0, 1, 55e <wDev_ProcessFiq+0x196>
+ 51c:	312026        	beqi	a0, 2, 551 <wDev_ProcessFiq+0x189>
+ 51f:	204026        	beqi	a0, 4, 543 <wDev_ProcessFiq+0x17b>
+ 522:	fbc092        	addi	a9, a0, -5
+ 525:	0f3956        	bnez	a9, 61c <wDev_ProcessFiq+0x254>
+ 528:	91f9      	s32i.n	a15, a1, 36
+ 52a:	ff9701        	l32r	a0, 388 <wDev_ProcessFiq-0x40>
+ 52d:	0000c0        	callx0	a0
+ 530:	ff7c31        	l32r	a3, 320 <wDev_ProcessFiq-0xa8>
+ 533:	91b8      	l32i.n	a11, a1, 36
+ 535:	a0bb30        	addx4	a11, a11, a3
+ 538:	cba8      	l32i.n	a10, a11, 48
+ 53a:	0108      	l32i.n	a0, a1, 0
+ 53c:	aa1b      	addi.n	a10, a10, 1
+ 53e:	cba9      	s32i.n	a10, a11, 48
+ 540:	001086        	j	586 <wDev_ProcessFiq+0x1be>
+ 543:	7520e0        	extui	a2, a14, 16, 8
+ 546:	ff9101        	l32r	a0, 38c <wDev_ProcessFiq-0x3c>
+ 549:	0000c0        	callx0	a0
+ 54c:	91f9      	s32i.n	a15, a1, 36
+ 54e:	fff786        	j	530 <wDev_ProcessFiq+0x168>
+ 551:	0f2d      	mov.n	a2, a15
+ 553:	ff8f01        	l32r	a0, 390 <wDev_ProcessFiq-0x38>
+ 556:	0000c0        	callx0	a0
+ 559:	91f9      	s32i.n	a15, a1, 36
+ 55b:	fff446        	j	530 <wDev_ProcessFiq+0x168>
+ 55e:	7520e0        	extui	a2, a14, 16, 8
+ 561:	0f3d      	mov.n	a3, a15
+ 563:	ff8c01        	l32r	a0, 394 <wDev_ProcessFiq-0x34>
+ 566:	0000c0        	callx0	a0
+ 569:	91f9      	s32i.n	a15, a1, 36
+ 56b:	fff046        	j	530 <wDev_ProcessFiq+0x168>
+ 56e:	1138      	l32i.n	a3, a1, 4
+ 570:	0f2d      	mov.n	a2, a15
+ 572:	743030        	extui	a3, a3, 0, 8
+ 575:	ff8801        	l32r	a0, 398 <wDev_ProcessFiq-0x30>
+ 578:	0000c0        	callx0	a0
+ 57b:	91f9      	s32i.n	a15, a1, 36
+ 57d:	ffebc6        	j	530 <wDev_ProcessFiq+0x168>
+ 580:	ff6901        	l32r	a0, 324 <wDev_ProcessFiq-0xa4>
+ 583:	100c00        	and	a0, a12, a0
+ 586:	d08c      	beqz.n	a0, 597 <wDev_ProcessFiq+0x1cf>
+ 588:	342ce0        	extui	a2, a14, 12, 4
+ 58b:	0282b6        	bltui	a2, 8, 591 <wDev_ProcessFiq+0x1c9>
+ 58e:	669266        	bnei	a2, 10, 5f8 <wDev_ProcessFiq+0x230>
+ 591:	ff8201        	l32r	a0, 39c <wDev_ProcessFiq-0x2c>
+ 594:	0000c0        	callx0	a0
+ 597:	057c47        	bbci	a12, 20, 5a0 <wDev_ProcessFiq+0x1d8>
+ 59a:	ff8101        	l32r	a0, 3a0 <wDev_ProcessFiq-0x28>
+ 59d:	0000c0        	callx0	a0
+ 5a0:	0a6c97        	bbci	a12, 9, 5ae <wDev_ProcessFiq+0x1e6>
+ 5a3:	ff6141        	l32r	a4, 328 <wDev_ProcessFiq-0xa0>
+ 5a6:	5e2432        	l32i	a3, a4, 0x178
+ 5a9:	331b      	addi.n	a3, a3, 1
+ 5ab:	5e6432        	s32i	a3, a4, 0x178
+ 5ae:	0547c0        	extui	a4, a12, 23, 1
+ 5b1:	e4a416        	beqz	a4, 3ff <wDev_ProcessFiq+0x37>
+ 5b4:	ff5e61        	l32r	a6, 32c <wDev_ProcessFiq-0x9c>
+ 5b7:	5f2652        	l32i	a5, a6, 0x17c
+ 5ba:	551b      	addi.n	a5, a5, 1
+ 5bc:	5f6652        	s32i	a5, a6, 0x17c
+ 5bf:	ff8f06        	j	3ff <wDev_ProcessFiq+0x37>
+ 5c2:	ff5b21        	l32r	a2, 330 <wDev_ProcessFiq-0x98>
+ 5c5:	ff5b31        	l32r	a3, 334 <wDev_ProcessFiq-0x94>
+ 5c8:	c1a342        	movi	a4, 0x3c1
+ 5cb:	ff7601        	l32r	a0, 3a4 <wDev_ProcessFiq-0x24>
+ 5ce:	0000c0        	callx0	a0
+ 5d1:	ffff06        	j	5d1 <wDev_ProcessFiq+0x209>
+ 5d4:	ff5921        	l32r	a2, 338 <wDev_ProcessFiq-0x90>
+ 5d7:	ff5931        	l32r	a3, 33c <wDev_ProcessFiq-0x8c>
+ 5da:	77a342        	movi	a4, 0x377
+ 5dd:	ff7201        	l32r	a0, 3a8 <wDev_ProcessFiq-0x20>
+ 5e0:	0000c0        	callx0	a0
+ 5e3:	ffff06        	j	5e3 <wDev_ProcessFiq+0x21b>
+ 5e6:	ff5621        	l32r	a2, 340 <wDev_ProcessFiq-0x88>
+ 5e9:	ff5631        	l32r	a3, 344 <wDev_ProcessFiq-0x84>
+ 5ec:	1da442        	movi	a4, 0x41d
+ 5ef:	ff6f01        	l32r	a0, 3ac <wDev_ProcessFiq-0x1c>
+ 5f2:	0000c0        	callx0	a0
+ 5f5:	ffff06        	j	5f5 <wDev_ProcessFiq+0x22d>
+ 5f8:	ff5421        	l32r	a2, 348 <wDev_ProcessFiq-0x80>
+ 5fb:	ff5431        	l32r	a3, 34c <wDev_ProcessFiq-0x7c>
+ 5fe:	44a442        	movi	a4, 0x444
+ 601:	ff6b01        	l32r	a0, 3b0 <wDev_ProcessFiq-0x18>
+ 604:	0000c0        	callx0	a0
+ 607:	ffff06        	j	607 <wDev_ProcessFiq+0x23f>
+ 60a:	ff5121        	l32r	a2, 350 <wDev_ProcessFiq-0x78>
+ 60d:	ff5131        	l32r	a3, 354 <wDev_ProcessFiq-0x74>
+ 610:	d0a342        	movi	a4, 0x3d0
+ 613:	ff6801        	l32r	a0, 3b4 <wDev_ProcessFiq-0x14>
+ 616:	0000c0        	callx0	a0
+ 619:	ffff06        	j	619 <wDev_ProcessFiq+0x251>
+ 61c:	ff4f21        	l32r	a2, 358 <wDev_ProcessFiq-0x70>
+ 61f:	ff4f31        	l32r	a3, 35c <wDev_ProcessFiq-0x6c>
+ 622:	38a442        	movi	a4, 0x438
+ 625:	ff6401        	l32r	a0, 3b8 <wDev_ProcessFiq-0x10>
+ 628:	0000c0        	callx0	a0
+ 62b:	ffff06        	j	62b <wDev_ProcessFiq+0x263>
+ 62e:	ff4c21        	l32r	a2, 360 <wDev_ProcessFiq-0x68>
+ 631:	ff4c31        	l32r	a3, 364 <wDev_ProcessFiq-0x64>
+ 634:	c6a342        	movi	a4, 0x3c6
+ 637:	ff6101        	l32r	a0, 3bc <wDev_ProcessFiq-0xc>
+ 63a:	0000c0        	callx0	a0
+ 63d:	ffff06        	j	63d <wDev_ProcessFiq+0x275>
+ 640:	ff4a21        	l32r	a2, 368 <wDev_ProcessFiq-0x60>
+ 643:	ff4a31        	l32r	a3, 36c <wDev_ProcessFiq-0x5c>
+ 646:	cea342        	movi	a4, 0x3ce
+ 649:	ff5d01        	l32r	a0, 3c0 <wDev_ProcessFiq-0x8>
+ 64c:	0000c0        	callx0	a0
+ 64f:	ffff06        	j	64f <wDev_ProcessFiq+0x287>
+ 652:	ff4721        	l32r	a2, 370 <wDev_ProcessFiq-0x58>
+ 655:	ff4731        	l32r	a3, 374 <wDev_ProcessFiq-0x54>
+ 658:	cfa342        	movi	a4, 0x3cf
+ 65b:	ff5a01        	l32r	a0, 3c4 <wDev_ProcessFiq-0x4>
+ 65e:	0000c0        	callx0	a0
+ 661:	ffff06        	j	661 <wDev_ProcessFiq+0x299>
+ 664:	f20a00        	excw
+ 667:	3f          	.byte 0x3f
+ 668:	000000        	ill
+ 66b:	0024c0        	excw
+	...
+
+00000670 <wDev_EnableTransmit>:
+ 670:	fffd91        	l32r	a9, 664 <wDev_ProcessFiq+0x29c>
+ 673:	886c      	movi.n	a8, -24
+ 675:	34a030        	extui	a10, a3, 0, 4
+ 678:	94b040        	extui	a11, a4, 0, 10
+ 67b:	11bb40        	slli	a11, a11, 12
+ 67e:	01aa80        	slli	a10, a10, 24
+ 681:	d18820        	mul16s	a8, a8, a2
+ 684:	889a      	add.n	a8, a8, a9
+ 686:	20aab0        	or	a10, a10, a11
+ 689:	0020c0        	memw
+ 68c:	f068a2        	s32i	a10, a8, 0x3c0
+ 68f:	fff691        	l32r	a9, 668 <wDev_ProcessFiq+0x2a0>
+ 692:	0020c0        	memw
+ 695:	f12872        	l32i	a7, a8, 0x3c4
+ 698:	207790        	or	a7, a7, a9
+ 69b:	0020c0        	memw
+ 69e:	fff361        	l32r	a6, 66c <wDev_ProcessFiq+0x2a4>
+ 6a1:	a06260        	addx4	a6, a2, a6
+ 6a4:	0658      	l32i.n	a5, a6, 0
+ 6a6:	f16872        	s32i	a7, a8, 0x3c4
+ 6a9:	551b      	addi.n	a5, a5, 1
+ 6ab:	0659      	s32i.n	a5, a6, 0
+ 6ad:	f00d      	ret.n
+ 6af:	0a0000        	excw
+ 6b2:	ff3ff2        	excw
+ 6b5:	ff          	.byte 0xff
+ 6b6:	ff          	.byte 0xff
+ 6b7:	3f          	.byte 0x3f
+
+000006b8 <wDev_DisableTransmit>:
+ 6b8:	846c      	movi.n	a4, -24
+ 6ba:	fffd51        	l32r	a5, 6b0 <wDev_EnableTransmit+0x40>
+ 6bd:	d14420        	mul16s	a4, a4, a2
+ 6c0:	445a      	add.n	a4, a4, a5
+ 6c2:	fffc51        	l32r	a5, 6b4 <wDev_EnableTransmit+0x44>
+ 6c5:	0020c0        	memw
+ 6c8:	f12432        	l32i	a3, a4, 0x3c4
+ 6cb:	103350        	and	a3, a3, a5
+ 6ce:	0020c0        	memw
+ 6d1:	f16432        	s32i	a3, a4, 0x3c4
+ 6d4:	f00d      	ret.n
+ 6d6:	000000        	ill
+ 6d9:	f20a      	add.n	a15, a2, a0
+ 6db:	3f          	.byte 0x3f
+ 6dc:	ff          	.byte 0xff
+ 6dd:	ff          	.byte 0xff
+ 6de:	ff          	.byte 0xff
+ 6df:	3f          	.byte 0x3f
+
+000006e0 <Tx_Copy2Queue>:
+ 6e0:	ffff71        	l32r	a7, 6dc <wDev_DisableTransmit+0x24>
+ 6e3:	846c      	movi.n	a4, -24
+ 6e5:	fffc31        	l32r	a3, 6d8 <wDev_DisableTransmit+0x20>
+ 6e8:	d14420        	mul16s	a4, a4, a2
+ 6eb:	443a      	add.n	a4, a4, a3
+ 6ed:	0020c0        	memw
+ 6f0:	b72382        	l32i	a8, a3, 0x2dc
+ 6f3:	108870        	and	a8, a8, a7
+ 6f6:	0020c0        	memw
+ 6f9:	f16482        	s32i	a8, a4, 0x3c4
+ 6fc:	0020c0        	memw
+ 6ff:	b82362        	l32i	a6, a3, 0x2e0
+ 702:	106670        	and	a6, a6, a7
+ 705:	0020c0        	memw
+ 708:	f26462        	s32i	a6, a4, 0x3c8
+ 70b:	0020c0        	memw
+ 70e:	b92352        	l32i	a5, a3, 0x2e4
+ 711:	0020c0        	memw
+ 714:	f36452        	s32i	a5, a4, 0x3cc
+ 717:	0020c0        	memw
+ 71a:	ba2332        	l32i	a3, a3, 0x2e8
+ 71d:	0020c0        	memw
+ 720:	f46432        	s32i	a3, a4, 0x3d0
+ 723:	f00d      	ret.n
+ 725:	000000        	ill
+ 728:	000024        	excw
+	...
+
+0000072c <wDev_ProcessCollision>:
+ 72c:	f0c112        	addi	a1, a1, -16
+ 72f:	11c9      	s32i.n	a12, a1, 4
+ 731:	0109      	s32i.n	a0, a1, 0
+ 733:	02cd      	mov.n	a12, a2
+ 735:	000005        	call0	738 <wDev_ProcessCollision+0xc>
+ 738:	fffc21        	l32r	a2, 728 <Tx_Copy2Queue+0x48>
+ 73b:	a02c20        	addx4	a2, a12, a2
+ 73e:	182202        	l32i	a0, a2, 96
+ 741:	11c8      	l32i.n	a12, a1, 4
+ 743:	001b      	addi.n	a0, a0, 1
+ 745:	186202        	s32i	a0, a2, 96
+ 748:	0108      	l32i.n	a0, a1, 0
+ 74a:	10c112        	addi	a1, a1, 16
+ 74d:	f00d      	ret.n
+ 74f:	0a0000        	excw
+ 752:	213ff2        	excw
+
+00000754 <wDev_GetTxqCollisions>:
+ 754:	ffff21        	l32r	a2, 750 <wDev_ProcessCollision+0x24>
+ 757:	0020c0        	memw
+ 75a:	b02222        	l32i	a2, a2, 0x2c0
+ 75d:	b42020        	extui	a2, a2, 0, 12
+ 760:	f00d      	ret.n
+ 762:	000000        	ill
+ 765:	fffff0        	excw
+ 768:	f20a00        	excw
+ 76b:	3f          	.byte 0x3f
+
+0000076c <wDev_ClearTxqCollisions>:
+ 76c:	fffe41        	l32r	a4, 764 <wDev_GetTxqCollisions+0x10>
+ 76f:	fffe31        	l32r	a3, 768 <wDev_GetTxqCollisions+0x14>
+ 772:	0020c0        	memw
+ 775:	b02322        	l32i	a2, a3, 0x2c0
+ 778:	102240        	and	a2, a2, a4
+ 77b:	0020c0        	memw
+ 77e:	b06322        	s32i	a2, a3, 0x2c0
+ 781:	f00d      	ret.n
+ 783:	0a0000        	excw
+ 786:	ff3ff2        	excw
+ 789:	ff          	.byte 0xff
+ 78a:	ff          	.byte 0xff
+ 78b:	7f          	.byte 0x7f
+ 78c:	000000        	ill
+ 78f:	087c40        	excw
+
+00000790 <wDev_SetWaitingQueue>:
+ 790:	087c      	movi.n	a8, -16
+ 792:	347020        	extui	a7, a2, 0, 4
+ 795:	fffb51        	l32r	a5, 784 <wDev_ClearTxqCollisions+0x18>
+ 798:	0020c0        	memw
+ 79b:	ac2562        	l32i	a6, a5, 0x2b0
+ 79e:	106680        	and	a6, a6, a8
+ 7a1:	206670        	or	a6, a6, a7
+ 7a4:	0020c0        	memw
+ 7a7:	ac6562        	s32i	a6, a5, 0x2b0
+ 7aa:	c46c      	movi.n	a4, -20
+ 7ac:	d14420        	mul16s	a4, a4, a2
+ 7af:	fff671        	l32r	a7, 788 <wDev_ClearTxqCollisions+0x1c>
+ 7b2:	445a      	add.n	a4, a4, a5
+ 7b4:	0020c0        	memw
+ 7b7:	e92462        	l32i	a6, a4, 0x3a4
+ 7ba:	106670        	and	a6, a6, a7
+ 7bd:	0020c0        	memw
+ 7c0:	e96462        	s32i	a6, a4, 0x3a4
+ 7c3:	fff251        	l32r	a5, 78c <wDev_ClearTxqCollisions+0x20>
+ 7c6:	0020c0        	memw
+ 7c9:	e92432        	l32i	a3, a4, 0x3a4
+ 7cc:	203350        	or	a3, a3, a5
+ 7cf:	0020c0        	memw
+ 7d2:	e96432        	s32i	a3, a4, 0x3a4
+ 7d5:	f00d      	ret.n
+ 7d7:	0a0000        	excw
+ 7da:	ff3ff2        	excw
+ 7dd:	ff          	.byte 0xff
+ 7de:	ff          	.byte 0xff
+ 7df:	bf          	.byte 0xbf
+
+000007e0 <wDev_ClearWaitingQueue>:
+ 7e0:	c46c      	movi.n	a4, -20
+ 7e2:	fffd51        	l32r	a5, 7d8 <wDev_SetWaitingQueue+0x48>
+ 7e5:	d14420        	mul16s	a4, a4, a2
+ 7e8:	445a      	add.n	a4, a4, a5
+ 7ea:	fffc51        	l32r	a5, 7dc <wDev_SetWaitingQueue+0x4c>
+ 7ed:	0020c0        	memw
+ 7f0:	e92432        	l32i	a3, a4, 0x3a4
+ 7f3:	103350        	and	a3, a3, a5
+ 7f6:	0020c0        	memw
+ 7f9:	e96432        	s32i	a3, a4, 0x3a4
+ 7fc:	f00d      	ret.n
+ 7fe:	000000        	ill
+ 801:	3ff200        	excw
+
+00000804 <wDev_SetFrameAckType>:
+ 804:	348420        	extui	a8, a2, 4, 4
+ 807:	147220        	extui	a7, a2, 2, 2
+ 80a:	418380        	srli	a8, a8, 3
+ 80d:	907780        	addx2	a7, a7, a8
+ 810:	fffc81        	l32r	a8, 800 <wDev_ClearWaitingQueue+0x20>
+ 813:	747070        	extui	a7, a7, 0, 8
+ 816:	1177e0        	slli	a7, a7, 2
+ 819:	778a      	add.n	a7, a7, a8
+ 81b:	0cd742        	addmi	a4, a7, 0xc00
+ 81e:	f80c      	movi.n	a8, 15
+ 820:	0020c0        	memw
+ 823:	0cd772        	addmi	a7, a7, 0xc00
+ 826:	262442        	l32i	a4, a4, 152
+ 829:	f97c      	movi.n	a9, -1
+ 82b:	246420        	extui	a6, a2, 4, 3
+ 82e:	c51c      	movi.n	a5, 28
+ 830:	1166e0        	slli	a6, a6, 2
+ 833:	c05560        	sub	a5, a5, a6
+ 836:	745050        	extui	a5, a5, 0, 8
+ 839:	401500        	ssl	a5
+ 83c:	a18800        	sll	a8, a8
+ 83f:	401500        	ssl	a5
+ 842:	308890        	xor	a8, a8, a9
+ 845:	108480        	and	a8, a4, a8
+ 848:	a16300        	sll	a6, a3
+ 84b:	206680        	or	a6, a6, a8
+ 84e:	0020c0        	memw
+ 851:	266762        	s32i	a6, a7, 152
+ 854:	400500        	ssr	a5
+ 857:	912040        	srl	a2, a4
+ 85a:	342020        	extui	a2, a2, 0, 4
+ 85d:	f00d      	ret.n
+ 85f:	0fff00        	excw
+ 862:	00ff00        	excw
+ 865:	000000        	ill
+ 868:	0008      	l32i.n	a0, a0, 0
+ 86a:	040000        	extui	a0, a0, 0, 1
+ 86d:	000001        	l32r	a0, fffc0870 <wDevDisableRx+0xfffbfe78>
+ 870:	000104        	excw
+ 873:	fe0000        	excw
+ 876:	ef          	.byte 0xef
+ 877:	3f          	.byte 0x3f
+ 878:	000000        	ill
+ 87b:	fe0000        	excw
+ 87e:	003ff1        	l32r	a15, fffc097c <wDevDisableRx+0xfffbff84>
+ 881:	fe          	.byte 0xfe
+ 882:	ef          	.byte 0xef
+ 883:	3f          	.byte 0x3f
+	...
+
+00000890 <wDev_AppendRxBlocks>:
+ 890:	f0c112        	addi	a1, a1, -16
+ 893:	1109      	s32i.n	a0, a1, 4
+ 895:	21c9      	s32i.n	a12, a1, 8
+ 897:	0139      	s32i.n	a3, a1, 0
+ 899:	02cd      	mov.n	a12, a2
+ 89b:	042d      	mov.n	a2, a4
+ 89d:	0c4d      	mov.n	a4, a12
+ 89f:	085c16        	beqz	a12, 928 <wDev_AppendRxBlocks+0x98>
+ 8a2:	090c      	movi.n	a9, 0
+ 8a4:	dfa0a2        	movi	a10, 223
+ 8a7:	bfa0b2        	movi	a11, 191
+ 8aa:	80a032        	movi	a3, 128
+ 8ad:	ffec71        	l32r	a7, 860 <wDev_SetFrameAckType+0x5c>
+ 8b0:	000c      	movi.n	a0, 0
+ 8b2:	0020c0        	memw
+ 8b5:	030462        	l8ui	a6, a4, 3
+ 8b8:	646060        	extui	a6, a6, 0, 7
+ 8bb:	206630        	or	a6, a6, a3
+ 8be:	0020c0        	memw
+ 8c1:	034462        	s8i	a6, a4, 3
+ 8c4:	0020c0        	memw
+ 8c7:	030452        	l8ui	a5, a4, 3
+ 8ca:	1055b0        	and	a5, a5, a11
+ 8cd:	205590        	or	a5, a5, a9
+ 8d0:	0020c0        	memw
+ 8d3:	034452        	s8i	a5, a4, 3
+ 8d6:	0020c0        	memw
+ 8d9:	030482        	l8ui	a8, a4, 3
+ 8dc:	1088a0        	and	a8, a8, a10
+ 8df:	208890        	or	a8, a8, a9
+ 8e2:	0020c0        	memw
+ 8e5:	034482        	s8i	a8, a4, 3
+ 8e8:	0020c0        	memw
+ 8eb:	001462        	l16ui	a6, a4, 0
+ 8ee:	b46060        	extui	a6, a6, 0, 12
+ 8f1:	116640        	slli	a6, a6, 12
+ 8f4:	0020c0        	memw
+ 8f7:	011452        	l16ui	a5, a4, 2
+ 8fa:	115500        	slli	a5, a5, 16
+ 8fd:	0020c0        	memw
+ 900:	001482        	l16ui	a8, a4, 0
+ 903:	205580        	or	a5, a5, a8
+ 906:	105570        	and	a5, a5, a7
+ 909:	205560        	or	a5, a5, a6
+ 90c:	0020c0        	memw
+ 90f:	005452        	s16i	a5, a4, 0
+ 912:	f55050        	extui	a5, a5, 16, 16
+ 915:	0020c0        	memw
+ 918:	001b      	addi.n	a0, a0, 1
+ 91a:	015452        	s16i	a5, a4, 2
+ 91d:	2448      	l32i.n	a4, a4, 8
+ 91f:	f40000        	extui	a0, a0, 0, 16
+ 922:	f8c456        	bnez	a4, 8b2 <wDev_AppendRxBlocks+0x22>
+ 925:	000046        	j	92a <wDev_AppendRxBlocks+0x9a>
+ 928:	000c      	movi.n	a0, 0
+ 92a:	111207        	beq	a2, a0, 93f <wDev_AppendRxBlocks+0xaf>
+ 92d:	ffcd21        	l32r	a2, 864 <wDev_SetFrameAckType+0x60>
+ 930:	ffce31        	l32r	a3, 868 <wDev_SetFrameAckType+0x64>
+ 933:	31a542        	movi	a4, 0x531
+ 936:	ffd301        	l32r	a0, 884 <wDev_SetFrameAckType+0x80>
+ 939:	0000c0        	callx0	a0
+ 93c:	ffff06        	j	93c <wDev_AppendRxBlocks+0xac>
+ 93f:	ffcb71        	l32r	a7, 86c <wDev_SetFrameAckType+0x68>
+ 942:	800782        	l8ui	a8, a7, 128
+ 945:	3129      	s32i.n	a2, a1, 12
+ 947:	d8dc      	bnez.n	a8, 968 <wDev_AppendRxBlocks+0xd8>
+ 949:	ffcf01        	l32r	a0, 888 <wDev_SetFrameAckType+0x84>
+ 94c:	0000c0        	callx0	a0
+ 94f:	3128      	l32i.n	a2, a1, 12
+ 951:	ffc771        	l32r	a7, 870 <wDev_SetFrameAckType+0x6c>
+ 954:	0020c0        	memw
+ 957:	ffc741        	l32r	a4, 874 <wDev_SetFrameAckType+0x70>
+ 95a:	802492        	l32i	a9, a4, 0x200
+ 95d:	066c      	movi.n	a6, -32
+ 95f:	109960        	and	a9, a9, a6
+ 962:	0020c0        	memw
+ 965:	806492        	s32i	a9, a4, 0x200
+ 968:	ffc401        	l32r	a0, 878 <wDev_SetFrameAckType+0x74>
+ 96b:	0008      	l32i.n	a0, a0, 0
+ 96d:	10a8      	l32i.n	a10, a0, 4
+ 96f:	2058      	l32i.n	a5, a0, 8
+ 971:	cacc      	bnez.n	a10, 981 <wDev_AppendRxBlocks+0xf1>
+ 973:	10c9      	s32i.n	a12, a0, 4
+ 975:	ffc131        	l32r	a3, 87c <wDev_SetFrameAckType+0x78>
+ 978:	0020c0        	memw
+ 97b:	8263c2        	s32i	a12, a3, 0x208
+ 97e:	000046        	j	983 <wDev_AppendRxBlocks+0xf3>
+ 981:	25c9      	s32i.n	a12, a5, 8
+ 983:	01a8      	l32i.n	a10, a1, 0
+ 985:	001092        	l16ui	a9, a0, 0
+ 988:	20a9      	s32i.n	a10, a0, 8
+ 98a:	992a      	add.n	a9, a9, a2
+ 98c:	005092        	s16i	a9, a0, 0
+ 98f:	800782        	l8ui	a8, a7, 128
+ 992:	d8dc      	bnez.n	a8, 9b3 <wDev_AppendRxBlocks+0x123>
+ 994:	100c      	movi.n	a0, 1
+ 996:	0020c0        	memw
+ 999:	ffb9c1        	l32r	a12, 880 <wDev_SetFrameAckType+0x7c>
+ 99c:	802cb2        	l32i	a11, a12, 0x200
+ 99f:	026c      	movi.n	a2, -32
+ 9a1:	10bb20        	and	a11, a11, a2
+ 9a4:	20bb00        	or	a11, a11, a0
+ 9a7:	0020c0        	memw
+ 9aa:	806cb2        	s32i	a11, a12, 0x200
+ 9ad:	ffb701        	l32r	a0, 88c <wDev_SetFrameAckType+0x88>
+ 9b0:	0000c0        	callx0	a0
+ 9b3:	21c8      	l32i.n	a12, a1, 8
+ 9b5:	1108      	l32i.n	a0, a1, 4
+ 9b7:	10c112        	addi	a1, a1, 16
+ 9ba:	f00d      	ret.n
+ 9bc:	f1fe00        	excw
+ 9bf:	3f          	.byte 0x3f
+
+000009c0 <wDev_GetBAInfo>:
+ 9c0:	ffff61        	l32r	a6, 9bc <wDev_AppendRxBlocks+0x12c>
+ 9c3:	0020c0        	memw
+ 9c6:	dd2692        	l32i	a9, a6, 0x374
+ 9c9:	349c90        	extui	a9, a9, 12, 4
+ 9cc:	004292        	s8i	a9, a2, 0
+ 9cf:	0020c0        	memw
+ 9d2:	dd2682        	l32i	a8, a6, 0x374
+ 9d5:	b48080        	extui	a8, a8, 0, 12
+ 9d8:	005382        	s16i	a8, a3, 0
+ 9db:	0020c0        	memw
+ 9de:	da2672        	l32i	a7, a6, 0x368
+ 9e1:	0479      	s32i.n	a7, a4, 0
+ 9e3:	0020c0        	memw
+ 9e6:	d92662        	l32i	a6, a6, 0x364
+ 9e9:	0569      	s32i.n	a6, a5, 0
+ 9eb:	f00d      	ret.n
+ 9ed:	000000        	ill
+ 9f0:	ff          	.byte 0xff
+ 9f1:	ff          	.byte 0xff
+ 9f2:	ff          	.byte 0xff
+ 9f3:	7f          	.byte 0x7f
+ 9f4:	f1fe00        	excw
+ 9f7:	3f          	.byte 0x3f
+
+000009f8 <wDevDisableRx>:
+ 9f8:	fffe41        	l32r	a4, 9f0 <wDev_GetBAInfo+0x30>
+ 9fb:	fffe31        	l32r	a3, 9f4 <wDev_GetBAInfo+0x34>
+ 9fe:	0020c0        	memw
+ a01:	812322        	l32i	a2, a3, 0x204
+ a04:	102240        	and	a2, a2, a4
+ a07:	0020c0        	memw
+ a0a:	816322        	s32i	a2, a3, 0x204
+ a0d:	f00d      	ret.n
+ a0f:	beef00        	excw
+ a12:	dead      	excw
+ a14:	1268      	l32i.n	a6, a2, 4
+ a16:	fffe31        	l32r	a3, a10 <wDevDisableRx+0x18>
+ a19:	0639      	s32i.n	a3, a6, 0
+ a1b:	0020c0        	memw
+ a1e:	001252        	l16ui	a5, a2, 0
+ a21:	1248      	l32i.n	a4, a2, 4
+ a23:	b45050        	extui	a5, a5, 0, 12
+ a26:	445a      	add.n	a4, a4, a5
+ a28:	0439      	s32i.n	a3, a4, 0
+ a2a:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <wDev_Option_Init-0x20>:
+   0:	80a000        	add	a10, a0, a0
+   3:	0e0000        	excw
+   6:	003ff2        	excw
+   9:	f20a      	add.n	a15, a2, a0
+   b:	3f          	.byte 0x3f
+   c:	dfbff7        	bgeu	a15, a15, ffffffef <wDevDisableRx+0xfffff5f7>
+   f:	7f          	.byte 0x7f
+  10:	ff          	.byte 0xff
+  11:	ffff00        	excw
+  14:	fff000        	excw
+  17:	ff          	.byte 0xff
+  18:	000000        	ill
+  1b:	000080        	ret
+  1e:	914000        	srl	a4, a0
+
+00000020 <wDev_Option_Init>:
+  20:	fff891        	l32r	a9, 0 <wDev_Option_Init-0x20>
+  23:	fff881        	l32r	a8, 4 <wDev_Option_Init-0x1c>
+  26:	fff831        	l32r	a3, 8 <wDev_Option_Init-0x18>
+  29:	0020c0        	memw
+  2c:	a22372        	l32i	a7, a3, 0x288
+  2f:	207790        	or	a7, a7, a9
+  32:	0020c0        	memw
+  35:	a26372        	s32i	a7, a3, 0x288
+  38:	fff561        	l32r	a6, c <wDev_Option_Init-0x14>
+  3b:	0020c0        	memw
+  3e:	a22352        	l32i	a5, a3, 0x288
+  41:	105560        	and	a5, a5, a6
+  44:	0020c0        	memw
+  47:	a26352        	s32i	a5, a3, 0x288
+  4a:	840c      	movi.n	a4, 8
+  4c:	0020c0        	memw
+  4f:	a42322        	l32i	a2, a3, 0x290
+  52:	202240        	or	a2, a2, a4
+  55:	0020c0        	memw
+  58:	a46322        	s32i	a2, a3, 0x290
+  5b:	3b0c      	movi.n	a11, 3
+  5d:	0020c0        	memw
+  60:	a523a2        	l32i	a10, a3, 0x294
+  63:	20aab0        	or	a10, a10, a11
+  66:	0020c0        	memw
+  69:	a563a2        	s32i	a10, a3, 0x294
+  6c:	0faf92        	movi	a9, -241
+  6f:	0020c0        	memw
+  72:	2878      	l32i.n	a7, a8, 8
+  74:	107790        	and	a7, a7, a9
+  77:	0020c0        	memw
+  7a:	2879      	s32i.n	a7, a8, 8
+  7c:	00af62        	movi	a6, 0xffffff00
+  7f:	450c      	movi.n	a5, 4
+  81:	0020c0        	memw
+  84:	9b2342        	l32i	a4, a3, 0x26c
+  87:	104460        	and	a4, a4, a6
+  8a:	204450        	or	a4, a4, a5
+  8d:	0020c0        	memw
+  90:	9b6342        	s32i	a4, a3, 0x26c
+  93:	ffdf21        	l32r	a2, 10 <wDev_Option_Init-0x10>
+  96:	00a4b2        	movi	a11, 0x400
+  99:	0020c0        	memw
+  9c:	9b23a2        	l32i	a10, a3, 0x26c
+  9f:	10aa20        	and	a10, a10, a2
+  a2:	20aab0        	or	a10, a10, a11
+  a5:	0020c0        	memw
+  a8:	9b63a2        	s32i	a10, a3, 0x26c
+  ab:	ffda91        	l32r	a9, 14 <wDev_Option_Init-0xc>
+  ae:	f0a082        	movi	a8, 240
+  b1:	0020c0        	memw
+  b4:	852372        	l32i	a7, a3, 0x214
+  b7:	107790        	and	a7, a7, a9
+  ba:	207780        	or	a7, a7, a8
+  bd:	0020c0        	memw
+  c0:	856372        	s32i	a7, a3, 0x214
+  c3:	ffd561        	l32r	a6, 18 <wDev_Option_Init-0x8>
+  c6:	0020c0        	memw
+  c9:	852352        	l32i	a5, a3, 0x214
+  cc:	205560        	or	a5, a5, a6
+  cf:	0020c0        	memw
+  d2:	856352        	s32i	a5, a3, 0x214
+  d5:	ffd141        	l32r	a4, 1c <wDev_Option_Init-0x4>
+  d8:	0020c0        	memw
+  db:	852322        	l32i	a2, a3, 0x214
+  de:	202240        	or	a2, a2, a4
+  e1:	0020c0        	memw
+  e4:	856322        	s32i	a2, a3, 0x214
+  e7:	f00d      	ret.n
+  e9:	000000        	ill
+  ec:	001f54        	excw
+  ef:	019000        	slli	a9, a0, 32
+  f2:	000000        	ill
+  f5:	000000        	ill
+  f8:	ff          	.byte 0xff
+  f9:	0f          	.byte 0xf
+  fa:	00ff00        	excw
+  fd:	0000f0        	excw
+ 100:	000190        	excw
+ 103:	213000        	srai	a3, a0, 0
+ 106:	400000        	ssr	a0
+ 109:	1f          	.byte 0x1f
+ 10a:	c00000        	sub	a0, a0, a0
+ 10d:	000040        	excw
+ 110:	f1fe00        	excw
+ 113:	3f          	.byte 0x3f
+ 114:	002124        	excw
+ 117:	ffff00        	excw
+ 11a:	ff          	.byte 0xff
+ 11b:	df          	.byte 0xdf
+ 11c:	000000        	ill
+ 11f:	0a1400        	excw
+	...
+ 12a:	3c0000        	excw
+ 12d:	ef51c3        	excw
+ 130:	ff          	.byte 0xff
+ 131:	44a662        	movi	a6, 0x644
+ 134:	170c      	movi.n	a7, 1
+ 136:	d0c112        	addi	a1, a1, -48
+ 139:	51c9      	s32i.n	a12, a1, 20
+ 13b:	61d9      	s32i.n	a13, a1, 24
+ 13d:	4109      	s32i.n	a0, a1, 16
+ 13f:	71e9      	s32i.n	a14, a1, 28
+ 141:	81f9      	s32i.n	a15, a1, 32
+ 143:	ffebe1        	l32r	a14, f0 <wDev_Option_Init+0xd0>
+ 146:	ffebf1        	l32r	a15, f4 <wDev_Option_Init+0xd4>
+ 149:	0e2d      	mov.n	a2, a14
+ 14b:	0f88      	l32i.n	a8, a15, 0
+ 14d:	40ce42        	addi	a4, a14, 64
+ 150:	088b      	addi.n	a0, a8, 8
+ 152:	1109      	s32i.n	a0, a1, 4
+ 154:	884b      	addi.n	a8, a8, 4
+ 156:	0189      	s32i.n	a8, a1, 0
+ 158:	fff101        	l32r	a0, 11c <wDev_Option_Init+0xfc>
+ 15b:	0000c0        	callx0	a0
+ 15e:	0f08      	l32i.n	a0, a15, 0
+ 160:	590c      	movi.n	a9, 5
+ 162:	10c8      	l32i.n	a12, a0, 4
+ 164:	005092        	s16i	a9, a0, 0
+ 167:	068c16        	beqz	a12, 1d3 <wDev_Option_Init+0x1b3>
+ 16a:	ffe4d1        	l32r	a13, fc <wDev_Option_Init+0xdc>
+ 16d:	ffe2e1        	l32r	a14, f8 <wDev_Option_Init+0xd8>
+ 170:	0020c0        	memw
+ 173:	001c22        	l16ui	a2, a12, 0
+ 176:	b42020        	extui	a2, a2, 0, 12
+ 179:	fcc222        	addi	a2, a2, -4
+ 17c:	b42020        	extui	a2, a2, 0, 12
+ 17f:	0020c0        	memw
+ 182:	001c02        	l16ui	a0, a12, 0
+ 185:	1000d0        	and	a0, a0, a13
+ 188:	200020        	or	a0, a0, a2
+ 18b:	0020c0        	memw
+ 18e:	005c02        	s16i	a0, a12, 0
+ 191:	0020c0        	memw
+ 194:	001cb2        	l16ui	a11, a12, 0
+ 197:	b4b0b0        	extui	a11, a11, 0, 12
+ 19a:	11bb40        	slli	a11, a11, 12
+ 19d:	0020c0        	memw
+ 1a0:	011ca2        	l16ui	a10, a12, 2
+ 1a3:	11aa00        	slli	a10, a10, 16
+ 1a6:	0020c0        	memw
+ 1a9:	001c02        	l16ui	a0, a12, 0
+ 1ac:	20aa00        	or	a10, a10, a0
+ 1af:	10aae0        	and	a10, a10, a14
+ 1b2:	20aab0        	or	a10, a10, a11
+ 1b5:	0020c0        	memw
+ 1b8:	005ca2        	s16i	a10, a12, 0
+ 1bb:	f5a0a0        	extui	a10, a10, 16, 16
+ 1be:	0020c0        	memw
+ 1c1:	015ca2        	s16i	a10, a12, 2
+ 1c4:	0c2d      	mov.n	a2, a12
+ 1c6:	ffd601        	l32r	a0, 120 <wDev_Option_Init+0x100>
+ 1c9:	0000c0        	callx0	a0
+ 1cc:	2cc8      	l32i.n	a12, a12, 8
+ 1ce:	f9ec56        	bnez	a12, 170 <wDev_Option_Init+0x150>
+ 1d1:	0f08      	l32i.n	a0, a15, 0
+ 1d3:	ffcbe1        	l32r	a14, 100 <wDev_Option_Init+0xe0>
+ 1d6:	ffcc51        	l32r	a5, 108 <wDev_Option_Init+0xe8>
+ 1d9:	40a662        	movi	a6, 0x640
+ 1dc:	070c      	movi.n	a7, 0
+ 1de:	ffc921        	l32r	a2, 104 <wDev_Option_Init+0xe4>
+ 1e1:	40cb      	addi.n	a4, a0, 12
+ 1e3:	10c032        	addi	a3, a0, 16
+ 1e6:	1139      	s32i.n	a3, a1, 4
+ 1e8:	0149      	s32i.n	a4, a1, 0
+ 1ea:	c33c      	movi.n	a3, 60
+ 1ec:	40c242        	addi	a4, a2, 64
+ 1ef:	ffcd01        	l32r	a0, 124 <wDev_Option_Init+0x104>
+ 1f2:	0000c0        	callx0	a0
+ 1f5:	030c      	movi.n	a3, 0
+ 1f7:	050c      	movi.n	a5, 0
+ 1f9:	064c      	movi.n	a6, 64
+ 1fb:	170c      	movi.n	a7, 1
+ 1fd:	ffc3d1        	l32r	a13, 10c <wDev_Option_Init+0xec>
+ 200:	0f98      	l32i.n	a9, a15, 0
+ 202:	0d4d      	mov.n	a4, a13
+ 204:	f0cdc2        	addi	a12, a13, -16
+ 207:	18c982        	addi	a8, a9, 24
+ 20a:	1189      	s32i.n	a8, a1, 4
+ 20c:	0c2d      	mov.n	a2, a12
+ 20e:	14c992        	addi	a9, a9, 20
+ 211:	0199      	s32i.n	a9, a1, 0
+ 213:	ffc501        	l32r	a0, 128 <wDev_Option_Init+0x108>
+ 216:	0000c0        	callx0	a0
+ 219:	0f08      	l32i.n	a0, a15, 0
+ 21b:	0f0c      	movi.n	a15, 0
+ 21d:	0240f2        	s8i	a15, a0, 2
+ 220:	ffbcb1        	l32r	a11, 110 <wDev_Option_Init+0xf0>
+ 223:	0020c0        	memw
+ 226:	a06be2        	s32i	a14, a11, 0x280
+ 229:	ffba51        	l32r	a5, 114 <wDev_Option_Init+0xf4>
+ 22c:	0020c0        	memw
+ 22f:	9f6b52        	s32i	a5, a11, 0x27c
+ 232:	0020c0        	memw
+ 235:	a26bc2        	s32i	a12, a11, 0x288
+ 238:	0020c0        	memw
+ 23b:	a16bd2        	s32i	a13, a11, 0x284
+ 23e:	00af42        	movi	a4, 0xffffff00
+ 241:	0020c0        	memw
+ 244:	802b32        	l32i	a3, a11, 0x200
+ 247:	103340        	and	a3, a3, a4
+ 24a:	0020c0        	memw
+ 24d:	806b32        	s32i	a3, a11, 0x200
+ 250:	1028      	l32i.n	a2, a0, 4
+ 252:	0020c0        	memw
+ 255:	826b22        	s32i	a2, a11, 0x208
+ 258:	5008      	l32i.n	a0, a0, 20
+ 25a:	0020c0        	memw
+ 25d:	836b02        	s32i	a0, a11, 0x20c
+ 260:	0020c0        	memw
+ 263:	846bf2        	s32i	a15, a11, 0x210
+ 266:	ffacc1        	l32r	a12, 118 <wDev_Option_Init+0xf8>
+ 269:	0020c0        	memw
+ 26c:	802ba2        	l32i	a10, a11, 0x200
+ 26f:	10aac0        	and	a10, a10, a12
+ 272:	0020c0        	memw
+ 275:	806ba2        	s32i	a10, a11, 0x200
+ 278:	51c8      	l32i.n	a12, a1, 20
+ 27a:	61d8      	l32i.n	a13, a1, 24
+ 27c:	71e8      	l32i.n	a14, a1, 28
+ 27e:	81f8      	l32i.n	a15, a1, 32
+ 280:	4108      	l32i.n	a0, a1, 16
+ 282:	30c112        	addi	a1, a1, 48
+ 285:	f00d      	ret.n
+ 287:	321000        	excw
+ 28a:	007650        	excw
+ 28d:	3ff202        	excw
+ 290:	fffe21        	l32r	a2, 288 <wDev_Option_Init+0x268>
+ 293:	fffe31        	l32r	a3, 28c <wDev_Option_Init+0x26c>
+ 296:	0020c0        	memw
+ 299:	806322        	s32i	a2, a3, 0x200
+ 29c:	f00d      	ret.n
+ 29e:	000000        	ill
+ 2a1:	fe          	.byte 0xfe
+ 2a2:	ff3ff1        	l32r	a15, ffffffa0 <wDevDisableRx+0xfffff5a8>
+ 2a5:	ef          	.byte 0xef
+ 2a6:	ff          	.byte 0xff
+ 2a7:	ff          	.byte 0xff
+ 2a8:	f0c112        	addi	a1, a1, -16
+ 2ab:	0109      	s32i.n	a0, a1, 0
+ 2ad:	07a772        	movi	a7, 0x707
+ 2b0:	fffc21        	l32r	a2, 2a0 <wDev_Option_Init+0x280>
+ 2b3:	0020c0        	memw
+ 2b6:	9b2262        	l32i	a6, a2, 0x26c
+ 2b9:	206670        	or	a6, a6, a7
+ 2bc:	0020c0        	memw
+ 2bf:	9b6262        	s32i	a6, a2, 0x26c
+ 2c2:	f56c      	movi.n	a5, -17
+ 2c4:	0020c0        	memw
+ 2c7:	9b2242        	l32i	a4, a2, 0x26c
+ 2ca:	104450        	and	a4, a4, a5
+ 2cd:	0020c0        	memw
+ 2d0:	9b6242        	s32i	a4, a2, 0x26c
+ 2d3:	fff431        	l32r	a3, 2a4 <wDev_Option_Init+0x284>
+ 2d6:	0020c0        	memw
+ 2d9:	9b2202        	l32i	a0, a2, 0x26c
+ 2dc:	100030        	and	a0, a0, a3
+ 2df:	0020c0        	memw
+ 2e2:	030c      	movi.n	a3, 0
+ 2e4:	9b6202        	s32i	a0, a2, 0x26c
+ 2e7:	040c      	movi.n	a4, 0
+ 2e9:	020c      	movi.n	a2, 0
+ 2eb:	000005        	call0	2ec <wDev_Option_Init+0x2cc>
+ 2ee:	020c      	movi.n	a2, 0
+ 2f0:	130c      	movi.n	a3, 1
+ 2f2:	040c      	movi.n	a4, 0
+ 2f4:	000005        	call0	2f8 <wDev_Option_Init+0x2d8>
+ 2f7:	0108      	l32i.n	a0, a1, 0
+ 2f9:	10c112        	addi	a1, a1, 16
+ 2fc:	f00d      	ret.n
+ 2fe:	000000        	ill
+ 301:	f20a      	add.n	a15, a2, a0
+ 303:	3f          	.byte 0x3f
+ 304:	9f0300        	excw
+ 307:	fe0000        	excw
+ 30a:	003ff1        	l32r	a15, fffc0408 <wDevDisableRx+0xfffbfa10>
+ 30d:	f20a      	add.n	a15, a2, a0
+ 30f:	3f          	.byte 0x3f
+ 310:	ff          	.byte 0xff
+ 311:	ff          	.byte 0xff
+ 312:	ff          	.byte 0xff
+ 313:	7f          	.byte 0x7f
+
+00000314 <wDev_Initialize>:
+ 314:	f0c112        	addi	a1, a1, -16
+ 317:	0109      	s32i.n	a0, a1, 0
+ 319:	030c      	movi.n	a3, 0
+ 31b:	fff921        	l32r	a2, 300 <wDev_Option_Init+0x2e0>
+ 31e:	0020c0        	memw
+ 321:	866232        	s32i	a3, a2, 0x218
+ 324:	f07c      	movi.n	a0, -1
+ 326:	0020c0        	memw
+ 329:	896202        	s32i	a0, a2, 0x224
+ 32c:	000005        	call0	330 <wDev_Initialize+0x1c>
+ 32f:	004205        	call0	750 <wDev_Crypto_Conf+0x5c>
+ 332:	ffdf85        	call0	12c <wDev_Option_Init+0x10c>
+ 335:	fff585        	call0	290 <wDev_Option_Init+0x270>
+ 338:	fff6c5        	call0	2a8 <wDev_Option_Init+0x288>
+ 33b:	fff291        	l32r	a9, 304 <wDev_Option_Init+0x2e4>
+ 33e:	fff251        	l32r	a5, 308 <wDev_Option_Init+0x2e8>
+ 341:	0020c0        	memw
+ 344:	fff2a1        	l32r	a10, 30c <wDev_Option_Init+0x2ec>
+ 347:	866a92        	s32i	a9, a10, 0x218
+ 34a:	280c      	movi.n	a8, 2
+ 34c:	0020c0        	memw
+ 34f:	de2572        	l32i	a7, a5, 0x378
+ 352:	207780        	or	a7, a7, a8
+ 355:	0020c0        	memw
+ 358:	de6572        	s32i	a7, a5, 0x378
+ 35b:	ffed61        	l32r	a6, 310 <wDev_Option_Init+0x2f0>
+ 35e:	0020c0        	memw
+ 361:	812542        	l32i	a4, a5, 0x204
+ 364:	104460        	and	a4, a4, a6
+ 367:	0020c0        	memw
+ 36a:	816542        	s32i	a4, a5, 0x204
+ 36d:	0108      	l32i.n	a0, a1, 0
+ 36f:	10c112        	addi	a1, a1, 16
+ 372:	f00d      	ret.n
+ 374:	f20200        	excw
+ 377:	3f          	.byte 0x3f
+ 378:	070b00        	excw
+ 37b:	0c0700        	excw
+ 37e:	410007        	bnone	a0, a0, 3c3 <wDev_SetMacAddress+0x1b>
+
+00000380 <wDevForceAck6M>:
+ 380:	fffd41        	l32r	a4, 374 <wDev_Initialize+0x60>
+ 383:	928c      	beqz.n	a2, 390 <wDevForceAck6M+0x10>
+ 385:	fffc31        	l32r	a3, 378 <wDev_Initialize+0x64>
+ 388:	0020c0        	memw
+ 38b:	836432        	s32i	a3, a4, 0x20c
+ 38e:	f00d      	ret.n
+ 390:	fffb21        	l32r	a2, 37c <wDev_Initialize+0x68>
+ 393:	0020c0        	memw
+ 396:	836422        	s32i	a2, a4, 0x20c
+ 399:	f00d      	ret.n
+ 39b:	000000        	ill
+ 39e:	ff0001        	l32r	a0, ffffffa0 <wDevDisableRx+0xfffff5a8>
+ 3a1:	ff          	.byte 0xff
+ 3a2:	000000        	ill
+ 3a5:	f20a      	add.n	a15, a2, a0
+ 3a7:	3f          	.byte 0x3f
+
+000003a8 <wDev_SetMacAddress>:
+ 3a8:	f97c      	movi.n	a9, -1
+ 3aa:	fffc81        	l32r	a8, 39c <wDevForceAck6M+0x1c>
+ 3ad:	030372        	l8ui	a7, a3, 3
+ 3b0:	010352        	l8ui	a5, a3, 1
+ 3b3:	000362        	l8ui	a6, a3, 0
+ 3b6:	115580        	slli	a5, a5, 8
+ 3b9:	205560        	or	a5, a5, a6
+ 3bc:	020362        	l8ui	a6, a3, 2
+ 3bf:	017780        	slli	a7, a7, 24
+ 3c2:	116600        	slli	a6, a6, 16
+ 3c5:	206670        	or	a6, a6, a7
+ 3c8:	fff671        	l32r	a7, 3a0 <wDevForceAck6M+0x20>
+ 3cb:	205560        	or	a5, a5, a6
+ 3ce:	fff561        	l32r	a6, 3a4 <wDevForceAck6M+0x24>
+ 3d1:	32bc      	beqz.n	a2, 408 <wDev_SetMacAddress+0x60>
+ 3d3:	0020c0        	memw
+ 3d6:	946652        	s32i	a5, a6, 0x250
+ 3d9:	0503b2        	l8ui	a11, a3, 5
+ 3dc:	0403a2        	l8ui	a10, a3, 4
+ 3df:	11bb80        	slli	a11, a11, 8
+ 3e2:	20aab0        	or	a10, a10, a11
+ 3e5:	0020c0        	memw
+ 3e8:	9566a2        	s32i	a10, a6, 0x254
+ 3eb:	0020c0        	memw
+ 3ee:	986692        	s32i	a9, a6, 0x260
+ 3f1:	0020c0        	memw
+ 3f4:	996672        	s32i	a7, a6, 0x264
+ 3f7:	0020c0        	memw
+ 3fa:	992642        	l32i	a4, a6, 0x264
+ 3fd:	204480        	or	a4, a4, a8
+ 400:	0020c0        	memw
+ 403:	996642        	s32i	a4, a6, 0x264
+ 406:	f00d      	ret.n
+ 408:	0020c0        	memw
+ 40b:	926652        	s32i	a5, a6, 0x248
+ 40e:	050322        	l8ui	a2, a3, 5
+ 411:	0403b2        	l8ui	a11, a3, 4
+ 414:	112280        	slli	a2, a2, 8
+ 417:	20bb20        	or	a11, a11, a2
+ 41a:	0020c0        	memw
+ 41d:	9366b2        	s32i	a11, a6, 0x24c
+ 420:	0020c0        	memw
+ 423:	966692        	s32i	a9, a6, 0x258
+ 426:	0020c0        	memw
+ 429:	976672        	s32i	a7, a6, 0x25c
+ 42c:	0020c0        	memw
+ 42f:	9726a2        	l32i	a10, a6, 0x25c
+ 432:	20aa80        	or	a10, a10, a8
+ 435:	0020c0        	memw
+ 438:	9766a2        	s32i	a10, a6, 0x25c
+ 43b:	f00d      	ret.n
+ 43d:	000000        	ill
+ 440:	f20a00        	excw
+ 443:	3f          	.byte 0x3f
+ 444:	ff          	.byte 0xff
+ 445:	ff          	.byte 0xff
+ 446:	fe          	.byte 0xfe
+ 447:	ff          	.byte 0xff
+ 448:	000000        	ill
+	...
+
+0000044c <wDev_SetRxPolicy>:
+ 44c:	f0c112        	addi	a1, a1, -16
+ 44f:	0109      	s32i.n	a0, a1, 0
+ 451:	82dc      	bnez.n	a2, 46d <wDev_SetRxPolicy+0x21>
+ 453:	fffc01        	l32r	a0, 444 <wDev_SetMacAddress+0x9c>
+ 456:	fffa21        	l32r	a2, 440 <wDev_SetMacAddress+0x98>
+ 459:	13fc      	bnez.n	a3, 48e <wDev_SetRxPolicy+0x42>
+ 45b:	0020c0        	memw
+ 45e:	8f2232        	l32i	a3, a2, 0x23c
+ 461:	103300        	and	a3, a3, a0
+ 464:	0020c0        	memw
+ 467:	8f6232        	s32i	a3, a2, 0x23c
+ 46a:	000646        	j	487 <wDev_SetRxPolicy+0x3b>
+ 46d:	0a1266        	bnei	a2, 1, 47b <wDev_SetRxPolicy+0x2f>
+ 470:	032d      	mov.n	a2, a3
+ 472:	fff531        	l32r	a3, 448 <wDev_SetMacAddress+0xa0>
+ 475:	000005        	call0	478 <wDev_SetRxPolicy+0x2c>
+ 478:	0002c6        	j	487 <wDev_SetRxPolicy+0x3b>
+ 47b:	082266        	bnei	a2, 2, 487 <wDev_SetRxPolicy+0x3b>
+ 47e:	548c      	beqz.n	a4, 487 <wDev_SetRxPolicy+0x3b>
+ 480:	032d      	mov.n	a2, a3
+ 482:	043d      	mov.n	a3, a4
+ 484:	000005        	call0	488 <wDev_SetRxPolicy+0x3c>
+ 487:	0108      	l32i.n	a0, a1, 0
+ 489:	10c112        	addi	a1, a1, 16
+ 48c:	f00d      	ret.n
+ 48e:	0020c0        	memw
+ 491:	912242        	l32i	a4, a2, 0x244
+ 494:	104400        	and	a4, a4, a0
+ 497:	0020c0        	memw
+ 49a:	916242        	s32i	a4, a2, 0x244
+ 49d:	fff986        	j	487 <wDev_SetRxPolicy+0x3b>
+ 4a0:	010000        	slli	a0, a0, 32
+ 4a3:	ffff00        	excw
+ 4a6:	000000        	ill
+ 4a9:	f20a      	add.n	a15, a2, a0
+ 4ab:	3f          	.byte 0x3f
+ 4ac:	ff          	.byte 0xff
+ 4ad:	ff          	.byte 0xff
+ 4ae:	fe          	.byte 0xfe
+ 4af:	ff          	.byte 0xff
+
+000004b0 <wDev_SetBssid>:
+ 4b0:	fa7c      	movi.n	a10, -1
+ 4b2:	fffb81        	l32r	a8, 4a0 <wDev_SetRxPolicy+0x54>
+ 4b5:	fffb71        	l32r	a7, 4a4 <wDev_SetRxPolicy+0x58>
+ 4b8:	fffd51        	l32r	a5, 4ac <wDev_SetRxPolicy+0x60>
+ 4bb:	fffb61        	l32r	a6, 4a8 <wDev_SetRxPolicy+0x5c>
+ 4be:	061216        	beqz	a2, 523 <wDev_SetBssid+0x73>
+ 4c1:	0020c0        	memw
+ 4c4:	9126b2        	l32i	a11, a6, 0x244
+ 4c7:	10bb50        	and	a11, a11, a5
+ 4ca:	0020c0        	memw
+ 4cd:	9166b2        	s32i	a11, a6, 0x244
+ 4d0:	0303b2        	l8ui	a11, a3, 3
+ 4d3:	010392        	l8ui	a9, a3, 1
+ 4d6:	000342        	l8ui	a4, a3, 0
+ 4d9:	119980        	slli	a9, a9, 8
+ 4dc:	204490        	or	a4, a4, a9
+ 4df:	020392        	l8ui	a9, a3, 2
+ 4e2:	01bb80        	slli	a11, a11, 24
+ 4e5:	119900        	slli	a9, a9, 16
+ 4e8:	2099b0        	or	a9, a9, a11
+ 4eb:	204490        	or	a4, a4, a9
+ 4ee:	0020c0        	memw
+ 4f1:	8c6642        	s32i	a4, a6, 0x230
+ 4f4:	050322        	l8ui	a2, a3, 5
+ 4f7:	0403b2        	l8ui	a11, a3, 4
+ 4fa:	112280        	slli	a2, a2, 8
+ 4fd:	20bb20        	or	a11, a11, a2
+ 500:	0020c0        	memw
+ 503:	8d66b2        	s32i	a11, a6, 0x234
+ 506:	0020c0        	memw
+ 509:	9066a2        	s32i	a10, a6, 0x240
+ 50c:	0020c0        	memw
+ 50f:	916672        	s32i	a7, a6, 0x244
+ 512:	0020c0        	memw
+ 515:	912692        	l32i	a9, a6, 0x244
+ 518:	209980        	or	a9, a9, a8
+ 51b:	0020c0        	memw
+ 51e:	916692        	s32i	a9, a6, 0x244
+ 521:	f00d      	ret.n
+ 523:	0020c0        	memw
+ 526:	8f2642        	l32i	a4, a6, 0x23c
+ 529:	104450        	and	a4, a4, a5
+ 52c:	0020c0        	memw
+ 52f:	8f6642        	s32i	a4, a6, 0x23c
+ 532:	030342        	l8ui	a4, a3, 3
+ 535:	010322        	l8ui	a2, a3, 1
+ 538:	0003b2        	l8ui	a11, a3, 0
+ 53b:	112280        	slli	a2, a2, 8
+ 53e:	20bb20        	or	a11, a11, a2
+ 541:	020322        	l8ui	a2, a3, 2
+ 544:	014480        	slli	a4, a4, 24
+ 547:	112200        	slli	a2, a2, 16
+ 54a:	202240        	or	a2, a2, a4
+ 54d:	20bb20        	or	a11, a11, a2
+ 550:	0020c0        	memw
+ 553:	8a66b2        	s32i	a11, a6, 0x228
+ 556:	050392        	l8ui	a9, a3, 5
+ 559:	040342        	l8ui	a4, a3, 4
+ 55c:	119980        	slli	a9, a9, 8
+ 55f:	204490        	or	a4, a4, a9
+ 562:	0020c0        	memw
+ 565:	8b6642        	s32i	a4, a6, 0x22c
+ 568:	0020c0        	memw
+ 56b:	8e66a2        	s32i	a10, a6, 0x238
+ 56e:	0020c0        	memw
+ 571:	8f6672        	s32i	a7, a6, 0x23c
+ 574:	0020c0        	memw
+ 577:	8f2622        	l32i	a2, a6, 0x23c
+ 57a:	202280        	or	a2, a2, a8
+ 57d:	0020c0        	memw
+ 580:	8f6622        	s32i	a2, a6, 0x23c
+ 583:	f00d      	ret.n
+ 585:	000000        	ill
+ 588:	f20a00        	excw
+ 58b:	3f          	.byte 0x3f
+ 58c:	ff          	.byte 0xff
+ 58d:	ff          	.byte 0xff
+ 58e:	fe          	.byte 0xfe
+ 58f:	ff          	.byte 0xff
+
+00000590 <wDev_ClearBssid>:
+ 590:	ffff41        	l32r	a4, 58c <wDev_SetBssid+0xdc>
+ 593:	fffd51        	l32r	a5, 588 <wDev_SetBssid+0xd8>
+ 596:	f28c      	beqz.n	a2, 5a9 <wDev_ClearBssid+0x19>
+ 598:	0020c0        	memw
+ 59b:	912532        	l32i	a3, a5, 0x244
+ 59e:	103340        	and	a3, a3, a4
+ 5a1:	0020c0        	memw
+ 5a4:	916532        	s32i	a3, a5, 0x244
+ 5a7:	f00d      	ret.n
+ 5a9:	0020c0        	memw
+ 5ac:	8f2522        	l32i	a2, a5, 0x23c
+ 5af:	102240        	and	a2, a2, a4
+ 5b2:	0020c0        	memw
+ 5b5:	8f6522        	s32i	a2, a5, 0x23c
+ 5b8:	f00d      	ret.n
+ 5ba:	000000        	ill
+ 5bd:	3ff212        	excw
+ 5c0:	f20600        	excw
+ 5c3:	3f          	.byte 0x3f
+ 5c4:	000000        	ill
+ 5c7:	140800        	extui	a0, a0, 8, 2
+ 5ca:	003ff2        	excw
+ 5cd:	000000        	ill
+
+000005d0 <wDev_Insert_KeyEntry>:
+ 5d0:	f0c112        	addi	a1, a1, -16
+ 5d3:	0109      	s32i.n	a0, a1, 0
+ 5d5:	0505b2        	l8ui	a11, a5, 5
+ 5d8:	0405a2        	l8ui	a10, a5, 4
+ 5db:	11bb80        	slli	a11, a11, 8
+ 5de:	aaba      	add.n	a10, a10, a11
+ 5e0:	065266        	bnei	a2, 5, 5ea <wDev_Insert_KeyEntry+0x1a>
+ 5e3:	190c      	movi.n	a9, 1
+ 5e5:	120c      	movi.n	a2, 1
+ 5e7:	000046        	j	5ec <wDev_Insert_KeyEntry+0x1c>
+ 5ea:	090c      	movi.n	a9, 0
+ 5ec:	2179      	s32i.n	a7, a1, 8
+ 5ee:	fff381        	l32r	a8, 5bc <wDev_ClearBssid+0x2c>
+ 5f1:	010572        	l8ui	a7, a5, 1
+ 5f4:	0005b2        	l8ui	a11, a5, 0
+ 5f7:	117780        	slli	a7, a7, 8
+ 5fa:	bb7a      	add.n	a11, a11, a7
+ 5fc:	030572        	l8ui	a7, a5, 3
+ 5ff:	020552        	l8ui	a5, a5, 2
+ 602:	017780        	slli	a7, a7, 24
+ 605:	115500        	slli	a5, a5, 16
+ 608:	557a      	add.n	a5, a5, a7
+ 60a:	bb5a      	add.n	a11, a11, a5
+ 60c:	a05660        	addx4	a5, a6, a6
+ 60f:	1155d0        	slli	a5, a5, 3
+ 612:	858a      	add.n	a8, a5, a8
+ 614:	091226        	beqi	a2, 1, 621 <wDev_Insert_KeyEntry+0x51>
+ 617:	600c      	movi.n	a0, 6
+ 619:	0666a6        	blti	a6, 6, 623 <wDev_Insert_KeyEntry+0x53>
+ 61c:	200c      	movi.n	a0, 2
+ 61e:	000046        	j	623 <wDev_Insert_KeyEntry+0x53>
+ 621:	700c      	movi.n	a0, 7
+ 623:	0020c0        	memw
+ 626:	017420        	slli	a7, a4, 30
+ 629:	240000        	extui	a0, a0, 0, 3
+ 62c:	8068b2        	s32i	a11, a8, 0x200
+ 62f:	149090        	extui	a9, a9, 0, 2
+ 632:	f4b0a0        	extui	a11, a10, 0, 16
+ 635:	119900        	slli	a9, a9, 16
+ 638:	99ba      	add.n	a9, a9, a11
+ 63a:	0100b0        	slli	a0, a0, 21
+ 63d:	24b020        	extui	a11, a2, 0, 3
+ 640:	01bbe0        	slli	a11, a11, 18
+ 643:	bb0a      	add.n	a11, a11, a0
+ 645:	99ba      	add.n	a9, a9, a11
+ 647:	04b030        	extui	a11, a3, 0, 1
+ 64a:	01bb80        	slli	a11, a11, 24
+ 64d:	77ba      	add.n	a7, a7, a11
+ 64f:	779a      	add.n	a7, a7, a9
+ 651:	0020c0        	memw
+ 654:	816872        	s32i	a7, a8, 0x204
+ 657:	401600        	ssl	a6
+ 65a:	100c      	movi.n	a0, 1
+ 65c:	a10000        	sll	a0, a0
+ 65f:	0020c0        	memw
+ 662:	ffd781        	l32r	a8, 5c0 <wDev_ClearBssid+0x30>
+ 665:	832872        	l32i	a7, a8, 0x20c
+ 668:	207700        	or	a7, a7, a0
+ 66b:	0020c0        	memw
+ 66e:	836872        	s32i	a7, a8, 0x20c
+ 671:	1198      	l32i.n	a9, a1, 4
+ 673:	2178      	l32i.n	a7, a1, 8
+ 675:	1123f6        	bgeui	a3, 2, 68a <wDev_Insert_KeyEntry+0xba>
+ 678:	0e26a6        	blti	a6, 2, 68a <wDev_Insert_KeyEntry+0xba>
+ 67b:	ffd291        	l32r	a9, 5c4 <wDev_ClearBssid+0x34>
+ 67e:	0998      	l32i.n	a9, a9, 0
+ 680:	a09390        	addx4	a9, a3, a9
+ 683:	7988      	l32i.n	a8, a9, 28
+ 685:	208080        	or	a8, a0, a8
+ 688:	7989      	s32i.n	a8, a9, 28
+ 68a:	073d      	mov.n	a3, a7
+ 68c:	ffcf21        	l32r	a2, 5c8 <wDev_ClearBssid+0x38>
+ 68f:	4148      	l32i.n	a4, a1, 16
+ 691:	252a      	add.n	a2, a5, a2
+ 693:	ffce01        	l32r	a0, 5cc <wDev_ClearBssid+0x3c>
+ 696:	0000c0        	callx0	a0
+ 699:	0108      	l32i.n	a0, a1, 0
+ 69b:	10c112        	addi	a1, a1, 16
+ 69e:	f00d      	ret.n
+ 6a0:	f20600        	excw
+ 6a3:	3f          	.byte 0x3f
+ 6a4:	f21200        	excw
+ 6a7:	3f          	.byte 0x3f
+ 6a8:	ff          	.byte 0xff
+ 6a9:	ff          	.byte 0xff
+ 6aa:	1f          	.byte 0x1f
+ 6ab:	ff          	.byte 0xff
+
+000006ac <wDev_remove_KeyEntry>:
+ 6ac:	fffd71        	l32r	a7, 6a0 <wDev_Insert_KeyEntry+0xd0>
+ 6af:	401200        	ssl	a2
+ 6b2:	180c      	movi.n	a8, 1
+ 6b4:	f97c      	movi.n	a9, -1
+ 6b6:	a18800        	sll	a8, a8
+ 6b9:	308890        	xor	a8, a8, a9
+ 6bc:	0020c0        	memw
+ 6bf:	832762        	l32i	a6, a7, 0x20c
+ 6c2:	106680        	and	a6, a6, a8
+ 6c5:	0020c0        	memw
+ 6c8:	836762        	s32i	a6, a7, 0x20c
+ 6cb:	fff651        	l32r	a5, 6a4 <wDev_Insert_KeyEntry+0xd4>
+ 6ce:	a04220        	addx4	a4, a2, a2
+ 6d1:	b04450        	addx8	a4, a4, a5
+ 6d4:	fff551        	l32r	a5, 6a8 <wDev_Insert_KeyEntry+0xd8>
+ 6d7:	0020c0        	memw
+ 6da:	812432        	l32i	a3, a4, 0x204
+ 6dd:	103350        	and	a3, a3, a5
+ 6e0:	0020c0        	memw
+ 6e3:	816432        	s32i	a3, a4, 0x204
+ 6e6:	f00d      	ret.n
+ 6e8:	030303        	excw
+ 6eb:	060000        	excw
+ 6ee:	003ff2        	excw
+ 6f1:	100000        	and	a0, a0, a0
+
+000006f4 <wDev_Crypto_Conf>:
+ 6f4:	fffd61        	l32r	a6, 6e8 <wDev_remove_KeyEntry+0x3c>
+ 6f7:	fffe71        	l32r	a7, 6f0 <wDev_remove_KeyEntry+0x44>
+ 6fa:	fffc51        	l32r	a5, 6ec <wDev_remove_KeyEntry+0x40>
+ 6fd:	b2dc      	bnez.n	a2, 71c <wDev_Crypto_Conf+0x28>
+ 6ff:	0020c0        	memw
+ 702:	806562        	s32i	a6, a5, 0x200
+ 705:	021326        	beqi	a3, 1, 70b <wDev_Crypto_Conf+0x17>
+ 708:	2b5366        	bnei	a3, 5, 737 <wDev_Crypto_Conf+0x43>
+ 70b:	0020c0        	memw
+ 70e:	802522        	l32i	a2, a5, 0x200
+ 711:	202270        	or	a2, a2, a7
+ 714:	0020c0        	memw
+ 717:	806522        	s32i	a2, a5, 0x200
+ 71a:	f00d      	ret.n
+ 71c:	0020c0        	memw
+ 71f:	816562        	s32i	a6, a5, 0x204
+ 722:	021326        	beqi	a3, 1, 728 <wDev_Crypto_Conf+0x34>
+ 725:	0e5366        	bnei	a3, 5, 737 <wDev_Crypto_Conf+0x43>
+ 728:	0020c0        	memw
+ 72b:	812532        	l32i	a3, a5, 0x204
+ 72e:	203370        	or	a3, a3, a7
+ 731:	0020c0        	memw
+ 734:	816532        	s32i	a3, a5, 0x204
+ 737:	f00d      	ret.n
+	...
+ 741:	000300        	excw
+ 744:	f20600        	excw
+ 747:	3f          	.byte 0x3f
+ 748:	000000        	ill
+ 74b:	060000        	excw
+ 74e:	123ff2        	excw
+ 751:	09e0c1        	l32r	a12, fffc2ed4 <wDevDisableRx+0xfffc24dc>
+ 754:	f97141        	l32r	a4, ffffed18 <wDevDisableRx+0xffffe320>
+ 757:	ff          	.byte 0xff
+ 758:	fffa21        	l32r	a2, 740 <wDev_Crypto_Conf+0x4c>
+ 75b:	fffa31        	l32r	a3, 744 <wDev_Crypto_Conf+0x50>
+ 75e:	0020c0        	memw
+ 761:	806322        	s32i	a2, a3, 0x200
+ 764:	0020c0        	memw
+ 767:	040c      	movi.n	a4, 0
+ 769:	075d      	mov.n	a5, a7
+ 76b:	060c      	movi.n	a6, 0
+ 76d:	816322        	s32i	a2, a3, 0x204
+ 770:	600c      	movi.n	a0, 6
+ 772:	320c      	movi.n	a2, 3
+ 774:	030c      	movi.n	a3, 0
+ 776:	0109      	s32i.n	a0, a1, 0
+ 778:	000005        	call0	77c <wDev_Crypto_Conf+0x88>
+ 77b:	320c      	movi.n	a2, 3
+ 77d:	130c      	movi.n	a3, 1
+ 77f:	160c      	movi.n	a6, 1
+ 781:	fff171        	l32r	a7, 748 <wDev_Crypto_Conf+0x54>
+ 784:	640c      	movi.n	a4, 6
+ 786:	0149      	s32i.n	a4, a1, 0
+ 788:	075d      	mov.n	a5, a7
+ 78a:	040c      	movi.n	a4, 0
+ 78c:	000005        	call0	790 <wDev_Crypto_Conf+0x9c>
+ 78f:	050c      	movi.n	a5, 0
+ 791:	0020c0        	memw
+ 794:	ffee61        	l32r	a6, 74c <wDev_Crypto_Conf+0x58>
+ 797:	4108      	l32i.n	a0, a1, 16
+ 799:	20c112        	addi	a1, a1, 32
+ 79c:	826652        	s32i	a5, a6, 0x208
+ 79f:	f00d      	ret.n
+	...
+ 7a9:	3ff206        	j	10775 <wDevDisableRx+0xfd7d>
+ 7ac:	030000        	excw
+	...
+
+000007b0 <wDev_Crypto_Disable>:
+ 7b0:	fffd61        	l32r	a6, 7a4 <wDev_Crypto_Conf+0xb0>
+ 7b3:	fffd41        	l32r	a4, 7a8 <wDev_Crypto_Conf+0xb4>
+ 7b6:	0668      	l32i.n	a6, a6, 0
+ 7b8:	fffd51        	l32r	a5, 7ac <wDev_Crypto_Conf+0xb8>
+ 7bb:	a06260        	addx4	a6, a2, a6
+ 7be:	7668      	l32i.n	a6, a6, 28
+ 7c0:	72cc      	bnez.n	a2, 7cb <wDev_Crypto_Disable+0x1b>
+ 7c2:	0020c0        	memw
+ 7c5:	806452        	s32i	a5, a4, 0x200
+ 7c8:	000146        	j	7d1 <wDev_Crypto_Disable+0x21>
+ 7cb:	0020c0        	memw
+ 7ce:	816452        	s32i	a5, a4, 0x204
+ 7d1:	f87c      	movi.n	a8, -1
+ 7d3:	308680        	xor	a8, a6, a8
+ 7d6:	0020c0        	memw
+ 7d9:	832472        	l32i	a7, a4, 0x20c
+ 7dc:	107780        	and	a7, a7, a8
+ 7df:	0020c0        	memw
+ 7e2:	836472        	s32i	a7, a4, 0x20c
+ 7e5:	f00d      	ret.n
+ 7e7:	000000        	ill
+ 7ea:	008000        	excw
+ 7ed:	fe          	.byte 0xfe
+ 7ee:	413ff1        	l32r	a15, fffd0cec <wDevDisableRx+0xfffd02f4>
+
+000007f0 <wDevEnableRx>:
+ 7f0:	fffe41        	l32r	a4, 7e8 <wDev_Crypto_Disable+0x38>
+ 7f3:	fffe31        	l32r	a3, 7ec <wDev_Crypto_Disable+0x3c>
+ 7f6:	0020c0        	memw
+ 7f9:	812322        	l32i	a2, a3, 0x204
+ 7fc:	202240        	or	a2, a2, a4
+ 7ff:	0020c0        	memw
+ 802:	816322        	s32i	a2, a3, 0x204
+ 805:	f00d      	ret.n

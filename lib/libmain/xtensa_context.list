@@ -1,0 +1,37 @@
+
+xtensa_context.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <_xt_context_save>:
+   0:	5129      	s32i.n	a2, a1, 20
+   2:	6139      	s32i.n	a3, a1, 24
+   4:	7149      	s32i.n	a4, a1, 28
+   6:	8159      	s32i.n	a5, a1, 32
+   8:	9169      	s32i.n	a6, a1, 36
+   a:	a179      	s32i.n	a7, a1, 40
+   c:	b189      	s32i.n	a8, a1, 44
+   e:	c199      	s32i.n	a9, a1, 48
+  10:	d1a9      	s32i.n	a10, a1, 52
+  12:	e1b9      	s32i.n	a11, a1, 56
+  14:	030330        	rsr.sar	a3
+  17:	136132        	s32i	a3, a1, 76
+  1a:	f00d      	ret.n
+
+0000001c <_xt_context_restore>:
+  1c:	132132        	l32i	a3, a1, 76
+  1f:	5128      	l32i.n	a2, a1, 20
+  21:	130330        	wsr.sar	a3
+  24:	6138      	l32i.n	a3, a1, 24
+  26:	7148      	l32i.n	a4, a1, 28
+  28:	8158      	l32i.n	a5, a1, 32
+  2a:	9168      	l32i.n	a6, a1, 36
+  2c:	a178      	l32i.n	a7, a1, 40
+  2e:	b188      	l32i.n	a8, a1, 44
+  30:	c198      	l32i.n	a9, a1, 48
+  32:	d1a8      	l32i.n	a10, a1, 52
+  34:	e1b8      	l32i.n	a11, a1, 56
+  36:	f1c8      	l32i.n	a12, a1, 60
+  38:	1021d2        	l32i	a13, a1, 64
+  3b:	f00d      	ret.n

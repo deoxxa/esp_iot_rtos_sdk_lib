@@ -1,0 +1,441 @@
+
+if_hwctrl.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ic_get_addr-0x4>:
+   0:	000010        	excw
+	...
+
+00000004 <ic_get_addr>:
+   4:	ffff31        	l32r	a3, 0 <ic_get_addr-0x4>
+   7:	1122c0        	slli	a2, a2, 4
+   a:	232a      	add.n	a2, a3, a2
+   c:	f00d      	ret.n
+   e:	100000        	and	a0, a0, a0
+  11:	000000        	ill
+
+00000014 <ic_set_opmode>:
+  14:	ffff51        	l32r	a5, 10 <ic_get_addr+0xc>
+  17:	1162c0        	slli	a6, a2, 4
+  1a:	556a      	add.n	a5, a5, a6
+  1c:	2539      	s32i.n	a3, a5, 8
+  1e:	0c4542        	s8i	a4, a5, 12
+  21:	f00d      	ret.n
+  23:	001000        	excw
+	...
+
+00000034 <ic_enable_interface>:
+  34:	f0c112        	addi	a1, a1, -16
+  37:	1159      	s32i.n	a5, a1, 4
+  39:	2109      	s32i.n	a0, a1, 8
+  3b:	31c9      	s32i.n	a12, a1, 12
+  3d:	0149      	s32i.n	a4, a1, 0
+  3f:	02cd      	mov.n	a12, a2
+  41:	fff821        	l32r	a2, 24 <ic_set_opmode+0x10>
+  44:	114cc0        	slli	a4, a12, 4
+  47:	224a      	add.n	a2, a2, a4
+  49:	640c      	movi.n	a4, 6
+  4b:	fff801        	l32r	a0, 2c <ic_set_opmode+0x18>
+  4e:	0000c0        	callx0	a0
+  51:	0c2d      	mov.n	a2, a12
+  53:	0138      	l32i.n	a3, a1, 0
+  55:	1148      	l32i.n	a4, a1, 4
+  57:	000005        	call0	58 <ic_enable_interface+0x24>
+  5a:	401c00        	ssl	a12
+  5d:	fff251        	l32r	a5, 28 <ic_set_opmode+0x14>
+  60:	130c      	movi.n	a3, 1
+  62:	000522        	l8ui	a2, a5, 0
+  65:	a13300        	sll	a3, a3
+  68:	202230        	or	a2, a2, a3
+  6b:	742020        	extui	a2, a2, 0, 8
+  6e:	004522        	s8i	a2, a5, 0
+  71:	ffef01        	l32r	a0, 30 <ic_set_opmode+0x1c>
+  74:	0000c0        	callx0	a0
+  77:	742020        	extui	a2, a2, 0, 8
+  7a:	31c8      	l32i.n	a12, a1, 12
+  7c:	2108      	l32i.n	a0, a1, 8
+  7e:	10c112        	addi	a1, a1, 16
+  81:	f00d      	ret.n
+  83:	000000        	ill
+	...
+
+00000088 <ic_interface_enabled>:
+  88:	ffff31        	l32r	a3, 84 <ic_enable_interface+0x50>
+  8b:	000332        	l8ui	a3, a3, 0
+  8e:	400200        	ssr	a2
+  91:	912030        	srl	a2, a3
+  94:	042020        	extui	a2, a2, 0, 1
+  97:	f00d      	ret.n
+	...
+
+000000b0 <ic_disable_interface>:
+  b0:	f0c112        	addi	a1, a1, -16
+  b3:	0109      	s32i.n	a0, a1, 0
+  b5:	fff901        	l32r	a0, 9c <ic_interface_enabled+0x14>
+  b8:	140c      	movi.n	a4, 1
+  ba:	000002        	l8ui	a0, a0, 0
+  bd:	400200        	ssr	a2
+  c0:	913000        	srl	a3, a0
+  c3:	1f6307        	bbci	a3, 0, e6 <ic_disable_interface+0x36>
+  c6:	401200        	ssl	a2
+  c9:	a13400        	sll	a3, a4
+  cc:	f47c      	movi.n	a4, -1
+  ce:	303340        	xor	a3, a3, a4
+  d1:	fff341        	l32r	a4, a0 <ic_interface_enabled+0x18>
+  d4:	103030        	and	a3, a0, a3
+  d7:	004432        	s8i	a3, a4, 0
+  da:	fff301        	l32r	a0, a8 <ic_interface_enabled+0x20>
+  dd:	0000c0        	callx0	a0
+  e0:	fff101        	l32r	a0, a4 <ic_interface_enabled+0x1c>
+  e3:	000002        	l8ui	a0, a0, 0
+  e6:	002d      	mov.n	a2, a0
+  e8:	fff101        	l32r	a0, ac <ic_interface_enabled+0x24>
+  eb:	0000c0        	callx0	a0
+  ee:	742020        	extui	a2, a2, 0, 8
+  f1:	0108      	l32i.n	a0, a1, 0
+  f3:	10c112        	addi	a1, a1, 16
+  f6:	f00d      	ret.n
+  f8:	000010        	excw
+	...
+
+000000fc <ic_is_pure_sta>:
+  fc:	ffff41        	l32r	a4, f8 <ic_disable_interface+0x48>
+  ff:	1152c0        	slli	a5, a2, 4
+ 102:	445a      	add.n	a4, a4, a5
+ 104:	2438      	l32i.n	a3, a4, 8
+ 106:	020c      	movi.n	a2, 0
+ 108:	071326        	beqi	a3, 1, 113 <ic_is_pure_sta+0x17>
+ 10b:	0c0472        	l8ui	a7, a4, 12
+ 10e:	160c      	movi.n	a6, 1
+ 110:	832670        	moveqz	a2, a6, a7
+ 113:	742020        	extui	a2, a2, 0, 8
+ 116:	f00d      	ret.n
+ 118:	000010        	excw
+	...
+
+0000011c <ic_get_ptk_alg>:
+ 11c:	ffff31        	l32r	a3, 118 <ic_is_pure_sta+0x1c>
+ 11f:	1122c0        	slli	a2, a2, 4
+ 122:	232a      	add.n	a2, a3, a2
+ 124:	0d0222        	l8ui	a2, a2, 13
+ 127:	f00d      	ret.n
+ 129:	000000        	ill
+ 12c:	000010        	excw
+	...
+
+00000130 <ic_get_gtk_alg>:
+ 130:	ffff31        	l32r	a3, 12c <ic_get_ptk_alg+0x10>
+ 133:	1122c0        	slli	a2, a2, 4
+ 136:	232a      	add.n	a2, a3, a2
+ 138:	0e0222        	l8ui	a2, a2, 14
+ 13b:	f00d      	ret.n
+ 13d:	000000        	ill
+ 140:	000010        	excw
+	...
+
+00000144 <ic_set_ptk_alg>:
+ 144:	ffff41        	l32r	a4, 140 <ic_get_gtk_alg+0x10>
+ 147:	1152c0        	slli	a5, a2, 4
+ 14a:	445a      	add.n	a4, a4, a5
+ 14c:	0d4432        	s8i	a3, a4, 13
+ 14f:	f00d      	ret.n
+ 151:	000000        	ill
+ 154:	000010        	excw
+	...
+
+00000158 <ic_set_gtk_alg>:
+ 158:	ffff41        	l32r	a4, 154 <ic_set_ptk_alg+0x10>
+ 15b:	1152c0        	slli	a5, a2, 4
+ 15e:	445a      	add.n	a4, a4, a5
+ 160:	0e4432        	s8i	a3, a4, 14
+ 163:	f00d      	ret.n
+ 165:	000000        	ill
+ 168:	000010        	excw
+	...
+
+0000016c <ic_interface_is_p2p>:
+ 16c:	ffff31        	l32r	a3, 168 <ic_set_gtk_alg+0x10>
+ 16f:	1122c0        	slli	a2, a2, 4
+ 172:	232a      	add.n	a2, a3, a2
+ 174:	0c0222        	l8ui	a2, a2, 12
+ 177:	f00d      	ret.n
+	...
+ 181:	000000        	ill
+ 184:	030c      	movi.n	a3, 0
+ 186:	f0c112        	addi	a1, a1, -16
+ 189:	11c9      	s32i.n	a12, a1, 4
+ 18b:	0109      	s32i.n	a0, a1, 0
+ 18d:	02cd      	mov.n	a12, a2
+ 18f:	000005        	call0	190 <ic_interface_is_p2p+0x24>
+ 192:	0c2d      	mov.n	a2, a12
+ 194:	030c      	movi.n	a3, 0
+ 196:	000005        	call0	198 <ic_interface_is_p2p+0x2c>
+ 199:	0c2d      	mov.n	a2, a12
+ 19b:	fff801        	l32r	a0, 17c <ic_interface_is_p2p+0x10>
+ 19e:	0000c0        	callx0	a0
+ 1a1:	0c3d      	mov.n	a3, a12
+ 1a3:	120c      	movi.n	a2, 1
+ 1a5:	040c      	movi.n	a4, 0
+ 1a7:	fff601        	l32r	a0, 180 <ic_interface_is_p2p+0x14>
+ 1aa:	0000c0        	callx0	a0
+ 1ad:	11c8      	l32i.n	a12, a1, 4
+ 1af:	0108      	l32i.n	a0, a1, 0
+ 1b1:	10c112        	addi	a1, a1, 16
+ 1b4:	f00d      	ret.n
+	...
+ 1ce:	120000        	excw
+ 1d1:	c9f0c1        	l32r	a12, ffff2994 <ic_remove_key+0xffff252c>
+ 1d4:	010911        	l32r	a1, fffc05f8 <ic_remove_key+0xfffc0190>
+ 1d7:	02cd      	mov.n	a12, a2
+ 1d9:	fff721        	l32r	a2, 1b8 <ic_interface_is_p2p+0x4c>
+ 1dc:	0c3d      	mov.n	a3, a12
+ 1de:	fff701        	l32r	a0, 1bc <ic_interface_is_p2p+0x50>
+ 1e1:	0000c0        	callx0	a0
+ 1e4:	020c      	movi.n	a2, 0
+ 1e6:	0c3d      	mov.n	a3, a12
+ 1e8:	040c      	movi.n	a4, 0
+ 1ea:	fff501        	l32r	a0, 1c0 <ic_interface_is_p2p+0x54>
+ 1ed:	0000c0        	callx0	a0
+ 1f0:	0c2d      	mov.n	a2, a12
+ 1f2:	000005        	call0	1f4 <ic_interface_is_p2p+0x88>
+ 1f5:	02dc      	bnez.n	a2, 209 <ic_interface_is_p2p+0x9d>
+ 1f7:	fff301        	l32r	a0, 1c4 <ic_interface_is_p2p+0x58>
+ 1fa:	0000c0        	callx0	a0
+ 1fd:	fff201        	l32r	a0, 1c8 <ic_interface_is_p2p+0x5c>
+ 200:	0000c0        	callx0	a0
+ 203:	fff201        	l32r	a0, 1cc <ic_interface_is_p2p+0x60>
+ 206:	0000c0        	callx0	a0
+ 209:	11c8      	l32i.n	a12, a1, 4
+ 20b:	0108      	l32i.n	a0, a1, 0
+ 20d:	10c112        	addi	a1, a1, 16
+ 210:	f00d      	ret.n
+ 212:	0c0000        	excw
+ 215:	000000        	ill
+ 218:	0018      	l32i.n	a1, a0, 0
+	...
+
+0000022c <ic_set_vif>:
+ 22c:	e0c112        	addi	a1, a1, -32
+ 22f:	2109      	s32i.n	a0, a1, 8
+ 231:	1159      	s32i.n	a5, a1, 4
+ 233:	0169      	s32i.n	a6, a1, 0
+ 235:	31c9      	s32i.n	a12, a1, 12
+ 237:	41d9      	s32i.n	a13, a1, 16
+ 239:	02cd      	mov.n	a12, a2
+ 23b:	04dd      	mov.n	a13, a4
+ 23d:	162366        	bnei	a3, 2, 257 <ic_set_vif+0x2b>
+ 240:	fff521        	l32r	a2, 214 <ic_interface_is_p2p+0xa8>
+ 243:	0c3d      	mov.n	a3, a12
+ 245:	fff501        	l32r	a0, 21c <ic_interface_is_p2p+0xb0>
+ 248:	0000c0        	callx0	a0
+ 24b:	0c2d      	mov.n	a2, a12
+ 24d:	1138      	l32i.n	a3, a1, 4
+ 24f:	0148      	l32i.n	a4, a1, 0
+ 251:	000005        	call0	254 <ic_set_vif+0x28>
+ 254:	000d86        	j	28e <ic_set_vif+0x62>
+ 257:	301366        	bnei	a3, 1, 28b <ic_set_vif+0x5f>
+ 25a:	ffef21        	l32r	a2, 218 <ic_interface_is_p2p+0xac>
+ 25d:	0c3d      	mov.n	a3, a12
+ 25f:	fff001        	l32r	a0, 220 <ic_interface_is_p2p+0xb4>
+ 262:	0000c0        	callx0	a0
+ 265:	0c2d      	mov.n	a2, a12
+ 267:	0d3d      	mov.n	a3, a13
+ 269:	ffee01        	l32r	a0, 224 <ic_interface_is_p2p+0xb8>
+ 26c:	0000c0        	callx0	a0
+ 26f:	0d3d      	mov.n	a3, a13
+ 271:	0c2d      	mov.n	a2, a12
+ 273:	1148      	l32i.n	a4, a1, 4
+ 275:	0158      	l32i.n	a5, a1, 0
+ 277:	000005        	call0	278 <ic_set_vif+0x4c>
+ 27a:	051266        	bnei	a2, 1, 283 <ic_set_vif+0x57>
+ 27d:	ffea01        	l32r	a0, 228 <ic_interface_is_p2p+0xbc>
+ 280:	0000c0        	callx0	a0
+ 283:	0c2d      	mov.n	a2, a12
+ 285:	ffefc5        	call0	184 <ic_interface_is_p2p+0x18>
+ 288:	000086        	j	28e <ic_set_vif+0x62>
+ 28b:	fff445        	call0	1d0 <ic_interface_is_p2p+0x64>
+ 28e:	31c8      	l32i.n	a12, a1, 12
+ 290:	41d8      	l32i.n	a13, a1, 16
+ 292:	2108      	l32i.n	a0, a1, 8
+ 294:	20c112        	addi	a1, a1, 32
+ 297:	f00d      	ret.n
+ 299:	000000        	ill
+ 29c:	000024        	excw
+ 29f:	000000        	ill
+ 2a2:	000000        	ill
+ 2a5:	fe          	.byte 0xfe
+ 2a6:	ef          	.byte 0xef
+ 2a7:	3f          	.byte 0x3f
+ 2a8:	000000        	ill
+ 2ab:	002c00        	excw
+	...
+
+000002cc <ic_set_sta>:
+ 2cc:	e0c112        	addi	a1, a1, -32
+ 2cf:	21c9      	s32i.n	a12, a1, 8
+ 2d1:	1109      	s32i.n	a0, a1, 4
+ 2d3:	41e9      	s32i.n	a14, a1, 16
+ 2d5:	31d9      	s32i.n	a13, a1, 12
+ 2d7:	06ed      	mov.n	a14, a6
+ 2d9:	02dd      	mov.n	a13, a2
+ 2db:	089316        	beqz	a3, 368 <ic_set_sta+0x9c>
+ 2de:	043d      	mov.n	a3, a4
+ 2e0:	0179      	s32i.n	a7, a1, 0
+ 2e2:	054d      	mov.n	a4, a5
+ 2e4:	065d      	mov.n	a5, a6
+ 2e6:	fff201        	l32r	a0, 2b0 <ic_set_vif+0x84>
+ 2e9:	0000c0        	callx0	a0
+ 2ec:	02cd      	mov.n	a12, a2
+ 2ee:	0e3d      	mov.n	a3, a14
+ 2f0:	ffeb21        	l32r	a2, 29c <ic_set_vif+0x70>
+ 2f3:	fff001        	l32r	a0, 2b4 <ic_set_vif+0x88>
+ 2f6:	0000c0        	callx0	a0
+ 2f9:	075c16        	beqz	a12, 372 <ic_set_sta+0xa6>
+ 2fc:	0d2d      	mov.n	a2, a13
+ 2fe:	000005        	call0	300 <ic_set_sta+0x34>
+ 301:	0e6c      	movi.n	a14, -32
+ 303:	0138      	l32i.n	a3, a1, 0
+ 305:	020d      	mov.n	a0, a2
+ 307:	5129      	s32i.n	a2, a1, 20
+ 309:	ffe521        	l32r	a2, 2a0 <ic_set_vif+0x74>
+ 30c:	176c32        	s32i	a3, a12, 92
+ 30f:	000222        	l8ui	a2, a2, 0
+ 312:	ffe4d1        	l32r	a13, 2a4 <ic_set_vif+0x78>
+ 315:	52dc      	bnez.n	a2, 32e <ic_set_sta+0x62>
+ 317:	ffe801        	l32r	a0, 2b8 <ic_set_vif+0x8c>
+ 31a:	0000c0        	callx0	a0
+ 31d:	5108      	l32i.n	a0, a1, 20
+ 31f:	0020c0        	memw
+ 322:	802d42        	l32i	a4, a13, 0x200
+ 325:	1044e0        	and	a4, a4, a14
+ 328:	0020c0        	memw
+ 32b:	806d42        	s32i	a4, a13, 0x200
+ 32e:	0c2d      	mov.n	a2, a12
+ 330:	030c      	movi.n	a3, 0
+ 332:	004d      	mov.n	a4, a0
+ 334:	ffe201        	l32r	a0, 2bc <ic_set_vif+0x90>
+ 337:	0000c0        	callx0	a0
+ 33a:	ffdb51        	l32r	a5, 2a8 <ic_set_vif+0x7c>
+ 33d:	000552        	l8ui	a5, a5, 0
+ 340:	85dc      	bnez.n	a5, 35c <ic_set_sta+0x90>
+ 342:	170c      	movi.n	a7, 1
+ 344:	0020c0        	memw
+ 347:	802d62        	l32i	a6, a13, 0x200
+ 34a:	1066e0        	and	a6, a6, a14
+ 34d:	206670        	or	a6, a6, a7
+ 350:	0020c0        	memw
+ 353:	806d62        	s32i	a6, a13, 0x200
+ 356:	ffda01        	l32r	a0, 2c0 <ic_set_vif+0x94>
+ 359:	0000c0        	callx0	a0
+ 35c:	ffd421        	l32r	a2, 2ac <ic_set_vif+0x80>
+ 35f:	ffd901        	l32r	a0, 2c4 <ic_set_vif+0x98>
+ 362:	0000c0        	callx0	a0
+ 365:	000246        	j	372 <ic_set_sta+0xa6>
+ 368:	043d      	mov.n	a3, a4
+ 36a:	054d      	mov.n	a4, a5
+ 36c:	ffd701        	l32r	a0, 2c8 <ic_set_vif+0x9c>
+ 36f:	0000c0        	callx0	a0
+ 372:	21c8      	l32i.n	a12, a1, 8
+ 374:	31d8      	l32i.n	a13, a1, 12
+ 376:	41e8      	l32i.n	a14, a1, 16
+ 378:	1108      	l32i.n	a0, a1, 4
+ 37a:	20c112        	addi	a1, a1, 32
+ 37d:	f00d      	ret.n
+ 37f:	004000        	break	0, 0
+ 382:	480000        	excw
+ 385:	000000        	ill
+ 388:	0038      	l32i.n	a3, a0, 0
+	...
+
+000003a0 <ic_bss_info_update>:
+ 3a0:	f0c112        	addi	a1, a1, -16
+ 3a3:	1109      	s32i.n	a0, a1, 4
+ 3a5:	122466        	bnei	a4, 2, 3bb <ic_bss_info_update+0x1b>
+ 3a8:	0159      	s32i.n	a5, a1, 0
+ 3aa:	b5bc      	beqz.n	a5, 3e9 <ic_bss_info_update+0x49>
+ 3ac:	034d      	mov.n	a4, a3
+ 3ae:	023d      	mov.n	a3, a2
+ 3b0:	220c      	movi.n	a2, 2
+ 3b2:	fff601        	l32r	a0, 38c <ic_set_sta+0xc0>
+ 3b5:	0000c0        	callx0	a0
+ 3b8:	000c06        	j	3ec <ic_bss_info_update+0x4c>
+ 3bb:	171466        	bnei	a4, 1, 3d6 <ic_bss_info_update+0x36>
+ 3be:	034d      	mov.n	a4, a3
+ 3c0:	023d      	mov.n	a3, a2
+ 3c2:	220c      	movi.n	a2, 2
+ 3c4:	fff301        	l32r	a0, 390 <ic_set_sta+0xc4>
+ 3c7:	0000c0        	callx0	a0
+ 3ca:	ffed21        	l32r	a2, 380 <ic_set_sta+0xb4>
+ 3cd:	fff101        	l32r	a0, 394 <ic_set_sta+0xc8>
+ 3d0:	0000c0        	callx0	a0
+ 3d3:	0002c6        	j	3e2 <ic_bss_info_update+0x42>
+ 3d6:	ffdac5        	call0	184 <ic_interface_is_p2p+0x18>
+ 3d9:	ffea21        	l32r	a2, 384 <ic_set_sta+0xb8>
+ 3dc:	ffef01        	l32r	a0, 398 <ic_set_sta+0xcc>
+ 3df:	0000c0        	callx0	a0
+ 3e2:	1108      	l32i.n	a0, a1, 4
+ 3e4:	10c112        	addi	a1, a1, 16
+ 3e7:	f00d      	ret.n
+ 3e9:	ffd985        	call0	184 <ic_interface_is_p2p+0x18>
+ 3ec:	ffe721        	l32r	a2, 388 <ic_set_sta+0xbc>
+ 3ef:	0138      	l32i.n	a3, a1, 0
+ 3f1:	ffea01        	l32r	a0, 39c <ic_set_sta+0xd0>
+ 3f4:	0000c0        	callx0	a0
+ 3f7:	fff9c6        	j	3e2 <ic_bss_info_update+0x42>
+	...
+
+00000404 <ic_set_key>:
+ 404:	d0c112        	addi	a1, a1, -48
+ 407:	7109      	s32i.n	a0, a1, 28
+ 409:	4149      	s32i.n	a4, a1, 16
+ 40b:	5159      	s32i.n	a5, a1, 20
+ 40d:	6179      	s32i.n	a7, a1, 24
+ 40f:	a1e9      	s32i.n	a14, a1, 40
+ 411:	91d9      	s32i.n	a13, a1, 36
+ 413:	81c9      	s32i.n	a12, a1, 32
+ 415:	02dd      	mov.n	a13, a2
+ 417:	03cd      	mov.n	a12, a3
+ 419:	06ed      	mov.n	a14, a6
+ 41b:	0566b6        	bltui	a6, 6, 424 <ic_set_key+0x20>
+ 41e:	000005        	call0	420 <ic_set_key+0x1c>
+ 421:	000446        	j	436 <ic_set_key+0x32>
+ 424:	b3cc      	bnez.n	a3, 433 <ic_set_key+0x2f>
+ 426:	000005        	call0	428 <ic_set_key+0x24>
+ 429:	0d2d      	mov.n	a2, a13
+ 42b:	0c3d      	mov.n	a3, a12
+ 42d:	000005        	call0	430 <ic_set_key+0x2c>
+ 430:	000086        	j	436 <ic_set_key+0x32>
+ 433:	000005        	call0	434 <ic_set_key+0x30>
+ 436:	0e6d      	mov.n	a6, a14
+ 438:	4148      	l32i.n	a4, a1, 16
+ 43a:	5158      	l32i.n	a5, a1, 20
+ 43c:	6178      	l32i.n	a7, a1, 24
+ 43e:	0c2d      	mov.n	a2, a12
+ 440:	0d3d      	mov.n	a3, a13
+ 442:	300102        	l8ui	a0, a1, 48
+ 445:	0109      	s32i.n	a0, a1, 0
+ 447:	ffed01        	l32r	a0, 3fc <ic_bss_info_update+0x5c>
+ 44a:	0000c0        	callx0	a0
+ 44d:	0c3d      	mov.n	a3, a12
+ 44f:	0d2d      	mov.n	a2, a13
+ 451:	ffeb01        	l32r	a0, 400 <ic_bss_info_update+0x60>
+ 454:	0000c0        	callx0	a0
+ 457:	81c8      	l32i.n	a12, a1, 32
+ 459:	91d8      	l32i.n	a13, a1, 36
+ 45b:	a1e8      	l32i.n	a14, a1, 40
+ 45d:	7108      	l32i.n	a0, a1, 28
+ 45f:	30c112        	addi	a1, a1, 48
+ 462:	f00d      	ret.n
+ 464:	000000        	ill
+	...
+
+00000468 <ic_remove_key>:
+ 468:	f0c112        	addi	a1, a1, -16
+ 46b:	0109      	s32i.n	a0, a1, 0
+ 46d:	fffd01        	l32r	a0, 464 <ic_set_key+0x60>
+ 470:	0000c0        	callx0	a0
+ 473:	0108      	l32i.n	a0, a1, 0
+ 475:	10c112        	addi	a1, a1, 16
+ 478:	f00d      	ret.n

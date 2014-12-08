@@ -1,0 +1,870 @@
+
+app_main.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <user_fatal_exception_handler-0x15c>:
+   0:	000200        	excw
+   3:	060060        	excw
+   6:	006000        	rsil	a0, 0
+   9:	000010        	excw
+   c:	ff          	.byte 0xff
+   d:	ef          	.byte 0xef
+   e:	ff          	.byte 0xff
+   f:	ff          	.byte 0xff
+  10:	288000        	excw
+  13:	fb4100        	excw
+  16:	ff          	.byte 0xff
+  17:	fffb51        	l32r	a5, 4 <user_fatal_exception_handler-0x158>
+  1a:	2422e6        	bgei	a2, 2, 42 <user_fatal_exception_handler-0x11a>
+  1d:	fffa21        	l32r	a2, 8 <user_fatal_exception_handler-0x154>
+  20:	0020c0        	memw
+  23:	2478      	l32i.n	a7, a4, 8
+  25:	207720        	or	a7, a7, a2
+  28:	0020c0        	memw
+  2b:	2479      	s32i.n	a7, a4, 8
+  2d:	00a162        	movi	a6, 0x100
+  30:	0020c0        	memw
+  33:	802532        	l32i	a3, a5, 0x200
+  36:	203360        	or	a3, a3, a6
+  39:	0020c0        	memw
+  3c:	806532        	s32i	a3, a5, 0x200
+  3f:	000e46        	j	7c <user_fatal_exception_handler-0xe0>
+  42:	fff2b1        	l32r	a11, c <user_fatal_exception_handler-0x150>
+  45:	320b      	addi.n	a3, a2, -1
+  47:	621b      	addi.n	a6, a2, 1
+  49:	b36220        	movgez	a6, a2, a2
+  4c:	216160        	srai	a6, a6, 1
+  4f:	113380        	slli	a3, a3, 8
+  52:	660b      	addi.n	a6, a6, -1
+  54:	1166c0        	slli	a6, a6, 4
+  57:	336a      	add.n	a3, a3, a6
+  59:	223a      	add.n	a2, a2, a3
+  5b:	220b      	addi.n	a2, a2, -1
+  5d:	0020c0        	memw
+  60:	24a8      	l32i.n	a10, a4, 8
+  62:	10aab0        	and	a10, a10, a11
+  65:	0020c0        	memw
+  68:	24a9      	s32i.n	a10, a4, 8
+  6a:	ffae92        	movi	a9, 0xfffffeff
+  6d:	0020c0        	memw
+  70:	802582        	l32i	a8, a5, 0x200
+  73:	108890        	and	a8, a8, a9
+  76:	0020c0        	memw
+  79:	806582        	s32i	a8, a5, 0x200
+  7c:	ffe551        	l32r	a5, 10 <user_fatal_exception_handler-0x14c>
+  7f:	205250        	or	a5, a2, a5
+  82:	0020c0        	memw
+  85:	2459      	s32i.n	a5, a4, 8
+  87:	f00d      	ret.n
+  89:	000000        	ill
+  8c:	000044        	excw
+  8f:	005c00        	excw
+  92:	680000        	excw
+  95:	000000        	ill
+  98:	005c      	movi.n	a0, 80
+  9a:	700000        	excw
+  9d:	000000        	ill
+  a0:	005c      	movi.n	a0, 80
+  a2:	780000        	excw
+  a5:	000000        	ill
+  a8:	005c      	movi.n	a0, 80
+  aa:	800000        	add	a0, a0, a0
+  ad:	000000        	ill
+  b0:	005c      	movi.n	a0, 80
+  b2:	8c0000        	excw
+	...
+  cd:	000000        	ill
+  d0:	03e830        	rsr.exccause	a3
+  d3:	ffee21        	l32r	a2, 8c <user_fatal_exception_handler-0xd0>
+  d6:	e0c112        	addi	a1, a1, -32
+  d9:	4109      	s32i.n	a0, a1, 16
+  db:	fff701        	l32r	a0, b8 <user_fatal_exception_handler-0xa4>
+  de:	0000c0        	callx0	a0
+  e1:	ffeb21        	l32r	a2, 90 <user_fatal_exception_handler-0xcc>
+  e4:	ffec31        	l32r	a3, 94 <user_fatal_exception_handler-0xc8>
+  e7:	03b140        	rsr.epc1	a4
+  ea:	03b270        	rsr.epc2	a7
+  ed:	0179      	s32i.n	a7, a1, 0
+  ef:	03b360        	rsr.epc3	a6
+  f2:	1169      	s32i.n	a6, a1, 4
+  f4:	03ee50        	rsr.excvaddr	a5
+  f7:	2159      	s32i.n	a5, a1, 8
+  f9:	03c000        	rsr.depc	a0
+  fc:	3109      	s32i.n	a0, a1, 12
+  fe:	ffef01        	l32r	a0, bc <user_fatal_exception_handler-0xa0>
+ 101:	0000c0        	callx0	a0
+ 104:	ffe521        	l32r	a2, 98 <user_fatal_exception_handler-0xc4>
+ 107:	ffe531        	l32r	a3, 9c <user_fatal_exception_handler-0xc0>
+ 10a:	0148      	l32i.n	a4, a1, 0
+ 10c:	ffed01        	l32r	a0, c0 <user_fatal_exception_handler-0x9c>
+ 10f:	0000c0        	callx0	a0
+ 112:	ffe321        	l32r	a2, a0 <user_fatal_exception_handler-0xbc>
+ 115:	ffe331        	l32r	a3, a4 <user_fatal_exception_handler-0xb8>
+ 118:	1148      	l32i.n	a4, a1, 4
+ 11a:	ffea01        	l32r	a0, c4 <user_fatal_exception_handler-0x98>
+ 11d:	0000c0        	callx0	a0
+ 120:	ffe221        	l32r	a2, a8 <user_fatal_exception_handler-0xb4>
+ 123:	ffe231        	l32r	a3, ac <user_fatal_exception_handler-0xb0>
+ 126:	2148      	l32i.n	a4, a1, 8
+ 128:	ffe801        	l32r	a0, c8 <user_fatal_exception_handler-0x94>
+ 12b:	0000c0        	callx0	a0
+ 12e:	ffe021        	l32r	a2, b0 <user_fatal_exception_handler-0xac>
+ 131:	ffe031        	l32r	a3, b4 <user_fatal_exception_handler-0xa8>
+ 134:	3148      	l32i.n	a4, a1, 12
+ 136:	ffe501        	l32r	a0, cc <user_fatal_exception_handler-0x90>
+ 139:	0000c0        	callx0	a0
+ 13c:	4108      	l32i.n	a0, a1, 16
+ 13e:	20c112        	addi	a1, a1, 32
+ 141:	f00d      	ret.n
+ 143:	000000        	ill
+ 146:	ff          	.byte 0xff
+ 147:	fe0000        	excw
+ 14a:	ff          	.byte 0xff
+ 14b:	5f          	.byte 0x5f
+ 14c:	000e00        	excw
+ 14f:	000060        	excw
+	...
+
+0000015c <user_fatal_exception_handler>:
+ 15c:	f0c112        	addi	a1, a1, -16
+ 15f:	0109      	s32i.n	a0, a1, 0
+ 161:	fffb01        	l32r	a0, 150 <user_fatal_exception_handler-0xc>
+ 164:	0000c0        	callx0	a0
+ 167:	020c      	movi.n	a2, 0
+ 169:	030c      	movi.n	a3, 0
+ 16b:	140c      	movi.n	a4, 1
+ 16d:	fff901        	l32r	a0, 154 <user_fatal_exception_handler-0x8>
+ 170:	0000c0        	callx0	a0
+ 173:	fff5c5        	call0	d0 <user_fatal_exception_handler-0x8c>
+ 176:	fff301        	l32r	a0, 144 <user_fatal_exception_handler-0x18>
+ 179:	fff341        	l32r	a4, 148 <user_fatal_exception_handler-0x14>
+ 17c:	0020c0        	memw
+ 17f:	872422        	l32i	a2, a4, 0x21c
+ 182:	080027        	bnone	a0, a2, 18e <user_fatal_exception_handler+0x32>
+ 185:	0020c0        	memw
+ 188:	872432        	l32i	a3, a4, 0x21c
+ 18b:	f68307        	bany	a3, a0, 185 <user_fatal_exception_handler+0x29>
+ 18e:	ffef41        	l32r	a4, 14c <user_fatal_exception_handler-0x10>
+ 191:	0020c0        	memw
+ 194:	472452        	l32i	a5, a4, 0x11c
+ 197:	080057        	bnone	a0, a5, 1a3 <user_fatal_exception_handler+0x47>
+ 19a:	0020c0        	memw
+ 19d:	472462        	l32i	a6, a4, 0x11c
+ 1a0:	f68607        	bany	a6, a0, 19a <user_fatal_exception_handler+0x3e>
+ 1a3:	ffed01        	l32r	a0, 158 <user_fatal_exception_handler-0x4>
+ 1a6:	0000c0        	callx0	a0
+ 1a9:	ffff06        	j	1a9 <user_fatal_exception_handler+0x4d>
+ 1ac:	ff0000        	excw
+ 1af:	fe0000        	excw
+ 1b2:	ff          	.byte 0xff
+ 1b3:	5f          	.byte 0x5f
+ 1b4:	fffe61        	l32r	a6, 1ac <user_fatal_exception_handler+0x50>
+ 1b7:	fffe51        	l32r	a5, 1b0 <user_fatal_exception_handler+0x54>
+ 1ba:	7da072        	movi	a7, 125
+ 1bd:	0020c0        	memw
+ 1c0:	872532        	l32i	a3, a5, 0x21c
+ 1c3:	103360        	and	a3, a3, a6
+ 1c6:	753030        	extui	a3, a3, 16, 8
+ 1c9:	f03737        	bltu	a7, a3, 1bd <user_fatal_exception_handler+0x61>
+ 1cc:	0020c0        	memw
+ 1cf:	806522        	s32i	a2, a5, 0x200
+ 1d2:	020c      	movi.n	a2, 0
+ 1d4:	f00d      	ret.n
+ 1d6:	120000        	excw
+ 1d9:	09f0c1        	l32r	a12, fffc299c <user_init_task+0xfffc254c>
+ 1dc:	926601        	l32r	a0, fffe4b74 <user_init_task+0xfffe4724>
+ 1df:	0c0c      	movi.n	a12, 0
+ 1e1:	fd05d2        	l8ui	a13, a5, 253
+ 1e4:	ff          	.byte 0xff
+ 1e5:	a20c      	movi.n	a2, 10
+ 1e7:	fffcc5        	call0	1b4 <user_fatal_exception_handler+0x58>
+ 1ea:	0001c6        	j	1f5 <user_fatal_exception_handler+0x99>
+ 1ed:	d00c      	movi.n	a0, 13
+ 1ef:	021207        	beq	a2, a0, 1f5 <user_fatal_exception_handler+0x99>
+ 1f2:	fffc05        	call0	1b4 <user_fatal_exception_handler+0x58>
+ 1f5:	0108      	l32i.n	a0, a1, 0
+ 1f7:	10c112        	addi	a1, a1, 16
+ 1fa:	f00d      	ret.n
+	...
+
+00000208 <wdt_feed>:
+ 208:	050c      	movi.n	a5, 0
+ 20a:	fffc21        	l32r	a2, 1fc <user_fatal_exception_handler+0xa0>
+ 20d:	030c      	movi.n	a3, 0
+ 20f:	f0c112        	addi	a1, a1, -16
+ 212:	014d      	mov.n	a4, a1
+ 214:	1109      	s32i.n	a0, a1, 4
+ 216:	0139      	s32i.n	a3, a1, 0
+ 218:	0228      	l32i.n	a2, a2, 0
+ 21a:	fff901        	l32r	a0, 200 <user_fatal_exception_handler+0xa4>
+ 21d:	0000c0        	callx0	a0
+ 220:	0138      	l32i.n	a3, a1, 0
+ 222:	438c      	beqz.n	a3, 22a <wdt_feed+0x22>
+ 224:	fff801        	l32r	a0, 204 <user_fatal_exception_handler+0xa8>
+ 227:	0000c0        	callx0	a0
+ 22a:	1108      	l32i.n	a0, a1, 4
+ 22c:	10c112        	addi	a1, a1, 16
+ 22f:	f00d      	ret.n
+ 231:	000000        	ill
+ 234:	000200        	excw
+ 237:	000060        	excw
+	...
+ 256:	080000        	excw
+ 259:	000000        	ill
+ 25c:	000000        	ill
+ 25f:	055800        	extui	a5, a0, 24, 1
+	...
+
+00000264 <user_start>:
+ 264:	80a322        	movi	a2, 0x380
+ 267:	c01120        	sub	a1, a1, a2
+ 26a:	de61c2        	s32i	a12, a1, 0x378
+ 26d:	dd6102        	s32i	a0, a1, 0x374
+ 270:	032c      	movi.n	a3, 32
+ 272:	fff021        	l32r	a2, 234 <wdt_feed+0x2c>
+ 275:	0020c0        	memw
+ 278:	7208      	l32i.n	a0, a2, 28
+ 27a:	200030        	or	a0, a0, a3
+ 27d:	0020c0        	memw
+ 280:	013d      	mov.n	a3, a1
+ 282:	7209      	s32i.n	a0, a2, 28
+ 284:	440c      	movi.n	a4, 4
+ 286:	020c      	movi.n	a2, 0
+ 288:	ffee01        	l32r	a0, 240 <wdt_feed+0x38>
+ 28b:	0000c0        	callx0	a0
+ 28e:	030142        	l8ui	a4, a1, 3
+ 291:	150c      	movi.n	a5, 1
+ 293:	340040        	extui	a0, a4, 0, 4
+ 296:	0430f6        	bgeui	a0, 3, 29e <user_start+0x3a>
+ 299:	202b      	addi.n	a2, a0, 2
+ 29b:	0001c6        	j	2a6 <user_start+0x42>
+ 29e:	f1c062        	addi	a6, a0, -15
+ 2a1:	220c      	movi.n	a2, 2
+ 2a3:	832560        	moveqz	a2, a5, a6
+ 2a6:	340440        	extui	a0, a4, 4, 4
+ 2a9:	609c      	beqz.n	a0, 2c3 <user_start+0x5f>
+ 2ab:	021066        	bnei	a0, 1, 2b1 <user_start+0x4d>
+ 2ae:	0024c6        	j	345 <user_start+0xe1>
+ 2b1:	022066        	bnei	a0, 2, 2b7 <user_start+0x53>
+ 2b4:	002486        	j	34a <user_start+0xe6>
+ 2b7:	023066        	bnei	a0, 3, 2bd <user_start+0x59>
+ 2ba:	002486        	j	350 <user_start+0xec>
+ 2bd:	024066        	bnei	a0, 4, 2c3 <user_start+0x5f>
+ 2c0:	002486        	j	356 <user_start+0xf2>
+ 2c3:	80a002        	movi	a0, 128
+ 2c6:	ffdc71        	l32r	a7, 238 <wdt_feed+0x30>
+ 2c9:	11c040        	slli	a12, a0, 12
+ 2cc:	17c9      	s32i.n	a12, a7, 4
+ 2ce:	ffd445        	call0	14 <user_fatal_exception_handler-0x148>
+ 2d1:	020122        	l8ui	a2, a1, 2
+ 2d4:	ffdc01        	l32r	a0, 244 <wdt_feed+0x3c>
+ 2d7:	0000c0        	callx0	a0
+ 2da:	f0dc22        	addmi	a2, a12, 0xfffff000
+ 2dd:	440c      	movi.n	a4, 4
+ 2df:	03d132        	addmi	a3, a1, 0x300
+ 2e2:	70c332        	addi	a3, a3, 112
+ 2e5:	ffd801        	l32r	a0, 248 <wdt_feed+0x40>
+ 2e8:	0000c0        	callx0	a0
+ 2eb:	03d142        	addmi	a4, a1, 0x300
+ 2ee:	700442        	l8ui	a4, a4, 112
+ 2f1:	f4cc      	bnez.n	a4, 304 <user_start+0xa0>
+ 2f3:	d0dc22        	addmi	a2, a12, 0xffffd000
+ 2f6:	013d      	mov.n	a3, a1
+ 2f8:	6ca342        	movi	a4, 0x36c
+ 2fb:	ffd401        	l32r	a0, 24c <wdt_feed+0x44>
+ 2fe:	0000c0        	callx0	a0
+ 301:	000346        	j	312 <user_start+0xae>
+ 304:	e0dc22        	addmi	a2, a12, 0xffffe000
+ 307:	013d      	mov.n	a3, a1
+ 309:	6ca342        	movi	a4, 0x36c
+ 30c:	ffd101        	l32r	a0, 250 <wdt_feed+0x48>
+ 30f:	0000c0        	callx0	a0
+ 312:	020c      	movi.n	a2, 0
+ 314:	030c      	movi.n	a3, 0
+ 316:	140c      	movi.n	a4, 1
+ 318:	ffcf01        	l32r	a0, 254 <wdt_feed+0x4c>
+ 31b:	0000c0        	callx0	a0
+ 31e:	ffce01        	l32r	a0, 258 <wdt_feed+0x50>
+ 321:	0000c0        	callx0	a0
+ 324:	ffc621        	l32r	a2, 23c <wdt_feed+0x34>
+ 327:	013d      	mov.n	a3, a1
+ 329:	6ca342        	movi	a4, 0x36c
+ 32c:	ffcc01        	l32r	a0, 25c <wdt_feed+0x54>
+ 32f:	0000c0        	callx0	a0
+ 332:	ffcb01        	l32r	a0, 260 <wdt_feed+0x58>
+ 335:	0000c0        	callx0	a0
+ 338:	de21c2        	l32i	a12, a1, 0x378
+ 33b:	80a322        	movi	a2, 0x380
+ 33e:	dd2102        	l32i	a0, a1, 0x374
+ 341:	112a      	add.n	a1, a1, a2
+ 343:	f00d      	ret.n
+ 345:	004c      	movi.n	a0, 64
+ 347:	ffdec6        	j	2c6 <user_start+0x62>
+ 34a:	00a102        	movi	a0, 0x100
+ 34d:	ffdd46        	j	2c6 <user_start+0x62>
+ 350:	00a202        	movi	a0, 0x200
+ 353:	ffdbc6        	j	2c6 <user_start+0x62>
+ 356:	00a402        	movi	a0, 0x400
+ 359:	ffda46        	j	2c6 <user_start+0x62>
+ 35c:	000100        	excw
+	...
+
+00000368 <vApplicationStackOverflowHook>:
+ 368:	f0c112        	addi	a1, a1, -16
+ 36b:	0139      	s32i.n	a3, a1, 0
+ 36d:	1109      	s32i.n	a0, a1, 4
+ 36f:	fffc01        	l32r	a0, 360 <user_start+0xfc>
+ 372:	0000c0        	callx0	a0
+ 375:	024d      	mov.n	a4, a2
+ 377:	0138      	l32i.n	a3, a1, 0
+ 379:	fff821        	l32r	a2, 35c <user_start+0xf8>
+ 37c:	fffa01        	l32r	a0, 364 <user_start+0x100>
+ 37f:	0000c0        	callx0	a0
+ 382:	1108      	l32i.n	a0, a1, 4
+ 384:	10c112        	addi	a1, a1, 16
+ 387:	f00d      	ret.n
+ 389:	000000        	ill
+ 38c:	000130        	excw
+ 38f:	0a0000        	excw
+ 392:	003ff2        	excw
+ 395:	000000        	ill
+
+00000398 <vApplicationIdleHook>:
+ 398:	f0c112        	addi	a1, a1, -16
+ 39b:	0109      	s32i.n	a0, a1, 0
+ 39d:	fffb21        	l32r	a2, 38c <vApplicationStackOverflowHook+0x24>
+ 3a0:	fffc31        	l32r	a3, 390 <vApplicationStackOverflowHook+0x28>
+ 3a3:	0020c0        	memw
+ 3a6:	802332        	l32i	a3, a3, 0x200
+ 3a9:	fffa01        	l32r	a0, 394 <vApplicationStackOverflowHook+0x2c>
+ 3ac:	0000c0        	callx0	a0
+ 3af:	0108      	l32i.n	a0, a1, 0
+ 3b1:	10c112        	addi	a1, a1, 16
+ 3b4:	f00d      	ret.n
+ 3b6:	3c0000        	excw
+ 3b9:	000001        	l32r	a0, fffc03bc <user_init_task+0xfffbff6c>
+ 3bc:	f20a00        	excw
+ 3bf:	3f          	.byte 0x3f
+ 3c0:	000000        	ill
+	...
+
+000003c4 <vApplicationTickHook>:
+ 3c4:	f0c112        	addi	a1, a1, -16
+ 3c7:	0109      	s32i.n	a0, a1, 0
+ 3c9:	fffb21        	l32r	a2, 3b8 <vApplicationIdleHook+0x20>
+ 3cc:	fffc31        	l32r	a3, 3bc <vApplicationIdleHook+0x24>
+ 3cf:	0020c0        	memw
+ 3d2:	802332        	l32i	a3, a3, 0x200
+ 3d5:	fffa01        	l32r	a0, 3c0 <vApplicationIdleHook+0x28>
+ 3d8:	0000c0        	callx0	a0
+ 3db:	0108      	l32i.n	a0, a1, 0
+ 3dd:	10c112        	addi	a1, a1, 16
+ 3e0:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <read_macaddr_from_otp-0x30>:
+	...
+   8:	fffe61        	l32r	a6, 0 <read_macaddr_from_otp-0x30>
+   b:	fffe41        	l32r	a4, 4 <read_macaddr_from_otp-0x2c>
+   e:	050c      	movi.n	a5, 0
+  10:	06b467        	bgeu	a4, a6, 1a <read_macaddr_from_otp-0x16>
+  13:	0459      	s32i.n	a5, a4, 0
+  15:	444b      	addi.n	a4, a4, 4
+  17:	f83467        	bltu	a4, a6, 13 <read_macaddr_from_otp-0x1d>
+  1a:	f00d      	ret.n
+  1c:	effe00        	excw
+  1f:	3f          	.byte 0x3f
+  20:	000000        	ill
+  23:	002400        	excw
+	...
+
+00000030 <read_macaddr_from_otp>:
+  30:	f0c112        	addi	a1, a1, -16
+  33:	0109      	s32i.n	a0, a1, 0
+  35:	fff901        	l32r	a0, 1c <read_macaddr_from_otp-0x14>
+  38:	0020c0        	memw
+  3b:	962032        	l32i	a3, a0, 0x258
+  3e:	0020c0        	memw
+  41:	952042        	l32i	a4, a0, 0x254
+  44:	0020c0        	memw
+  47:	942002        	l32i	a0, a0, 0x250
+  4a:	0be3f7        	bbsi	a3, 15, 59 <read_macaddr_from_otp+0x29>
+  4d:	fff421        	l32r	a2, 20 <read_macaddr_from_otp-0x10>
+  50:	fff601        	l32r	a0, 28 <read_macaddr_from_otp-0x8>
+  53:	0000c0        	callx0	a0
+  56:	ffff06        	j	56 <read_macaddr_from_otp+0x26>
+  59:	c0cc      	bnez.n	a0, 69 <read_macaddr_from_otp+0x39>
+  5b:	a4cc      	bnez.n	a4, 69 <read_macaddr_from_otp+0x39>
+  5d:	fff121        	l32r	a2, 24 <read_macaddr_from_otp-0xc>
+  60:	fff301        	l32r	a0, 2c <read_macaddr_from_otp-0x4>
+  63:	0000c0        	callx0	a0
+  66:	ffff06        	j	66 <read_macaddr_from_otp+0x36>
+  69:	044242        	s8i	a4, a2, 4
+  6c:	861c      	movi.n	a6, 24
+  6e:	757800        	extui	a7, a0, 24, 8
+  71:	418840        	srli	a8, a4, 8
+  74:	433c      	movi.n	a3, 52
+  76:	e57c      	movi.n	a5, -2
+  78:	014252        	s8i	a5, a2, 1
+  7b:	024232        	s8i	a3, a2, 2
+  7e:	034282        	s8i	a8, a2, 3
+  81:	054272        	s8i	a7, a2, 5
+  84:	004262        	s8i	a6, a2, 0
+  87:	0108      	l32i.n	a0, a1, 0
+  89:	10c112        	addi	a1, a1, 16
+  8c:	f00d      	ret.n
+  8e:	300000        	xor	a0, a0, a0
+  91:	000000        	ill
+  94:	0038      	l32i.n	a3, a0, 0
+	...
+  9e:	000000        	ill
+  a1:	fe          	.byte 0xfe
+  a2:	ef          	.byte 0xef
+  a3:	3f          	.byte 0x3f
+	...
+  e4:	f0c112        	addi	a1, a1, -16
+  e7:	0139      	s32i.n	a3, a1, 0
+  e9:	1109      	s32i.n	a0, a1, 4
+  eb:	ffef01        	l32r	a0, a8 <read_macaddr_from_otp+0x78>
+  ee:	0000c0        	callx0	a0
+  f1:	029c      	beqz.n	a2, 105 <read_macaddr_from_otp+0xd5>
+  f3:	ffe721        	l32r	a2, 90 <read_macaddr_from_otp+0x60>
+  f6:	ffe731        	l32r	a3, 94 <read_macaddr_from_otp+0x64>
+  f9:	82a042        	movi	a4, 130
+  fc:	ffec01        	l32r	a0, ac <read_macaddr_from_otp+0x7c>
+  ff:	0000c0        	callx0	a0
+ 102:	ffff06        	j	102 <read_macaddr_from_otp+0xd2>
+ 105:	020c      	movi.n	a2, 0
+ 107:	2ca432        	movi	a3, 0x42c
+ 10a:	ffe901        	l32r	a0, b0 <read_macaddr_from_otp+0x80>
+ 10d:	0000c0        	callx0	a0
+ 110:	120c      	movi.n	a2, 1
+ 112:	2ca432        	movi	a3, 0x42c
+ 115:	ffe701        	l32r	a0, b4 <read_macaddr_from_otp+0x84>
+ 118:	0000c0        	callx0	a0
+ 11b:	ffe701        	l32r	a0, b8 <read_macaddr_from_otp+0x88>
+ 11e:	0000c0        	callx0	a0
+ 121:	ffdd21        	l32r	a2, 98 <read_macaddr_from_otp+0x68>
+ 124:	c62222        	l32i	a2, a2, 0x318
+ 127:	ffe501        	l32r	a0, bc <read_macaddr_from_otp+0x8c>
+ 12a:	0000c0        	callx0	a0
+ 12d:	ffe401        	l32r	a0, c0 <read_macaddr_from_otp+0x90>
+ 130:	0000c0        	callx0	a0
+ 133:	ffe401        	l32r	a0, c4 <read_macaddr_from_otp+0x94>
+ 136:	0000c0        	callx0	a0
+ 139:	ffe301        	l32r	a0, c8 <read_macaddr_from_otp+0x98>
+ 13c:	0000c0        	callx0	a0
+ 13f:	ffd721        	l32r	a2, 9c <read_macaddr_from_otp+0x6c>
+ 142:	0138      	l32i.n	a3, a1, 0
+ 144:	ffe201        	l32r	a0, cc <read_macaddr_from_otp+0x9c>
+ 147:	0000c0        	callx0	a0
+ 14a:	120c      	movi.n	a2, 1
+ 14c:	ffe101        	l32r	a0, d0 <read_macaddr_from_otp+0xa0>
+ 14f:	0000c0        	callx0	a0
+ 152:	066c      	movi.n	a6, -32
+ 154:	150c      	movi.n	a5, 1
+ 156:	ffd241        	l32r	a4, a0 <read_macaddr_from_otp+0x70>
+ 159:	0020c0        	memw
+ 15c:	802432        	l32i	a3, a4, 0x200
+ 15f:	103360        	and	a3, a3, a6
+ 162:	203350        	or	a3, a3, a5
+ 165:	0020c0        	memw
+ 168:	806432        	s32i	a3, a4, 0x200
+ 16b:	ffda01        	l32r	a0, d4 <read_macaddr_from_otp+0xa4>
+ 16e:	0000c0        	callx0	a0
+ 171:	ffd901        	l32r	a0, d8 <read_macaddr_from_otp+0xa8>
+ 174:	0000c0        	callx0	a0
+ 177:	ffcb21        	l32r	a2, a4 <read_macaddr_from_otp+0x74>
+ 17a:	ffd801        	l32r	a0, dc <read_macaddr_from_otp+0xac>
+ 17d:	0000c0        	callx0	a0
+ 180:	ffd801        	l32r	a0, e0 <read_macaddr_from_otp+0xb0>
+ 183:	0000c0        	callx0	a0
+ 186:	1108      	l32i.n	a0, a1, 4
+ 188:	10c112        	addi	a1, a1, 16
+ 18b:	f00d      	ret.n
+	...
+ 1b1:	000000        	ill
+ 1b4:	ffa022        	movi	a2, 255
+ 1b7:	f0c112        	addi	a1, a1, -16
+ 1ba:	11c9      	s32i.n	a12, a1, 4
+ 1bc:	21d9      	s32i.n	a13, a1, 8
+ 1be:	fff4d1        	l32r	a13, 190 <read_macaddr_from_otp+0x160>
+ 1c1:	0109      	s32i.n	a0, a1, 0
+ 1c3:	800d02        	l8ui	a0, a13, 128
+ 1c6:	31e9      	s32i.n	a14, a1, 12
+ 1c8:	049027        	bne	a0, a2, 1d0 <read_macaddr_from_otp+0x1a0>
+ 1cb:	230c      	movi.n	a3, 2
+ 1cd:	804d32        	s8i	a3, a13, 128
+ 1d0:	fff501        	l32r	a0, 1a4 <read_macaddr_from_otp+0x174>
+ 1d3:	0000c0        	callx0	a0
+ 1d6:	100c      	movi.n	a0, 1
+ 1d8:	0e0c      	movi.n	a14, 0
+ 1da:	ffeec1        	l32r	a12, 194 <read_macaddr_from_otp+0x164>
+ 1dd:	e50c      	movi.n	a5, 14
+ 1df:	800c42        	l8ui	a4, a12, 128
+ 1e2:	810c32        	l8ui	a3, a12, 129
+ 1e5:	013547        	bltu	a5, a4, 1ea <read_macaddr_from_otp+0x1ba>
+ 1e8:	14cc      	bnez.n	a4, 1ed <read_macaddr_from_otp+0x1bd>
+ 1ea:	804c02        	s8i	a0, a12, 128
+ 1ed:	0253f6        	bgeui	a3, 5, 1f3 <read_macaddr_from_otp+0x1c3>
+ 1f0:	0f1366        	bnei	a3, 1, 203 <read_macaddr_from_otp+0x1d3>
+ 1f3:	814ce2        	s8i	a14, a12, 129
+ 1f6:	ffe821        	l32r	a2, 198 <read_macaddr_from_otp+0x168>
+ 1f9:	034c      	movi.n	a3, 64
+ 1fb:	ffeb01        	l32r	a0, 1a8 <read_macaddr_from_otp+0x178>
+ 1fe:	0000c0        	callx0	a0
+ 201:	100c      	movi.n	a0, 1
+ 203:	820c62        	l8ui	a6, a12, 130
+ 206:	830c72        	l8ui	a7, a12, 131
+ 209:	0226b6        	bltui	a6, 2, 20f <read_macaddr_from_otp+0x1df>
+ 20c:	824ce2        	s8i	a14, a12, 130
+ 20f:	212d92        	l32i	a9, a13, 132
+ 212:	0457b6        	bltui	a7, 5, 21a <read_macaddr_from_otp+0x1ea>
+ 215:	480c      	movi.n	a8, 4
+ 217:	834c82        	s8i	a8, a12, 131
+ 21a:	170966        	bnei	a9, -1, 235 <read_macaddr_from_otp+0x205>
+ 21d:	ffdf21        	l32r	a2, 19c <read_macaddr_from_otp+0x16c>
+ 220:	432c      	movi.n	a3, 36
+ 222:	ffe201        	l32r	a0, 1ac <read_macaddr_from_otp+0x17c>
+ 225:	0000c0        	callx0	a0
+ 228:	ffde21        	l32r	a2, 1a0 <read_macaddr_from_otp+0x170>
+ 22b:	034c      	movi.n	a3, 64
+ 22d:	ffe001        	l32r	a0, 1b0 <read_macaddr_from_otp+0x180>
+ 230:	0000c0        	callx0	a0
+ 233:	100c      	movi.n	a0, 1
+ 235:	814de2        	s8i	a14, a13, 129
+ 238:	ffdc32        	addmi	a3, a12, 0xffffff00
+ 23b:	f403a2        	l8ui	a10, a3, 244
+ 23e:	02dc22        	addmi	a2, a12, 0x200
+ 241:	022ab6        	bltui	a10, 2, 247 <read_macaddr_from_otp+0x217>
+ 244:	f443e2        	s8i	a14, a3, 244
+ 247:	21d8      	l32i.n	a13, a1, 8
+ 249:	874c02        	s8i	a0, a12, 135
+ 24c:	31e8      	l32i.n	a14, a1, 12
+ 24e:	920202        	l8ui	a0, a2, 146
+ 251:	910232        	l8ui	a3, a2, 145
+ 254:	110080        	slli	a0, a0, 8
+ 257:	200030        	or	a0, a0, a3
+ 25a:	110080        	slli	a0, a0, 8
+ 25d:	900232        	l8ui	a3, a2, 144
+ 260:	8f0222        	l8ui	a2, a2, 143
+ 263:	200030        	or	a0, a0, a3
+ 266:	110080        	slli	a0, a0, 8
+ 269:	200020        	or	a0, a0, a2
+ 26c:	0140f6        	bgeui	a0, 4, 271 <read_macaddr_from_otp+0x241>
+ 26f:	50dc      	bnez.n	a0, 288 <read_macaddr_from_otp+0x258>
+ 271:	020c      	movi.n	a2, 0
+ 273:	040c      	movi.n	a4, 0
+ 275:	050c      	movi.n	a5, 0
+ 277:	02dc32        	addmi	a3, a12, 0x200
+ 27a:	360c      	movi.n	a6, 3
+ 27c:	8f4362        	s8i	a6, a3, 143
+ 27f:	904352        	s8i	a5, a3, 144
+ 282:	914342        	s8i	a4, a3, 145
+ 285:	924322        	s8i	a2, a3, 146
+ 288:	11c8      	l32i.n	a12, a1, 4
+ 28a:	0108      	l32i.n	a0, a1, 0
+ 28c:	10c112        	addi	a1, a1, 16
+ 28f:	f00d      	ret.n
+ 291:	000000        	ill
+ 294:	fffe00        	excw
+ 297:	5f          	.byte 0x5f
+
+00000298 <uart_rx_one_char>:
+ 298:	ffff51        	l32r	a5, 294 <read_macaddr_from_otp+0x264>
+ 29b:	0020c0        	memw
+ 29e:	872532        	l32i	a3, a5, 0x21c
+ 2a1:	140c      	movi.n	a4, 1
+ 2a3:	743030        	extui	a3, a3, 0, 8
+ 2a6:	13cc      	bnez.n	a3, 2ab <uart_rx_one_char+0x13>
+ 2a8:	000286        	j	2b6 <uart_rx_one_char+0x1e>
+ 2ab:	0020c0        	memw
+ 2ae:	040c      	movi.n	a4, 0
+ 2b0:	802562        	l32i	a6, a5, 0x200
+ 2b3:	004262        	s8i	a6, a2, 0
+ 2b6:	042d      	mov.n	a2, a4
+ 2b8:	f00d      	ret.n
+ 2ba:	000000        	ill
+ 2bd:	600006        	j	182c1 <user_init_task+0x17e71>
+	...
+
+000002c8 <wdt_task>:
+ 2c8:	f0c112        	addi	a1, a1, -16
+ 2cb:	0109      	s32i.n	a0, a1, 0
+ 2cd:	31e9      	s32i.n	a14, a1, 12
+ 2cf:	21d9      	s32i.n	a13, a1, 8
+ 2d1:	11c9      	s32i.n	a12, a1, 4
+ 2d3:	fffad1        	l32r	a13, 2bc <uart_rx_one_char+0x24>
+ 2d6:	fffac1        	l32r	a12, 2c0 <uart_rx_one_char+0x28>
+ 2d9:	73a0e2        	movi	a14, 115
+ 2dc:	0c28      	l32i.n	a2, a12, 0
+ 2de:	030c      	movi.n	a3, 0
+ 2e0:	f47c      	movi.n	a4, -1
+ 2e2:	050c      	movi.n	a5, 0
+ 2e4:	fff801        	l32r	a0, 2c4 <uart_rx_one_char+0x2c>
+ 2e7:	0000c0        	callx0	a0
+ 2ea:	ee1266        	bnei	a2, 1, 2dc <wdt_task+0x14>
+ 2ed:	0020c0        	memw
+ 2f0:	c56de2        	s32i	a14, a13, 0x314
+ 2f3:	fff946        	j	2dc <wdt_task+0x14>
+	...
+ 2fe:	940000        	extui	a0, a0, 0, 10
+ 301:	000000        	ill
+ 304:	000600        	excw
+ 307:	000060        	excw
+ 30a:	000000        	ill
+ 30d:	fe          	.byte 0xfe
+ 30e:	ef          	.byte 0xef
+ 30f:	3f          	.byte 0x3f
+ 310:	000600        	excw
+ 313:	000060        	excw
+	...
+
+00000328 <wdt_init>:
+ 328:	120c      	movi.n	a2, 1
+ 32a:	030c      	movi.n	a3, 0
+ 32c:	340c      	movi.n	a4, 3
+ 32e:	e0c112        	addi	a1, a1, -32
+ 331:	4109      	s32i.n	a0, a1, 16
+ 333:	fff801        	l32r	a0, 314 <wdt_task+0x4c>
+ 336:	0000c0        	callx0	a0
+ 339:	ffef01        	l32r	a0, 2f8 <wdt_task+0x30>
+ 33c:	0029      	s32i.n	a2, a0, 0
+ 33e:	a28c      	beqz.n	a2, 34c <wdt_init+0x24>
+ 340:	030c      	movi.n	a3, 0
+ 342:	040c      	movi.n	a4, 0
+ 344:	050c      	movi.n	a5, 0
+ 346:	fff401        	l32r	a0, 318 <wdt_task+0x50>
+ 349:	0000c0        	callx0	a0
+ 34c:	ffed31        	l32r	a3, 300 <wdt_task+0x38>
+ 34f:	80a042        	movi	a4, 128
+ 352:	050c      	movi.n	a5, 0
+ 354:	160c      	movi.n	a6, 1
+ 356:	070c      	movi.n	a7, 0
+ 358:	020c      	movi.n	a2, 0
+ 35a:	0129      	s32i.n	a2, a1, 0
+ 35c:	1129      	s32i.n	a2, a1, 4
+ 35e:	ffe721        	l32r	a2, 2fc <wdt_task+0x34>
+ 361:	ffee01        	l32r	a0, 31c <wdt_task+0x54>
+ 364:	0000c0        	callx0	a0
+ 367:	e57c      	movi.n	a5, -2
+ 369:	ffe641        	l32r	a4, 304 <wdt_task+0x3c>
+ 36c:	0020c0        	memw
+ 36f:	c02432        	l32i	a3, a4, 0x300
+ 372:	103350        	and	a3, a3, a5
+ 375:	0020c0        	memw
+ 378:	c06432        	s32i	a3, a4, 0x300
+ 37b:	820c      	movi.n	a2, 8
+ 37d:	ffe231        	l32r	a3, 308 <wdt_task+0x40>
+ 380:	ffe801        	l32r	a0, 320 <wdt_task+0x58>
+ 383:	0000c0        	callx0	a0
+ 386:	180c      	movi.n	a8, 1
+ 388:	b20c      	movi.n	a2, 11
+ 38a:	ffe041        	l32r	a4, 30c <wdt_task+0x44>
+ 38d:	0020c0        	memw
+ 390:	812432        	l32i	a3, a4, 0x204
+ 393:	203380        	or	a3, a3, a8
+ 396:	0020c0        	memw
+ 399:	816432        	s32i	a3, a4, 0x204
+ 39c:	0020c0        	memw
+ 39f:	ffdc71        	l32r	a7, 310 <wdt_task+0x48>
+ 3a2:	c16722        	s32i	a2, a7, 0x304
+ 3a5:	0020c0        	memw
+ 3a8:	c26722        	s32i	a2, a7, 0x308
+ 3ab:	803c      	movi.n	a0, 56
+ 3ad:	0020c0        	memw
+ 3b0:	c027b2        	l32i	a11, a7, 0x300
+ 3b3:	20bb00        	or	a11, a11, a0
+ 3b6:	0020c0        	memw
+ 3b9:	c067b2        	s32i	a11, a7, 0x300
+ 3bc:	9a7c      	movi.n	a10, -7
+ 3be:	0020c0        	memw
+ 3c1:	c02792        	l32i	a9, a7, 0x300
+ 3c4:	1099a0        	and	a9, a9, a10
+ 3c7:	0020c0        	memw
+ 3ca:	c06792        	s32i	a9, a7, 0x300
+ 3cd:	0020c0        	memw
+ 3d0:	c02762        	l32i	a6, a7, 0x300
+ 3d3:	206680        	or	a6, a6, a8
+ 3d6:	0020c0        	memw
+ 3d9:	c06762        	s32i	a6, a7, 0x300
+ 3dc:	00a122        	movi	a2, 0x100
+ 3df:	ffd101        	l32r	a0, 324 <wdt_task+0x5c>
+ 3e2:	0000c0        	callx0	a0
+ 3e5:	4108      	l32i.n	a0, a1, 16
+ 3e7:	20c112        	addi	a1, a1, 32
+ 3ea:	f00d      	ret.n
+ 3ec:	009c      	beqz.n	a0, 400 <wdt_init+0xd8>
+ 3ee:	c00000        	sub	a0, a0, a0
+ 3f1:	000000        	ill
+ 3f4:	00c8      	l32i.n	a12, a0, 0
+ 3f6:	d40000        	extui	a0, a0, 0, 14
+ 3f9:	000000        	ill
+ 3fc:	00ec      	bnez.n	a0, 420 <wdt_init+0xf8>
+ 3fe:	e00000        	subx4	a0, a0, a0
+ 401:	000000        	ill
+ 404:	000e00        	excw
+ 407:	00f060        	excw
+ 40a:	f40000        	extui	a0, a0, 0, 16
+ 40d:	000000        	ill
+ 410:	0000e0        	excw
+ 413:	00f800        	excw
+	...
+
+00000450 <user_init_task>:
+ 450:	ffe721        	l32r	a2, 3ec <wdt_init+0xc4>
+ 453:	ffe731        	l32r	a3, 3f0 <wdt_init+0xc8>
+ 456:	ffe741        	l32r	a4, 3f4 <wdt_init+0xcc>
+ 459:	ffe751        	l32r	a5, 3f8 <wdt_init+0xd0>
+ 45c:	f0c112        	addi	a1, a1, -16
+ 45f:	11c9      	s32i.n	a12, a1, 4
+ 461:	0109      	s32i.n	a0, a1, 0
+ 463:	ffef01        	l32r	a0, 420 <wdt_init+0xf8>
+ 466:	0000c0        	callx0	a0
+ 469:	ffe431        	l32r	a3, 3fc <wdt_init+0xd4>
+ 46c:	ffe521        	l32r	a2, 400 <wdt_init+0xd8>
+ 46f:	ffe5c1        	l32r	a12, 404 <wdt_init+0xdc>
+ 472:	0020c0        	memw
+ 475:	9f2c42        	l32i	a4, a12, 0x27c
+ 478:	f54040        	extui	a4, a4, 16, 16
+ 47b:	ffea01        	l32r	a0, 424 <wdt_init+0xfc>
+ 47e:	0000c0        	callx0	a0
+ 481:	ffe121        	l32r	a2, 408 <wdt_init+0xe0>
+ 484:	ffe901        	l32r	a0, 428 <wdt_init+0x100>
+ 487:	0000c0        	callx0	a0
+ 48a:	ffe031        	l32r	a3, 40c <wdt_init+0xe4>
+ 48d:	ffe021        	l32r	a2, 410 <wdt_init+0xe8>
+ 490:	0020c0        	memw
+ 493:	fe2c42        	l32i	a4, a12, 0x3f8
+ 496:	ffe501        	l32r	a0, 42c <wdt_init+0x104>
+ 499:	0000c0        	callx0	a0
+ 49c:	ffde21        	l32r	a2, 414 <wdt_init+0xec>
+ 49f:	ffe401        	l32r	a0, 430 <wdt_init+0x108>
+ 4a2:	0000c0        	callx0	a0
+ 4a5:	ffe301        	l32r	a0, 434 <wdt_init+0x10c>
+ 4a8:	0000c0        	callx0	a0
+ 4ab:	ffdb21        	l32r	a2, 418 <wdt_init+0xf0>
+ 4ae:	ffdbc1        	l32r	a12, 41c <wdt_init+0xf4>
+ 4b1:	100c      	movi.n	a0, 1
+ 4b3:	5c0cc2        	l8ui	a12, a12, 92
+ 4b6:	044202        	s8i	a0, a2, 4
+ 4b9:	0c2d      	mov.n	a2, a12
+ 4bb:	ffdf01        	l32r	a0, 438 <wdt_init+0x110>
+ 4be:	0000c0        	callx0	a0
+ 4c1:	021c26        	beqi	a12, 1, 4c7 <user_init_task+0x77>
+ 4c4:	053c66        	bnei	a12, 3, 4cd <user_init_task+0x7d>
+ 4c7:	ffdd01        	l32r	a0, 43c <wdt_init+0x114>
+ 4ca:	0000c0        	callx0	a0
+ 4cd:	022c26        	beqi	a12, 2, 4d3 <user_init_task+0x83>
+ 4d0:	053c66        	bnei	a12, 3, 4d9 <user_init_task+0x89>
+ 4d3:	ffdb01        	l32r	a0, 440 <wdt_init+0x118>
+ 4d6:	0000c0        	callx0	a0
+ 4d9:	ffda01        	l32r	a0, 444 <wdt_init+0x11c>
+ 4dc:	0000c0        	callx0	a0
+ 4df:	051266        	bnei	a2, 1, 4e8 <user_init_task+0x98>
+ 4e2:	ffd901        	l32r	a0, 448 <wdt_init+0x120>
+ 4e5:	0000c0        	callx0	a0
+ 4e8:	020c      	movi.n	a2, 0
+ 4ea:	ffd801        	l32r	a0, 44c <wdt_init+0x124>
+ 4ed:	0000c0        	callx0	a0
+ 4f0:	11c8      	l32i.n	a12, a1, 4
+ 4f2:	0108      	l32i.n	a0, a1, 0
+ 4f4:	10c112        	addi	a1, a1, 16
+ 4f7:	f00d      	ret.n
+ 4f9:	000000        	ill
+ 4fc:	01d8      	l32i.n	a13, a1, 0
+ 4fe:	260000        	excw
+ 501:	000000        	ill
+ 504:	000020        	excw
+ 507:	000000        	ill
+ 50a:	c00000        	sub	a0, a0, a0
+ 50d:	04a8      	l32i.n	a10, a4, 0
+ 50f:	ffff01        	l32r	a0, 50c <user_init_task+0xbc>
+ 512:	ff          	.byte 0xff
+	...
+ 51f:	00fc00        	excw
+ 522:	2c0000        	excw
+	...
+ 555:	000000        	ill
+ 558:	ffe921        	l32r	a2, 4fc <user_init_task+0xac>
+ 55b:	e0c112        	addi	a1, a1, -32
+ 55e:	51c9      	s32i.n	a12, a1, 20
+ 560:	61d9      	s32i.n	a13, a1, 24
+ 562:	4109      	s32i.n	a0, a1, 16
+ 564:	fff101        	l32r	a0, 528 <user_init_task+0xd8>
+ 567:	0000c0        	callx0	a0
+ 56a:	fff001        	l32r	a0, 52c <user_init_task+0xdc>
+ 56d:	0000c0        	callx0	a0
+ 570:	084226        	beqi	a2, 4, 57c <user_init_task+0x12c>
+ 573:	ffef01        	l32r	a0, 530 <user_init_task+0xe0>
+ 576:	0000c0        	callx0	a0
+ 579:	052266        	bnei	a2, 2, 582 <user_init_task+0x132>
+ 57c:	ffee01        	l32r	a0, 534 <user_init_task+0xe4>
+ 57f:	0000c0        	callx0	a0
+ 582:	ffdfd1        	l32r	a13, 500 <user_init_task+0xb0>
+ 585:	0d2d      	mov.n	a2, a13
+ 587:	000005        	call0	588 <user_init_task+0x138>
+ 58a:	ffde21        	l32r	a2, 504 <user_init_task+0xb4>
+ 58d:	0d3d      	mov.n	a3, a13
+ 58f:	ffea01        	l32r	a0, 538 <user_init_task+0xe8>
+ 592:	0000c0        	callx0	a0
+ 595:	ffde21        	l32r	a2, 510 <user_init_task+0xc0>
+ 598:	ffdc31        	l32r	a3, 508 <user_init_task+0xb8>
+ 59b:	ffdc41        	l32r	a4, 50c <user_init_task+0xbc>
+ 59e:	2349      	s32i.n	a4, a3, 8
+ 5a0:	4349      	s32i.n	a4, a3, 16
+ 5a2:	3329      	s32i.n	a2, a3, 12
+ 5a4:	ffc0c5        	call0	1b4 <read_macaddr_from_otp+0x184>
+ 5a7:	80a022        	movi	a2, 128
+ 5aa:	ffe401        	l32r	a0, 53c <user_init_task+0xec>
+ 5ad:	0000c0        	callx0	a0
+ 5b0:	ffd951        	l32r	a5, 514 <user_init_task+0xc4>
+ 5b3:	02cd      	mov.n	a12, a2
+ 5b5:	3538      	l32i.n	a3, a5, 12
+ 5b7:	1528      	l32i.n	a2, a5, 4
+ 5b9:	ffe101        	l32r	a0, 540 <user_init_task+0xf0>
+ 5bc:	0000c0        	callx0	a0
+ 5bf:	0c3d      	mov.n	a3, a12
+ 5c1:	80a042        	movi	a4, 128
+ 5c4:	112240        	slli	a2, a2, 12
+ 5c7:	c0d222        	addmi	a2, a2, 0xffffc000
+ 5ca:	ffde01        	l32r	a0, 544 <user_init_task+0xf4>
+ 5cd:	0000c0        	callx0	a0
+ 5d0:	000c32        	l8ui	a3, a12, 0
+ 5d3:	0a5326        	beqi	a3, 5, 5e1 <user_init_task+0x191>
+ 5d6:	0d3d      	mov.n	a3, a13
+ 5d8:	ffd021        	l32r	a2, 518 <user_init_task+0xc8>
+ 5db:	ffb085        	call0	e4 <read_macaddr_from_otp+0xb4>
+ 5de:	000186        	j	5e8 <user_init_task+0x198>
+ 5e1:	0d3d      	mov.n	a3, a13
+ 5e3:	0c2d      	mov.n	a2, a12
+ 5e5:	ffafc5        	call0	e4 <read_macaddr_from_otp+0xb4>
+ 5e8:	0c2d      	mov.n	a2, a12
+ 5ea:	ffd701        	l32r	a0, 548 <user_init_task+0xf8>
+ 5ed:	0000c0        	callx0	a0
+ 5f0:	020c      	movi.n	a2, 0
+ 5f2:	030c      	movi.n	a3, 0
+ 5f4:	ffd601        	l32r	a0, 54c <user_init_task+0xfc>
+ 5f7:	0000c0        	callx0	a0
+ 5fa:	000005        	call0	5fc <user_init_task+0x1ac>
+ 5fd:	ffc721        	l32r	a2, 51c <user_init_task+0xcc>
+ 600:	ffc831        	l32r	a3, 520 <user_init_task+0xd0>
+ 603:	050c      	movi.n	a5, 0
+ 605:	260c      	movi.n	a6, 2
+ 607:	ffc771        	l32r	a7, 524 <user_init_task+0xd4>
+ 60a:	040c      	movi.n	a4, 0
+ 60c:	0149      	s32i.n	a4, a1, 0
+ 60e:	1149      	s32i.n	a4, a1, 4
+ 610:	00a142        	movi	a4, 0x100
+ 613:	ffcf01        	l32r	a0, 550 <user_init_task+0x100>
+ 616:	0000c0        	callx0	a0
+ 619:	ffce01        	l32r	a0, 554 <user_init_task+0x104>
+ 61c:	0000c0        	callx0	a0
+ 61f:	51c8      	l32i.n	a12, a1, 20
+ 621:	61d8      	l32i.n	a13, a1, 24
+ 623:	4108      	l32i.n	a0, a1, 16
+ 625:	20c112        	addi	a1, a1, 32
+ 628:	f00d      	ret.n

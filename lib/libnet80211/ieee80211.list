@@ -1,0 +1,376 @@
+
+ieee80211.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee80211_task-0xb8>:
+   0:	096c      	movi.n	a9, -32
+   2:	b40000        	extui	a0, a0, 0, 12
+   5:	0009      	s32i.n	a0, a0, 0
+   7:	09b400        	excw
+   a:	000000        	ill
+   d:	000000        	ill
+  10:	83a052        	movi	a5, 131
+  13:	fffc61        	l32r	a6, 4 <ieee80211_task-0xb4>
+  16:	e0c112        	addi	a1, a1, -32
+  19:	6129      	s32i.n	a2, a1, 24
+  1b:	41f9      	s32i.n	a15, a1, 16
+  1d:	0109      	s32i.n	a0, a1, 0
+  1f:	11c9      	s32i.n	a12, a1, 4
+  21:	21d9      	s32i.n	a13, a1, 8
+  23:	31e9      	s32i.n	a14, a1, 12
+  25:	fff6d1        	l32r	a13, 0 <ieee80211_task-0xb8>
+  28:	0e0c      	movi.n	a14, 0
+  2a:	02cd      	mov.n	a12, a2
+  2c:	9ca002        	movi	a0, 156
+  2f:	02fd      	mov.n	a15, a2
+  31:	0f0a      	add.n	a0, a15, a0
+  33:	e20c      	movi.n	a2, 14
+  35:	206f22        	s32i	a2, a15, 128
+  38:	216c52        	s32i	a5, a12, 132
+  3b:	8a0c32        	l8ui	a3, a12, 138
+  3e:	5109      	s32i.n	a0, a1, 20
+  40:	0830c7        	bltu	a0, a12, 4c <ieee80211_task-0x6c>
+  43:	445cd2        	s16i	a13, a12, 136
+  46:	029c07        	bne	a12, a0, 4c <ieee80211_task-0x6c>
+  49:	445c62        	s16i	a6, a12, 136
+  4c:	23dc      	bnez.n	a3, 62 <ieee80211_task-0x56>
+  4e:	441c22        	l16ui	a2, a12, 136
+  51:	83a032        	movi	a3, 131
+  54:	000005        	call0	58 <ieee80211_task-0x60>
+  57:	5108      	l32i.n	a0, a1, 20
+  59:	83a052        	movi	a5, 131
+  5c:	ffeb61        	l32r	a6, 8 <ieee80211_task-0xb0>
+  5f:	8a4c22        	s8i	a2, a12, 138
+  62:	dd5b      	addi.n	a13, a13, 5
+  64:	8b0c42        	l8ui	a4, a12, 139
+  67:	ee1b      	addi.n	a14, a14, 1
+  69:	d4cc      	bnez.n	a4, 7a <ieee80211_task-0x3e>
+  6b:	8d0c72        	l8ui	a7, a12, 141
+  6e:	017780        	slli	a7, a7, 24
+  71:	317870        	srai	a7, a7, 24
+  74:	1177f0        	slli	a7, a7, 1
+  77:	8b4c72        	s8i	a7, a12, 139
+  7a:	202f82        	l32i	a8, a15, 128
+  7d:	cccb      	addi.n	a12, a12, 12
+  7f:	b52e87        	blt	a14, a8, 38 <ieee80211_task-0x80>
+  82:	84a022        	movi	a2, 132
+  85:	2f2a      	add.n	a2, a15, a2
+  87:	ffe101        	l32r	a0, c <ieee80211_task-0xac>
+  8a:	0000c0        	callx0	a0
+  8d:	0108      	l32i.n	a0, a1, 0
+  8f:	11c8      	l32i.n	a12, a1, 4
+  91:	21d8      	l32i.n	a13, a1, 8
+  93:	546f22        	s32i	a2, a15, 0x150
+  96:	31e8      	l32i.n	a14, a1, 12
+  98:	41f8      	l32i.n	a15, a1, 16
+  9a:	20c112        	addi	a1, a1, 32
+  9d:	f00d      	ret.n
+	...
+
+000000b8 <ieee80211_task>:
+  b8:	420c      	movi.n	a2, 4
+  ba:	031c      	movi.n	a3, 16
+  bc:	040c      	movi.n	a4, 0
+  be:	e0c112        	addi	a1, a1, -32
+  c1:	51c9      	s32i.n	a12, a1, 20
+  c3:	4109      	s32i.n	a0, a1, 16
+  c5:	fff701        	l32r	a0, a4 <ieee80211_task-0x14>
+  c8:	0000c0        	callx0	a0
+  cb:	fff5c1        	l32r	a12, a0 <ieee80211_task-0x18>
+  ce:	0c29      	s32i.n	a2, a12, 0
+  d0:	013d      	mov.n	a3, a1
+  d2:	140c      	movi.n	a4, 1
+  d4:	050c      	movi.n	a5, 0
+  d6:	fff401        	l32r	a0, a8 <ieee80211_task-0x10>
+  d9:	0000c0        	callx0	a0
+  dc:	311266        	bnei	a2, 1, 111 <ieee80211_task+0x59>
+  df:	0108      	l32i.n	a0, a1, 0
+  e1:	c0ec      	bnez.n	a0, 111 <ieee80211_task+0x59>
+  e3:	2128      	l32i.n	a2, a1, 8
+  e5:	1108      	l32i.n	a0, a1, 4
+  e7:	3138      	l32i.n	a3, a1, 12
+  e9:	0000c0        	callx0	a0
+  ec:	fff001        	l32r	a0, ac <ieee80211_task-0xc>
+  ef:	0000c0        	callx0	a0
+  f2:	5c08      	l32i.n	a0, a12, 20
+  f4:	b80022        	l8ui	a2, a0, 184
+  f7:	161266        	bnei	a2, 1, 111 <ieee80211_task+0x59>
+  fa:	204b      	addi.n	a2, a0, 4
+  fc:	ffed01        	l32r	a0, b0 <ieee80211_task-0x8>
+  ff:	0000c0        	callx0	a0
+ 102:	e8a332        	movi	a3, 0x3e8
+ 105:	5c28      	l32i.n	a2, a12, 20
+ 107:	040c      	movi.n	a4, 0
+ 109:	224b      	addi.n	a2, a2, 4
+ 10b:	ffea01        	l32r	a0, b4 <ieee80211_task-0x4>
+ 10e:	0000c0        	callx0	a0
+ 111:	0c28      	l32i.n	a2, a12, 0
+ 113:	ffee46        	j	d0 <ieee80211_task+0x18>
+ 116:	040000        	extui	a0, a0, 0, 1
+	...
+
+00000130 <ieee80211_ifattach>:
+ 130:	f0c112        	addi	a1, a1, -16
+ 133:	11c9      	s32i.n	a12, a1, 4
+ 135:	0109      	s32i.n	a0, a1, 0
+ 137:	02cd      	mov.n	a12, a2
+ 139:	ffed45        	call0	10 <ieee80211_task-0xa8>
+ 13c:	0c2d      	mov.n	a2, a12
+ 13e:	64a002        	movi	a0, 100
+ 141:	145c02        	s16i	a0, a12, 40
+ 144:	fff601        	l32r	a0, 11c <ieee80211_task+0x64>
+ 147:	0000c0        	callx0	a0
+ 14a:	0c2d      	mov.n	a2, a12
+ 14c:	fff501        	l32r	a0, 120 <ieee80211_task+0x68>
+ 14f:	0000c0        	callx0	a0
+ 152:	030c      	movi.n	a3, 0
+ 154:	05dc42        	addmi	a4, a12, 0x500
+ 157:	6428      	l32i.n	a2, a4, 24
+ 159:	2439      	s32i.n	a3, a4, 8
+ 15b:	073266        	bnei	a2, 3, 166 <ieee80211_ifattach+0x36>
+ 15e:	0c2d      	mov.n	a2, a12
+ 160:	fff101        	l32r	a0, 124 <ieee80211_task+0x6c>
+ 163:	0000c0        	callx0	a0
+ 166:	ffec21        	l32r	a2, 118 <ieee80211_task+0x60>
+ 169:	ffef01        	l32r	a0, 128 <ieee80211_task+0x70>
+ 16c:	0000c0        	callx0	a0
+ 16f:	0c2d      	mov.n	a2, a12
+ 171:	ffee01        	l32r	a0, 12c <ieee80211_task+0x74>
+ 174:	0000c0        	callx0	a0
+ 177:	11c8      	l32i.n	a12, a1, 4
+ 179:	0108      	l32i.n	a0, a1, 0
+ 17b:	10c112        	addi	a1, a1, 16
+ 17e:	f00d      	ret.n
+ 180:	0009b4        	excw
+ 183:	09b300        	excw
+ 186:	990000        	excw
+ 189:	fffff6        	bgeui	a15, 0x100, 18c <ieee80211_ifattach+0x5c>
+ 18c:	fff630        	excw
+ 18f:	ff          	.byte 0xff
+	...
+
+0000019c <ieee80211_mhz2ieee>:
+ 19c:	fffa61        	l32r	a6, 184 <ieee80211_ifattach+0x54>
+ 19f:	fffa71        	l32r	a7, 188 <ieee80211_ifattach+0x58>
+ 1a2:	f0c112        	addi	a1, a1, -16
+ 1a5:	0109      	s32i.n	a0, a1, 0
+ 1a7:	fff601        	l32r	a0, 180 <ieee80211_ifattach+0x50>
+ 1aa:	126377        	bbci	a3, 7, 1c0 <ieee80211_mhz2ieee+0x24>
+ 1ad:	3d1207        	beq	a2, a0, 1ee <ieee80211_mhz2ieee+0x52>
+ 1b0:	283627        	bltu	a6, a2, 1dc <ieee80211_mhz2ieee+0x40>
+ 1b3:	227a      	add.n	a2, a2, a7
+ 1b5:	530c      	movi.n	a3, 5
+ 1b7:	fff601        	l32r	a0, 190 <ieee80211_ifattach+0x60>
+ 1ba:	0000c0        	callx0	a0
+ 1bd:	000506        	j	1d5 <ieee80211_mhz2ieee+0x39>
+ 1c0:	2a1207        	beq	a2, a0, 1ee <ieee80211_mhz2ieee+0x52>
+ 1c3:	0c3627        	bltu	a6, a2, 1d3 <ieee80211_mhz2ieee+0x37>
+ 1c6:	227a      	add.n	a2, a2, a7
+ 1c8:	530c      	movi.n	a3, 5
+ 1ca:	fff201        	l32r	a0, 194 <ieee80211_ifattach+0x64>
+ 1cd:	0000c0        	callx0	a0
+ 1d0:	000046        	j	1d5 <ieee80211_mhz2ieee+0x39>
+ 1d3:	f27c      	movi.n	a2, -1
+ 1d5:	0108      	l32i.n	a0, a1, 0
+ 1d7:	10c112        	addi	a1, a1, 16
+ 1da:	f00d      	ret.n
+ 1dc:	ffec01        	l32r	a0, 18c <ieee80211_ifattach+0x5c>
+ 1df:	431c      	movi.n	a3, 20
+ 1e1:	220a      	add.n	a2, a2, a0
+ 1e3:	ffed01        	l32r	a0, 198 <ieee80211_ifattach+0x68>
+ 1e6:	0000c0        	callx0	a0
+ 1e9:	22fb      	addi.n	a2, a2, 15
+ 1eb:	fff986        	j	1d5 <ieee80211_mhz2ieee+0x39>
+ 1ee:	e20c      	movi.n	a2, 14
+ 1f0:	fff846        	j	1d5 <ieee80211_mhz2ieee+0x39>
+ 1f3:	ffff00        	excw
+	...
+
+000001f8 <ieee80211_chan2ieee>:
+ 1f8:	22cc      	bnez.n	a2, 1fe <ieee80211_chan2ieee+0x6>
+ 1fa:	020c      	movi.n	a2, 0
+ 1fc:	f00d      	ret.n
+ 1fe:	fffd51        	l32r	a5, 1f4 <ieee80211_mhz2ieee+0x58>
+ 201:	041257        	beq	a2, a5, 209 <ieee80211_chan2ieee+0x11>
+ 204:	060222        	l8ui	a2, a2, 6
+ 207:	f00d      	ret.n
+ 209:	052d      	mov.n	a2, a5
+ 20b:	f00d      	ret.n
+ 20d:	000000        	ill
+ 210:	000967        	bnone	a9, a6, 214 <ieee80211_chan2ieee+0x1c>
+ 213:	08a400        	excw
+ 216:	880000        	excw
+ 219:	000013        	excw
+ 21c:	0009b4        	excw
+	...
+
+00000220 <ieee80211_ieee2mhz>:
+ 220:	e70c      	movi.n	a7, 14
+ 222:	d80c      	movi.n	a8, 13
+ 224:	fffb61        	l32r	a6, 210 <ieee80211_chan2ieee+0x18>
+ 227:	fffb91        	l32r	a9, 214 <ieee80211_chan2ieee+0x1c>
+ 22a:	0d6377        	bbci	a3, 7, 23b <ieee80211_ieee2mhz+0x1b>
+ 22d:	1f1277        	beq	a2, a7, 250 <ieee80211_ieee2mhz+0x30>
+ 230:	15b827        	bgeu	a8, a2, 249 <ieee80211_ieee2mhz+0x29>
+ 233:	a02220        	addx4	a2, a2, a2
+ 236:	a02290        	addx4	a2, a2, a9
+ 239:	f00d      	ret.n
+ 23b:	111277        	beq	a2, a7, 250 <ieee80211_ieee2mhz+0x30>
+ 23e:	07b827        	bgeu	a8, a2, 249 <ieee80211_ieee2mhz+0x29>
+ 241:	a31c      	movi.n	a3, 26
+ 243:	ecb327        	bgeu	a3, a2, 233 <ieee80211_ieee2mhz+0x13>
+ 246:	fff461        	l32r	a6, 218 <ieee80211_chan2ieee+0x20>
+ 249:	a02220        	addx4	a2, a2, a2
+ 24c:	226a      	add.n	a2, a2, a6
+ 24e:	f00d      	ret.n
+ 250:	fff321        	l32r	a2, 21c <ieee80211_chan2ieee+0x24>
+ 253:	f00d      	ret.n
+ 255:	000000        	ill
+
+00000258 <ieee80211_find_channel>:
+ 258:	202262        	l32i	a6, a2, 128
+ 25b:	1d16a6        	blti	a6, 1, 27c <ieee80211_find_channel+0x24>
+ 25e:	907660        	addx2	a7, a6, a6
+ 261:	a07720        	addx4	a7, a7, a2
+ 264:	441282        	l16ui	a8, a2, 136
+ 267:	212292        	l32i	a9, a2, 132
+ 26a:	099387        	bne	a3, a8, 277 <ieee80211_find_channel+0x1f>
+ 26d:	060947        	bnone	a9, a4, 277 <ieee80211_find_channel+0x1f>
+ 270:	84a0a2        	movi	a10, 132
+ 273:	22aa      	add.n	a2, a2, a10
+ 275:	f00d      	ret.n
+ 277:	22cb      	addi.n	a2, a2, 12
+ 279:	e79277        	bne	a2, a7, 264 <ieee80211_find_channel+0xc>
+ 27c:	020c      	movi.n	a2, 0
+ 27e:	f00d      	ret.n
+
+00000280 <ieee80211_find_channel_byieee>:
+ 280:	202262        	l32i	a6, a2, 128
+ 283:	1d16a6        	blti	a6, 1, 2a4 <ieee80211_find_channel_byieee+0x24>
+ 286:	907660        	addx2	a7, a6, a6
+ 289:	a07720        	addx4	a7, a7, a2
+ 28c:	8a0282        	l8ui	a8, a2, 138
+ 28f:	212292        	l32i	a9, a2, 132
+ 292:	099387        	bne	a3, a8, 29f <ieee80211_find_channel_byieee+0x1f>
+ 295:	060947        	bnone	a9, a4, 29f <ieee80211_find_channel_byieee+0x1f>
+ 298:	84a0a2        	movi	a10, 132
+ 29b:	22aa      	add.n	a2, a2, a10
+ 29d:	f00d      	ret.n
+ 29f:	22cb      	addi.n	a2, a2, 12
+ 2a1:	e79277        	bne	a2, a7, 28c <ieee80211_find_channel_byieee+0xc>
+ 2a4:	020c      	movi.n	a2, 0
+ 2a6:	f00d      	ret.n
+ 2a8:	000000        	ill
+ 2ab:	000800        	excw
+ 2ae:	000000        	ill
+ 2b1:	000000        	ill
+ 2b4:	000c      	movi.n	a0, 0
+	...
+ 2c2:	2c0000        	excw
+ 2c5:	000000        	ill
+ 2c8:	000034        	excw
+ 2cb:	003800        	excw
+ 2ce:	000000        	ill
+ 2d1:	000000        	ill
+ 2d4:	000c      	movi.n	a0, 0
+	...
+ 2e2:	2c0000        	excw
+ 2e5:	000000        	ill
+ 2e8:	000040        	excw
+	...
+
+00000320 <wifi_mode_set>:
+ 320:	e0c112        	addi	a1, a1, -32
+ 323:	51c9      	s32i.n	a12, a1, 20
+ 325:	4109      	s32i.n	a0, a1, 16
+ 327:	02cd      	mov.n	a12, a2
+ 329:	ffdf21        	l32r	a2, 2a8 <ieee80211_find_channel_byieee+0x28>
+ 32c:	fff001        	l32r	a0, 2ec <ieee80211_find_channel_byieee+0x6c>
+ 32f:	0000c0        	callx0	a0
+ 332:	081c26        	beqi	a12, 1, 33e <wifi_mode_set+0x1e>
+ 335:	722c26        	beqi	a12, 2, 3ab <wifi_mode_set+0x8b>
+ 338:	fdcc02        	addi	a0, a12, -3
+ 33b:	0cb056        	bnez	a0, 40a <wifi_mode_set+0xea>
+ 33e:	ffdb21        	l32r	a2, 2ac <ieee80211_find_channel_byieee+0x2c>
+ 341:	ffeb01        	l32r	a0, 2f0 <ieee80211_find_channel_byieee+0x70>
+ 344:	0000c0        	callx0	a0
+ 347:	ffda21        	l32r	a2, 2b0 <ieee80211_find_channel_byieee+0x30>
+ 34a:	220272        	l8ui	a7, a2, 34
+ 34d:	210262        	l8ui	a6, a2, 33
+ 350:	200252        	l8ui	a5, a2, 32
+ 353:	1f0242        	l8ui	a4, a2, 31
+ 356:	1e0232        	l8ui	a3, a2, 30
+ 359:	230222        	l8ui	a2, a2, 35
+ 35c:	0129      	s32i.n	a2, a1, 0
+ 35e:	ffd521        	l32r	a2, 2b4 <ieee80211_find_channel_byieee+0x34>
+ 361:	ffe401        	l32r	a0, 2f4 <ieee80211_find_channel_byieee+0x74>
+ 364:	0000c0        	callx0	a0
+ 367:	ffd431        	l32r	a3, 2b8 <ieee80211_find_channel_byieee+0x38>
+ 36a:	5338      	l32i.n	a3, a3, 20
+ 36c:	f3ec      	bnez.n	a3, 39f <wifi_mode_set+0x7f>
+ 36e:	88a222        	movi	a2, 0x288
+ 371:	ffe101        	l32r	a0, 2f8 <ieee80211_find_channel_byieee+0x78>
+ 374:	0000c0        	callx0	a0
+ 377:	ffd151        	l32r	a5, 2bc <ieee80211_find_channel_byieee+0x3c>
+ 37a:	040c      	movi.n	a4, 0
+ 37c:	5529      	s32i.n	a2, a5, 20
+ 37e:	2c6242        	s32i	a4, a2, 176
+ 381:	f249      	s32i.n	a4, a2, 60
+ 383:	10a122        	movi	a2, 0x110
+ 386:	ffdd01        	l32r	a0, 2fc <ieee80211_find_channel_byieee+0x7c>
+ 389:	0000c0        	callx0	a0
+ 38c:	ffcd61        	l32r	a6, 2c0 <ieee80211_find_channel_byieee+0x40>
+ 38f:	ffcd31        	l32r	a3, 2c4 <ieee80211_find_channel_byieee+0x44>
+ 392:	5668      	l32i.n	a6, a6, 20
+ 394:	640c      	movi.n	a4, 6
+ 396:	236622        	s32i	a2, a6, 140
+ 399:	ffd901        	l32r	a0, 300 <ieee80211_find_channel_byieee+0x80>
+ 39c:	0000c0        	callx0	a0
+ 39f:	671c26        	beqi	a12, 1, 40a <wifi_mode_set+0xea>
+ 3a2:	ffc921        	l32r	a2, 2c8 <ieee80211_find_channel_byieee+0x48>
+ 3a5:	ffd701        	l32r	a0, 304 <ieee80211_find_channel_byieee+0x84>
+ 3a8:	0000c0        	callx0	a0
+ 3ab:	ffc821        	l32r	a2, 2cc <ieee80211_find_channel_byieee+0x4c>
+ 3ae:	ffd601        	l32r	a0, 308 <ieee80211_find_channel_byieee+0x88>
+ 3b1:	0000c0        	callx0	a0
+ 3b4:	ffc781        	l32r	a8, 2d0 <ieee80211_find_channel_byieee+0x50>
+ 3b7:	ffc721        	l32r	a2, 2d4 <ieee80211_find_channel_byieee+0x54>
+ 3ba:	1c0872        	l8ui	a7, a8, 28
+ 3bd:	1b0862        	l8ui	a6, a8, 27
+ 3c0:	1a0852        	l8ui	a5, a8, 26
+ 3c3:	190842        	l8ui	a4, a8, 25
+ 3c6:	180832        	l8ui	a3, a8, 24
+ 3c9:	1d0882        	l8ui	a8, a8, 29
+ 3cc:	0189      	s32i.n	a8, a1, 0
+ 3ce:	ffcf01        	l32r	a0, 30c <ieee80211_find_channel_byieee+0x8c>
+ 3d1:	0000c0        	callx0	a0
+ 3d4:	ffc191        	l32r	a9, 2d8 <ieee80211_find_channel_byieee+0x58>
+ 3d7:	6998      	l32i.n	a9, a9, 24
+ 3d9:	d9ec      	bnez.n	a9, 40a <wifi_mode_set+0xea>
+ 3db:	88a222        	movi	a2, 0x288
+ 3de:	ffcc01        	l32r	a0, 310 <ieee80211_find_channel_byieee+0x90>
+ 3e1:	0000c0        	callx0	a0
+ 3e4:	ffbeb1        	l32r	a11, 2dc <ieee80211_find_channel_byieee+0x5c>
+ 3e7:	1a0c      	movi.n	a10, 1
+ 3e9:	6b29      	s32i.n	a2, a11, 24
+ 3eb:	2c62a2        	s32i	a10, a2, 176
+ 3ee:	10a122        	movi	a2, 0x110
+ 3f1:	ffc801        	l32r	a0, 314 <ieee80211_find_channel_byieee+0x94>
+ 3f4:	0000c0        	callx0	a0
+ 3f7:	ffbac1        	l32r	a12, 2e0 <ieee80211_find_channel_byieee+0x60>
+ 3fa:	ffba31        	l32r	a3, 2e4 <ieee80211_find_channel_byieee+0x64>
+ 3fd:	6cc8      	l32i.n	a12, a12, 24
+ 3ff:	640c      	movi.n	a4, 6
+ 401:	246c22        	s32i	a2, a12, 144
+ 404:	ffc501        	l32r	a0, 318 <ieee80211_find_channel_byieee+0x98>
+ 407:	0000c0        	callx0	a0
+ 40a:	ffb721        	l32r	a2, 2e8 <ieee80211_find_channel_byieee+0x68>
+ 40d:	ffc301        	l32r	a0, 31c <ieee80211_find_channel_byieee+0x9c>
+ 410:	0000c0        	callx0	a0
+ 413:	120c      	movi.n	a2, 1
+ 415:	51c8      	l32i.n	a12, a1, 20
+ 417:	4108      	l32i.n	a0, a1, 16
+ 419:	20c112        	addi	a1, a1, 32
+ 41c:	f00d      	ret.n

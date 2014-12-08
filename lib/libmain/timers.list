@@ -1,0 +1,158 @@
+
+timers.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <os_timer_setfn-0xc>:
+	...
+
+0000000c <os_timer_setfn>:
+   c:	e0c112        	addi	a1, a1, -32
+   f:	0109      	s32i.n	a0, a1, 0
+  11:	21d9      	s32i.n	a13, a1, 8
+  13:	31e9      	s32i.n	a14, a1, 12
+  15:	11c9      	s32i.n	a12, a1, 4
+  17:	41f9      	s32i.n	a15, a1, 16
+  19:	02cd      	mov.n	a12, a2
+  1b:	fff9f1        	l32r	a15, 0 <os_timer_setfn-0xc>
+  1e:	04ed      	mov.n	a14, a4
+  20:	0fd8      	l32i.n	a13, a15, 0
+  22:	000c      	movi.n	a0, 0
+  24:	042d16        	beqz	a13, 6a <os_timer_setfn+0x5e>
+  27:	1d28      	l32i.n	a2, a13, 4
+  29:	3492c7        	bne	a2, a12, 61 <os_timer_setfn+0x55>
+  2c:	6c48      	l32i.n	a4, a12, 24
+  2e:	4c58      	l32i.n	a5, a12, 16
+  30:	0294e7        	bne	a4, a14, 36 <os_timer_setfn+0x2a>
+  33:	521537        	beq	a5, a3, 89 <os_timer_setfn+0x7d>
+  36:	1c28      	l32i.n	a2, a12, 4
+  38:	5139      	s32i.n	a3, a1, 20
+  3a:	829c      	beqz.n	a2, 56 <os_timer_setfn+0x4a>
+  3c:	330c      	movi.n	a3, 3
+  3e:	040c      	movi.n	a4, 0
+  40:	050c      	movi.n	a5, 0
+  42:	a60c      	movi.n	a6, 10
+  44:	fff001        	l32r	a0, 4 <os_timer_setfn-0x8>
+  47:	0000c0        	callx0	a0
+  4a:	5138      	l32i.n	a3, a1, 20
+  4c:	040f62        	l8ui	a6, a15, 4
+  4f:	000c      	movi.n	a0, 0
+  51:	660b      	addi.n	a6, a6, -1
+  53:	044f62        	s8i	a6, a15, 4
+  56:	1c09      	s32i.n	a0, a12, 4
+  58:	3c09      	s32i.n	a0, a12, 12
+  5a:	4c39      	s32i.n	a3, a12, 16
+  5c:	6ce9      	s32i.n	a14, a12, 24
+  5e:	0009c6        	j	89 <os_timer_setfn+0x7d>
+  61:	0d28      	l32i.n	a2, a13, 0
+  63:	328c      	beqz.n	a2, 6a <os_timer_setfn+0x5e>
+  65:	02dd      	mov.n	a13, a2
+  67:	fbc256        	bnez	a2, 27 <os_timer_setfn+0x1b>
+  6a:	4c39      	s32i.n	a3, a12, 16
+  6c:	6ce9      	s32i.n	a14, a12, 24
+  6e:	820c      	movi.n	a2, 8
+  70:	070c      	movi.n	a7, 0
+  72:	1c79      	s32i.n	a7, a12, 4
+  74:	3c79      	s32i.n	a7, a12, 12
+  76:	ffe401        	l32r	a0, 8 <os_timer_setfn-0x4>
+  79:	0000c0        	callx0	a0
+  7c:	12c9      	s32i.n	a12, a2, 4
+  7e:	090c      	movi.n	a9, 0
+  80:	0f88      	l32i.n	a8, a15, 0
+  82:	0299      	s32i.n	a9, a2, 0
+  84:	93fd80        	movnez	a15, a13, a8
+  87:	0f29      	s32i.n	a2, a15, 0
+  89:	11c8      	l32i.n	a12, a1, 4
+  8b:	21d8      	l32i.n	a13, a1, 8
+  8d:	31e8      	l32i.n	a14, a1, 12
+  8f:	41f8      	l32i.n	a15, a1, 16
+  91:	0108      	l32i.n	a0, a1, 0
+  93:	20c112        	addi	a1, a1, 32
+  96:	f00d      	ret.n
+	...
+
+000000b4 <os_timer_arm>:
+  b4:	e0c112        	addi	a1, a1, -32
+  b7:	0109      	s32i.n	a0, a1, 0
+  b9:	21d9      	s32i.n	a13, a1, 8
+  bb:	41f9      	s32i.n	a15, a1, 16
+  bd:	11c9      	s32i.n	a12, a1, 4
+  bf:	31e9      	s32i.n	a14, a1, 12
+  c1:	02cd      	mov.n	a12, a2
+  c3:	03ed      	mov.n	a14, a3
+  c5:	12f8      	l32i.n	a15, a2, 4
+  c7:	04dd      	mov.n	a13, a4
+  c9:	ffec      	bnez.n	a15, fc <os_timer_arm+0x48>
+  cb:	144242        	s8i	a4, a2, 20
+  ce:	3239      	s32i.n	a3, a2, 12
+  d0:	032d      	mov.n	a2, a3
+  d2:	a30c      	movi.n	a3, 10
+  d4:	fff201        	l32r	a0, 9c <os_timer_setfn+0x90>
+  d7:	0000c0        	callx0	a0
+  da:	0d4d      	mov.n	a4, a13
+  dc:	6c58      	l32i.n	a5, a12, 24
+  de:	023d      	mov.n	a3, a2
+  e0:	4c68      	l32i.n	a6, a12, 16
+  e2:	020c      	movi.n	a2, 0
+  e4:	ffef01        	l32r	a0, a0 <os_timer_setfn+0x94>
+  e7:	0000c0        	callx0	a0
+  ea:	ffeb31        	l32r	a3, 98 <os_timer_setfn+0x8c>
+  ed:	02fd      	mov.n	a15, a2
+  ef:	040302        	l8ui	a0, a3, 4
+  f2:	1c29      	s32i.n	a2, a12, 4
+  f4:	001b      	addi.n	a0, a0, 1
+  f6:	044302        	s8i	a0, a3, 4
+  f9:	041216        	beqz	a2, 13e <os_timer_arm+0x8a>
+  fc:	140c32        	l8ui	a3, a12, 20
+  ff:	0413d7        	beq	a3, a13, 107 <os_timer_arm+0x53>
+ 102:	144cd2        	s8i	a13, a12, 20
+ 105:	7fd9      	s32i.n	a13, a15, 28
+ 107:	3c48      	l32i.n	a4, a12, 12
+ 109:	1b14e7        	beq	a4, a14, 128 <os_timer_arm+0x74>
+ 10c:	0e2d      	mov.n	a2, a14
+ 10e:	3ce9      	s32i.n	a14, a12, 12
+ 110:	a30c      	movi.n	a3, 10
+ 112:	ffe401        	l32r	a0, a4 <os_timer_setfn+0x98>
+ 115:	0000c0        	callx0	a0
+ 118:	230c      	movi.n	a3, 2
+ 11a:	050c      	movi.n	a5, 0
+ 11c:	024d      	mov.n	a4, a2
+ 11e:	a60c      	movi.n	a6, 10
+ 120:	0f2d      	mov.n	a2, a15
+ 122:	ffe101        	l32r	a0, a8 <os_timer_setfn+0x9c>
+ 125:	0000c0        	callx0	a0
+ 128:	ffe101        	l32r	a0, ac <os_timer_setfn+0xa0>
+ 12b:	0000c0        	callx0	a0
+ 12e:	030c      	movi.n	a3, 0
+ 130:	050c      	movi.n	a5, 0
+ 132:	024d      	mov.n	a4, a2
+ 134:	a60c      	movi.n	a6, 10
+ 136:	1c28      	l32i.n	a2, a12, 4
+ 138:	ffde01        	l32r	a0, b0 <os_timer_setfn+0xa4>
+ 13b:	0000c0        	callx0	a0
+ 13e:	11c8      	l32i.n	a12, a1, 4
+ 140:	21d8      	l32i.n	a13, a1, 8
+ 142:	31e8      	l32i.n	a14, a1, 12
+ 144:	41f8      	l32i.n	a15, a1, 16
+ 146:	0108      	l32i.n	a0, a1, 0
+ 148:	20c112        	addi	a1, a1, 32
+ 14b:	f00d      	ret.n
+ 14d:	000000        	ill
+ 150:	000000        	ill
+	...
+
+00000154 <os_timer_disarm>:
+ 154:	f0c112        	addi	a1, a1, -16
+ 157:	1228      	l32i.n	a2, a2, 4
+ 159:	0109      	s32i.n	a0, a1, 0
+ 15b:	c28c      	beqz.n	a2, 16b <os_timer_disarm+0x17>
+ 15d:	130c      	movi.n	a3, 1
+ 15f:	040c      	movi.n	a4, 0
+ 161:	050c      	movi.n	a5, 0
+ 163:	a60c      	movi.n	a6, 10
+ 165:	fffa01        	l32r	a0, 150 <os_timer_arm+0x9c>
+ 168:	0000c0        	callx0	a0
+ 16b:	0108      	l32i.n	a0, a1, 0
+ 16d:	10c112        	addi	a1, a1, 16
+ 170:	f00d      	ret.n

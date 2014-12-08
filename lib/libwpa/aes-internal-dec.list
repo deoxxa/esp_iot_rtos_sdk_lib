@@ -1,0 +1,505 @@
+
+aes-internal-dec.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <rijndaelKeySetupDec-0xc>:
+	...
+
+0000000c <rijndaelKeySetupDec>:
+   c:	f0c112        	addi	a1, a1, -16
+   f:	11c9      	s32i.n	a12, a1, 4
+  11:	0109      	s32i.n	a0, a1, 0
+  13:	02cd      	mov.n	a12, a2
+  15:	fffc01        	l32r	a0, 8 <rijndaelKeySetupDec-0x4>
+  18:	0000c0        	callx0	a0
+  1b:	0c6d      	mov.n	a6, a12
+  1d:	832c      	movi.n	a3, 40
+  1f:	020c      	movi.n	a2, 0
+  21:	a0a002        	movi	a0, 160
+  24:	0c0a      	add.n	a0, a12, a0
+  26:	fcc332        	addi	a3, a3, -4
+  29:	224b      	addi.n	a2, a2, 4
+  2b:	06b8      	l32i.n	a11, a6, 0
+  2d:	0048      	l32i.n	a4, a0, 0
+  2f:	f0c002        	addi	a0, a0, -16
+  32:	0649      	s32i.n	a4, a6, 0
+  34:	50a8      	l32i.n	a10, a0, 20
+  36:	40b9      	s32i.n	a11, a0, 16
+  38:	1698      	l32i.n	a9, a6, 4
+  3a:	16a9      	s32i.n	a10, a6, 4
+  3c:	6088      	l32i.n	a8, a0, 24
+  3e:	5099      	s32i.n	a9, a0, 20
+  40:	2678      	l32i.n	a7, a6, 8
+  42:	2689      	s32i.n	a8, a6, 8
+  44:	7058      	l32i.n	a5, a0, 28
+  46:	6079      	s32i.n	a7, a0, 24
+  48:	3648      	l32i.n	a4, a6, 12
+  4a:	3659      	s32i.n	a5, a6, 12
+  4c:	7049      	s32i.n	a4, a0, 28
+  4e:	10c662        	addi	a6, a6, 16
+  51:	d12237        	blt	a2, a3, 26 <rijndaelKeySetupDec+0x1a>
+  54:	120c      	movi.n	a2, 1
+  56:	ffea91        	l32r	a9, 0 <rijndaelKeySetupDec-0xc>
+  59:	ffea81        	l32r	a8, 4 <rijndaelKeySetupDec-0x8>
+  5c:	10ccc2        	addi	a12, a12, 16
+  5f:	0c0d      	mov.n	a0, a12
+  61:	221b      	addi.n	a2, a2, 1
+  63:	10cc62        	addi	a6, a12, 16
+  66:	10ccc2        	addi	a12, a12, 16
+  69:	00a8      	l32i.n	a10, a0, 0
+  6b:	404810        	ssai	24
+  6e:	74b0a0        	extui	a11, a10, 0, 8
+  71:	7478a0        	extui	a7, a10, 8, 8
+  74:	7558a0        	extui	a5, a10, 24, 8
+  77:	a05590        	addx4	a5, a5, a9
+  7a:	a07790        	addx4	a7, a7, a9
+  7d:	a0bb90        	addx4	a11, a11, a9
+  80:	0bb8      	l32i.n	a11, a11, 0
+  82:	0778      	l32i.n	a7, a7, 0
+  84:	0558      	l32i.n	a5, a5, 0
+  86:	75a0a0        	extui	a10, a10, 16, 8
+  89:	745850        	extui	a5, a5, 8, 8
+  8c:	747870        	extui	a7, a7, 8, 8
+  8f:	74b8b0        	extui	a11, a11, 8, 8
+  92:	a0aa90        	addx4	a10, a10, a9
+  95:	0aa8      	l32i.n	a10, a10, 0
+  97:	a0bb80        	addx4	a11, a11, a8
+  9a:	a07780        	addx4	a7, a7, a8
+  9d:	a05580        	addx4	a5, a5, a8
+  a0:	0558      	l32i.n	a5, a5, 0
+  a2:	0778      	l32i.n	a7, a7, 0
+  a4:	0bb8      	l32i.n	a11, a11, 0
+  a6:	74a8a0        	extui	a10, a10, 8, 8
+  a9:	81bbb0        	src	a11, a11, a11
+  ac:	a0aa80        	addx4	a10, a10, a8
+  af:	0aa8      	l32i.n	a10, a10, 0
+  b1:	404010        	ssai	16
+  b4:	817770        	src	a7, a7, a7
+  b7:	3077b0        	xor	a7, a7, a11
+  ba:	404800        	ssai	8
+  bd:	81aaa0        	src	a10, a10, a10
+  c0:	3055a0        	xor	a5, a5, a10
+  c3:	305570        	xor	a5, a5, a7
+  c6:	0059      	s32i.n	a5, a0, 0
+  c8:	004b      	addi.n	a0, a0, 4
+  ca:	9b9067        	bne	a0, a6, 69 <rijndaelKeySetupDec+0x5d>
+  cd:	0c0d      	mov.n	a0, a12
+  cf:	8e9266        	bnei	a2, 10, 61 <rijndaelKeySetupDec+0x55>
+  d2:	11c8      	l32i.n	a12, a1, 4
+  d4:	0108      	l32i.n	a0, a1, 0
+  d6:	10c112        	addi	a1, a1, 16
+  d9:	f00d      	ret.n
+	...
+
+000000e4 <aes_decrypt_init>:
+  e4:	f0c112        	addi	a1, a1, -16
+  e7:	0109      	s32i.n	a0, a1, 0
+  e9:	04b326        	beqi	a3, 16, f1 <aes_decrypt_init+0xd>
+  ec:	020c      	movi.n	a2, 0
+  ee:	000286        	j	fc <aes_decrypt_init+0x18>
+  f1:	023d      	mov.n	a3, a2
+  f3:	fffa21        	l32r	a2, dc <rijndaelKeySetupDec+0xd0>
+  f6:	000005        	call0	f8 <aes_decrypt_init+0x14>
+  f9:	fff921        	l32r	a2, e0 <rijndaelKeySetupDec+0xd4>
+  fc:	0108      	l32i.n	a0, a1, 0
+  fe:	10c112        	addi	a1, a1, 16
+ 101:	f00d      	ret.n
+	...
+ 10b:	c11200        	mul16u	a1, a2, a0
+ 10e:	41e9c0        	srli	a14, a12, 9
+ 111:	21c9      	s32i.n	a12, a1, 8
+ 113:	1288      	l32i.n	a8, a2, 4
+ 115:	2278      	l32i.n	a7, a2, 8
+ 117:	0b0362        	l8ui	a6, a3, 11
+ 11a:	0258      	l32i.n	a5, a2, 0
+ 11c:	040392        	l8ui	a9, a3, 4
+ 11f:	0503a2        	l8ui	a10, a3, 5
+ 122:	0d03b2        	l8ui	a11, a3, 13
+ 125:	0149      	s32i.n	a4, a1, 0
+ 127:	31d9      	s32i.n	a13, a1, 12
+ 129:	1109      	s32i.n	a0, a1, 4
+ 12b:	51f9      	s32i.n	a15, a1, 20
+ 12d:	500c      	movi.n	a0, 5
+ 12f:	fff5f1        	l32r	a15, 104 <aes_decrypt_init+0x20>
+ 132:	0e03d2        	l8ui	a13, a3, 14
+ 135:	030342        	l8ui	a4, a3, 3
+ 138:	11bb00        	slli	a11, a11, 16
+ 13b:	11aa00        	slli	a10, a10, 16
+ 13e:	019980        	slli	a9, a9, 24
+ 141:	304450        	xor	a4, a4, a5
+ 144:	306670        	xor	a6, a6, a7
+ 147:	000352        	l8ui	a5, a3, 0
+ 14a:	3099a0        	xor	a9, a9, a10
+ 14d:	070372        	l8ui	a7, a3, 7
+ 150:	0903a2        	l8ui	a10, a3, 9
+ 153:	307780        	xor	a7, a7, a8
+ 156:	010382        	l8ui	a8, a3, 1
+ 159:	015580        	slli	a5, a5, 24
+ 15c:	118800        	slli	a8, a8, 16
+ 15f:	305580        	xor	a5, a5, a8
+ 162:	080382        	l8ui	a8, a3, 8
+ 165:	11aa00        	slli	a10, a10, 16
+ 168:	018880        	slli	a8, a8, 24
+ 16b:	3088a0        	xor	a8, a8, a10
+ 16e:	0c03a2        	l8ui	a10, a3, 12
+ 171:	11dd80        	slli	a13, a13, 8
+ 174:	01aa80        	slli	a10, a10, 24
+ 177:	30aab0        	xor	a10, a10, a11
+ 17a:	30aad0        	xor	a10, a10, a13
+ 17d:	0a03b2        	l8ui	a11, a3, 10
+ 180:	0603d2        	l8ui	a13, a3, 6
+ 183:	11bb80        	slli	a11, a11, 8
+ 186:	11dd80        	slli	a13, a13, 8
+ 189:	3088b0        	xor	a8, a8, a11
+ 18c:	306680        	xor	a6, a6, a8
+ 18f:	3099d0        	xor	a9, a9, a13
+ 192:	0203b2        	l8ui	a11, a3, 2
+ 195:	307790        	xor	a7, a7, a9
+ 198:	0f0392        	l8ui	a9, a3, 15
+ 19b:	11bb80        	slli	a11, a11, 8
+ 19e:	3055b0        	xor	a5, a5, a11
+ 1a1:	32b8      	l32i.n	a11, a2, 12
+ 1a3:	304450        	xor	a4, a4, a5
+ 1a6:	3099b0        	xor	a9, a9, a11
+ 1a9:	3039a0        	xor	a3, a9, a10
+ 1ac:	000b      	addi.n	a0, a0, -1
+ 1ae:	404800        	ssai	8
+ 1b1:	749840        	extui	a9, a4, 8, 8
+ 1b4:	75a860        	extui	a10, a6, 24, 8
+ 1b7:	758070        	extui	a8, a7, 16, 8
+ 1ba:	74c060        	extui	a12, a6, 0, 8
+ 1bd:	74b830        	extui	a11, a3, 8, 8
+ 1c0:	755040        	extui	a5, a4, 16, 8
+ 1c3:	75e030        	extui	a14, a3, 16, 8
+ 1c6:	74d860        	extui	a13, a6, 8, 8
+ 1c9:	a0ddf0        	addx4	a13, a13, a15
+ 1cc:	a0eef0        	addx4	a14, a14, a15
+ 1cf:	a055f0        	addx4	a5, a5, a15
+ 1d2:	a0bbf0        	addx4	a11, a11, a15
+ 1d5:	a0ccf0        	addx4	a12, a12, a15
+ 1d8:	a088f0        	addx4	a8, a8, a15
+ 1db:	a0aaf0        	addx4	a10, a10, a15
+ 1de:	a099f0        	addx4	a9, a9, a15
+ 1e1:	0998      	l32i.n	a9, a9, 0
+ 1e3:	0aa8      	l32i.n	a10, a10, 0
+ 1e5:	0888      	l32i.n	a8, a8, 0
+ 1e7:	0cc8      	l32i.n	a12, a12, 0
+ 1e9:	0bb8      	l32i.n	a11, a11, 0
+ 1eb:	0558      	l32i.n	a5, a5, 0
+ 1ed:	0ee8      	l32i.n	a14, a14, 0
+ 1ef:	0dd8      	l32i.n	a13, a13, 0
+ 1f1:	81eee0        	src	a14, a14, a14
+ 1f4:	61e9      	s32i.n	a14, a1, 24
+ 1f6:	404010        	ssai	16
+ 1f9:	81ddd0        	src	a13, a13, a13
+ 1fc:	74e070        	extui	a14, a7, 0, 8
+ 1ff:	a0eef0        	addx4	a14, a14, a15
+ 202:	0ee8      	l32i.n	a14, a14, 0
+ 204:	404810        	ssai	24
+ 207:	81eee0        	src	a14, a14, a14
+ 20a:	404800        	ssai	8
+ 20d:	815550        	src	a5, a5, a5
+ 210:	404010        	ssai	16
+ 213:	81bbb0        	src	a11, a11, a11
+ 216:	404810        	ssai	24
+ 219:	81ccc0        	src	a12, a12, a12
+ 21c:	404800        	ssai	8
+ 21f:	818880        	src	a8, a8, a8
+ 222:	30aa80        	xor	a10, a10, a8
+ 225:	404010        	ssai	16
+ 228:	819990        	src	a9, a9, a9
+ 22b:	758060        	extui	a8, a6, 16, 8
+ 22e:	404810        	ssai	24
+ 231:	756830        	extui	a6, a3, 24, 8
+ 234:	3099a0        	xor	a9, a9, a10
+ 237:	a088f0        	addx4	a8, a8, a15
+ 23a:	0888      	l32i.n	a8, a8, 0
+ 23c:	74a030        	extui	a10, a3, 0, 8
+ 23f:	a066f0        	addx4	a6, a6, a15
+ 242:	0668      	l32i.n	a6, a6, 0
+ 244:	753870        	extui	a3, a7, 24, 8
+ 247:	a0aaf0        	addx4	a10, a10, a15
+ 24a:	0aa8      	l32i.n	a10, a10, 0
+ 24c:	a033f0        	addx4	a3, a3, a15
+ 24f:	0338      	l32i.n	a3, a3, 0
+ 251:	81aaa0        	src	a10, a10, a10
+ 254:	404800        	ssai	8
+ 257:	303350        	xor	a3, a3, a5
+ 25a:	30bb30        	xor	a11, a11, a3
+ 25d:	818880        	src	a8, a8, a8
+ 260:	745870        	extui	a5, a7, 8, 8
+ 263:	404010        	ssai	16
+ 266:	5278      	l32i.n	a7, a2, 20
+ 268:	753840        	extui	a3, a4, 24, 8
+ 26b:	306680        	xor	a6, a6, a8
+ 26e:	a055f0        	addx4	a5, a5, a15
+ 271:	4288      	l32i.n	a8, a2, 16
+ 273:	0558      	l32i.n	a5, a5, 0
+ 275:	a033f0        	addx4	a3, a3, a15
+ 278:	0338      	l32i.n	a3, a3, 0
+ 27a:	3077c0        	xor	a7, a7, a12
+ 27d:	3077b0        	xor	a7, a7, a11
+ 280:	815550        	src	a5, a5, a5
+ 283:	3088e0        	xor	a8, a8, a14
+ 286:	305560        	xor	a5, a5, a6
+ 289:	6168      	l32i.n	a6, a1, 24
+ 28b:	404810        	ssai	24
+ 28e:	303360        	xor	a3, a3, a6
+ 291:	6268      	l32i.n	a6, a2, 24
+ 293:	30dd30        	xor	a13, a13, a3
+ 296:	3088d0        	xor	a8, a8, a13
+ 299:	7238      	l32i.n	a3, a2, 28
+ 29b:	3066a0        	xor	a6, a6, a10
+ 29e:	306690        	xor	a6, a6, a9
+ 2a1:	749040        	extui	a9, a4, 0, 8
+ 2a4:	a099f0        	addx4	a9, a9, a15
+ 2a7:	0998      	l32i.n	a9, a9, 0
+ 2a9:	20c222        	addi	a2, a2, 32
+ 2ac:	819990        	src	a9, a9, a9
+ 2af:	303390        	xor	a3, a3, a9
+ 2b2:	303350        	xor	a3, a3, a5
+ 2b5:	106016        	beqz	a0, 3bf <aes_decrypt_init+0x2db>
+ 2b8:	404800        	ssai	8
+ 2bb:	749880        	extui	a9, a8, 8, 8
+ 2be:	75a860        	extui	a10, a6, 24, 8
+ 2c1:	754070        	extui	a4, a7, 16, 8
+ 2c4:	74c060        	extui	a12, a6, 0, 8
+ 2c7:	74b830        	extui	a11, a3, 8, 8
+ 2ca:	755080        	extui	a5, a8, 16, 8
+ 2cd:	7109      	s32i.n	a0, a1, 28
+ 2cf:	74e860        	extui	a14, a6, 8, 8
+ 2d2:	74d070        	extui	a13, a7, 0, 8
+ 2d5:	a0ddf0        	addx4	a13, a13, a15
+ 2d8:	a0eef0        	addx4	a14, a14, a15
+ 2db:	750030        	extui	a0, a3, 16, 8
+ 2de:	a055f0        	addx4	a5, a5, a15
+ 2e1:	a0bbf0        	addx4	a11, a11, a15
+ 2e4:	a0ccf0        	addx4	a12, a12, a15
+ 2e7:	a044f0        	addx4	a4, a4, a15
+ 2ea:	a0aaf0        	addx4	a10, a10, a15
+ 2ed:	a099f0        	addx4	a9, a9, a15
+ 2f0:	0998      	l32i.n	a9, a9, 0
+ 2f2:	0aa8      	l32i.n	a10, a10, 0
+ 2f4:	0448      	l32i.n	a4, a4, 0
+ 2f6:	0cc8      	l32i.n	a12, a12, 0
+ 2f8:	0bb8      	l32i.n	a11, a11, 0
+ 2fa:	0558      	l32i.n	a5, a5, 0
+ 2fc:	a000f0        	addx4	a0, a0, a15
+ 2ff:	0008      	l32i.n	a0, a0, 0
+ 301:	0ee8      	l32i.n	a14, a14, 0
+ 303:	810000        	src	a0, a0, a0
+ 306:	404010        	ssai	16
+ 309:	0dd8      	l32i.n	a13, a13, 0
+ 30b:	81eee0        	src	a14, a14, a14
+ 30e:	404810        	ssai	24
+ 311:	81ddd0        	src	a13, a13, a13
+ 314:	404800        	ssai	8
+ 317:	815550        	src	a5, a5, a5
+ 31a:	404010        	ssai	16
+ 31d:	81bbb0        	src	a11, a11, a11
+ 320:	404810        	ssai	24
+ 323:	81ccc0        	src	a12, a12, a12
+ 326:	404800        	ssai	8
+ 329:	814440        	src	a4, a4, a4
+ 32c:	30aa40        	xor	a10, a10, a4
+ 32f:	404010        	ssai	16
+ 332:	819990        	src	a9, a9, a9
+ 335:	754060        	extui	a4, a6, 16, 8
+ 338:	404810        	ssai	24
+ 33b:	756880        	extui	a6, a8, 24, 8
+ 33e:	3099a0        	xor	a9, a9, a10
+ 341:	a044f0        	addx4	a4, a4, a15
+ 344:	0448      	l32i.n	a4, a4, 0
+ 346:	74a030        	extui	a10, a3, 0, 8
+ 349:	a066f0        	addx4	a6, a6, a15
+ 34c:	0668      	l32i.n	a6, a6, 0
+ 34e:	753830        	extui	a3, a3, 24, 8
+ 351:	a0aaf0        	addx4	a10, a10, a15
+ 354:	0aa8      	l32i.n	a10, a10, 0
+ 356:	a033f0        	addx4	a3, a3, a15
+ 359:	306600        	xor	a6, a6, a0
+ 35c:	0338      	l32i.n	a3, a3, 0
+ 35e:	7108      	l32i.n	a0, a1, 28
+ 360:	81aaa0        	src	a10, a10, a10
+ 363:	306e60        	xor	a6, a14, a6
+ 366:	404800        	ssai	8
+ 369:	814440        	src	a4, a4, a4
+ 36c:	303340        	xor	a3, a3, a4
+ 36f:	754870        	extui	a4, a7, 24, 8
+ 372:	a044f0        	addx4	a4, a4, a15
+ 375:	0448      	l32i.n	a4, a4, 0
+ 377:	404010        	ssai	16
+ 37a:	304450        	xor	a4, a4, a5
+ 37d:	745870        	extui	a5, a7, 8, 8
+ 380:	30bb40        	xor	a11, a11, a4
+ 383:	1278      	l32i.n	a7, a2, 4
+ 385:	0248      	l32i.n	a4, a2, 0
+ 387:	a055f0        	addx4	a5, a5, a15
+ 38a:	0558      	l32i.n	a5, a5, 0
+ 38c:	3044d0        	xor	a4, a4, a13
+ 38f:	3077c0        	xor	a7, a7, a12
+ 392:	3077b0        	xor	a7, a7, a11
+ 395:	815550        	src	a5, a5, a5
+ 398:	304460        	xor	a4, a4, a6
+ 39b:	404810        	ssai	24
+ 39e:	2268      	l32i.n	a6, a2, 8
+ 3a0:	305530        	xor	a5, a5, a3
+ 3a3:	3066a0        	xor	a6, a6, a10
+ 3a6:	306690        	xor	a6, a6, a9
+ 3a9:	749080        	extui	a9, a8, 0, 8
+ 3ac:	a099f0        	addx4	a9, a9, a15
+ 3af:	0998      	l32i.n	a9, a9, 0
+ 3b1:	3238      	l32i.n	a3, a2, 12
+ 3b3:	819990        	src	a9, a9, a9
+ 3b6:	303390        	xor	a3, a3, a9
+ 3b9:	303350        	xor	a3, a3, a5
+ 3bc:	ff7b06        	j	1ac <aes_decrypt_init+0xc8>
+ 3bf:	75a030        	extui	a10, a3, 16, 8
+ 3c2:	75b880        	extui	a11, a8, 24, 8
+ 3c5:	744030        	extui	a4, a3, 0, 8
+ 3c8:	74e880        	extui	a14, a8, 8, 8
+ 3cb:	755830        	extui	a5, a3, 24, 8
+ 3ce:	74c060        	extui	a12, a6, 0, 8
+ 3d1:	759860        	extui	a9, a6, 24, 8
+ 3d4:	75d080        	extui	a13, a8, 16, 8
+ 3d7:	ff4cf1        	l32r	a15, 108 <aes_decrypt_init+0x24>
+ 3da:	740830        	extui	a0, a3, 8, 8
+ 3dd:	0f0a      	add.n	a0, a15, a0
+ 3df:	dfda      	add.n	a13, a15, a13
+ 3e1:	9f9a      	add.n	a9, a15, a9
+ 3e3:	cfca      	add.n	a12, a15, a12
+ 3e5:	5f5a      	add.n	a5, a15, a5
+ 3e7:	efea      	add.n	a14, a15, a14
+ 3e9:	4f4a      	add.n	a4, a15, a4
+ 3eb:	bfba      	add.n	a11, a15, a11
+ 3ed:	afaa      	add.n	a10, a15, a10
+ 3ef:	000aa2        	l8ui	a10, a10, 0
+ 3f2:	000bb2        	l8ui	a11, a11, 0
+ 3f5:	b149      	s32i.n	a4, a1, 44
+ 3f7:	d1e9      	s32i.n	a14, a1, 52
+ 3f9:	6159      	s32i.n	a5, a1, 24
+ 3fb:	743080        	extui	a3, a8, 0, 8
+ 3fe:	745860        	extui	a5, a6, 8, 8
+ 401:	3f3a      	add.n	a3, a15, a3
+ 403:	75e870        	extui	a14, a7, 24, 8
+ 406:	758070        	extui	a8, a7, 16, 8
+ 409:	744870        	extui	a4, a7, 8, 8
+ 40c:	4f4a      	add.n	a4, a15, a4
+ 40e:	8f8a      	add.n	a8, a15, a8
+ 410:	efea      	add.n	a14, a15, a14
+ 412:	01bb80        	slli	a11, a11, 24
+ 415:	c139      	s32i.n	a3, a1, 48
+ 417:	11aa00        	slli	a10, a10, 16
+ 41a:	753060        	extui	a3, a6, 16, 8
+ 41d:	30aab0        	xor	a10, a10, a11
+ 420:	3f3a      	add.n	a3, a15, a3
+ 422:	747070        	extui	a7, a7, 0, 8
+ 425:	7f7a      	add.n	a7, a15, a7
+ 427:	000772        	l8ui	a7, a7, 0
+ 42a:	ff5a      	add.n	a15, a15, a5
+ 42c:	000ff2        	l8ui	a15, a15, 0
+ 42f:	0258      	l32i.n	a5, a2, 0
+ 431:	11ff80        	slli	a15, a15, 8
+ 434:	3077f0        	xor	a7, a7, a15
+ 437:	01f8      	l32i.n	a15, a1, 0
+ 439:	3077a0        	xor	a7, a7, a10
+ 43c:	305570        	xor	a5, a5, a7
+ 43f:	034f52        	s8i	a5, a15, 3
+ 442:	f57050        	extui	a7, a5, 16, 16
+ 445:	75a850        	extui	a10, a5, 24, 8
+ 448:	004fa2        	s8i	a10, a15, 0
+ 44b:	014f72        	s8i	a7, a15, 1
+ 44e:	d1a8      	l32i.n	a10, a1, 52
+ 450:	b178      	l32i.n	a7, a1, 44
+ 452:	415850        	srli	a5, a5, 8
+ 455:	024f52        	s8i	a5, a15, 2
+ 458:	12b8      	l32i.n	a11, a2, 4
+ 45a:	000cc2        	l8ui	a12, a12, 0
+ 45d:	000dd2        	l8ui	a13, a13, 0
+ 460:	000ee2        	l8ui	a14, a14, 0
+ 463:	000002        	l8ui	a0, a0, 0
+ 466:	01ee80        	slli	a14, a14, 24
+ 469:	110080        	slli	a0, a0, 8
+ 46c:	11dd00        	slli	a13, a13, 16
+ 46f:	30cc00        	xor	a12, a12, a0
+ 472:	c108      	l32i.n	a0, a1, 48
+ 474:	30dde0        	xor	a13, a13, a14
+ 477:	30ccd0        	xor	a12, a12, a13
+ 47a:	30bbc0        	xor	a11, a11, a12
+ 47d:	074fb2        	s8i	a11, a15, 7
+ 480:	75d8b0        	extui	a13, a11, 24, 8
+ 483:	f5c0b0        	extui	a12, a11, 16, 16
+ 486:	054fc2        	s8i	a12, a15, 5
+ 489:	044fd2        	s8i	a13, a15, 4
+ 48c:	21c8      	l32i.n	a12, a1, 8
+ 48e:	31d8      	l32i.n	a13, a1, 12
+ 490:	41b8b0        	srli	a11, a11, 8
+ 493:	064fb2        	s8i	a11, a15, 6
+ 496:	2258      	l32i.n	a5, a2, 8
+ 498:	000772        	l8ui	a7, a7, 0
+ 49b:	000aa2        	l8ui	a10, a10, 0
+ 49e:	000992        	l8ui	a9, a9, 0
+ 4a1:	000882        	l8ui	a8, a8, 0
+ 4a4:	019980        	slli	a9, a9, 24
+ 4a7:	118800        	slli	a8, a8, 16
+ 4aa:	11aa80        	slli	a10, a10, 8
+ 4ad:	3077a0        	xor	a7, a7, a10
+ 4b0:	308890        	xor	a8, a8, a9
+ 4b3:	307780        	xor	a7, a7, a8
+ 4b6:	305570        	xor	a5, a5, a7
+ 4b9:	0b4f52        	s8i	a5, a15, 11
+ 4bc:	f57050        	extui	a7, a5, 16, 16
+ 4bf:	758850        	extui	a8, a5, 24, 8
+ 4c2:	084f82        	s8i	a8, a15, 8
+ 4c5:	094f72        	s8i	a7, a15, 9
+ 4c8:	415850        	srli	a5, a5, 8
+ 4cb:	0a4f52        	s8i	a5, a15, 10
+ 4ce:	32e8      	l32i.n	a14, a2, 12
+ 4d0:	000442        	l8ui	a4, a4, 0
+ 4d3:	000002        	l8ui	a0, a0, 0
+ 4d6:	114480        	slli	a4, a4, 8
+ 4d9:	300040        	xor	a0, a0, a4
+ 4dc:	6148      	l32i.n	a4, a1, 24
+ 4de:	000332        	l8ui	a3, a3, 0
+ 4e1:	000442        	l8ui	a4, a4, 0
+ 4e4:	113300        	slli	a3, a3, 16
+ 4e7:	014480        	slli	a4, a4, 24
+ 4ea:	303340        	xor	a3, a3, a4
+ 4ed:	300030        	xor	a0, a0, a3
+ 4f0:	30ee00        	xor	a14, a14, a0
+ 4f3:	0f4fe2        	s8i	a14, a15, 15
+ 4f6:	7538e0        	extui	a3, a14, 24, 8
+ 4f9:	f500e0        	extui	a0, a14, 16, 16
+ 4fc:	0d4f02        	s8i	a0, a15, 13
+ 4ff:	0c4f32        	s8i	a3, a15, 12
+ 502:	1108      	l32i.n	a0, a1, 4
+ 504:	41e8e0        	srli	a14, a14, 8
+ 507:	0e4fe2        	s8i	a14, a15, 14
+ 50a:	51f8      	l32i.n	a15, a1, 20
+ 50c:	41e8      	l32i.n	a14, a1, 16
+ 50e:	40c112        	addi	a1, a1, 64
+ 511:	f00d      	ret.n
+	...
+
+00000514 <aes_decrypt>:
+ 514:	f0c112        	addi	a1, a1, -16
+ 517:	0109      	s32i.n	a0, a1, 0
+ 519:	ffbf05        	call0	10c <aes_decrypt_init+0x28>
+ 51c:	0108      	l32i.n	a0, a1, 0
+ 51e:	10c112        	addi	a1, a1, 16
+ 521:	f00d      	ret.n
+ 523:	000000        	ill
+	...
+
+00000528 <aes_decrypt_deinit>:
+ 528:	030c      	movi.n	a3, 0
+ 52a:	b0a042        	movi	a4, 176
+ 52d:	f0c112        	addi	a1, a1, -16
+ 530:	0109      	s32i.n	a0, a1, 0
+ 532:	fffc01        	l32r	a0, 524 <aes_decrypt+0x10>
+ 535:	0000c0        	callx0	a0
+ 538:	0108      	l32i.n	a0, a1, 0
+ 53a:	10c112        	addi	a1, a1, 16
+ 53d:	f00d      	ret.n

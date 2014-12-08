@@ -1,0 +1,109 @@
+
+wpas_glue.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <wpa_sm_alloc_eapol-0x80>:
+	...
+   8:	f0c112        	addi	a1, a1, -16
+   b:	21c9      	s32i.n	a12, a1, 8
+   d:	842282        	l32i	a8, a2, 0x210
+  10:	31d9      	s32i.n	a13, a1, 12
+  12:	1109      	s32i.n	a0, a1, 4
+  14:	07dd      	mov.n	a13, a7
+  16:	054b      	addi.n	a0, a5, 4
+  18:	d0a072        	movi	a7, 208
+  1b:	727a      	add.n	a7, a2, a7
+  1d:	1828      	l32i.n	a2, a8, 4
+  1f:	0609      	s32i.n	a0, a6, 0
+  21:	02eb      	addi.n	a0, a2, 14
+  23:	30cc      	bnez.n	a0, 2a <wpa_sm_alloc_eapol-0x56>
+  25:	020c      	movi.n	a2, 0
+  27:	001146        	j	70 <wpa_sm_alloc_eapol-0x10>
+  2a:	12c2c2        	addi	a12, a2, 18
+  2d:	0109      	s32i.n	a0, a1, 0
+  2f:	748850        	extui	a8, a5, 8, 8
+  32:	749050        	extui	a9, a5, 0, 8
+  35:	8007a2        	l8ui	a10, a7, 128
+  38:	0e42a2        	s8i	a10, a2, 14
+  3b:	119980        	slli	a9, a9, 8
+  3e:	0f4232        	s8i	a3, a2, 15
+  41:	208890        	or	a8, a8, a9
+  44:	104282        	s8i	a8, a2, 16
+  47:	418880        	srli	a8, a8, 8
+  4a:	114282        	s8i	a8, a2, 17
+  4d:	d48c      	beqz.n	a4, 5e <wpa_sm_alloc_eapol-0x22>
+  4f:	043d      	mov.n	a3, a4
+  51:	0c2d      	mov.n	a2, a12
+  53:	054d      	mov.n	a4, a5
+  55:	ffea01        	l32r	a0, 0 <wpa_sm_alloc_eapol-0x80>
+  58:	0000c0        	callx0	a0
+  5b:	0002c6        	j	6a <wpa_sm_alloc_eapol-0x16>
+  5e:	054d      	mov.n	a4, a5
+  60:	0c2d      	mov.n	a2, a12
+  62:	030c      	movi.n	a3, 0
+  64:	ffe801        	l32r	a0, 4 <wpa_sm_alloc_eapol-0x7c>
+  67:	0000c0        	callx0	a0
+  6a:	0d8c      	beqz.n	a13, 6e <wpa_sm_alloc_eapol-0x12>
+  6c:	0dc9      	s32i.n	a12, a13, 0
+  6e:	0128      	l32i.n	a2, a1, 0
+  70:	21c8      	l32i.n	a12, a1, 8
+  72:	31d8      	l32i.n	a13, a1, 12
+  74:	1108      	l32i.n	a0, a1, 4
+  76:	10c112        	addi	a1, a1, 16
+  79:	f00d      	ret.n
+  7b:	000000        	ill
+	...
+
+00000080 <wpa_sm_alloc_eapol>:
+  80:	e0c112        	addi	a1, a1, -32
+  83:	3159      	s32i.n	a5, a1, 12
+  85:	4169      	s32i.n	a6, a1, 16
+  87:	5179      	s32i.n	a7, a1, 20
+  89:	6109      	s32i.n	a0, a1, 24
+  8b:	2149      	s32i.n	a4, a1, 8
+  8d:	0129      	s32i.n	a2, a1, 0
+  8f:	1139      	s32i.n	a3, a1, 4
+  91:	320c      	movi.n	a2, 3
+  93:	00a132        	movi	a3, 0x100
+  96:	040c      	movi.n	a4, 0
+  98:	fff901        	l32r	a0, 7c <wpa_sm_alloc_eapol-0x4>
+  9b:	0000c0        	callx0	a0
+  9e:	1138      	l32i.n	a3, a1, 4
+  a0:	2148      	l32i.n	a4, a1, 8
+  a2:	3158      	l32i.n	a5, a1, 12
+  a4:	020d      	mov.n	a0, a2
+  a6:	4168      	l32i.n	a6, a1, 16
+  a8:	0128      	l32i.n	a2, a1, 0
+  aa:	5178      	l32i.n	a7, a1, 20
+  ac:	846202        	s32i	a0, a2, 0x210
+  af:	fff585        	call0	8 <wpa_sm_alloc_eapol-0x78>
+  b2:	6108      	l32i.n	a0, a1, 24
+  b4:	20c112        	addi	a1, a1, 32
+  b7:	f00d      	ret.n
+  b9:	000000        	ill
+
+000000bc <wpa_sm_deauthenticate>:
+  bc:	f0c112        	addi	a1, a1, -16
+  bf:	0109      	s32i.n	a0, a1, 0
+  c1:	5a2202        	l32i	a0, a2, 0x168
+  c4:	0750b6        	bltui	a0, 5, cf <wpa_sm_deauthenticate+0x13>
+  c7:	882202        	l32i	a0, a2, 0x220
+  ca:	032d      	mov.n	a2, a3
+  cc:	0000c0        	callx0	a0
+  cf:	0108      	l32i.n	a0, a1, 0
+  d1:	10c112        	addi	a1, a1, 16
+  d4:	f00d      	ret.n
+	...
+
+000000d8 <wpa_sm_mlme_setprotection>:
+  d8:	020c      	movi.n	a2, 0
+  da:	f00d      	ret.n
+
+000000dc <wpa_sm_get_beacon_ie>:
+  dc:	020c      	movi.n	a2, 0
+  de:	f00d      	ret.n
+
+000000e0 <wpa_sm_disassociate>:
+  e0:	f00d      	ret.n

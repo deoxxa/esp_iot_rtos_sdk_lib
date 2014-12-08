@@ -1,0 +1,911 @@
+
+ieee80211_input.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <ieee80211_parse_action>:
+   0:	1348      	l32i.n	a4, a3, 4
+   2:	0b1322        	l16ui	a2, a3, 22
+   5:	1438      	l32i.n	a3, a4, 4
+   7:	223a      	add.n	a2, a2, a3
+   9:	18c222        	addi	a2, a2, 24
+   c:	c02230        	sub	a2, a2, a3
+   f:	e8c222        	addi	a2, a2, -24
+  12:	1c22b6        	bltui	a2, 2, 32 <ieee80211_parse_action+0x32>
+  15:	180352        	l8ui	a5, a3, 24
+  18:	1a3526        	beqi	a5, 3, 36 <ieee80211_parse_action+0x36>
+  1b:	0a7566        	bnei	a5, 7, 29 <ieee80211_parse_action+0x29>
+  1e:	190332        	l8ui	a3, a3, 25
+  21:	33ac      	beqz.n	a3, 48 <ieee80211_parse_action+0x48>
+  23:	021366        	bnei	a3, 1, 29 <ieee80211_parse_action+0x29>
+  26:	0832b6        	bltui	a2, 3, 32 <ieee80211_parse_action+0x32>
+  29:	020c      	movi.n	a2, 0
+  2b:	f00d      	ret.n
+  2d:	850c      	movi.n	a5, 8
+  2f:	f63527        	bltu	a5, a2, 29 <ieee80211_parse_action+0x29>
+  32:	f27c      	movi.n	a2, -1
+  34:	f00d      	ret.n
+  36:	190332        	l8ui	a3, a3, 25
+  39:	ff0316        	beqz	a3, 2d <ieee80211_parse_action+0x2d>
+  3c:	0e1326        	beqi	a3, 1, 4e <ieee80211_parse_action+0x4e>
+  3f:	e62366        	bnei	a3, 2, 29 <ieee80211_parse_action+0x29>
+  42:	ec62b6        	bltui	a2, 6, 32 <ieee80211_parse_action+0x32>
+  45:	fff806        	j	29 <ieee80211_parse_action+0x29>
+  48:	e632b6        	bltui	a2, 3, 32 <ieee80211_parse_action+0x32>
+  4b:	fff686        	j	29 <ieee80211_parse_action+0x29>
+  4e:	860c      	movi.n	a6, 8
+  50:	deb627        	bgeu	a6, a2, 32 <ieee80211_parse_action+0x32>
+  53:	fff486        	j	29 <ieee80211_parse_action+0x29>
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee80211_deliver_data-0x8>:
+	...
+
+00000008 <ieee80211_deliver_data>:
+   8:	f0c112        	addi	a1, a1, -16
+   b:	2109      	s32i.n	a0, a1, 8
+   d:	0208      	l32i.n	a0, a2, 0
+   f:	1109      	s32i.n	a0, a1, 4
+  11:	2f0002        	l8ui	a0, a0, 47
+  14:	0139      	s32i.n	a3, a1, 0
+  16:	226047        	bbci	a0, 4, 3c <ieee80211_deliver_data+0x34>
+  19:	320c      	movi.n	a2, 3
+  1b:	0b1332        	l16ui	a3, a3, 22
+  1e:	240c      	movi.n	a4, 2
+  20:	fff801        	l32r	a0, 0 <ieee80211_deliver_data-0x8>
+  23:	0000c0        	callx0	a0
+  26:	0148      	l32i.n	a4, a1, 0
+  28:	1458      	l32i.n	a5, a4, 4
+  2a:	023d      	mov.n	a3, a2
+  2c:	1558      	l32i.n	a5, a5, 4
+  2e:	1259      	s32i.n	a5, a2, 4
+  30:	0429      	s32i.n	a2, a4, 0
+  32:	4249      	s32i.n	a4, a2, 16
+  34:	1128      	l32i.n	a2, a1, 4
+  36:	fff301        	l32r	a0, 4 <ieee80211_deliver_data-0x4>
+  39:	0000c0        	callx0	a0
+  3c:	2108      	l32i.n	a0, a1, 8
+  3e:	10c112        	addi	a1, a1, 16
+  41:	f00d      	ret.n
+  43:	f38000        	excw
+  46:	810000        	src	a0, a0, a0
+  49:	000037        	bnone	a0, a3, 4d <ieee80211_deliver_data+0x45>
+  4c:	fff8      	l32i.n	a15, a15, 60
+	...
+
+00000070 <ieee80211_decap>:
+  70:	d0c112        	addi	a1, a1, -48
+  73:	a1c9      	s32i.n	a12, a1, 40
+  75:	9109      	s32i.n	a0, a1, 36
+  77:	02cd      	mov.n	a12, a2
+  79:	05eb      	addi.n	a0, a5, 14
+  7b:	0ab407        	bgeu	a4, a0, 89 <ieee80211_decap+0x19>
+  7e:	fff401        	l32r	a0, 50 <ieee80211_deliver_data+0x48>
+  81:	0000c0        	callx0	a0
+  84:	0c0c      	movi.n	a12, 0
+  86:	003106        	j	14e <ieee80211_decap+0xde>
+  89:	054d      	mov.n	a4, a5
+  8b:	012d      	mov.n	a2, a1
+  8d:	fff101        	l32r	a0, 54 <ieee80211_deliver_data+0x4c>
+  90:	0000c0        	callx0	a0
+  93:	1c38      	l32i.n	a3, a12, 4
+  95:	1308      	l32i.n	a0, a3, 4
+  97:	aaa022        	movi	a2, 170
+  9a:	000042        	l8ui	a4, a0, 0
+  9d:	010052        	l8ui	a5, a0, 1
+  a0:	2f9427        	bne	a4, a2, d3 <ieee80211_decap+0x63>
+  a3:	2c9527        	bne	a5, a2, d3 <ieee80211_decap+0x63>
+  a6:	020062        	l8ui	a6, a0, 2
+  a9:	263666        	bnei	a6, 3, d3 <ieee80211_decap+0x63>
+  ac:	030072        	l8ui	a7, a0, 3
+  af:	07ec      	bnez.n	a7, d3 <ieee80211_decap+0x63>
+  b1:	040082        	l8ui	a8, a0, 4
+  b4:	b8dc      	bnez.n	a8, d3 <ieee80211_decap+0x63>
+  b6:	050092        	l8ui	a9, a0, 5
+  b9:	69dc      	bnez.n	a9, d3 <ieee80211_decap+0x63>
+  bb:	ffe2a1        	l32r	a10, 44 <ieee80211_deliver_data+0x3c>
+  be:	070042        	l8ui	a4, a0, 7
+  c1:	060052        	l8ui	a5, a0, 6
+  c4:	114480        	slli	a4, a4, 8
+  c7:	204450        	or	a4, a4, a5
+  ca:	0514a7        	beq	a4, a10, d3 <ieee80211_decap+0x63>
+  cd:	ffde51        	l32r	a5, 48 <ieee80211_deliver_data+0x40>
+  d0:	139457        	bne	a4, a5, e7 <ieee80211_decap+0x77>
+  d3:	0b1c62        	l16ui	a6, a12, 22
+  d6:	1378      	l32i.n	a7, a3, 4
+  d8:	8179      	s32i.n	a7, a1, 32
+  da:	66eb      	addi.n	a6, a6, 14
+  dc:	f2c772        	addi	a7, a7, -14
+  df:	1379      	s32i.n	a7, a3, 4
+  e1:	0b5c62        	s16i	a6, a12, 22
+  e4:	000806        	j	108 <ieee80211_decap+0x98>
+  e7:	418840        	srli	a8, a4, 8
+  ea:	ffd8a1        	l32r	a10, 4c <ieee80211_deliver_data+0x44>
+  ed:	0b1c92        	l16ui	a9, a12, 22
+  f0:	208b      	addi.n	a2, a0, 8
+  f2:	fac0b2        	addi	a11, a0, -6
+  f5:	81b9      	s32i.n	a11, a1, 32
+  f7:	1329      	s32i.n	a2, a3, 4
+  f9:	13b9      	s32i.n	a11, a3, 4
+  fb:	99aa      	add.n	a9, a9, a10
+  fd:	99eb      	addi.n	a9, a9, 14
+  ff:	0b5c92        	s16i	a9, a12, 22
+ 102:	064042        	s8i	a4, a0, 6
+ 105:	074082        	s8i	a8, a0, 7
+ 108:	010102        	l8ui	a0, a1, 1
+ 10b:	140000        	extui	a0, a0, 0, 2
+ 10e:	20ac      	beqz.n	a0, 134 <ieee80211_decap+0xc4>
+ 110:	451026        	beqi	a0, 1, 159 <ieee80211_decap+0xe9>
+ 113:	372066        	bnei	a0, 2, 14e <ieee80211_decap+0xde>
+ 116:	8128      	l32i.n	a2, a1, 32
+ 118:	314b      	addi.n	a3, a1, 4
+ 11a:	640c      	movi.n	a4, 6
+ 11c:	ffcf01        	l32r	a0, 58 <ieee80211_deliver_data+0x50>
+ 11f:	0000c0        	callx0	a0
+ 122:	10c132        	addi	a3, a1, 16
+ 125:	8128      	l32i.n	a2, a1, 32
+ 127:	640c      	movi.n	a4, 6
+ 129:	226b      	addi.n	a2, a2, 6
+ 12b:	ffcc01        	l32r	a0, 5c <ieee80211_deliver_data+0x54>
+ 12e:	0000c0        	callx0	a0
+ 131:	000646        	j	14e <ieee80211_decap+0xde>
+ 134:	8128      	l32i.n	a2, a1, 32
+ 136:	314b      	addi.n	a3, a1, 4
+ 138:	640c      	movi.n	a4, 6
+ 13a:	ffc901        	l32r	a0, 60 <ieee80211_deliver_data+0x58>
+ 13d:	0000c0        	callx0	a0
+ 140:	31ab      	addi.n	a3, a1, 10
+ 142:	8128      	l32i.n	a2, a1, 32
+ 144:	640c      	movi.n	a4, 6
+ 146:	226b      	addi.n	a2, a2, 6
+ 148:	ffc701        	l32r	a0, 64 <ieee80211_deliver_data+0x5c>
+ 14b:	0000c0        	callx0	a0
+ 14e:	0c2d      	mov.n	a2, a12
+ 150:	9108      	l32i.n	a0, a1, 36
+ 152:	a1c8      	l32i.n	a12, a1, 40
+ 154:	30c112        	addi	a1, a1, 48
+ 157:	f00d      	ret.n
+ 159:	8128      	l32i.n	a2, a1, 32
+ 15b:	10c132        	addi	a3, a1, 16
+ 15e:	640c      	movi.n	a4, 6
+ 160:	ffc201        	l32r	a0, 68 <ieee80211_deliver_data+0x60>
+ 163:	0000c0        	callx0	a0
+ 166:	31ab      	addi.n	a3, a1, 10
+ 168:	8128      	l32i.n	a2, a1, 32
+ 16a:	640c      	movi.n	a4, 6
+ 16c:	226b      	addi.n	a2, a2, 6
+ 16e:	ffbf01        	l32r	a0, 6c <ieee80211_deliver_data+0x64>
+ 171:	0000c0        	callx0	a0
+ 174:	fff586        	j	14e <ieee80211_decap+0xde>
+	...
+
+00000184 <ieee80211_setup_rates>:
+ 184:	f0c112        	addi	a1, a1, -16
+ 187:	0109      	s32i.n	a0, a1, 0
+ 189:	31e9      	s32i.n	a14, a1, 12
+ 18b:	21d9      	s32i.n	a13, a1, 8
+ 18d:	11c9      	s32i.n	a12, a1, 4
+ 18f:	04dd      	mov.n	a13, a4
+ 191:	02cd      	mov.n	a12, a2
+ 193:	03ed      	mov.n	a14, a3
+ 195:	47c222        	addi	a2, a2, 71
+ 198:	030c      	movi.n	a3, 0
+ 19a:	041c      	movi.n	a4, 16
+ 19c:	fff701        	l32r	a0, 178 <ieee80211_decap+0x108>
+ 19f:	0000c0        	callx0	a0
+ 1a2:	3e2b      	addi.n	a3, a14, 2
+ 1a4:	48cc22        	addi	a2, a12, 72
+ 1a7:	010e42        	l8ui	a4, a14, 1
+ 1aa:	474c42        	s8i	a4, a12, 71
+ 1ad:	fff301        	l32r	a0, 17c <ieee80211_decap+0x10c>
+ 1b0:	0000c0        	callx0	a0
+ 1b3:	8dac      	beqz.n	a13, 1df <ieee80211_setup_rates+0x5b>
+ 1b5:	470c02        	l8ui	a0, a12, 71
+ 1b8:	010de2        	l8ui	a14, a13, 1
+ 1bb:	2e0a      	add.n	a2, a14, a0
+ 1bd:	07b2a6        	blti	a2, 16, 1c8 <ieee80211_setup_rates+0x44>
+ 1c0:	fe0c      	movi.n	a14, 15
+ 1c2:	c0ee00        	sub	a14, a14, a0
+ 1c5:	74e0e0        	extui	a14, a14, 0, 8
+ 1c8:	3d2b      	addi.n	a3, a13, 2
+ 1ca:	0e4d      	mov.n	a4, a14
+ 1cc:	20ca      	add.n	a2, a0, a12
+ 1ce:	48c222        	addi	a2, a2, 72
+ 1d1:	ffeb01        	l32r	a0, 180 <ieee80211_decap+0x110>
+ 1d4:	0000c0        	callx0	a0
+ 1d7:	470c32        	l8ui	a3, a12, 71
+ 1da:	33ea      	add.n	a3, a3, a14
+ 1dc:	474c32        	s8i	a3, a12, 71
+ 1df:	020c      	movi.n	a2, 0
+ 1e1:	11c8      	l32i.n	a12, a1, 4
+ 1e3:	21d8      	l32i.n	a13, a1, 8
+ 1e5:	31e8      	l32i.n	a14, a1, 12
+ 1e7:	0108      	l32i.n	a0, a1, 0
+ 1e9:	10c112        	addi	a1, a1, 16
+ 1ec:	f00d      	ret.n
+ 1ee:	000000        	ill
+ 1f1:	000000        	ill
+
+000001f4 <ieee80211_alloc_challenge>:
+ 1f4:	f0c112        	addi	a1, a1, -16
+ 1f7:	0129      	s32i.n	a2, a1, 0
+ 1f9:	152222        	l32i	a2, a2, 84
+ 1fc:	1109      	s32i.n	a0, a1, 4
+ 1fe:	c2cc      	bnez.n	a2, 20e <ieee80211_alloc_challenge+0x1a>
+ 200:	80a022        	movi	a2, 128
+ 203:	fffb01        	l32r	a0, 1f0 <ieee80211_setup_rates+0x6c>
+ 206:	0000c0        	callx0	a0
+ 209:	0108      	l32i.n	a0, a1, 0
+ 20b:	156022        	s32i	a2, a0, 84
+ 20e:	1108      	l32i.n	a0, a1, 4
+ 210:	130c      	movi.n	a3, 1
+ 212:	932320        	movnez	a2, a3, a2
+ 215:	10c112        	addi	a1, a1, 16
+ 218:	f00d      	ret.n
+ 21a:	000000        	ill
+ 21d:	000000        	ill
+ 220:	f25000        	excw
+ 223:	500002        	l8ui	a0, a0, 80
+ 226:	0001f2        	l8ui	a15, a1, 0
+ 229:	334c90        	excw
+ 22c:	4c9000        	excw
+ 22f:	000034        	excw
+ 232:	000000        	ill
+ 235:	000000        	ill
+
+00000238 <ieee80211_parse_beacon>:
+ 238:	e0c112        	addi	a1, a1, -32
+ 23b:	1109      	s32i.n	a0, a1, 4
+ 23d:	21c9      	s32i.n	a12, a1, 8
+ 23f:	51f9      	s32i.n	a15, a1, 20
+ 241:	41e9      	s32i.n	a14, a1, 16
+ 243:	31d9      	s32i.n	a13, a1, 12
+ 245:	02ed      	mov.n	a14, a2
+ 247:	12d8      	l32i.n	a13, a2, 4
+ 249:	0b12f2        	l16ui	a15, a2, 22
+ 24c:	1dd8      	l32i.n	a13, a13, 4
+ 24e:	03cd      	mov.n	a12, a3
+ 250:	ffda      	add.n	a15, a15, a13
+ 252:	18cff2        	addi	a15, a15, 24
+ 255:	c05fd0        	sub	a5, a15, a13
+ 258:	e8c502        	addi	a0, a5, -24
+ 25b:	02a0e6        	bgei	a0, 12, 261 <ieee80211_parse_beacon+0x29>
+ 25e:	008d06        	j	496 <ieee80211_parse_beacon+0x25e>
+ 261:	032d      	mov.n	a2, a3
+ 263:	0159      	s32i.n	a5, a1, 0
+ 265:	834c      	movi.n	a3, 72
+ 267:	fff201        	l32r	a0, 230 <ieee80211_alloc_challenge+0x3c>
+ 26a:	0000c0        	callx0	a0
+ 26d:	18cd52        	addi	a5, a13, 24
+ 270:	101d42        	l16ui	a4, a13, 32
+ 273:	035c42        	s16i	a4, a12, 6
+ 276:	111d32        	l16ui	a3, a13, 34
+ 279:	6c59      	s32i.n	a5, a12, 24
+ 27b:	24cdd2        	addi	a13, a13, 36
+ 27e:	8e28      	l32i.n	a2, a14, 32
+ 280:	015c32        	s16i	a3, a12, 2
+ 283:	2228      	l32i.n	a2, a2, 8
+ 285:	ffeb01        	l32r	a0, 234 <ieee80211_alloc_challenge+0x40>
+ 288:	0000c0        	callx0	a0
+ 28b:	3cd9      	s32i.n	a13, a12, 12
+ 28d:	dda062        	movi	a6, 221
+ 290:	014c22        	s8i	a2, a12, 1
+ 293:	0178      	l32i.n	a7, a1, 0
+ 295:	743020        	extui	a3, a2, 0, 8
+ 298:	004c32        	s8i	a3, a12, 0
+ 29b:	dcc772        	addi	a7, a7, -36
+ 29e:	4c79      	s32i.n	a7, a12, 16
+ 2a0:	0227e6        	bgei	a7, 2, 2a6 <ieee80211_parse_beacon+0x6e>
+ 2a3:	007d06        	j	49b <ieee80211_parse_beacon+0x263>
+ 2a6:	ffde81        	l32r	a8, 220 <ieee80211_alloc_challenge+0x2c>
+ 2a9:	2a3c      	movi.n	a10, 50
+ 2ab:	db2c      	movi.n	a11, 45
+ 2ad:	ffdb91        	l32r	a9, 21c <ieee80211_alloc_challenge+0x28>
+ 2b0:	c02fd0        	sub	a2, a15, a13
+ 2b3:	010d02        	l8ui	a0, a13, 1
+ 2b6:	0d7d      	mov.n	a7, a13
+ 2b8:	402b      	addi.n	a4, a0, 2
+ 2ba:	02a247        	bge	a2, a4, 2c0 <ieee80211_parse_beacon+0x88>
+ 2bd:	007546        	j	496 <ieee80211_parse_beacon+0x25e>
+ 2c0:	000d22        	l8ui	a2, a13, 0
+ 2c3:	052c      	movi.n	a5, 32
+ 2c5:	02c2e6        	bgei	a2, 32, 2cb <ieee80211_parse_beacon+0x93>
+ 2c8:	005e06        	j	444 <ieee80211_parse_beacon+0x20c>
+ 2cb:	0da527        	bge	a5, a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 2ce:	02a2a7        	bge	a2, a10, 2d4 <ieee80211_parse_beacon+0x9c>
+ 2d1:	004fc6        	j	414 <ieee80211_parse_beacon+0x1dc>
+ 2d4:	112a27        	blt	a10, a2, 2e9 <ieee80211_parse_beacon+0xb1>
+ 2d7:	acd9      	s32i.n	a13, a12, 40
+ 2d9:	010702        	l8ui	a0, a7, 1
+ 2dc:	d07a      	add.n	a13, a0, a7
+ 2de:	dd2b      	addi.n	a13, a13, 2
+ 2e0:	c02fd0        	sub	a2, a15, a13
+ 2e3:	cc22e6        	bgei	a2, 2, 2b3 <ieee80211_parse_beacon+0x7b>
+ 2e6:	006c46        	j	49b <ieee80211_parse_beacon+0x263>
+ 2e9:	02a267        	bge	a2, a6, 2ef <ieee80211_parse_beacon+0xb7>
+ 2ec:	004606        	j	408 <ieee80211_parse_beacon+0x1d0>
+ 2ef:	e92627        	blt	a6, a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 2f2:	020c      	movi.n	a2, 0
+ 2f4:	2540b6        	bltui	a0, 4, 31d <ieee80211_parse_beacon+0xe5>
+ 2f7:	030d52        	l8ui	a5, a13, 3
+ 2fa:	020d42        	l8ui	a4, a13, 2
+ 2fd:	115580        	slli	a5, a5, 8
+ 300:	050dd2        	l8ui	a13, a13, 5
+ 303:	204450        	or	a4, a4, a5
+ 306:	040752        	l8ui	a5, a7, 4
+ 309:	01dd80        	slli	a13, a13, 24
+ 30c:	115500        	slli	a5, a5, 16
+ 30f:	2055d0        	or	a5, a5, a13
+ 312:	204450        	or	a4, a4, a5
+ 315:	ffc351        	l32r	a5, 224 <ieee80211_alloc_challenge+0x30>
+ 318:	019457        	bne	a4, a5, 31d <ieee80211_parse_beacon+0xe5>
+ 31b:	120c      	movi.n	a2, 1
+ 31d:	628c      	beqz.n	a2, 327 <ieee80211_parse_beacon+0xef>
+ 31f:	cc79      	s32i.n	a7, a12, 48
+ 321:	010702        	l8ui	a0, a7, 1
+ 324:	ffed06        	j	2dc <ieee80211_parse_beacon+0xa4>
+ 327:	020c      	movi.n	a2, 0
+ 329:	2860b6        	bltui	a0, 6, 355 <ieee80211_parse_beacon+0x11d>
+ 32c:	050752        	l8ui	a5, a7, 5
+ 32f:	030742        	l8ui	a4, a7, 3
+ 332:	0207d2        	l8ui	a13, a7, 2
+ 335:	114480        	slli	a4, a4, 8
+ 338:	20dd40        	or	a13, a13, a4
+ 33b:	040742        	l8ui	a4, a7, 4
+ 33e:	015580        	slli	a5, a5, 24
+ 341:	114400        	slli	a4, a4, 16
+ 344:	204450        	or	a4, a4, a5
+ 347:	20dd40        	or	a13, a13, a4
+ 34a:	079d87        	bne	a13, a8, 355 <ieee80211_parse_beacon+0x11d>
+ 34d:	060752        	l8ui	a5, a7, 6
+ 350:	011566        	bnei	a5, 1, 355 <ieee80211_parse_beacon+0x11d>
+ 353:	120c      	movi.n	a2, 1
+ 355:	e2ec      	bnez.n	a2, 387 <ieee80211_parse_beacon+0x14f>
+ 357:	020c      	movi.n	a2, 0
+ 359:	2860b6        	bltui	a0, 6, 385 <ieee80211_parse_beacon+0x14d>
+ 35c:	050752        	l8ui	a5, a7, 5
+ 35f:	030742        	l8ui	a4, a7, 3
+ 362:	0207d2        	l8ui	a13, a7, 2
+ 365:	114480        	slli	a4, a4, 8
+ 368:	20dd40        	or	a13, a13, a4
+ 36b:	040742        	l8ui	a4, a7, 4
+ 36e:	015580        	slli	a5, a5, 24
+ 371:	114400        	slli	a4, a4, 16
+ 374:	204450        	or	a4, a4, a5
+ 377:	20dd40        	or	a13, a13, a4
+ 37a:	079d87        	bne	a13, a8, 385 <ieee80211_parse_beacon+0x14d>
+ 37d:	0607d2        	l8ui	a13, a7, 6
+ 380:	150c      	movi.n	a5, 1
+ 382:	8325d0        	moveqz	a2, a5, a13
+ 385:	328c      	beqz.n	a2, 38c <ieee80211_parse_beacon+0x154>
+ 387:	ec79      	s32i.n	a7, a12, 56
+ 389:	ffe506        	j	321 <ieee80211_parse_beacon+0xe9>
+ 38c:	cd2922        	l32i	a2, a9, 0x334
+ 38f:	052c20        	extui	a2, a2, 28, 1
+ 392:	f46216        	beqz	a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 395:	020c      	movi.n	a2, 0
+ 397:	2540b6        	bltui	a0, 4, 3c0 <ieee80211_parse_beacon+0x188>
+ 39a:	0507d2        	l8ui	a13, a7, 5
+ 39d:	030752        	l8ui	a5, a7, 3
+ 3a0:	020742        	l8ui	a4, a7, 2
+ 3a3:	115580        	slli	a5, a5, 8
+ 3a6:	204450        	or	a4, a4, a5
+ 3a9:	040752        	l8ui	a5, a7, 4
+ 3ac:	01dd80        	slli	a13, a13, 24
+ 3af:	115500        	slli	a5, a5, 16
+ 3b2:	2055d0        	or	a5, a5, a13
+ 3b5:	204450        	or	a4, a4, a5
+ 3b8:	ff9c51        	l32r	a5, 228 <ieee80211_alloc_challenge+0x34>
+ 3bb:	019457        	bne	a4, a5, 3c0 <ieee80211_parse_beacon+0x188>
+ 3be:	120c      	movi.n	a2, 1
+ 3c0:	b28c      	beqz.n	a2, 3cf <ieee80211_parse_beacon+0x197>
+ 3c2:	fcd8      	l32i.n	a13, a12, 60
+ 3c4:	f14d56        	bnez	a13, 2dc <ieee80211_parse_beacon+0xa4>
+ 3c7:	fc79      	s32i.n	a7, a12, 60
+ 3c9:	010702        	l8ui	a0, a7, 1
+ 3cc:	ffc306        	j	2dc <ieee80211_parse_beacon+0xa4>
+ 3cf:	020c      	movi.n	a2, 0
+ 3d1:	2540b6        	bltui	a0, 4, 3fa <ieee80211_parse_beacon+0x1c2>
+ 3d4:	0507d2        	l8ui	a13, a7, 5
+ 3d7:	030752        	l8ui	a5, a7, 3
+ 3da:	020742        	l8ui	a4, a7, 2
+ 3dd:	115580        	slli	a5, a5, 8
+ 3e0:	204450        	or	a4, a4, a5
+ 3e3:	040752        	l8ui	a5, a7, 4
+ 3e6:	01dd80        	slli	a13, a13, 24
+ 3e9:	115500        	slli	a5, a5, 16
+ 3ec:	2055d0        	or	a5, a5, a13
+ 3ef:	204450        	or	a4, a4, a5
+ 3f2:	ff8e51        	l32r	a5, 22c <ieee80211_alloc_challenge+0x38>
+ 3f5:	019457        	bne	a4, a5, 3fa <ieee80211_parse_beacon+0x1c2>
+ 3f8:	120c      	movi.n	a2, 1
+ 3fa:	ede216        	beqz	a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 3fd:	102cd2        	l32i	a13, a12, 64
+ 400:	ed8d56        	bnez	a13, 2dc <ieee80211_parse_beacon+0xa4>
+ 403:	fc79      	s32i.n	a7, a12, 60
+ 405:	ffc606        	j	321 <ieee80211_parse_beacon+0xe9>
+ 408:	c3c242        	addi	a4, a2, -61
+ 40b:	ecd456        	bnez	a4, 2dc <ieee80211_parse_beacon+0xa4>
+ 40e:	106cd2        	s32i	a13, a12, 64
+ 411:	ffb106        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 414:	1222b7        	blt	a2, a11, 42a <ieee80211_parse_beacon+0x1f2>
+ 417:	042b27        	blt	a11, a2, 41f <ieee80211_parse_beacon+0x1e7>
+ 41a:	fcd9      	s32i.n	a13, a12, 60
+ 41c:	ffae46        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 41f:	d0c252        	addi	a5, a2, -48
+ 422:	eb6556        	bnez	a5, 2dc <ieee80211_parse_beacon+0xa4>
+ 425:	dcd9      	s32i.n	a13, a12, 52
+ 427:	ffab86        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 42a:	d6c2d2        	addi	a13, a2, -42
+ 42d:	eabd56        	bnez	a13, 2dc <ieee80211_parse_beacon+0xa4>
+ 430:	200b      	addi.n	a2, a0, -1
+ 432:	ea6256        	bnez	a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 435:	020742        	l8ui	a4, a7, 2
+ 438:	00a152        	movi	a5, 0x100
+ 43b:	204450        	or	a4, a4, a5
+ 43e:	025c42        	s16i	a4, a12, 4
+ 441:	ffa506        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 444:	2c42a6        	blti	a2, 4, 474 <ieee80211_parse_beacon+0x23c>
+ 447:	0252e6        	bgei	a2, 5, 44d <ieee80211_parse_beacon+0x215>
+ 44a:	ffa386        	j	2dc <ieee80211_parse_beacon+0xa4>
+ 44d:	1062a6        	blti	a2, 6, 461 <ieee80211_parse_beacon+0x229>
+ 450:	0272e6        	bgei	a2, 7, 456 <ieee80211_parse_beacon+0x21e>
+ 453:	ffa146        	j	2dc <ieee80211_parse_beacon+0xa4>
+ 456:	f9c2d2        	addi	a13, a2, -7
+ 459:	e7fd56        	bnez	a13, 2dc <ieee80211_parse_beacon+0xa4>
+ 45c:	7c79      	s32i.n	a7, a12, 28
+ 45e:	ff9dc6        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 461:	fbc242        	addi	a4, a2, -5
+ 464:	e74456        	bnez	a4, 2dc <ieee80211_parse_beacon+0xa4>
+ 467:	5cd9      	s32i.n	a13, a12, 20
+ 469:	4e58      	l32i.n	a5, a14, 16
+ 46b:	c05d50        	sub	a5, a13, a5
+ 46e:	084c52        	s8i	a5, a12, 8
+ 471:	ff9906        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 474:	1612a6        	blti	a2, 1, 48e <ieee80211_parse_beacon+0x256>
+ 477:	0422e6        	bgei	a2, 2, 47f <ieee80211_parse_beacon+0x247>
+ 47a:	9cd9      	s32i.n	a13, a12, 36
+ 47c:	ff9646        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 47f:	fdc2d2        	addi	a13, a2, -3
+ 482:	e56d56        	bnez	a13, 2dc <ieee80211_parse_beacon+0xa4>
+ 485:	020732        	l8ui	a3, a7, 2
+ 488:	004c32        	s8i	a3, a12, 0
+ 48b:	ff9286        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 48e:	e4a256        	bnez	a2, 2dc <ieee80211_parse_beacon+0xa4>
+ 491:	8cd9      	s32i.n	a13, a12, 32
+ 493:	ff9086        	j	2d9 <ieee80211_parse_beacon+0xa1>
+ 496:	120c      	movi.n	a2, 1
+ 498:	002186        	j	522 <ieee80211_parse_beacon+0x2ea>
+ 49b:	9c08      	l32i.n	a0, a12, 36
+ 49d:	ac78      	l32i.n	a7, a12, 40
+ 49f:	08e016        	beqz	a0, 531 <ieee80211_parse_beacon+0x2f9>
+ 4a2:	0100e2        	l8ui	a14, a0, 1
+ 4a5:	02beb6        	bltui	a14, 16, 4ab <ieee80211_parse_beacon+0x273>
+ 4a8:	002146        	j	531 <ieee80211_parse_beacon+0x2f9>
+ 4ab:	020c      	movi.n	a2, 0
+ 4ad:	309c      	beqz.n	a0, 4c4 <ieee80211_parse_beacon+0x28c>
+ 4af:	179c      	beqz.n	a7, 4c4 <ieee80211_parse_beacon+0x28c>
+ 4b1:	010742        	l8ui	a4, a7, 1
+ 4b4:	010052        	l8ui	a5, a0, 1
+ 4b7:	ff0c      	movi.n	a15, 15
+ 4b9:	c0ff50        	sub	a15, a15, a5
+ 4bc:	04af47        	bge	a15, a4, 4c4 <ieee80211_parse_beacon+0x28c>
+ 4bf:	470c      	movi.n	a7, 4
+ 4c1:	202270        	or	a2, a2, a7
+ 4c4:	870c      	movi.n	a7, 8
+ 4c6:	8c08      	l32i.n	a0, a12, 32
+ 4c8:	010ca2        	l8ui	a10, a12, 1
+ 4cb:	608c      	beqz.n	a0, 4d5 <ieee80211_parse_beacon+0x29d>
+ 4cd:	010092        	l8ui	a9, a0, 1
+ 4d0:	082c      	movi.n	a8, 32
+ 4d2:	02b897        	bgeu	a8, a9, 4d8 <ieee80211_parse_beacon+0x2a0>
+ 4d5:	202270        	or	a2, a2, a7
+ 4d8:	7c08      	l32i.n	a0, a12, 28
+ 4da:	041a37        	beq	a10, a3, 4e2 <ieee80211_parse_beacon+0x2aa>
+ 4dd:	0b2c      	movi.n	a11, 32
+ 4df:	2022b0        	or	a2, a2, a11
+ 4e2:	030c      	movi.n	a3, 0
+ 4e4:	608c      	beqz.n	a0, 4ee <ieee80211_parse_beacon+0x2b6>
+ 4e6:	0100d2        	l8ui	a13, a0, 1
+ 4e9:	013df6        	bgeui	a13, 3, 4ee <ieee80211_parse_beacon+0x2b6>
+ 4ec:	7c39      	s32i.n	a3, a12, 28
+ 4ee:	fc08      	l32i.n	a0, a12, 60
+ 4f0:	a81c      	movi.n	a8, 26
+ 4f2:	309c      	beqz.n	a0, 509 <ieee80211_parse_beacon+0x2d1>
+ 4f4:	0100e2        	l8ui	a14, a0, 1
+ 4f7:	e41c      	movi.n	a4, 30
+ 4f9:	000052        	l8ui	a5, a0, 0
+ 4fc:	08fd      	mov.n	a15, a8
+ 4fe:	c05560        	sub	a5, a5, a6
+ 501:	83f450        	moveqz	a15, a4, a5
+ 504:	01bef7        	bgeu	a14, a15, 509 <ieee80211_parse_beacon+0x2d1>
+ 507:	fc39      	s32i.n	a3, a12, 60
+ 509:	102c02        	l32i	a0, a12, 64
+ 50c:	691c      	movi.n	a9, 22
+ 50e:	009c      	beqz.n	a0, 522 <ieee80211_parse_beacon+0x2ea>
+ 510:	0000a2        	l8ui	a10, a0, 0
+ 513:	010072        	l8ui	a7, a0, 1
+ 516:	c0aa60        	sub	a10, a10, a6
+ 519:	8398a0        	moveqz	a9, a8, a10
+ 51c:	02b797        	bgeu	a7, a9, 522 <ieee80211_parse_beacon+0x2ea>
+ 51f:	106c32        	s32i	a3, a12, 64
+ 522:	21c8      	l32i.n	a12, a1, 8
+ 524:	31d8      	l32i.n	a13, a1, 12
+ 526:	41e8      	l32i.n	a14, a1, 16
+ 528:	51f8      	l32i.n	a15, a1, 20
+ 52a:	1108      	l32i.n	a0, a1, 4
+ 52c:	20c112        	addi	a1, a1, 32
+ 52f:	f00d      	ret.n
+ 531:	220c      	movi.n	a2, 2
+ 533:	ffdd86        	j	4ad <ieee80211_parse_beacon+0x275>
+ 536:	000000        	ill
+ 539:	00f250        	excw
+ 53c:	f25000        	excw
+ 53f:	500001        	l32r	a0, fffd4540 <ieee80211_setup_rateset+0xfffd3c60>
+ 542:	0002f2        	l8ui	a15, a2, 0
+ 545:	04f250        	extui	a15, a5, 2, 1
+ 548:	f25000        	excw
+ 54b:	fb4105        	call0	ffffb95c <ieee80211_setup_rateset+0xffffb07c>
+ 54e:	ff          	.byte 0xff
+ 54f:	030272        	l8ui	a7, a2, 3
+ 552:	010262        	l8ui	a6, a2, 1
+ 555:	000252        	l8ui	a5, a2, 0
+ 558:	116680        	slli	a6, a6, 8
+ 55b:	205560        	or	a5, a5, a6
+ 55e:	020262        	l8ui	a6, a2, 2
+ 561:	017780        	slli	a7, a7, 24
+ 564:	116600        	slli	a6, a6, 16
+ 567:	206670        	or	a6, a6, a7
+ 56a:	202560        	or	a2, a5, a6
+ 56d:	311247        	beq	a2, a4, 5a2 <ieee80211_parse_beacon+0x36a>
+ 570:	fff371        	l32r	a7, 53c <ieee80211_parse_beacon+0x304>
+ 573:	fff381        	l32r	a8, 540 <ieee80211_parse_beacon+0x308>
+ 576:	1d1277        	beq	a2, a7, 597 <ieee80211_parse_beacon+0x35f>
+ 579:	291287        	beq	a2, a8, 5a6 <ieee80211_parse_beacon+0x36e>
+ 57c:	fff291        	l32r	a9, 544 <ieee80211_parse_beacon+0x30c>
+ 57f:	fff2a1        	l32r	a10, 548 <ieee80211_parse_beacon+0x310>
+ 582:	241297        	beq	a2, a9, 5aa <ieee80211_parse_beacon+0x372>
+ 585:	0312a7        	beq	a2, a10, 58c <ieee80211_parse_beacon+0x354>
+ 588:	022c      	movi.n	a2, 32
+ 58a:	f00d      	ret.n
+ 58c:	338c      	beqz.n	a3, 593 <ieee80211_parse_beacon+0x35b>
+ 58e:	db0c      	movi.n	a11, 13
+ 590:	0043b2        	s8i	a11, a3, 0
+ 593:	620c      	movi.n	a2, 6
+ 595:	f00d      	ret.n
+ 597:	ff8316        	beqz	a3, 593 <ieee80211_parse_beacon+0x35b>
+ 59a:	520c      	movi.n	a2, 5
+ 59c:	004322        	s8i	a2, a3, 0
+ 59f:	fffc06        	j	593 <ieee80211_parse_beacon+0x35b>
+ 5a2:	020c      	movi.n	a2, 0
+ 5a4:	f00d      	ret.n
+ 5a6:	120c      	movi.n	a2, 1
+ 5a8:	f00d      	ret.n
+ 5aa:	320c      	movi.n	a2, 3
+ 5ac:	f00d      	ret.n
+ 5ae:	000000        	ill
+ 5b1:	00f250        	excw
+ 5b4:	f25000        	excw
+ 5b7:	500001        	l32r	a0, fffd45b8 <ieee80211_setup_rateset+0xfffd3cd8>
+ 5ba:	3102f2        	l8ui	a15, a2, 49
+ 5bd:	fffd      	excw
+ 5bf:	030262        	l8ui	a6, a2, 3
+ 5c2:	010252        	l8ui	a5, a2, 1
+ 5c5:	000242        	l8ui	a4, a2, 0
+ 5c8:	115580        	slli	a5, a5, 8
+ 5cb:	204450        	or	a4, a4, a5
+ 5ce:	020252        	l8ui	a5, a2, 2
+ 5d1:	016680        	slli	a6, a6, 24
+ 5d4:	115500        	slli	a5, a5, 16
+ 5d7:	205560        	or	a5, a5, a6
+ 5da:	202450        	or	a2, a4, a5
+ 5dd:	0b1237        	beq	a2, a3, 5ec <ieee80211_parse_beacon+0x3b4>
+ 5e0:	fff561        	l32r	a6, 5b4 <ieee80211_parse_beacon+0x37c>
+ 5e3:	fff571        	l32r	a7, 5b8 <ieee80211_parse_beacon+0x380>
+ 5e6:	0a1267        	beq	a2, a6, 5f4 <ieee80211_parse_beacon+0x3bc>
+ 5e9:	031277        	beq	a2, a7, 5f0 <ieee80211_parse_beacon+0x3b8>
+ 5ec:	020c      	movi.n	a2, 0
+ 5ee:	f00d      	ret.n
+ 5f0:	220c      	movi.n	a2, 2
+ 5f2:	f00d      	ret.n
+ 5f4:	120c      	movi.n	a2, 1
+ 5f6:	f00d      	ret.n
+ 5f8:	ac0f00        	excw
+ 5fb:	0f0000        	excw
+ 5fe:	01ac      	beqz.n	a1, 622 <ieee80211_parse_beacon+0x3ea>
+ 600:	ac0f00        	excw
+ 603:	0f0002        	l8ui	a0, a0, 15
+ 606:	03ac      	beqz.n	a3, 62a <ieee80211_parse_beacon+0x3f2>
+ 608:	ac0f00        	excw
+ 60b:	0f0004        	excw
+ 60e:	05ac      	beqz.n	a5, 632 <ieee80211_parse_beacon+0x3fa>
+ 610:	fffa41        	l32r	a4, 5f8 <ieee80211_parse_beacon+0x3c0>
+ 613:	030272        	l8ui	a7, a2, 3
+ 616:	010262        	l8ui	a6, a2, 1
+ 619:	000252        	l8ui	a5, a2, 0
+ 61c:	116680        	slli	a6, a6, 8
+ 61f:	205560        	or	a5, a5, a6
+ 622:	020262        	l8ui	a6, a2, 2
+ 625:	017780        	slli	a7, a7, 24
+ 628:	116600        	slli	a6, a6, 16
+ 62b:	206670        	or	a6, a6, a7
+ 62e:	202560        	or	a2, a5, a6
+ 631:	371247        	beq	a2, a4, 66c <ieee80211_parse_beacon+0x434>
+ 634:	fff271        	l32r	a7, 5fc <ieee80211_parse_beacon+0x3c4>
+ 637:	fff281        	l32r	a8, 600 <ieee80211_parse_beacon+0x3c8>
+ 63a:	231277        	beq	a2, a7, 661 <ieee80211_parse_beacon+0x429>
+ 63d:	2f1287        	beq	a2, a8, 670 <ieee80211_parse_beacon+0x438>
+ 640:	fff191        	l32r	a9, 604 <ieee80211_parse_beacon+0x3cc>
+ 643:	fff1a1        	l32r	a10, 608 <ieee80211_parse_beacon+0x3d0>
+ 646:	2a1297        	beq	a2, a9, 674 <ieee80211_parse_beacon+0x43c>
+ 649:	2b12a7        	beq	a2, a10, 678 <ieee80211_parse_beacon+0x440>
+ 64c:	fff0b1        	l32r	a11, 60c <ieee80211_parse_beacon+0x3d4>
+ 64f:	0312b7        	beq	a2, a11, 656 <ieee80211_parse_beacon+0x41e>
+ 652:	022c      	movi.n	a2, 32
+ 654:	f00d      	ret.n
+ 656:	338c      	beqz.n	a3, 65d <ieee80211_parse_beacon+0x425>
+ 658:	d20c      	movi.n	a2, 13
+ 65a:	004322        	s8i	a2, a3, 0
+ 65d:	620c      	movi.n	a2, 6
+ 65f:	f00d      	ret.n
+ 661:	ff8316        	beqz	a3, 65d <ieee80211_parse_beacon+0x425>
+ 664:	540c      	movi.n	a4, 5
+ 666:	004342        	s8i	a4, a3, 0
+ 669:	fffc06        	j	65d <ieee80211_parse_beacon+0x425>
+ 66c:	020c      	movi.n	a2, 0
+ 66e:	f00d      	ret.n
+ 670:	120c      	movi.n	a2, 1
+ 672:	f00d      	ret.n
+ 674:	220c      	movi.n	a2, 2
+ 676:	f00d      	ret.n
+ 678:	320c      	movi.n	a2, 3
+ 67a:	f00d      	ret.n
+ 67c:	ac0f00        	excw
+ 67f:	0f0000        	excw
+ 682:	01ac      	beqz.n	a1, 6a6 <ieee80211_parse_beacon+0x46e>
+ 684:	ac0f00        	excw
+ 687:	fd3102        	excw
+ 68a:	ff          	.byte 0xff
+ 68b:	030262        	l8ui	a6, a2, 3
+ 68e:	010252        	l8ui	a5, a2, 1
+ 691:	000242        	l8ui	a4, a2, 0
+ 694:	115580        	slli	a5, a5, 8
+ 697:	204450        	or	a4, a4, a5
+ 69a:	020252        	l8ui	a5, a2, 2
+ 69d:	016680        	slli	a6, a6, 24
+ 6a0:	115500        	slli	a5, a5, 16
+ 6a3:	205560        	or	a5, a5, a6
+ 6a6:	202450        	or	a2, a4, a5
+ 6a9:	0b1237        	beq	a2, a3, 6b8 <ieee80211_parse_beacon+0x480>
+ 6ac:	fff561        	l32r	a6, 680 <ieee80211_parse_beacon+0x448>
+ 6af:	fff571        	l32r	a7, 684 <ieee80211_parse_beacon+0x44c>
+ 6b2:	0a1267        	beq	a2, a6, 6c0 <ieee80211_parse_beacon+0x488>
+ 6b5:	031277        	beq	a2, a7, 6bc <ieee80211_parse_beacon+0x484>
+ 6b8:	020c      	movi.n	a2, 0
+ 6ba:	f00d      	ret.n
+ 6bc:	220c      	movi.n	a2, 2
+ 6be:	f00d      	ret.n
+ 6c0:	120c      	movi.n	a2, 1
+ 6c2:	f00d      	ret.n
+ 6c4:	000000        	ill
+	...
+
+000006c8 <ieee80211_parse_wpa>:
+ 6c8:	050c      	movi.n	a5, 0
+ 6ca:	e0c112        	addi	a1, a1, -32
+ 6cd:	6109      	s32i.n	a0, a1, 24
+ 6cf:	004152        	s8i	a5, a1, 0
+ 6d2:	c208      	l32i.n	a0, a2, 48
+ 6d4:	509c      	beqz.n	a0, 6ed <ieee80211_parse_wpa+0x25>
+ 6d6:	4109      	s32i.n	a0, a1, 16
+ 6d8:	070032        	l8ui	a3, a0, 7
+ 6db:	060022        	l8ui	a2, a0, 6
+ 6de:	113380        	slli	a3, a3, 8
+ 6e1:	202230        	or	a2, a2, a3
+ 6e4:	112200        	slli	a2, a2, 16
+ 6e7:	312020        	srai	a2, a2, 16
+ 6ea:	101226        	beqi	a2, 1, 6fe <ieee80211_parse_wpa+0x36>
+ 6ed:	052d      	mov.n	a2, a5
+ 6ef:	000106        	j	6f7 <ieee80211_parse_wpa+0x2f>
+ 6f2:	0e3096        	bltz	a0, 7d9 <ieee80211_parse_wpa+0x111>
+ 6f5:	120c      	movi.n	a2, 1
+ 6f7:	6108      	l32i.n	a0, a1, 24
+ 6f9:	20c112        	addi	a1, a1, 32
+ 6fc:	f00d      	ret.n
+ 6fe:	013d      	mov.n	a3, a1
+ 700:	208b      	addi.n	a2, a0, 8
+ 702:	340c      	movi.n	a4, 3
+ 704:	010062        	l8ui	a6, a0, 1
+ 707:	ffef51        	l32r	a5, 6c4 <ieee80211_parse_beacon+0x48c>
+ 70a:	5159      	s32i.n	a5, a1, 20
+ 70c:	fac662        	addi	a6, a6, -6
+ 70f:	1169      	s32i.n	a6, a1, 4
+ 711:	804542        	s8i	a4, a5, 128
+ 714:	ffe345        	call0	54c <ieee80211_parse_beacon+0x314>
+ 717:	050c      	movi.n	a5, 0
+ 719:	4168      	l32i.n	a6, a1, 16
+ 71b:	1108      	l32i.n	a0, a1, 4
+ 71d:	5178      	l32i.n	a7, a1, 20
+ 71f:	fac002        	addi	a0, a0, -6
+ 722:	844722        	s8i	a2, a7, 132
+ 725:	0d0672        	l8ui	a7, a6, 13
+ 728:	0c0662        	l8ui	a6, a6, 12
+ 72b:	117780        	slli	a7, a7, 8
+ 72e:	206670        	or	a6, a6, a7
+ 731:	f46060        	extui	a6, a6, 0, 16
+ 734:	80bc      	beqz.n	a0, 770 <ieee80211_parse_wpa+0xa8>
+ 736:	3159      	s32i.n	a5, a1, 12
+ 738:	7169      	s32i.n	a6, a1, 28
+ 73a:	1109      	s32i.n	a0, a1, 4
+ 73c:	f48050        	extui	a8, a5, 0, 16
+ 73f:	2db867        	bgeu	a8, a6, 770 <ieee80211_parse_wpa+0xa8>
+ 742:	4138      	l32i.n	a3, a1, 16
+ 744:	3128      	l32i.n	a2, a1, 12
+ 746:	a02230        	addx4	a2, a2, a3
+ 749:	22eb      	addi.n	a2, a2, 14
+ 74b:	013d      	mov.n	a3, a1
+ 74d:	ffdfc5        	call0	54c <ieee80211_parse_beacon+0x314>
+ 750:	5108      	l32i.n	a0, a1, 20
+ 752:	7168      	l32i.n	a6, a1, 28
+ 754:	820002        	l8ui	a0, a0, 130
+ 757:	3158      	l32i.n	a5, a1, 12
+ 759:	108c      	beqz.n	a0, 75e <ieee80211_parse_wpa+0x96>
+ 75b:	041066        	bnei	a0, 1, 763 <ieee80211_parse_wpa+0x9b>
+ 75e:	5138      	l32i.n	a3, a1, 20
+ 760:	824322        	s8i	a2, a3, 130
+ 763:	1108      	l32i.n	a0, a1, 4
+ 765:	451b      	addi.n	a4, a5, 1
+ 767:	745040        	extui	a5, a4, 0, 8
+ 76a:	fcc002        	addi	a0, a0, -4
+ 76d:	fff0c6        	j	734 <ieee80211_parse_wpa+0x6c>
+ 770:	6510a6        	blti	a0, 1, 7d9 <ieee80211_parse_wpa+0x111>
+ 773:	050c      	movi.n	a5, 0
+ 775:	4178      	l32i.n	a7, a1, 16
+ 777:	fec002        	addi	a0, a0, -2
+ 77a:	a06670        	addx4	a6, a6, a7
+ 77d:	10c622        	addi	a2, a6, 16
+ 780:	0f0672        	l8ui	a7, a6, 15
+ 783:	0e0662        	l8ui	a6, a6, 14
+ 786:	117780        	slli	a7, a7, 8
+ 789:	206670        	or	a6, a6, a7
+ 78c:	f46060        	extui	a6, a6, 0, 16
+ 78f:	f5f016        	beqz	a0, 6f2 <ieee80211_parse_wpa+0x2a>
+ 792:	7169      	s32i.n	a6, a1, 28
+ 794:	3159      	s32i.n	a5, a1, 12
+ 796:	2129      	s32i.n	a2, a1, 8
+ 798:	1109      	s32i.n	a0, a1, 4
+ 79a:	f49050        	extui	a9, a5, 0, 16
+ 79d:	023967        	bltu	a9, a6, 7a3 <ieee80211_parse_wpa+0xdb>
+ 7a0:	ffd386        	j	6f2 <ieee80211_parse_wpa+0x2a>
+ 7a3:	2128      	l32i.n	a2, a1, 8
+ 7a5:	ffe145        	call0	5bc <ieee80211_parse_beacon+0x384>
+ 7a8:	091266        	bnei	a2, 1, 7b5 <ieee80211_parse_wpa+0xed>
+ 7ab:	51b8      	l32i.n	a11, a1, 20
+ 7ad:	2a0c      	movi.n	a10, 2
+ 7af:	814ba2        	s8i	a10, a11, 129
+ 7b2:	000386        	j	7c4 <ieee80211_parse_wpa+0xfc>
+ 7b5:	2128      	l32i.n	a2, a1, 8
+ 7b7:	ffe045        	call0	5bc <ieee80211_parse_beacon+0x384>
+ 7ba:	062266        	bnei	a2, 2, 7c4 <ieee80211_parse_wpa+0xfc>
+ 7bd:	5128      	l32i.n	a2, a1, 20
+ 7bf:	300c      	movi.n	a0, 3
+ 7c1:	814202        	s8i	a0, a2, 129
+ 7c4:	7168      	l32i.n	a6, a1, 28
+ 7c6:	3158      	l32i.n	a5, a1, 12
+ 7c8:	2128      	l32i.n	a2, a1, 8
+ 7ca:	1108      	l32i.n	a0, a1, 4
+ 7cc:	224b      	addi.n	a2, a2, 4
+ 7ce:	fcc002        	addi	a0, a0, -4
+ 7d1:	351b      	addi.n	a3, a5, 1
+ 7d3:	745030        	extui	a5, a3, 0, 8
+ 7d6:	ffed46        	j	78f <ieee80211_parse_wpa+0xc7>
+ 7d9:	020c      	movi.n	a2, 0
+ 7db:	ffc606        	j	6f7 <ieee80211_parse_wpa+0x2f>
+ 7de:	000000        	ill
+ 7e1:	000000        	ill
+
+000007e4 <ieee80211_parse_rsn>:
+ 7e4:	040c      	movi.n	a4, 0
+ 7e6:	e0c112        	addi	a1, a1, -32
+ 7e9:	41d9      	s32i.n	a13, a1, 16
+ 7eb:	51e9      	s32i.n	a14, a1, 20
+ 7ed:	61f9      	s32i.n	a15, a1, 24
+ 7ef:	31c9      	s32i.n	a12, a1, 12
+ 7f1:	004142        	s8i	a4, a1, 0
+ 7f4:	d2c8      	l32i.n	a12, a2, 52
+ 7f6:	2109      	s32i.n	a0, a1, 8
+ 7f8:	9c9c      	beqz.n	a12, 815 <ieee80211_parse_rsn+0x31>
+ 7fa:	010c52        	l8ui	a5, a12, 1
+ 7fd:	030c22        	l8ui	a2, a12, 3
+ 800:	1195a6        	blti	a5, 10, 815 <ieee80211_parse_rsn+0x31>
+ 803:	020c02        	l8ui	a0, a12, 2
+ 806:	112280        	slli	a2, a2, 8
+ 809:	200020        	or	a0, a0, a2
+ 80c:	110000        	slli	a0, a0, 16
+ 80f:	310000        	srai	a0, a0, 16
+ 812:	1b1026        	beqi	a0, 1, 831 <ieee80211_parse_rsn+0x4d>
+ 815:	042d      	mov.n	a2, a4
+ 817:	0001c6        	j	822 <ieee80211_parse_rsn+0x3e>
+ 81a:	022de6        	bgei	a13, 2, 820 <ieee80211_parse_rsn+0x3c>
+ 81d:	002e86        	j	8db <ieee80211_parse_rsn+0xf7>
+ 820:	120c      	movi.n	a2, 1
+ 822:	31c8      	l32i.n	a12, a1, 12
+ 824:	41d8      	l32i.n	a13, a1, 16
+ 826:	51e8      	l32i.n	a14, a1, 20
+ 828:	61f8      	l32i.n	a15, a1, 24
+ 82a:	2108      	l32i.n	a0, a1, 8
+ 82c:	20c112        	addi	a1, a1, 32
+ 82f:	f00d      	ret.n
+ 831:	2c4b      	addi.n	a2, a12, 4
+ 833:	ffebf1        	l32r	a15, 7e0 <ieee80211_parse_wpa+0x118>
+ 836:	330c      	movi.n	a3, 3
+ 838:	7159      	s32i.n	a5, a1, 28
+ 83a:	804f32        	s8i	a3, a15, 128
+ 83d:	013d      	mov.n	a3, a1
+ 83f:	ffdd05        	call0	610 <ieee80211_parse_beacon+0x3d8>
+ 842:	0e0c      	movi.n	a14, 0
+ 844:	71d8      	l32i.n	a13, a1, 28
+ 846:	844f22        	s8i	a2, a15, 132
+ 849:	080c42        	l8ui	a4, a12, 8
+ 84c:	090c52        	l8ui	a5, a12, 9
+ 84f:	f8cdd2        	addi	a13, a13, -8
+ 852:	ccab      	addi.n	a12, a12, 10
+ 854:	115580        	slli	a5, a5, 8
+ 857:	204450        	or	a4, a4, a5
+ 85a:	f44040        	extui	a4, a4, 0, 16
+ 85d:	1149      	s32i.n	a4, a1, 4
+ 85f:	1128      	l32i.n	a2, a1, 4
+ 861:	f400e0        	extui	a0, a14, 0, 16
+ 864:	20b027        	bgeu	a0, a2, 888 <ieee80211_parse_rsn+0xa4>
+ 867:	dd9c      	beqz.n	a13, 888 <ieee80211_parse_rsn+0xa4>
+ 869:	0c2d      	mov.n	a2, a12
+ 86b:	013d      	mov.n	a3, a1
+ 86d:	ffda05        	call0	610 <ieee80211_parse_beacon+0x3d8>
+ 870:	fccdd2        	addi	a13, a13, -4
+ 873:	820f02        	l8ui	a0, a15, 130
+ 876:	cc4b      	addi.n	a12, a12, 4
+ 878:	108c      	beqz.n	a0, 87d <ieee80211_parse_rsn+0x99>
+ 87a:	021066        	bnei	a0, 1, 880 <ieee80211_parse_rsn+0x9c>
+ 87d:	824f22        	s8i	a2, a15, 130
+ 880:	ee1b      	addi.n	a14, a14, 1
+ 882:	74e0e0        	extui	a14, a14, 0, 8
+ 885:	fff586        	j	85f <ieee80211_parse_rsn+0x7b>
+ 888:	4f1da6        	blti	a13, 1, 8db <ieee80211_parse_rsn+0xf7>
+ 88b:	0e0c      	movi.n	a14, 0
+ 88d:	fecdd2        	addi	a13, a13, -2
+ 890:	000c02        	l8ui	a0, a12, 0
+ 893:	010c22        	l8ui	a2, a12, 1
+ 896:	cc2b      	addi.n	a12, a12, 2
+ 898:	112280        	slli	a2, a2, 8
+ 89b:	200020        	or	a0, a0, a2
+ 89e:	f40000        	extui	a0, a0, 0, 16
+ 8a1:	1109      	s32i.n	a0, a1, 4
+ 8a3:	f73d16        	beqz	a13, 81a <ieee80211_parse_rsn+0x36>
+ 8a6:	1168      	l32i.n	a6, a1, 4
+ 8a8:	f450e0        	extui	a5, a14, 0, 16
+ 8ab:	023567        	bltu	a5, a6, 8b1 <ieee80211_parse_rsn+0xcd>
+ 8ae:	ffda06        	j	81a <ieee80211_parse_rsn+0x36>
+ 8b1:	0c2d      	mov.n	a2, a12
+ 8b3:	ffdd45        	call0	688 <ieee80211_parse_beacon+0x450>
+ 8b6:	071266        	bnei	a2, 1, 8c1 <ieee80211_parse_rsn+0xdd>
+ 8b9:	470c      	movi.n	a7, 4
+ 8bb:	814f72        	s8i	a7, a15, 129
+ 8be:	000306        	j	8ce <ieee80211_parse_rsn+0xea>
+ 8c1:	0c2d      	mov.n	a2, a12
+ 8c3:	ffdc45        	call0	688 <ieee80211_parse_beacon+0x450>
+ 8c6:	042266        	bnei	a2, 2, 8ce <ieee80211_parse_rsn+0xea>
+ 8c9:	580c      	movi.n	a8, 5
+ 8cb:	814f82        	s8i	a8, a15, 129
+ 8ce:	cc4b      	addi.n	a12, a12, 4
+ 8d0:	fccdd2        	addi	a13, a13, -4
+ 8d3:	ee1b      	addi.n	a14, a14, 1
+ 8d5:	74e0e0        	extui	a14, a14, 0, 8
+ 8d8:	fff1c6        	j	8a3 <ieee80211_parse_rsn+0xbf>
+ 8db:	020c      	movi.n	a2, 0
+ 8dd:	ffd046        	j	822 <ieee80211_parse_rsn+0x3e>
+
+000008e0 <ieee80211_setup_rateset>:
+ 8e0:	020c      	movi.n	a2, 0
+ 8e2:	f00d      	ret.n

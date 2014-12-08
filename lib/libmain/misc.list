@@ -1,0 +1,113 @@
+
+misc.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <os_get_cpu_frequency-0x4>:
+   0:	000000        	ill
+	...
+
+00000004 <os_get_cpu_frequency>:
+   4:	ffff21        	l32r	a2, 0 <os_get_cpu_frequency-0x4>
+   7:	0228      	l32i.n	a2, a2, 0
+   9:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <ets_delay_us-0xc>:
+	...
+
+0000000c <ets_delay_us>:
+   c:	f0c112        	addi	a1, a1, -16
+   f:	21d9      	s32i.n	a13, a1, 8
+  11:	11c9      	s32i.n	a12, a1, 4
+  13:	0109      	s32i.n	a0, a1, 0
+  15:	02cd      	mov.n	a12, a2
+  17:	fffb01        	l32r	a0, 4 <ets_delay_us-0x8>
+  1a:	0000c0        	callx0	a0
+  1d:	fff801        	l32r	a0, 0 <ets_delay_us-0xc>
+  20:	0008      	l32i.n	a0, a0, 0
+  22:	02dd      	mov.n	a13, a2
+  24:	82c0c0        	mull	a12, a0, a12
+  27:	fff801        	l32r	a0, 8 <ets_delay_us-0x4>
+  2a:	0000c0        	callx0	a0
+  2d:	c032d0        	sub	a3, a2, a13
+  30:	f333c7        	bltu	a3, a12, 27 <ets_delay_us+0x1b>
+  33:	11c8      	l32i.n	a12, a1, 4
+  35:	21d8      	l32i.n	a13, a1, 8
+  37:	0108      	l32i.n	a0, a1, 0
+  39:	10c112        	addi	a1, a1, 16
+  3c:	f00d      	ret.n
+  3e:	000000        	ill
+  41:	000000        	ill
+
+00000044 <ets_update_cpu_frequency>:
+  44:	ffff31        	l32r	a3, 40 <ets_delay_us+0x34>
+  47:	0329      	s32i.n	a2, a3, 0
+  49:	f00d      	ret.n
+  4b:	000000        	ill
+	...
+
+00000050 <os_install_putc1>:
+  50:	ffff31        	l32r	a3, 4c <ets_update_cpu_frequency+0x8>
+  53:	0329      	s32i.n	a2, a3, 0
+  55:	f00d      	ret.n
+  57:	000000        	ill
+	...
+
+0000005c <os_putc>:
+  5c:	f0c112        	addi	a1, a1, -16
+  5f:	0109      	s32i.n	a0, a1, 0
+  61:	fffd01        	l32r	a0, 58 <os_install_putc1+0x8>
+  64:	0008      	l32i.n	a0, a0, 0
+  66:	0000c0        	callx0	a0
+  69:	0108      	l32i.n	a0, a1, 0
+  6b:	10c112        	addi	a1, a1, 16
+  6e:	f00d      	ret.n
+  70:	000200        	excw
+  73:	ff6160        	excw
+
+00000074 <gpio_output_set>:
+  74:	ffff61        	l32r	a6, 70 <os_putc+0x14>
+  77:	0020c0        	memw
+  7a:	416622        	s32i	a2, a6, 0x104
+  7d:	0020c0        	memw
+  80:	426632        	s32i	a3, a6, 0x108
+  83:	0020c0        	memw
+  86:	446642        	s32i	a4, a6, 0x110
+  89:	0020c0        	memw
+  8c:	456652        	s32i	a5, a6, 0x114
+  8f:	f00d      	ret.n
+  91:	000000        	ill
+  94:	000600        	excw
+  97:	ffff60        	excw
+  9a:	df          	.byte 0xdf
+  9b:	ff          	.byte 0xff
+
+0000009c <rtc_get_reset_reason>:
+  9c:	fffe41        	l32r	a4, 94 <gpio_output_set+0x20>
+  9f:	0020c0        	memw
+  a2:	452422        	l32i	a2, a4, 0x114
+  a5:	342020        	extui	a2, a2, 0, 4
+  a8:	245266        	bnei	a2, 5, d0 <rtc_get_reset_reason+0x34>
+  ab:	0020c0        	memw
+  ae:	462432        	l32i	a3, a4, 0x118
+  b1:	543830        	extui	a3, a3, 8, 6
+  b4:	041366        	bnei	a3, 1, bc <rtc_get_reset_reason+0x20>
+  b7:	620c      	movi.n	a2, 6
+  b9:	0004c6        	j	d0 <rtc_get_reset_reason+0x34>
+  bc:	0020c0        	memw
+  bf:	462462        	l32i	a6, a4, 0x118
+  c2:	050c      	movi.n	a5, 0
+  c4:	546860        	extui	a6, a6, 8, 6
+  c7:	f8c662        	addi	a6, a6, -8
+  ca:	932560        	movnez	a2, a5, a6
+  cd:	742020        	extui	a2, a2, 0, 8
+  d0:	fff281        	l32r	a8, 98 <gpio_output_set+0x24>
+  d3:	0020c0        	memw
+  d6:	422472        	l32i	a7, a4, 0x108
+  d9:	107780        	and	a7, a7, a8
+  dc:	0020c0        	memw
+  df:	426472        	s32i	a7, a4, 0x108
+  e2:	f00d      	ret.n

@@ -1,0 +1,2550 @@
+
+user_interface.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <system_restore-0x18>:
+	...
+
+00000018 <system_restore>:
+  18:	6ca322        	movi	a2, 0x36c
+  1b:	f0c112        	addi	a1, a1, -16
+  1e:	11c9      	s32i.n	a12, a1, 4
+  20:	0109      	s32i.n	a0, a1, 0
+  22:	fff801        	l32r	a0, 4 <system_restore-0x14>
+  25:	0000c0        	callx0	a0
+  28:	02cd      	mov.n	a12, a2
+  2a:	ffa032        	movi	a3, 255
+  2d:	6ca342        	movi	a4, 0x36c
+  30:	fff601        	l32r	a0, 8 <system_restore-0x10>
+  33:	0000c0        	callx0	a0
+  36:	0c2d      	mov.n	a2, a12
+  38:	fff231        	l32r	a3, 0 <system_restore-0x18>
+  3b:	840c      	movi.n	a4, 8
+  3d:	fff301        	l32r	a0, c <system_restore-0xc>
+  40:	0000c0        	callx0	a0
+  43:	0c2d      	mov.n	a2, a12
+  45:	fff201        	l32r	a0, 10 <system_restore-0x8>
+  48:	0000c0        	callx0	a0
+  4b:	0c2d      	mov.n	a2, a12
+  4d:	fff101        	l32r	a0, 14 <system_restore-0x4>
+  50:	0000c0        	callx0	a0
+  53:	11c8      	l32i.n	a12, a1, 4
+  55:	0108      	l32i.n	a0, a1, 0
+  57:	10c112        	addi	a1, a1, 16
+  5a:	f00d      	ret.n
+  5c:	000e00        	excw
+  5f:	a05260        	addx4	a5, a2, a6
+
+00000060 <system_rtc_mem_write>:
+  60:	bfa052        	movi	a5, 191
+  63:	123527        	bltu	a5, a2, 79 <system_rtc_mem_write+0x19>
+  66:	370c      	movi.n	a7, 3
+  68:	146030        	extui	a6, a3, 0, 2
+  6b:	a6cc      	bnez.n	a6, 79 <system_rtc_mem_write+0x19>
+  6d:	1192e0        	slli	a9, a2, 2
+  70:	00a382        	movi	a8, 0x300
+  73:	c08890        	sub	a8, a8, a9
+  76:	03a847        	bge	a8, a4, 7d <system_rtc_mem_write+0x1d>
+  79:	020c      	movi.n	a2, 0
+  7b:	f00d      	ret.n
+  7d:	0a0747        	bnone	a7, a4, 8b <system_rtc_mem_write+0x2b>
+  80:	450c      	movi.n	a5, 4
+  82:	414240        	srli	a4, a4, 2
+  85:	a04450        	addx4	a4, a4, a5
+  88:	f44040        	extui	a4, a4, 0, 16
+  8b:	418240        	srli	a8, a4, 2
+  8e:	e89c      	beqz.n	a8, b0 <system_rtc_mem_write+0x50>
+  90:	fff371        	l32r	a7, 5c <system_restore+0x44>
+  93:	040c      	movi.n	a4, 0
+  95:	a06420        	addx4	a6, a4, a2
+  98:	a05430        	addx4	a5, a4, a3
+  9b:	667a      	add.n	a6, a6, a7
+  9d:	0020c0        	memw
+  a0:	0558      	l32i.n	a5, a5, 0
+  a2:	0020c0        	memw
+  a5:	c06652        	s32i	a5, a6, 0x300
+  a8:	441b      	addi.n	a4, a4, 1
+  aa:	744040        	extui	a4, a4, 0, 8
+  ad:	e43487        	bltu	a4, a8, 95 <system_rtc_mem_write+0x35>
+  b0:	120c      	movi.n	a2, 1
+  b2:	f00d      	ret.n
+  b4:	000e00        	excw
+  b7:	a05260        	addx4	a5, a2, a6
+
+000000b8 <system_rtc_mem_read>:
+  b8:	bfa052        	movi	a5, 191
+  bb:	123527        	bltu	a5, a2, d1 <system_rtc_mem_read+0x19>
+  be:	370c      	movi.n	a7, 3
+  c0:	146030        	extui	a6, a3, 0, 2
+  c3:	a6cc      	bnez.n	a6, d1 <system_rtc_mem_read+0x19>
+  c5:	1192e0        	slli	a9, a2, 2
+  c8:	00a382        	movi	a8, 0x300
+  cb:	c08890        	sub	a8, a8, a9
+  ce:	03a847        	bge	a8, a4, d5 <system_rtc_mem_read+0x1d>
+  d1:	020c      	movi.n	a2, 0
+  d3:	f00d      	ret.n
+  d5:	0a0747        	bnone	a7, a4, e3 <system_rtc_mem_read+0x2b>
+  d8:	450c      	movi.n	a5, 4
+  da:	414240        	srli	a4, a4, 2
+  dd:	a04450        	addx4	a4, a4, a5
+  e0:	f44040        	extui	a4, a4, 0, 16
+  e3:	418240        	srli	a8, a4, 2
+  e6:	e89c      	beqz.n	a8, 108 <system_rtc_mem_read+0x50>
+  e8:	fff371        	l32r	a7, b4 <system_rtc_mem_write+0x54>
+  eb:	040c      	movi.n	a4, 0
+  ed:	a05420        	addx4	a5, a4, a2
+  f0:	a06430        	addx4	a6, a4, a3
+  f3:	557a      	add.n	a5, a5, a7
+  f5:	0020c0        	memw
+  f8:	c02552        	l32i	a5, a5, 0x300
+  fb:	0020c0        	memw
+  fe:	0659      	s32i.n	a5, a6, 0
+ 100:	441b      	addi.n	a4, a4, 1
+ 102:	744040        	extui	a4, a4, 0, 8
+ 105:	e43487        	bltu	a4, a8, ed <system_rtc_mem_read+0x35>
+ 108:	120c      	movi.n	a2, 1
+ 10a:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <system_pp_recycle_rx_pkt-0x1ec>:
+       0:	000004        	excw
+       3:	000400        	excw
+       6:	100000        	and	a0, a0, a0
+       9:	000001        	l32r	a0, fffc000c <system_uart_swap+0xfffbe570>
+       c:	000004        	excw
+       f:	000400        	excw
+      12:	000000        	ill
+      15:	000000        	ill
+      18:	007b      	addi.n	a0, a0, 7
+	...
+      36:	120000        	excw
+      39:	c9f0c1        	l32r	a12, ffff27fc <system_uart_swap+0xffff0d60>
+      3c:	012921        	l32r	a2, fffc04e0 <system_uart_swap+0xfffbea44>
+      3f:	1109      	s32i.n	a0, a1, 4
+      41:	fff601        	l32r	a0, 1c <system_pp_recycle_rx_pkt-0x1d0>
+      44:	0000c0        	callx0	a0
+      47:	a2ac      	beqz.n	a2, 75 <system_pp_recycle_rx_pkt-0x177>
+      49:	ffedc1        	l32r	a12, 0 <system_pp_recycle_rx_pkt-0x1ec>
+      4c:	fcccc2        	addi	a12, a12, -4
+      4f:	000c32        	l8ui	a3, a12, 0
+      52:	13dc      	bnez.n	a3, 67 <system_pp_recycle_rx_pkt-0x185>
+      54:	ffec21        	l32r	a2, 4 <system_pp_recycle_rx_pkt-0x1e8>
+      57:	ffec31        	l32r	a3, 8 <system_pp_recycle_rx_pkt-0x1e4>
+      5a:	040c      	movi.n	a4, 0
+      5c:	fff101        	l32r	a0, 20 <system_pp_recycle_rx_pkt-0x1cc>
+      5f:	0000c0        	callx0	a0
+      62:	100c      	movi.n	a0, 1
+      64:	004c02        	s8i	a0, a12, 0
+      67:	ffef01        	l32r	a0, 24 <system_pp_recycle_rx_pkt-0x1c8>
+      6a:	0000c0        	callx0	a0
+      6d:	200c02        	l8ui	a0, a12, 32
+      70:	629c      	beqz.n	a2, 8a <system_pp_recycle_rx_pkt-0x162>
+      72:	141026        	beqi	a0, 1, 8a <system_pp_recycle_rx_pkt-0x162>
+      75:	020c      	movi.n	a2, 0
+      77:	000186        	j	81 <system_pp_recycle_rx_pkt-0x16b>
+      7a:	0128      	l32i.n	a2, a1, 0
+      7c:	844022        	s8i	a2, a0, 132
+      7f:	f27c      	movi.n	a2, -1
+      81:	21c8      	l32i.n	a12, a1, 8
+      83:	1108      	l32i.n	a0, a1, 4
+      85:	10c112        	addi	a1, a1, 16
+      88:	f00d      	ret.n
+      8a:	10ec      	bnez.n	a0, af <system_pp_recycle_rx_pkt-0x13d>
+      8c:	120c      	movi.n	a2, 1
+      8e:	ffe601        	l32r	a0, 28 <system_pp_recycle_rx_pkt-0x1c4>
+      91:	0000c0        	callx0	a0
+      94:	ffde21        	l32r	a2, c <system_pp_recycle_rx_pkt-0x1e0>
+      97:	ffe501        	l32r	a0, 2c <system_pp_recycle_rx_pkt-0x1c0>
+      9a:	0000c0        	callx0	a0
+      9d:	ffdc21        	l32r	a2, 10 <system_pp_recycle_rx_pkt-0x1dc>
+      a0:	a30c      	movi.n	a3, 10
+      a2:	040c      	movi.n	a4, 0
+      a4:	ffe301        	l32r	a0, 30 <system_pp_recycle_rx_pkt-0x1bc>
+      a7:	0000c0        	callx0	a0
+      aa:	130c      	movi.n	a3, 1
+      ac:	204c32        	s8i	a3, a12, 32
+      af:	210c02        	l8ui	a0, a12, 33
+      b2:	a40c      	movi.n	a4, 10
+      b4:	001b      	addi.n	a0, a0, 1
+      b6:	740000        	extui	a0, a0, 0, 8
+      b9:	214c02        	s8i	a0, a12, 33
+      bc:	0db407        	bgeu	a4, a0, cd <system_pp_recycle_rx_pkt-0x11f>
+      bf:	ffd521        	l32r	a2, 14 <system_pp_recycle_rx_pkt-0x1d8>
+      c2:	ffdc01        	l32r	a0, 34 <system_pp_recycle_rx_pkt-0x1b8>
+      c5:	0000c0        	callx0	a0
+      c8:	a00c      	movi.n	a0, 10
+      ca:	214c02        	s8i	a0, a12, 33
+      cd:	220c22        	l8ui	a2, a12, 34
+      d0:	ffd231        	l32r	a3, 18 <system_pp_recycle_rx_pkt-0x1d4>
+      d3:	220a      	add.n	a2, a2, a0
+      d5:	023a      	add.n	a0, a2, a3
+      d7:	220b      	addi.n	a2, a2, -1
+      d9:	9d92a6        	blti	a2, 10, 7a <system_pp_recycle_rx_pkt-0x172>
+      dc:	0138      	l32i.n	a3, a1, 0
+      de:	7a4032        	s8i	a3, a0, 122
+      e1:	ffe686        	j	7f <system_pp_recycle_rx_pkt-0x16d>
+      e4:	000016        	beqz	a0, e8 <system_pp_recycle_rx_pkt-0x104>
+      e7:	010000        	slli	a0, a0, 32
+      ea:	8b0000        	excw
+      ed:	000000        	ill
+      f0:	000023        	excw
+      f3:	000400        	excw
+	...
+     10e:	120000        	excw
+     111:	e9f0c1        	l32r	a12, ffffa8d4 <system_uart_swap+0xffff8e38>
+     114:	010931        	l32r	a3, fffc0538 <system_uart_swap+0xfffbea9c>
+     117:	21d9      	s32i.n	a13, a1, 8
+     119:	11c9      	s32i.n	a12, a1, 4
+     11b:	fff2c1        	l32r	a12, e4 <system_pp_recycle_rx_pkt-0x108>
+     11e:	0d0c      	movi.n	a13, 0
+     120:	0b0c02        	l8ui	a0, a12, 11
+     123:	0a4cd2        	s8i	a13, a12, 10
+     126:	07f016        	beqz	a0, 1a9 <system_pp_recycle_rx_pkt-0x43>
+     129:	ffefe1        	l32r	a14, e8 <system_pp_recycle_rx_pkt-0x104>
+     12c:	fff301        	l32r	a0, f8 <system_pp_recycle_rx_pkt-0xf4>
+     12f:	0000c0        	callx0	a0
+     132:	72cc      	bnez.n	a2, 13d <system_pp_recycle_rx_pkt-0xaf>
+     134:	fff201        	l32r	a0, fc <system_pp_recycle_rx_pkt-0xf0>
+     137:	0000c0        	callx0	a0
+     13a:	068256        	bnez	a2, 1a6 <system_pp_recycle_rx_pkt-0x46>
+     13d:	0c0c42        	l8ui	a4, a12, 12
+     140:	04ea      	add.n	a0, a4, a14
+     142:	000002        	l8ui	a0, a0, 0
+     145:	4e1026        	beqi	a0, 1, 197 <system_pp_recycle_rx_pkt-0x55>
+     148:	452026        	beqi	a0, 2, 191 <system_pp_recycle_rx_pkt-0x5b>
+     14b:	393026        	beqi	a0, 3, 188 <system_pp_recycle_rx_pkt-0x64>
+     14e:	304026        	beqi	a0, 4, 182 <system_pp_recycle_rx_pkt-0x6a>
+     151:	245026        	beqi	a0, 5, 179 <system_pp_recycle_rx_pkt-0x73>
+     154:	086066        	bnei	a0, 6, 160 <system_pp_recycle_rx_pkt-0x8c>
+     157:	ffe521        	l32r	a2, ec <system_pp_recycle_rx_pkt-0x100>
+     15a:	000005        	call0	15c <system_pp_recycle_rx_pkt-0x90>
+     15d:	0c0c42        	l8ui	a4, a12, 12
+     160:	0b0c02        	l8ui	a0, a12, 11
+     163:	441b      	addi.n	a4, a4, 1
+     165:	744040        	extui	a4, a4, 0, 8
+     168:	000b      	addi.n	a0, a0, -1
+     16a:	740000        	extui	a0, a0, 0, 8
+     16d:	0b4c02        	s8i	a0, a12, 11
+     170:	299466        	bnei	a4, 10, 19d <system_pp_recycle_rx_pkt-0x4f>
+     173:	0c4cd2        	s8i	a13, a12, 12
+     176:	000986        	j	1a0 <system_pp_recycle_rx_pkt-0x4c>
+     179:	740c22        	l8ui	a2, a12, 116
+     17c:	000005        	call0	180 <system_pp_recycle_rx_pkt-0x6c>
+     17f:	fff686        	j	15d <system_pp_recycle_rx_pkt-0x8f>
+     182:	000005        	call0	184 <system_pp_recycle_rx_pkt-0x68>
+     185:	fff506        	j	15d <system_pp_recycle_rx_pkt-0x8f>
+     188:	ffda21        	l32r	a2, f0 <system_pp_recycle_rx_pkt-0xfc>
+     18b:	000005        	call0	18c <system_pp_recycle_rx_pkt-0x60>
+     18e:	fff2c6        	j	15d <system_pp_recycle_rx_pkt-0x8f>
+     191:	000005        	call0	194 <system_pp_recycle_rx_pkt-0x58>
+     194:	fff146        	j	15d <system_pp_recycle_rx_pkt-0x8f>
+     197:	000005        	call0	198 <system_pp_recycle_rx_pkt-0x54>
+     19a:	ffefc6        	j	15d <system_pp_recycle_rx_pkt-0x8f>
+     19d:	0c4c42        	s8i	a4, a12, 12
+     1a0:	f88056        	bnez	a0, 12c <system_pp_recycle_rx_pkt-0xc0>
+     1a3:	000086        	j	1a9 <system_pp_recycle_rx_pkt-0x43>
+     1a6:	0b0c02        	l8ui	a0, a12, 11
+     1a9:	ffd2e1        	l32r	a14, f4 <system_pp_recycle_rx_pkt-0xf8>
+     1ac:	60dc      	bnez.n	a0, 1c6 <system_pp_recycle_rx_pkt-0x26>
+     1ae:	0e2d      	mov.n	a2, a14
+     1b0:	ffd401        	l32r	a0, 100 <system_pp_recycle_rx_pkt-0xec>
+     1b3:	0000c0        	callx0	a0
+     1b6:	0108      	l32i.n	a0, a1, 0
+     1b8:	0a4cd2        	s8i	a13, a12, 10
+     1bb:	31e8      	l32i.n	a14, a1, 12
+     1bd:	11c8      	l32i.n	a12, a1, 4
+     1bf:	21d8      	l32i.n	a13, a1, 8
+     1c1:	10c112        	addi	a1, a1, 16
+     1c4:	f00d      	ret.n
+     1c6:	120c      	movi.n	a2, 1
+     1c8:	ffcf01        	l32r	a0, 104 <system_pp_recycle_rx_pkt-0xe8>
+     1cb:	0000c0        	callx0	a0
+     1ce:	0e2d      	mov.n	a2, a14
+     1d0:	ffce01        	l32r	a0, 108 <system_pp_recycle_rx_pkt-0xe4>
+     1d3:	0000c0        	callx0	a0
+     1d6:	0e2d      	mov.n	a2, a14
+     1d8:	a30c      	movi.n	a3, 10
+     1da:	040c      	movi.n	a4, 0
+     1dc:	ffcc01        	l32r	a0, 10c <system_pp_recycle_rx_pkt-0xe0>
+     1df:	0000c0        	callx0	a0
+     1e2:	1d0c      	movi.n	a13, 1
+     1e4:	fff386        	j	1b6 <system_pp_recycle_rx_pkt-0x36>
+     1e7:	000000        	ill
+	...
+
+000001ec <system_pp_recycle_rx_pkt>:
+     1ec:	f0c112        	addi	a1, a1, -16
+     1ef:	0109      	s32i.n	a0, a1, 0
+     1f1:	fffd01        	l32r	a0, 1e8 <system_pp_recycle_rx_pkt-0x4>
+     1f4:	0000c0        	callx0	a0
+     1f7:	0108      	l32i.n	a0, a1, 0
+     1f9:	10c112        	addi	a1, a1, 16
+     1fc:	f00d      	ret.n
+     1fe:	000000        	ill
+     201:	000000        	ill
+
+00000204 <system_adc_read>:
+     204:	020c      	movi.n	a2, 0
+     206:	f0c112        	addi	a1, a1, -16
+     209:	0109      	s32i.n	a0, a1, 0
+     20b:	fffd01        	l32r	a0, 200 <system_pp_recycle_rx_pkt+0x14>
+     20e:	0000c0        	callx0	a0
+     211:	f42020        	extui	a2, a2, 0, 16
+     214:	0108      	l32i.n	a0, a1, 0
+     216:	10c112        	addi	a1, a1, 16
+     219:	f00d      	ret.n
+     21b:	060000        	excw
+     21e:	206000        	or	a6, a0, a0
+     221:	4e          	.byte 0x4e
+     222:	000000        	ill
+     225:	000000        	ill
+
+00000228 <system_restart>:
+     228:	420c      	movi.n	a2, 4
+     22a:	f0c112        	addi	a1, a1, -16
+     22d:	0109      	s32i.n	a0, a1, 0
+     22f:	ffe085        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+     232:	4e0226        	beqi	a2, -1, 284 <system_restart+0x5c>
+     235:	090c      	movi.n	a9, 0
+     237:	fff921        	l32r	a2, 21c <system_adc_read+0x18>
+     23a:	0020c0        	memw
+     23d:	c16292        	s32i	a9, a2, 0x304
+     240:	883c      	movi.n	a8, 56
+     242:	0020c0        	memw
+     245:	c02272        	l32i	a7, a2, 0x300
+     248:	207780        	or	a7, a7, a8
+     24b:	0020c0        	memw
+     24e:	c06272        	s32i	a7, a2, 0x300
+     251:	450c      	movi.n	a5, 4
+     253:	967c      	movi.n	a6, -7
+     255:	0020c0        	memw
+     258:	c02242        	l32i	a4, a2, 0x300
+     25b:	104460        	and	a4, a4, a6
+     25e:	204450        	or	a4, a4, a5
+     261:	0020c0        	memw
+     264:	c06242        	s32i	a4, a2, 0x300
+     267:	130c      	movi.n	a3, 1
+     269:	0020c0        	memw
+     26c:	c02202        	l32i	a0, a2, 0x300
+     26f:	200030        	or	a0, a0, a3
+     272:	0020c0        	memw
+     275:	c06202        	s32i	a0, a2, 0x300
+     278:	ffea21        	l32r	a2, 220 <system_adc_read+0x1c>
+     27b:	ffea01        	l32r	a0, 224 <system_adc_read+0x20>
+     27e:	0000c0        	callx0	a0
+     281:	fffcc6        	j	278 <system_restart+0x50>
+     284:	0108      	l32i.n	a0, a1, 0
+     286:	10c112        	addi	a1, a1, 16
+     289:	f00d      	ret.n
+     28b:	000000        	ill
+	...
+
+00000290 <system_upgrade_userbin_set>:
+     290:	0322b6        	bltui	a2, 2, 297 <system_upgrade_userbin_set+0x7>
+     293:	020c      	movi.n	a2, 0
+     295:	f00d      	ret.n
+     297:	f0a042        	movi	a4, 240
+     29a:	fffc31        	l32r	a3, 28c <system_restart+0x64>
+     29d:	202240        	or	a2, a2, a4
+     2a0:	804322        	s8i	a2, a3, 128
+     2a3:	120c      	movi.n	a2, 1
+     2a5:	f00d      	ret.n
+     2a7:	000000        	ill
+	...
+
+000002ac <system_upgrade_userbin_check>:
+     2ac:	ffff21        	l32r	a2, 2a8 <system_upgrade_userbin_set+0x18>
+     2af:	800222        	l8ui	a2, a2, 128
+     2b2:	ffa032        	movi	a3, 255
+     2b5:	051237        	beq	a2, a3, 2be <system_upgrade_userbin_check+0x12>
+     2b8:	343020        	extui	a3, a2, 0, 4
+     2bb:	031326        	beqi	a3, 1, 2c2 <system_upgrade_userbin_check+0x16>
+     2be:	020c      	movi.n	a2, 0
+     2c0:	f00d      	ret.n
+     2c2:	120c      	movi.n	a2, 1
+     2c4:	f00d      	ret.n
+     2c6:	000000        	ill
+     2c9:	000000        	ill
+
+000002cc <system_upgrade_flag_set>:
+     2cc:	1632f6        	bgeui	a2, 3, 2e6 <system_upgrade_flag_set+0x1a>
+     2cf:	fffe51        	l32r	a5, 2c8 <system_upgrade_userbin_check+0x1c>
+     2d2:	140c      	movi.n	a4, 1
+     2d4:	800532        	l8ui	a3, a5, 128
+     2d7:	1162c0        	slli	a6, a2, 4
+     2da:	343030        	extui	a3, a3, 0, 4
+     2dd:	203360        	or	a3, a3, a6
+     2e0:	804532        	s8i	a3, a5, 128
+     2e3:	000046        	j	2e8 <system_upgrade_flag_set+0x1c>
+     2e6:	040c      	movi.n	a4, 0
+     2e8:	042d      	mov.n	a2, a4
+     2ea:	f00d      	ret.n
+     2ec:	000000        	ill
+	...
+
+000002f0 <system_upgrade_flag_check>:
+     2f0:	ffff21        	l32r	a2, 2ec <system_upgrade_flag_set+0x20>
+     2f3:	800222        	l8ui	a2, a2, 128
+     2f6:	342420        	extui	a2, a2, 4, 4
+     2f9:	f00d      	ret.n
+     2fb:	000000        	ill
+     2fe:	280000        	excw
+     301:	000000        	ill
+     304:	0038      	l32i.n	a3, a0, 0
+     306:	000000        	ill
+     309:	000000        	ill
+     30c:	003c      	movi.n	a0, 48
+	...
+
+00000320 <system_upgrade_reboot>:
+     320:	f0c112        	addi	a1, a1, -16
+     323:	1109      	s32i.n	a0, a1, 4
+     325:	fff501        	l32r	a0, 2fc <system_upgrade_flag_check+0xc>
+     328:	0109      	s32i.n	a0, a1, 0
+     32a:	800002        	l8ui	a0, a0, 128
+     32d:	020c      	movi.n	a2, 0
+     32f:	340400        	extui	a0, a0, 4, 4
+     332:	022026        	beqi	a0, 2, 338 <system_upgrade_reboot+0x18>
+     335:	000c46        	j	36a <system_upgrade_reboot+0x4a>
+     338:	fff221        	l32r	a2, 300 <system_upgrade_flag_check+0x10>
+     33b:	fff501        	l32r	a0, 310 <system_upgrade_flag_check+0x20>
+     33e:	0000c0        	callx0	a0
+     341:	0128      	l32i.n	a2, a1, 0
+     343:	800222        	l8ui	a2, a2, 128
+     346:	342020        	extui	a2, a2, 0, 4
+     349:	241266        	bnei	a2, 1, 371 <system_upgrade_reboot+0x51>
+     34c:	ffee21        	l32r	a2, 304 <system_upgrade_flag_check+0x14>
+     34f:	fff101        	l32r	a0, 314 <system_upgrade_flag_check+0x24>
+     352:	0000c0        	callx0	a0
+     355:	007c      	movi.n	a0, -16
+     357:	0138      	l32i.n	a3, a1, 0
+     359:	ffeb21        	l32r	a2, 308 <system_upgrade_flag_check+0x18>
+     35c:	804302        	s8i	a0, a3, 128
+     35f:	ffee01        	l32r	a0, 318 <system_upgrade_flag_check+0x28>
+     362:	0000c0        	callx0	a0
+     365:	000005        	call0	368 <system_upgrade_reboot+0x48>
+     368:	120c      	movi.n	a2, 1
+     36a:	1108      	l32i.n	a0, a1, 4
+     36c:	10c112        	addi	a1, a1, 16
+     36f:	f00d      	ret.n
+     371:	ffe621        	l32r	a2, 30c <system_upgrade_flag_check+0x1c>
+     374:	ffea01        	l32r	a0, 31c <system_upgrade_flag_check+0x2c>
+     377:	0000c0        	callx0	a0
+     37a:	107c      	movi.n	a0, -15
+     37c:	fff5c6        	j	357 <system_upgrade_reboot+0x37>
+     37f:	424000        	excw
+     382:	0f          	.byte 0xf
+     383:	004000        	break	0, 0
+     386:	000000        	ill
+     389:	00ff00        	excw
+     38c:	fffe00        	excw
+     38f:	5f          	.byte 0x5f
+     390:	000e00        	excw
+     393:	000060        	excw
+     396:	000010        	excw
+     399:	600006        	j	1839d <system_uart_swap+0x16901>
+     39c:	ff          	.byte 0xff
+     39d:	bf          	.byte 0xbf
+     39e:	ff          	.byte 0xff
+     39f:	ff          	.byte 0xff
+     3a0:	010010        	slli	a0, a0, 31
+     3a3:	01ff00        	slli	a15, a15, 32
+     3a6:	ff          	.byte 0xff
+     3a7:	ff          	.byte 0xff
+     3a8:	00fc00        	excw
+     3ab:	40c800        	excw
+     3ae:	000006        	j	3b2 <system_upgrade_reboot+0x92>
+     3b1:	001000        	excw
+     3b4:	effe00        	excw
+     3b7:	3f          	.byte 0x3f
+	...
+
+000003d0 <system_deep_sleep>:
+     3d0:	ffec31        	l32r	a3, 380 <system_upgrade_reboot+0x60>
+     3d3:	f0c112        	addi	a1, a1, -16
+     3d6:	21d9      	s32i.n	a13, a1, 8
+     3d8:	11c9      	s32i.n	a12, a1, 4
+     3da:	0109      	s32i.n	a0, a1, 0
+     3dc:	02cd      	mov.n	a12, a2
+     3de:	fff601        	l32r	a0, 3b8 <system_upgrade_reboot+0x98>
+     3e1:	0000c0        	callx0	a0
+     3e4:	023d      	mov.n	a3, a2
+     3e6:	ffe721        	l32r	a2, 384 <system_upgrade_reboot+0x64>
+     3e9:	fff401        	l32r	a0, 3bc <system_upgrade_reboot+0x9c>
+     3ec:	0000c0        	callx0	a0
+     3ef:	ffe601        	l32r	a0, 388 <system_upgrade_reboot+0x68>
+     3f2:	ffe621        	l32r	a2, 38c <system_upgrade_reboot+0x6c>
+     3f5:	0020c0        	memw
+     3f8:	872232        	l32i	a3, a2, 0x21c
+     3fb:	080037        	bnone	a0, a3, 407 <system_deep_sleep+0x37>
+     3fe:	0020c0        	memw
+     401:	872242        	l32i	a4, a2, 0x21c
+     404:	f68407        	bany	a4, a0, 3fe <system_deep_sleep+0x2e>
+     407:	ffe221        	l32r	a2, 390 <system_upgrade_reboot+0x70>
+     40a:	0020c0        	memw
+     40d:	472252        	l32i	a5, a2, 0x11c
+     410:	080057        	bnone	a0, a5, 41c <system_deep_sleep+0x4c>
+     413:	0020c0        	memw
+     416:	472262        	l32i	a6, a2, 0x11c
+     419:	f68607        	bany	a6, a0, 413 <system_deep_sleep+0x43>
+     41c:	ffde71        	l32r	a7, 394 <system_upgrade_reboot+0x74>
+     41f:	030c      	movi.n	a3, 0
+     421:	880c      	movi.n	a8, 8
+     423:	ffddd1        	l32r	a13, 398 <system_upgrade_reboot+0x78>
+     426:	0020c0        	memw
+     429:	406d32        	s32i	a3, a13, 0x100
+     42c:	ffdc21        	l32r	a2, 39c <system_upgrade_reboot+0x7c>
+     42f:	0020c0        	memw
+     432:	402d02        	l32i	a0, a13, 0x100
+     435:	100020        	and	a0, a0, a2
+     438:	0020c0        	memw
+     43b:	406d02        	s32i	a0, a13, 0x100
+     43e:	0b3c      	movi.n	a11, 48
+     440:	0020c0        	memw
+     443:	402da2        	l32i	a10, a13, 0x100
+     446:	20aab0        	or	a10, a10, a11
+     449:	0020c0        	memw
+     44c:	406da2        	s32i	a10, a13, 0x100
+     44f:	490c      	movi.n	a9, 4
+     451:	0020c0        	memw
+     454:	516d92        	s32i	a9, a13, 0x144
+     457:	ffd261        	l32r	a6, 3a0 <system_upgrade_reboot+0x80>
+     45a:	0020c0        	memw
+     45d:	436d62        	s32i	a6, a13, 0x10c
+     460:	ffd151        	l32r	a5, 3a4 <system_upgrade_reboot+0x84>
+     463:	ffd141        	l32r	a4, 3a8 <system_upgrade_reboot+0x88>
+     466:	0020c0        	memw
+     469:	522d32        	l32i	a3, a13, 0x148
+     46c:	103350        	and	a3, a3, a5
+     46f:	203340        	or	a3, a3, a4
+     472:	0020c0        	memw
+     475:	526d32        	s32i	a3, a13, 0x148
+     478:	00ae22        	movi	a2, 0xfffffe00
+     47b:	80a002        	movi	a0, 128
+     47e:	0020c0        	memw
+     481:	522db2        	l32i	a11, a13, 0x148
+     484:	10bb20        	and	a11, a11, a2
+     487:	20bb00        	or	a11, a11, a0
+     48a:	0020c0        	memw
+     48d:	526db2        	s32i	a11, a13, 0x148
+     490:	88a0a2        	movi	a10, 136
+     493:	0020c0        	memw
+     496:	472d92        	l32i	a9, a13, 0x11c
+     499:	99aa      	add.n	a9, a9, a10
+     49b:	0020c0        	memw
+     49e:	416d92        	s32i	a9, a13, 0x104
+     4a1:	0020c0        	memw
+     4a4:	466d82        	s32i	a8, a13, 0x118
+     4a7:	0020c0        	memw
+     4aa:	426d72        	s32i	a7, a13, 0x108
+     4ad:	c8a022        	movi	a2, 200
+     4b0:	ffc401        	l32r	a0, 3c0 <system_upgrade_reboot+0xa0>
+     4b3:	0000c0        	callx0	a0
+     4b6:	370c      	movi.n	a7, 3
+     4b8:	181c      	movi.n	a8, 17
+     4ba:	0020c0        	memw
+     4bd:	676d82        	s32i	a8, a13, 0x19c
+     4c0:	0020c0        	memw
+     4c3:	686d72        	s32i	a7, a13, 0x1a0
+     4c6:	ffb961        	l32r	a6, 3ac <system_upgrade_reboot+0x8c>
+     4c9:	0020c0        	memw
+     4cc:	436d62        	s32i	a6, a13, 0x10c
+     4cf:	cfaf52        	movi	a5, -49
+     4d2:	0020c0        	memw
+     4d5:	402d42        	l32i	a4, a13, 0x100
+     4d8:	104450        	and	a4, a4, a5
+     4db:	0020c0        	memw
+     4de:	406d42        	s32i	a4, a13, 0x100
+     4e1:	ffb801        	l32r	a0, 3c4 <system_upgrade_reboot+0xa4>
+     4e4:	0000c0        	callx0	a0
+     4e7:	0c2d      	mov.n	a2, a12
+     4e9:	ffb701        	l32r	a0, 3c8 <system_upgrade_reboot+0xa8>
+     4ec:	0000c0        	callx0	a0
+     4ef:	ffb0c1        	l32r	a12, 3b0 <system_upgrade_reboot+0x90>
+     4f2:	ffb0a1        	l32r	a10, 3b4 <system_upgrade_reboot+0x94>
+     4f5:	0020c0        	memw
+     4f8:	121c      	movi.n	a2, 17
+     4fa:	676d22        	s32i	a2, a13, 0x19c
+     4fd:	0020c0        	memw
+     500:	300c      	movi.n	a0, 3
+     502:	686d02        	s32i	a0, a13, 0x1a0
+     505:	eb7c      	movi.n	a11, -2
+     507:	0020c0        	memw
+     50a:	812a92        	l32i	a9, a10, 0x204
+     50d:	1099b0        	and	a9, a9, a11
+     510:	0020c0        	memw
+     513:	816a92        	s32i	a9, a10, 0x204
+     516:	00a122        	movi	a2, 0x100
+     519:	ffac01        	l32r	a0, 3cc <system_upgrade_reboot+0xac>
+     51c:	0000c0        	callx0	a0
+     51f:	f67c      	movi.n	a6, -1
+     521:	0020c0        	memw
+     524:	506d62        	s32i	a6, a13, 0x140
+     527:	052c      	movi.n	a5, 32
+     529:	0020c0        	memw
+     52c:	516d52        	s32i	a5, a13, 0x144
+     52f:	0020c0        	memw
+     532:	040c      	movi.n	a4, 0
+     534:	446d42        	s32i	a4, a13, 0x110
+     537:	0020c0        	memw
+     53a:	830c      	movi.n	a3, 8
+     53c:	466d32        	s32i	a3, a13, 0x118
+     53f:	0020c0        	memw
+     542:	426dc2        	s32i	a12, a13, 0x108
+     545:	11c8      	l32i.n	a12, a1, 4
+     547:	21d8      	l32i.n	a13, a1, 8
+     549:	0108      	l32i.n	a0, a1, 0
+     54b:	10c112        	addi	a1, a1, 16
+     54e:	f00d      	ret.n
+     550:	f20a00        	excw
+     553:	3f          	.byte 0x3f
+
+00000554 <system_get_time>:
+     554:	ffff21        	l32r	a2, 550 <system_deep_sleep+0x180>
+     557:	0020c0        	memw
+     55a:	802222        	l32i	a2, a2, 0x200
+     55d:	f00d      	ret.n
+     55f:	005400        	excw
+     562:	000000        	ill
+     565:	000000        	ill
+     568:	000064        	excw
+     56b:	005400        	excw
+     56e:	680000        	excw
+     571:	000000        	ill
+     574:	000054        	excw
+     577:	007000        	waiti	0
+	...
+
+0000059c <system_station_got_ip_set>:
+     59c:	027d      	mov.n	a7, a2
+     59e:	f0c112        	addi	a1, a1, -16
+     5a1:	ffef21        	l32r	a2, 560 <system_get_time+0xc>
+     5a4:	2109      	s32i.n	a0, a1, 8
+     5a6:	1149      	s32i.n	a4, a1, 4
+     5a8:	0139      	s32i.n	a3, a1, 0
+     5aa:	ffee41        	l32r	a4, 564 <system_get_time+0x10>
+     5ad:	ffee31        	l32r	a3, 568 <system_get_time+0x14>
+     5b0:	4448      	l32i.n	a4, a4, 16
+     5b2:	500c      	movi.n	a0, 5
+     5b4:	ba4402        	s8i	a0, a4, 186
+     5b7:	000742        	l8ui	a4, a7, 0
+     5ba:	010752        	l8ui	a5, a7, 1
+     5bd:	020762        	l8ui	a6, a7, 2
+     5c0:	030772        	l8ui	a7, a7, 3
+     5c3:	fff101        	l32r	a0, 588 <system_get_time+0x34>
+     5c6:	0000c0        	callx0	a0
+     5c9:	ffe821        	l32r	a2, 56c <system_get_time+0x18>
+     5cc:	0178      	l32i.n	a7, a1, 0
+     5ce:	ffe831        	l32r	a3, 570 <system_get_time+0x1c>
+     5d1:	000742        	l8ui	a4, a7, 0
+     5d4:	010752        	l8ui	a5, a7, 1
+     5d7:	020762        	l8ui	a6, a7, 2
+     5da:	030772        	l8ui	a7, a7, 3
+     5dd:	ffeb01        	l32r	a0, 58c <system_get_time+0x38>
+     5e0:	0000c0        	callx0	a0
+     5e3:	ffe421        	l32r	a2, 574 <system_get_time+0x20>
+     5e6:	1178      	l32i.n	a7, a1, 4
+     5e8:	ffe431        	l32r	a3, 578 <system_get_time+0x24>
+     5eb:	000742        	l8ui	a4, a7, 0
+     5ee:	010752        	l8ui	a5, a7, 1
+     5f1:	020762        	l8ui	a6, a7, 2
+     5f4:	030772        	l8ui	a7, a7, 3
+     5f7:	ffe601        	l32r	a0, 590 <system_get_time+0x3c>
+     5fa:	0000c0        	callx0	a0
+     5fd:	ffdf01        	l32r	a0, 57c <system_get_time+0x28>
+     600:	5d0082        	l8ui	a8, a0, 93
+     603:	5c0092        	l8ui	a9, a0, 92
+     606:	271866        	bnei	a8, 1, 631 <system_station_got_ip_set+0x95>
+     609:	241966        	bnei	a9, 1, 631 <system_station_got_ip_set+0x95>
+     60c:	ffdd21        	l32r	a2, 580 <system_get_time+0x2c>
+     60f:	0228      	l32i.n	a2, a2, 0
+     611:	ffe001        	l32r	a0, 594 <system_get_time+0x40>
+     614:	0000c0        	callx0	a0
+     617:	020c      	movi.n	a2, 0
+     619:	ffda61        	l32r	a6, 584 <system_get_time+0x30>
+     61c:	050c      	movi.n	a5, 0
+     61e:	5e0662        	l8ui	a6, a6, 94
+     621:	140c      	movi.n	a4, 1
+     623:	401600        	ssl	a6
+     626:	a14400        	sll	a4, a4
+     629:	043d      	mov.n	a3, a4
+     62b:	ffdb01        	l32r	a0, 598 <system_get_time+0x44>
+     62e:	0000c0        	callx0	a0
+     631:	2108      	l32i.n	a0, a1, 8
+     633:	10c112        	addi	a1, a1, 16
+     636:	f00d      	ret.n
+	...
+     640:	000074        	excw
+     643:	009000        	excw
+	...
+     64e:	740000        	extui	a0, a0, 0, 8
+     651:	000000        	ill
+     654:	0098      	l32i.n	a9, a0, 0
+	...
+     65e:	740000        	extui	a0, a0, 0, 8
+     661:	000000        	ill
+     664:	0000a0        	jx	a0
+     667:	000000        	ill
+     66a:	000000        	ill
+     66d:	3fffc0        	excw
+     670:	000074        	excw
+     673:	00a800        	excw
+     676:	000000        	ill
+     679:	3fffc0        	excw
+	...
+
+0000068c <system_print_meminfo>:
+     68c:	ffed21        	l32r	a2, 640 <system_station_got_ip_set+0xa4>
+     68f:	ffed31        	l32r	a3, 644 <system_station_got_ip_set+0xa8>
+     692:	ffea51        	l32r	a5, 63c <system_station_got_ip_set+0xa0>
+     695:	ffe861        	l32r	a6, 638 <system_station_got_ip_set+0x9c>
+     698:	f0c112        	addi	a1, a1, -16
+     69b:	0109      	s32i.n	a0, a1, 0
+     69d:	064d      	mov.n	a4, a6
+     69f:	c06560        	sub	a6, a5, a6
+     6a2:	fff601        	l32r	a0, 67c <system_station_got_ip_set+0xe0>
+     6a5:	0000c0        	callx0	a0
+     6a8:	ffea21        	l32r	a2, 650 <system_station_got_ip_set+0xb4>
+     6ab:	ffea31        	l32r	a3, 654 <system_station_got_ip_set+0xb8>
+     6ae:	ffe661        	l32r	a6, 648 <system_station_got_ip_set+0xac>
+     6b1:	ffe651        	l32r	a5, 64c <system_station_got_ip_set+0xb0>
+     6b4:	064d      	mov.n	a4, a6
+     6b6:	c06560        	sub	a6, a5, a6
+     6b9:	fff101        	l32r	a0, 680 <system_station_got_ip_set+0xe4>
+     6bc:	0000c0        	callx0	a0
+     6bf:	ffe821        	l32r	a2, 660 <system_station_got_ip_set+0xc4>
+     6c2:	ffe831        	l32r	a3, 664 <system_station_got_ip_set+0xc8>
+     6c5:	ffe461        	l32r	a6, 658 <system_station_got_ip_set+0xbc>
+     6c8:	ffe551        	l32r	a5, 65c <system_station_got_ip_set+0xc0>
+     6cb:	064d      	mov.n	a4, a6
+     6cd:	c06560        	sub	a6, a5, a6
+     6d0:	ffed01        	l32r	a0, 684 <system_station_got_ip_set+0xe8>
+     6d3:	0000c0        	callx0	a0
+     6d6:	ffe621        	l32r	a2, 670 <system_station_got_ip_set+0xd4>
+     6d9:	ffe631        	l32r	a3, 674 <system_station_got_ip_set+0xd8>
+     6dc:	ffe751        	l32r	a5, 678 <system_station_got_ip_set+0xdc>
+     6df:	ffe271        	l32r	a7, 668 <system_station_got_ip_set+0xcc>
+     6e2:	ffe261        	l32r	a6, 66c <system_station_got_ip_set+0xd0>
+     6e5:	074d      	mov.n	a4, a7
+     6e7:	c06670        	sub	a6, a6, a7
+     6ea:	ffe701        	l32r	a0, 688 <system_station_got_ip_set+0xec>
+     6ed:	0000c0        	callx0	a0
+     6f0:	0108      	l32i.n	a0, a1, 0
+     6f2:	10c112        	addi	a1, a1, 16
+     6f5:	f00d      	ret.n
+     6f7:	000000        	ill
+	...
+
+000006fc <system_get_free_heap_size>:
+     6fc:	f0c112        	addi	a1, a1, -16
+     6ff:	0109      	s32i.n	a0, a1, 0
+     701:	fffd01        	l32r	a0, 6f8 <system_print_meminfo+0x6c>
+     704:	0000c0        	callx0	a0
+     707:	0108      	l32i.n	a0, a1, 0
+     709:	10c112        	addi	a1, a1, 16
+     70c:	f00d      	ret.n
+     70e:	000000        	ill
+     711:	ff0000        	excw
+     714:	effe00        	excw
+     717:	3f          	.byte 0x3f
+     718:	ff          	.byte 0xff
+     719:	ff          	.byte 0xff
+     71a:	ff          	.byte 0xff
+	...
+
+0000071c <system_get_chip_id>:
+     71c:	fffd41        	l32r	a4, 710 <system_get_free_heap_size+0x14>
+     71f:	fffd21        	l32r	a2, 714 <system_get_free_heap_size+0x18>
+     722:	0020c0        	memw
+     725:	942232        	l32i	a3, a2, 0x250
+     728:	103340        	and	a3, a3, a4
+     72b:	fffb41        	l32r	a4, 718 <system_get_free_heap_size+0x1c>
+     72e:	0020c0        	memw
+     731:	952222        	l32i	a2, a2, 0x254
+     734:	404810        	ssai	24
+     737:	102240        	and	a2, a2, a4
+     73a:	812230        	src	a2, a2, a3
+     73d:	f00d      	ret.n
+     73f:	000000        	ill
+	...
+
+00000744 <system_rtc_clock_cali_proc>:
+     744:	f0c112        	addi	a1, a1, -16
+     747:	0109      	s32i.n	a0, a1, 0
+     749:	fffd01        	l32r	a0, 740 <system_get_chip_id+0x24>
+     74c:	0000c0        	callx0	a0
+     74f:	0108      	l32i.n	a0, a1, 0
+     751:	10c112        	addi	a1, a1, 16
+     754:	f00d      	ret.n
+     756:	000000        	ill
+     759:	000000        	ill
+     75c:	0322b6        	bltui	a2, 2, 763 <system_rtc_clock_cali_proc+0x1f>
+     75f:	020c      	movi.n	a2, 0
+     761:	f00d      	ret.n
+     763:	fffd41        	l32r	a4, 758 <system_rtc_clock_cali_proc+0x14>
+     766:	4438      	l32i.n	a3, a4, 16
+     768:	5448      	l32i.n	a4, a4, 20
+     76a:	834320        	moveqz	a4, a3, a2
+     76d:	248c      	beqz.n	a4, 773 <system_rtc_clock_cali_proc+0x2f>
+     76f:	0428      	l32i.n	a2, a4, 0
+     771:	f00d      	ret.n
+     773:	020c      	movi.n	a2, 0
+     775:	f00d      	ret.n
+     777:	060000        	excw
+     77a:	216000        	srai	a6, a0, 0
+
+0000077c <system_get_rtc_time>:
+     77c:	ffff21        	l32r	a2, 778 <system_rtc_clock_cali_proc+0x34>
+     77f:	0020c0        	memw
+     782:	472222        	l32i	a2, a2, 0x11c
+     785:	f00d      	ret.n
+	...
+
+0000079c <wifi_station_dhcpc_start>:
+     79c:	020c      	movi.n	a2, 0
+     79e:	f0c112        	addi	a1, a1, -16
+     7a1:	11c9      	s32i.n	a12, a1, 4
+     7a3:	0109      	s32i.n	a0, a1, 0
+     7a5:	fffb45        	call0	75c <system_rtc_clock_cali_proc+0x18>
+     7a8:	02cd      	mov.n	a12, a2
+     7aa:	000005        	call0	7ac <wifi_station_dhcpc_start+0x10>
+     7ad:	3f2226        	beqi	a2, 2, 7f0 <wifi_station_dhcpc_start+0x54>
+     7b0:	fff601        	l32r	a0, 788 <system_get_rtc_time+0xc>
+     7b3:	bcac      	beqz.n	a12, 7e2 <wifi_station_dhcpc_start+0x46>
+     7b5:	000022        	l8ui	a2, a0, 0
+     7b8:	62ec      	bnez.n	a2, 7e2 <wifi_station_dhcpc_start+0x46>
+     7ba:	0c2d      	mov.n	a2, a12
+     7bc:	fff451        	l32r	a5, 78c <system_get_rtc_time+0x10>
+     7bf:	060c      	movi.n	a6, 0
+     7c1:	3569      	s32i.n	a6, a5, 12
+     7c3:	4569      	s32i.n	a6, a5, 16
+     7c5:	5569      	s32i.n	a6, a5, 20
+     7c7:	35cb      	addi.n	a3, a5, 12
+     7c9:	10c542        	addi	a4, a5, 16
+     7cc:	14c552        	addi	a5, a5, 20
+     7cf:	fff101        	l32r	a0, 794 <system_get_rtc_time+0x18>
+     7d2:	0000c0        	callx0	a0
+     7d5:	0c2d      	mov.n	a2, a12
+     7d7:	fff001        	l32r	a0, 798 <system_get_rtc_time+0x1c>
+     7da:	0000c0        	callx0	a0
+     7dd:	ffec01        	l32r	a0, 790 <system_get_rtc_time+0x14>
+     7e0:	c2cc      	bnez.n	a2, 7f0 <wifi_station_dhcpc_start+0x54>
+     7e2:	120c      	movi.n	a2, 1
+     7e4:	004022        	s8i	a2, a0, 0
+     7e7:	11c8      	l32i.n	a12, a1, 4
+     7e9:	0108      	l32i.n	a0, a1, 0
+     7eb:	10c112        	addi	a1, a1, 16
+     7ee:	f00d      	ret.n
+     7f0:	020c      	movi.n	a2, 0
+     7f2:	fffc46        	j	7e7 <wifi_station_dhcpc_start+0x4b>
+	...
+
+00000804 <wifi_station_dhcpc_stop>:
+     804:	020c      	movi.n	a2, 0
+     806:	f0c112        	addi	a1, a1, -16
+     809:	11c9      	s32i.n	a12, a1, 4
+     80b:	0109      	s32i.n	a0, a1, 0
+     80d:	fff4c5        	call0	75c <system_rtc_clock_cali_proc+0x18>
+     810:	02cd      	mov.n	a12, a2
+     812:	000005        	call0	814 <wifi_station_dhcpc_stop+0x10>
+     815:	042266        	bnei	a2, 2, 81d <wifi_station_dhcpc_stop+0x19>
+     818:	020c      	movi.n	a2, 0
+     81a:	000706        	j	83a <wifi_station_dhcpc_stop+0x36>
+     81d:	fff601        	l32r	a0, 7f8 <wifi_station_dhcpc_start+0x5c>
+     820:	fc8c      	beqz.n	a12, 833 <wifi_station_dhcpc_stop+0x2f>
+     822:	000022        	l8ui	a2, a0, 0
+     825:	0a1266        	bnei	a2, 1, 833 <wifi_station_dhcpc_stop+0x2f>
+     828:	0c2d      	mov.n	a2, a12
+     82a:	fff501        	l32r	a0, 800 <wifi_station_dhcpc_start+0x64>
+     82d:	0000c0        	callx0	a0
+     830:	fff301        	l32r	a0, 7fc <wifi_station_dhcpc_start+0x60>
+     833:	120c      	movi.n	a2, 1
+     835:	030c      	movi.n	a3, 0
+     837:	004032        	s8i	a3, a0, 0
+     83a:	11c8      	l32i.n	a12, a1, 4
+     83c:	0108      	l32i.n	a0, a1, 0
+     83e:	10c112        	addi	a1, a1, 16
+     841:	f00d      	ret.n
+     843:	000000        	ill
+	...
+
+00000848 <wifi_get_opmode>:
+     848:	ffff21        	l32r	a2, 844 <wifi_station_dhcpc_stop+0x40>
+     84b:	800222        	l8ui	a2, a2, 128
+     84e:	0142b6        	bltui	a2, 4, 853 <wifi_get_opmode+0xb>
+     851:	220c      	movi.n	a2, 2
+     853:	f00d      	ret.n
+	...
+
+0000086c <wifi_set_opmode_local>:
+     86c:	f0c112        	addi	a1, a1, -16
+     86f:	11c9      	s32i.n	a12, a1, 4
+     871:	0109      	s32i.n	a0, a1, 0
+     873:	02cd      	mov.n	a12, a2
+     875:	100c      	movi.n	a0, 1
+     877:	0142f6        	bgeui	a2, 4, 87c <wifi_set_opmode_local+0x10>
+     87a:	000c      	movi.n	a0, 0
+     87c:	220c      	movi.n	a2, 2
+     87e:	93c200        	movnez	a12, a2, a0
+     881:	051c66        	bnei	a12, 1, 88a <wifi_set_opmode_local+0x1e>
+     884:	fff501        	l32r	a0, 858 <wifi_get_opmode+0x10>
+     887:	0000c0        	callx0	a0
+     88a:	052c66        	bnei	a12, 2, 893 <wifi_set_opmode_local+0x27>
+     88d:	fff301        	l32r	a0, 85c <wifi_get_opmode+0x14>
+     890:	0000c0        	callx0	a0
+     893:	0c2d      	mov.n	a2, a12
+     895:	fff201        	l32r	a0, 860 <wifi_get_opmode+0x18>
+     898:	0000c0        	callx0	a0
+     89b:	021c26        	beqi	a12, 1, 8a1 <wifi_set_opmode_local+0x35>
+     89e:	053c66        	bnei	a12, 3, 8a7 <wifi_set_opmode_local+0x3b>
+     8a1:	fff001        	l32r	a0, 864 <wifi_get_opmode+0x1c>
+     8a4:	0000c0        	callx0	a0
+     8a7:	022c26        	beqi	a12, 2, 8ad <wifi_set_opmode_local+0x41>
+     8aa:	053c66        	bnei	a12, 3, 8b3 <wifi_set_opmode_local+0x47>
+     8ad:	ffee01        	l32r	a0, 868 <wifi_get_opmode+0x20>
+     8b0:	0000c0        	callx0	a0
+     8b3:	11c8      	l32i.n	a12, a1, 4
+     8b5:	0108      	l32i.n	a0, a1, 0
+     8b7:	10c112        	addi	a1, a1, 16
+     8ba:	f00d      	ret.n
+	...
+
+000008cc <wifi_set_opmode>:
+     8cc:	f0c112        	addi	a1, a1, -16
+     8cf:	21c9      	s32i.n	a12, a1, 8
+     8d1:	1109      	s32i.n	a0, a1, 4
+     8d3:	02cd      	mov.n	a12, a2
+     8d5:	3342b6        	bltui	a2, 4, 90c <wifi_set_opmode+0x40>
+     8d8:	020c      	movi.n	a2, 0
+     8da:	000946        	j	903 <wifi_set_opmode+0x37>
+     8dd:	fff701        	l32r	a0, 8bc <wifi_set_opmode_local+0x50>
+     8e0:	fff831        	l32r	a3, 8c0 <wifi_set_opmode_local+0x54>
+     8e3:	800022        	l8ui	a2, a0, 128
+     8e6:	000332        	l8ui	a3, a3, 0
+     8e9:	1412c7        	beq	a2, a12, 901 <wifi_set_opmode+0x35>
+     8ec:	0109      	s32i.n	a0, a1, 0
+     8ee:	041366        	bnei	a3, 1, 8f6 <wifi_set_opmode+0x2a>
+     8f1:	0c2d      	mov.n	a2, a12
+     8f3:	000005        	call0	8f4 <wifi_set_opmode+0x28>
+     8f6:	0148      	l32i.n	a4, a1, 0
+     8f8:	fff321        	l32r	a2, 8c4 <wifi_set_opmode_local+0x58>
+     8fb:	8044c2        	s8i	a12, a4, 128
+     8fe:	000005        	call0	900 <wifi_set_opmode+0x34>
+     901:	120c      	movi.n	a2, 1
+     903:	21c8      	l32i.n	a12, a1, 8
+     905:	1108      	l32i.n	a0, a1, 4
+     907:	10c112        	addi	a1, a1, 16
+     90a:	f00d      	ret.n
+     90c:	520c      	movi.n	a2, 5
+     90e:	ff7285        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+     911:	c80266        	bnei	a2, -1, 8dd <wifi_set_opmode+0x11>
+     914:	ffed51        	l32r	a5, 8c8 <wifi_set_opmode_local+0x5c>
+     917:	8a45c2        	s8i	a12, a5, 138
+     91a:	fff8c6        	j	901 <wifi_set_opmode+0x35>
+	...
+
+0000094c <wifi_param_save_protect>:
+     94c:	025d      	mov.n	a5, a2
+     94e:	e0c112        	addi	a1, a1, -32
+     951:	41d9      	s32i.n	a13, a1, 16
+     953:	51e9      	s32i.n	a14, a1, 20
+     955:	61f9      	s32i.n	a15, a1, 24
+     957:	2109      	s32i.n	a0, a1, 8
+     959:	31c9      	s32i.n	a12, a1, 12
+     95b:	fff121        	l32r	a2, 920 <wifi_set_opmode+0x54>
+     95e:	1159      	s32i.n	a5, a1, 4
+     960:	32c8      	l32i.n	a12, a2, 12
+     962:	1228      	l32i.n	a2, a2, 4
+     964:	0c3d      	mov.n	a3, a12
+     966:	ffef01        	l32r	a0, 924 <wifi_set_opmode+0x58>
+     969:	0000c0        	callx0	a0
+     96c:	013d      	mov.n	a3, a1
+     96e:	440c      	movi.n	a4, 4
+     970:	fcc2f2        	addi	a15, a2, -4
+     973:	e20b      	addi.n	a14, a2, -1
+     975:	82dec0        	mull	a13, a14, a12
+     978:	0d2d      	mov.n	a2, a13
+     97a:	ffeb01        	l32r	a0, 928 <wifi_set_opmode+0x5c>
+     97d:	0000c0        	callx0	a0
+     980:	000132        	l8ui	a3, a1, 0
+     983:	23fc      	bnez.n	a3, 9b9 <wifi_param_save_protect+0x6d>
+     985:	ff2b      	addi.n	a15, a15, 2
+     987:	0f2d      	mov.n	a2, a15
+     989:	ffe801        	l32r	a0, 92c <wifi_set_opmode+0x60>
+     98c:	0000c0        	callx0	a0
+     98f:	822fc0        	mull	a2, a15, a12
+     992:	1138      	l32i.n	a3, a1, 4
+     994:	6ca342        	movi	a4, 0x36c
+     997:	ffe601        	l32r	a0, 930 <wifi_set_opmode+0x64>
+     99a:	0000c0        	callx0	a0
+     99d:	0e2d      	mov.n	a2, a14
+     99f:	140c      	movi.n	a4, 1
+     9a1:	004142        	s8i	a4, a1, 0
+     9a4:	ffe401        	l32r	a0, 934 <wifi_set_opmode+0x68>
+     9a7:	0000c0        	callx0	a0
+     9aa:	0d2d      	mov.n	a2, a13
+     9ac:	013d      	mov.n	a3, a1
+     9ae:	440c      	movi.n	a4, 4
+     9b0:	ffe201        	l32r	a0, 938 <wifi_set_opmode+0x6c>
+     9b3:	0000c0        	callx0	a0
+     9b6:	000c06        	j	9ea <wifi_param_save_protect+0x9e>
+     9b9:	ff1b      	addi.n	a15, a15, 1
+     9bb:	0f2d      	mov.n	a2, a15
+     9bd:	ffdf01        	l32r	a0, 93c <wifi_set_opmode+0x70>
+     9c0:	0000c0        	callx0	a0
+     9c3:	822fc0        	mull	a2, a15, a12
+     9c6:	1138      	l32i.n	a3, a1, 4
+     9c8:	6ca342        	movi	a4, 0x36c
+     9cb:	ffdd01        	l32r	a0, 940 <wifi_set_opmode+0x74>
+     9ce:	0000c0        	callx0	a0
+     9d1:	0e2d      	mov.n	a2, a14
+     9d3:	050c      	movi.n	a5, 0
+     9d5:	004152        	s8i	a5, a1, 0
+     9d8:	ffdb01        	l32r	a0, 944 <wifi_set_opmode+0x78>
+     9db:	0000c0        	callx0	a0
+     9de:	0d2d      	mov.n	a2, a13
+     9e0:	013d      	mov.n	a3, a1
+     9e2:	440c      	movi.n	a4, 4
+     9e4:	ffd901        	l32r	a0, 948 <wifi_set_opmode+0x7c>
+     9e7:	0000c0        	callx0	a0
+     9ea:	31c8      	l32i.n	a12, a1, 12
+     9ec:	41d8      	l32i.n	a13, a1, 16
+     9ee:	51e8      	l32i.n	a14, a1, 20
+     9f0:	61f8      	l32i.n	a15, a1, 24
+     9f2:	2108      	l32i.n	a0, a1, 8
+     9f4:	20c112        	addi	a1, a1, 32
+     9f7:	f00d      	ret.n
+	...
+
+00000a18 <wifi_station_get_config>:
+     a18:	f0c112        	addi	a1, a1, -16
+     a1b:	11c9      	s32i.n	a12, a1, 4
+     a1d:	0109      	s32i.n	a0, a1, 0
+     a1f:	02cd      	mov.n	a12, a2
+     a21:	32cc      	bnez.n	a2, a28 <wifi_station_get_config+0x10>
+     a23:	020c      	movi.n	a2, 0
+     a25:	000c46        	j	a5a <wifi_station_get_config+0x42>
+     a28:	fff531        	l32r	a3, 9fc <wifi_param_save_protect+0xb0>
+     a2b:	042c      	movi.n	a4, 32
+     a2d:	fff701        	l32r	a0, a0c <wifi_param_save_protect+0xc0>
+     a30:	0000c0        	callx0	a0
+     a33:	20cc22        	addi	a2, a12, 32
+     a36:	fff231        	l32r	a3, a00 <wifi_param_save_protect+0xb4>
+     a39:	044c      	movi.n	a4, 64
+     a3b:	fff501        	l32r	a0, a10 <wifi_param_save_protect+0xc4>
+     a3e:	0000c0        	callx0	a0
+     a41:	61cc22        	addi	a2, a12, 97
+     a44:	fff031        	l32r	a3, a04 <wifi_param_save_protect+0xb8>
+     a47:	fff001        	l32r	a0, a08 <wifi_param_save_protect+0xbc>
+     a4a:	640c      	movi.n	a4, 6
+     a4c:	800002        	l8ui	a0, a0, 128
+     a4f:	604c02        	s8i	a0, a12, 96
+     a52:	fff001        	l32r	a0, a14 <wifi_param_save_protect+0xc8>
+     a55:	0000c0        	callx0	a0
+     a58:	120c      	movi.n	a2, 1
+     a5a:	11c8      	l32i.n	a12, a1, 4
+     a5c:	0108      	l32i.n	a0, a1, 0
+     a5e:	10c112        	addi	a1, a1, 16
+     a61:	f00d      	ret.n
+	...
+
+00000a6c <wifi_station_ap_number_set>:
+     a6c:	f0c112        	addi	a1, a1, -16
+     a6f:	11c9      	s32i.n	a12, a1, 4
+     a71:	0109      	s32i.n	a0, a1, 0
+     a73:	02cd      	mov.n	a12, a2
+     a75:	2462f6        	bgeui	a2, 6, a9d <wifi_station_ap_number_set+0x31>
+     a78:	12ac      	beqz.n	a2, a9d <wifi_station_ap_number_set+0x31>
+     a7a:	000005        	call0	a7c <wifi_station_ap_number_set+0x10>
+     a7d:	1c2226        	beqi	a2, 2, a9d <wifi_station_ap_number_set+0x31>
+     a80:	fff901        	l32r	a0, a64 <wifi_station_get_config+0x4c>
+     a83:	800022        	l8ui	a2, a0, 128
+     a86:	0812c7        	beq	a2, a12, a92 <wifi_station_ap_number_set+0x26>
+     a89:	fff721        	l32r	a2, a68 <wifi_station_get_config+0x50>
+     a8c:	8040c2        	s8i	a12, a0, 128
+     a8f:	000005        	call0	a90 <wifi_station_ap_number_set+0x24>
+     a92:	120c      	movi.n	a2, 1
+     a94:	11c8      	l32i.n	a12, a1, 4
+     a96:	0108      	l32i.n	a0, a1, 0
+     a98:	10c112        	addi	a1, a1, 16
+     a9b:	f00d      	ret.n
+     a9d:	020c      	movi.n	a2, 0
+     a9f:	fffc46        	j	a94 <wifi_station_ap_number_set+0x28>
+	...
+     ae2:	120000        	excw
+     ae5:	d9e0c1        	l32r	a12, ffff7268 <system_uart_swap+0xffff57cc>
+     ae8:	210941        	l32r	a4, fffc8f0c <system_uart_swap+0xfffc7470>
+     aeb:	31c9      	s32i.n	a12, a1, 12
+     aed:	51e9      	s32i.n	a14, a1, 20
+     aef:	02cd      	mov.n	a12, a2
+     af1:	03ed      	mov.n	a14, a3
+     af3:	ffec01        	l32r	a0, aa4 <wifi_station_ap_number_set+0x38>
+     af6:	0109      	s32i.n	a0, a1, 0
+     af8:	804032        	s8i	a3, a0, 128
+     afb:	fff301        	l32r	a0, ac8 <wifi_station_ap_number_set+0x5c>
+     afe:	0000c0        	callx0	a0
+     b01:	032c      	movi.n	a3, 32
+     b03:	ffe901        	l32r	a0, aa8 <wifi_station_ap_number_set+0x3c>
+     b06:	64a0d2        	movi	a13, 100
+     b09:	d1dde0        	mul16s	a13, a13, a14
+     b0c:	d0da      	add.n	a13, a0, a13
+     b0e:	013327        	bltu	a3, a2, b13 <wifi_station_ap_number_set+0xa7>
+     b11:	023d      	mov.n	a3, a2
+     b13:	042c      	movi.n	a4, 32
+     b15:	c56d32        	s32i	a3, a13, 0x314
+     b18:	18a322        	movi	a2, 0x318
+     b1b:	2d2a      	add.n	a2, a13, a2
+     b1d:	0c3d      	mov.n	a3, a12
+     b1f:	ffeb01        	l32r	a0, acc <wifi_station_ap_number_set+0x60>
+     b22:	0000c0        	callx0	a0
+     b25:	044c      	movi.n	a4, 64
+     b27:	20cc32        	addi	a3, a12, 32
+     b2a:	38a322        	movi	a2, 0x338
+     b2d:	2d2a      	add.n	a2, a13, a2
+     b2f:	1139      	s32i.n	a3, a1, 4
+     b31:	ffe701        	l32r	a0, ad0 <wifi_station_ap_number_set+0x64>
+     b34:	0000c0        	callx0	a0
+     b37:	ffde21        	l32r	a2, ab0 <wifi_station_ap_number_set+0x44>
+     b3a:	c52d32        	l32i	a3, a13, 0x314
+     b3d:	ffdb41        	l32r	a4, aac <wifi_station_ap_number_set+0x40>
+     b40:	6149      	s32i.n	a4, a1, 24
+     b42:	486432        	s32i	a3, a4, 0x120
+     b45:	0c3d      	mov.n	a3, a12
+     b47:	042c      	movi.n	a4, 32
+     b49:	ffe201        	l32r	a0, ad4 <wifi_station_ap_number_set+0x68>
+     b4c:	0000c0        	callx0	a0
+     b4f:	61d8      	l32i.n	a13, a1, 24
+     b51:	1138      	l32i.n	a3, a1, 4
+     b53:	ffd821        	l32r	a2, ab4 <wifi_station_ap_number_set+0x48>
+     b56:	044c      	movi.n	a4, 64
+     b58:	ffe001        	l32r	a0, ad8 <wifi_station_ap_number_set+0x6c>
+     b5b:	0000c0        	callx0	a0
+     b5e:	ffd601        	l32r	a0, ab8 <wifi_station_ap_number_set+0x4c>
+     b61:	f0eee0        	subx8	a14, a14, a14
+     b64:	050c      	movi.n	a5, 0
+     b66:	01dd42        	addmi	a4, a13, 0x100
+     b69:	130c      	movi.n	a3, 1
+     b6b:	0128      	l32i.n	a2, a1, 0
+     b6d:	4a4432        	s8i	a3, a4, 74
+     b70:	ffd222        	addmi	a2, a2, 0xffffff00
+     b73:	ba4252        	s8i	a5, a2, 186
+     b76:	600c62        	l8ui	a6, a12, 96
+     b79:	0e0a      	add.n	a0, a14, a0
+     b7b:	b6ac      	beqz.n	a6, baa <wifi_station_ap_number_set+0x13e>
+     b7d:	640c      	movi.n	a4, 6
+     b7f:	61ccc2        	addi	a12, a12, 97
+     b82:	ec4232        	s8i	a3, a2, 236
+     b85:	804032        	s8i	a3, a0, 128
+     b88:	ffcd21        	l32r	a2, abc <wifi_station_ap_number_set+0x50>
+     b8b:	0c3d      	mov.n	a3, a12
+     b8d:	ffd301        	l32r	a0, adc <wifi_station_ap_number_set+0x70>
+     b90:	0000c0        	callx0	a0
+     b93:	1da532        	movi	a3, 0x51d
+     b96:	ffca21        	l32r	a2, ac0 <wifi_station_ap_number_set+0x54>
+     b99:	640c      	movi.n	a4, 6
+     b9b:	223a      	add.n	a2, a2, a3
+     b9d:	0c3d      	mov.n	a3, a12
+     b9f:	2e2a      	add.n	a2, a14, a2
+     ba1:	ffcf01        	l32r	a0, ae0 <wifi_station_ap_number_set+0x74>
+     ba4:	0000c0        	callx0	a0
+     ba7:	000146        	j	bb0 <wifi_station_ap_number_set+0x144>
+     baa:	ec4252        	s8i	a5, a2, 236
+     bad:	804052        	s8i	a5, a0, 128
+     bb0:	ffc521        	l32r	a2, ac4 <wifi_station_ap_number_set+0x58>
+     bb3:	000005        	call0	bb4 <wifi_station_ap_number_set+0x148>
+     bb6:	31c8      	l32i.n	a12, a1, 12
+     bb8:	41d8      	l32i.n	a13, a1, 16
+     bba:	51e8      	l32i.n	a14, a1, 20
+     bbc:	2108      	l32i.n	a0, a1, 8
+     bbe:	20c112        	addi	a1, a1, 32
+     bc1:	f00d      	ret.n
+     bc3:	011000        	slli	a1, a0, 32
+     bc6:	230000        	excw
+	...
+
+00000bec <wifi_station_set_config>:
+     bec:	e0c112        	addi	a1, a1, -32
+     bef:	41c9      	s32i.n	a12, a1, 16
+     bf1:	51d9      	s32i.n	a13, a1, 20
+     bf3:	71f9      	s32i.n	a15, a1, 28
+     bf5:	61e9      	s32i.n	a14, a1, 24
+     bf7:	3109      	s32i.n	a0, a1, 12
+     bf9:	02ed      	mov.n	a14, a2
+     bfb:	428c      	beqz.n	a2, c03 <wifi_station_set_config+0x17>
+     bfd:	000005        	call0	c00 <wifi_station_set_config+0x14>
+     c00:	302266        	bnei	a2, 2, c34 <wifi_station_set_config+0x48>
+     c03:	020c      	movi.n	a2, 0
+     c05:	000706        	j	c25 <wifi_station_set_config+0x39>
+     c08:	ffefc1        	l32r	a12, bc4 <wifi_station_ap_number_set+0x158>
+     c0b:	000c32        	l8ui	a3, a12, 0
+     c0e:	049d37        	bne	a13, a3, c16 <wifi_station_set_config+0x2a>
+     c11:	030c      	movi.n	a3, 0
+     c13:	004c32        	s8i	a3, a12, 0
+     c16:	0e2d      	mov.n	a2, a14
+     c18:	ffec85        	call0	ae4 <wifi_station_ap_number_set+0x78>
+     c1b:	000c02        	l8ui	a0, a12, 0
+     c1e:	001b      	addi.n	a0, a0, 1
+     c20:	004c02        	s8i	a0, a12, 0
+     c23:	120c      	movi.n	a2, 1
+     c25:	41c8      	l32i.n	a12, a1, 16
+     c27:	51d8      	l32i.n	a13, a1, 20
+     c29:	61e8      	l32i.n	a14, a1, 24
+     c2b:	71f8      	l32i.n	a15, a1, 28
+     c2d:	3108      	l32i.n	a0, a1, 12
+     c2f:	20c112        	addi	a1, a1, 32
+     c32:	f00d      	ret.n
+     c34:	320c      	movi.n	a2, 3
+     c36:	ff4005        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+     c39:	100266        	bnei	a2, -1, c4d <wifi_station_set_config+0x61>
+     c3c:	0e3d      	mov.n	a3, a14
+     c3e:	ffe221        	l32r	a2, bc8 <wifi_station_ap_number_set+0x15c>
+     c41:	67a042        	movi	a4, 103
+     c44:	ffe601        	l32r	a0, bdc <wifi_station_ap_number_set+0x170>
+     c47:	0000c0        	callx0	a0
+     c4a:	fff546        	j	c23 <wifi_station_set_config+0x37>
+     c4d:	ffdf01        	l32r	a0, bcc <wifi_station_ap_number_set+0x160>
+     c50:	8000d2        	l8ui	a13, a0, 128
+     c53:	fb1d16        	beqz	a13, c08 <wifi_station_set_config+0x1c>
+     c56:	0c0c      	movi.n	a12, 0
+     c58:	0109      	s32i.n	a0, a1, 0
+     c5a:	61ce62        	addi	a6, a14, 97
+     c5d:	20ce72        	addi	a7, a14, 32
+     c60:	2179      	s32i.n	a7, a1, 8
+     c62:	1169      	s32i.n	a6, a1, 4
+     c64:	0e3d      	mov.n	a3, a14
+     c66:	042c      	movi.n	a4, 32
+     c68:	18a322        	movi	a2, 0x318
+     c6b:	ffd9f1        	l32r	a15, bd0 <wifi_station_ap_number_set+0x164>
+     c6e:	64a002        	movi	a0, 100
+     c71:	c10c00        	mul16u	a0, a12, a0
+     c74:	ff0a      	add.n	a15, a15, a0
+     c76:	2f2a      	add.n	a2, a15, a2
+     c78:	ffda01        	l32r	a0, be0 <wifi_station_ap_number_set+0x174>
+     c7b:	0000c0        	callx0	a0
+     c7e:	048256        	bnez	a2, cca <wifi_station_set_config+0xde>
+     c81:	2138      	l32i.n	a3, a1, 8
+     c83:	044c      	movi.n	a4, 64
+     c85:	38a322        	movi	a2, 0x338
+     c88:	2f2a      	add.n	a2, a15, a2
+     c8a:	ffd601        	l32r	a0, be4 <wifi_station_ap_number_set+0x178>
+     c8d:	0000c0        	callx0	a0
+     c90:	62fc      	bnez.n	a2, cca <wifi_station_set_config+0xde>
+     c92:	600e32        	l8ui	a3, a14, 96
+     c95:	000c      	movi.n	a0, 0
+     c97:	f39c      	beqz.n	a3, cba <wifi_station_set_config+0xce>
+     c99:	f03cc0        	subx8	a3, a12, a12
+     c9c:	ffce21        	l32r	a2, bd4 <wifi_station_ap_number_set+0x168>
+     c9f:	640c      	movi.n	a4, 6
+     ca1:	223a      	add.n	a2, a2, a3
+     ca3:	1da532        	movi	a3, 0x51d
+     ca6:	223a      	add.n	a2, a2, a3
+     ca8:	1138      	l32i.n	a3, a1, 4
+     caa:	ffcf01        	l32r	a0, be8 <wifi_station_ap_number_set+0x17c>
+     cad:	0000c0        	callx0	a0
+     cb0:	140c      	movi.n	a4, 1
+     cb2:	932420        	movnez	a2, a4, a2
+     cb5:	020d      	mov.n	a0, a2
+     cb7:	ffffc6        	j	cba <wifi_station_set_config+0xce>
+     cba:	c08c      	beqz.n	a0, cca <wifi_station_set_config+0xde>
+     cbc:	0158      	l32i.n	a5, a1, 0
+     cbe:	810552        	l8ui	a5, a5, 129
+     cc1:	7460c0        	extui	a6, a12, 0, 8
+     cc4:	c05560        	sub	a5, a5, a6
+     cc7:	f58516        	beqz	a5, c23 <wifi_station_set_config+0x37>
+     cca:	cc1b      	addi.n	a12, a12, 1
+     ccc:	74c0c0        	extui	a12, a12, 0, 8
+     ccf:	919dc7        	bne	a13, a12, c64 <wifi_station_set_config+0x78>
+     cd2:	f32d16        	beqz	a13, c08 <wifi_station_set_config+0x1c>
+     cd5:	ffa002        	movi	a0, 255
+     cd8:	ffc021        	l32r	a2, bd8 <wifi_station_ap_number_set+0x16c>
+     cdb:	0c0c      	movi.n	a12, 0
+     cdd:	64a0f2        	movi	a15, 100
+     ce0:	c1fcf0        	mul16u	a15, a12, a15
+     ce3:	f2fa      	add.n	a15, a2, a15
+     ce5:	800ff2        	l8ui	a15, a15, 128
+     ce8:	099f07        	bne	a15, a0, cf5 <wifi_station_set_config+0x109>
+     ceb:	0c3d      	mov.n	a3, a12
+     ced:	0e2d      	mov.n	a2, a14
+     cef:	ffdf45        	call0	ae4 <wifi_station_ap_number_set+0x78>
+     cf2:	ffcb46        	j	c23 <wifi_station_set_config+0x37>
+     cf5:	cc1b      	addi.n	a12, a12, 1
+     cf7:	74c0c0        	extui	a12, a12, 0, 8
+     cfa:	df9dc7        	bne	a13, a12, cdd <wifi_station_set_config+0xf1>
+     cfd:	ffc1c6        	j	c08 <wifi_station_set_config+0x1c>
+     d00:	000000        	ill
+	...
+
+00000d04 <wifi_station_get_current_ap_id>:
+     d04:	ffff21        	l32r	a2, d00 <wifi_station_set_config+0x114>
+     d07:	800222        	l8ui	a2, a2, 128
+     d0a:	ffa032        	movi	a3, 255
+     d0d:	011237        	beq	a2, a3, d12 <wifi_station_get_current_ap_id+0xe>
+     d10:	f00d      	ret.n
+     d12:	020c      	movi.n	a2, 0
+     d14:	f00d      	ret.n
+	...
+     d1e:	b00000        	addx8	a0, a0, a0
+	...
+
+00000d58 <wifi_station_ap_change>:
+     d58:	e0c112        	addi	a1, a1, -32
+     d5b:	3109      	s32i.n	a0, a1, 12
+     d5d:	61e9      	s32i.n	a14, a1, 24
+     d5f:	51d9      	s32i.n	a13, a1, 20
+     d61:	41c9      	s32i.n	a12, a1, 16
+     d63:	ffedd1        	l32r	a13, d18 <wifi_station_get_current_ap_id+0x14>
+     d66:	02cd      	mov.n	a12, a2
+     d68:	800de2        	l8ui	a14, a13, 128
+     d6b:	000005        	call0	d6c <wifi_station_ap_change+0x14>
+     d6e:	fec202        	addi	a0, a2, -2
+     d71:	0c5016        	beqz	a0, e3a <wifi_station_ap_change+0xe2>
+     d74:	023ce7        	bltu	a12, a14, d7a <wifi_station_ap_change+0x22>
+     d77:	002fc6        	j	e3a <wifi_station_ap_change+0xe2>
+     d7a:	000c      	movi.n	a0, 0
+     d7c:	64a022        	movi	a2, 100
+     d7f:	ffe731        	l32r	a3, d1c <wifi_station_get_current_ap_id+0x18>
+     d82:	d122c0        	mul16s	a2, a2, a12
+     d85:	1129      	s32i.n	a2, a1, 4
+     d87:	223a      	add.n	a2, a2, a3
+     d89:	2129      	s32i.n	a2, a1, 8
+     d8b:	800222        	l8ui	a2, a2, 128
+     d8e:	ffa032        	movi	a3, 255
+     d91:	029237        	bne	a2, a3, d97 <wifi_station_ap_change+0x3f>
+     d94:	0021c6        	j	e1f <wifi_station_ap_change+0xc7>
+     d97:	ffe221        	l32r	a2, d20 <wifi_station_get_current_ap_id+0x1c>
+     d9a:	0c3d      	mov.n	a3, a12
+     d9c:	ffe901        	l32r	a0, d40 <wifi_station_get_current_ap_id+0x3c>
+     d9f:	0000c0        	callx0	a0
+     da2:	042c      	movi.n	a4, 32
+     da4:	ffe101        	l32r	a0, d28 <wifi_station_get_current_ap_id+0x24>
+     da7:	11e8      	l32i.n	a14, a1, 4
+     da9:	814dc2        	s8i	a12, a13, 129
+     dac:	2128      	l32i.n	a2, a1, 8
+     dae:	ffdd31        	l32r	a3, d24 <wifi_station_get_current_ap_id+0x20>
+     db1:	0139      	s32i.n	a3, a1, 0
+     db3:	1f2222        	l32i	a2, a2, 124
+     db6:	486322        	s32i	a2, a3, 0x120
+     db9:	ee0a      	add.n	a14, a14, a0
+     dbb:	ffdc21        	l32r	a2, d2c <wifi_station_get_current_ap_id+0x28>
+     dbe:	18a332        	movi	a3, 0x318
+     dc1:	3e3a      	add.n	a3, a14, a3
+     dc3:	ffe001        	l32r	a0, d44 <wifi_station_get_current_ap_id+0x40>
+     dc6:	0000c0        	callx0	a0
+     dc9:	ffd921        	l32r	a2, d30 <wifi_station_get_current_ap_id+0x2c>
+     dcc:	044c      	movi.n	a4, 64
+     dce:	38a332        	movi	a3, 0x338
+     dd1:	3e3a      	add.n	a3, a14, a3
+     dd3:	ffdd01        	l32r	a0, d48 <wifi_station_get_current_ap_id+0x44>
+     dd6:	0000c0        	callx0	a0
+     dd9:	ffd821        	l32r	a2, d3c <wifi_station_get_current_ap_id+0x38>
+     ddc:	180c      	movi.n	a8, 1
+     dde:	0198      	l32i.n	a9, a1, 0
+     de0:	1da552        	movi	a5, 0x51d
+     de3:	ffd541        	l32r	a4, d38 <wifi_station_get_current_ap_id+0x34>
+     de6:	ffd361        	l32r	a6, d34 <wifi_station_get_current_ap_id+0x30>
+     de9:	f03cc0        	subx8	a3, a12, a12
+     dec:	ffdd72        	addmi	a7, a13, 0xffffff00
+     def:	0a0c      	movi.n	a10, 0
+     df1:	bb47a2        	s8i	a10, a7, 187
+     df4:	636a      	add.n	a6, a3, a6
+     df6:	445a      	add.n	a4, a4, a5
+     df8:	01d992        	addmi	a9, a9, 0x100
+     dfb:	4a4982        	s8i	a8, a9, 74
+     dfe:	334a      	add.n	a3, a3, a4
+     e00:	640c      	movi.n	a4, 6
+     e02:	800662        	l8ui	a6, a6, 128
+     e05:	ed4762        	s8i	a6, a7, 237
+     e08:	ffd101        	l32r	a0, d4c <wifi_station_get_current_ap_id+0x48>
+     e0b:	0000c0        	callx0	a0
+     e0e:	ffd001        	l32r	a0, d50 <wifi_station_get_current_ap_id+0x4c>
+     e11:	0000c0        	callx0	a0
+     e14:	ffd001        	l32r	a0, d54 <wifi_station_get_current_ap_id+0x50>
+     e17:	0000c0        	callx0	a0
+     e1a:	120c      	movi.n	a2, 1
+     e1c:	000346        	j	e2d <wifi_station_ap_change+0xd5>
+     e1f:	2c1b      	addi.n	a2, a12, 1
+     e21:	742020        	extui	a2, a2, 0, 8
+     e24:	c0be20        	sub	a11, a14, a2
+     e27:	8320b0        	moveqz	a2, a0, a11
+     e2a:	000005        	call0	e2c <wifi_station_ap_change+0xd4>
+     e2d:	41c8      	l32i.n	a12, a1, 16
+     e2f:	51d8      	l32i.n	a13, a1, 20
+     e31:	61e8      	l32i.n	a14, a1, 24
+     e33:	3108      	l32i.n	a0, a1, 12
+     e35:	20c112        	addi	a1, a1, 32
+     e38:	f00d      	ret.n
+     e3a:	020c      	movi.n	a2, 0
+     e3c:	fffb46        	j	e2d <wifi_station_ap_change+0xd5>
+	...
+
+00000e50 <wifi_station_scan>:
+     e50:	f0c112        	addi	a1, a1, -16
+     e53:	3109      	s32i.n	a0, a1, 12
+     e55:	0129      	s32i.n	a2, a1, 0
+     e57:	fffa01        	l32r	a0, e40 <wifi_station_ap_change+0xe8>
+     e5a:	1139      	s32i.n	a3, a1, 4
+     e5c:	4008      	l32i.n	a0, a0, 16
+     e5e:	2109      	s32i.n	a0, a1, 8
+     e60:	000005        	call0	e64 <wifi_station_scan+0x14>
+     e63:	212226        	beqi	a2, 2, e88 <wifi_station_scan+0x38>
+     e66:	2128      	l32i.n	a2, a1, 8
+     e68:	c29c      	beqz.n	a2, e88 <wifi_station_scan+0x38>
+     e6a:	0128      	l32i.n	a2, a1, 0
+     e6c:	fff651        	l32r	a5, e44 <wifi_station_ap_change+0xec>
+     e6f:	040c      	movi.n	a4, 0
+     e71:	1138      	l32i.n	a3, a1, 4
+     e73:	005542        	s16i	a4, a5, 0
+     e76:	fff441        	l32r	a4, e48 <wifi_station_ap_change+0xf0>
+     e79:	fff401        	l32r	a0, e4c <wifi_station_ap_change+0xf4>
+     e7c:	0000c0        	callx0	a0
+     e7f:	120c      	movi.n	a2, 1
+     e81:	3108      	l32i.n	a0, a1, 12
+     e83:	10c112        	addi	a1, a1, 16
+     e86:	f00d      	ret.n
+     e88:	020c      	movi.n	a2, 0
+     e8a:	fffcc6        	j	e81 <wifi_station_scan+0x31>
+     e8d:	000000        	ill
+     e90:	000000        	ill
+	...
+
+00000e94 <wifi_station_get_auto_connect>:
+     e94:	ffff31        	l32r	a3, e90 <wifi_station_scan+0x40>
+     e97:	800332        	l8ui	a3, a3, 128
+     e9a:	140c      	movi.n	a4, 1
+     e9c:	0123f6        	bgeui	a3, 2, ea1 <wifi_station_get_auto_connect+0xd>
+     e9f:	034d      	mov.n	a4, a3
+     ea1:	742040        	extui	a2, a4, 0, 8
+     ea4:	f00d      	ret.n
+	...
+
+00000eb0 <wifi_station_set_auto_connect>:
+     eb0:	f0c112        	addi	a1, a1, -16
+     eb3:	11c9      	s32i.n	a12, a1, 4
+     eb5:	0109      	s32i.n	a0, a1, 0
+     eb7:	02cd      	mov.n	a12, a2
+     eb9:	0522f6        	bgeui	a2, 2, ec2 <wifi_station_set_auto_connect+0x12>
+     ebc:	000005        	call0	ec0 <wifi_station_set_auto_connect+0x10>
+     ebf:	042266        	bnei	a2, 2, ec7 <wifi_station_set_auto_connect+0x17>
+     ec2:	020c      	movi.n	a2, 0
+     ec4:	0004c6        	j	edb <wifi_station_set_auto_connect+0x2b>
+     ec7:	fff801        	l32r	a0, ea8 <wifi_station_get_auto_connect+0x14>
+     eca:	800022        	l8ui	a2, a0, 128
+     ecd:	0812c7        	beq	a2, a12, ed9 <wifi_station_set_auto_connect+0x29>
+     ed0:	fff721        	l32r	a2, eac <wifi_station_get_auto_connect+0x18>
+     ed3:	8040c2        	s8i	a12, a0, 128
+     ed6:	000005        	call0	ed8 <wifi_station_set_auto_connect+0x28>
+     ed9:	120c      	movi.n	a2, 1
+     edb:	11c8      	l32i.n	a12, a1, 4
+     edd:	0108      	l32i.n	a0, a1, 0
+     edf:	10c112        	addi	a1, a1, 16
+     ee2:	f00d      	ret.n
+	...
+
+00000ef4 <wifi_station_connect>:
+     ef4:	f0c112        	addi	a1, a1, -16
+     ef7:	1109      	s32i.n	a0, a1, 4
+     ef9:	fffa01        	l32r	a0, ee4 <wifi_station_set_auto_connect+0x34>
+     efc:	4008      	l32i.n	a0, a0, 16
+     efe:	0109      	s32i.n	a0, a1, 0
+     f00:	000005        	call0	f04 <wifi_station_connect+0x10>
+     f03:	342226        	beqi	a2, 2, f3b <wifi_station_connect+0x47>
+     f06:	0128      	l32i.n	a2, a1, 0
+     f08:	f2ac      	beqz.n	a2, f3b <wifi_station_connect+0x47>
+     f0a:	220c      	movi.n	a2, 2
+     f0c:	ff1285        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+     f0f:	1f0226        	beqi	a2, -1, f32 <wifi_station_connect+0x3e>
+     f12:	fff501        	l32r	a0, ee8 <wifi_station_set_auto_connect+0x38>
+     f15:	4048      	l32i.n	a4, a0, 16
+     f17:	030c      	movi.n	a3, 0
+     f19:	b84432        	s8i	a3, a4, 184
+     f1c:	4028      	l32i.n	a2, a0, 16
+     f1e:	b94232        	s8i	a3, a2, 185
+     f21:	782002        	l32i	a0, a0, 0x1e0
+     f24:	0a0026        	beqi	a0, -1, f32 <wifi_station_connect+0x3e>
+     f27:	708c      	beqz.n	a0, f32 <wifi_station_connect+0x3e>
+     f29:	fff021        	l32r	a2, eec <wifi_station_set_auto_connect+0x3c>
+     f2c:	fff101        	l32r	a0, ef0 <wifi_station_set_auto_connect+0x40>
+     f2f:	0000c0        	callx0	a0
+     f32:	120c      	movi.n	a2, 1
+     f34:	1108      	l32i.n	a0, a1, 4
+     f36:	10c112        	addi	a1, a1, 16
+     f39:	f00d      	ret.n
+     f3b:	020c      	movi.n	a2, 0
+     f3d:	fffcc6        	j	f34 <wifi_station_connect+0x40>
+	...
+
+00000f58 <wifi_station_disconnect>:
+     f58:	f0c112        	addi	a1, a1, -16
+     f5b:	1109      	s32i.n	a0, a1, 4
+     f5d:	fff801        	l32r	a0, f40 <wifi_station_connect+0x4c>
+     f60:	4008      	l32i.n	a0, a0, 16
+     f62:	0109      	s32i.n	a0, a1, 0
+     f64:	000005        	call0	f68 <wifi_station_disconnect+0x10>
+     f67:	322226        	beqi	a2, 2, f9d <wifi_station_disconnect+0x45>
+     f6a:	0128      	l32i.n	a2, a1, 0
+     f6c:	d2ac      	beqz.n	a2, f9d <wifi_station_disconnect+0x45>
+     f6e:	120c      	movi.n	a2, 1
+     f70:	ff0c45        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+     f73:	fff401        	l32r	a0, f44 <wifi_station_connect+0x50>
+     f76:	3b0226        	beqi	a2, -1, fb5 <wifi_station_disconnect+0x5d>
+     f79:	4078      	l32i.n	a7, a0, 16
+     f7b:	030c      	movi.n	a3, 0
+     f7d:	b84732        	s8i	a3, a7, 184
+     f80:	4068      	l32i.n	a6, a0, 16
+     f82:	ba4632        	s8i	a3, a6, 186
+     f85:	4058      	l32i.n	a5, a0, 16
+     f87:	b94532        	s8i	a3, a5, 185
+     f8a:	4048      	l32i.n	a4, a0, 16
+     f8c:	f448      	l32i.n	a4, a4, 60
+     f8e:	049c      	beqz.n	a4, fa2 <wifi_station_disconnect+0x4a>
+     f90:	040c      	movi.n	a4, 0
+     f92:	002d      	mov.n	a2, a0
+     f94:	ffee01        	l32r	a0, f4c <wifi_station_connect+0x58>
+     f97:	0000c0        	callx0	a0
+     f9a:	0005c6        	j	fb5 <wifi_station_disconnect+0x5d>
+     f9d:	020c      	movi.n	a2, 0
+     f9f:	000506        	j	fb7 <wifi_station_disconnect+0x5f>
+     fa2:	ffeb01        	l32r	a0, f50 <wifi_station_connect+0x5c>
+     fa5:	0000c0        	callx0	a0
+     fa8:	ffe821        	l32r	a2, f48 <wifi_station_connect+0x54>
+     fab:	4228      	l32i.n	a2, a2, 16
+     fad:	224b      	addi.n	a2, a2, 4
+     faf:	ffe901        	l32r	a0, f54 <wifi_station_connect+0x60>
+     fb2:	0000c0        	callx0	a0
+     fb5:	120c      	movi.n	a2, 1
+     fb7:	1108      	l32i.n	a0, a1, 4
+     fb9:	10c112        	addi	a1, a1, 16
+     fbc:	f00d      	ret.n
+	...
+
+00000fc8 <wifi_station_get_connect_status>:
+     fc8:	f0c112        	addi	a1, a1, -16
+     fcb:	1109      	s32i.n	a0, a1, 4
+     fcd:	fffc01        	l32r	a0, fc0 <wifi_station_disconnect+0x68>
+     fd0:	4008      	l32i.n	a0, a0, 16
+     fd2:	0109      	s32i.n	a0, a1, 0
+     fd4:	000005        	call0	fd8 <wifi_station_get_connect_status+0x10>
+     fd7:	1108      	l32i.n	a0, a1, 4
+     fd9:	102226        	beqi	a2, 2, fed <wifi_station_get_connect_status+0x25>
+     fdc:	0128      	l32i.n	a2, a1, 0
+     fde:	b28c      	beqz.n	a2, fed <wifi_station_get_connect_status+0x25>
+     fe0:	fff921        	l32r	a2, fc4 <wifi_station_disconnect+0x6c>
+     fe3:	4228      	l32i.n	a2, a2, 16
+     fe5:	ba0222        	l8ui	a2, a2, 186
+     fe8:	10c112        	addi	a1, a1, 16
+     feb:	f00d      	ret.n
+     fed:	ffa022        	movi	a2, 255
+     ff0:	fffd06        	j	fe8 <wifi_station_get_connect_status+0x20>
+	...
+
+00000ffc <wifi_softap_cacl_mac>:
+     ffc:	e0c112        	addi	a1, a1, -32
+     fff:	11c9      	s32i.n	a12, a1, 4
+    1001:	41f9      	s32i.n	a15, a1, 16
+    1003:	0109      	s32i.n	a0, a1, 0
+    1005:	21d9      	s32i.n	a13, a1, 8
+    1007:	31e9      	s32i.n	a14, a1, 12
+    1009:	02dd      	mov.n	a13, a2
+    100b:	03ed      	mov.n	a14, a3
+    100d:	044216        	beqz	a2, 1055 <wifi_softap_cacl_mac+0x59>
+    1010:	041316        	beqz	a3, 1055 <wifi_softap_cacl_mac+0x59>
+    1013:	640c      	movi.n	a4, 6
+    1015:	fff701        	l32r	a0, ff4 <wifi_station_get_connect_status+0x2c>
+    1018:	0000c0        	callx0	a0
+    101b:	0c0c      	movi.n	a12, 0
+    101d:	2f0c      	movi.n	a15, 2
+    101f:	0d2d      	mov.n	a2, a13
+    1021:	0e3d      	mov.n	a3, a14
+    1023:	640c      	movi.n	a4, 6
+    1025:	000e02        	l8ui	a0, a14, 0
+    1028:	115ce0        	slli	a5, a12, 2
+    102b:	2000f0        	or	a0, a0, a15
+    102e:	300050        	xor	a0, a0, a5
+    1031:	004d02        	s8i	a0, a13, 0
+    1034:	fff101        	l32r	a0, ff8 <wifi_station_get_connect_status+0x30>
+    1037:	0000c0        	callx0	a0
+    103a:	62cc      	bnez.n	a2, 1044 <wifi_softap_cacl_mac+0x48>
+    103c:	cc1b      	addi.n	a12, a12, 1
+    103e:	74c0c0        	extui	a12, a12, 0, 8
+    1041:	dadc66        	bnei	a12, 64, 101f <wifi_softap_cacl_mac+0x23>
+    1044:	120c      	movi.n	a2, 1
+    1046:	11c8      	l32i.n	a12, a1, 4
+    1048:	21d8      	l32i.n	a13, a1, 8
+    104a:	31e8      	l32i.n	a14, a1, 12
+    104c:	41f8      	l32i.n	a15, a1, 16
+    104e:	0108      	l32i.n	a0, a1, 0
+    1050:	20c112        	addi	a1, a1, 32
+    1053:	f00d      	ret.n
+    1055:	020c      	movi.n	a2, 0
+    1057:	fffac6        	j	1046 <wifi_softap_cacl_mac+0x4a>
+	...
+    106a:	cc0000        	excw
+	...
+
+0000107c <wifi_softap_set_default_ssid>:
+    107c:	120c      	movi.n	a2, 1
+    107e:	f0c112        	addi	a1, a1, -16
+    1081:	013d      	mov.n	a3, a1
+    1083:	2109      	s32i.n	a0, a1, 8
+    1085:	000005        	call0	1088 <wifi_softap_set_default_ssid+0xc>
+    1088:	fff501        	l32r	a0, 105c <wifi_softap_cacl_mac+0x60>
+    108b:	fff521        	l32r	a2, 1060 <wifi_softap_cacl_mac+0x64>
+    108e:	a12002        	l32i	a0, a0, 0x284
+    1091:	080222        	l8ui	a2, a2, 8
+    1094:	050026        	beqi	a0, -1, 109d <wifi_softap_set_default_ssid+0x21>
+    1097:	ffa032        	movi	a3, 255
+    109a:	279237        	bne	a2, a3, 10c5 <wifi_softap_set_default_ssid+0x49>
+    109d:	fff121        	l32r	a2, 1064 <wifi_softap_cacl_mac+0x68>
+    10a0:	432c      	movi.n	a3, 36
+    10a2:	fff401        	l32r	a0, 1074 <wifi_softap_cacl_mac+0x78>
+    10a5:	0000c0        	callx0	a0
+    10a8:	fff021        	l32r	a2, 1068 <wifi_softap_cacl_mac+0x6c>
+    10ab:	fff031        	l32r	a3, 106c <wifi_softap_cacl_mac+0x70>
+    10ae:	030142        	l8ui	a4, a1, 3
+    10b1:	040152        	l8ui	a5, a1, 4
+    10b4:	050162        	l8ui	a6, a1, 5
+    10b7:	fff001        	l32r	a0, 1078 <wifi_softap_cacl_mac+0x7c>
+    10ba:	0000c0        	callx0	a0
+    10bd:	ffec41        	l32r	a4, 1070 <wifi_softap_cacl_mac+0x74>
+    10c0:	a30c      	movi.n	a3, 10
+    10c2:	616432        	s32i	a3, a4, 0x184
+    10c5:	120c      	movi.n	a2, 1
+    10c7:	2108      	l32i.n	a0, a1, 8
+    10c9:	10c112        	addi	a1, a1, 16
+    10cc:	f00d      	ret.n
+	...
+
+000010e4 <wifi_softap_get_config>:
+    10e4:	f0c112        	addi	a1, a1, -16
+    10e7:	0109      	s32i.n	a0, a1, 0
+    10e9:	21d9      	s32i.n	a13, a1, 8
+    10eb:	11c9      	s32i.n	a12, a1, 4
+    10ed:	31e9      	s32i.n	a14, a1, 12
+    10ef:	02cd      	mov.n	a12, a2
+    10f1:	32cc      	bnez.n	a2, 10f8 <wifi_softap_get_config+0x14>
+    10f3:	020c      	movi.n	a2, 0
+    10f5:	001e06        	j	1171 <wifi_softap_get_config+0x8d>
+    10f8:	fff6d1        	l32r	a13, 10d0 <wifi_softap_set_default_ssid+0x54>
+    10fb:	800d02        	l8ui	a0, a13, 128
+    10fe:	0e0c      	movi.n	a14, 0
+    1100:	0250f6        	bgeui	a0, 5, 1106 <wifi_softap_get_config+0x22>
+    1103:	051066        	bnei	a0, 1, 110c <wifi_softap_get_config+0x28>
+    1106:	624ce2        	s8i	a14, a12, 98
+    1109:	000086        	j	110f <wifi_softap_get_config+0x2b>
+    110c:	624202        	s8i	a0, a2, 98
+    110f:	0c2d      	mov.n	a2, a12
+    1111:	fff031        	l32r	a3, 10d4 <wifi_softap_set_default_ssid+0x58>
+    1114:	042c      	movi.n	a4, 32
+    1116:	fff101        	l32r	a0, 10dc <wifi_softap_set_default_ssid+0x60>
+    1119:	0000c0        	callx0	a0
+    111c:	20cc22        	addi	a2, a12, 32
+    111f:	ffee31        	l32r	a3, 10d8 <wifi_softap_set_default_ssid+0x5c>
+    1122:	044c      	movi.n	a4, 64
+    1124:	ffef01        	l32r	a0, 10e0 <wifi_softap_set_default_ssid+0x64>
+    1127:	0000c0        	callx0	a0
+    112a:	facd22        	addi	a2, a13, -6
+    112d:	011202        	l16ui	a0, a2, 2
+    1130:	001222        	l16ui	a2, a2, 0
+    1133:	110000        	slli	a0, a0, 16
+    1136:	200020        	or	a0, a0, a2
+    1139:	022c      	movi.n	a2, 32
+    113b:	022207        	blt	a2, a0, 1141 <wifi_softap_get_config+0x5d>
+    113e:	0510e6        	bgei	a0, 1, 1147 <wifi_softap_get_config+0x63>
+    1141:	604ce2        	s8i	a14, a12, 96
+    1144:	000086        	j	114a <wifi_softap_get_config+0x66>
+    1147:	604c02        	s8i	a0, a12, 96
+    114a:	7f0d02        	l8ui	a0, a13, 127
+    114d:	e30c      	movi.n	a3, 14
+    114f:	013307        	bltu	a3, a0, 1154 <wifi_softap_get_config+0x70>
+    1152:	00cc      	bnez.n	a0, 1156 <wifi_softap_get_config+0x72>
+    1154:	100c      	movi.n	a0, 1
+    1156:	614c02        	s8i	a0, a12, 97
+    1159:	810d02        	l8ui	a0, a13, 129
+    115c:	0120f6        	bgeui	a0, 2, 1161 <wifi_softap_get_config+0x7d>
+    115f:	00ed      	mov.n	a14, a0
+    1161:	634ce2        	s8i	a14, a12, 99
+    1164:	820d02        	l8ui	a0, a13, 130
+    1167:	120c      	movi.n	a2, 1
+    1169:	0150b6        	bltui	a0, 5, 116e <wifi_softap_get_config+0x8a>
+    116c:	400c      	movi.n	a0, 4
+    116e:	644c02        	s8i	a0, a12, 100
+    1171:	11c8      	l32i.n	a12, a1, 4
+    1173:	21d8      	l32i.n	a13, a1, 8
+    1175:	31e8      	l32i.n	a14, a1, 12
+    1177:	0108      	l32i.n	a0, a1, 0
+    1179:	10c112        	addi	a1, a1, 16
+    117c:	f00d      	ret.n
+    117e:	000000        	ill
+    1181:	fe          	.byte 0xfe
+    1182:	ef          	.byte 0xef
+    1183:	3f          	.byte 0x3f
+    1184:	001000        	excw
+    1187:	fe0000        	excw
+    118a:	ef          	.byte 0xef
+    118b:	3f          	.byte 0x3f
+	...
+    1194:	008b      	addi.n	a0, a0, 8
+	...
+
+000011d8 <wifi_softap_set_config>:
+    11d8:	e0c112        	addi	a1, a1, -32
+    11db:	51d9      	s32i.n	a13, a1, 20
+    11dd:	61e9      	s32i.n	a14, a1, 24
+    11df:	41c9      	s32i.n	a12, a1, 16
+    11e1:	3109      	s32i.n	a0, a1, 12
+    11e3:	02cd      	mov.n	a12, a2
+    11e5:	628c      	beqz.n	a2, 11ef <wifi_softap_set_config+0x17>
+    11e7:	000005        	call0	11e8 <wifi_softap_set_config+0x10>
+    11ea:	020b      	addi.n	a0, a2, -1
+    11ec:	09c056        	bnez	a0, 128c <wifi_softap_set_config+0xb4>
+    11ef:	020c      	movi.n	a2, 0
+    11f1:	002286        	j	127f <wifi_softap_set_config+0xa7>
+    11f4:	0128      	l32i.n	a2, a1, 0
+    11f6:	6a1266        	bnei	a2, 1, 1264 <wifi_softap_set_config+0x8c>
+    11f9:	ffe141        	l32r	a4, 1180 <wifi_softap_get_config+0x9c>
+    11fc:	0020c0        	memw
+    11ff:	852432        	l32i	a3, a4, 0x214
+    1202:	150c      	movi.n	a5, 1
+    1204:	203350        	or	a3, a3, a5
+    1207:	0020c0        	memw
+    120a:	856432        	s32i	a3, a4, 0x214
+    120d:	a0a022        	movi	a2, 160
+    1210:	ffe501        	l32r	a0, 11a4 <wifi_softap_get_config+0xc0>
+    1213:	0000c0        	callx0	a0
+    1216:	0e2d      	mov.n	a2, a14
+    1218:	1138      	l32i.n	a3, a1, 4
+    121a:	072c      	movi.n	a7, 32
+    121c:	fbcd52        	addi	a5, a13, -5
+    121f:	030542        	l8ui	a4, a5, 3
+    1222:	020562        	l8ui	a6, a5, 2
+    1225:	114480        	slli	a4, a4, 8
+    1228:	204460        	or	a4, a4, a6
+    122b:	114480        	slli	a4, a4, 8
+    122e:	010562        	l8ui	a6, a5, 1
+    1231:	000552        	l8ui	a5, a5, 0
+    1234:	204460        	or	a4, a4, a6
+    1237:	114480        	slli	a4, a4, 8
+    123a:	0c6d      	mov.n	a6, a12
+    123c:	204450        	or	a4, a4, a5
+    123f:	ffd151        	l32r	a5, 1184 <wifi_softap_get_config+0xa0>
+    1242:	ffd901        	l32r	a0, 11a8 <wifi_softap_get_config+0xc4>
+    1245:	0000c0        	callx0	a0
+    1248:	e77c      	movi.n	a7, -2
+    124a:	0020c0        	memw
+    124d:	ffce61        	l32r	a6, 1188 <wifi_softap_get_config+0xa4>
+    1250:	852652        	l32i	a5, a6, 0x214
+    1253:	105570        	and	a5, a5, a7
+    1256:	0020c0        	memw
+    1259:	856652        	s32i	a5, a6, 0x214
+    125c:	025c      	movi.n	a2, 80
+    125e:	ffd301        	l32r	a0, 11ac <wifi_softap_get_config+0xc8>
+    1261:	0000c0        	callx0	a0
+    1264:	ffca21        	l32r	a2, 118c <wifi_softap_get_config+0xa8>
+    1267:	000005        	call0	1268 <wifi_softap_set_config+0x90>
+    126a:	ffc981        	l32r	a8, 1190 <wifi_softap_get_config+0xac>
+    126d:	5888      	l32i.n	a8, a8, 20
+    126f:	a88c      	beqz.n	a8, 127d <wifi_softap_set_config+0xa5>
+    1271:	ffcf01        	l32r	a0, 11b0 <wifi_softap_get_config+0xcc>
+    1274:	0000c0        	callx0	a0
+    1277:	ffcf01        	l32r	a0, 11b4 <wifi_softap_get_config+0xd0>
+    127a:	0000c0        	callx0	a0
+    127d:	120c      	movi.n	a2, 1
+    127f:	41c8      	l32i.n	a12, a1, 16
+    1281:	51d8      	l32i.n	a13, a1, 20
+    1283:	61e8      	l32i.n	a14, a1, 24
+    1285:	3108      	l32i.n	a0, a1, 12
+    1287:	20c112        	addi	a1, a1, 32
+    128a:	f00d      	ret.n
+    128c:	620c      	movi.n	a2, 6
+    128e:	feda85        	call0	38 <system_pp_recycle_rx_pkt-0x1b4>
+    1291:	100266        	bnei	a2, -1, 12a5 <wifi_softap_set_config+0xcd>
+    1294:	0c3d      	mov.n	a3, a12
+    1296:	ffbf21        	l32r	a2, 1194 <wifi_softap_get_config+0xb0>
+    1299:	65a042        	movi	a4, 101
+    129c:	ffc701        	l32r	a0, 11b8 <wifi_softap_get_config+0xd4>
+    129f:	0000c0        	callx0	a0
+    12a2:	fff5c6        	j	127d <wifi_softap_set_config+0xa5>
+    12a5:	0c3d      	mov.n	a3, a12
+    12a7:	042c      	movi.n	a4, 32
+    12a9:	ffbb21        	l32r	a2, 1198 <wifi_softap_get_config+0xb4>
+    12ac:	1129      	s32i.n	a2, a1, 4
+    12ae:	ffc301        	l32r	a0, 11bc <wifi_softap_get_config+0xd8>
+    12b1:	0000c0        	callx0	a0
+    12b4:	ffbae1        	l32r	a14, 119c <wifi_softap_get_config+0xb8>
+    12b7:	20cc92        	addi	a9, a12, 32
+    12ba:	2199      	s32i.n	a9, a1, 8
+    12bc:	e1ced2        	addi	a13, a14, -31
+    12bf:	d2cc      	bnez.n	a2, 12d0 <wifi_softap_set_config+0xf8>
+    12c1:	0e2d      	mov.n	a2, a14
+    12c3:	093d      	mov.n	a3, a9
+    12c5:	044c      	movi.n	a4, 64
+    12c7:	ffbe01        	l32r	a0, 11c0 <wifi_softap_get_config+0xdc>
+    12ca:	0000c0        	callx0	a0
+    12cd:	0cc216        	beqz	a2, 139d <wifi_softap_set_config+0x1c5>
+    12d0:	1a0c      	movi.n	a10, 1
+    12d2:	01a9      	s32i.n	a10, a1, 0
+    12d4:	000cb2        	l8ui	a11, a12, 0
+    12d7:	ffa002        	movi	a0, 255
+    12da:	0b9b07        	bne	a11, a0, 12e9 <wifi_softap_set_config+0x111>
+    12dd:	010c22        	l8ui	a2, a12, 1
+    12e0:	059207        	bne	a2, a0, 12e9 <wifi_softap_set_config+0x111>
+    12e3:	000005        	call0	12e4 <wifi_softap_set_config+0x10c>
+    12e6:	000f06        	j	1326 <wifi_softap_set_config+0x14e>
+    12e9:	600c02        	l8ui	a0, a12, 96
+    12ec:	90cc      	bnez.n	a0, 12f9 <wifi_softap_set_config+0x121>
+    12ee:	0c2d      	mov.n	a2, a12
+    12f0:	ffb501        	l32r	a0, 11c4 <wifi_softap_get_config+0xe0>
+    12f3:	0000c0        	callx0	a0
+    12f6:	740020        	extui	a0, a2, 0, 8
+    12f9:	062c      	movi.n	a6, 32
+    12fb:	132c      	movi.n	a3, 33
+    12fd:	013037        	bltu	a0, a3, 1302 <wifi_softap_set_config+0x12a>
+    1300:	060d      	mov.n	a0, a6
+    1302:	1128      	l32i.n	a2, a1, 4
+    1304:	0c3d      	mov.n	a3, a12
+    1306:	fbcd52        	addi	a5, a13, -5
+    1309:	414800        	srli	a4, a0, 8
+    130c:	014542        	s8i	a4, a5, 1
+    130f:	004502        	s8i	a0, a5, 0
+    1312:	414840        	srli	a4, a4, 8
+    1315:	024542        	s8i	a4, a5, 2
+    1318:	414840        	srli	a4, a4, 8
+    131b:	034542        	s8i	a4, a5, 3
+    131e:	042c      	movi.n	a4, 32
+    1320:	ffaa01        	l32r	a0, 11c8 <wifi_softap_get_config+0xe4>
+    1323:	0000c0        	callx0	a0
+    1326:	2138      	l32i.n	a3, a1, 8
+    1328:	0e2d      	mov.n	a2, a14
+    132a:	044c      	movi.n	a4, 64
+    132c:	ffa801        	l32r	a0, 11cc <wifi_softap_get_config+0xe8>
+    132f:	0000c0        	callx0	a0
+    1332:	ffdd52        	addmi	a5, a13, 0xffffff00
+    1335:	000c      	movi.n	a0, 0
+    1337:	c24502        	s8i	a0, a5, 194
+    133a:	620c62        	l8ui	a6, a12, 98
+    133d:	180c      	movi.n	a8, 1
+    133f:	0256f6        	bgeui	a6, 5, 1345 <wifi_softap_set_config+0x16d>
+    1342:	051666        	bnei	a6, 1, 134b <wifi_softap_set_config+0x173>
+    1345:	814d02        	s8i	a0, a13, 129
+    1348:	000086        	j	134e <wifi_softap_set_config+0x176>
+    134b:	814d62        	s8i	a6, a13, 129
+    134e:	610c72        	l8ui	a7, a12, 97
+    1351:	e90c      	movi.n	a9, 14
+    1353:	013977        	bltu	a9, a7, 1358 <wifi_softap_set_config+0x180>
+    1356:	47cc      	bnez.n	a7, 135e <wifi_softap_set_config+0x186>
+    1358:	804d82        	s8i	a8, a13, 128
+    135b:	000086        	j	1361 <wifi_softap_set_config+0x189>
+    135e:	804d72        	s8i	a7, a13, 128
+    1361:	630c52        	l8ui	a5, a12, 99
+    1364:	0125f6        	bgeui	a5, 2, 1369 <wifi_softap_set_config+0x191>
+    1367:	050d      	mov.n	a0, a5
+    1369:	824d02        	s8i	a0, a13, 130
+    136c:	640c02        	l8ui	a0, a12, 100
+    136f:	0150b6        	bltui	a0, 5, 1374 <wifi_softap_set_config+0x19c>
+    1372:	400c      	movi.n	a0, 4
+    1374:	834d02        	s8i	a0, a13, 131
+    1377:	0226f6        	bgeui	a6, 2, 137d <wifi_softap_set_config+0x1a5>
+    137a:	ffb986        	j	1264 <wifi_softap_set_config+0x8c>
+    137d:	0e2d      	mov.n	a2, a14
+    137f:	ff9401        	l32r	a0, 11d0 <wifi_softap_get_config+0xec>
+    1382:	0000c0        	callx0	a0
+    1385:	ff86c1        	l32r	a12, 11a0 <wifi_softap_get_config+0xbc>
+    1388:	c0c2a2        	addi	a10, a2, -64
+    138b:	e65a56        	bnez	a10, 11f4 <wifi_softap_set_config+0x1c>
+    138e:	0c3d      	mov.n	a3, a12
+    1390:	0e2d      	mov.n	a2, a14
+    1392:	042c      	movi.n	a4, 32
+    1394:	ff9001        	l32r	a0, 11d4 <wifi_softap_get_config+0xf0>
+    1397:	0000c0        	callx0	a0
+    139a:	ffb186        	j	1264 <wifi_softap_set_config+0x8c>
+    139d:	800d02        	l8ui	a0, a13, 128
+    13a0:	610cb2        	l8ui	a11, a12, 97
+    13a3:	1d9b07        	bne	a11, a0, 13c4 <wifi_softap_set_config+0x1ec>
+    13a6:	810d32        	l8ui	a3, a13, 129
+    13a9:	620c22        	l8ui	a2, a12, 98
+    13ac:	149237        	bne	a2, a3, 13c4 <wifi_softap_set_config+0x1ec>
+    13af:	830d52        	l8ui	a5, a13, 131
+    13b2:	640c42        	l8ui	a4, a12, 100
+    13b5:	0b9457        	bne	a4, a5, 13c4 <wifi_softap_set_config+0x1ec>
+    13b8:	820d72        	l8ui	a7, a13, 130
+    13bb:	630c62        	l8ui	a6, a12, 99
+    13be:	c06670        	sub	a6, a6, a7
+    13c1:	eb8616        	beqz	a6, 127d <wifi_softap_set_config+0xa5>
+    13c4:	080c      	movi.n	a8, 0
+    13c6:	0189      	s32i.n	a8, a1, 0
+    13c8:	ffc206        	j	12d4 <wifi_softap_set_config+0xfc>
+	...
+
+000013d4 <wifi_softap_set_station_info>:
+    13d4:	e0c112        	addi	a1, a1, -32
+    13d7:	31d9      	s32i.n	a13, a1, 12
+    13d9:	1109      	s32i.n	a0, a1, 4
+    13db:	6129      	s32i.n	a2, a1, 24
+    13dd:	0139      	s32i.n	a3, a1, 0
+    13df:	21c9      	s32i.n	a12, a1, 8
+    13e1:	51f9      	s32i.n	a15, a1, 20
+    13e3:	41e9      	s32i.n	a14, a1, 16
+    13e5:	fff9e1        	l32r	a14, 13cc <wifi_softap_set_config+0x1f4>
+    13e8:	02fd      	mov.n	a15, a2
+    13ea:	5ee8      	l32i.n	a14, a14, 20
+    13ec:	1c0c      	movi.n	a12, 1
+    13ee:	a0dce0        	addx4	a13, a12, a14
+    13f1:	242dd2        	l32i	a13, a13, 144
+    13f4:	8d9c      	beqz.n	a13, 1410 <wifi_softap_set_station_info+0x3c>
+    13f6:	0f2d      	mov.n	a2, a15
+    13f8:	0d3d      	mov.n	a3, a13
+    13fa:	640c      	movi.n	a4, 6
+    13fc:	fff501        	l32r	a0, 13d0 <wifi_softap_set_config+0x1f8>
+    13ff:	0000c0        	callx0	a0
+    1402:	a2cc      	bnez.n	a2, 1410 <wifi_softap_set_station_info+0x3c>
+    1404:	01e8      	l32i.n	a14, a1, 0
+    1406:	120c      	movi.n	a2, 1
+    1408:	0ee8      	l32i.n	a14, a14, 0
+    140a:	436de2        	s32i	a14, a13, 0x10c
+    140d:	000246        	j	141a <wifi_softap_set_station_info+0x46>
+    1410:	cc1b      	addi.n	a12, a12, 1
+    1412:	74c0c0        	extui	a12, a12, 0, 8
+    1415:	d56c66        	bnei	a12, 6, 13ee <wifi_softap_set_station_info+0x1a>
+    1418:	020c      	movi.n	a2, 0
+    141a:	21c8      	l32i.n	a12, a1, 8
+    141c:	31d8      	l32i.n	a13, a1, 12
+    141e:	41e8      	l32i.n	a14, a1, 16
+    1420:	51f8      	l32i.n	a15, a1, 20
+    1422:	1108      	l32i.n	a0, a1, 4
+    1424:	20c112        	addi	a1, a1, 32
+    1427:	f00d      	ret.n
+	...
+
+00001440 <wifi_softap_get_station_info>:
+    1440:	e0c112        	addi	a1, a1, -32
+    1443:	21d9      	s32i.n	a13, a1, 8
+    1445:	41f9      	s32i.n	a15, a1, 16
+    1447:	0109      	s32i.n	a0, a1, 0
+    1449:	fff801        	l32r	a0, 142c <wifi_softap_set_station_info+0x58>
+    144c:	31e9      	s32i.n	a14, a1, 12
+    144e:	50e8      	l32i.n	a14, a0, 20
+    1450:	11c9      	s32i.n	a12, a1, 4
+    1452:	3ecc      	bnez.n	a14, 1459 <wifi_softap_get_station_info+0x19>
+    1454:	020c      	movi.n	a2, 0
+    1456:	001486        	j	14ac <wifi_softap_get_station_info+0x6c>
+    1459:	1c0c      	movi.n	a12, 1
+    145b:	020c      	movi.n	a2, 0
+    145d:	fff431        	l32r	a3, 1430 <wifi_softap_set_station_info+0x5c>
+    1460:	636032        	s32i	a3, a0, 0x18c
+    1463:	626022        	s32i	a2, a0, 0x188
+    1466:	a0dce0        	addx4	a13, a12, a14
+    1469:	242d42        	l32i	a4, a13, 144
+    146c:	14bc      	beqz.n	a4, 14a1 <wifi_softap_get_station_info+0x61>
+    146e:	432452        	l32i	a5, a4, 0x10c
+    1471:	c5ac      	beqz.n	a5, 14a1 <wifi_softap_get_station_info+0x61>
+    1473:	021c      	movi.n	a2, 16
+    1475:	fff001        	l32r	a0, 1438 <wifi_softap_set_station_info+0x64>
+    1478:	0000c0        	callx0	a0
+    147b:	242d32        	l32i	a3, a13, 144
+    147e:	02fd      	mov.n	a15, a2
+    1480:	640c      	movi.n	a4, 6
+    1482:	224b      	addi.n	a2, a2, 4
+    1484:	ffee01        	l32r	a0, 143c <wifi_softap_set_station_info+0x68>
+    1487:	0000c0        	callx0	a0
+    148a:	020c      	movi.n	a2, 0
+    148c:	242d72        	l32i	a7, a13, 144
+    148f:	ffe901        	l32r	a0, 1434 <wifi_softap_set_station_info+0x60>
+    1492:	432772        	l32i	a7, a7, 0x10c
+    1495:	632062        	l32i	a6, a0, 0x18c
+    1498:	0f29      	s32i.n	a2, a15, 0
+    149a:	3f79      	s32i.n	a7, a15, 12
+    149c:	06f9      	s32i.n	a15, a6, 0
+    149e:	6360f2        	s32i	a15, a0, 0x18c
+    14a1:	cc1b      	addi.n	a12, a12, 1
+    14a3:	74c0c0        	extui	a12, a12, 0, 8
+    14a6:	bc6c66        	bnei	a12, 6, 1466 <wifi_softap_get_station_info+0x26>
+    14a9:	622022        	l32i	a2, a0, 0x188
+    14ac:	11c8      	l32i.n	a12, a1, 4
+    14ae:	21d8      	l32i.n	a13, a1, 8
+    14b0:	31e8      	l32i.n	a14, a1, 12
+    14b2:	41f8      	l32i.n	a15, a1, 16
+    14b4:	0108      	l32i.n	a0, a1, 0
+    14b6:	20c112        	addi	a1, a1, 32
+    14b9:	f00d      	ret.n
+	...
+
+000014c8 <wifi_softap_free_station_info>:
+    14c8:	f0c112        	addi	a1, a1, -16
+    14cb:	0109      	s32i.n	a0, a1, 0
+    14cd:	21d9      	s32i.n	a13, a1, 8
+    14cf:	11c9      	s32i.n	a12, a1, 4
+    14d1:	fffbc1        	l32r	a12, 14c0 <wifi_softap_get_station_info+0x80>
+    14d4:	fffad1        	l32r	a13, 14bc <wifi_softap_get_station_info+0x7c>
+    14d7:	622c22        	l32i	a2, a12, 0x188
+    14da:	129c      	beqz.n	a2, 14ef <wifi_softap_free_station_info+0x27>
+    14dc:	0208      	l32i.n	a0, a2, 0
+    14de:	626c02        	s32i	a0, a12, 0x188
+    14e1:	10cc      	bnez.n	a0, 14e6 <wifi_softap_free_station_info+0x1e>
+    14e3:	636cd2        	s32i	a13, a12, 0x18c
+    14e6:	fff701        	l32r	a0, 14c4 <wifi_softap_get_station_info+0x84>
+    14e9:	0000c0        	callx0	a0
+    14ec:	fff9c6        	j	14d7 <wifi_softap_free_station_info+0xf>
+    14ef:	11c8      	l32i.n	a12, a1, 4
+    14f1:	21d8      	l32i.n	a13, a1, 8
+    14f3:	0108      	l32i.n	a0, a1, 0
+    14f5:	10c112        	addi	a1, a1, 16
+    14f8:	f00d      	ret.n
+    14fa:	000000        	ill
+    14fd:	000000        	ill
+    1500:	0000e0        	excw
+	...
+
+00001520 <wifi_softap_deauth>:
+    1520:	e0c112        	addi	a1, a1, -32
+    1523:	11c9      	s32i.n	a12, a1, 4
+    1525:	41f9      	s32i.n	a15, a1, 16
+    1527:	0109      	s32i.n	a0, a1, 0
+    1529:	21d9      	s32i.n	a13, a1, 8
+    152b:	31e9      	s32i.n	a14, a1, 12
+    152d:	fff3d1        	l32r	a13, 14fc <wifi_softap_free_station_info+0x34>
+    1530:	02ed      	mov.n	a14, a2
+    1532:	5dd8      	l32i.n	a13, a13, 20
+    1534:	000005        	call0	1538 <wifi_softap_deauth+0x18>
+    1537:	f20b      	addi.n	a15, a2, -1
+    1539:	08cf16        	beqz	a15, 15c9 <wifi_softap_deauth+0xa9>
+    153c:	089d16        	beqz	a13, 15c9 <wifi_softap_deauth+0xa9>
+    153f:	40cd22        	addi	a2, a13, 64
+    1542:	222dc2        	l32i	a12, a13, 136
+    1545:	242d02        	l32i	a0, a13, 144
+    1548:	226d02        	s32i	a0, a13, 136
+    154b:	cecc      	bnez.n	a14, 155b <wifi_softap_deauth+0x3b>
+    154d:	ffec31        	l32r	a3, 1500 <wifi_softap_free_station_info+0x38>
+    1550:	640c      	movi.n	a4, 6
+    1552:	ffee01        	l32r	a0, 150c <wifi_softap_free_station_info+0x44>
+    1555:	0000c0        	callx0	a0
+    1558:	000246        	j	1565 <wifi_softap_deauth+0x45>
+    155b:	0e3d      	mov.n	a3, a14
+    155d:	640c      	movi.n	a4, 6
+    155f:	ffec01        	l32r	a0, 1510 <wifi_softap_free_station_info+0x48>
+    1562:	0000c0        	callx0	a0
+    1565:	0d2d      	mov.n	a2, a13
+    1567:	c0a032        	movi	a3, 192
+    156a:	240c      	movi.n	a4, 2
+    156c:	ffea01        	l32r	a0, 1514 <wifi_softap_free_station_info+0x4c>
+    156f:	0000c0        	callx0	a0
+    1572:	ffe401        	l32r	a0, 1504 <wifi_softap_free_station_info+0x3c>
+    1575:	226dc2        	s32i	a12, a13, 136
+    1578:	8c0002        	l8ui	a0, a0, 140
+    157b:	1c0c      	movi.n	a12, 1
+    157d:	202b      	addi.n	a2, a0, 2
+    157f:	3522a6        	blti	a2, 2, 15b8 <wifi_softap_deauth+0x98>
+    1582:	a0fcd0        	addx4	a15, a12, a13
+    1585:	242ff2        	l32i	a15, a15, 144
+    1588:	4fac      	beqz.n	a15, 15b0 <wifi_softap_deauth+0x90>
+    158a:	5109      	s32i.n	a0, a1, 20
+    158c:	ee8c      	beqz.n	a14, 159e <wifi_softap_deauth+0x7e>
+    158e:	0e2d      	mov.n	a2, a14
+    1590:	0f3d      	mov.n	a3, a15
+    1592:	640c      	movi.n	a4, 6
+    1594:	ffe101        	l32r	a0, 1518 <wifi_softap_free_station_info+0x50>
+    1597:	0000c0        	callx0	a0
+    159a:	5108      	l32i.n	a0, a1, 20
+    159c:	e2cc      	bnez.n	a2, 15ae <wifi_softap_deauth+0x8e>
+    159e:	0f3d      	mov.n	a3, a15
+    15a0:	0d2d      	mov.n	a2, a13
+    15a2:	ffde01        	l32r	a0, 151c <wifi_softap_free_station_info+0x54>
+    15a5:	0000c0        	callx0	a0
+    15a8:	ffd801        	l32r	a0, 1508 <wifi_softap_free_station_info+0x40>
+    15ab:	8c0002        	l8ui	a0, a0, 140
+    15ae:	202b      	addi.n	a2, a0, 2
+    15b0:	cc1b      	addi.n	a12, a12, 1
+    15b2:	74c0c0        	extui	a12, a12, 0, 8
+    15b5:	c92c27        	blt	a12, a2, 1582 <wifi_softap_deauth+0x62>
+    15b8:	120c      	movi.n	a2, 1
+    15ba:	11c8      	l32i.n	a12, a1, 4
+    15bc:	21d8      	l32i.n	a13, a1, 8
+    15be:	31e8      	l32i.n	a14, a1, 12
+    15c0:	41f8      	l32i.n	a15, a1, 16
+    15c2:	0108      	l32i.n	a0, a1, 0
+    15c4:	20c112        	addi	a1, a1, 32
+    15c7:	f00d      	ret.n
+    15c9:	020c      	movi.n	a2, 0
+    15cb:	fffac6        	j	15ba <wifi_softap_deauth+0x9a>
+    15ce:	000000        	ill
+    15d1:	000000        	ill
+
+000015d4 <wifi_get_phy_mode>:
+    15d4:	ffff21        	l32r	a2, 15d0 <wifi_softap_deauth+0xb0>
+    15d7:	ba2222        	l32i	a2, a2, 0x2e8
+    15da:	f00d      	ret.n
+	...
+
+00001608 <wifi_set_phy_mode>:
+    1608:	f0c112        	addi	a1, a1, -16
+    160b:	21c9      	s32i.n	a12, a1, 8
+    160d:	1109      	s32i.n	a0, a1, 4
+    160f:	02cd      	mov.n	a12, a2
+    1611:	080216        	beqz	a2, 1695 <wifi_set_phy_mode+0x8d>
+    1614:	7d42f6        	bgeui	a2, 4, 1695 <wifi_set_phy_mode+0x8d>
+    1617:	fff101        	l32r	a0, 15dc <wifi_get_phy_mode+0x8>
+    161a:	c62002        	l32i	a0, a0, 0x318
+    161d:	691027        	beq	a0, a2, 168a <wifi_set_phy_mode+0x82>
+    1620:	000005        	call0	1624 <wifi_set_phy_mode+0x1c>
+    1623:	0129      	s32i.n	a2, a1, 0
+    1625:	ffee21        	l32r	a2, 15e0 <wifi_get_phy_mode+0xc>
+    1628:	c662c2        	s32i	a12, a2, 0x318
+    162b:	d4c222        	addi	a2, a2, -44
+    162e:	000005        	call0	1630 <wifi_set_phy_mode+0x28>
+    1631:	ffec31        	l32r	a3, 15e4 <wifi_get_phy_mode+0x10>
+    1634:	000332        	l8ui	a3, a3, 0
+    1637:	0b1366        	bnei	a3, 1, 1646 <wifi_set_phy_mode+0x3e>
+    163a:	ffed01        	l32r	a0, 15f0 <wifi_get_phy_mode+0x1c>
+    163d:	0000c0        	callx0	a0
+    1640:	ffed01        	l32r	a0, 15f4 <wifi_get_phy_mode+0x20>
+    1643:	0000c0        	callx0	a0
+    1646:	0c2d      	mov.n	a2, a12
+    1648:	ffec01        	l32r	a0, 15f8 <wifi_get_phy_mode+0x24>
+    164b:	0000c0        	callx0	a0
+    164e:	ffe651        	l32r	a5, 15e8 <wifi_get_phy_mode+0x14>
+    1651:	040c      	movi.n	a4, 0
+    1653:	c26542        	s32i	a4, a5, 0x308
+    1656:	083c66        	bnei	a12, 3, 1662 <wifi_set_phy_mode+0x5a>
+    1659:	fed522        	addmi	a2, a5, 0xfffffe00
+    165c:	ffe801        	l32r	a0, 15fc <wifi_get_phy_mode+0x28>
+    165f:	0000c0        	callx0	a0
+    1662:	ffe261        	l32r	a6, 15ec <wifi_get_phy_mode+0x18>
+    1665:	0178      	l32i.n	a7, a1, 0
+    1667:	000662        	l8ui	a6, a6, 0
+    166a:	07cd      	mov.n	a12, a7
+    166c:	1a1666        	bnei	a6, 1, 168a <wifi_set_phy_mode+0x82>
+    166f:	021726        	beqi	a7, 1, 1675 <wifi_set_phy_mode+0x6d>
+    1672:	083766        	bnei	a7, 3, 167e <wifi_set_phy_mode+0x76>
+    1675:	ffe201        	l32r	a0, 1600 <wifi_get_phy_mode+0x2c>
+    1678:	0000c0        	callx0	a0
+    167b:	000005        	call0	167c <wifi_set_phy_mode+0x74>
+    167e:	022c26        	beqi	a12, 2, 1684 <wifi_set_phy_mode+0x7c>
+    1681:	053c66        	bnei	a12, 3, 168a <wifi_set_phy_mode+0x82>
+    1684:	ffe001        	l32r	a0, 1604 <wifi_get_phy_mode+0x30>
+    1687:	0000c0        	callx0	a0
+    168a:	120c      	movi.n	a2, 1
+    168c:	21c8      	l32i.n	a12, a1, 8
+    168e:	1108      	l32i.n	a0, a1, 4
+    1690:	10c112        	addi	a1, a1, 16
+    1693:	f00d      	ret.n
+    1695:	020c      	movi.n	a2, 0
+    1697:	fffc46        	j	168c <wifi_set_phy_mode+0x84>
+    169a:	000000        	ill
+    169d:	000000        	ill
+
+000016a0 <wifi_set_sleep_type>:
+    16a0:	f0c112        	addi	a1, a1, -16
+    16a3:	0109      	s32i.n	a0, a1, 0
+    16a5:	1332f6        	bgeui	a2, 3, 16bc <wifi_set_sleep_type+0x1c>
+    16a8:	029c      	beqz.n	a2, 16bc <wifi_set_sleep_type+0x1c>
+    16aa:	742020        	extui	a2, a2, 0, 8
+    16ad:	fffb01        	l32r	a0, 169c <wifi_set_phy_mode+0x94>
+    16b0:	0000c0        	callx0	a0
+    16b3:	120c      	movi.n	a2, 1
+    16b5:	0108      	l32i.n	a0, a1, 0
+    16b7:	10c112        	addi	a1, a1, 16
+    16ba:	f00d      	ret.n
+    16bc:	020c      	movi.n	a2, 0
+    16be:	fffcc6        	j	16b5 <wifi_set_sleep_type+0x15>
+    16c1:	000000        	ill
+    16c4:	000000        	ill
+	...
+
+000016c8 <wifi_get_channel>:
+    16c8:	f0c112        	addi	a1, a1, -16
+    16cb:	0109      	s32i.n	a0, a1, 0
+    16cd:	fffd01        	l32r	a0, 16c4 <wifi_set_sleep_type+0x24>
+    16d0:	0000c0        	callx0	a0
+    16d3:	060222        	l8ui	a2, a2, 6
+    16d6:	0108      	l32i.n	a0, a1, 0
+    16d8:	10c112        	addi	a1, a1, 16
+    16db:	f00d      	ret.n
+	...
+
+000016e8 <wifi_set_channel>:
+    16e8:	f0c112        	addi	a1, a1, -16
+    16eb:	0109      	s32i.n	a0, a1, 0
+    16ed:	e00c      	movi.n	a0, 14
+    16ef:	04b027        	bgeu	a0, a2, 16f7 <wifi_set_channel+0xf>
+    16f2:	020c      	movi.n	a2, 0
+    16f4:	0004c6        	j	170b <wifi_set_channel+0x23>
+    16f7:	fffa31        	l32r	a3, 16e0 <wifi_get_channel+0x18>
+    16fa:	902220        	addx2	a2, a2, a2
+    16fd:	a02230        	addx4	a2, a2, a3
+    1700:	78c222        	addi	a2, a2, 120
+    1703:	fff801        	l32r	a0, 16e4 <wifi_get_channel+0x1c>
+    1706:	0000c0        	callx0	a0
+    1709:	120c      	movi.n	a2, 1
+    170b:	0108      	l32i.n	a0, a1, 0
+    170d:	10c112        	addi	a1, a1, 16
+    1710:	f00d      	ret.n
+    1712:	000000        	ill
+    1715:	000000        	ill
+    1718:	f1fe00        	excw
+    171b:	3f          	.byte 0x3f
+
+0000171c <wifi_promiscuous_enable>:
+    171c:	140c      	movi.n	a4, 1
+    171e:	fffd61        	l32r	a6, 1714 <wifi_set_channel+0x2c>
+    1721:	fffd51        	l32r	a5, 1718 <wifi_set_channel+0x30>
+    1724:	62bc      	beqz.n	a2, 175e <wifi_promiscuous_enable+0x42>
+    1726:	ea7c      	movi.n	a10, -2
+    1728:	0020c0        	memw
+    172b:	9b2592        	l32i	a9, a5, 0x26c
+    172e:	1099a0        	and	a9, a9, a10
+    1731:	0020c0        	memw
+    1734:	9b6592        	s32i	a9, a5, 0x26c
+    1737:	d87c      	movi.n	a8, -3
+    1739:	0020c0        	memw
+    173c:	9b2572        	l32i	a7, a5, 0x26c
+    173f:	107780        	and	a7, a7, a8
+    1742:	0020c0        	memw
+    1745:	9b6572        	s32i	a7, a5, 0x26c
+    1748:	b37c      	movi.n	a3, -5
+    174a:	0020c0        	memw
+    174d:	9b2522        	l32i	a2, a5, 0x26c
+    1750:	102230        	and	a2, a2, a3
+    1753:	0020c0        	memw
+    1756:	9b6522        	s32i	a2, a5, 0x26c
+    1759:	514642        	s8i	a4, a6, 81
+    175c:	f00d      	ret.n
+    175e:	0020c0        	memw
+    1761:	9b2572        	l32i	a7, a5, 0x26c
+    1764:	207740        	or	a7, a7, a4
+    1767:	0020c0        	memw
+    176a:	9b6572        	s32i	a7, a5, 0x26c
+    176d:	240c      	movi.n	a4, 2
+    176f:	0020c0        	memw
+    1772:	9b2532        	l32i	a3, a5, 0x26c
+    1775:	203340        	or	a3, a3, a4
+    1778:	0020c0        	memw
+    177b:	9b6532        	s32i	a3, a5, 0x26c
+    177e:	420c      	movi.n	a2, 4
+    1780:	0020c0        	memw
+    1783:	9b25b2        	l32i	a11, a5, 0x26c
+    1786:	20bb20        	or	a11, a11, a2
+    1789:	0020c0        	memw
+    178c:	9b65b2        	s32i	a11, a5, 0x26c
+    178f:	040c      	movi.n	a4, 0
+    1791:	fff106        	j	1759 <wifi_promiscuous_enable+0x3d>
+    1794:	000000        	ill
+	...
+
+00001798 <wifi_set_promiscuous_rx_cb>:
+    1798:	ffff31        	l32r	a3, 1794 <wifi_promiscuous_enable+0x78>
+    179b:	3c6322        	s32i	a2, a3, 240
+    179e:	f00d      	ret.n
+	...
+
+000017ac <wifi_get_ip_info>:
+    17ac:	f0c112        	addi	a1, a1, -16
+    17af:	21d9      	s32i.n	a13, a1, 8
+    17b1:	0109      	s32i.n	a0, a1, 0
+    17b3:	11c9      	s32i.n	a12, a1, 4
+    17b5:	31e9      	s32i.n	a14, a1, 12
+    17b7:	03cd      	mov.n	a12, a3
+    17b9:	02ed      	mov.n	a14, a2
+    17bb:	fefa05        	call0	75c <system_rtc_clock_cali_proc+0x18>
+    17be:	02dd      	mov.n	a13, a2
+    17c0:	412ef6        	bgeui	a14, 2, 1805 <wifi_get_ip_info+0x59>
+    17c3:	ecbc      	beqz.n	a12, 1805 <wifi_get_ip_info+0x59>
+    17c5:	52ac      	beqz.n	a2, 17ee <wifi_get_ip_info+0x42>
+    17c7:	0c2d      	mov.n	a2, a12
+    17c9:	3d4b      	addi.n	a3, a13, 4
+    17cb:	440c      	movi.n	a4, 4
+    17cd:	fff401        	l32r	a0, 17a0 <wifi_set_promiscuous_rx_cb+0x8>
+    17d0:	0000c0        	callx0	a0
+    17d3:	2c4b      	addi.n	a2, a12, 4
+    17d5:	3d8b      	addi.n	a3, a13, 8
+    17d7:	440c      	movi.n	a4, 4
+    17d9:	fff201        	l32r	a0, 17a4 <wifi_set_promiscuous_rx_cb+0xc>
+    17dc:	0000c0        	callx0	a0
+    17df:	2c8b      	addi.n	a2, a12, 8
+    17e1:	3dcb      	addi.n	a3, a13, 12
+    17e3:	440c      	movi.n	a4, 4
+    17e5:	fff001        	l32r	a0, 17a8 <wifi_set_promiscuous_rx_cb+0x10>
+    17e8:	0000c0        	callx0	a0
+    17eb:	0001c6        	j	17f6 <wifi_get_ip_info+0x4a>
+    17ee:	000c      	movi.n	a0, 0
+    17f0:	0c09      	s32i.n	a0, a12, 0
+    17f2:	1c09      	s32i.n	a0, a12, 4
+    17f4:	2c09      	s32i.n	a0, a12, 8
+    17f6:	120c      	movi.n	a2, 1
+    17f8:	11c8      	l32i.n	a12, a1, 4
+    17fa:	21d8      	l32i.n	a13, a1, 8
+    17fc:	31e8      	l32i.n	a14, a1, 12
+    17fe:	0108      	l32i.n	a0, a1, 0
+    1800:	10c112        	addi	a1, a1, 16
+    1803:	f00d      	ret.n
+    1805:	020c      	movi.n	a2, 0
+    1807:	fffb46        	j	17f8 <wifi_get_ip_info+0x4c>
+	...
+
+00001848 <wifi_set_ip_info>:
+    1848:	f0c112        	addi	a1, a1, -16
+    184b:	31e9      	s32i.n	a14, a1, 12
+    184d:	0109      	s32i.n	a0, a1, 0
+    184f:	11c9      	s32i.n	a12, a1, 4
+    1851:	21d9      	s32i.n	a13, a1, 8
+    1853:	03cd      	mov.n	a12, a3
+    1855:	02dd      	mov.n	a13, a2
+    1857:	fef045        	call0	75c <system_rtc_clock_cali_proc+0x18>
+    185a:	02ed      	mov.n	a14, a2
+    185c:	152df6        	bgeui	a13, 2, 1875 <wifi_set_ip_info+0x2d>
+    185f:	2c9c      	beqz.n	a12, 1875 <wifi_set_ip_info+0x2d>
+    1861:	5ddc      	bnez.n	a13, 187a <wifi_set_ip_info+0x32>
+    1863:	ffea01        	l32r	a0, 180c <wifi_get_ip_info+0x60>
+    1866:	ffea21        	l32r	a2, 1810 <wifi_get_ip_info+0x64>
+    1869:	000002        	l8ui	a0, a0, 0
+    186c:	000222        	l8ui	a2, a2, 0
+    186f:	4d1066        	bnei	a0, 1, 18c0 <wifi_set_ip_info+0x78>
+    1872:	4a1266        	bnei	a2, 1, 18c0 <wifi_set_ip_info+0x78>
+    1875:	020c      	movi.n	a2, 0
+    1877:	000e06        	j	18b3 <wifi_set_ip_info+0x6b>
+    187a:	ffe621        	l32r	a2, 1814 <wifi_get_ip_info+0x68>
+    187d:	0c3d      	mov.n	a3, a12
+    187f:	440c      	movi.n	a4, 4
+    1881:	ffea01        	l32r	a0, 182c <wifi_get_ip_info+0x80>
+    1884:	0000c0        	callx0	a0
+    1887:	ffe421        	l32r	a2, 1818 <wifi_get_ip_info+0x6c>
+    188a:	3c4b      	addi.n	a3, a12, 4
+    188c:	440c      	movi.n	a4, 4
+    188e:	ffe801        	l32r	a0, 1830 <wifi_get_ip_info+0x84>
+    1891:	0000c0        	callx0	a0
+    1894:	ffe221        	l32r	a2, 181c <wifi_get_ip_info+0x70>
+    1897:	3c8b      	addi.n	a3, a12, 8
+    1899:	440c      	movi.n	a4, 4
+    189b:	ffe601        	l32r	a0, 1834 <wifi_get_ip_info+0x88>
+    189e:	0000c0        	callx0	a0
+    18a1:	ce8c      	beqz.n	a14, 18b1 <wifi_set_ip_info+0x69>
+    18a3:	0e2d      	mov.n	a2, a14
+    18a5:	0c3d      	mov.n	a3, a12
+    18a7:	4c4b      	addi.n	a4, a12, 4
+    18a9:	5c8b      	addi.n	a5, a12, 8
+    18ab:	ffe301        	l32r	a0, 1838 <wifi_get_ip_info+0x8c>
+    18ae:	0000c0        	callx0	a0
+    18b1:	120c      	movi.n	a2, 1
+    18b3:	11c8      	l32i.n	a12, a1, 4
+    18b5:	21d8      	l32i.n	a13, a1, 8
+    18b7:	31e8      	l32i.n	a14, a1, 12
+    18b9:	0108      	l32i.n	a0, a1, 0
+    18bb:	10c112        	addi	a1, a1, 16
+    18be:	f00d      	ret.n
+    18c0:	fb6d56        	bnez	a13, 187a <wifi_set_ip_info+0x32>
+    18c3:	ffd721        	l32r	a2, 1820 <wifi_get_ip_info+0x74>
+    18c6:	0c3d      	mov.n	a3, a12
+    18c8:	440c      	movi.n	a4, 4
+    18ca:	ffdc01        	l32r	a0, 183c <wifi_get_ip_info+0x90>
+    18cd:	0000c0        	callx0	a0
+    18d0:	ffd521        	l32r	a2, 1824 <wifi_get_ip_info+0x78>
+    18d3:	3c4b      	addi.n	a3, a12, 4
+    18d5:	440c      	movi.n	a4, 4
+    18d7:	ffda01        	l32r	a0, 1840 <wifi_get_ip_info+0x94>
+    18da:	0000c0        	callx0	a0
+    18dd:	ffd221        	l32r	a2, 1828 <wifi_get_ip_info+0x7c>
+    18e0:	3c8b      	addi.n	a3, a12, 8
+    18e2:	440c      	movi.n	a4, 4
+    18e4:	ffd801        	l32r	a0, 1844 <wifi_get_ip_info+0x98>
+    18e7:	0000c0        	callx0	a0
+    18ea:	ffecc6        	j	18a1 <wifi_set_ip_info+0x59>
+	...
+
+00001904 <wifi_get_macaddr>:
+    1904:	f0c112        	addi	a1, a1, -16
+    1907:	0109      	s32i.n	a0, a1, 0
+    1909:	21d9      	s32i.n	a13, a1, 8
+    190b:	11c9      	s32i.n	a12, a1, 4
+    190d:	03dd      	mov.n	a13, a3
+    190f:	02cd      	mov.n	a12, a2
+    1911:	fee485        	call0	75c <system_rtc_clock_cali_proc+0x18>
+    1914:	020d      	mov.n	a0, a2
+    1916:	132cf6        	bgeui	a12, 2, 192d <wifi_get_macaddr+0x29>
+    1919:	0d9c      	beqz.n	a13, 192d <wifi_get_macaddr+0x29>
+    191b:	d2ac      	beqz.n	a2, 194c <wifi_get_macaddr+0x48>
+    191d:	0d2d      	mov.n	a2, a13
+    191f:	640c      	movi.n	a4, 6
+    1921:	29c032        	addi	a3, a0, 41
+    1924:	fff501        	l32r	a0, 18f8 <wifi_set_ip_info+0xb0>
+    1927:	0000c0        	callx0	a0
+    192a:	000446        	j	193f <wifi_get_macaddr+0x3b>
+    192d:	020c      	movi.n	a2, 0
+    192f:	000386        	j	1941 <wifi_get_macaddr+0x3d>
+    1932:	0d2d      	mov.n	a2, a13
+    1934:	ffef31        	l32r	a3, 18f0 <wifi_set_ip_info+0xa8>
+    1937:	640c      	movi.n	a4, 6
+    1939:	fff001        	l32r	a0, 18fc <wifi_set_ip_info+0xb4>
+    193c:	0000c0        	callx0	a0
+    193f:	120c      	movi.n	a2, 1
+    1941:	11c8      	l32i.n	a12, a1, 4
+    1943:	21d8      	l32i.n	a13, a1, 8
+    1945:	0108      	l32i.n	a0, a1, 0
+    1947:	10c112        	addi	a1, a1, 16
+    194a:	f00d      	ret.n
+    194c:	fe2c56        	bnez	a12, 1932 <wifi_get_macaddr+0x2e>
+    194f:	0d2d      	mov.n	a2, a13
+    1951:	ffe831        	l32r	a3, 18f4 <wifi_set_ip_info+0xac>
+    1954:	640c      	movi.n	a4, 6
+    1956:	ffea01        	l32r	a0, 1900 <wifi_set_ip_info+0xb8>
+    1959:	0000c0        	callx0	a0
+    195c:	fff7c6        	j	193f <wifi_get_macaddr+0x3b>
+	...
+
+00001990 <wifi_set_macaddr>:
+    1990:	f0c112        	addi	a1, a1, -16
+    1993:	31e9      	s32i.n	a14, a1, 12
+    1995:	0109      	s32i.n	a0, a1, 0
+    1997:	11c9      	s32i.n	a12, a1, 4
+    1999:	21d9      	s32i.n	a13, a1, 8
+    199b:	03cd      	mov.n	a12, a3
+    199d:	02dd      	mov.n	a13, a2
+    199f:	fedbc5        	call0	75c <system_rtc_clock_cali_proc+0x18>
+    19a2:	02ed      	mov.n	a14, a2
+    19a4:	092df6        	bgeui	a13, 2, 19b1 <wifi_set_macaddr+0x21>
+    19a7:	6c8c      	beqz.n	a12, 19b1 <wifi_set_macaddr+0x21>
+    19a9:	3ddc      	bnez.n	a13, 19c0 <wifi_set_macaddr+0x30>
+    19ab:	000005        	call0	19ac <wifi_set_macaddr+0x1c>
+    19ae:	512266        	bnei	a2, 2, 1a03 <wifi_set_macaddr+0x73>
+    19b1:	020c      	movi.n	a2, 0
+    19b3:	11c8      	l32i.n	a12, a1, 4
+    19b5:	21d8      	l32i.n	a13, a1, 8
+    19b7:	31e8      	l32i.n	a14, a1, 12
+    19b9:	0108      	l32i.n	a0, a1, 0
+    19bb:	10c112        	addi	a1, a1, 16
+    19be:	f00d      	ret.n
+    19c0:	000005        	call0	19c4 <wifi_set_macaddr+0x34>
+    19c3:	ea1226        	beqi	a2, 1, 19b1 <wifi_set_macaddr+0x21>
+    19c6:	0c3d      	mov.n	a3, a12
+    19c8:	ffe6d1        	l32r	a13, 1960 <wifi_get_macaddr+0x5c>
+    19cb:	640c      	movi.n	a4, 6
+    19cd:	0d2d      	mov.n	a2, a13
+    19cf:	ffe601        	l32r	a0, 1968 <wifi_get_macaddr+0x64>
+    19d2:	0000c0        	callx0	a0
+    19d5:	52ac      	beqz.n	a2, 19fe <wifi_set_macaddr+0x6e>
+    19d7:	0d2d      	mov.n	a2, a13
+    19d9:	0c3d      	mov.n	a3, a12
+    19db:	640c      	movi.n	a4, 6
+    19dd:	ffe301        	l32r	a0, 196c <wifi_get_macaddr+0x68>
+    19e0:	0000c0        	callx0	a0
+    19e3:	7e9c      	beqz.n	a14, 19fe <wifi_set_macaddr+0x6e>
+    19e5:	0c3d      	mov.n	a3, a12
+    19e7:	29ce22        	addi	a2, a14, 41
+    19ea:	640c      	movi.n	a4, 6
+    19ec:	ffe101        	l32r	a0, 1970 <wifi_get_macaddr+0x6c>
+    19ef:	0000c0        	callx0	a0
+    19f2:	ffe001        	l32r	a0, 1974 <wifi_get_macaddr+0x70>
+    19f5:	0000c0        	callx0	a0
+    19f8:	ffe001        	l32r	a0, 1978 <wifi_get_macaddr+0x74>
+    19fb:	0000c0        	callx0	a0
+    19fe:	120c      	movi.n	a2, 1
+    1a00:	ffebc6        	j	19b3 <wifi_set_macaddr+0x23>
+    1a03:	0c3d      	mov.n	a3, a12
+    1a05:	ffd7d1        	l32r	a13, 1964 <wifi_get_macaddr+0x60>
+    1a08:	640c      	movi.n	a4, 6
+    1a0a:	0d2d      	mov.n	a2, a13
+    1a0c:	ffdc01        	l32r	a0, 197c <wifi_get_macaddr+0x78>
+    1a0f:	0000c0        	callx0	a0
+    1a12:	fe8216        	beqz	a2, 19fe <wifi_set_macaddr+0x6e>
+    1a15:	0d2d      	mov.n	a2, a13
+    1a17:	0c3d      	mov.n	a3, a12
+    1a19:	640c      	movi.n	a4, 6
+    1a1b:	ffd901        	l32r	a0, 1980 <wifi_get_macaddr+0x7c>
+    1a1e:	0000c0        	callx0	a0
+    1a21:	fd9e16        	beqz	a14, 19fe <wifi_set_macaddr+0x6e>
+    1a24:	0c3d      	mov.n	a3, a12
+    1a26:	29ce22        	addi	a2, a14, 41
+    1a29:	640c      	movi.n	a4, 6
+    1a2b:	ffd601        	l32r	a0, 1984 <wifi_get_macaddr+0x80>
+    1a2e:	0000c0        	callx0	a0
+    1a31:	ffd501        	l32r	a0, 1988 <wifi_get_macaddr+0x84>
+    1a34:	0000c0        	callx0	a0
+    1a37:	ffd501        	l32r	a0, 198c <wifi_get_macaddr+0x88>
+    1a3a:	0000c0        	callx0	a0
+    1a3d:	000005        	call0	1a40 <wifi_set_macaddr+0xb0>
+    1a40:	ffee86        	j	19fe <wifi_set_macaddr+0x6e>
+    1a43:	000000        	ill
+	...
+
+00001a48 <wifi_status_led_install>:
+    1a48:	ffffb1        	l32r	a11, 1a44 <wifi_set_macaddr+0xb4>
+    1a4b:	1a0c      	movi.n	a10, 1
+    1a4d:	814b22        	s8i	a2, a11, 129
+    1a50:	824ba2        	s8i	a10, a11, 130
+    1a53:	804ba2        	s8i	a10, a11, 128
+    1a56:	cfae92        	movi	a9, 0xfffffecf
+    1a59:	0020c0        	memw
+    1a5c:	0388      	l32i.n	a8, a3, 0
+    1a5e:	108890        	and	a8, a8, a9
+    1a61:	0020c0        	memw
+    1a64:	0389      	s32i.n	a8, a3, 0
+    1a66:	470c      	movi.n	a7, 4
+    1a68:	107470        	and	a7, a4, a7
+    1a6b:	146040        	extui	a6, a4, 0, 2
+    1a6e:	1177e0        	slli	a7, a7, 2
+    1a71:	206670        	or	a6, a6, a7
+    1a74:	1166c0        	slli	a6, a6, 4
+    1a77:	0020c0        	memw
+    1a7a:	0358      	l32i.n	a5, a3, 0
+    1a7c:	205560        	or	a5, a5, a6
+    1a7f:	0020c0        	memw
+    1a82:	0359      	s32i.n	a5, a3, 0
+    1a84:	f00d      	ret.n
+    1a86:	000000        	ill
+    1a89:	00ff00        	excw
+    1a8c:	fffe00        	excw
+    1a8f:	5f          	.byte 0x5f
+    1a90:	000e00        	excw
+    1a93:	fe0060        	excw
+    1a96:	ef          	.byte 0xef
+    1a97:	3f          	.byte 0x3f
+    1a98:	000600        	excw
+    1a9b:	fb4160        	excw
+
+00001a9c <system_uart_swap>:
+    1a9c:	fffb41        	l32r	a4, 1a88 <wifi_status_led_install+0x40>
+    1a9f:	fffb51        	l32r	a5, 1a8c <wifi_status_led_install+0x44>
+    1aa2:	0020c0        	memw
+    1aa5:	872522        	l32i	a2, a5, 0x21c
+    1aa8:	080427        	bnone	a4, a2, 1ab4 <system_uart_swap+0x18>
+    1aab:	0020c0        	memw
+    1aae:	872532        	l32i	a3, a5, 0x21c
+    1ab1:	f68347        	bany	a3, a4, 1aab <system_uart_swap+0xf>
+    1ab4:	fff751        	l32r	a5, 1a90 <wifi_status_led_install+0x48>
+    1ab7:	0020c0        	memw
+    1aba:	472562        	l32i	a6, a5, 0x11c
+    1abd:	080467        	bnone	a4, a6, 1ac9 <system_uart_swap+0x2d>
+    1ac0:	0020c0        	memw
+    1ac3:	472572        	l32i	a7, a5, 0x11c
+    1ac6:	f68747        	bany	a7, a4, 1ac0 <system_uart_swap+0x24>
+    1ac9:	fff291        	l32r	a9, 1a94 <wifi_status_led_install+0x4c>
+    1acc:	cfae52        	movi	a5, 0xfffffecf
+    1acf:	00a132        	movi	a3, 0x100
+    1ad2:	fff121        	l32r	a2, 1a98 <wifi_status_led_install+0x50>
+    1ad5:	0020c0        	memw
+    1ad8:	822272        	l32i	a7, a2, 0x208
+    1adb:	107750        	and	a7, a7, a5
+    1ade:	0020c0        	memw
+    1ae1:	826272        	s32i	a7, a2, 0x208
+    1ae4:	0020c0        	memw
+    1ae7:	822262        	l32i	a6, a2, 0x208
+    1aea:	206630        	or	a6, a6, a3
+    1aed:	0020c0        	memw
+    1af0:	826262        	s32i	a6, a2, 0x208
+    1af3:	0020c0        	memw
+    1af6:	842242        	l32i	a4, a2, 0x210
+    1af9:	104450        	and	a4, a4, a5
+    1afc:	0020c0        	memw
+    1aff:	846242        	s32i	a4, a2, 0x210
+    1b02:	0020c0        	memw
+    1b05:	8422b2        	l32i	a11, a2, 0x210
+    1b08:	20bb30        	or	a11, a11, a3
+    1b0b:	0020c0        	memw
+    1b0e:	8462b2        	s32i	a11, a2, 0x210
+    1b11:	4a0c      	movi.n	a10, 4
+    1b13:	0020c0        	memw
+    1b16:	8a2982        	l32i	a8, a9, 0x228
+    1b19:	2088a0        	or	a8, a8, a10
+    1b1c:	0020c0        	memw
+    1b1f:	8a6982        	s32i	a8, a9, 0x228
+    1b22:	f00d      	ret.n

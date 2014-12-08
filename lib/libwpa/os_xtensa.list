@@ -1,0 +1,50 @@
+
+os_xtensa.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <os_get_time>:
+   0:	020c      	movi.n	a2, 0
+   2:	f00d      	ret.n
+   4:	000000        	ill
+	...
+
+00000008 <os_random>:
+   8:	f0c112        	addi	a1, a1, -16
+   b:	0109      	s32i.n	a0, a1, 0
+   d:	fffd01        	l32r	a0, 4 <os_get_time+0x4>
+  10:	0000c0        	callx0	a0
+  13:	0108      	l32i.n	a0, a1, 0
+  15:	10c112        	addi	a1, a1, 16
+  18:	f00d      	ret.n
+	...
+
+00000024 <os_get_random>:
+  24:	e0c112        	addi	a1, a1, -32
+  27:	1109      	s32i.n	a0, a1, 4
+  29:	31d9      	s32i.n	a13, a1, 12
+  2b:	21c9      	s32i.n	a12, a1, 8
+  2d:	41e9      	s32i.n	a14, a1, 16
+  2f:	02cd      	mov.n	a12, a2
+  31:	41e230        	srli	a14, a3, 2
+  34:	1c1ea6        	blti	a14, 1, 54 <os_get_random+0x30>
+  37:	0d0c      	movi.n	a13, 0
+  39:	fff801        	l32r	a0, 1c <os_random+0x14>
+  3c:	0000c0        	callx0	a0
+  3f:	013d      	mov.n	a3, a1
+  41:	0129      	s32i.n	a2, a1, 0
+  43:	440c      	movi.n	a4, 4
+  45:	0c2d      	mov.n	a2, a12
+  47:	fff601        	l32r	a0, 20 <os_random+0x18>
+  4a:	0000c0        	callx0	a0
+  4d:	cc4b      	addi.n	a12, a12, 4
+  4f:	dd1b      	addi.n	a13, a13, 1
+  51:	e49de7        	bne	a13, a14, 39 <os_get_random+0x15>
+  54:	020c      	movi.n	a2, 0
+  56:	21c8      	l32i.n	a12, a1, 8
+  58:	31d8      	l32i.n	a13, a1, 12
+  5a:	41e8      	l32i.n	a14, a1, 16
+  5c:	1108      	l32i.n	a0, a1, 4
+  5e:	20c112        	addi	a1, a1, 32
+  61:	f00d      	ret.n

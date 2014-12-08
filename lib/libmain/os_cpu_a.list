@@ -1,0 +1,159 @@
+
+os_cpu_a.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <vPortYield-0x14>:
+	...
+
+00000014 <vPortYield>:
+  14:	13d100        	wsr.excsave1	a0
+  17:	b0c112        	addi	a1, a1, -80
+  1a:	1109      	s32i.n	a0, a1, 4
+  1c:	50c102        	addi	a0, a1, 80
+  1f:	4109      	s32i.n	a0, a1, 16
+  21:	03e600        	rsr.ps	a0
+  24:	2109      	s32i.n	a0, a1, 8
+  26:	03d100        	rsr.excsave1	a0
+  29:	3109      	s32i.n	a0, a1, 12
+  2b:	fff501        	l32r	a0, 0 <vPortYield-0x14>
+  2e:	0109      	s32i.n	a0, a1, 0
+  30:	000005        	call0	34 <vPortYield+0x20>
+  33:	fff401        	l32r	a0, 4 <vPortYield-0x10>
+  36:	0000c0        	callx0	a0
+  39:	fff301        	l32r	a0, 8 <vPortYield-0xc>
+  3c:	0000c0        	callx0	a0
+  3f:	fff301        	l32r	a0, c <vPortYield-0x8>
+  42:	0000c0        	callx0	a0
+  45:	fff201        	l32r	a0, 10 <vPortYield-0x4>
+  48:	0000c0        	callx0	a0
+  4b:	f00d      	ret.n
+	...
+  65:	000c35        	excw
+	...
+  70:	0c3500        	excw
+	...
+
+00000074 <_xt_int_enter>:
+  74:	f1c9      	s32i.n	a12, a1, 60
+  76:	1061d2        	s32i	a13, a1, 64
+  79:	00cd      	mov.n	a12, a0
+  7b:	fff501        	l32r	a0, 50 <vPortYield+0x3c>
+  7e:	0000c0        	callx0	a0
+  81:	fff401        	l32r	a0, 54 <vPortYield+0x40>
+  84:	0008      	l32i.n	a0, a0, 0
+  86:	0019      	s32i.n	a1, a0, 0
+  88:	0c0d      	mov.n	a0, a12
+  8a:	f00d      	ret.n
+
+0000008c <_xt_int_exit>:
+  8c:	1161e2        	s32i	a14, a1, 68
+  8f:	1261f2        	s32i	a15, a1, 72
+  92:	fff111        	l32r	a1, 58 <vPortYield+0x44>
+  95:	0118      	l32i.n	a1, a1, 0
+  97:	0118      	l32i.n	a1, a1, 0
+  99:	fff0e1        	l32r	a14, 5c <vPortYield+0x48>
+  9c:	0ee8      	l32i.n	a14, a14, 0
+  9e:	50c1f2        	addi	a15, a1, 80
+  a1:	0ef9      	s32i.n	a15, a14, 0
+  a3:	ffef01        	l32r	a0, 60 <vPortYield+0x4c>
+  a6:	0000c0        	callx0	a0
+  a9:	1121e2        	l32i	a14, a1, 68
+  ac:	1221f2        	l32i	a15, a1, 72
+  af:	0108      	l32i.n	a0, a1, 0
+  b1:	f00d      	ret.n
+	...
+
+000000b4 <_xt_timer_int>:
+  b4:	f0c112        	addi	a1, a1, -16
+  b7:	0109      	s32i.n	a0, a1, 0
+  b9:	ffea21        	l32r	a2, 64 <vPortYield+0x50>
+  bc:	03f030        	rsr.ccompare0	a3
+  bf:	432a      	add.n	a4, a3, a2
+  c1:	13f040        	wsr.ccompare0	a4
+  c4:	002020        	esync
+  c7:	1129      	s32i.n	a2, a1, 4
+  c9:	2139      	s32i.n	a3, a1, 8
+  cb:	ffe701        	l32r	a0, 68 <vPortYield+0x54>
+  ce:	0000c0        	callx0	a0
+  d1:	1128      	l32i.n	a2, a1, 4
+  d3:	2138      	l32i.n	a3, a1, 8
+  d5:	002020        	esync
+  d8:	03ea40        	rsr.ccount	a4
+  db:	c04430        	sub	a4, a4, a3
+  de:	d72247        	blt	a2, a4, b9 <_xt_timer_int+0x5>
+  e1:	0108      	l32i.n	a0, a1, 0
+  e3:	10c112        	addi	a1, a1, 16
+  e6:	f00d      	ret.n
+
+000000e8 <_xt_timer_int1>:
+  e8:	f0c112        	addi	a1, a1, -16
+  eb:	0109      	s32i.n	a0, a1, 0
+  ed:	1129      	s32i.n	a2, a1, 4
+  ef:	2139      	s32i.n	a3, a1, 8
+  f1:	ffde01        	l32r	a0, 6c <vPortYield+0x58>
+  f4:	0000c0        	callx0	a0
+  f7:	1128      	l32i.n	a2, a1, 4
+  f9:	2138      	l32i.n	a3, a1, 8
+  fb:	0108      	l32i.n	a0, a1, 0
+  fd:	10c112        	addi	a1, a1, 16
+ 100:	f00d      	ret.n
+	...
+
+00000104 <_xt_tick_timer_init>:
+ 104:	f0c112        	addi	a1, a1, -16
+ 107:	0109      	s32i.n	a0, a1, 0
+ 109:	ffd931        	l32r	a3, 70 <vPortYield+0x5c>
+ 10c:	03ea20        	rsr.ccount	a2
+ 10f:	223a      	add.n	a2, a2, a3
+ 111:	13f020        	wsr.ccompare0	a2
+ 114:	020c      	movi.n	a2, 0
+ 116:	61e420        	xsr.intenable	a2
+ 119:	034c      	movi.n	a3, 64
+ 11b:	202230        	or	a2, a2, a3
+ 11e:	13e420        	wsr.intenable	a2
+ 121:	0108      	l32i.n	a0, a1, 0
+ 123:	10c112        	addi	a1, a1, 16
+ 126:	f00d      	ret.n
+
+00000128 <_xt_isr_unmask>:
+ 128:	f0c112        	addi	a1, a1, -16
+ 12b:	0109      	s32i.n	a0, a1, 0
+ 12d:	030c      	movi.n	a3, 0
+ 12f:	61e430        	xsr.intenable	a3
+ 132:	203230        	or	a3, a2, a3
+ 135:	13e430        	wsr.intenable	a3
+ 138:	0108      	l32i.n	a0, a1, 0
+ 13a:	10c112        	addi	a1, a1, 16
+ 13d:	f00d      	ret.n
+	...
+
+00000140 <_xt_isr_mask>:
+ 140:	f0c112        	addi	a1, a1, -16
+ 143:	0109      	s32i.n	a0, a1, 0
+ 145:	030c      	movi.n	a3, 0
+ 147:	61e430        	xsr.intenable	a3
+ 14a:	103230        	and	a3, a2, a3
+ 14d:	13e430        	wsr.intenable	a3
+ 150:	0108      	l32i.n	a0, a1, 0
+ 152:	10c112        	addi	a1, a1, 16
+ 155:	f00d      	ret.n
+	...
+
+00000158 <_xt_read_ints>:
+ 158:	f0c112        	addi	a1, a1, -16
+ 15b:	0109      	s32i.n	a0, a1, 0
+ 15d:	03e220        	rsr.interrupt	a2
+ 160:	0108      	l32i.n	a0, a1, 0
+ 162:	10c112        	addi	a1, a1, 16
+ 165:	f00d      	ret.n
+	...
+
+00000168 <_xt_clear_ints>:
+ 168:	f0c112        	addi	a1, a1, -16
+ 16b:	0109      	s32i.n	a0, a1, 0
+ 16d:	13e320        	wsr.intclear	a2
+ 170:	0108      	l32i.n	a0, a1, 0
+ 172:	10c112        	addi	a1, a1, 16
+ 175:	f00d      	ret.n

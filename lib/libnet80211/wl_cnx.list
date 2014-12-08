@@ -1,0 +1,2012 @@
+
+wl_cnx.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <cnx_attach-0x18>:
+	...
+       8:	0688      	l32i.n	a8, a6, 0
+       a:	400000        	ssr	a0
+       d:	000004        	excw
+	...
+
+00000018 <cnx_attach>:
+      18:	60a732        	movi	a3, 0x760
+      1b:	f0c112        	addi	a1, a1, -16
+      1e:	0129      	s32i.n	a2, a1, 0
+      20:	1109      	s32i.n	a0, a1, 4
+      22:	fff721        	l32r	a2, 0 <cnx_attach-0x18>
+      25:	fffa01        	l32r	a0, 10 <cnx_attach-0x8>
+      28:	0000c0        	callx0	a0
+      2b:	fff721        	l32r	a2, 8 <cnx_attach-0x10>
+      2e:	f00c      	movi.n	a0, 15
+      30:	0178      	l32i.n	a7, a1, 0
+      32:	fff441        	l32r	a4, 4 <cnx_attach-0x14>
+      35:	250c      	movi.n	a5, 2
+      37:	0438      	l32i.n	a3, a4, 0
+      39:	046d      	mov.n	a6, a4
+      3b:	203350        	or	a3, a3, a5
+      3e:	0769      	s32i.n	a6, a7, 0
+      40:	004202        	s8i	a0, a2, 0
+      43:	0439      	s32i.n	a3, a4, 0
+      45:	fff121        	l32r	a2, c <cnx_attach-0xc>
+      48:	030c      	movi.n	a3, 0
+      4a:	fff201        	l32r	a0, 14 <cnx_attach-0x4>
+      4d:	0000c0        	callx0	a0
+      50:	1108      	l32i.n	a0, a1, 4
+      52:	10c112        	addi	a1, a1, 16
+      55:	f00d      	ret.n
+	...
+
+00000064 <cnx_sta_connect_led_timer_cb>:
+      64:	140c      	movi.n	a4, 1
+      66:	030c      	movi.n	a3, 0
+      68:	fffc51        	l32r	a5, 58 <cnx_attach+0x40>
+      6b:	f0c112        	addi	a1, a1, -16
+      6e:	0109      	s32i.n	a0, a1, 0
+      70:	5f0522        	l8ui	a2, a5, 95
+      73:	5e0552        	l8ui	a5, a5, 94
+      76:	046020        	extui	a6, a2, 0, 1
+      79:	833460        	moveqz	a3, a4, a6
+      7c:	401500        	ssl	a5
+      7f:	a12200        	sll	a2, a2
+      82:	050c      	movi.n	a5, 0
+      84:	a14400        	sll	a4, a4
+      87:	a13300        	sll	a3, a3
+      8a:	fff501        	l32r	a0, 60 <cnx_attach+0x48>
+      8d:	0000c0        	callx0	a0
+      90:	180c      	movi.n	a8, 1
+      92:	060c      	movi.n	a6, 0
+      94:	fff271        	l32r	a7, 5c <cnx_attach+0x44>
+      97:	0108      	l32i.n	a0, a1, 0
+      99:	5f0792        	l8ui	a9, a7, 95
+      9c:	10c112        	addi	a1, a1, 16
+      9f:	049090        	extui	a9, a9, 0, 1
+      a2:	836890        	moveqz	a6, a8, a9
+      a5:	5f4762        	s8i	a6, a7, 95
+      a8:	f00d      	ret.n
+      aa:	000000        	ill
+      ad:	000000        	ill
+      b0:	000564        	excw
+      b3:	056400        	extui	a6, a0, 20, 1
+      b6:	640000        	extui	a0, a0, 0, 7
+      b9:	000005        	call0	bc <cnx_sta_connect_led_timer_cb+0x58>
+      bc:	000000        	ill
+      bf:	056400        	extui	a6, a0, 20, 1
+      c2:	000000        	ill
+      c5:	fe          	.byte 0xfe
+      c6:	003ff1        	l32r	a15, fffc01c4 <cnx_node_join+0xfffbed54>
+      c9:	000084        	excw
+      cc:	000004        	excw
+      cf:	c00000        	sub	a0, a0, a0
+	...
+      f6:	240000        	extui	a0, a0, 0, 3
+      f9:	000003        	excw
+
+000000fc <cnx_sta_connect_cmd>:
+      fc:	f0c112        	addi	a1, a1, -16
+      ff:	21d9      	s32i.n	a13, a1, 8
+     101:	11c9      	s32i.n	a12, a1, 4
+     103:	0109      	s32i.n	a0, a1, 0
+     105:	ffe901        	l32r	a0, ac <cnx_sta_connect_led_timer_cb+0x48>
+     108:	02cd      	mov.n	a12, a2
+     10a:	5d0022        	l8ui	a2, a0, 93
+     10d:	03dd      	mov.n	a13, a3
+     10f:	421266        	bnei	a2, 1, 155 <cnx_sta_connect_cmd+0x59>
+     112:	5c0032        	l8ui	a3, a0, 92
+     115:	ffe621        	l32r	a2, b0 <cnx_sta_connect_led_timer_cb+0x4c>
+     118:	391366        	bnei	a3, 1, 155 <cnx_sta_connect_cmd+0x59>
+     11b:	7f2222        	l32i	a2, a2, 0x1fc
+     11e:	c2cc      	bnez.n	a2, 12e <cnx_sta_connect_cmd+0x32>
+     120:	c21c      	movi.n	a2, 28
+     122:	ffec01        	l32r	a0, d4 <cnx_sta_connect_led_timer_cb+0x70>
+     125:	0000c0        	callx0	a0
+     128:	ffe331        	l32r	a3, b4 <cnx_sta_connect_led_timer_cb+0x50>
+     12b:	7f6322        	s32i	a2, a3, 0x1fc
+     12e:	ffea01        	l32r	a0, d8 <cnx_sta_connect_led_timer_cb+0x74>
+     131:	0000c0        	callx0	a0
+     134:	ffe231        	l32r	a3, bc <cnx_sta_connect_led_timer_cb+0x58>
+     137:	ffe021        	l32r	a2, b8 <cnx_sta_connect_led_timer_cb+0x54>
+     13a:	040c      	movi.n	a4, 0
+     13c:	7f2222        	l32i	a2, a2, 0x1fc
+     13f:	ffe701        	l32r	a0, dc <cnx_sta_connect_led_timer_cb+0x78>
+     142:	0000c0        	callx0	a0
+     145:	233c      	movi.n	a3, 50
+     147:	ffde21        	l32r	a2, c0 <cnx_sta_connect_led_timer_cb+0x5c>
+     14a:	140c      	movi.n	a4, 1
+     14c:	7f2222        	l32i	a2, a2, 0x1fc
+     14f:	ffe401        	l32r	a0, e0 <cnx_sta_connect_led_timer_cb+0x7c>
+     152:	0000c0        	callx0	a0
+     155:	061c      	movi.n	a6, 16
+     157:	ffdb51        	l32r	a5, c4 <cnx_sta_connect_led_timer_cb+0x60>
+     15a:	0020c0        	memw
+     15d:	9b2542        	l32i	a4, a5, 0x26c
+     160:	204460        	or	a4, a4, a6
+     163:	0020c0        	memw
+     166:	9b6542        	s32i	a4, a5, 0x26c
+     169:	a90c32        	l8ui	a3, a12, 169
+     16c:	039c      	beqz.n	a3, 180 <cnx_sta_connect_cmd+0x84>
+     16e:	220c      	movi.n	a2, 2
+     170:	030c      	movi.n	a3, 0
+     172:	aaa042        	movi	a4, 170
+     175:	4c4a      	add.n	a4, a12, a4
+     177:	ffdb01        	l32r	a0, e4 <cnx_sta_connect_led_timer_cb+0x80>
+     17a:	0000c0        	callx0	a0
+     17d:	0002c6        	j	18c <cnx_sta_connect_cmd+0x90>
+     180:	020c      	movi.n	a2, 0
+     182:	030c      	movi.n	a3, 0
+     184:	040c      	movi.n	a4, 0
+     186:	ffd801        	l32r	a0, e8 <cnx_sta_connect_led_timer_cb+0x84>
+     189:	0000c0        	callx0	a0
+     18c:	ffd801        	l32r	a0, ec <cnx_sta_connect_led_timer_cb+0x88>
+     18f:	0000c0        	callx0	a0
+     192:	cd8c      	beqz.n	a13, 1a2 <cnx_sta_connect_cmd+0xa6>
+     194:	0d2d      	mov.n	a2, a13
+     196:	ffd601        	l32r	a0, f0 <cnx_sta_connect_led_timer_cb+0x8c>
+     199:	0000c0        	callx0	a0
+     19c:	ffcbd1        	l32r	a13, c8 <cnx_sta_connect_led_timer_cb+0x64>
+     19f:	000086        	j	1a5 <cnx_sta_connect_cmd+0xa9>
+     1a2:	0fa5d2        	movi	a13, 0x50f
+     1a5:	ffc951        	l32r	a5, cc <cnx_sta_connect_led_timer_cb+0x68>
+     1a8:	0558      	l32i.n	a5, a5, 0
+     1aa:	ffc961        	l32r	a6, d0 <cnx_sta_connect_led_timer_cb+0x6c>
+     1ad:	056507        	bbci	a5, 0, 1b6 <cnx_sta_connect_cmd+0xba>
+     1b0:	20dd60        	or	a13, a13, a6
+     1b3:	0003c6        	j	1c6 <cnx_sta_connect_cmd+0xca>
+     1b6:	10cc32        	addi	a3, a12, 16
+     1b9:	0c0c42        	l8ui	a4, a12, 12
+     1bc:	020c      	movi.n	a2, 0
+     1be:	150c      	movi.n	a5, 1
+     1c0:	ffcd01        	l32r	a0, f4 <cnx_sta_connect_led_timer_cb+0x90>
+     1c3:	0000c0        	callx0	a0
+     1c6:	0d2d      	mov.n	a2, a13
+     1c8:	ffcc01        	l32r	a0, f8 <cnx_sta_connect_led_timer_cb+0x94>
+     1cb:	0000c0        	callx0	a0
+     1ce:	11c8      	l32i.n	a12, a1, 4
+     1d0:	21d8      	l32i.n	a13, a1, 8
+     1d2:	0108      	l32i.n	a0, a1, 0
+     1d4:	10c112        	addi	a1, a1, 16
+     1d7:	f00d      	ret.n
+	...
+     1e5:	000080        	ret
+	...
+
+00000220 <cnx_sta_scan_cmd>:
+     220:	e0c112        	addi	a1, a1, -32
+     223:	31d9      	s32i.n	a13, a1, 12
+     225:	0139      	s32i.n	a3, a1, 0
+     227:	21c9      	s32i.n	a12, a1, 8
+     229:	41e9      	s32i.n	a14, a1, 16
+     22b:	1109      	s32i.n	a0, a1, 4
+     22d:	ffeb01        	l32r	a0, 1dc <cnx_sta_connect_cmd+0xe0>
+     230:	04ed      	mov.n	a14, a4
+     232:	5d0002        	l8ui	a0, a0, 93
+     235:	02cd      	mov.n	a12, a2
+     237:	0d6007        	bbci	a0, 0, 248 <cnx_sta_scan_cmd+0x28>
+     23a:	ffe921        	l32r	a2, 1e0 <cnx_sta_connect_cmd+0xe4>
+     23d:	4228      	l32i.n	a2, a2, 16
+     23f:	b80222        	l8ui	a2, a2, 184
+     242:	fbc222        	addi	a2, a2, -5
+     245:	0b9216        	beqz	a2, 302 <cnx_sta_scan_cmd+0xe2>
+     248:	8cfc      	bnez.n	a12, 284 <cnx_sta_scan_cmd+0x64>
+     24a:	120c      	movi.n	a2, 1
+     24c:	030c      	movi.n	a3, 0
+     24e:	040c      	movi.n	a4, 0
+     250:	250c      	movi.n	a5, 2
+     252:	ffe501        	l32r	a0, 1e8 <cnx_sta_connect_cmd+0xec>
+     255:	0000c0        	callx0	a0
+     258:	ffe501        	l32r	a0, 1ec <cnx_sta_connect_cmd+0xf0>
+     25b:	0000c0        	callx0	a0
+     25e:	020c      	movi.n	a2, 0
+     260:	ffe401        	l32r	a0, 1f0 <cnx_sta_connect_cmd+0xf4>
+     263:	0000c0        	callx0	a0
+     266:	020c      	movi.n	a2, 0
+     268:	030c      	movi.n	a3, 0
+     26a:	040c      	movi.n	a4, 0
+     26c:	ffe201        	l32r	a0, 1f4 <cnx_sta_connect_cmd+0xf8>
+     26f:	0000c0        	callx0	a0
+     272:	0e5d      	mov.n	a5, a14
+     274:	0fa122        	movi	a2, 0x10f
+     277:	330c      	movi.n	a3, 3
+     279:	0148      	l32i.n	a4, a1, 0
+     27b:	ffdf01        	l32r	a0, 1f8 <cnx_sta_connect_cmd+0xfc>
+     27e:	0000c0        	callx0	a0
+     281:	001f46        	j	302 <cnx_sta_scan_cmd+0xe2>
+     284:	0cd8      	l32i.n	a13, a12, 0
+     286:	8d9c      	beqz.n	a13, 2a2 <cnx_sta_scan_cmd+0x82>
+     288:	0d2d      	mov.n	a2, a13
+     28a:	ffdc01        	l32r	a0, 1fc <cnx_sta_connect_cmd+0x100>
+     28d:	0000c0        	callx0	a0
+     290:	0d3d      	mov.n	a3, a13
+     292:	744020        	extui	a4, a2, 0, 8
+     295:	150c      	movi.n	a5, 1
+     297:	120c      	movi.n	a2, 1
+     299:	ffd901        	l32r	a0, 200 <cnx_sta_connect_cmd+0x104>
+     29c:	0000c0        	callx0	a0
+     29f:	000346        	j	2b0 <cnx_sta_scan_cmd+0x90>
+     2a2:	120c      	movi.n	a2, 1
+     2a4:	030c      	movi.n	a3, 0
+     2a6:	040c      	movi.n	a4, 0
+     2a8:	250c      	movi.n	a5, 2
+     2aa:	ffd601        	l32r	a0, 204 <cnx_sta_connect_cmd+0x108>
+     2ad:	0000c0        	callx0	a0
+     2b0:	1c28      	l32i.n	a2, a12, 4
+     2b2:	728c      	beqz.n	a2, 2bd <cnx_sta_scan_cmd+0x9d>
+     2b4:	ffd501        	l32r	a0, 208 <cnx_sta_connect_cmd+0x10c>
+     2b7:	0000c0        	callx0	a0
+     2ba:	000146        	j	2c3 <cnx_sta_scan_cmd+0xa3>
+     2bd:	ffd301        	l32r	a0, 20c <cnx_sta_connect_cmd+0x110>
+     2c0:	0000c0        	callx0	a0
+     2c3:	080c22        	l8ui	a2, a12, 8
+     2c6:	d30c      	movi.n	a3, 13
+     2c8:	d28c      	beqz.n	a2, 2d9 <cnx_sta_scan_cmd+0xb9>
+     2ca:	0b3327        	bltu	a3, a2, 2d9 <cnx_sta_scan_cmd+0xb9>
+     2cd:	ffd001        	l32r	a0, 210 <cnx_sta_connect_cmd+0x114>
+     2d0:	0000c0        	callx0	a0
+     2d3:	ffc4d1        	l32r	a13, 1e4 <cnx_sta_connect_cmd+0xe8>
+     2d6:	000086        	j	2dc <cnx_sta_scan_cmd+0xbc>
+     2d9:	0fa1d2        	movi	a13, 0x10f
+     2dc:	090c42        	l8ui	a4, a12, 9
+     2df:	948c      	beqz.n	a4, 2ec <cnx_sta_scan_cmd+0xcc>
+     2e1:	120c      	movi.n	a2, 1
+     2e3:	ffcc01        	l32r	a0, 214 <cnx_sta_connect_cmd+0x118>
+     2e6:	0000c0        	callx0	a0
+     2e9:	0001c6        	j	2f4 <cnx_sta_scan_cmd+0xd4>
+     2ec:	020c      	movi.n	a2, 0
+     2ee:	ffca01        	l32r	a0, 218 <cnx_sta_connect_cmd+0x11c>
+     2f1:	0000c0        	callx0	a0
+     2f4:	0e5d      	mov.n	a5, a14
+     2f6:	0d2d      	mov.n	a2, a13
+     2f8:	330c      	movi.n	a3, 3
+     2fa:	0148      	l32i.n	a4, a1, 0
+     2fc:	ffc801        	l32r	a0, 21c <cnx_sta_connect_cmd+0x120>
+     2ff:	0000c0        	callx0	a0
+     302:	21c8      	l32i.n	a12, a1, 8
+     304:	31d8      	l32i.n	a13, a1, 12
+     306:	41e8      	l32i.n	a14, a1, 16
+     308:	1108      	l32i.n	a0, a1, 4
+     30a:	20c112        	addi	a1, a1, 32
+     30d:	f00d      	ret.n
+	...
+     31f:	038400        	excw
+     322:	120000        	excw
+     325:	51f0c1        	l32r	a12, fffd4ae8 <cnx_node_join+0xfffd3678>
+     328:	fffa      	add.n	a15, a15, a15
+     32a:	0109      	s32i.n	a0, a1, 0
+     32c:	4508      	l32i.n	a0, a5, 16
+     32e:	140c      	movi.n	a4, 1
+     330:	b90032        	l8ui	a3, a0, 185
+     333:	061c      	movi.n	a6, 16
+     335:	33cc      	bnez.n	a3, 33c <cnx_sta_scan_cmd+0x11c>
+     337:	ba4042        	s8i	a4, a0, 186
+     33a:	4508      	l32i.n	a0, a5, 16
+     33c:	fff651        	l32r	a5, 314 <cnx_sta_scan_cmd+0xf4>
+     33f:	b84042        	s8i	a4, a0, 184
+     342:	0548      	l32i.n	a4, a5, 0
+     344:	204460        	or	a4, a4, a6
+     347:	0549      	s32i.n	a4, a5, 0
+     349:	fff341        	l32r	a4, 318 <cnx_sta_scan_cmd+0xf8>
+     34c:	b28c      	beqz.n	a2, 35b <cnx_sta_scan_cmd+0x13b>
+     34e:	230c      	movi.n	a3, 2
+     350:	050c      	movi.n	a5, 0
+     352:	fff201        	l32r	a0, 31c <cnx_sta_scan_cmd+0xfc>
+     355:	0000c0        	callx0	a0
+     358:	000246        	j	365 <cnx_sta_scan_cmd+0x145>
+     35b:	042d      	mov.n	a2, a4
+     35d:	030c      	movi.n	a3, 0
+     35f:	fff001        	l32r	a0, 320 <cnx_sta_scan_cmd+0x100>
+     362:	0000c0        	callx0	a0
+     365:	0108      	l32i.n	a0, a1, 0
+     367:	10c112        	addi	a1, a1, 16
+     36a:	f00d      	ret.n
+     36c:	0498      	l32i.n	a9, a4, 0
+     36e:	680000        	excw
+     371:	000005        	call0	374 <cnx_sta_scan_cmd+0x154>
+     374:	000000        	ill
+     377:	049800        	extui	a9, a0, 8, 1
+     37a:	640000        	extui	a0, a0, 0, 7
+     37d:	000b      	addi.n	a0, a0, -1
+     37f:	03e400        	rsr.intenable	a0
+     382:	310000        	srai	a0, a0, 16
+     385:	fffa      	add.n	a15, a15, a15
+     387:	040c      	movi.n	a4, 0
+     389:	f0c112        	addi	a1, a1, -16
+     38c:	026d      	mov.n	a6, a2
+     38e:	0109      	s32i.n	a0, a1, 0
+     390:	fff801        	l32r	a0, 370 <cnx_sta_scan_cmd+0x150>
+     393:	220c      	movi.n	a2, 2
+     395:	7f6062        	s32i	a6, a0, 0x1fc
+     398:	fff701        	l32r	a0, 374 <cnx_sta_scan_cmd+0x154>
+     39b:	0000c0        	callx0	a0
+     39e:	629c      	beqz.n	a2, 3b8 <cnx_sta_scan_cmd+0x198>
+     3a0:	120c      	movi.n	a2, 1
+     3a2:	0002c6        	j	3b1 <cnx_sta_scan_cmd+0x191>
+     3a5:	020c      	movi.n	a2, 0
+     3a7:	030c      	movi.n	a3, 0
+     3a9:	fff301        	l32r	a0, 378 <cnx_sta_scan_cmd+0x158>
+     3ac:	0000c0        	callx0	a0
+     3af:	220c      	movi.n	a2, 2
+     3b1:	0108      	l32i.n	a0, a1, 0
+     3b3:	10c112        	addi	a1, a1, 16
+     3b6:	f00d      	ret.n
+     3b8:	fff101        	l32r	a0, 37c <cnx_sta_scan_cmd+0x15c>
+     3bb:	0000c0        	callx0	a0
+     3be:	fe3216        	beqz	a2, 3a5 <cnx_sta_scan_cmd+0x185>
+     3c1:	030c      	movi.n	a3, 0
+     3c3:	ffef01        	l32r	a0, 380 <cnx_sta_scan_cmd+0x160>
+     3c6:	0000c0        	callx0	a0
+     3c9:	fff886        	j	3af <cnx_sta_scan_cmd+0x18f>
+     3cc:	000000        	ill
+     3cf:	03e400        	rsr.intenable	a0
+	...
+     3e2:	120000        	excw
+     3e5:	09e0c1        	l32r	a12, fffc2b68 <cnx_node_join+0xfffc16f8>
+     3e8:	f80151        	l32r	a5, ffffe3ec <cnx_node_join+0xffffcf7c>
+     3eb:	ff          	.byte 0xff
+     3ec:	61c9      	s32i.n	a12, a1, 24
+     3ee:	4008      	l32i.n	a0, a0, 16
+     3f0:	02cd      	mov.n	a12, a2
+     3f2:	0008      	l32i.n	a0, a0, 0
+     3f4:	4109      	s32i.n	a0, a1, 16
+     3f6:	fff801        	l32r	a0, 3d8 <cnx_sta_scan_cmd+0x1b8>
+     3f9:	0000c0        	callx0	a0
+     3fc:	1e2c02        	l32i	a0, a12, 120
+     3ff:	131207        	beq	a2, a0, 416 <cnx_sta_scan_cmd+0x1f6>
+     402:	0c6d      	mov.n	a6, a12
+     404:	030c      	movi.n	a3, 0
+     406:	fff241        	l32r	a4, 3d0 <cnx_sta_scan_cmd+0x1b0>
+     409:	050c      	movi.n	a5, 0
+     40b:	002d      	mov.n	a2, a0
+     40d:	fff301        	l32r	a0, 3dc <cnx_sta_scan_cmd+0x1bc>
+     410:	0000c0        	callx0	a0
+     413:	000746        	j	434 <cnx_sta_scan_cmd+0x214>
+     416:	0c5d      	mov.n	a5, a12
+     418:	0c2d      	mov.n	a2, a12
+     41a:	0c4d      	mov.n	a4, a12
+     41c:	080c      	movi.n	a8, 0
+     41e:	4138      	l32i.n	a3, a1, 16
+     420:	ffed61        	l32r	a6, 3d4 <cnx_sta_scan_cmd+0x1b4>
+     423:	29c332        	addi	a3, a3, 41
+     426:	9cc672        	addi	a7, a6, -100
+     429:	600772        	l8ui	a7, a7, 96
+     42c:	0189      	s32i.n	a8, a1, 0
+     42e:	ffec01        	l32r	a0, 3e0 <cnx_sta_scan_cmd+0x1c0>
+     431:	0000c0        	callx0	a0
+     434:	61c8      	l32i.n	a12, a1, 24
+     436:	5108      	l32i.n	a0, a1, 20
+     438:	20c112        	addi	a1, a1, 32
+     43b:	f00d      	ret.n
+     43d:	000000        	ill
+     440:	f0c112        	addi	a1, a1, -16
+     443:	11c9      	s32i.n	a12, a1, 4
+     445:	02cd      	mov.n	a12, a2
+     447:	4228      	l32i.n	a2, a2, 16
+     449:	0109      	s32i.n	a0, a1, 0
+     44b:	10c222        	addi	a2, a2, 16
+     44e:	000005        	call0	450 <cnx_sta_scan_cmd+0x230>
+     451:	729c      	beqz.n	a2, 46c <cnx_sta_scan_cmd+0x24c>
+     453:	8c38      	l32i.n	a3, a12, 32
+     455:	0f0332        	l8ui	a3, a3, 15
+     458:	091366        	bnei	a3, 1, 465 <cnx_sta_scan_cmd+0x245>
+     45b:	530c      	movi.n	a3, 5
+     45d:	040c      	movi.n	a4, 0
+     45f:	000005        	call0	460 <cnx_sta_scan_cmd+0x240>
+     462:	000186        	j	46c <cnx_sta_scan_cmd+0x24c>
+     465:	d37c      	movi.n	a3, -3
+     467:	140c      	movi.n	a4, 1
+     469:	000005        	call0	46c <cnx_sta_scan_cmd+0x24c>
+     46c:	006f45        	call0	b64 <cnx_rc_search+0x7c>
+     46f:	628c      	beqz.n	a2, 479 <cnx_sta_scan_cmd+0x259>
+     471:	030c      	movi.n	a3, 0
+     473:	fff705        	call0	3e4 <cnx_sta_scan_cmd+0x1c4>
+     476:	000186        	j	480 <cnx_sta_scan_cmd+0x260>
+     479:	020c      	movi.n	a2, 0
+     47b:	030c      	movi.n	a3, 0
+     47d:	000185        	call0	498 <cnx_sta_scan_cmd+0x278>
+     480:	11c8      	l32i.n	a12, a1, 4
+     482:	0108      	l32i.n	a0, a1, 0
+     484:	10c112        	addi	a1, a1, 16
+     487:	f00d      	ret.n
+     489:	000000        	ill
+     48c:	060c      	movi.n	a6, 0
+	...
+     496:	120000        	excw
+     499:	39f0c1        	l32r	a12, fffcec5c <cnx_node_join+0xfffcd7ec>
+     49c:	21c901        	l32r	a0, fffc8bc0 <cnx_node_join+0xfffc7750>
+     49f:	1109      	s32i.n	a0, a1, 4
+     4a1:	fffac1        	l32r	a12, 48c <cnx_sta_scan_cmd+0x26c>
+     4a4:	000c      	movi.n	a0, 0
+     4a6:	7e4c02        	s8i	a0, a12, 126
+     4a9:	562cc2        	l32i	a12, a12, 0x158
+     4ac:	fff901        	l32r	a0, 490 <cnx_sta_scan_cmd+0x270>
+     4af:	0000c0        	callx0	a0
+     4b2:	fff801        	l32r	a0, 494 <cnx_sta_scan_cmd+0x274>
+     4b5:	0000c0        	callx0	a0
+     4b8:	7c8c      	beqz.n	a12, 4c3 <cnx_sta_scan_cmd+0x2a3>
+     4ba:	0138      	l32i.n	a3, a1, 0
+     4bc:	0c08      	l32i.n	a0, a12, 0
+     4be:	020c      	movi.n	a2, 0
+     4c0:	0000c0        	callx0	a0
+     4c3:	21c8      	l32i.n	a12, a1, 8
+     4c5:	1108      	l32i.n	a0, a1, 4
+     4c7:	10c112        	addi	a1, a1, 16
+     4ca:	f00d      	ret.n
+	...
+
+000004e4 <cnx_connect_timeout>:
+     4e4:	f0c112        	addi	a1, a1, -16
+     4e7:	1109      	s32i.n	a0, a1, 4
+     4e9:	fff801        	l32r	a0, 4cc <cnx_sta_scan_cmd+0x2ac>
+     4ec:	fff921        	l32r	a2, 4d0 <cnx_sta_scan_cmd+0x2b0>
+     4ef:	4008      	l32i.n	a0, a0, 16
+     4f1:	0109      	s32i.n	a0, a1, 0
+     4f3:	fffa01        	l32r	a0, 4dc <cnx_sta_scan_cmd+0x2bc>
+     4f6:	0000c0        	callx0	a0
+     4f9:	0128      	l32i.n	a2, a1, 0
+     4fb:	f228      	l32i.n	a2, a2, 60
+     4fd:	b28c      	beqz.n	a2, 50c <cnx_connect_timeout+0x28>
+     4ff:	fff521        	l32r	a2, 4d4 <cnx_sta_scan_cmd+0x2b4>
+     502:	030c      	movi.n	a3, 0
+     504:	140c      	movi.n	a4, 1
+     506:	fff601        	l32r	a0, 4e0 <cnx_sta_scan_cmd+0x2c0>
+     509:	0000c0        	callx0	a0
+     50c:	fff321        	l32r	a2, 4d8 <cnx_sta_scan_cmd+0x2b8>
+     50f:	030c      	movi.n	a3, 0
+     511:	000005        	call0	514 <cnx_connect_timeout+0x30>
+     514:	1108      	l32i.n	a0, a1, 4
+     516:	10c112        	addi	a1, a1, 16
+     519:	f00d      	ret.n
+	...
+
+0000051c <cnx_start_handoff_cb>:
+     51c:	f0c112        	addi	a1, a1, -16
+     51f:	0109      	s32i.n	a0, a1, 0
+     521:	13cc      	bnez.n	a3, 526 <cnx_start_handoff_cb+0xa>
+     523:	000545        	call0	578 <cnx_start_handoff_cb+0x5c>
+     526:	0108      	l32i.n	a0, a1, 0
+     528:	10c112        	addi	a1, a1, 16
+     52b:	f00d      	ret.n
+	...
+     53d:	000000        	ill
+     540:	000c      	movi.n	a0, 0
+	...
+     54e:	980000        	excw
+     551:	000006        	j	555 <cnx_start_handoff_cb+0x39>
+	...
+     568:	067c      	movi.n	a6, -16
+	...
+     576:	1c0000        	excw
+     579:	ed2103        	excw
+     57c:	ff          	.byte 0xff
+     57d:	f0c112        	addi	a1, a1, -16
+     580:	21d9      	s32i.n	a13, a1, 8
+     582:	11c9      	s32i.n	a12, a1, 4
+     584:	0109      	s32i.n	a0, a1, 0
+     586:	ffebc1        	l32r	a12, 534 <cnx_start_handoff_cb+0x18>
+     589:	0208      	l32i.n	a0, a2, 0
+     58b:	4cc8      	l32i.n	a12, a12, 16
+     58d:	200030        	or	a0, a0, a3
+     590:	0209      	s32i.n	a0, a2, 0
+     592:	0039c5        	call0	930 <cnx_start_handoff_cb+0x414>
+     595:	cc4b      	addi.n	a12, a12, 4
+     597:	ffe8d1        	l32r	a13, 538 <cnx_start_handoff_cb+0x1c>
+     59a:	044256        	bnez	a2, 5e2 <cnx_start_handoff_cb+0xc6>
+     59d:	ffe701        	l32r	a0, 53c <cnx_start_handoff_cb+0x20>
+     5a0:	4008      	l32i.n	a0, a0, 16
+     5a2:	ba0002        	l8ui	a0, a0, 186
+     5a5:	132026        	beqi	a0, 2, 5bc <cnx_start_handoff_cb+0xa0>
+     5a8:	320c      	movi.n	a2, 3
+     5aa:	ffea01        	l32r	a0, 554 <cnx_start_handoff_cb+0x38>
+     5ad:	0000c0        	callx0	a0
+     5b0:	ffe421        	l32r	a2, 540 <cnx_start_handoff_cb+0x24>
+     5b3:	ffe431        	l32r	a3, 544 <cnx_start_handoff_cb+0x28>
+     5b6:	ffe801        	l32r	a0, 558 <cnx_start_handoff_cb+0x3c>
+     5b9:	0000c0        	callx0	a0
+     5bc:	0c2d      	mov.n	a2, a12
+     5be:	ffe701        	l32r	a0, 55c <cnx_start_handoff_cb+0x40>
+     5c1:	0000c0        	callx0	a0
+     5c4:	0d3d      	mov.n	a3, a13
+     5c6:	0c2d      	mov.n	a2, a12
+     5c8:	040c      	movi.n	a4, 0
+     5ca:	ffe501        	l32r	a0, 560 <cnx_start_handoff_cb+0x44>
+     5cd:	0000c0        	callx0	a0
+     5d0:	0c2d      	mov.n	a2, a12
+     5d2:	e8a332        	movi	a3, 0x3e8
+     5d5:	040c      	movi.n	a4, 0
+     5d7:	ffe301        	l32r	a0, 564 <cnx_start_handoff_cb+0x48>
+     5da:	0000c0        	callx0	a0
+     5dd:	020c      	movi.n	a2, 0
+     5df:	000e46        	j	61c <cnx_start_handoff_cb+0x100>
+     5e2:	ffe101        	l32r	a0, 568 <cnx_start_handoff_cb+0x4c>
+     5e5:	0000c0        	callx0	a0
+     5e8:	02dd      	mov.n	a13, a2
+     5ea:	0c2d      	mov.n	a2, a12
+     5ec:	ffe001        	l32r	a0, 56c <cnx_start_handoff_cb+0x50>
+     5ef:	0000c0        	callx0	a0
+     5f2:	ffd531        	l32r	a3, 548 <cnx_start_handoff_cb+0x2c>
+     5f5:	0c2d      	mov.n	a2, a12
+     5f7:	040c      	movi.n	a4, 0
+     5f9:	ffdd01        	l32r	a0, 570 <cnx_start_handoff_cb+0x54>
+     5fc:	0000c0        	callx0	a0
+     5ff:	0c2d      	mov.n	a2, a12
+     601:	e8a332        	movi	a3, 0x3e8
+     604:	040c      	movi.n	a4, 0
+     606:	ffdb01        	l32r	a0, 574 <cnx_start_handoff_cb+0x58>
+     609:	0000c0        	callx0	a0
+     60c:	7ddc      	bnez.n	a13, 627 <cnx_start_handoff_cb+0x10b>
+     60e:	ffcf21        	l32r	a2, 54c <cnx_start_handoff_cb+0x30>
+     611:	0208      	l32i.n	a0, a2, 0
+     613:	f36c      	movi.n	a3, -17
+     615:	100030        	and	a0, a0, a3
+     618:	0209      	s32i.n	a0, a2, 0
+     61a:	0d2d      	mov.n	a2, a13
+     61c:	11c8      	l32i.n	a12, a1, 4
+     61e:	21d8      	l32i.n	a13, a1, 8
+     620:	0108      	l32i.n	a0, a1, 0
+     622:	10c112        	addi	a1, a1, 16
+     625:	f00d      	ret.n
+     627:	ef1d66        	bnei	a13, 1, 61a <cnx_start_handoff_cb+0xfe>
+     62a:	ffc921        	l32r	a2, 550 <cnx_start_handoff_cb+0x34>
+     62d:	0208      	l32i.n	a0, a2, 0
+     62f:	40a132        	movi	a3, 0x140
+     632:	200030        	or	a0, a0, a3
+     635:	fff7c6        	j	618 <cnx_start_handoff_cb+0xfc>
+     638:	068c      	beqz.n	a6, 63c <cnx_start_handoff_cb+0x120>
+     63a:	980000        	excw
+     63d:	000006        	j	641 <cnx_start_handoff_cb+0x125>
+     640:	000000        	ill
+     643:	fe0000        	excw
+     646:	ef          	.byte 0xef
+     647:	3f          	.byte 0x3f
+	...
+     650:	effe00        	excw
+     653:	3f          	.byte 0x3f
+     654:	000600        	excw
+     657:	069460        	excw
+     65a:	bc0000        	excw
+     65d:	000007        	bnone	a0, a0, 661 <cnx_start_handoff_cb+0x145>
+     660:	07bc      	beqz.n	a7, 694 <cnx_start_handoff_cb+0x178>
+	...
+     67a:	120000        	excw
+     67d:	09f0c1        	l32r	a12, fffc2e40 <cnx_node_join+0xfffc19d0>
+     680:	ed0101        	l32r	a0, ffffba84 <cnx_node_join+0xffffa614>
+     683:	ff          	.byte 0xff
+     684:	11c9      	s32i.n	a12, a1, 4
+     686:	0008      	l32i.n	a0, a0, 0
+     688:	02cd      	mov.n	a12, a2
+     68a:	f09c      	beqz.n	a0, 6ad <cnx_start_handoff_cb+0x191>
+     68c:	1d9207        	bne	a2, a0, 6ad <cnx_start_handoff_cb+0x191>
+     68f:	fff501        	l32r	a0, 664 <cnx_start_handoff_cb+0x148>
+     692:	0000c0        	callx0	a0
+     695:	1e2c32        	l32i	a3, a12, 120
+     698:	119327        	bne	a3, a2, 6ad <cnx_start_handoff_cb+0x191>
+     69b:	ffe861        	l32r	a6, 63c <cnx_start_handoff_cb+0x120>
+     69e:	020c      	movi.n	a2, 0
+     6a0:	0658      	l32i.n	a5, a6, 0
+     6a2:	40a172        	movi	a7, 0x140
+     6a5:	205570        	or	a5, a5, a7
+     6a8:	0659      	s32i.n	a5, a6, 0
+     6aa:	002206        	j	736 <cnx_start_handoff_cb+0x21a>
+     6ad:	083c16        	beqz	a12, 734 <cnx_start_handoff_cb+0x218>
+     6b0:	ffe401        	l32r	a0, 640 <cnx_start_handoff_cb+0x124>
+     6b3:	420c      	movi.n	a2, 4
+     6b5:	e84c22        	s8i	a2, a12, 232
+     6b8:	000002        	l8ui	a0, a0, 0
+     6bb:	e0dc      	bnez.n	a0, 6dd <cnx_start_handoff_cb+0x1c1>
+     6bd:	ffea01        	l32r	a0, 668 <cnx_start_handoff_cb+0x14c>
+     6c0:	0000c0        	callx0	a0
+     6c3:	0020c0        	memw
+     6c6:	ffdf21        	l32r	a2, 644 <cnx_start_handoff_cb+0x128>
+     6c9:	802232        	l32i	a3, a2, 0x200
+     6cc:	046c      	movi.n	a4, -32
+     6ce:	103340        	and	a3, a3, a4
+     6d1:	0020c0        	memw
+     6d4:	ffdd01        	l32r	a0, 648 <cnx_start_handoff_cb+0x12c>
+     6d7:	806232        	s32i	a3, a2, 0x200
+     6da:	000002        	l8ui	a0, a0, 0
+     6dd:	ffdb61        	l32r	a6, 64c <cnx_start_handoff_cb+0x130>
+     6e0:	1e2c52        	l32i	a5, a12, 120
+     6e3:	136652        	s32i	a5, a6, 76
+     6e6:	d0dc      	bnez.n	a0, 707 <cnx_start_handoff_cb+0x1eb>
+     6e8:	190c      	movi.n	a9, 1
+     6ea:	0020c0        	memw
+     6ed:	ffd881        	l32r	a8, 650 <cnx_start_handoff_cb+0x134>
+     6f0:	802872        	l32i	a7, a8, 0x200
+     6f3:	0a6c      	movi.n	a10, -32
+     6f5:	1077a0        	and	a7, a7, a10
+     6f8:	207790        	or	a7, a7, a9
+     6fb:	0020c0        	memw
+     6fe:	806872        	s32i	a7, a8, 0x200
+     701:	ffda01        	l32r	a0, 66c <cnx_start_handoff_cb+0x150>
+     704:	0000c0        	callx0	a0
+     707:	ffd3b1        	l32r	a11, 654 <cnx_start_handoff_cb+0x138>
+     70a:	0020c0        	memw
+     70d:	ffd201        	l32r	a0, 658 <cnx_start_handoff_cb+0x13c>
+     710:	9bb8      	l32i.n	a11, a11, 36
+     712:	00b9      	s32i.n	a11, a0, 0
+     714:	ffd701        	l32r	a0, 670 <cnx_start_handoff_cb+0x154>
+     717:	0000c0        	callx0	a0
+     71a:	1e2c02        	l32i	a0, a12, 120
+     71d:	1e1027        	beq	a0, a2, 73f <cnx_start_handoff_cb+0x223>
+     720:	ffcf31        	l32r	a3, 65c <cnx_start_handoff_cb+0x140>
+     723:	320c      	movi.n	a2, 3
+     725:	0c4d      	mov.n	a4, a12
+     727:	ffd301        	l32r	a0, 674 <cnx_start_handoff_cb+0x158>
+     72a:	0000c0        	callx0	a0
+     72d:	a29c      	beqz.n	a2, 74b <cnx_start_handoff_cb+0x22f>
+     72f:	120c      	movi.n	a2, 1
+     731:	000046        	j	736 <cnx_start_handoff_cb+0x21a>
+     734:	120c      	movi.n	a2, 1
+     736:	11c8      	l32i.n	a12, a1, 4
+     738:	0108      	l32i.n	a0, a1, 0
+     73a:	10c112        	addi	a1, a1, 16
+     73d:	f00d      	ret.n
+     73f:	0c2d      	mov.n	a2, a12
+     741:	030c      	movi.n	a3, 0
+     743:	000785        	call0	7bc <cnx_start_handoff_cb+0x2a0>
+     746:	220c      	movi.n	a2, 2
+     748:	fffa86        	j	736 <cnx_start_handoff_cb+0x21a>
+     74b:	0c6d      	mov.n	a6, a12
+     74d:	1e2c22        	l32i	a2, a12, 120
+     750:	ffc451        	l32r	a5, 660 <cnx_start_handoff_cb+0x144>
+     753:	030c      	movi.n	a3, 0
+     755:	054d      	mov.n	a4, a5
+     757:	ffc801        	l32r	a0, 678 <cnx_start_handoff_cb+0x15c>
+     75a:	0000c0        	callx0	a0
+     75d:	fff946        	j	746 <cnx_start_handoff_cb+0x22a>
+	...
+     770:	000690        	excw
+     773:	000000        	ill
+     776:	4c0000        	excw
+     779:	000007        	bnone	a0, a0, 77d <cnx_start_handoff_cb+0x261>
+	...
+     7bc:	840c      	movi.n	a4, 8
+     7be:	d0c112        	addi	a1, a1, -48
+     7c1:	8109      	s32i.n	a0, a1, 32
+     7c3:	91c9      	s32i.n	a12, a1, 36
+     7c5:	7139      	s32i.n	a3, a1, 28
+     7c7:	02cd      	mov.n	a12, a2
+     7c9:	ffe531        	l32r	a3, 760 <cnx_start_handoff_cb+0x244>
+     7cc:	10c122        	addi	a2, a1, 16
+     7cf:	ffec01        	l32r	a0, 780 <cnx_start_handoff_cb+0x264>
+     7d2:	0000c0        	callx0	a0
+     7d5:	ffeb01        	l32r	a0, 784 <cnx_start_handoff_cb+0x268>
+     7d8:	0000c0        	callx0	a0
+     7db:	7108      	l32i.n	a0, a1, 28
+     7dd:	08a056        	bnez	a0, 86b <cnx_start_handoff_cb+0x34f>
+     7e0:	620c      	movi.n	a2, 6
+     7e2:	ffe901        	l32r	a0, 788 <cnx_start_handoff_cb+0x26c>
+     7e5:	0000c0        	callx0	a0
+     7e8:	720c      	movi.n	a2, 7
+     7ea:	ffe801        	l32r	a0, 78c <cnx_start_handoff_cb+0x270>
+     7ed:	0000c0        	callx0	a0
+     7f0:	820c      	movi.n	a2, 8
+     7f2:	ffe701        	l32r	a0, 790 <cnx_start_handoff_cb+0x274>
+     7f5:	0000c0        	callx0	a0
+     7f8:	920c      	movi.n	a2, 9
+     7fa:	ffe601        	l32r	a0, 794 <cnx_start_handoff_cb+0x278>
+     7fd:	0000c0        	callx0	a0
+     800:	ffd901        	l32r	a0, 764 <cnx_start_handoff_cb+0x248>
+     803:	850022        	l8ui	a2, a0, 133
+     806:	ffdd31        	l32r	a3, 77c <cnx_start_handoff_cb+0x260>
+     809:	671226        	beqi	a2, 1, 874 <cnx_start_handoff_cb+0x358>
+     80c:	ffd721        	l32r	a2, 768 <cnx_start_handoff_cb+0x24c>
+     80f:	ffe201        	l32r	a0, 798 <cnx_start_handoff_cb+0x27c>
+     812:	0000c0        	callx0	a0
+     815:	ffd521        	l32r	a2, 76c <cnx_start_handoff_cb+0x250>
+     818:	0c3d      	mov.n	a3, a12
+     81a:	ffe001        	l32r	a0, 79c <cnx_start_handoff_cb+0x280>
+     81d:	0000c0        	callx0	a0
+     820:	ffe001        	l32r	a0, 7a0 <cnx_start_handoff_cb+0x284>
+     823:	0000c0        	callx0	a0
+     826:	ffd201        	l32r	a0, 770 <cnx_start_handoff_cb+0x254>
+     829:	0008      	l32i.n	a0, a0, 0
+     82b:	c09c      	beqz.n	a0, 84b <cnx_start_handoff_cb+0x32f>
+     82d:	000022        	l8ui	a2, a0, 0
+     830:	c2dc      	bnez.n	a2, 850 <cnx_start_handoff_cb+0x334>
+     832:	010032        	l8ui	a3, a0, 1
+     835:	73dc      	bnez.n	a3, 850 <cnx_start_handoff_cb+0x334>
+     837:	020042        	l8ui	a4, a0, 2
+     83a:	24dc      	bnez.n	a4, 850 <cnx_start_handoff_cb+0x334>
+     83c:	030052        	l8ui	a5, a0, 3
+     83f:	d5cc      	bnez.n	a5, 850 <cnx_start_handoff_cb+0x334>
+     841:	040062        	l8ui	a6, a0, 4
+     844:	86cc      	bnez.n	a6, 850 <cnx_start_handoff_cb+0x334>
+     846:	050072        	l8ui	a7, a0, 5
+     849:	37cc      	bnez.n	a7, 850 <cnx_start_handoff_cb+0x334>
+     84b:	040c      	movi.n	a4, 0
+     84d:	000046        	j	852 <cnx_start_handoff_cb+0x336>
+     850:	140c      	movi.n	a4, 1
+     852:	ffc831        	l32r	a3, 774 <cnx_start_handoff_cb+0x258>
+     855:	0ac416        	beqz	a4, 905 <cnx_start_handoff_cb+0x3e9>
+     858:	ffc881        	l32r	a8, 778 <cnx_start_handoff_cb+0x25c>
+     85b:	000882        	l8ui	a8, a8, 0
+     85e:	0a3816        	beqz	a8, 905 <cnx_start_handoff_cb+0x3e9>
+     861:	0c2d      	mov.n	a2, a12
+     863:	050c      	movi.n	a5, 0
+     865:	ffcf01        	l32r	a0, 7a4 <cnx_start_handoff_cb+0x288>
+     868:	0000c0        	callx0	a0
+     86b:	91c8      	l32i.n	a12, a1, 36
+     86d:	8108      	l32i.n	a0, a1, 32
+     86f:	30c112        	addi	a1, a1, 48
+     872:	f00d      	ret.n
+     874:	860022        	l8ui	a2, a0, 134
+     877:	437266        	bnei	a2, 7, 8be <cnx_start_handoff_cb+0x3a2>
+     87a:	120c      	movi.n	a2, 1
+     87c:	040c      	movi.n	a4, 0
+     87e:	150c      	movi.n	a5, 1
+     880:	10c162        	addi	a6, a1, 16
+     883:	870c      	movi.n	a7, 8
+     885:	0139      	s32i.n	a3, a1, 0
+     887:	6139      	s32i.n	a3, a1, 24
+     889:	590c      	movi.n	a9, 5
+     88b:	1199      	s32i.n	a9, a1, 4
+     88d:	2199      	s32i.n	a9, a1, 8
+     88f:	0c3d      	mov.n	a3, a12
+     891:	ffc501        	l32r	a0, 7a8 <cnx_start_handoff_cb+0x28c>
+     894:	0000c0        	callx0	a0
+     897:	120c      	movi.n	a2, 1
+     899:	0c3d      	mov.n	a3, a12
+     89b:	140c      	movi.n	a4, 1
+     89d:	150c      	movi.n	a5, 1
+     89f:	10c162        	addi	a6, a1, 16
+     8a2:	870c      	movi.n	a7, 8
+     8a4:	6108      	l32i.n	a0, a1, 24
+     8a6:	6a0c      	movi.n	a10, 6
+     8a8:	5b0c      	movi.n	a11, 5
+     8aa:	11b9      	s32i.n	a11, a1, 4
+     8ac:	21a9      	s32i.n	a10, a1, 8
+     8ae:	0109      	s32i.n	a0, a1, 0
+     8b0:	ffbf01        	l32r	a0, 7ac <cnx_start_handoff_cb+0x290>
+     8b3:	0000c0        	callx0	a0
+     8b6:	520c      	movi.n	a2, 5
+     8b8:	e94c22        	s8i	a2, a12, 233
+     8bb:	ffd846        	j	820 <cnx_start_handoff_cb+0x304>
+     8be:	f8c242        	addi	a4, a2, -8
+     8c1:	f5b456        	bnez	a4, 820 <cnx_start_handoff_cb+0x304>
+     8c4:	520c      	movi.n	a2, 5
+     8c6:	040c      	movi.n	a4, 0
+     8c8:	870c      	movi.n	a7, 8
+     8ca:	0139      	s32i.n	a3, a1, 0
+     8cc:	6139      	s32i.n	a3, a1, 24
+     8ce:	550c      	movi.n	a5, 5
+     8d0:	d60c      	movi.n	a6, 13
+     8d2:	1169      	s32i.n	a6, a1, 4
+     8d4:	2159      	s32i.n	a5, a1, 8
+     8d6:	0c3d      	mov.n	a3, a12
+     8d8:	150c      	movi.n	a5, 1
+     8da:	10c162        	addi	a6, a1, 16
+     8dd:	ffb401        	l32r	a0, 7b0 <cnx_start_handoff_cb+0x294>
+     8e0:	0000c0        	callx0	a0
+     8e3:	520c      	movi.n	a2, 5
+     8e5:	0c3d      	mov.n	a3, a12
+     8e7:	140c      	movi.n	a4, 1
+     8e9:	150c      	movi.n	a5, 1
+     8eb:	10c162        	addi	a6, a1, 16
+     8ee:	d80c      	movi.n	a8, 13
+     8f0:	670c      	movi.n	a7, 6
+     8f2:	6198      	l32i.n	a9, a1, 24
+     8f4:	0199      	s32i.n	a9, a1, 0
+     8f6:	2179      	s32i.n	a7, a1, 8
+     8f8:	1189      	s32i.n	a8, a1, 4
+     8fa:	870c      	movi.n	a7, 8
+     8fc:	ffae01        	l32r	a0, 7b4 <cnx_start_handoff_cb+0x298>
+     8ff:	0000c0        	callx0	a0
+     902:	ffec06        	j	8b6 <cnx_start_handoff_cb+0x39a>
+     905:	0c2d      	mov.n	a2, a12
+     907:	150c      	movi.n	a5, 1
+     909:	ffab01        	l32r	a0, 7b8 <cnx_start_handoff_cb+0x29c>
+     90c:	0000c0        	callx0	a0
+     90f:	ffd606        	j	86b <cnx_start_handoff_cb+0x34f>
+     912:	890000        	excw
+     915:	000006        	j	919 <cnx_start_handoff_cb+0x3fd>
+	...
+     920:	000474        	excw
+     923:	047400        	extui	a7, a0, 4, 1
+     926:	890000        	excw
+     929:	000006        	j	92d <cnx_start_handoff_cb+0x411>
+     92c:	000000        	ill
+     92f:	c11200        	mul16u	a1, a2, a0
+     932:	11c9e0        	slli	a12, a9, 2
+     935:	41f9      	s32i.n	a15, a1, 16
+     937:	0109      	s32i.n	a0, a1, 0
+     939:	fff601        	l32r	a0, 914 <cnx_start_handoff_cb+0x3f8>
+     93c:	21d9      	s32i.n	a13, a1, 8
+     93e:	000002        	l8ui	a0, a0, 0
+     941:	31e9      	s32i.n	a14, a1, 12
+     943:	069016        	beqz	a0, 9b0 <cnx_start_handoff_cb+0x494>
+     946:	0e0c      	movi.n	a14, 0
+     948:	0d0c      	movi.n	a13, 0
+     94a:	fff3f1        	l32r	a15, 918 <cnx_start_handoff_cb+0x3fc>
+     94d:	fff401        	l32r	a0, 920 <cnx_start_handoff_cb+0x404>
+     950:	020c      	movi.n	a2, 0
+     952:	fff231        	l32r	a3, 91c <cnx_start_handoff_cb+0x400>
+     955:	6139      	s32i.n	a3, a1, 24
+     957:	5129      	s32i.n	a2, a1, 20
+     959:	800f42        	l8ui	a4, a15, 128
+     95c:	a02d00        	addx4	a2, a13, a0
+     95f:	01d222        	addmi	a2, a2, 0x100
+     962:	ff02c2        	l8ui	a12, a2, 255
+     965:	fe0232        	l8ui	a3, a2, 254
+     968:	11cc80        	slli	a12, a12, 8
+     96b:	20cc30        	or	a12, a12, a3
+     96e:	11cc80        	slli	a12, a12, 8
+     971:	fd0232        	l8ui	a3, a2, 253
+     974:	fc0222        	l8ui	a2, a2, 252
+     977:	20cc30        	or	a12, a12, a3
+     97a:	11cc80        	slli	a12, a12, 8
+     97d:	20cc20        	or	a12, a12, a2
+     980:	c48c      	beqz.n	a4, 990 <cnx_start_handoff_cb+0x474>
+     982:	6128      	l32i.n	a2, a1, 24
+     984:	0c3d      	mov.n	a3, a12
+     986:	640c      	movi.n	a4, 6
+     988:	ffe901        	l32r	a0, 92c <cnx_start_handoff_cb+0x410>
+     98b:	0000c0        	callx0	a0
+     98e:	42ac      	beqz.n	a2, 9b6 <cnx_start_handoff_cb+0x49a>
+     990:	0c2d      	mov.n	a2, a12
+     992:	000385        	call0	9cc <cnx_start_handoff_cb+0x4b0>
+     995:	ffe301        	l32r	a0, 924 <cnx_start_handoff_cb+0x408>
+     998:	ffe441        	l32r	a4, 928 <cnx_start_handoff_cb+0x40c>
+     99b:	dd1b      	addi.n	a13, a13, 1
+     99d:	74d0d0        	extui	a13, a13, 0, 8
+     9a0:	000442        	l8ui	a4, a4, 0
+     9a3:	03be27        	bgeu	a14, a2, 9aa <cnx_start_handoff_cb+0x48e>
+     9a6:	02ed      	mov.n	a14, a2
+     9a8:	51c9      	s32i.n	a12, a1, 20
+     9aa:	ab3d47        	bltu	a13, a4, 959 <cnx_start_handoff_cb+0x43d>
+     9ad:	0000c6        	j	9b4 <cnx_start_handoff_cb+0x498>
+     9b0:	050c      	movi.n	a5, 0
+     9b2:	5159      	s32i.n	a5, a1, 20
+     9b4:	51c8      	l32i.n	a12, a1, 20
+     9b6:	0108      	l32i.n	a0, a1, 0
+     9b8:	21d8      	l32i.n	a13, a1, 8
+     9ba:	31e8      	l32i.n	a14, a1, 12
+     9bc:	0c2d      	mov.n	a2, a12
+     9be:	41f8      	l32i.n	a15, a1, 16
+     9c0:	11c8      	l32i.n	a12, a1, 4
+     9c2:	20c112        	addi	a1, a1, 32
+     9c5:	f00d      	ret.n
+     9c7:	068800        	excw
+     9ca:	510000        	excw
+     9cd:	ff          	.byte 0xff
+     9ce:	ff          	.byte 0xff
+     9cf:	000552        	l8ui	a5, a5, 0
+     9d2:	1a6507        	bbci	a5, 0, 9f0 <cnx_start_handoff_cb+0x4d4>
+     9d5:	730242        	l8ui	a4, a2, 115
+     9d8:	700262        	l8ui	a6, a2, 112
+     9db:	014480        	slli	a4, a4, 24
+     9de:	314840        	srai	a4, a4, 24
+     9e1:	1c6517        	bbci	a5, 1, a01 <cnx_start_handoff_cb+0x4e5>
+     9e4:	016680        	slli	a6, a6, 24
+     9e7:	316860        	srai	a6, a6, 24
+     9ea:	d14460        	mul16s	a4, a4, a6
+     9ed:	000406        	j	a01 <cnx_start_handoff_cb+0x4e5>
+     9f0:	0b6517        	bbci	a5, 1, 9ff <cnx_start_handoff_cb+0x4e3>
+     9f3:	700242        	l8ui	a4, a2, 112
+     9f6:	014480        	slli	a4, a4, 24
+     9f9:	314840        	srai	a4, a4, 24
+     9fc:	000046        	j	a01 <cnx_start_handoff_cb+0x4e5>
+     9ff:	040c      	movi.n	a4, 0
+     a01:	096527        	bbci	a5, 2, a0e <cnx_start_handoff_cb+0x4f2>
+     a04:	648c      	beqz.n	a4, a0e <cnx_start_handoff_cb+0x4f2>
+     a06:	710272        	l8ui	a7, a2, 113
+     a09:	642b      	addi.n	a6, a4, 2
+     a0b:	934670        	movnez	a4, a6, a7
+     a0e:	086537        	bbci	a5, 3, a1a <cnx_start_handoff_cb+0x4fe>
+     a11:	760292        	l8ui	a9, a2, 118
+     a14:	1184f0        	slli	a8, a4, 1
+     a17:	934890        	movnez	a4, a8, a9
+     a1a:	042d      	mov.n	a2, a4
+     a1c:	f00d      	ret.n
+     a1e:	000000        	ill
+     a21:	000000        	ill
+     a24:	068c      	beqz.n	a6, a28 <cnx_start_handoff_cb+0x50c>
+     a26:	000000        	ill
+     a29:	000000        	ill
+
+00000a2c <cnx_bss_alloc>:
+     a2c:	e0c112        	addi	a1, a1, -32
+     a2f:	31e9      	s32i.n	a14, a1, 12
+     a31:	0109      	s32i.n	a0, a1, 0
+     a33:	41f9      	s32i.n	a15, a1, 16
+     a35:	11c9      	s32i.n	a12, a1, 4
+     a37:	21d9      	s32i.n	a13, a1, 8
+     a39:	0c0c      	movi.n	a12, 0
+     a3b:	0d0c      	movi.n	a13, 0
+     a3d:	fff8f1        	l32r	a15, a20 <cnx_start_handoff_cb+0x504>
+     a40:	f07c      	movi.n	a0, -1
+     a42:	5109      	s32i.n	a0, a1, 20
+     a44:	10a102        	movi	a0, 0x110
+     a47:	c10c00        	mul16u	a0, a12, a0
+     a4a:	0f0a      	add.n	a0, a15, a0
+     a4c:	100022        	l8ui	a2, a0, 16
+     a4f:	10c0e2        	addi	a14, a0, 16
+     a52:	062256        	bnez	a2, ab8 <cnx_bss_alloc+0x8c>
+     a55:	110022        	l8ui	a2, a0, 17
+     a58:	120032        	l8ui	a3, a0, 18
+     a5b:	059256        	bnez	a2, ab8 <cnx_bss_alloc+0x8c>
+     a5e:	056356        	bnez	a3, ab8 <cnx_bss_alloc+0x8c>
+     a61:	130042        	l8ui	a4, a0, 19
+     a64:	050456        	bnez	a4, ab8 <cnx_bss_alloc+0x8c>
+     a67:	140052        	l8ui	a5, a0, 20
+     a6a:	04a556        	bnez	a5, ab8 <cnx_bss_alloc+0x8c>
+     a6d:	150062        	l8ui	a6, a0, 21
+     a70:	044656        	bnez	a6, ab8 <cnx_bss_alloc+0x8c>
+     a73:	10c0d2        	addi	a13, a0, 16
+     a76:	000d72        	l8ui	a7, a13, 0
+     a79:	010d82        	l8ui	a8, a13, 1
+     a7c:	47dc      	bnez.n	a7, a94 <cnx_bss_alloc+0x68>
+     a7e:	28dc      	bnez.n	a8, a94 <cnx_bss_alloc+0x68>
+     a80:	020d92        	l8ui	a9, a13, 2
+     a83:	030da2        	l8ui	a10, a13, 3
+     a86:	a9cc      	bnez.n	a9, a94 <cnx_bss_alloc+0x68>
+     a88:	8acc      	bnez.n	a10, a94 <cnx_bss_alloc+0x68>
+     a8a:	040db2        	l8ui	a11, a13, 4
+     a8d:	050dc2        	l8ui	a12, a13, 5
+     a90:	0bcc      	bnez.n	a11, a94 <cnx_bss_alloc+0x68>
+     a92:	6c8c      	beqz.n	a12, a9c <cnx_bss_alloc+0x70>
+     a94:	0d2d      	mov.n	a2, a13
+     a96:	ffe401        	l32r	a0, a28 <cnx_start_handoff_cb+0x50c>
+     a99:	0000c0        	callx0	a0
+     a9c:	0108      	l32i.n	a0, a1, 0
+     a9e:	11c8      	l32i.n	a12, a1, 4
+     aa0:	0d2d      	mov.n	a2, a13
+     aa2:	060de2        	l8ui	a14, a13, 6
+     aa5:	1f0c      	movi.n	a15, 1
+     aa7:	20eef0        	or	a14, a14, a15
+     aaa:	064de2        	s8i	a14, a13, 6
+     aad:	41f8      	l32i.n	a15, a1, 16
+     aaf:	21d8      	l32i.n	a13, a1, 8
+     ab1:	31e8      	l32i.n	a14, a1, 12
+     ab3:	20c112        	addi	a1, a1, 32
+     ab6:	f00d      	ret.n
+     ab8:	ffdb21        	l32r	a2, a24 <cnx_start_handoff_cb+0x508>
+     abb:	0228      	l32i.n	a2, a2, 0
+     abd:	0d12e7        	beq	a2, a14, ace <cnx_bss_alloc+0xa2>
+     ac0:	0e2d      	mov.n	a2, a14
+     ac2:	fff085        	call0	9cc <cnx_start_handoff_cb+0x4b0>
+     ac5:	5138      	l32i.n	a3, a1, 20
+     ac7:	03b237        	bgeu	a2, a3, ace <cnx_bss_alloc+0xa2>
+     aca:	0edd      	mov.n	a13, a14
+     acc:	5129      	s32i.n	a2, a1, 20
+     ace:	cc1b      	addi.n	a12, a12, 1
+     ad0:	74c0c0        	extui	a12, a12, 0, 8
+     ad3:	facc52        	addi	a5, a12, -6
+     ad6:	f6a556        	bnez	a5, a44 <cnx_bss_alloc+0x18>
+     ad9:	ffe646        	j	a76 <cnx_bss_alloc+0x4a>
+     adc:	0689      	s32i.n	a8, a6, 0
+     ade:	740000        	extui	a0, a0, 0, 8
+     ae1:	000004        	excw
+     ae4:	000000        	ill
+	...
+
+00000ae8 <cnx_rc_search>:
+     ae8:	e0c112        	addi	a1, a1, -32
+     aeb:	41f9      	s32i.n	a15, a1, 16
+     aed:	0109      	s32i.n	a0, a1, 0
+     aef:	11c9      	s32i.n	a12, a1, 4
+     af1:	31e9      	s32i.n	a14, a1, 12
+     af3:	fffae1        	l32r	a14, adc <cnx_bss_alloc+0xb0>
+     af6:	21d9      	s32i.n	a13, a1, 8
+     af8:	000ee2        	l8ui	a14, a14, 0
+     afb:	02dd      	mov.n	a13, a2
+     afd:	043e16        	beqz	a14, b44 <cnx_rc_search+0x5c>
+     b00:	0c0c      	movi.n	a12, 0
+     b02:	0d3d      	mov.n	a3, a13
+     b04:	fff701        	l32r	a0, ae0 <cnx_bss_alloc+0xb4>
+     b07:	640c      	movi.n	a4, 6
+     b09:	a00c00        	addx4	a0, a12, a0
+     b0c:	01d002        	addmi	a0, a0, 0x100
+     b0f:	ff00f2        	l8ui	a15, a0, 255
+     b12:	fe0022        	l8ui	a2, a0, 254
+     b15:	11ff80        	slli	a15, a15, 8
+     b18:	20ff20        	or	a15, a15, a2
+     b1b:	11ff80        	slli	a15, a15, 8
+     b1e:	fd0022        	l8ui	a2, a0, 253
+     b21:	fc0002        	l8ui	a0, a0, 252
+     b24:	20ff20        	or	a15, a15, a2
+     b27:	11ff80        	slli	a15, a15, 8
+     b2a:	20ff00        	or	a15, a15, a0
+     b2d:	0f2d      	mov.n	a2, a15
+     b2f:	ffed01        	l32r	a0, ae4 <cnx_bss_alloc+0xb8>
+     b32:	0000c0        	callx0	a0
+     b35:	32cc      	bnez.n	a2, b3c <cnx_rc_search+0x54>
+     b37:	0f2d      	mov.n	a2, a15
+     b39:	000246        	j	b46 <cnx_rc_search+0x5e>
+     b3c:	cc1b      	addi.n	a12, a12, 1
+     b3e:	74c0c0        	extui	a12, a12, 0, 8
+     b41:	bd9ec7        	bne	a14, a12, b02 <cnx_rc_search+0x1a>
+     b44:	020c      	movi.n	a2, 0
+     b46:	11c8      	l32i.n	a12, a1, 4
+     b48:	21d8      	l32i.n	a13, a1, 8
+     b4a:	31e8      	l32i.n	a14, a1, 12
+     b4c:	41f8      	l32i.n	a15, a1, 16
+     b4e:	0108      	l32i.n	a0, a1, 0
+     b50:	20c112        	addi	a1, a1, 32
+     b53:	f00d      	ret.n
+     b55:	000000        	ill
+     b58:	068a      	add.n	a0, a6, a8
+     b5a:	740000        	extui	a0, a0, 0, 8
+     b5d:	000004        	excw
+     b60:	068a      	add.n	a0, a6, a8
+     b62:	610000        	excw
+     b65:	fffd      	excw
+     b67:	000652        	l8ui	a5, a6, 0
+     b6a:	660b      	addi.n	a6, a6, -1
+     b6c:	000662        	l8ui	a6, a6, 0
+     b6f:	fffb71        	l32r	a7, b5c <cnx_rc_search+0x74>
+     b72:	39b567        	bgeu	a5, a6, baf <cnx_rc_search+0xc7>
+     b75:	fffa91        	l32r	a9, b60 <cnx_rc_search+0x78>
+     b78:	a03570        	addx4	a3, a5, a7
+     b7b:	01d332        	addmi	a3, a3, 0x100
+     b7e:	551b      	addi.n	a5, a5, 1
+     b80:	745050        	extui	a5, a5, 0, 8
+     b83:	ff0322        	l8ui	a2, a3, 255
+     b86:	fe0342        	l8ui	a4, a3, 254
+     b89:	112280        	slli	a2, a2, 8
+     b8c:	202240        	or	a2, a2, a4
+     b8f:	112280        	slli	a2, a2, 8
+     b92:	fd0342        	l8ui	a4, a3, 253
+     b95:	fc0332        	l8ui	a3, a3, 252
+     b98:	004952        	s8i	a5, a9, 0
+     b9b:	202240        	or	a2, a2, a4
+     b9e:	112280        	slli	a2, a2, 8
+     ba1:	202230        	or	a2, a2, a3
+     ba4:	1e2282        	l32i	a8, a2, 120
+     ba7:	0888      	l32i.n	a8, a8, 0
+     ba9:	046897        	bbci	a8, 9, bb1 <cnx_rc_search+0xc9>
+     bac:	c59567        	bne	a5, a6, b75 <cnx_rc_search+0x8d>
+     baf:	020c      	movi.n	a2, 0
+     bb1:	f00d      	ret.n
+     bb3:	068900        	excw
+     bb6:	740000        	extui	a0, a0, 0, 8
+     bb9:	000004        	excw
+     bbc:	000470        	excw
+     bbf:	068900        	excw
+	...
+
+00000bc4 <cnx_add_rc>:
+     bc4:	fffc61        	l32r	a6, bb4 <cnx_rc_search+0xcc>
+     bc7:	000662        	l8ui	a6, a6, 0
+     bca:	fffba1        	l32r	a10, bb8 <cnx_rc_search+0xd0>
+     bcd:	0366b6        	bltui	a6, 6, bd4 <cnx_add_rc+0x10>
+     bd0:	f27c      	movi.n	a2, -1
+     bd2:	f00d      	ret.n
+     bd4:	0226b6        	bltui	a6, 2, bda <cnx_add_rc+0x16>
+     bd7:	002546        	j	c70 <cnx_add_rc+0xac>
+     bda:	417820        	srli	a7, a2, 8
+     bdd:	a086a0        	addx4	a8, a6, a10
+     be0:	01d882        	addmi	a8, a8, 0x100
+     be3:	fd4872        	s8i	a7, a8, 253
+     be6:	fc4822        	s8i	a2, a8, 252
+     be9:	417870        	srli	a7, a7, 8
+     bec:	fe4872        	s8i	a7, a8, 254
+     bef:	417870        	srli	a7, a7, 8
+     bf2:	ff4872        	s8i	a7, a8, 255
+     bf5:	001a06        	j	c61 <cnx_add_rc+0x9d>
+     bf8:	050c      	movi.n	a5, 0
+     bfa:	a085a0        	addx4	a8, a5, a10
+     bfd:	951b      	addi.n	a9, a5, 1
+     bff:	46a967        	bge	a9, a6, c49 <cnx_add_rc+0x85>
+     c02:	ffeea1        	l32r	a10, bbc <cnx_rc_search+0xd4>
+     c05:	a0b6a0        	addx4	a11, a6, a10
+     c08:	01db32        	addmi	a3, a11, 0x100
+     c0b:	660b      	addi.n	a6, a6, -1
+     c0d:	746060        	extui	a6, a6, 0, 8
+     c10:	02dbb2        	addmi	a11, a11, 0x200
+     c13:	ff0372        	l8ui	a7, a3, 255
+     c16:	fe0342        	l8ui	a4, a3, 254
+     c19:	117780        	slli	a7, a7, 8
+     c1c:	207740        	or	a7, a7, a4
+     c1f:	fd0342        	l8ui	a4, a3, 253
+     c22:	117780        	slli	a7, a7, 8
+     c25:	207740        	or	a7, a7, a4
+     c28:	fc0332        	l8ui	a3, a3, 252
+     c2b:	117780        	slli	a7, a7, 8
+     c2e:	207730        	or	a7, a7, a3
+     c31:	004b72        	s8i	a7, a11, 0
+     c34:	417870        	srli	a7, a7, 8
+     c37:	014b72        	s8i	a7, a11, 1
+     c3a:	417870        	srli	a7, a7, 8
+     c3d:	024b72        	s8i	a7, a11, 2
+     c40:	417870        	srli	a7, a7, 8
+     c43:	034b72        	s8i	a7, a11, 3
+     c46:	bb2967        	blt	a9, a6, c05 <cnx_add_rc+0x41>
+     c49:	419820        	srli	a9, a2, 8
+     c4c:	02d8a2        	addmi	a10, a8, 0x200
+     c4f:	004a22        	s8i	a2, a10, 0
+     c52:	014a92        	s8i	a9, a10, 1
+     c55:	419890        	srli	a9, a9, 8
+     c58:	024a92        	s8i	a9, a10, 2
+     c5b:	419890        	srli	a9, a9, 8
+     c5e:	034a92        	s8i	a9, a10, 3
+     c61:	ffd7b1        	l32r	a11, bc0 <cnx_rc_search+0xd8>
+     c64:	000ba2        	l8ui	a10, a11, 0
+     c67:	020c      	movi.n	a2, 0
+     c69:	aa1b      	addi.n	a10, a10, 1
+     c6b:	004ba2        	s8i	a10, a11, 0
+     c6e:	f00d      	ret.n
+     c70:	f84616        	beqz	a6, bf8 <cnx_add_rc+0x34>
+     c73:	050c      	movi.n	a5, 0
+     c75:	1e2292        	l32i	a9, a2, 120
+     c78:	a085a0        	addx4	a8, a5, a10
+     c7b:	01d832        	addmi	a3, a8, 0x100
+     c7e:	ff03b2        	l8ui	a11, a3, 255
+     c81:	fe0342        	l8ui	a4, a3, 254
+     c84:	11bb80        	slli	a11, a11, 8
+     c87:	20bb40        	or	a11, a11, a4
+     c8a:	11bb80        	slli	a11, a11, 8
+     c8d:	fd0342        	l8ui	a4, a3, 253
+     c90:	fc0332        	l8ui	a3, a3, 252
+     c93:	20bb40        	or	a11, a11, a4
+     c96:	11bb80        	slli	a11, a11, 8
+     c99:	20bb30        	or	a11, a11, a3
+     c9c:	1e2bb2        	l32i	a11, a11, 120
+     c9f:	c0bb90        	sub	a11, a11, a9
+     ca2:	f57b16        	beqz	a11, bfd <cnx_add_rc+0x39>
+     ca5:	551b      	addi.n	a5, a5, 1
+     ca7:	745050        	extui	a5, a5, 0, 8
+     caa:	ca9567        	bne	a5, a6, c78 <cnx_add_rc+0xb4>
+     cad:	ffd246        	j	bfa <cnx_add_rc+0x36>
+     cb0:	0689      	s32i.n	a8, a6, 0
+     cb2:	740000        	extui	a0, a0, 0, 8
+     cb5:	000004        	excw
+     cb8:	0689      	s32i.n	a8, a6, 0
+     cba:	890000        	excw
+     cbd:	000006        	j	cc1 <cnx_add_rc+0xfd>
+     cc0:	000000        	ill
+	...
+
+00000cc4 <cnx_remove_rc>:
+     cc4:	fffb51        	l32r	a5, cb0 <cnx_add_rc+0xec>
+     cc7:	f0c112        	addi	a1, a1, -16
+     cca:	31e9      	s32i.n	a14, a1, 12
+     ccc:	0109      	s32i.n	a0, a1, 0
+     cce:	11c9      	s32i.n	a12, a1, 4
+     cd0:	21d9      	s32i.n	a13, a1, 8
+     cd2:	000552        	l8ui	a5, a5, 0
+     cd5:	fff7d1        	l32r	a13, cb4 <cnx_add_rc+0xf0>
+     cd8:	060516        	beqz	a5, d3c <cnx_remove_rc+0x78>
+     cdb:	0c0c      	movi.n	a12, 0
+     cdd:	a0ecd0        	addx4	a14, a12, a13
+     ce0:	01de72        	addmi	a7, a14, 0x100
+     ce3:	ff0762        	l8ui	a6, a7, 255
+     ce6:	fe0782        	l8ui	a8, a7, 254
+     ce9:	116680        	slli	a6, a6, 8
+     cec:	206680        	or	a6, a6, a8
+     cef:	116680        	slli	a6, a6, 8
+     cf2:	fd0782        	l8ui	a8, a7, 253
+     cf5:	fc0772        	l8ui	a7, a7, 252
+     cf8:	206680        	or	a6, a6, a8
+     cfb:	116680        	slli	a6, a6, 8
+     cfe:	206670        	or	a6, a6, a7
+     d01:	2c9627        	bne	a6, a2, d31 <cnx_remove_rc+0x6d>
+     d04:	10a132        	movi	a3, 0x110
+     d07:	ffee01        	l32r	a0, cc0 <cnx_add_rc+0xfc>
+     d0a:	0000c0        	callx0	a0
+     d0d:	ffea71        	l32r	a7, cb8 <cnx_add_rc+0xf4>
+     d10:	060c      	movi.n	a6, 0
+     d12:	01de82        	addmi	a8, a14, 0x100
+     d15:	090c      	movi.n	a9, 0
+     d17:	fe4892        	s8i	a9, a8, 254
+     d1a:	fd4892        	s8i	a9, a8, 253
+     d1d:	fc4892        	s8i	a9, a8, 252
+     d20:	ff4862        	s8i	a6, a8, 255
+     d23:	000752        	l8ui	a5, a7, 0
+     d26:	550b      	addi.n	a5, a5, -1
+     d28:	745050        	extui	a5, a5, 0, 8
+     d2b:	004752        	s8i	a5, a7, 0
+     d2e:	000306        	j	d3e <cnx_remove_rc+0x7a>
+     d31:	cc1b      	addi.n	a12, a12, 1
+     d33:	74c0c0        	extui	a12, a12, 0, 8
+     d36:	a395c7        	bne	a5, a12, cdd <cnx_remove_rc+0x19>
+     d39:	000046        	j	d3e <cnx_remove_rc+0x7a>
+     d3c:	0c0c      	movi.n	a12, 0
+     d3e:	49bc57        	bgeu	a12, a5, d8b <cnx_remove_rc+0xc7>
+     d41:	ffde51        	l32r	a5, cbc <cnx_add_rc+0xf8>
+     d44:	a00cd0        	addx4	a0, a12, a13
+     d47:	02d022        	addmi	a2, a0, 0x200
+     d4a:	cc1b      	addi.n	a12, a12, 1
+     d4c:	01d002        	addmi	a0, a0, 0x100
+     d4f:	0302e2        	l8ui	a14, a2, 3
+     d52:	020232        	l8ui	a3, a2, 2
+     d55:	11ee80        	slli	a14, a14, 8
+     d58:	20ee30        	or	a14, a14, a3
+     d5b:	010232        	l8ui	a3, a2, 1
+     d5e:	11ee80        	slli	a14, a14, 8
+     d61:	000222        	l8ui	a2, a2, 0
+     d64:	20ee30        	or	a14, a14, a3
+     d67:	11ee80        	slli	a14, a14, 8
+     d6a:	20ee20        	or	a14, a14, a2
+     d6d:	fc40e2        	s8i	a14, a0, 252
+     d70:	41e8e0        	srli	a14, a14, 8
+     d73:	fd40e2        	s8i	a14, a0, 253
+     d76:	41e8e0        	srli	a14, a14, 8
+     d79:	fe40e2        	s8i	a14, a0, 254
+     d7c:	41e8e0        	srli	a14, a14, 8
+     d7f:	ff40e2        	s8i	a14, a0, 255
+     d82:	0005e2        	l8ui	a14, a5, 0
+     d85:	74c0c0        	extui	a12, a12, 0, 8
+     d88:	b83ce7        	bltu	a12, a14, d44 <cnx_remove_rc+0x80>
+     d8b:	11c8      	l32i.n	a12, a1, 4
+     d8d:	21d8      	l32i.n	a13, a1, 8
+     d8f:	31e8      	l32i.n	a14, a1, 12
+     d91:	0108      	l32i.n	a0, a1, 0
+     d93:	10c112        	addi	a1, a1, 16
+     d96:	f00d      	ret.n
+
+00000d98 <cnx_rc_update_rssi>:
+     d98:	f0c112        	addi	a1, a1, -16
+     d9b:	724232        	s8i	a3, a2, 114
+     d9e:	11c9      	s32i.n	a12, a1, 4
+     da0:	0109      	s32i.n	a0, a1, 0
+     da2:	02cd      	mov.n	a12, a2
+     da4:	700202        	l8ui	a0, a2, 112
+     da7:	34cc      	bnez.n	a4, dae <cnx_rc_update_rssi+0x16>
+     da9:	032d      	mov.n	a2, a3
+     dab:	0006c6        	j	dca <cnx_rc_update_rssi+0x32>
+     dae:	015080        	slli	a5, a0, 24
+     db1:	906330        	addx2	a6, a3, a3
+     db4:	46fb      	addi.n	a4, a6, 15
+     db6:	315850        	srai	a5, a5, 24
+     db9:	902550        	addx2	a2, a5, a5
+     dbc:	b34660        	movgez	a4, a6, a6
+     dbf:	214440        	srai	a4, a4, 4
+     dc2:	a02250        	addx4	a2, a2, a5
+     dc5:	224a      	add.n	a2, a2, a4
+     dc7:	832300        	moveqz	a2, a3, a0
+     dca:	70ac      	beqz.n	a0, df5 <cnx_rc_update_rssi+0x5d>
+     dcc:	c07200        	sub	a7, a2, a0
+     dcf:	710c92        	l8ui	a9, a12, 113
+     dd2:	01b080        	slli	a11, a0, 24
+     dd5:	31b8b0        	srai	a11, a11, 24
+     dd8:	a08990        	addx4	a8, a9, a9
+     ddb:	c0b2b0        	sub	a11, a2, a11
+     dde:	90bbb0        	addx2	a11, a11, a11
+     de1:	11bbf0        	slli	a11, a11, 1
+     de4:	abfb      	addi.n	a10, a11, 15
+     de6:	b3abb0        	movgez	a10, a11, a11
+     de9:	21a4a0        	srai	a10, a10, 4
+     dec:	9088a0        	addx2	a8, a8, a10
+     def:	937890        	movnez	a7, a8, a9
+     df2:	714c72        	s8i	a7, a12, 113
+     df5:	704c22        	s8i	a2, a12, 112
+     df8:	740020        	extui	a0, a2, 0, 8
+     dfb:	50cc      	bnez.n	a0, e04 <cnx_rc_update_rssi+0x6c>
+     dfd:	0c2d      	mov.n	a2, a12
+     dff:	430c      	movi.n	a3, 4
+     e01:	003f85        	call0	11fc <cnx_sta_associated+0x68>
+     e04:	710c22        	l8ui	a2, a12, 113
+     e07:	066277        	bbci	a2, 7, e11 <cnx_rc_update_rssi+0x79>
+     e0a:	0c2d      	mov.n	a2, a12
+     e0c:	830c      	movi.n	a3, 8
+     e0e:	003ec5        	call0	11fc <cnx_sta_associated+0x68>
+     e11:	11c8      	l32i.n	a12, a1, 4
+     e13:	0108      	l32i.n	a0, a1, 0
+     e15:	10c112        	addi	a1, a1, 16
+     e18:	f00d      	ret.n
+     e1a:	8c0000        	excw
+     e1d:	000006        	j	e21 <cnx_rc_update_rssi+0x89>
+     e20:	068c      	beqz.n	a6, e24 <cnx_rc_update_state_metric>
+	...
+
+00000e24 <cnx_rc_update_state_metric>:
+     e24:	f0c112        	addi	a1, a1, -16
+     e27:	0109      	s32i.n	a0, a1, 0
+     e29:	101466        	bnei	a4, 1, e3d <cnx_rc_update_state_metric+0x19>
+     e2c:	730242        	l8ui	a4, a2, 115
+     e2f:	434a      	add.n	a4, a3, a4
+     e31:	010480        	slli	a0, a4, 24
+     e34:	734242        	s8i	a4, a2, 115
+     e37:	310800        	srai	a0, a0, 24
+     e3a:	000486        	j	e50 <cnx_rc_update_state_metric+0x2c>
+     e3d:	64cc      	bnez.n	a4, e47 <cnx_rc_update_state_metric+0x23>
+     e3f:	010380        	slli	a0, a3, 24
+     e42:	034d      	mov.n	a4, a3
+     e44:	fffb06        	j	e34 <cnx_rc_update_state_metric+0x10>
+     e47:	730202        	l8ui	a0, a2, 115
+     e4a:	010080        	slli	a0, a0, 24
+     e4d:	310800        	srai	a0, a0, 24
+     e50:	fff351        	l32r	a5, e1c <cnx_rc_update_rssi+0x84>
+     e53:	f40c      	movi.n	a4, 15
+     e55:	0060d6        	bgez	a0, e5f <cnx_rc_update_state_metric+0x3b>
+     e58:	000c      	movi.n	a0, 0
+     e5a:	030c      	movi.n	a3, 0
+     e5c:	734232        	s8i	a3, a2, 115
+     e5f:	0558      	l32i.n	a5, a5, 0
+     e61:	a30c      	movi.n	a3, 10
+     e63:	c05520        	sub	a5, a5, a2
+     e66:	833450        	moveqz	a3, a4, a5
+     e69:	04a307        	bge	a3, a0, e71 <cnx_rc_update_state_metric+0x4d>
+     e6c:	030d      	mov.n	a0, a3
+     e6e:	734232        	s8i	a3, a2, 115
+     e71:	746000        	extui	a6, a0, 0, 8
+     e74:	16dc      	bnez.n	a6, e89 <cnx_rc_update_state_metric+0x65>
+     e76:	ffea71        	l32r	a7, e20 <cnx_rc_update_rssi+0x88>
+     e79:	0778      	l32i.n	a7, a7, 0
+     e7b:	079727        	bne	a7, a2, e86 <cnx_rc_update_state_metric+0x62>
+     e7e:	230c      	movi.n	a3, 2
+     e80:	003785        	call0	11fc <cnx_sta_associated+0x68>
+     e83:	000086        	j	e89 <cnx_rc_update_state_metric+0x65>
+     e86:	000005        	call0	e88 <cnx_rc_update_state_metric+0x64>
+     e89:	0108      	l32i.n	a0, a1, 0
+     e8b:	10c112        	addi	a1, a1, 16
+     e8e:	f00d      	ret.n
+
+00000e90 <cnx_rc_update_age>:
+     e90:	f0c112        	addi	a1, a1, -16
+     e93:	0109      	s32i.n	a0, a1, 0
+     e95:	648c      	beqz.n	a4, e9f <cnx_rc_update_age+0xf>
+     e97:	750202        	l8ui	a0, a2, 117
+     e9a:	071466        	bnei	a4, 1, ea5 <cnx_rc_update_age+0x15>
+     e9d:	330a      	add.n	a3, a3, a0
+     e9f:	740030        	extui	a0, a3, 0, 8
+     ea2:	754202        	s8i	a0, a2, 117
+     ea5:	30cc      	bnez.n	a0, eac <cnx_rc_update_age+0x1c>
+     ea7:	130c      	movi.n	a3, 1
+     ea9:	003505        	call0	11fc <cnx_sta_associated+0x68>
+     eac:	0108      	l32i.n	a0, a1, 0
+     eae:	10c112        	addi	a1, a1, 16
+     eb1:	f00d      	ret.n
+	...
+
+00000ebc <cnx_update_bss>:
+     ebc:	f0c112        	addi	a1, a1, -16
+     ebf:	1109      	s32i.n	a0, a1, 4
+     ec1:	0139      	s32i.n	a3, a1, 0
+     ec3:	21c9      	s32i.n	a12, a1, 8
+     ec5:	10c432        	addi	a3, a4, 16
+     ec8:	02cd      	mov.n	a12, a2
+     eca:	640c      	movi.n	a4, 6
+     ecc:	fffa01        	l32r	a0, eb4 <cnx_rc_update_age+0x24>
+     ecf:	0000c0        	callx0	a0
+     ed2:	47cc22        	addi	a2, a12, 71
+     ed5:	0148      	l32i.n	a4, a1, 0
+     ed7:	f50c      	movi.n	a5, 15
+     ed9:	9438      	l32i.n	a3, a4, 36
+     edb:	a448      	l32i.n	a4, a4, 40
+     edd:	fff601        	l32r	a0, eb8 <cnx_rc_update_age+0x28>
+     ee0:	0000c0        	callx0	a0
+     ee3:	21c8      	l32i.n	a12, a1, 8
+     ee5:	1108      	l32i.n	a0, a1, 4
+     ee7:	10c112        	addi	a1, a1, 16
+     eea:	f00d      	ret.n
+     eec:	068c      	beqz.n	a6, ef0 <cnx_update_bss+0x34>
+	...
+
+00000f1c <cnx_update_bss_more>:
+     f1c:	fff451        	l32r	a5, eec <cnx_update_bss+0x30>
+     f1f:	e0c112        	addi	a1, a1, -32
+     f22:	41f9      	s32i.n	a15, a1, 16
+     f24:	11c9      	s32i.n	a12, a1, 4
+     f26:	0109      	s32i.n	a0, a1, 0
+     f28:	31e9      	s32i.n	a14, a1, 12
+     f2a:	21d9      	s32i.n	a13, a1, 8
+     f2c:	0e0c      	movi.n	a14, 0
+     f2e:	03dd      	mov.n	a13, a3
+     f30:	031302        	l16ui	a0, a3, 6
+     f33:	02cd      	mov.n	a12, a2
+     f35:	0558      	l32i.n	a5, a5, 0
+     f37:	0e1222        	l16ui	a2, a2, 28
+     f3a:	c055c0        	sub	a5, a5, a12
+     f3d:	130c      	movi.n	a3, 1
+     f3f:	83e350        	moveqz	a14, a3, a5
+     f42:	021207        	beq	a2, a0, f48 <cnx_update_bss_more+0x2c>
+     f45:	0e5c02        	s16i	a0, a12, 28
+     f48:	74dc      	bnez.n	a4, f63 <cnx_update_bss_more+0x47>
+     f4a:	5d38      	l32i.n	a3, a13, 20
+     f4c:	339c      	beqz.n	a3, f63 <cnx_update_bss_more+0x47>
+     f4e:	5e8c      	beqz.n	a14, f57 <cnx_update_bss_more+0x3b>
+     f50:	0c2d      	mov.n	a2, a12
+     f52:	001185        	call0	106c <cnx_update_bss_more+0x150>
+     f55:	5d38      	l32i.n	a3, a13, 20
+     f57:	020372        	l8ui	a7, a3, 2
+     f5a:	254c72        	s8i	a7, a12, 37
+     f5d:	030362        	l8ui	a6, a3, 3
+     f60:	244c62        	s8i	a6, a12, 36
+     f63:	10cc22        	addi	a2, a12, 16
+     f66:	840c      	movi.n	a4, 8
+     f68:	6d38      	l32i.n	a3, a13, 24
+     f6a:	021d82        	l16ui	a8, a13, 4
+     f6d:	115c82        	s16i	a8, a12, 34
+     f70:	ffe301        	l32r	a0, efc <cnx_update_bss+0x40>
+     f73:	0000c0        	callx0	a0
+     f76:	00a422        	movi	a2, 0x400
+     f79:	011d02        	l16ui	a0, a13, 2
+     f7c:	0f1c92        	l16ui	a9, a12, 30
+     f7f:	ffdcf1        	l32r	a15, ef0 <cnx_update_bss+0x34>
+     f82:	309900        	xor	a9, a9, a0
+     f85:	0f69a7        	bbci	a9, 10, f98 <cnx_update_bss_more+0x7c>
+     f88:	ce8c      	beqz.n	a14, f98 <cnx_update_bss_more+0x7c>
+     f8a:	103020        	and	a3, a0, a2
+     f8d:	0f2d      	mov.n	a2, a15
+     f8f:	ffdc01        	l32r	a0, f00 <cnx_update_bss+0x44>
+     f92:	0000c0        	callx0	a0
+     f95:	011d02        	l16ui	a0, a13, 2
+     f98:	ed38      	l32i.n	a3, a13, 56
+     f9a:	0f5c02        	s16i	a0, a12, 30
+     f9d:	939c      	beqz.n	a3, fba <cnx_update_bss_more+0x9e>
+     f9f:	0c2d      	mov.n	a2, a12
+     fa1:	ffd801        	l32r	a0, f04 <cnx_update_bss+0x48>
+     fa4:	0000c0        	callx0	a0
+     fa7:	1f12a6        	blti	a2, 1, fca <cnx_update_bss_more+0xae>
+     faa:	ce9c      	beqz.n	a14, fca <cnx_update_bss_more+0xae>
+     fac:	0c2d      	mov.n	a2, a12
+     fae:	57cc32        	addi	a3, a12, 87
+     fb1:	ffd501        	l32r	a0, f08 <cnx_update_bss+0x4c>
+     fb4:	0000c0        	callx0	a0
+     fb7:	0003c6        	j	fca <cnx_update_bss_more+0xae>
+     fba:	570ca2        	l8ui	a10, a12, 87
+     fbd:	9a8c      	beqz.n	a10, fca <cnx_update_bss_more+0xae>
+     fbf:	57cc22        	addi	a2, a12, 87
+     fc2:	931c      	movi.n	a3, 25
+     fc4:	ffd201        	l32r	a0, f0c <cnx_update_bss+0x50>
+     fc7:	0000c0        	callx0	a0
+     fca:	dd38      	l32i.n	a3, a13, 52
+     fcc:	ffcaf1        	l32r	a15, ef4 <cnx_update_bss+0x38>
+     fcf:	a38c      	beqz.n	a3, fdd <cnx_update_bss_more+0xc1>
+     fd1:	800f02        	l8ui	a0, a15, 128
+     fd4:	1a4026        	beqi	a0, 4, ff2 <cnx_update_bss_more+0xd6>
+     fd7:	175026        	beqi	a0, 5, ff2 <cnx_update_bss_more+0xd6>
+     fda:	147026        	beqi	a0, 7, ff2 <cnx_update_bss_more+0xd6>
+     fdd:	cd38      	l32i.n	a3, a13, 48
+     fdf:	0e0c      	movi.n	a14, 0
+     fe1:	a38c      	beqz.n	a3, fef <cnx_update_bss_more+0xd3>
+     fe3:	800f02        	l8ui	a0, a15, 128
+     fe6:	6b2026        	beqi	a0, 2, 1055 <cnx_update_bss_more+0x139>
+     fe9:	683026        	beqi	a0, 3, 1055 <cnx_update_bss_more+0x139>
+     fec:	656026        	beqi	a0, 6, 1055 <cnx_update_bss_more+0x139>
+     fef:	000486        	j	1005 <cnx_update_bss_more+0xe9>
+     ff2:	0103e2        	l8ui	a14, a3, 1
+     ff5:	27cc22        	addi	a2, a12, 39
+     ff8:	ee2b      	addi.n	a14, a14, 2
+     ffa:	74e0e0        	extui	a14, a14, 0, 8
+     ffd:	0e4d      	mov.n	a4, a14
+     fff:	ffc401        	l32r	a0, f10 <cnx_update_bss+0x54>
+    1002:	0000c0        	callx0	a0
+    1005:	264ce2        	s8i	a14, a12, 38
+    1008:	fd38      	l32i.n	a3, a13, 60
+    100a:	102d42        	l32i	a4, a13, 64
+    100d:	53bc      	beqz.n	a3, 1046 <cnx_update_bss_more+0x12a>
+    100f:	34bc      	beqz.n	a4, 1046 <cnx_update_bss_more+0x12a>
+    1011:	03df22        	addmi	a2, a15, 0x300
+    1014:	860202        	l8ui	a0, a2, 134
+    1017:	850252        	l8ui	a5, a2, 133
+    101a:	110080        	slli	a0, a0, 8
+    101d:	200050        	or	a0, a0, a5
+    1020:	110080        	slli	a0, a0, 8
+    1023:	840252        	l8ui	a5, a2, 132
+    1026:	830222        	l8ui	a2, a2, 131
+    1029:	200050        	or	a0, a0, a5
+    102c:	110080        	slli	a0, a0, 8
+    102f:	200020        	or	a0, a0, a2
+    1032:	107037        	bbci	a0, 19, 1046 <cnx_update_bss_more+0x12a>
+    1035:	ffb021        	l32r	a2, ef8 <cnx_update_bss+0x3c>
+    1038:	4228      	l32i.n	a2, a2, 16
+    103a:	1e2c52        	l32i	a5, a12, 120
+    103d:	2f6252        	s32i	a5, a2, 188
+    1040:	ffb501        	l32r	a0, f14 <cnx_update_bss+0x58>
+    1043:	0000c0        	callx0	a0
+    1046:	11c8      	l32i.n	a12, a1, 4
+    1048:	21d8      	l32i.n	a13, a1, 8
+    104a:	31e8      	l32i.n	a14, a1, 12
+    104c:	41f8      	l32i.n	a15, a1, 16
+    104e:	0108      	l32i.n	a0, a1, 0
+    1050:	20c112        	addi	a1, a1, 32
+    1053:	f00d      	ret.n
+    1055:	0103e2        	l8ui	a14, a3, 1
+    1058:	27cc22        	addi	a2, a12, 39
+    105b:	ee2b      	addi.n	a14, a14, 2
+    105d:	74e0e0        	extui	a14, a14, 0, 8
+    1060:	0e4d      	mov.n	a4, a14
+    1062:	ffad01        	l32r	a0, f18 <cnx_update_bss+0x5c>
+    1065:	0000c0        	callx0	a0
+    1068:	ffe646        	j	1005 <cnx_update_bss_more+0xe9>
+    106b:	f00d00        	subx8	a0, a13, a0
+	...
+    1076:	900000        	addx2	a0, a0, a0
+    1079:	000006        	j	107d <cnx_update_bss_more+0x161>
+    107c:	068c      	beqz.n	a6, 1080 <cnx_update_bss_more+0x164>
+	...
+
+00001094 <cnx_sta_leave>:
+    1094:	e0c112        	addi	a1, a1, -32
+    1097:	4109      	s32i.n	a0, a1, 16
+    1099:	61d9      	s32i.n	a13, a1, 24
+    109b:	51c9      	s32i.n	a12, a1, 20
+    109d:	71e9      	s32i.n	a14, a1, 28
+    109f:	03cd      	mov.n	a12, a3
+    10a1:	02ed      	mov.n	a14, a2
+    10a3:	02d8      	l32i.n	a13, a2, 0
+    10a5:	fff601        	l32r	a0, 1080 <cnx_update_bss_more+0x164>
+    10a8:	0000c0        	callx0	a0
+    10ab:	030c      	movi.n	a3, 0
+    10ad:	0c4d      	mov.n	a4, a12
+    10af:	050c      	movi.n	a5, 0
+    10b1:	0d1c62        	l16ui	a6, a12, 26
+    10b4:	070c      	movi.n	a7, 0
+    10b6:	0179      	s32i.n	a7, a1, 0
+    10b8:	1179      	s32i.n	a7, a1, 4
+    10ba:	b46060        	extui	a6, a6, 0, 12
+    10bd:	027d      	mov.n	a7, a2
+    10bf:	020c      	movi.n	a2, 0
+    10c1:	fff001        	l32r	a0, 1084 <cnx_update_bss_more+0x168>
+    10c4:	0000c0        	callx0	a0
+    10c7:	2f0d82        	l8ui	a8, a13, 47
+    10ca:	ffe991        	l32r	a9, 1070 <cnx_update_bss_more+0x154>
+    10cd:	146837        	bbci	a8, 3, 10e5 <cnx_sta_leave+0x51>
+    10d0:	000992        	l8ui	a9, a9, 0
+    10d3:	e98c      	beqz.n	a9, 10e5 <cnx_sta_leave+0x51>
+    10d5:	0d2d      	mov.n	a2, a13
+    10d7:	ffec01        	l32r	a0, 1088 <cnx_update_bss_more+0x16c>
+    10da:	0000c0        	callx0	a0
+    10dd:	0d2d      	mov.n	a2, a13
+    10df:	ffeb01        	l32r	a0, 108c <cnx_update_bss_more+0x170>
+    10e2:	0000c0        	callx0	a0
+    10e5:	ffea01        	l32r	a0, 1090 <cnx_update_bss_more+0x174>
+    10e8:	0000c0        	callx0	a0
+    10eb:	ffe2b1        	l32r	a11, 1074 <cnx_update_bss_more+0x158>
+    10ee:	2a0c      	movi.n	a10, 2
+    10f0:	0ba9      	s32i.n	a10, a11, 0
+    10f2:	060c02        	l8ui	a0, a12, 6
+    10f5:	166017        	bbci	a0, 1, 110f <cnx_sta_leave+0x7b>
+    10f8:	0c2d      	mov.n	a2, a12
+    10fa:	937c      	movi.n	a3, -7
+    10fc:	140c      	movi.n	a4, 1
+    10fe:	fda0d2        	movi	a13, 253
+    1101:	10d0d0        	and	a13, a0, a13
+    1104:	064cd2        	s8i	a13, a12, 6
+    1107:	000005        	call0	1108 <cnx_sta_leave+0x74>
+    110a:	ffdb01        	l32r	a0, 1078 <cnx_update_bss_more+0x15c>
+    110d:	00c9      	s32i.n	a12, a0, 0
+    110f:	0c2d      	mov.n	a2, a12
+    1111:	000005        	call0	1114 <cnx_sta_leave+0x80>
+    1114:	4108      	l32i.n	a0, a1, 16
+    1116:	61d8      	l32i.n	a13, a1, 24
+    1118:	ffd951        	l32r	a5, 107c <cnx_update_bss_more+0x160>
+    111b:	020c      	movi.n	a2, 0
+    111d:	2c38      	l32i.n	a3, a12, 8
+    111f:	e47c      	movi.n	a4, -2
+    1121:	103340        	and	a3, a3, a4
+    1124:	0529      	s32i.n	a2, a5, 0
+    1126:	2c39      	s32i.n	a3, a12, 8
+    1128:	226e22        	s32i	a2, a14, 136
+    112b:	51c8      	l32i.n	a12, a1, 20
+    112d:	71e8      	l32i.n	a14, a1, 28
+    112f:	20c112        	addi	a1, a1, 32
+    1132:	f00d      	ret.n
+    1134:	000030        	excw
+	...
+    1147:	fb2100        	excw
+    114a:	ff          	.byte 0xff
+    114b:	f0c112        	addi	a1, a1, -16
+    114e:	0109      	s32i.n	a0, a1, 0
+    1150:	fffc01        	l32r	a0, 1140 <cnx_sta_leave+0xac>
+    1153:	0000c0        	callx0	a0
+    1156:	fff821        	l32r	a2, 1138 <cnx_sta_leave+0xa4>
+    1159:	030c      	movi.n	a3, 0
+    115b:	140c      	movi.n	a4, 1
+    115d:	fff901        	l32r	a0, 1144 <cnx_sta_leave+0xb0>
+    1160:	0000c0        	callx0	a0
+    1163:	fff621        	l32r	a2, 113c <cnx_sta_leave+0xa8>
+    1166:	030c      	movi.n	a3, 0
+    1168:	000005        	call0	116c <cnx_sta_leave+0xd8>
+    116b:	0108      	l32i.n	a0, a1, 0
+    116d:	10c112        	addi	a1, a1, 16
+    1170:	f00d      	ret.n
+    1172:	480000        	excw
+    1175:	000011        	l32r	a1, fffc1178 <cnx_node_join+0xfffbfd08>
+    1178:	002710        	excw
+	...
+
+00001194 <cnx_sta_associated>:
+    1194:	e0c112        	addi	a1, a1, -32
+    1197:	4139      	s32i.n	a3, a1, 16
+    1199:	71c9      	s32i.n	a12, a1, 28
+    119b:	6109      	s32i.n	a0, a1, 24
+    119d:	02cd      	mov.n	a12, a2
+    119f:	fff701        	l32r	a0, 117c <cnx_sta_leave+0xe8>
+    11a2:	0000c0        	callx0	a0
+    11a5:	130c      	movi.n	a3, 1
+    11a7:	050c      	movi.n	a5, 0
+    11a9:	4148      	l32i.n	a4, a1, 16
+    11ab:	070c      	movi.n	a7, 0
+    11ad:	0d1462        	l16ui	a6, a4, 26
+    11b0:	0179      	s32i.n	a7, a1, 0
+    11b2:	1179      	s32i.n	a7, a1, 4
+    11b4:	b46060        	extui	a6, a6, 0, 12
+    11b7:	027d      	mov.n	a7, a2
+    11b9:	020c      	movi.n	a2, 0
+    11bb:	fff101        	l32r	a0, 1180 <cnx_sta_leave+0xec>
+    11be:	0000c0        	callx0	a0
+    11c1:	20cc22        	addi	a2, a12, 32
+    11c4:	5129      	s32i.n	a2, a1, 20
+    11c6:	ffef01        	l32r	a0, 1184 <cnx_sta_leave+0xf0>
+    11c9:	0000c0        	callx0	a0
+    11cc:	5128      	l32i.n	a2, a1, 20
+    11ce:	ffe931        	l32r	a3, 1174 <cnx_sta_leave+0xe0>
+    11d1:	040c      	movi.n	a4, 0
+    11d3:	ffed01        	l32r	a0, 1188 <cnx_sta_leave+0xf4>
+    11d6:	0000c0        	callx0	a0
+    11d9:	cc4b      	addi.n	a12, a12, 4
+    11db:	0c2d      	mov.n	a2, a12
+    11dd:	ffeb01        	l32r	a0, 118c <cnx_sta_leave+0xf8>
+    11e0:	0000c0        	callx0	a0
+    11e3:	0c2d      	mov.n	a2, a12
+    11e5:	ffe431        	l32r	a3, 1178 <cnx_sta_leave+0xe4>
+    11e8:	040c      	movi.n	a4, 0
+    11ea:	ffe901        	l32r	a0, 1190 <cnx_sta_leave+0xfc>
+    11ed:	0000c0        	callx0	a0
+    11f0:	71c8      	l32i.n	a12, a1, 28
+    11f2:	6108      	l32i.n	a0, a1, 24
+    11f4:	20c112        	addi	a1, a1, 32
+    11f7:	f00d      	ret.n
+    11f9:	000000        	ill
+    11fc:	f00d      	ret.n
+	...
+
+00001210 <cnx_node_alloc>:
+    1210:	fffc61        	l32r	a6, 1200 <cnx_sta_associated+0x6c>
+    1213:	f0c112        	addi	a1, a1, -16
+    1216:	31d9      	s32i.n	a13, a1, 12
+    1218:	21c9      	s32i.n	a12, a1, 8
+    121a:	8c0662        	l8ui	a6, a6, 140
+    121d:	1109      	s32i.n	a0, a1, 4
+    121f:	662b      	addi.n	a6, a6, 2
+    1221:	3b26a6        	blti	a6, 2, 1260 <cnx_node_alloc+0x50>
+    1224:	fff801        	l32r	a0, 1204 <cnx_sta_associated+0x70>
+    1227:	1c0c      	movi.n	a12, 1
+    1229:	5008      	l32i.n	a0, a0, 20
+    122b:	0129      	s32i.n	a2, a1, 0
+    122d:	a0dc00        	addx4	a13, a12, a0
+    1230:	242d22        	l32i	a2, a13, 144
+    1233:	12ec      	bnez.n	a2, 1258 <cnx_node_alloc+0x48>
+    1235:	10a122        	movi	a2, 0x110
+    1238:	fff401        	l32r	a0, 1208 <cnx_sta_associated+0x74>
+    123b:	0000c0        	callx0	a0
+    123e:	640c      	movi.n	a4, 6
+    1240:	3c7b      	addi.n	a3, a12, 7
+    1242:	246d22        	s32i	a2, a13, 144
+    1245:	02cd      	mov.n	a12, a2
+    1247:	e84232        	s8i	a3, a2, 232
+    124a:	0138      	l32i.n	a3, a1, 0
+    124c:	242d22        	l32i	a2, a13, 144
+    124f:	ffef01        	l32r	a0, 120c <cnx_sta_associated+0x78>
+    1252:	0000c0        	callx0	a0
+    1255:	000246        	j	1262 <cnx_node_alloc+0x52>
+    1258:	cc1b      	addi.n	a12, a12, 1
+    125a:	74c0c0        	extui	a12, a12, 0, 8
+    125d:	cc96c7        	bne	a6, a12, 122d <cnx_node_alloc+0x1d>
+    1260:	0c0c      	movi.n	a12, 0
+    1262:	1108      	l32i.n	a0, a1, 4
+    1264:	0c2d      	mov.n	a2, a12
+    1266:	31d8      	l32i.n	a13, a1, 12
+    1268:	21c8      	l32i.n	a12, a1, 8
+    126a:	10c112        	addi	a1, a1, 16
+    126d:	f00d      	ret.n
+	...
+
+00001280 <cnx_node_remove>:
+    1280:	fffc51        	l32r	a5, 1270 <cnx_node_alloc+0x60>
+    1283:	f0c112        	addi	a1, a1, -16
+    1286:	21d9      	s32i.n	a13, a1, 8
+    1288:	0109      	s32i.n	a0, a1, 0
+    128a:	11c9      	s32i.n	a12, a1, 4
+    128c:	8c0552        	l8ui	a5, a5, 140
+    128f:	02cd      	mov.n	a12, a2
+    1291:	552b      	addi.n	a5, a5, 2
+    1293:	2725a6        	blti	a5, 2, 12be <cnx_node_remove+0x3e>
+    1296:	fff721        	l32r	a2, 1274 <cnx_node_alloc+0x64>
+    1299:	5228      	l32i.n	a2, a2, 20
+    129b:	100c      	movi.n	a0, 1
+    129d:	a0d020        	addx4	a13, a0, a2
+    12a0:	242d32        	l32i	a3, a13, 144
+    12a3:	001b      	addi.n	a0, a0, 1
+    12a5:	2093c7        	bne	a3, a12, 12c9 <cnx_node_remove+0x49>
+    12a8:	392c22        	l32i	a2, a12, 228
+    12ab:	fff301        	l32r	a0, 1278 <cnx_node_alloc+0x68>
+    12ae:	0000c0        	callx0	a0
+    12b1:	0c2d      	mov.n	a2, a12
+    12b3:	fff201        	l32r	a0, 127c <cnx_node_alloc+0x6c>
+    12b6:	0000c0        	callx0	a0
+    12b9:	040c      	movi.n	a4, 0
+    12bb:	246d42        	s32i	a4, a13, 144
+    12be:	11c8      	l32i.n	a12, a1, 4
+    12c0:	21d8      	l32i.n	a13, a1, 8
+    12c2:	0108      	l32i.n	a0, a1, 0
+    12c4:	10c112        	addi	a1, a1, 16
+    12c7:	f00d      	ret.n
+    12c9:	740000        	extui	a0, a0, 0, 8
+    12cc:	cd9507        	bne	a5, a0, 129d <cnx_node_remove+0x1d>
+    12cf:	fffac6        	j	12be <cnx_node_remove+0x3e>
+	...
+
+000012e0 <cnx_node_search>:
+    12e0:	e0c112        	addi	a1, a1, -32
+    12e3:	31d9      	s32i.n	a13, a1, 12
+    12e5:	1109      	s32i.n	a0, a1, 4
+    12e7:	51f9      	s32i.n	a15, a1, 20
+    12e9:	fffaf1        	l32r	a15, 12d4 <cnx_node_remove+0x54>
+    12ec:	21c9      	s32i.n	a12, a1, 8
+    12ee:	8c0ff2        	l8ui	a15, a15, 140
+    12f1:	41e9      	s32i.n	a14, a1, 16
+    12f3:	ff2b      	addi.n	a15, a15, 2
+    12f5:	261fa6        	blti	a15, 1, 131f <cnx_node_search+0x3f>
+    12f8:	fff8e1        	l32r	a14, 12d8 <cnx_node_remove+0x58>
+    12fb:	0c0c      	movi.n	a12, 0
+    12fd:	5ee8      	l32i.n	a14, a14, 20
+    12ff:	0129      	s32i.n	a2, a1, 0
+    1301:	a0dce0        	addx4	a13, a12, a14
+    1304:	242dd2        	l32i	a13, a13, 144
+    1307:	cd8c      	beqz.n	a13, 1317 <cnx_node_search+0x37>
+    1309:	0128      	l32i.n	a2, a1, 0
+    130b:	0d3d      	mov.n	a3, a13
+    130d:	640c      	movi.n	a4, 6
+    130f:	fff301        	l32r	a0, 12dc <cnx_node_remove+0x5c>
+    1312:	0000c0        	callx0	a0
+    1315:	828c      	beqz.n	a2, 1321 <cnx_node_search+0x41>
+    1317:	cc1b      	addi.n	a12, a12, 1
+    1319:	74c0c0        	extui	a12, a12, 0, 8
+    131c:	e19fc7        	bne	a15, a12, 1301 <cnx_node_search+0x21>
+    131f:	0d0c      	movi.n	a13, 0
+    1321:	1108      	l32i.n	a0, a1, 4
+    1323:	21c8      	l32i.n	a12, a1, 8
+    1325:	41e8      	l32i.n	a14, a1, 16
+    1327:	0d2d      	mov.n	a2, a13
+    1329:	51f8      	l32i.n	a15, a1, 20
+    132b:	31d8      	l32i.n	a13, a1, 12
+    132d:	20c112        	addi	a1, a1, 32
+    1330:	f00d      	ret.n
+    1332:	ff0000        	excw
+    1335:	3f          	.byte 0x3f
+    1336:	ff          	.byte 0xff
+    1337:	ff          	.byte 0xff
+    1338:	0078      	l32i.n	a7, a0, 0
+    133a:	400000        	ssr	a0
+    133d:	000000        	ill
+    1340:	000080        	ret
+	...
+
+0000135c <cnx_node_leave>:
+    135c:	e0c112        	addi	a1, a1, -32
+    135f:	5109      	s32i.n	a0, a1, 20
+    1361:	61c9      	s32i.n	a12, a1, 24
+    1363:	4129      	s32i.n	a2, a1, 16
+    1365:	03cd      	mov.n	a12, a3
+    1367:	eca022        	movi	a2, 236
+    136a:	232a      	add.n	a2, a3, a2
+    136c:	fff701        	l32r	a0, 1348 <cnx_node_search+0x68>
+    136f:	0000c0        	callx0	a0
+    1372:	4138      	l32i.n	a3, a1, 16
+    1374:	242332        	l32i	a3, a3, 144
+    1377:	ffef51        	l32r	a5, 1334 <cnx_node_search+0x54>
+    137a:	c033c0        	sub	a3, a3, a12
+    137d:	089316        	beqz	a3, 140a <cnx_node_leave+0xae>
+    1380:	0d1c42        	l16ui	a4, a12, 26
+    1383:	100450        	and	a0, a4, a5
+    1386:	260457        	bnone	a4, a5, 13b0 <cnx_node_leave+0x54>
+    1389:	ffec21        	l32r	a2, 133c <cnx_node_search+0x5c>
+    138c:	ffeb81        	l32r	a8, 1338 <cnx_node_search+0x58>
+    138f:	040c72        	l8ui	a7, a12, 4
+    1392:	030c62        	l8ui	a6, a12, 3
+    1395:	020c52        	l8ui	a5, a12, 2
+    1398:	010c42        	l8ui	a4, a12, 1
+    139b:	000c32        	l8ui	a3, a12, 0
+    139e:	050c92        	l8ui	a9, a12, 5
+    13a1:	0199      	s32i.n	a9, a1, 0
+    13a3:	2109      	s32i.n	a0, a1, 8
+    13a5:	1189      	s32i.n	a8, a1, 4
+    13a7:	ffe901        	l32r	a0, 134c <cnx_node_search+0x6c>
+    13aa:	0000c0        	callx0	a0
+    13ad:	000206        	j	13b9 <cnx_node_leave+0x5d>
+    13b0:	ffe421        	l32r	a2, 1340 <cnx_node_search+0x60>
+    13b3:	ffe701        	l32r	a0, 1350 <cnx_node_search+0x70>
+    13b6:	0000c0        	callx0	a0
+    13b9:	0d1ca2        	l16ui	a10, a12, 26
+    13bc:	045a16        	beqz	a10, 1405 <cnx_node_leave+0xa9>
+    13bf:	ffe501        	l32r	a0, 1354 <cnx_node_search+0x74>
+    13c2:	0000c0        	callx0	a0
+    13c5:	030c      	movi.n	a3, 0
+    13c7:	0c4d      	mov.n	a4, a12
+    13c9:	0d1c62        	l16ui	a6, a12, 26
+    13cc:	070c      	movi.n	a7, 0
+    13ce:	0179      	s32i.n	a7, a1, 0
+    13d0:	1179      	s32i.n	a7, a1, 4
+    13d2:	b46060        	extui	a6, a6, 0, 12
+    13d5:	065d      	mov.n	a5, a6
+    13d7:	027d      	mov.n	a7, a2
+    13d9:	120c      	movi.n	a2, 1
+    13db:	ffdf01        	l32r	a0, 1358 <cnx_node_search+0x78>
+    13de:	0000c0        	callx0	a0
+    13e1:	080c      	movi.n	a8, 0
+    13e3:	f07c      	movi.n	a0, -1
+    13e5:	1b0c      	movi.n	a11, 1
+    13e7:	ffd7a1        	l32r	a10, 1344 <cnx_node_search+0x64>
+    13ea:	0d1c22        	l16ui	a2, a12, 26
+    13ed:	800a92        	l8ui	a9, a10, 128
+    13f0:	442020        	extui	a2, a2, 0, 5
+    13f3:	401200        	ssl	a2
+    13f6:	a1bb00        	sll	a11, a11
+    13f9:	30bb00        	xor	a11, a11, a0
+    13fc:	1099b0        	and	a9, a9, a11
+    13ff:	804a92        	s8i	a9, a10, 128
+    1402:	0d5c82        	s16i	a8, a12, 26
+    1405:	0c2d      	mov.n	a2, a12
+    1407:	000005        	call0	1408 <cnx_node_leave+0xac>
+    140a:	61c8      	l32i.n	a12, a1, 24
+    140c:	5108      	l32i.n	a0, a1, 20
+    140e:	20c112        	addi	a1, a1, 32
+    1411:	f00d      	ret.n
+    1413:	000000        	ill
+    1416:	800000        	add	a0, a0, a0
+	...
+    1425:	0000c0        	callx0	a0
+    1428:	000040        	excw
+    142b:	009400        	excw
+    142e:	ff0000        	excw
+    1431:	3f          	.byte 0x3f
+    1432:	ff          	.byte 0xff
+    1433:	ff          	.byte 0xff
+	...
+
+00001470 <cnx_node_join>:
+    1470:	d0c112        	addi	a1, a1, -48
+    1473:	5109      	s32i.n	a0, a1, 20
+    1475:	61c9      	s32i.n	a12, a1, 24
+    1477:	71d9      	s32i.n	a13, a1, 28
+    1479:	81e9      	s32i.n	a14, a1, 32
+    147b:	03dd      	mov.n	a13, a3
+    147d:	02ed      	mov.n	a14, a2
+    147f:	04cd      	mov.n	a12, a4
+    1481:	032d      	mov.n	a2, a3
+    1483:	640c      	movi.n	a4, 6
+    1485:	ffe331        	l32r	a3, 1414 <cnx_node_leave+0xb8>
+    1488:	ffec01        	l32r	a0, 1438 <cnx_node_leave+0xdc>
+    148b:	0000c0        	callx0	a0
+    148e:	d2dc      	bnez.n	a2, 14af <cnx_node_join+0x3f>
+    1490:	0c3d      	mov.n	a3, a12
+    1492:	0e2d      	mov.n	a2, a14
+    1494:	141c      	movi.n	a4, 17
+    1496:	ffe901        	l32r	a0, 143c <cnx_node_leave+0xe0>
+    1499:	0000c0        	callx0	a0
+    149c:	ffdf21        	l32r	a2, 1418 <cnx_node_leave+0xbc>
+    149f:	ffe801        	l32r	a0, 1440 <cnx_node_leave+0xe4>
+    14a2:	0000c0        	callx0	a0
+    14a5:	0d3d      	mov.n	a3, a13
+    14a7:	0e2d      	mov.n	a2, a14
+    14a9:	000005        	call0	14ac <cnx_node_join+0x3c>
+    14ac:	004c06        	j	15e0 <cnx_node_join+0x170>
+    14af:	0d1d92        	l16ui	a9, a13, 26
+    14b2:	100c      	movi.n	a0, 1
+    14b4:	077956        	bnez	a9, 152f <cnx_node_join+0xbf>
+    14b7:	41c9      	s32i.n	a12, a1, 16
+    14b9:	ffd961        	l32r	a6, 1420 <cnx_node_leave+0xc4>
+    14bc:	ffd851        	l32r	a5, 141c <cnx_node_leave+0xc0>
+    14bf:	ffdd41        	l32r	a4, 1434 <cnx_node_leave+0xd8>
+    14c2:	8c0552        	l8ui	a5, a5, 140
+    14c5:	800442        	l8ui	a4, a4, 128
+    14c8:	551b      	addi.n	a5, a5, 1
+    14ca:	0225e6        	bgei	a5, 2, 14d0 <cnx_node_join+0x60>
+    14cd:	004706        	j	15ed <cnx_node_join+0x17d>
+    14d0:	800622        	l8ui	a2, a6, 128
+    14d3:	00cd      	mov.n	a12, a0
+    14d5:	4480c0        	extui	a8, a12, 0, 5
+    14d8:	400800        	ssr	a8
+    14db:	b17020        	sra	a7, a2
+    14de:	02e707        	bbsi	a7, 0, 14e4 <cnx_node_join+0x74>
+    14e1:	004286        	j	15ef <cnx_node_join+0x17f>
+    14e4:	cc1b      	addi.n	a12, a12, 1
+    14e6:	f4c0c0        	extui	a12, a12, 0, 16
+    14e9:	e895c7        	bne	a5, a12, 14d5 <cnx_node_join+0x65>
+    14ec:	003fc6        	j	15ef <cnx_node_join+0x17f>
+    14ef:	ffcd31        	l32r	a3, 1424 <cnx_node_leave+0xc8>
+    14f2:	120c      	movi.n	a2, 1
+    14f4:	203c30        	or	a3, a12, a3
+    14f7:	0d5d32        	s16i	a3, a13, 26
+    14fa:	800602        	l8ui	a0, a6, 128
+    14fd:	443030        	extui	a3, a3, 0, 5
+    1500:	401300        	ssl	a3
+    1503:	a12200        	sll	a2, a2
+    1506:	200020        	or	a0, a0, a2
+    1509:	804602        	s8i	a0, a6, 128
+    150c:	ffce01        	l32r	a0, 1444 <cnx_node_leave+0xe8>
+    150f:	0000c0        	callx0	a0
+    1512:	0c6d      	mov.n	a6, a12
+    1514:	0c5d      	mov.n	a5, a12
+    1516:	130c      	movi.n	a3, 1
+    1518:	027d      	mov.n	a7, a2
+    151a:	040c      	movi.n	a4, 0
+    151c:	0149      	s32i.n	a4, a1, 0
+    151e:	1149      	s32i.n	a4, a1, 4
+    1520:	120c      	movi.n	a2, 1
+    1522:	0d4d      	mov.n	a4, a13
+    1524:	ffc901        	l32r	a0, 1448 <cnx_node_leave+0xec>
+    1527:	0000c0        	callx0	a0
+    152a:	41c8      	l32i.n	a12, a1, 16
+    152c:	0d1d92        	l16ui	a9, a13, 26
+    152f:	ffbe21        	l32r	a2, 1428 <cnx_node_leave+0xcc>
+    1532:	ffbe81        	l32r	a8, 142c <cnx_node_leave+0xd0>
+    1535:	000d32        	l8ui	a3, a13, 0
+    1538:	010d42        	l8ui	a4, a13, 1
+    153b:	020d52        	l8ui	a5, a13, 2
+    153e:	030d62        	l8ui	a6, a13, 3
+    1541:	040d72        	l8ui	a7, a13, 4
+    1544:	ffbbb1        	l32r	a11, 1430 <cnx_node_leave+0xd4>
+    1547:	050da2        	l8ui	a10, a13, 5
+    154a:	1099b0        	and	a9, a9, a11
+    154d:	01a9      	s32i.n	a10, a1, 0
+    154f:	2199      	s32i.n	a9, a1, 8
+    1551:	1189      	s32i.n	a8, a1, 4
+    1553:	ffbe01        	l32r	a0, 144c <cnx_node_leave+0xf0>
+    1556:	0000c0        	callx0	a0
+    1559:	222e22        	l32i	a2, a14, 136
+    155c:	0d3d      	mov.n	a3, a13
+    155e:	640c      	movi.n	a4, 6
+    1560:	ffbc01        	l32r	a0, 1450 <cnx_node_leave+0xf4>
+    1563:	0000c0        	callx0	a0
+    1566:	0c3d      	mov.n	a3, a12
+    1568:	222e22        	l32i	a2, a14, 136
+    156b:	0d1d02        	l16ui	a0, a13, 26
+    156e:	040c      	movi.n	a4, 0
+    1570:	0d5202        	s16i	a0, a2, 26
+    1573:	0e2d      	mov.n	a2, a14
+    1575:	ffb701        	l32r	a0, 1454 <cnx_node_leave+0xf8>
+    1578:	0000c0        	callx0	a0
+    157b:	222e22        	l32i	a2, a14, 136
+    157e:	ffa032        	movi	a3, 255
+    1581:	640c      	movi.n	a4, 6
+    1583:	ffb501        	l32r	a0, 1458 <cnx_node_leave+0xfc>
+    1586:	0000c0        	callx0	a0
+    1589:	222e42        	l32i	a4, a14, 136
+    158c:	030c      	movi.n	a3, 0
+    158e:	2d2e02        	l32i	a0, a14, 180
+    1591:	0d5432        	s16i	a3, a4, 26
+    1594:	048016        	beqz	a0, 15e0 <cnx_node_join+0x170>
+    1597:	6028      	l32i.n	a2, a0, 24
+    1599:	1258      	l32i.n	a5, a2, 4
+    159b:	35bc      	beqz.n	a5, 15d2 <cnx_node_join+0x162>
+    159d:	392d22        	l32i	a2, a13, 228
+    15a0:	ffaf01        	l32r	a0, 145c <cnx_node_leave+0x100>
+    15a3:	0000c0        	callx0	a0
+    15a6:	2d2e22        	l32i	a2, a14, 180
+    15a9:	0d3d      	mov.n	a3, a13
+    15ab:	6228      	l32i.n	a2, a2, 24
+    15ad:	ffac01        	l32r	a0, 1460 <cnx_node_leave+0x104>
+    15b0:	0000c0        	callx0	a0
+    15b3:	396d22        	s32i	a2, a13, 228
+    15b6:	62ac      	beqz.n	a2, 15e0 <cnx_node_join+0x170>
+    15b8:	023d      	mov.n	a3, a2
+    15ba:	2d2e42        	l32i	a4, a14, 180
+    15bd:	260d52        	l8ui	a5, a13, 38
+    15c0:	6428      	l32i.n	a2, a4, 24
+    15c2:	27cd42        	addi	a4, a13, 39
+    15c5:	ffa701        	l32r	a0, 1464 <cnx_node_leave+0x108>
+    15c8:	0000c0        	callx0	a0
+    15cb:	12dc      	bnez.n	a2, 15e0 <cnx_node_join+0x170>
+    15cd:	2d2e22        	l32i	a2, a14, 180
+    15d0:	6228      	l32i.n	a2, a2, 24
+    15d2:	392d32        	l32i	a3, a13, 228
+    15d5:	ffa401        	l32r	a0, 1468 <cnx_node_leave+0x10c>
+    15d8:	0000c0        	callx0	a0
+    15db:	130c      	movi.n	a3, 1
+    15dd:	184d32        	s8i	a3, a13, 24
+    15e0:	61c8      	l32i.n	a12, a1, 24
+    15e2:	71d8      	l32i.n	a13, a1, 28
+    15e4:	81e8      	l32i.n	a14, a1, 32
+    15e6:	5108      	l32i.n	a0, a1, 20
+    15e8:	30c112        	addi	a1, a1, 48
+    15eb:	f00d      	ret.n
+    15ed:	00cd      	mov.n	a12, a0
+    15ef:	441b      	addi.n	a4, a4, 1
+    15f1:	02ac47        	bge	a12, a4, 15f7 <cnx_node_join+0x187>
+    15f4:	ffbdc6        	j	14ef <cnx_node_join+0x7f>
+    15f7:	4138      	l32i.n	a3, a1, 16
+    15f9:	0e2d      	mov.n	a2, a14
+    15fb:	141c      	movi.n	a4, 17
+    15fd:	ff9b01        	l32r	a0, 146c <cnx_node_leave+0x110>
+    1600:	0000c0        	callx0	a0
+    1603:	0d3d      	mov.n	a3, a13
+    1605:	0e2d      	mov.n	a2, a14
+    1607:	000005        	call0	1608 <cnx_node_join+0x198>
+    160a:	fff486        	j	15e0 <cnx_node_join+0x170>

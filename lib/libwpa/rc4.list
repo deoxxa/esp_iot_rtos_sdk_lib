@@ -1,0 +1,94 @@
+
+rc4.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <rc4_skip>:
+   0:	0a0c      	movi.n	a10, 0
+   2:	090c      	movi.n	a9, 0
+   4:	20a172        	movi	a7, 0x120
+   7:	c01170        	sub	a1, a1, a7
+   a:	4261c2        	s32i	a12, a1, 0x108
+   d:	4461e2        	s32i	a14, a1, 0x110
+  10:	4361d2        	s32i	a13, a1, 0x10c
+  13:	406152        	s32i	a5, a1, 0x100
+  16:	416102        	s32i	a0, a1, 0x104
+  19:	010d      	mov.n	a0, a1
+  1b:	0040a2        	s8i	a10, a0, 0
+  1e:	001b      	addi.n	a0, a0, 1
+  20:	aa1b      	addi.n	a10, a10, 1
+  22:	f5fa66        	bnei	a10, 0x100, 1b <rc4_skip+0x1b>
+  25:	050c      	movi.n	a5, 0
+  27:	01dd      	mov.n	a13, a1
+  29:	01d1e2        	addmi	a14, a1, 0x100
+  2c:	010d      	mov.n	a0, a1
+  2e:	0a0c      	movi.n	a10, 0
+  30:	c2aa      	add.n	a12, a2, a10
+  32:	0000b2        	l8ui	a11, a0, 0
+  35:	000cc2        	l8ui	a12, a12, 0
+  38:	9b9a      	add.n	a9, a11, a9
+  3a:	9c9a      	add.n	a9, a12, a9
+  3c:	ca1b      	addi.n	a12, a10, 1
+  3e:	749090        	extui	a9, a9, 0, 8
+  41:	05ad      	mov.n	a10, a5
+  43:	79da      	add.n	a7, a9, a13
+  45:	000782        	l8ui	a8, a7, 0
+  48:	004082        	s8i	a8, a0, 0
+  4b:	0047b2        	s8i	a11, a7, 0
+  4e:	001b      	addi.n	a0, a0, 1
+  50:	01bc37        	bgeu	a12, a3, 55 <rc4_skip+0x55>
+  53:	0cad      	mov.n	a10, a12
+  55:	c2aa      	add.n	a12, a2, a10
+  57:	d790e7        	bne	a0, a14, 32 <rc4_skip+0x32>
+  5a:	402152        	l32i	a5, a1, 0x100
+  5d:	64ac      	beqz.n	a4, 87 <rc4_skip+0x87>
+  5f:	0a0c      	movi.n	a10, 0
+  61:	090c      	movi.n	a9, 0
+  63:	000c      	movi.n	a0, 0
+  65:	aa1b      	addi.n	a10, a10, 1
+  67:	74a0a0        	extui	a10, a10, 0, 8
+  6a:	2ada      	add.n	a2, a10, a13
+  6c:	0002b2        	l8ui	a11, a2, 0
+  6f:	001b      	addi.n	a0, a0, 1
+  71:	9b9a      	add.n	a9, a11, a9
+  73:	749090        	extui	a9, a9, 0, 8
+  76:	c9da      	add.n	a12, a9, a13
+  78:	000ce2        	l8ui	a14, a12, 0
+  7b:	0042e2        	s8i	a14, a2, 0
+  7e:	004cb2        	s8i	a11, a12, 0
+  81:	e09407        	bne	a4, a0, 65 <rc4_skip+0x65>
+  84:	0000c6        	j	8b <rc4_skip+0x8b>
+  87:	090c      	movi.n	a9, 0
+  89:	0a0c      	movi.n	a10, 0
+  8b:	76bc      	beqz.n	a6, c6 <rc4_skip+0xc6>
+  8d:	000c      	movi.n	a0, 0
+  8f:	aa1b      	addi.n	a10, a10, 1
+  91:	74a0a0        	extui	a10, a10, 0, 8
+  94:	cada      	add.n	a12, a10, a13
+  96:	000ce2        	l8ui	a14, a12, 0
+  99:	9e9a      	add.n	a9, a14, a9
+  9b:	749090        	extui	a9, a9, 0, 8
+  9e:	29da      	add.n	a2, a9, a13
+  a0:	000232        	l8ui	a3, a2, 0
+  a3:	004c32        	s8i	a3, a12, 0
+  a6:	0042e2        	s8i	a14, a2, 0
+  a9:	000cc2        	l8ui	a12, a12, 0
+  ac:	0005b2        	l8ui	a11, a5, 0
+  af:	ccea      	add.n	a12, a12, a14
+  b1:	74c0c0        	extui	a12, a12, 0, 8
+  b4:	cdca      	add.n	a12, a13, a12
+  b6:	000cc2        	l8ui	a12, a12, 0
+  b9:	001b      	addi.n	a0, a0, 1
+  bb:	30bbc0        	xor	a11, a11, a12
+  be:	0045b2        	s8i	a11, a5, 0
+  c1:	551b      	addi.n	a5, a5, 1
+  c3:	c89607        	bne	a6, a0, 8f <rc4_skip+0x8f>
+  c6:	020c      	movi.n	a2, 0
+  c8:	4221c2        	l32i	a12, a1, 0x108
+  cb:	4321d2        	l32i	a13, a1, 0x10c
+  ce:	4421e2        	l32i	a14, a1, 0x110
+  d1:	20a132        	movi	a3, 0x120
+  d4:	412102        	l32i	a0, a1, 0x104
+  d7:	113a      	add.n	a1, a1, a3
+  d9:	f00d      	ret.n

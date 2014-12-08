@@ -1,0 +1,167 @@
+
+ieee80211_action.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee80211_send_action_register-0x10>:
+   0:	f27c      	movi.n	a2, -1
+   2:	f00d      	ret.n
+   4:	000c      	movi.n	a0, 0
+   6:	000000        	ill
+   9:	000000        	ill
+   c:	0008      	l32i.n	a0, a0, 0
+	...
+
+00000010 <ieee80211_send_action_register>:
+  10:	1a3226        	beqi	a2, 3, 2e <ieee80211_send_action_register+0x1e>
+  13:	207226        	beqi	a2, 7, 37 <ieee80211_send_action_register+0x27>
+  16:	7fa052        	movi	a5, 127
+  19:	0d9257        	bne	a2, a5, 2a <ieee80211_send_action_register+0x1a>
+  1c:	a3cc      	bnez.n	a3, 2a <ieee80211_send_action_register+0x1a>
+  1e:	fff921        	l32r	a2, 4 <ieee80211_send_action_register-0xc>
+  21:	a06320        	addx4	a6, a3, a2
+  24:	0649      	s32i.n	a4, a6, 0
+  26:	020c      	movi.n	a2, 0
+  28:	f00d      	ret.n
+  2a:	f27c      	movi.n	a2, -1
+  2c:	f00d      	ret.n
+  2e:	f823f6        	bgeui	a3, 2, 2a <ieee80211_send_action_register+0x1a>
+  31:	fff521        	l32r	a2, 8 <ieee80211_send_action_register-0x8>
+  34:	fffa46        	j	21 <ieee80211_send_action_register+0x11>
+  37:	fef356        	bnez	a3, 2a <ieee80211_send_action_register+0x1a>
+  3a:	fff421        	l32r	a2, c <ieee80211_send_action_register-0x4>
+  3d:	fff806        	j	21 <ieee80211_send_action_register+0x11>
+  40:	000000        	ill
+	...
+
+00000044 <ieee80211_send_action_unregister>:
+  44:	ffff41        	l32r	a4, 40 <ieee80211_send_action_register+0x30>
+  47:	f0c112        	addi	a1, a1, -16
+  4a:	0109      	s32i.n	a0, a1, 0
+  4c:	000005        	call0	50 <ieee80211_send_action_unregister+0xc>
+  4f:	0108      	l32i.n	a0, a1, 0
+  51:	10c112        	addi	a1, a1, 16
+  54:	f00d      	ret.n
+  56:	000000        	ill
+  59:	000000        	ill
+  5c:	000c      	movi.n	a0, 0
+  5e:	080000        	excw
+  61:	000000        	ill
+  64:	000000        	ill
+	...
+
+00000068 <ieee80211_send_action>:
+  68:	f0c112        	addi	a1, a1, -16
+  6b:	0109      	s32i.n	a0, a1, 0
+  6d:	fffa01        	l32r	a0, 58 <ieee80211_send_action_unregister+0x14>
+  70:	153326        	beqi	a3, 3, 89 <ieee80211_send_action+0x21>
+  73:	267326        	beqi	a3, 7, 9d <ieee80211_send_action+0x35>
+  76:	7fa062        	movi	a6, 127
+  79:	0f9367        	bne	a3, a6, 8c <ieee80211_send_action+0x24>
+  7c:	84dc      	bnez.n	a4, 98 <ieee80211_send_action+0x30>
+  7e:	fff771        	l32r	a7, 5c <ieee80211_send_action_unregister+0x18>
+  81:	a07470        	addx4	a7, a4, a7
+  84:	0778      	l32i.n	a7, a7, 0
+  86:	000106        	j	8e <ieee80211_send_action+0x26>
+  89:	2224b6        	bltui	a4, 2, af <ieee80211_send_action+0x47>
+  8c:	007d      	mov.n	a7, a0
+  8e:	0007c0        	callx0	a7
+  91:	0108      	l32i.n	a0, a1, 0
+  93:	10c112        	addi	a1, a1, 16
+  96:	f00d      	ret.n
+  98:	007d      	mov.n	a7, a0
+  9a:	fffc06        	j	8e <ieee80211_send_action+0x26>
+  9d:	94cc      	bnez.n	a4, aa <ieee80211_send_action+0x42>
+  9f:	fff071        	l32r	a7, 60 <ieee80211_send_action_unregister+0x1c>
+  a2:	a07470        	addx4	a7, a4, a7
+  a5:	0778      	l32i.n	a7, a7, 0
+  a7:	fff8c6        	j	8e <ieee80211_send_action+0x26>
+  aa:	007d      	mov.n	a7, a0
+  ac:	fff786        	j	8e <ieee80211_send_action+0x26>
+  af:	ffed71        	l32r	a7, 64 <ieee80211_send_action_unregister+0x20>
+  b2:	a07470        	addx4	a7, a4, a7
+  b5:	0778      	l32i.n	a7, a7, 0
+  b7:	fff4c6        	j	8e <ieee80211_send_action+0x26>
+  ba:	7c0000        	excw
+  bd:	f00df2        	l8ui	a15, a13, 240
+  c0:	0018      	l32i.n	a1, a0, 0
+  c2:	100000        	and	a0, a0, a0
+  c5:	000000        	ill
+  c8:	000014        	excw
+	...
+
+000000cc <ieee80211_recv_action_register>:
+  cc:	1a3226        	beqi	a2, 3, ea <ieee80211_recv_action_register+0x1e>
+  cf:	207226        	beqi	a2, 7, f3 <ieee80211_recv_action_register+0x27>
+  d2:	7fa052        	movi	a5, 127
+  d5:	0d9257        	bne	a2, a5, e6 <ieee80211_recv_action_register+0x1a>
+  d8:	a3cc      	bnez.n	a3, e6 <ieee80211_recv_action_register+0x1a>
+  da:	fff921        	l32r	a2, c0 <ieee80211_send_action+0x58>
+  dd:	a06320        	addx4	a6, a3, a2
+  e0:	0649      	s32i.n	a4, a6, 0
+  e2:	020c      	movi.n	a2, 0
+  e4:	f00d      	ret.n
+  e6:	f27c      	movi.n	a2, -1
+  e8:	f00d      	ret.n
+  ea:	ff8356        	bnez	a3, e6 <ieee80211_recv_action_register+0x1a>
+  ed:	fff521        	l32r	a2, c4 <ieee80211_send_action+0x5c>
+  f0:	fffa46        	j	dd <ieee80211_recv_action_register+0x11>
+  f3:	fef356        	bnez	a3, e6 <ieee80211_recv_action_register+0x1a>
+  f6:	fff421        	l32r	a2, c8 <ieee80211_send_action+0x60>
+  f9:	fff806        	j	dd <ieee80211_recv_action_register+0x11>
+  fc:	00bc      	beqz.n	a0, 130 <ieee80211_recv_action+0xc>
+	...
+
+00000100 <ieee80211_recv_action_unregister>:
+ 100:	ffff41        	l32r	a4, fc <ieee80211_recv_action_register+0x30>
+ 103:	f0c112        	addi	a1, a1, -16
+ 106:	0109      	s32i.n	a0, a1, 0
+ 108:	000005        	call0	10c <ieee80211_recv_action_unregister+0xc>
+ 10b:	0108      	l32i.n	a0, a1, 0
+ 10d:	10c112        	addi	a1, a1, 16
+ 110:	f00d      	ret.n
+ 112:	bc0000        	excw
+ 115:	000000        	ill
+ 118:	0018      	l32i.n	a1, a0, 0
+ 11a:	140000        	extui	a0, a0, 0, 2
+ 11d:	000000        	ill
+ 120:	000010        	excw
+	...
+
+00000124 <ieee80211_recv_action>:
+ 124:	f0c112        	addi	a1, a1, -16
+ 127:	0109      	s32i.n	a0, a1, 0
+ 129:	000402        	l8ui	a0, a4, 0
+ 12c:	fffa81        	l32r	a8, 114 <ieee80211_recv_action_unregister+0x14>
+ 12f:	1a3026        	beqi	a0, 3, 14d <ieee80211_recv_action+0x29>
+ 132:	2b7026        	beqi	a0, 7, 161 <ieee80211_recv_action+0x3d>
+ 135:	7fa062        	movi	a6, 127
+ 138:	169067        	bne	a0, a6, 152 <ieee80211_recv_action+0x2e>
+ 13b:	010402        	l8ui	a0, a4, 1
+ 13e:	087d      	mov.n	a7, a8
+ 140:	a0dc      	bnez.n	a0, 15e <ieee80211_recv_action+0x3a>
+ 142:	fff571        	l32r	a7, 118 <ieee80211_recv_action_unregister+0x18>
+ 145:	a07070        	addx4	a7, a0, a7
+ 148:	0778      	l32i.n	a7, a7, 0
+ 14a:	000186        	j	154 <ieee80211_recv_action+0x30>
+ 14d:	010402        	l8ui	a0, a4, 1
+ 150:	20ac      	beqz.n	a0, 176 <ieee80211_recv_action+0x52>
+ 152:	087d      	mov.n	a7, a8
+ 154:	0007c0        	callx0	a7
+ 157:	0108      	l32i.n	a0, a1, 0
+ 159:	10c112        	addi	a1, a1, 16
+ 15c:	f00d      	ret.n
+ 15e:	fffc86        	j	154 <ieee80211_recv_action+0x30>
+ 161:	010402        	l8ui	a0, a4, 1
+ 164:	087d      	mov.n	a7, a8
+ 166:	90cc      	bnez.n	a0, 173 <ieee80211_recv_action+0x4f>
+ 168:	ffed71        	l32r	a7, 11c <ieee80211_recv_action_unregister+0x1c>
+ 16b:	a07070        	addx4	a7, a0, a7
+ 16e:	0778      	l32i.n	a7, a7, 0
+ 170:	fff806        	j	154 <ieee80211_recv_action+0x30>
+ 173:	fff746        	j	154 <ieee80211_recv_action+0x30>
+ 176:	ffea71        	l32r	a7, 120 <ieee80211_recv_action_unregister+0x20>
+ 179:	a07070        	addx4	a7, a0, a7
+ 17c:	0778      	l32i.n	a7, a7, 0
+ 17e:	fff486        	j	154 <ieee80211_recv_action+0x30>

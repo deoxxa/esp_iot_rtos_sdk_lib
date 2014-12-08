@@ -1,0 +1,88 @@
+
+ieee80211_crypto.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee80211_crypto_attach>:
+   0:	f00d      	ret.n
+	...
+
+00000004 <ieee80211_crypto_available>:
+   4:	020c      	movi.n	a2, 0
+   6:	f00d      	ret.n
+
+00000008 <ieee80211_crypto_setkey>:
+   8:	020c      	movi.n	a2, 0
+   a:	f00d      	ret.n
+   c:	000000        	ill
+	...
+
+00000010 <ieee80211_crypto_encap>:
+  10:	f0c112        	addi	a1, a1, -16
+  13:	1109      	s32i.n	a0, a1, 4
+  15:	8348      	l32i.n	a4, a3, 32
+  17:	222202        	l32i	a0, a2, 136
+  1a:	0448      	l32i.n	a4, a4, 0
+  1c:	fffc21        	l32r	a2, c <ieee80211_crypto_setkey+0x4>
+  1f:	346477        	bbci	a4, 7, 57 <ieee80211_crypto_encap+0x47>
+  22:	e90002        	l8ui	a0, a0, 233
+  25:	0420b6        	bltui	a0, 2, 2d <ieee80211_crypto_encap+0x1d>
+  28:	600b      	addi.n	a6, a0, -1
+  2a:	000046        	j	2f <ieee80211_crypto_encap+0x1f>
+  2d:	006d      	mov.n	a6, a0
+  2f:	a02020        	addx4	a2, a0, a2
+  32:	642222        	l32i	a2, a2, 0x190
+  35:	1146a0        	slli	a4, a6, 6
+  38:	262202        	l32i	a0, a2, 152
+  3b:	744040        	extui	a4, a4, 0, 8
+  3e:	4008      	l32i.n	a0, a0, 16
+  40:	0129      	s32i.n	a2, a1, 0
+  42:	0000c0        	callx0	a0
+  45:	0148      	l32i.n	a4, a1, 0
+  47:	1138      	l32i.n	a3, a1, 4
+  49:	000c      	movi.n	a0, 0
+  4b:	10c112        	addi	a1, a1, 16
+  4e:	930420        	movnez	a0, a4, a2
+  51:	002d      	mov.n	a2, a0
+  53:	030d      	mov.n	a0, a3
+  55:	f00d      	ret.n
+  57:	060c      	movi.n	a6, 0
+  59:	e80002        	l8ui	a0, a0, 232
+  5c:	fff3c6        	j	2f <ieee80211_crypto_encap+0x1f>
+  5f:	000000        	ill
+	...
+
+00000064 <ieee80211_crypto_decap>:
+  64:	f0c112        	addi	a1, a1, -16
+  67:	0b1352        	l16ui	a5, a3, 22
+  6a:	1109      	s32i.n	a0, a1, 4
+  6c:	0a1302        	l16ui	a0, a3, 20
+  6f:	005a      	add.n	a0, a0, a5
+  71:	1cc0b6        	bltui	a0, 32, 91 <ieee80211_crypto_decap+0x2d>
+  74:	1368      	l32i.n	a6, a3, 4
+  76:	1668      	l32i.n	a6, a6, 4
+  78:	222202        	l32i	a0, a2, 136
+  7b:	040662        	l8ui	a6, a6, 4
+  7e:	fff821        	l32r	a2, 60 <ieee80211_crypto_encap+0x50>
+  81:	2b6607        	bbci	a6, 0, b0 <ieee80211_crypto_decap+0x4c>
+  84:	e90002        	l8ui	a0, a0, 233
+  87:	a07020        	addx4	a7, a0, a2
+  8a:	642772        	l32i	a7, a7, 0x190
+  8d:	0179      	s32i.n	a7, a1, 0
+  8f:	37cc      	bnez.n	a7, 96 <ieee80211_crypto_decap+0x32>
+  91:	020c      	movi.n	a2, 0
+  93:	000486        	j	a9 <ieee80211_crypto_decap+0x45>
+  96:	262702        	l32i	a0, a7, 152
+  99:	5008      	l32i.n	a0, a0, 20
+  9b:	072d      	mov.n	a2, a7
+  9d:	0000c0        	callx0	a0
+  a0:	024d      	mov.n	a4, a2
+  a2:	0138      	l32i.n	a3, a1, 0
+  a4:	020c      	movi.n	a2, 0
+  a6:	932340        	movnez	a2, a3, a4
+  a9:	1108      	l32i.n	a0, a1, 4
+  ab:	10c112        	addi	a1, a1, 16
+  ae:	f00d      	ret.n
+  b0:	e80002        	l8ui	a0, a0, 232
+  b3:	fff406        	j	87 <ieee80211_crypto_decap+0x23>

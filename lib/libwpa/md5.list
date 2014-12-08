@@ -1,0 +1,139 @@
+
+md5.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <hmac_md5_vector-0x1c>:
+	...
+
+0000001c <hmac_md5_vector>:
+  1c:	d0a082        	movi	a8, 208
+  1f:	c01180        	sub	a1, a1, a8
+  22:	2d6132        	s32i	a3, a1, 180
+  25:	2c6122        	s32i	a2, a1, 176
+  28:	256102        	s32i	a0, a1, 148
+  2b:	2761d2        	s32i	a13, a1, 156
+  2e:	2661c2        	s32i	a12, a1, 152
+  31:	2861e2        	s32i	a14, a1, 160
+  34:	05cd      	mov.n	a12, a5
+  36:	04ed      	mov.n	a14, a4
+  38:	06dd      	mov.n	a13, a6
+  3a:	b4a002        	movi	a0, 180
+  3d:	010a      	add.n	a0, a1, a0
+  3f:	b0a062        	movi	a6, 176
+  42:	616a      	add.n	a6, a1, a6
+  44:	0264b6        	bltui	a4, 6, 4a <hmac_md5_vector+0x2e>
+  47:	002506        	j	df <hmac_md5_vector+0xc3>
+  4a:	246172        	s32i	a7, a1, 144
+  4d:	024c      	movi.n	a2, 64
+  4f:	18b237        	bgeu	a2, a3, 6b <hmac_md5_vector+0x4f>
+  52:	063d      	mov.n	a3, a6
+  54:	120c      	movi.n	a2, 1
+  56:	015d      	mov.n	a5, a1
+  58:	004d      	mov.n	a4, a0
+  5a:	ffe901        	l32r	a0, 0 <hmac_md5_vector-0x1c>
+  5d:	0000c0        	callx0	a0
+  60:	07b256        	bnez	a2, df <hmac_md5_vector+0xc3>
+  63:	2c6112        	s32i	a1, a1, 176
+  66:	061c      	movi.n	a6, 16
+  68:	2d6162        	s32i	a6, a1, 180
+  6b:	10c122        	addi	a2, a1, 16
+  6e:	030c      	movi.n	a3, 0
+  70:	044c      	movi.n	a4, 64
+  72:	ffe401        	l32r	a0, 4 <hmac_md5_vector-0x18>
+  75:	0000c0        	callx0	a0
+  78:	2c2132        	l32i	a3, a1, 176
+  7b:	2d2142        	l32i	a4, a1, 180
+  7e:	10c122        	addi	a2, a1, 16
+  81:	2961e2        	s32i	a14, a1, 164
+  84:	ffe101        	l32r	a0, 8 <hmac_md5_vector-0x14>
+  87:	0000c0        	callx0	a0
+  8a:	292142        	l32i	a4, a1, 164
+  8d:	10c102        	addi	a0, a1, 16
+  90:	50c1e2        	addi	a14, a1, 80
+  93:	623c      	movi.n	a2, 54
+  95:	064c      	movi.n	a6, 64
+  97:	1c6162        	s32i	a6, a1, 112
+  9a:	10c162        	addi	a6, a1, 16
+  9d:	146162        	s32i	a6, a1, 80
+  a0:	000052        	l8ui	a5, a0, 0
+  a3:	305520        	xor	a5, a5, a2
+  a6:	004052        	s8i	a5, a0, 0
+  a9:	001b      	addi.n	a0, a0, 1
+  ab:	f190e7        	bne	a0, a14, a0 <hmac_md5_vector+0x84>
+  ae:	a49c      	beqz.n	a4, cc <hmac_md5_vector+0xb0>
+  b0:	70c102        	addi	a0, a1, 112
+  b3:	50c122        	addi	a2, a1, 80
+  b6:	a034c0        	addx4	a3, a4, a12
+  b9:	0d78      	l32i.n	a7, a13, 0
+  bb:	0c88      	l32i.n	a8, a12, 0
+  bd:	dd4b      	addi.n	a13, a13, 4
+  bf:	cc4b      	addi.n	a12, a12, 4
+  c1:	1289      	s32i.n	a8, a2, 4
+  c3:	1079      	s32i.n	a7, a0, 4
+  c5:	224b      	addi.n	a2, a2, 4
+  c7:	004b      	addi.n	a0, a0, 4
+  c9:	ec9c37        	bne	a12, a3, b9 <hmac_md5_vector+0x9d>
+  cc:	50c132        	addi	a3, a1, 80
+  cf:	241b      	addi.n	a2, a4, 1
+  d1:	242152        	l32i	a5, a1, 144
+  d4:	70c142        	addi	a4, a1, 112
+  d7:	ffcd01        	l32r	a0, c <hmac_md5_vector-0x10>
+  da:	0000c0        	callx0	a0
+  dd:	328c      	beqz.n	a2, e4 <hmac_md5_vector+0xc8>
+  df:	f27c      	movi.n	a2, -1
+  e1:	001486        	j	137 <hmac_md5_vector+0x11b>
+  e4:	10c122        	addi	a2, a1, 16
+  e7:	030c      	movi.n	a3, 0
+  e9:	044c      	movi.n	a4, 64
+  eb:	ffc901        	l32r	a0, 10 <hmac_md5_vector-0xc>
+  ee:	0000c0        	callx0	a0
+  f1:	2c2132        	l32i	a3, a1, 176
+  f4:	2d2142        	l32i	a4, a1, 180
+  f7:	10c122        	addi	a2, a1, 16
+  fa:	ffc601        	l32r	a0, 14 <hmac_md5_vector-0x8>
+  fd:	0000c0        	callx0	a0
+ 100:	10c102        	addi	a0, a1, 16
+ 103:	c25c      	movi.n	a2, 92
+ 105:	000052        	l8ui	a5, a0, 0
+ 108:	305520        	xor	a5, a5, a2
+ 10b:	004052        	s8i	a5, a0, 0
+ 10e:	001b      	addi.n	a0, a0, 1
+ 110:	f190e7        	bne	a0, a14, 105 <hmac_md5_vector+0xe9>
+ 113:	220c      	movi.n	a2, 2
+ 115:	50c132        	addi	a3, a1, 80
+ 118:	70c142        	addi	a4, a1, 112
+ 11b:	061c      	movi.n	a6, 16
+ 11d:	242152        	l32i	a5, a1, 144
+ 120:	074c      	movi.n	a7, 64
+ 122:	10c182        	addi	a8, a1, 16
+ 125:	146182        	s32i	a8, a1, 80
+ 128:	1c6172        	s32i	a7, a1, 112
+ 12b:	156152        	s32i	a5, a1, 84
+ 12e:	1d6162        	s32i	a6, a1, 116
+ 131:	ffb901        	l32r	a0, 18 <hmac_md5_vector-0x4>
+ 134:	0000c0        	callx0	a0
+ 137:	2621c2        	l32i	a12, a1, 152
+ 13a:	2721d2        	l32i	a13, a1, 156
+ 13d:	2821e2        	l32i	a14, a1, 160
+ 140:	d0a032        	movi	a3, 208
+ 143:	252102        	l32i	a0, a1, 148
+ 146:	113a      	add.n	a1, a1, a3
+ 148:	f00d      	ret.n
+	...
+
+0000014c <hmac_md5>:
+ 14c:	067d      	mov.n	a7, a6
+ 14e:	059d      	mov.n	a9, a5
+ 150:	d0c112        	addi	a1, a1, -48
+ 153:	0109      	s32i.n	a0, a1, 0
+ 155:	6149      	s32i.n	a4, a1, 24
+ 157:	18c152        	addi	a5, a1, 24
+ 15a:	1cc162        	addi	a6, a1, 28
+ 15d:	7199      	s32i.n	a9, a1, 28
+ 15f:	140c      	movi.n	a4, 1
+ 161:	000005        	call0	164 <hmac_md5+0x18>
+ 164:	0108      	l32i.n	a0, a1, 0
+ 166:	30c112        	addi	a1, a1, 48
+ 169:	f00d      	ret.n

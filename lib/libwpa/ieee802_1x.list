@@ -1,0 +1,57 @@
+
+ieee802_1x.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee802_1x_receive-0x8>:
+	...
+
+00000008 <ieee802_1x_receive>:
+   8:	f0c112        	addi	a1, a1, -16
+   b:	0109      	s32i.n	a0, a1, 0
+   d:	21d9      	s32i.n	a13, a1, 8
+   f:	11c9      	s32i.n	a12, a1, 4
+  11:	31e9      	s32i.n	a14, a1, 12
+  13:	04cd      	mov.n	a12, a4
+  15:	05ed      	mov.n	a14, a5
+  17:	02dd      	mov.n	a13, a2
+  19:	fff901        	l32r	a0, 0 <ieee802_1x_receive-0x8>
+  1c:	0000c0        	callx0	a0
+  1f:	020d      	mov.n	a0, a2
+  21:	051216        	beqz	a2, 76 <ieee802_1x_receive+0x6e>
+  24:	4228      	l32i.n	a2, a2, 16
+  26:	02a132        	movi	a3, 0x102
+  29:	490237        	bnone	a2, a3, 76 <ieee802_1x_receive+0x6e>
+  2c:	464eb6        	bltui	a14, 4, 76 <ieee802_1x_receive+0x6e>
+  2f:	fcce42        	addi	a4, a14, -4
+  32:	030c62        	l8ui	a6, a12, 3
+  35:	020c72        	l8ui	a7, a12, 2
+  38:	116680        	slli	a6, a6, 8
+  3b:	206670        	or	a6, a6, a7
+  3e:	745860        	extui	a5, a6, 8, 8
+  41:	746060        	extui	a6, a6, 0, 8
+  44:	116680        	slli	a6, a6, 8
+  47:	205560        	or	a5, a5, a6
+  4a:	f45050        	extui	a5, a5, 0, 16
+  4d:	253457        	bltu	a4, a5, 76 <ieee802_1x_receive+0x6e>
+  50:	b72c      	movi.n	a7, 43
+  52:	20b757        	bgeu	a7, a5, 76 <ieee802_1x_receive+0x6e>
+  55:	010c82        	l8ui	a8, a12, 1
+  58:	040c22        	l8ui	a2, a12, 4
+  5b:	173866        	bnei	a8, 3, 76 <ieee802_1x_receive+0x6e>
+  5e:	fea092        	movi	a9, 254
+  61:	021297        	beq	a2, a9, 67 <ieee802_1x_receive+0x5f>
+  64:	0e2266        	bnei	a2, 2, 76 <ieee802_1x_receive+0x6e>
+  67:	0c4d      	mov.n	a4, a12
+  69:	6d28      	l32i.n	a2, a13, 24
+  6b:	554b      	addi.n	a5, a5, 4
+  6d:	112032        	l32i	a3, a0, 68
+  70:	ffe501        	l32r	a0, 4 <ieee802_1x_receive-0x4>
+  73:	0000c0        	callx0	a0
+  76:	11c8      	l32i.n	a12, a1, 4
+  78:	21d8      	l32i.n	a13, a1, 8
+  7a:	31e8      	l32i.n	a14, a1, 12
+  7c:	0108      	l32i.n	a0, a1, 0
+  7e:	10c112        	addi	a1, a1, 16
+  81:	f00d      	ret.n

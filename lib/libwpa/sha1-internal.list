@@ -1,0 +1,2026 @@
+
+sha1-internal.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <sha1_vector>:
+       0:	80c112        	addi	a1, a1, -128
+       3:	176132        	s32i	a3, a1, 92
+       6:	186102        	s32i	a0, a1, 96
+       9:	1a61d2        	s32i	a13, a1, 104
+       c:	1961c2        	s32i	a12, a1, 100
+       f:	1b61e2        	s32i	a14, a1, 108
+      12:	04cd      	mov.n	a12, a4
+      14:	02ed      	mov.n	a14, a2
+      16:	05dd      	mov.n	a13, a5
+      18:	012d      	mov.n	a2, a1
+      1a:	000005        	call0	1c <sha1_vector+0x1c>
+      1d:	1c61d2        	s32i	a13, a1, 112
+      20:	4e9c      	beqz.n	a14, 38 <sha1_vector+0x38>
+      22:	1721d2        	l32i	a13, a1, 92
+      25:	a0eed0        	addx4	a14, a14, a13
+      28:	012d      	mov.n	a2, a1
+      2a:	0d38      	l32i.n	a3, a13, 0
+      2c:	0c48      	l32i.n	a4, a12, 0
+      2e:	000005        	call0	30 <sha1_vector+0x30>
+      31:	cc4b      	addi.n	a12, a12, 4
+      33:	dd4b      	addi.n	a13, a13, 4
+      35:	ef9de7        	bne	a13, a14, 28 <sha1_vector+0x28>
+      38:	1c2122        	l32i	a2, a1, 112
+      3b:	013d      	mov.n	a3, a1
+      3d:	000005        	call0	40 <sha1_vector+0x40>
+      40:	020c      	movi.n	a2, 0
+      42:	1921c2        	l32i	a12, a1, 100
+      45:	1a21d2        	l32i	a13, a1, 104
+      48:	1b21e2        	l32i	a14, a1, 108
+      4b:	80a032        	movi	a3, 128
+      4e:	182102        	l32i	a0, a1, 96
+      51:	113a      	add.n	a1, a1, a3
+      53:	f00d      	ret.n
+      55:	000000        	ill
+      58:	ff          	.byte 0xff
+      59:	00ff00        	excw
+      5c:	00ff00        	excw
+      5f:	ff          	.byte 0xff
+      60:	7999      	s32i.n	a9, a9, 28
+      62:	a15a82        	s16i	a8, a10, 0x142
+      65:	d9eb      	addi.n	a13, a9, 14
+      67:	6e          	.byte 0x6e
+      68:	d9eba1        	l32r	a10, ffff6814 <SHA1Final+0xffff5378>
+      6b:	6e          	.byte 0x6e
+      6c:	bcdc      	bnez.n	a12, 8b <sha1_vector+0x8b>
+      6e:	8f1b      	addi.n	a8, a15, 1
+      70:	bcdc      	bnez.n	a12, 8f <sha1_vector+0x8f>
+      72:	8f1b      	addi.n	a8, a15, 1
+      74:	bcdc      	bnez.n	a12, 93 <sha1_vector+0x93>
+      76:	8f1b      	addi.n	a8, a15, 1
+      78:	bcdc      	bnez.n	a12, 97 <sha1_vector+0x97>
+      7a:	8f1b      	addi.n	a8, a15, 1
+      7c:	bcdc      	bnez.n	a12, 9b <sha1_vector+0x9b>
+      7e:	8f1b      	addi.n	a8, a15, 1
+      80:	bcdc      	bnez.n	a12, 9f <sha1_vector+0x9f>
+      82:	8f1b      	addi.n	a8, a15, 1
+      84:	bcdc      	bnez.n	a12, a3 <sha1_vector+0xa3>
+      86:	8f1b      	addi.n	a8, a15, 1
+      88:	bcdc      	bnez.n	a12, a7 <sha1_vector+0xa7>
+      8a:	8f1b      	addi.n	a8, a15, 1
+      8c:	bcdc      	bnez.n	a12, ab <sha1_vector+0xab>
+      8e:	8f1b      	addi.n	a8, a15, 1
+      90:	62c1d6        	bgez	a1, 6c0 <SHA1Transform+0x5f8>
+      93:	d6ca      	add.n	a13, a6, a12
+      95:	ca62c1        	l32r	a12, ffff2a20 <SHA1Final+0xffff1584>
+      98:	62c1d6        	bgez	a1, 6c8 <SHA1Transform+0x600>
+      9b:	d6ca      	add.n	a13, a6, a12
+      9d:	ca62c1        	l32r	a12, ffff2a28 <SHA1Final+0xffff158c>
+      a0:	62c1d6        	bgez	a1, 6d0 <SHA1Transform+0x608>
+      a3:	d6ca      	add.n	a13, a6, a12
+      a5:	ca62c1        	l32r	a12, ffff2a30 <SHA1Final+0xffff1594>
+      a8:	62c1d6        	bgez	a1, 6d8 <SHA1Transform+0x610>
+      ab:	d6ca      	add.n	a13, a6, a12
+      ad:	ca62c1        	l32r	a12, ffff2a38 <SHA1Final+0xffff159c>
+      b0:	62c1d6        	bgez	a1, 6e0 <SHA1Transform+0x618>
+      b3:	d6ca      	add.n	a13, a6, a12
+      b5:	ca62c1        	l32r	a12, ffff2a40 <SHA1Final+0xffff15a4>
+      b8:	62c1d6        	bgez	a1, 6e8 <SHA1Transform+0x620>
+      bb:	d6ca      	add.n	a13, a6, a12
+      bd:	ca62c1        	l32r	a12, ffff2a48 <SHA1Final+0xffff15ac>
+	...
+
+000000c8 <SHA1Transform>:
+      c8:	30a142        	movi	a4, 0x130
+      cb:	c01140        	sub	a1, a1, a4
+      ce:	044c      	movi.n	a4, 64
+      d0:	1d61c2        	s32i	a12, a1, 116
+      d3:	1c6102        	s32i	a0, a1, 112
+      d6:	02cd      	mov.n	a12, a2
+      d8:	012d      	mov.n	a2, a1
+      da:	fff901        	l32r	a0, c0 <sha1_vector+0xc0>
+      dd:	0000c0        	callx0	a0
+      e0:	2161c2        	s32i	a12, a1, 132
+      e3:	ffdf61        	l32r	a6, 60 <sha1_vector+0x60>
+      e6:	1c28      	l32i.n	a2, a12, 4
+      e8:	1178      	l32i.n	a7, a1, 4
+      ea:	2061f2        	s32i	a15, a1, 128
+      ed:	0c58      	l32i.n	a5, a12, 0
+      ef:	ffdb41        	l32r	a4, 5c <sha1_vector+0x5c>
+      f2:	ffd981        	l32r	a8, 58 <sha1_vector+0x58>
+      f5:	404810        	ssai	24
+      f8:	1f61e2        	s32i	a14, a1, 124
+      fb:	1e61d2        	s32i	a13, a1, 120
+      fe:	01e8      	l32i.n	a14, a1, 0
+     100:	4cd8      	l32i.n	a13, a12, 16
+     102:	810ee0        	src	a0, a14, a14
+     105:	100080        	and	a0, a0, a8
+     108:	404800        	ssai	8
+     10b:	81eee0        	src	a14, a14, a14
+     10e:	10ee40        	and	a14, a14, a4
+     111:	404b10        	ssai	27
+     114:	81f550        	src	a15, a5, a5
+     117:	20ee00        	or	a14, a14, a0
+     11a:	4061e2        	s32i	a14, a1, 0x100
+     11d:	3c08      	l32i.n	a0, a12, 12
+     11f:	404810        	ssai	24
+     122:	819770        	src	a9, a7, a7
+     125:	109980        	and	a9, a9, a8
+     128:	404800        	ssai	8
+     12b:	817770        	src	a7, a7, a7
+     12e:	107740        	and	a7, a7, a4
+     131:	404200        	ssai	2
+     134:	81b220        	src	a11, a2, a2
+     137:	207790        	or	a7, a7, a9
+     13a:	3f6172        	s32i	a7, a1, 252
+     13d:	2c98      	l32i.n	a9, a12, 8
+     13f:	404b10        	ssai	27
+     142:	303900        	xor	a3, a9, a0
+     145:	102230        	and	a2, a2, a3
+     148:	302020        	xor	a2, a0, a2
+     14b:	ee2a      	add.n	a14, a14, a2
+     14d:	302b90        	xor	a2, a11, a9
+     150:	eefa      	add.n	a14, a14, a15
+     152:	ddea      	add.n	a13, a13, a14
+     154:	102520        	and	a2, a5, a2
+     157:	21e8      	l32i.n	a14, a1, 8
+     159:	302920        	xor	a2, a9, a2
+     15c:	dd6a      	add.n	a13, a13, a6
+     15e:	813dd0        	src	a3, a13, a13
+     161:	272a      	add.n	a2, a7, a2
+     163:	404810        	ssai	24
+     166:	223a      	add.n	a2, a2, a3
+     168:	81fee0        	src	a15, a14, a14
+     16b:	3138      	l32i.n	a3, a1, 12
+     16d:	10ff80        	and	a15, a15, a8
+     170:	002a      	add.n	a0, a0, a2
+     172:	404800        	ssai	8
+     175:	4128      	l32i.n	a2, a1, 16
+     177:	006a      	add.n	a0, a0, a6
+     179:	81eee0        	src	a14, a14, a14
+     17c:	10ee40        	and	a14, a14, a4
+     17f:	404200        	ssai	2
+     182:	815550        	src	a5, a5, a5
+     185:	20eef0        	or	a14, a14, a15
+     188:	404b10        	ssai	27
+     18b:	81c000        	src	a12, a0, a0
+     18e:	3e61e2        	s32i	a14, a1, 248
+     191:	404810        	ssai	24
+     194:	81a330        	src	a10, a3, a3
+     197:	404800        	ssai	8
+     19a:	10aa80        	and	a10, a10, a8
+     19d:	813330        	src	a3, a3, a3
+     1a0:	404200        	ssai	2
+     1a3:	103340        	and	a3, a3, a4
+     1a6:	2033a0        	or	a3, a3, a10
+     1a9:	3d6132        	s32i	a3, a1, 244
+     1ac:	30ab50        	xor	a10, a11, a5
+     1af:	307730        	xor	a7, a7, a3
+     1b2:	10ada0        	and	a10, a13, a10
+     1b5:	81ddd0        	src	a13, a13, a13
+     1b8:	30aba0        	xor	a10, a11, a10
+     1bb:	404b10        	ssai	27
+     1be:	aeaa      	add.n	a10, a14, a10
+     1c0:	aaca      	add.n	a10, a10, a12
+     1c2:	99aa      	add.n	a9, a9, a10
+     1c4:	30c5d0        	xor	a12, a5, a13
+     1c7:	10c0c0        	and	a12, a0, a12
+     1ca:	996a      	add.n	a9, a9, a6
+     1cc:	81f990        	src	a15, a9, a9
+     1cf:	30c5c0        	xor	a12, a5, a12
+     1d2:	404810        	ssai	24
+     1d5:	c3ca      	add.n	a12, a3, a12
+     1d7:	ccfa      	add.n	a12, a12, a15
+     1d9:	81a220        	src	a10, a2, a2
+     1dc:	10aa80        	and	a10, a10, a8
+     1df:	bbca      	add.n	a11, a11, a12
+     1e1:	404800        	ssai	8
+     1e4:	812220        	src	a2, a2, a2
+     1e7:	bb6a      	add.n	a11, a11, a6
+     1e9:	404200        	ssai	2
+     1ec:	102240        	and	a2, a2, a4
+     1ef:	2022a0        	or	a2, a2, a10
+     1f2:	810000        	src	a0, a0, a0
+     1f5:	30fd00        	xor	a15, a13, a0
+     1f8:	3c6122        	s32i	a2, a1, 240
+     1fb:	404b10        	ssai	27
+     1fe:	5128      	l32i.n	a2, a1, 20
+     200:	81cbb0        	src	a12, a11, a11
+     203:	10f9f0        	and	a15, a9, a15
+     206:	30fdf0        	xor	a15, a13, a15
+     209:	404810        	ssai	24
+     20c:	81a220        	src	a10, a2, a2
+     20f:	10aa80        	and	a10, a10, a8
+     212:	404800        	ssai	8
+     215:	812220        	src	a2, a2, a2
+     218:	102240        	and	a2, a2, a4
+     21b:	404200        	ssai	2
+     21e:	819990        	src	a9, a9, a9
+     221:	2022a0        	or	a2, a2, a10
+     224:	3b6122        	s32i	a2, a1, 236
+     227:	3c21a2        	l32i	a10, a1, 240
+     22a:	404b10        	ssai	27
+     22d:	aafa      	add.n	a10, a10, a15
+     22f:	aaca      	add.n	a10, a10, a12
+     231:	55aa      	add.n	a5, a5, a10
+     233:	61c8      	l32i.n	a12, a1, 24
+     235:	30a090        	xor	a10, a0, a9
+     238:	556a      	add.n	a5, a5, a6
+     23a:	812550        	src	a2, a5, a5
+     23d:	10aba0        	and	a10, a11, a10
+     240:	30a0a0        	xor	a10, a0, a10
+     243:	404810        	ssai	24
+     246:	81fcc0        	src	a15, a12, a12
+     249:	10ff80        	and	a15, a15, a8
+     24c:	404800        	ssai	8
+     24f:	81ccc0        	src	a12, a12, a12
+     252:	10cc40        	and	a12, a12, a4
+     255:	404200        	ssai	2
+     258:	81bbb0        	src	a11, a11, a11
+     25b:	20ccf0        	or	a12, a12, a15
+     25e:	404b10        	ssai	27
+     261:	3a61c2        	s32i	a12, a1, 232
+     264:	3b21f2        	l32i	a15, a1, 236
+     267:	30cb90        	xor	a12, a11, a9
+     26a:	ffaa      	add.n	a15, a15, a10
+     26c:	ff2a      	add.n	a15, a15, a2
+     26e:	10c5c0        	and	a12, a5, a12
+     271:	30c9c0        	xor	a12, a9, a12
+     274:	ddfa      	add.n	a13, a13, a15
+     276:	dd6a      	add.n	a13, a13, a6
+     278:	71f8      	l32i.n	a15, a1, 28
+     27a:	81add0        	src	a10, a13, a13
+     27d:	404810        	ssai	24
+     280:	812ff0        	src	a2, a15, a15
+     283:	102280        	and	a2, a2, a8
+     286:	404800        	ssai	8
+     289:	81fff0        	src	a15, a15, a15
+     28c:	10ff40        	and	a15, a15, a4
+     28f:	404200        	ssai	2
+     292:	815550        	src	a5, a5, a5
+     295:	20ff20        	or	a15, a15, a2
+     298:	404b10        	ssai	27
+     29b:	3961f2        	s32i	a15, a1, 228
+     29e:	3a2122        	l32i	a2, a1, 232
+     2a1:	30fb50        	xor	a15, a11, a5
+     2a4:	22ca      	add.n	a2, a2, a12
+     2a6:	22aa      	add.n	a2, a2, a10
+     2a8:	10fdf0        	and	a15, a13, a15
+     2ab:	30fbf0        	xor	a15, a11, a15
+     2ae:	002a      	add.n	a0, a0, a2
+     2b0:	006a      	add.n	a0, a0, a6
+     2b2:	8128      	l32i.n	a2, a1, 32
+     2b4:	81c000        	src	a12, a0, a0
+     2b7:	404810        	ssai	24
+     2ba:	81a220        	src	a10, a2, a2
+     2bd:	10aa80        	and	a10, a10, a8
+     2c0:	404800        	ssai	8
+     2c3:	812220        	src	a2, a2, a2
+     2c6:	102240        	and	a2, a2, a4
+     2c9:	404200        	ssai	2
+     2cc:	81ddd0        	src	a13, a13, a13
+     2cf:	2022a0        	or	a2, a2, a10
+     2d2:	404b10        	ssai	27
+     2d5:	386122        	s32i	a2, a1, 224
+     2d8:	3921a2        	l32i	a10, a1, 228
+     2db:	3025d0        	xor	a2, a5, a13
+     2de:	aafa      	add.n	a10, a10, a15
+     2e0:	aaca      	add.n	a10, a10, a12
+     2e2:	102020        	and	a2, a0, a2
+     2e5:	302520        	xor	a2, a5, a2
+     2e8:	99aa      	add.n	a9, a9, a10
+     2ea:	996a      	add.n	a9, a9, a6
+     2ec:	91a8      	l32i.n	a10, a1, 36
+     2ee:	81f990        	src	a15, a9, a9
+     2f1:	404810        	ssai	24
+     2f4:	81caa0        	src	a12, a10, a10
+     2f7:	10cc80        	and	a12, a12, a8
+     2fa:	404800        	ssai	8
+     2fd:	81aaa0        	src	a10, a10, a10
+     300:	10aa40        	and	a10, a10, a4
+     303:	404200        	ssai	2
+     306:	810000        	src	a0, a0, a0
+     309:	20aac0        	or	a10, a10, a12
+     30c:	3761a2        	s32i	a10, a1, 220
+     30f:	3821c2        	l32i	a12, a1, 224
+     312:	404b10        	ssai	27
+     315:	cc2a      	add.n	a12, a12, a2
+     317:	a128      	l32i.n	a2, a1, 40
+     319:	ccfa      	add.n	a12, a12, a15
+     31b:	bbca      	add.n	a11, a11, a12
+     31d:	30fd00        	xor	a15, a13, a0
+     320:	10f9f0        	and	a15, a9, a15
+     323:	bb6a      	add.n	a11, a11, a6
+     325:	81cbb0        	src	a12, a11, a11
+     328:	30fdf0        	xor	a15, a13, a15
+     32b:	404810        	ssai	24
+     32e:	81a220        	src	a10, a2, a2
+     331:	10aa80        	and	a10, a10, a8
+     334:	404800        	ssai	8
+     337:	812220        	src	a2, a2, a2
+     33a:	102240        	and	a2, a2, a4
+     33d:	404200        	ssai	2
+     340:	819990        	src	a9, a9, a9
+     343:	2022a0        	or	a2, a2, a10
+     346:	366122        	s32i	a2, a1, 216
+     349:	3721a2        	l32i	a10, a1, 220
+     34c:	404b10        	ssai	27
+     34f:	aafa      	add.n	a10, a10, a15
+     351:	aaca      	add.n	a10, a10, a12
+     353:	55aa      	add.n	a5, a5, a10
+     355:	b1c8      	l32i.n	a12, a1, 44
+     357:	30a090        	xor	a10, a0, a9
+     35a:	556a      	add.n	a5, a5, a6
+     35c:	812550        	src	a2, a5, a5
+     35f:	10aba0        	and	a10, a11, a10
+     362:	30a0a0        	xor	a10, a0, a10
+     365:	404810        	ssai	24
+     368:	81fcc0        	src	a15, a12, a12
+     36b:	10ff80        	and	a15, a15, a8
+     36e:	404800        	ssai	8
+     371:	81ccc0        	src	a12, a12, a12
+     374:	10cc40        	and	a12, a12, a4
+     377:	404200        	ssai	2
+     37a:	81bbb0        	src	a11, a11, a11
+     37d:	20ccf0        	or	a12, a12, a15
+     380:	404b10        	ssai	27
+     383:	3561c2        	s32i	a12, a1, 212
+     386:	3621f2        	l32i	a15, a1, 216
+     389:	30cb90        	xor	a12, a11, a9
+     38c:	ffaa      	add.n	a15, a15, a10
+     38e:	ff2a      	add.n	a15, a15, a2
+     390:	10c5c0        	and	a12, a5, a12
+     393:	30c9c0        	xor	a12, a9, a12
+     396:	ddfa      	add.n	a13, a13, a15
+     398:	dd6a      	add.n	a13, a13, a6
+     39a:	c1f8      	l32i.n	a15, a1, 48
+     39c:	81add0        	src	a10, a13, a13
+     39f:	404810        	ssai	24
+     3a2:	812ff0        	src	a2, a15, a15
+     3a5:	102280        	and	a2, a2, a8
+     3a8:	404800        	ssai	8
+     3ab:	81fff0        	src	a15, a15, a15
+     3ae:	10ff40        	and	a15, a15, a4
+     3b1:	404200        	ssai	2
+     3b4:	815550        	src	a5, a5, a5
+     3b7:	20ff20        	or	a15, a15, a2
+     3ba:	404b10        	ssai	27
+     3bd:	3461f2        	s32i	a15, a1, 208
+     3c0:	352122        	l32i	a2, a1, 212
+     3c3:	30fb50        	xor	a15, a11, a5
+     3c6:	22ca      	add.n	a2, a2, a12
+     3c8:	22aa      	add.n	a2, a2, a10
+     3ca:	10fdf0        	and	a15, a13, a15
+     3cd:	30fbf0        	xor	a15, a11, a15
+     3d0:	002a      	add.n	a0, a0, a2
+     3d2:	006a      	add.n	a0, a0, a6
+     3d4:	d128      	l32i.n	a2, a1, 52
+     3d6:	81c000        	src	a12, a0, a0
+     3d9:	404810        	ssai	24
+     3dc:	81a220        	src	a10, a2, a2
+     3df:	10aa80        	and	a10, a10, a8
+     3e2:	404800        	ssai	8
+     3e5:	812220        	src	a2, a2, a2
+     3e8:	102240        	and	a2, a2, a4
+     3eb:	404200        	ssai	2
+     3ee:	81ddd0        	src	a13, a13, a13
+     3f1:	2022a0        	or	a2, a2, a10
+     3f4:	404b10        	ssai	27
+     3f7:	336122        	s32i	a2, a1, 204
+     3fa:	3421a2        	l32i	a10, a1, 208
+     3fd:	3025d0        	xor	a2, a5, a13
+     400:	aafa      	add.n	a10, a10, a15
+     402:	aaca      	add.n	a10, a10, a12
+     404:	102020        	and	a2, a0, a2
+     407:	302520        	xor	a2, a5, a2
+     40a:	99aa      	add.n	a9, a9, a10
+     40c:	996a      	add.n	a9, a9, a6
+     40e:	e1a8      	l32i.n	a10, a1, 56
+     410:	81f990        	src	a15, a9, a9
+     413:	404810        	ssai	24
+     416:	81caa0        	src	a12, a10, a10
+     419:	10cc80        	and	a12, a12, a8
+     41c:	404800        	ssai	8
+     41f:	81aaa0        	src	a10, a10, a10
+     422:	10aa40        	and	a10, a10, a4
+     425:	404200        	ssai	2
+     428:	810000        	src	a0, a0, a0
+     42b:	20aac0        	or	a10, a10, a12
+     42e:	3261a2        	s32i	a10, a1, 200
+     431:	3321c2        	l32i	a12, a1, 204
+     434:	404b10        	ssai	27
+     437:	cc2a      	add.n	a12, a12, a2
+     439:	ccfa      	add.n	a12, a12, a15
+     43b:	bbca      	add.n	a11, a11, a12
+     43d:	f1f8      	l32i.n	a15, a1, 60
+     43f:	30cd00        	xor	a12, a13, a0
+     442:	bb6a      	add.n	a11, a11, a6
+     444:	81abb0        	src	a10, a11, a11
+     447:	10c9c0        	and	a12, a9, a12
+     44a:	30cdc0        	xor	a12, a13, a12
+     44d:	404810        	ssai	24
+     450:	812ff0        	src	a2, a15, a15
+     453:	102280        	and	a2, a2, a8
+     456:	404800        	ssai	8
+     459:	322182        	l32i	a8, a1, 200
+     45c:	81fff0        	src	a15, a15, a15
+     45f:	10ff40        	and	a15, a15, a4
+     462:	404200        	ssai	2
+     465:	88ca      	add.n	a8, a8, a12
+     467:	819990        	src	a9, a9, a9
+     46a:	20ff20        	or	a15, a15, a2
+     46d:	404b10        	ssai	27
+     470:	3161f2        	s32i	a15, a1, 196
+     473:	88aa      	add.n	a8, a8, a10
+     475:	4021c2        	l32i	a12, a1, 0x100
+     478:	3221a2        	l32i	a10, a1, 200
+     47b:	302090        	xor	a2, a0, a9
+     47e:	558a      	add.n	a5, a5, a8
+     480:	30cce0        	xor	a12, a12, a14
+     483:	556a      	add.n	a5, a5, a6
+     485:	372182        	l32i	a8, a1, 220
+     488:	102b20        	and	a2, a11, a2
+     48b:	302020        	xor	a2, a0, a2
+     48e:	ff2a      	add.n	a15, a15, a2
+     490:	3088a0        	xor	a8, a8, a10
+     493:	812550        	src	a2, a5, a5
+     496:	307780        	xor	a7, a7, a8
+     499:	404f10        	ssai	31
+     49c:	ff2a      	add.n	a15, a15, a2
+     49e:	ddfa      	add.n	a13, a13, a15
+     4a0:	332122        	l32i	a2, a1, 204
+     4a3:	3821f2        	l32i	a15, a1, 224
+     4a6:	dd6a      	add.n	a13, a13, a6
+     4a8:	30ff20        	xor	a15, a15, a2
+     4ab:	30ccf0        	xor	a12, a12, a15
+     4ae:	3621f2        	l32i	a15, a1, 216
+     4b1:	81ccc0        	src	a12, a12, a12
+     4b4:	3061c2        	s32i	a12, a1, 192
+     4b7:	404200        	ssai	2
+     4ba:	81bbb0        	src	a11, a11, a11
+     4bd:	304b90        	xor	a4, a11, a9
+     4c0:	404b10        	ssai	27
+     4c3:	104540        	and	a4, a5, a4
+     4c6:	304940        	xor	a4, a9, a4
+     4c9:	2c4a      	add.n	a2, a12, a4
+     4cb:	814dd0        	src	a4, a13, a13
+     4ce:	224a      	add.n	a2, a2, a4
+     4d0:	404f10        	ssai	31
+     4d3:	352142        	l32i	a4, a1, 212
+     4d6:	002a      	add.n	a0, a0, a2
+     4d8:	817770        	src	a7, a7, a7
+     4db:	2f6172        	s32i	a7, a1, 188
+     4de:	006a      	add.n	a0, a0, a6
+     4e0:	404200        	ssai	2
+     4e3:	312122        	l32i	a2, a1, 196
+     4e6:	815550        	src	a5, a5, a5
+     4e9:	404b10        	ssai	27
+     4ec:	30ff20        	xor	a15, a15, a2
+     4ef:	30cb50        	xor	a12, a11, a5
+     4f2:	302122        	l32i	a2, a1, 192
+     4f5:	10cdc0        	and	a12, a13, a12
+     4f8:	30cbc0        	xor	a12, a11, a12
+     4fb:	a7ca      	add.n	a10, a7, a12
+     4fd:	302240        	xor	a2, a2, a4
+     500:	81c000        	src	a12, a0, a0
+     503:	404f10        	ssai	31
+     506:	aaca      	add.n	a10, a10, a12
+     508:	99aa      	add.n	a9, a9, a10
+     50a:	3c21c2        	l32i	a12, a1, 240
+     50d:	2f21a2        	l32i	a10, a1, 188
+     510:	996a      	add.n	a9, a9, a6
+     512:	30eec0        	xor	a14, a14, a12
+     515:	30eef0        	xor	a14, a14, a15
+     518:	81eee0        	src	a14, a14, a14
+     51b:	2e61e2        	s32i	a14, a1, 184
+     51e:	404200        	ssai	2
+     521:	81ddd0        	src	a13, a13, a13
+     524:	30f5d0        	xor	a15, a5, a13
+     527:	404b10        	ssai	27
+     52a:	10f0f0        	and	a15, a0, a15
+     52d:	30f5f0        	xor	a15, a5, a15
+     530:	eefa      	add.n	a14, a14, a15
+     532:	81f990        	src	a15, a9, a9
+     535:	eefa      	add.n	a14, a14, a15
+     537:	404f10        	ssai	31
+     53a:	3421f2        	l32i	a15, a1, 208
+     53d:	bbea      	add.n	a11, a11, a14
+     53f:	bb6a      	add.n	a11, a11, a6
+     541:	3b21e2        	l32i	a14, a1, 236
+     544:	30aaf0        	xor	a10, a10, a15
+     547:	3033e0        	xor	a3, a3, a14
+     54a:	302230        	xor	a2, a2, a3
+     54d:	fec531        	l32r	a3, 64 <sha1_vector+0x64>
+     550:	812220        	src	a2, a2, a2
+     553:	2d6122        	s32i	a2, a1, 180
+     556:	404200        	ssai	2
+     559:	810000        	src	a0, a0, a0
+     55c:	308d00        	xor	a8, a13, a0
+     55f:	404b10        	ssai	27
+     562:	108980        	and	a8, a9, a8
+     565:	308d80        	xor	a8, a13, a8
+     568:	728a      	add.n	a7, a2, a8
+     56a:	818bb0        	src	a8, a11, a11
+     56d:	778a      	add.n	a7, a7, a8
+     56f:	404f10        	ssai	31
+     572:	322182        	l32i	a8, a1, 200
+     575:	557a      	add.n	a5, a5, a7
+     577:	556a      	add.n	a5, a5, a6
+     579:	3a2172        	l32i	a7, a1, 232
+     57c:	2d2162        	l32i	a6, a1, 180
+     57f:	30cc70        	xor	a12, a12, a7
+     582:	30aac0        	xor	a10, a10, a12
+     585:	306680        	xor	a6, a6, a8
+     588:	2e21c2        	l32i	a12, a1, 184
+     58b:	382182        	l32i	a8, a1, 224
+     58e:	81aaa0        	src	a10, a10, a10
+     591:	2c61a2        	s32i	a10, a1, 176
+     594:	404200        	ssai	2
+     597:	307780        	xor	a7, a7, a8
+     59a:	819990        	src	a9, a9, a9
+     59d:	332182        	l32i	a8, a1, 204
+     5a0:	306670        	xor	a6, a6, a7
+     5a3:	3029b0        	xor	a2, a9, a11
+     5a6:	302020        	xor	a2, a0, a2
+     5a9:	404b10        	ssai	27
+     5ac:	fa2a      	add.n	a15, a10, a2
+     5ae:	812550        	src	a2, a5, a5
+     5b1:	ff2a      	add.n	a15, a15, a2
+     5b3:	ddfa      	add.n	a13, a13, a15
+     5b5:	3321f2        	l32i	a15, a1, 204
+     5b8:	404f10        	ssai	31
+     5bb:	30ccf0        	xor	a12, a12, a15
+     5be:	3921f2        	l32i	a15, a1, 228
+     5c1:	dd3a      	add.n	a13, a13, a3
+     5c3:	30eef0        	xor	a14, a14, a15
+     5c6:	30cce0        	xor	a12, a12, a14
+     5c9:	3121f2        	l32i	a15, a1, 196
+     5cc:	2c21e2        	l32i	a14, a1, 176
+     5cf:	81ccc0        	src	a12, a12, a12
+     5d2:	2b61c2        	s32i	a12, a1, 172
+     5d5:	404200        	ssai	2
+     5d8:	30eef0        	xor	a14, a14, a15
+     5db:	81bbb0        	src	a11, a11, a11
+     5de:	3921f2        	l32i	a15, a1, 228
+     5e1:	304b50        	xor	a4, a11, a5
+     5e4:	404b10        	ssai	27
+     5e7:	304940        	xor	a4, a9, a4
+     5ea:	2c4a      	add.n	a2, a12, a4
+     5ec:	814dd0        	src	a4, a13, a13
+     5ef:	224a      	add.n	a2, a2, a4
+     5f1:	404f10        	ssai	31
+     5f4:	2b2142        	l32i	a4, a1, 172
+     5f7:	816660        	src	a6, a6, a6
+     5fa:	002a      	add.n	a0, a0, a2
+     5fc:	003a      	add.n	a0, a0, a3
+     5fe:	2a6162        	s32i	a6, a1, 168
+     601:	404200        	ssai	2
+     604:	372122        	l32i	a2, a1, 220
+     607:	815550        	src	a5, a5, a5
+     60a:	404b10        	ssai	27
+     60d:	30c5d0        	xor	a12, a5, a13
+     610:	30ff20        	xor	a15, a15, a2
+     613:	30eef0        	xor	a14, a14, a15
+     616:	30cbc0        	xor	a12, a11, a12
+     619:	302122        	l32i	a2, a1, 192
+     61c:	a6ca      	add.n	a10, a6, a12
+     61e:	362162        	l32i	a6, a1, 216
+     621:	302240        	xor	a2, a2, a4
+     624:	81c000        	src	a12, a0, a0
+     627:	382142        	l32i	a4, a1, 224
+     62a:	404f10        	ssai	31
+     62d:	aaca      	add.n	a10, a10, a12
+     62f:	99aa      	add.n	a9, a9, a10
+     631:	81eee0        	src	a14, a14, a14
+     634:	2f21a2        	l32i	a10, a1, 188
+     637:	993a      	add.n	a9, a9, a3
+     639:	404200        	ssai	2
+     63c:	2961e2        	s32i	a14, a1, 164
+     63f:	304460        	xor	a4, a4, a6
+     642:	302240        	xor	a2, a2, a4
+     645:	2921c2        	l32i	a12, a1, 164
+     648:	81ddd0        	src	a13, a13, a13
+     64b:	30ed00        	xor	a14, a13, a0
+     64e:	404b10        	ssai	27
+     651:	30e5e0        	xor	a14, a5, a14
+     654:	ccea      	add.n	a12, a12, a14
+     656:	81e990        	src	a14, a9, a9
+     659:	ccea      	add.n	a12, a12, a14
+     65b:	404f10        	ssai	31
+     65e:	3521e2        	l32i	a14, a1, 212
+     661:	bbca      	add.n	a11, a11, a12
+     663:	812220        	src	a2, a2, a2
+     666:	286122        	s32i	a2, a1, 160
+     669:	bb3a      	add.n	a11, a11, a3
+     66b:	404200        	ssai	2
+     66e:	2a21c2        	l32i	a12, a1, 168
+     671:	810000        	src	a0, a0, a0
+     674:	404b10        	ssai	27
+     677:	30aac0        	xor	a10, a10, a12
+     67a:	307090        	xor	a7, a0, a9
+     67d:	307d70        	xor	a7, a13, a7
+     680:	3721c2        	l32i	a12, a1, 220
+     683:	627a      	add.n	a6, a2, a7
+     685:	817bb0        	src	a7, a11, a11
+     688:	30cce0        	xor	a12, a12, a14
+     68b:	404f10        	ssai	31
+     68e:	30aac0        	xor	a10, a10, a12
+     691:	667a      	add.n	a6, a6, a7
+     693:	2e21c2        	l32i	a12, a1, 184
+     696:	282172        	l32i	a7, a1, 160
+     699:	556a      	add.n	a5, a5, a6
+     69b:	553a      	add.n	a5, a5, a3
+     69d:	2d2162        	l32i	a6, a1, 180
+     6a0:	81aaa0        	src	a10, a10, a10
+     6a3:	2761a2        	s32i	a10, a1, 156
+     6a6:	404200        	ssai	2
+     6a9:	819990        	src	a9, a9, a9
+     6ac:	306670        	xor	a6, a6, a7
+     6af:	404b10        	ssai	27
+     6b2:	352172        	l32i	a7, a1, 212
+     6b5:	30f9b0        	xor	a15, a9, a11
+     6b8:	30f0f0        	xor	a15, a0, a15
+     6bb:	307780        	xor	a7, a7, a8
+     6be:	eafa      	add.n	a14, a10, a15
+     6c0:	2f2182        	l32i	a8, a1, 188
+     6c3:	306670        	xor	a6, a6, a7
+     6c6:	81f550        	src	a15, a5, a5
+     6c9:	eefa      	add.n	a14, a14, a15
+     6cb:	404f10        	ssai	31
+     6ce:	ddea      	add.n	a13, a13, a14
+     6d0:	2921e2        	l32i	a14, a1, 164
+     6d3:	3421f2        	l32i	a15, a1, 208
+     6d6:	30cce0        	xor	a12, a12, a14
+     6d9:	3621e2        	l32i	a14, a1, 216
+     6dc:	dd3a      	add.n	a13, a13, a3
+     6de:	30eef0        	xor	a14, a14, a15
+     6e1:	30cce0        	xor	a12, a12, a14
+     6e4:	2721f2        	l32i	a15, a1, 156
+     6e7:	2c21e2        	l32i	a14, a1, 176
+     6ea:	81ccc0        	src	a12, a12, a12
+     6ed:	2661c2        	s32i	a12, a1, 152
+     6f0:	404200        	ssai	2
+     6f3:	30eef0        	xor	a14, a14, a15
+     6f6:	81bbb0        	src	a11, a11, a11
+     6f9:	3421f2        	l32i	a15, a1, 208
+     6fc:	304b50        	xor	a4, a11, a5
+     6ff:	404b10        	ssai	27
+     702:	304940        	xor	a4, a9, a4
+     705:	2c4a      	add.n	a2, a12, a4
+     707:	814dd0        	src	a4, a13, a13
+     70a:	224a      	add.n	a2, a2, a4
+     70c:	404f10        	ssai	31
+     70f:	262142        	l32i	a4, a1, 152
+     712:	816660        	src	a6, a6, a6
+     715:	002a      	add.n	a0, a0, a2
+     717:	003a      	add.n	a0, a0, a3
+     719:	256162        	s32i	a6, a1, 148
+     71c:	404200        	ssai	2
+     71f:	322122        	l32i	a2, a1, 200
+     722:	815550        	src	a5, a5, a5
+     725:	404b10        	ssai	27
+     728:	30c5d0        	xor	a12, a5, a13
+     72b:	30ff20        	xor	a15, a15, a2
+     72e:	30eef0        	xor	a14, a14, a15
+     731:	30cbc0        	xor	a12, a11, a12
+     734:	2b2122        	l32i	a2, a1, 172
+     737:	a6ca      	add.n	a10, a6, a12
+     739:	312162        	l32i	a6, a1, 196
+     73c:	302240        	xor	a2, a2, a4
+     73f:	81c000        	src	a12, a0, a0
+     742:	332142        	l32i	a4, a1, 204
+     745:	404f10        	ssai	31
+     748:	aaca      	add.n	a10, a10, a12
+     74a:	99aa      	add.n	a9, a9, a10
+     74c:	81eee0        	src	a14, a14, a14
+     74f:	3021a2        	l32i	a10, a1, 192
+     752:	993a      	add.n	a9, a9, a3
+     754:	404200        	ssai	2
+     757:	2261e2        	s32i	a14, a1, 136
+     75a:	304460        	xor	a4, a4, a6
+     75d:	302240        	xor	a2, a2, a4
+     760:	2221c2        	l32i	a12, a1, 136
+     763:	81ddd0        	src	a13, a13, a13
+     766:	30ed00        	xor	a14, a13, a0
+     769:	404b10        	ssai	27
+     76c:	30e5e0        	xor	a14, a5, a14
+     76f:	ccea      	add.n	a12, a12, a14
+     771:	81e990        	src	a14, a9, a9
+     774:	ccea      	add.n	a12, a12, a14
+     776:	404f10        	ssai	31
+     779:	2521e2        	l32i	a14, a1, 148
+     77c:	bbca      	add.n	a11, a11, a12
+     77e:	812220        	src	a2, a2, a2
+     781:	236122        	s32i	a2, a1, 140
+     784:	bb3a      	add.n	a11, a11, a3
+     786:	404200        	ssai	2
+     789:	2a21c2        	l32i	a12, a1, 168
+     78c:	810000        	src	a0, a0, a0
+     78f:	404b10        	ssai	27
+     792:	30cce0        	xor	a12, a12, a14
+     795:	307090        	xor	a7, a0, a9
+     798:	307d70        	xor	a7, a13, a7
+     79b:	3221e2        	l32i	a14, a1, 200
+     79e:	627a      	add.n	a6, a2, a7
+     7a0:	817bb0        	src	a7, a11, a11
+     7a3:	30aae0        	xor	a10, a10, a14
+     7a6:	404f10        	ssai	31
+     7a9:	667a      	add.n	a6, a6, a7
+     7ab:	30aac0        	xor	a10, a10, a12
+     7ae:	282172        	l32i	a7, a1, 160
+     7b1:	556a      	add.n	a5, a5, a6
+     7b3:	2221c2        	l32i	a12, a1, 136
+     7b6:	302162        	l32i	a6, a1, 192
+     7b9:	553a      	add.n	a5, a5, a3
+     7bb:	81aaa0        	src	a10, a10, a10
+     7be:	2461a2        	s32i	a10, a1, 144
+     7c1:	404200        	ssai	2
+     7c4:	819990        	src	a9, a9, a9
+     7c7:	30f9b0        	xor	a15, a9, a11
+     7ca:	404b10        	ssai	27
+     7cd:	30f0f0        	xor	a15, a0, a15
+     7d0:	eafa      	add.n	a14, a10, a15
+     7d2:	2921a2        	l32i	a10, a1, 164
+     7d5:	81f550        	src	a15, a5, a5
+     7d8:	eefa      	add.n	a14, a14, a15
+     7da:	404f10        	ssai	31
+     7dd:	2521f2        	l32i	a15, a1, 148
+     7e0:	30aac0        	xor	a10, a10, a12
+     7e3:	ddea      	add.n	a13, a13, a14
+     7e5:	3121c2        	l32i	a12, a1, 196
+     7e8:	dd3a      	add.n	a13, a13, a3
+     7ea:	3088c0        	xor	a8, a8, a12
+     7ed:	3088a0        	xor	a8, a8, a10
+     7f0:	2321a2        	l32i	a10, a1, 140
+     7f3:	818880        	src	a8, a8, a8
+     7f6:	416182        	s32i	a8, a1, 0x104
+     7f9:	404200        	ssai	2
+     7fc:	3077a0        	xor	a7, a7, a10
+     7ff:	81bbb0        	src	a11, a11, a11
+     802:	2e21a2        	l32i	a10, a1, 184
+     805:	302b50        	xor	a2, a11, a5
+     808:	404b10        	ssai	27
+     80b:	814dd0        	src	a4, a13, a13
+     80e:	302920        	xor	a2, a9, a2
+     811:	404f10        	ssai	31
+     814:	3066a0        	xor	a6, a6, a10
+     817:	282a      	add.n	a2, a8, a2
+     819:	224a      	add.n	a2, a2, a4
+     81b:	306670        	xor	a6, a6, a7
+     81e:	2f2142        	l32i	a4, a1, 188
+     821:	272172        	l32i	a7, a1, 156
+     824:	002a      	add.n	a0, a0, a2
+     826:	816660        	src	a6, a6, a6
+     829:	136162        	s32i	a6, a1, 76
+     82c:	30f6f0        	xor	a15, a6, a15
+     82f:	2e2122        	l32i	a2, a1, 184
+     832:	404200        	ssai	2
+     835:	003a      	add.n	a0, a0, a3
+     837:	815550        	src	a5, a5, a5
+     83a:	404b10        	ssai	27
+     83d:	30a5d0        	xor	a10, a5, a13
+     840:	30aba0        	xor	a10, a11, a10
+     843:	81c000        	src	a12, a0, a0
+     846:	a6aa      	add.n	a10, a6, a10
+     848:	aaca      	add.n	a10, a10, a12
+     84a:	99aa      	add.n	a9, a9, a10
+     84c:	2421a2        	l32i	a10, a1, 144
+     84f:	404f10        	ssai	31
+     852:	3077a0        	xor	a7, a7, a10
+     855:	2d21a2        	l32i	a10, a1, 180
+     858:	993a      	add.n	a9, a9, a3
+     85a:	3044a0        	xor	a4, a4, a10
+     85d:	304470        	xor	a4, a4, a7
+     860:	262172        	l32i	a7, a1, 152
+     863:	814440        	src	a4, a4, a4
+     866:	146142        	s32i	a4, a1, 80
+     869:	404200        	ssai	2
+     86c:	307780        	xor	a7, a7, a8
+     86f:	81ddd0        	src	a13, a13, a13
+     872:	2c2182        	l32i	a8, a1, 176
+     875:	30cd00        	xor	a12, a13, a0
+     878:	404b10        	ssai	27
+     87b:	81e990        	src	a14, a9, a9
+     87e:	30c5c0        	xor	a12, a5, a12
+     881:	404f10        	ssai	31
+     884:	c4ca      	add.n	a12, a4, a12
+     886:	302280        	xor	a2, a2, a8
+     889:	302270        	xor	a2, a2, a7
+     88c:	ccea      	add.n	a12, a12, a14
+     88e:	bbca      	add.n	a11, a11, a12
+     890:	812220        	src	a2, a2, a2
+     893:	156122        	s32i	a2, a1, 84
+     896:	bb3a      	add.n	a11, a11, a3
+     898:	2321c2        	l32i	a12, a1, 140
+     89b:	404200        	ssai	2
+     89e:	810000        	src	a0, a0, a0
+     8a1:	30c2c0        	xor	a12, a2, a12
+     8a4:	307090        	xor	a7, a0, a9
+     8a7:	404b10        	ssai	27
+     8aa:	818bb0        	src	a8, a11, a11
+     8ad:	307d70        	xor	a7, a13, a7
+     8b0:	727a      	add.n	a7, a2, a7
+     8b2:	404f10        	ssai	31
+     8b5:	778a      	add.n	a7, a7, a8
+     8b7:	2b2182        	l32i	a8, a1, 172
+     8ba:	557a      	add.n	a5, a5, a7
+     8bc:	553a      	add.n	a5, a5, a3
+     8be:	307a80        	xor	a7, a10, a8
+     8c1:	2a2182        	l32i	a8, a1, 168
+     8c4:	30ff70        	xor	a15, a15, a7
+     8c7:	81fff0        	src	a15, a15, a15
+     8ca:	1761f2        	s32i	a15, a1, 92
+     8cd:	404200        	ssai	2
+     8d0:	819990        	src	a9, a9, a9
+     8d3:	30e9b0        	xor	a14, a9, a11
+     8d6:	404b10        	ssai	27
+     8d9:	817550        	src	a7, a5, a5
+     8dc:	30e0e0        	xor	a14, a0, a14
+     8df:	efea      	add.n	a14, a15, a14
+     8e1:	404f10        	ssai	31
+     8e4:	ee7a      	add.n	a14, a14, a7
+     8e6:	2c2172        	l32i	a7, a1, 176
+     8e9:	ddea      	add.n	a13, a13, a14
+     8eb:	dd3a      	add.n	a13, a13, a3
+     8ed:	2221e2        	l32i	a14, a1, 136
+     8f0:	307780        	xor	a7, a7, a8
+     8f3:	30e4e0        	xor	a14, a4, a14
+     8f6:	30ee70        	xor	a14, a14, a7
+     8f9:	81eee0        	src	a14, a14, a14
+     8fc:	1961e2        	s32i	a14, a1, 100
+     8ff:	404200        	ssai	2
+     902:	81bbb0        	src	a11, a11, a11
+     905:	307b50        	xor	a7, a11, a5
+     908:	404b10        	ssai	27
+     90b:	818dd0        	src	a8, a13, a13
+     90e:	307970        	xor	a7, a9, a7
+     911:	404f10        	ssai	31
+     914:	7e7a      	add.n	a7, a14, a7
+     916:	778a      	add.n	a7, a7, a8
+     918:	007a      	add.n	a0, a0, a7
+     91a:	292182        	l32i	a8, a1, 164
+     91d:	2b2172        	l32i	a7, a1, 172
+     920:	003a      	add.n	a0, a0, a3
+     922:	307780        	xor	a7, a7, a8
+     925:	282182        	l32i	a8, a1, 160
+     928:	30cc70        	xor	a12, a12, a7
+     92b:	81ccc0        	src	a12, a12, a12
+     92e:	1a61c2        	s32i	a12, a1, 104
+     931:	404200        	ssai	2
+     934:	815550        	src	a5, a5, a5
+     937:	30a5d0        	xor	a10, a5, a13
+     93a:	404b10        	ssai	27
+     93d:	817000        	src	a7, a0, a0
+     940:	30aba0        	xor	a10, a11, a10
+     943:	acaa      	add.n	a10, a12, a10
+     945:	404f10        	ssai	31
+     948:	aa7a      	add.n	a10, a10, a7
+     94a:	2a2172        	l32i	a7, a1, 168
+     94d:	99aa      	add.n	a9, a9, a10
+     94f:	993a      	add.n	a9, a9, a3
+     951:	2421a2        	l32i	a10, a1, 144
+     954:	307780        	xor	a7, a7, a8
+     957:	412182        	l32i	a8, a1, 0x104
+     95a:	30afa0        	xor	a10, a15, a10
+     95d:	30aa70        	xor	a10, a10, a7
+     960:	308e80        	xor	a8, a14, a8
+     963:	81aaa0        	src	a10, a10, a10
+     966:	1b61a2        	s32i	a10, a1, 108
+     969:	404200        	ssai	2
+     96c:	81ddd0        	src	a13, a13, a13
+     96f:	303d00        	xor	a3, a13, a0
+     972:	404b10        	ssai	27
+     975:	817990        	src	a7, a9, a9
+     978:	303530        	xor	a3, a5, a3
+     97b:	3a3a      	add.n	a3, a10, a3
+     97d:	337a      	add.n	a3, a3, a7
+     97f:	bb3a      	add.n	a11, a11, a3
+     981:	272172        	l32i	a7, a1, 156
+     984:	292132        	l32i	a3, a1, 164
+     987:	404f10        	ssai	31
+     98a:	303370        	xor	a3, a3, a7
+     98d:	fdb671        	l32r	a7, 68 <sha1_vector+0x68>
+     990:	308830        	xor	a8, a8, a3
+     993:	818880        	src	a8, a8, a8
+     996:	bb7a      	add.n	a11, a11, a7
+     998:	426182        	s32i	a8, a1, 0x108
+     99b:	404200        	ssai	2
+     99e:	810000        	src	a0, a0, a0
+     9a1:	303090        	xor	a3, a0, a9
+     9a4:	303d30        	xor	a3, a13, a3
+     9a7:	404b10        	ssai	27
+     9aa:	883a      	add.n	a8, a8, a3
+     9ac:	813bb0        	src	a3, a11, a11
+     9af:	404f10        	ssai	31
+     9b2:	883a      	add.n	a8, a8, a3
+     9b4:	558a      	add.n	a5, a5, a8
+     9b6:	557a      	add.n	a5, a5, a7
+     9b8:	262182        	l32i	a8, a1, 152
+     9bb:	282172        	l32i	a7, a1, 160
+     9be:	3036c0        	xor	a3, a6, a12
+     9c1:	307780        	xor	a7, a7, a8
+     9c4:	303370        	xor	a3, a3, a7
+     9c7:	813330        	src	a3, a3, a3
+     9ca:	404200        	ssai	2
+     9cd:	456132        	s32i	a3, a1, 0x114
+     9d0:	819990        	src	a9, a9, a9
+     9d3:	404b10        	ssai	27
+     9d6:	1089b0        	and	a8, a9, a11
+     9d9:	2079b0        	or	a7, a9, a11
+     9dc:	107070        	and	a7, a0, a7
+     9df:	207780        	or	a7, a7, a8
+     9e2:	337a      	add.n	a3, a3, a7
+     9e4:	252182        	l32i	a8, a1, 148
+     9e7:	817550        	src	a7, a5, a5
+     9ea:	404f10        	ssai	31
+     9ed:	337a      	add.n	a3, a3, a7
+     9ef:	dd3a      	add.n	a13, a13, a3
+     9f1:	272172        	l32i	a7, a1, 156
+     9f4:	3034a0        	xor	a3, a4, a10
+     9f7:	307780        	xor	a7, a7, a8
+     9fa:	303370        	xor	a3, a3, a7
+     9fd:	813330        	src	a3, a3, a3
+     a00:	404200        	ssai	2
+     a03:	436132        	s32i	a3, a1, 0x10c
+     a06:	432132        	l32i	a3, a1, 0x10c
+     a09:	81bbb0        	src	a11, a11, a11
+     a0c:	4461b2        	s32i	a11, a1, 0x110
+     a0f:	404b10        	ssai	27
+     a12:	107b50        	and	a7, a11, a5
+     a15:	208b50        	or	a8, a11, a5
+     a18:	108980        	and	a8, a9, a8
+     a1b:	207780        	or	a7, a7, a8
+     a1e:	337a      	add.n	a3, a3, a7
+     a20:	422182        	l32i	a8, a1, 0x108
+     a23:	fd9271        	l32r	a7, 6c <sha1_vector+0x6c>
+     a26:	308280        	xor	a8, a2, a8
+     a29:	dd7a      	add.n	a13, a13, a7
+     a2b:	817dd0        	src	a7, a13, a13
+     a2e:	337a      	add.n	a3, a3, a7
+     a30:	003a      	add.n	a0, a0, a3
+     a32:	222172        	l32i	a7, a1, 136
+     a35:	262132        	l32i	a3, a1, 152
+     a38:	404f10        	ssai	31
+     a3b:	303370        	xor	a3, a3, a7
+     a3e:	308830        	xor	a8, a8, a3
+     a41:	452172        	l32i	a7, a1, 0x114
+     a44:	fd8b31        	l32r	a3, 70 <sha1_vector+0x70>
+     a47:	818880        	src	a8, a8, a8
+     a4a:	307f70        	xor	a7, a15, a7
+     a4d:	404200        	ssai	2
+     a50:	003a      	add.n	a0, a0, a3
+     a52:	815550        	src	a5, a5, a5
+     a55:	166152        	s32i	a5, a1, 88
+     a58:	126102        	s32i	a0, a1, 72
+     a5b:	2035d0        	or	a3, a5, a13
+     a5e:	404b10        	ssai	27
+     a61:	10bb30        	and	a11, a11, a3
+     a64:	1035d0        	and	a3, a5, a13
+     a67:	20bb30        	or	a11, a11, a3
+     a6a:	813000        	src	a3, a0, a0
+     a6d:	b8ba      	add.n	a11, a8, a11
+     a6f:	bb3a      	add.n	a11, a11, a3
+     a71:	99ba      	add.n	a9, a9, a11
+     a73:	232132        	l32i	a3, a1, 140
+     a76:	2521b2        	l32i	a11, a1, 148
+     a79:	404f10        	ssai	31
+     a7c:	30bb30        	xor	a11, a11, a3
+     a7f:	3077b0        	xor	a7, a7, a11
+     a82:	fd7c31        	l32r	a3, 74 <sha1_vector+0x74>
+     a85:	817770        	src	a7, a7, a7
+     a88:	404200        	ssai	2
+     a8b:	993a      	add.n	a9, a9, a3
+     a8d:	116192        	s32i	a9, a1, 68
+     a90:	81ddd0        	src	a13, a13, a13
+     a93:	1861d2        	s32i	a13, a1, 96
+     a96:	10bd00        	and	a11, a13, a0
+     a99:	404b10        	ssai	27
+     a9c:	819990        	src	a9, a9, a9
+     a9f:	20dd00        	or	a13, a13, a0
+     aa2:	404f10        	ssai	31
+     aa5:	442102        	l32i	a0, a1, 0x110
+     aa8:	1055d0        	and	a5, a5, a13
+     aab:	2055b0        	or	a5, a5, a11
+     aae:	1e21d2        	l32i	a13, a1, 120
+     ab1:	4021b2        	l32i	a11, a1, 0x100
+     ab4:	575a      	add.n	a5, a7, a5
+     ab6:	559a      	add.n	a5, a5, a9
+     ab8:	01b9      	s32i.n	a11, a1, 0
+     aba:	432192        	l32i	a9, a1, 0x10c
+     abd:	005a      	add.n	a0, a0, a5
+     abf:	3d21b2        	l32i	a11, a1, 244
+     ac2:	31b9      	s32i.n	a11, a1, 12
+     ac4:	003a      	add.n	a0, a0, a3
+     ac6:	3f2152        	l32i	a5, a1, 252
+     ac9:	232132        	l32i	a3, a1, 140
+     acc:	106102        	s32i	a0, a1, 64
+     acf:	1159      	s32i.n	a5, a1, 4
+     ad1:	3a21b2        	l32i	a11, a1, 232
+     ad4:	3c2152        	l32i	a5, a1, 240
+     ad7:	61b9      	s32i.n	a11, a1, 24
+     ad9:	3e2102        	l32i	a0, a1, 248
+     adc:	3721b2        	l32i	a11, a1, 220
+     adf:	2109      	s32i.n	a0, a1, 8
+     ae1:	61a9      	s32i.n	a10, a1, 24
+     ae3:	4159      	s32i.n	a5, a1, 16
+     ae5:	4521a2        	l32i	a10, a1, 0x114
+     ae8:	392152        	l32i	a5, a1, 228
+     aeb:	3b2102        	l32i	a0, a1, 236
+     aee:	91b9      	s32i.n	a11, a1, 36
+     af0:	9199      	s32i.n	a9, a1, 36
+     af2:	5109      	s32i.n	a0, a1, 20
+     af4:	7159      	s32i.n	a5, a1, 28
+     af6:	3421b2        	l32i	a11, a1, 208
+     af9:	c1b9      	s32i.n	a11, a1, 48
+     afb:	362152        	l32i	a5, a1, 216
+     afe:	382102        	l32i	a0, a1, 224
+     b01:	8109      	s32i.n	a0, a1, 32
+     b03:	a159      	s32i.n	a5, a1, 40
+     b05:	3121b2        	l32i	a11, a1, 196
+     b08:	332152        	l32i	a5, a1, 204
+     b0b:	f1b9      	s32i.n	a11, a1, 60
+     b0d:	352102        	l32i	a0, a1, 212
+     b10:	2e21b2        	l32i	a11, a1, 184
+     b13:	b109      	s32i.n	a0, a1, 44
+     b15:	d159      	s32i.n	a5, a1, 52
+     b17:	d139      	s32i.n	a3, a1, 52
+     b19:	302152        	l32i	a5, a1, 192
+     b1c:	322102        	l32i	a0, a1, 200
+     b1f:	21b9      	s32i.n	a11, a1, 8
+     b21:	2129      	s32i.n	a2, a1, 8
+     b23:	2b21b2        	l32i	a11, a1, 172
+     b26:	e109      	s32i.n	a0, a1, 56
+     b28:	0159      	s32i.n	a5, a1, 0
+     b2a:	2f2102        	l32i	a0, a1, 188
+     b2d:	2d2152        	l32i	a5, a1, 180
+     b30:	51b9      	s32i.n	a11, a1, 20
+     b32:	0169      	s32i.n	a6, a1, 0
+     b34:	242122        	l32i	a2, a1, 144
+     b37:	e129      	s32i.n	a2, a1, 56
+     b39:	306e90        	xor	a6, a14, a9
+     b3c:	2821b2        	l32i	a11, a1, 160
+     b3f:	3159      	s32i.n	a5, a1, 12
+     b41:	51c9      	s32i.n	a12, a1, 20
+     b43:	1109      	s32i.n	a0, a1, 4
+     b45:	1149      	s32i.n	a4, a1, 4
+     b47:	2121c2        	l32i	a12, a1, 132
+     b4a:	2c2102        	l32i	a0, a1, 176
+     b4d:	31f9      	s32i.n	a15, a1, 12
+     b4f:	81b9      	s32i.n	a11, a1, 32
+     b51:	81a9      	s32i.n	a10, a1, 32
+     b53:	2021f2        	l32i	a15, a1, 128
+     b56:	4109      	s32i.n	a0, a1, 16
+     b58:	2521b2        	l32i	a11, a1, 148
+     b5b:	292102        	l32i	a0, a1, 164
+     b5e:	41e9      	s32i.n	a14, a1, 16
+     b60:	b1b9      	s32i.n	a11, a1, 44
+     b62:	b179      	s32i.n	a7, a1, 44
+     b64:	1f21e2        	l32i	a14, a1, 124
+     b67:	7109      	s32i.n	a0, a1, 28
+     b69:	2221b2        	l32i	a11, a1, 136
+     b6c:	c1b9      	s32i.n	a11, a1, 48
+     b6e:	262102        	l32i	a0, a1, 152
+     b71:	30bb20        	xor	a11, a11, a2
+     b74:	a109      	s32i.n	a0, a1, 40
+     b76:	a189      	s32i.n	a8, a1, 40
+     b78:	412102        	l32i	a0, a1, 0x104
+     b7b:	3066b0        	xor	a6, a6, a11
+     b7e:	816660        	src	a6, a6, a6
+     b81:	f109      	s32i.n	a0, a1, 60
+     b83:	4221b2        	l32i	a11, a1, 0x108
+     b86:	71b9      	s32i.n	a11, a1, 28
+     b88:	162142        	l32i	a4, a1, 88
+     b8b:	2161c2        	s32i	a12, a1, 132
+     b8e:	303300        	xor	a3, a3, a0
+     b91:	486182        	s32i	a8, a1, 0x120
+     b94:	404200        	ssai	2
+     b97:	2061f2        	s32i	a15, a1, 128
+     b9a:	476172        	s32i	a7, a1, 0x11c
+     b9d:	1e61d2        	s32i	a13, a1, 120
+     ba0:	1f61e2        	s32i	a14, a1, 124
+     ba3:	466162        	s32i	a6, a1, 0x118
+     ba6:	462152        	l32i	a5, a1, 0x118
+     ba9:	1021e2        	l32i	a14, a1, 64
+     bac:	1a21d2        	l32i	a13, a1, 104
+     baf:	122172        	l32i	a7, a1, 72
+     bb2:	30fd80        	xor	a15, a13, a8
+     bb5:	817770        	src	a7, a7, a7
+     bb8:	182182        	l32i	a8, a1, 96
+     bbb:	30ff30        	xor	a15, a15, a3
+     bbe:	404b10        	ssai	27
+     bc1:	816ee0        	src	a6, a14, a14
+     bc4:	112132        	l32i	a3, a1, 68
+     bc7:	404f10        	ssai	31
+     bca:	81fff0        	src	a15, a15, a15
+     bcd:	20c730        	or	a12, a7, a3
+     bd0:	10c8c0        	and	a12, a8, a12
+     bd3:	3361f2        	s32i	a15, a1, 204
+     bd6:	404200        	ssai	2
+     bd9:	10f730        	and	a15, a7, a3
+     bdc:	813330        	src	a3, a3, a3
+     bdf:	20ccf0        	or	a12, a12, a15
+     be2:	404b10        	ssai	27
+     be5:	55ca      	add.n	a5, a5, a12
+     be7:	2d6132        	s32i	a3, a1, 180
+     bea:	3321c2        	l32i	a12, a1, 204
+     bed:	556a      	add.n	a5, a5, a6
+     bef:	20f3e0        	or	a15, a3, a14
+     bf2:	1b2162        	l32i	a6, a1, 108
+     bf5:	1033e0        	and	a3, a3, a14
+     bf8:	445a      	add.n	a4, a4, a5
+     bfa:	10f7f0        	and	a15, a7, a15
+     bfd:	fd1e51        	l32r	a5, 78 <sha1_vector+0x78>
+     c00:	20ff30        	or	a15, a15, a3
+     c03:	472132        	l32i	a3, a1, 0x11c
+     c06:	ccfa      	add.n	a12, a12, a15
+     c08:	445a      	add.n	a4, a4, a5
+     c0a:	81f440        	src	a15, a4, a4
+     c0d:	303630        	xor	a3, a6, a3
+     c10:	404f10        	ssai	31
+     c13:	ccfa      	add.n	a12, a12, a15
+     c15:	88ca      	add.n	a8, a8, a12
+     c17:	1321f2        	l32i	a15, a1, 76
+     c1a:	fd18c1        	l32r	a12, 7c <sha1_vector+0x7c>
+     c1d:	302f20        	xor	a2, a15, a2
+     c20:	88ca      	add.n	a8, a8, a12
+     c22:	302230        	xor	a2, a2, a3
+     c25:	812220        	src	a2, a2, a2
+     c28:	2d2132        	l32i	a3, a1, 180
+     c2b:	404200        	ssai	2
+     c2e:	326122        	s32i	a2, a1, 200
+     c31:	3221c2        	l32i	a12, a1, 200
+     c34:	812ee0        	src	a2, a14, a14
+     c37:	10e240        	and	a14, a2, a4
+     c3a:	205240        	or	a5, a2, a4
+     c3d:	103350        	and	a3, a3, a5
+     c40:	404b10        	ssai	27
+     c43:	20ee30        	or	a14, a14, a3
+     c46:	ccea      	add.n	a12, a12, a14
+     c48:	81e880        	src	a14, a8, a8
+     c4b:	404f10        	ssai	31
+     c4e:	ccea      	add.n	a12, a12, a14
+     c50:	77ca      	add.n	a7, a7, a12
+     c52:	4621e2        	l32i	a14, a1, 0x118
+     c55:	1421c2        	l32i	a12, a1, 80
+     c58:	30ebe0        	xor	a14, a11, a14
+     c5b:	305c00        	xor	a5, a12, a0
+     c5e:	3055e0        	xor	a5, a5, a14
+     c61:	fd07e1        	l32r	a14, 80 <sha1_vector+0x80>
+     c64:	815550        	src	a5, a5, a5
+     c67:	316152        	s32i	a5, a1, 196
+     c6a:	404200        	ssai	2
+     c6d:	814440        	src	a4, a4, a4
+     c70:	77ea      	add.n	a7, a7, a14
+     c72:	404b10        	ssai	27
+     c75:	103480        	and	a3, a4, a8
+     c78:	200480        	or	a0, a4, a8
+     c7b:	100200        	and	a0, a2, a0
+     c7e:	200030        	or	a0, a0, a3
+     c81:	e50a      	add.n	a14, a5, a0
+     c83:	fd0031        	l32r	a3, 84 <sha1_vector+0x84>
+     c86:	2d2152        	l32i	a5, a1, 180
+     c89:	810770        	src	a0, a7, a7
+     c8c:	ee0a      	add.n	a14, a14, a0
+     c8e:	404f10        	ssai	31
+     c91:	332102        	l32i	a0, a1, 204
+     c94:	55ea      	add.n	a5, a5, a14
+     c96:	553a      	add.n	a5, a5, a3
+     c98:	1521e2        	l32i	a14, a1, 84
+     c9b:	300a00        	xor	a0, a10, a0
+     c9e:	30ffe0        	xor	a15, a15, a14
+     ca1:	30ff00        	xor	a15, a15, a0
+     ca4:	81fff0        	src	a15, a15, a15
+     ca7:	3061f2        	s32i	a15, a1, 192
+     caa:	404200        	ssai	2
+     cad:	818880        	src	a8, a8, a8
+     cb0:	200870        	or	a0, a8, a7
+     cb3:	10f870        	and	a15, a8, a7
+     cb6:	100400        	and	a0, a4, a0
+     cb9:	2000f0        	or	a0, a0, a15
+     cbc:	3021f2        	l32i	a15, a1, 192
+     cbf:	404b10        	ssai	27
+     cc2:	ff0a      	add.n	a15, a15, a0
+     cc4:	810550        	src	a0, a5, a5
+     cc7:	ff0a      	add.n	a15, a15, a0
+     cc9:	404f10        	ssai	31
+     ccc:	322102        	l32i	a0, a1, 200
+     ccf:	22fa      	add.n	a2, a2, a15
+     cd1:	223a      	add.n	a2, a2, a3
+     cd3:	1721f2        	l32i	a15, a1, 92
+     cd6:	300900        	xor	a0, a9, a0
+     cd9:	30ccf0        	xor	a12, a12, a15
+     cdc:	30ffd0        	xor	a15, a15, a13
+     cdf:	30cc00        	xor	a12, a12, a0
+     ce2:	81ccc0        	src	a12, a12, a12
+     ce5:	30ddb0        	xor	a13, a13, a11
+     ce8:	404200        	ssai	2
+     ceb:	2f61c2        	s32i	a12, a1, 188
+     cee:	817770        	src	a7, a7, a7
+     cf1:	404b10        	ssai	27
+     cf4:	103750        	and	a3, a7, a5
+     cf7:	200750        	or	a0, a7, a5
+     cfa:	100800        	and	a0, a8, a0
+     cfd:	200030        	or	a0, a0, a3
+     d00:	cc0a      	add.n	a12, a12, a0
+     d02:	312132        	l32i	a3, a1, 196
+     d05:	810220        	src	a0, a2, a2
+     d08:	404f10        	ssai	31
+     d0b:	cc0a      	add.n	a12, a12, a0
+     d0d:	44ca      	add.n	a4, a4, a12
+     d0f:	482102        	l32i	a0, a1, 0x120
+     d12:	1921c2        	l32i	a12, a1, 100
+     d15:	300030        	xor	a0, a0, a3
+     d18:	30eec0        	xor	a14, a14, a12
+     d1b:	302132        	l32i	a3, a1, 192
+     d1e:	30cc60        	xor	a12, a12, a6
+     d21:	30ee00        	xor	a14, a14, a0
+     d24:	81eee0        	src	a14, a14, a14
+     d27:	472102        	l32i	a0, a1, 0x11c
+     d2a:	404200        	ssai	2
+     d2d:	303300        	xor	a3, a3, a0
+     d30:	815550        	src	a5, a5, a5
+     d33:	3033f0        	xor	a3, a3, a15
+     d36:	fcd4f1        	l32r	a15, 88 <sha1_vector+0x88>
+     d39:	404b10        	ssai	27
+     d3c:	44fa      	add.n	a4, a4, a15
+     d3e:	810440        	src	a0, a4, a4
+     d41:	20f520        	or	a15, a5, a2
+     d44:	10f7f0        	and	a15, a7, a15
+     d47:	404f10        	ssai	31
+     d4a:	813330        	src	a3, a3, a3
+     d4d:	346132        	s32i	a3, a1, 208
+     d50:	404200        	ssai	2
+     d53:	103520        	and	a3, a5, a2
+     d56:	812220        	src	a2, a2, a2
+     d59:	20ff30        	or	a15, a15, a3
+     d5c:	fefa      	add.n	a15, a14, a15
+     d5e:	2f2132        	l32i	a3, a1, 188
+     d61:	ff0a      	add.n	a15, a15, a0
+     d63:	88fa      	add.n	a8, a8, a15
+     d65:	4621f2        	l32i	a15, a1, 0x118
+     d68:	404b10        	ssai	27
+     d6b:	3033f0        	xor	a3, a3, a15
+     d6e:	3033c0        	xor	a3, a3, a12
+     d71:	20f240        	or	a15, a2, a4
+     d74:	fcc6c1        	l32r	a12, 8c <sha1_vector+0x8c>
+     d77:	10f5f0        	and	a15, a5, a15
+     d7a:	88ca      	add.n	a8, a8, a12
+     d7c:	810880        	src	a0, a8, a8
+     d7f:	404f10        	ssai	31
+     d82:	813330        	src	a3, a3, a3
+     d85:	356132        	s32i	a3, a1, 212
+     d88:	404200        	ssai	2
+     d8b:	103240        	and	a3, a2, a4
+     d8e:	2033f0        	or	a3, a3, a15
+     d91:	814440        	src	a4, a4, a4
+     d94:	3421f2        	l32i	a15, a1, 208
+     d97:	404b10        	ssai	27
+     d9a:	ff3a      	add.n	a15, a15, a3
+     d9c:	332132        	l32i	a3, a1, 204
+     d9f:	ff0a      	add.n	a15, a15, a0
+     da1:	77fa      	add.n	a7, a7, a15
+     da3:	200480        	or	a0, a4, a8
+     da6:	100200        	and	a0, a2, a0
+     da9:	77ca      	add.n	a7, a7, a12
+     dab:	303e30        	xor	a3, a14, a3
+     dae:	3033d0        	xor	a3, a3, a13
+     db1:	81f770        	src	a15, a7, a7
+     db4:	3521d2        	l32i	a13, a1, 212
+     db7:	404f10        	ssai	31
+     dba:	813330        	src	a3, a3, a3
+     dbd:	376132        	s32i	a3, a1, 220
+     dc0:	404200        	ssai	2
+     dc3:	103480        	and	a3, a4, a8
+     dc6:	818880        	src	a8, a8, a8
+     dc9:	200030        	or	a0, a0, a3
+     dcc:	404b10        	ssai	27
+     dcf:	322132        	l32i	a3, a1, 200
+     dd2:	dd0a      	add.n	a13, a13, a0
+     dd4:	ddfa      	add.n	a13, a13, a15
+     dd6:	3006a0        	xor	a0, a6, a10
+     dd9:	3421f2        	l32i	a15, a1, 208
+     ddc:	55da      	add.n	a5, a5, a13
+     dde:	55ca      	add.n	a5, a5, a12
+     de0:	20d870        	or	a13, a8, a7
+     de3:	10d4d0        	and	a13, a4, a13
+     de6:	30ff30        	xor	a15, a15, a3
+     de9:	816550        	src	a6, a5, a5
+     dec:	372132        	l32i	a3, a1, 220
+     def:	30ff00        	xor	a15, a15, a0
+     df2:	404f10        	ssai	31
+     df5:	352102        	l32i	a0, a1, 212
+     df8:	81fff0        	src	a15, a15, a15
+     dfb:	3661f2        	s32i	a15, a1, 216
+     dfe:	404200        	ssai	2
+     e01:	10f870        	and	a15, a8, a7
+     e04:	817770        	src	a7, a7, a7
+     e07:	20ddf0        	or	a13, a13, a15
+     e0a:	404b10        	ssai	27
+     e0d:	33da      	add.n	a3, a3, a13
+     e0f:	336a      	add.n	a3, a3, a6
+     e11:	20f750        	or	a15, a7, a5
+     e14:	10f8f0        	and	a15, a8, a15
+     e17:	223a      	add.n	a2, a2, a3
+     e19:	306b90        	xor	a6, a11, a9
+     e1c:	312132        	l32i	a3, a1, 196
+     e1f:	b2ca      	add.n	a11, a2, a12
+     e21:	482122        	l32i	a2, a1, 0x120
+     e24:	81dbb0        	src	a13, a11, a11
+     e27:	300030        	xor	a0, a0, a3
+     e2a:	300060        	xor	a0, a0, a6
+     e2d:	404f10        	ssai	31
+     e30:	362162        	l32i	a6, a1, 216
+     e33:	302a20        	xor	a2, a10, a2
+     e36:	810000        	src	a0, a0, a0
+     e39:	404200        	ssai	2
+     e3c:	3a6102        	s32i	a0, a1, 232
+     e3f:	3a21a2        	l32i	a10, a1, 232
+     e42:	100750        	and	a0, a7, a5
+     e45:	20ff00        	or	a15, a15, a0
+     e48:	815550        	src	a5, a5, a5
+     e4b:	372102        	l32i	a0, a1, 220
+     e4e:	404b10        	ssai	27
+     e51:	66fa      	add.n	a6, a6, a15
+     e53:	66da      	add.n	a6, a6, a13
+     e55:	446a      	add.n	a4, a4, a6
+     e57:	20f5b0        	or	a15, a5, a11
+     e5a:	10f7f0        	and	a15, a7, a15
+     e5d:	302162        	l32i	a6, a1, 192
+     e60:	44ca      	add.n	a4, a4, a12
+     e62:	81d440        	src	a13, a4, a4
+     e65:	300600        	xor	a0, a6, a0
+     e68:	404f10        	ssai	31
+     e6b:	300020        	xor	a0, a0, a2
+     e6e:	362122        	l32i	a2, a1, 216
+     e71:	810000        	src	a0, a0, a0
+     e74:	386102        	s32i	a0, a1, 224
+     e77:	404200        	ssai	2
+     e7a:	1005b0        	and	a0, a5, a11
+     e7d:	81bbb0        	src	a11, a11, a11
+     e80:	20ff00        	or	a15, a15, a0
+     e83:	404b10        	ssai	27
+     e86:	2f2102        	l32i	a0, a1, 188
+     e89:	aafa      	add.n	a10, a10, a15
+     e8b:	aada      	add.n	a10, a10, a13
+     e8d:	302020        	xor	a2, a0, a2
+     e90:	10db40        	and	a13, a11, a4
+     e93:	20fb40        	or	a15, a11, a4
+     e96:	88aa      	add.n	a8, a8, a10
+     e98:	88ca      	add.n	a8, a8, a12
+     e9a:	4721a2        	l32i	a10, a1, 0x11c
+     e9d:	10f5f0        	and	a15, a5, a15
+     ea0:	20ddf0        	or	a13, a13, a15
+     ea3:	3099a0        	xor	a9, a9, a10
+     ea6:	4821f2        	l32i	a15, a1, 0x120
+     ea9:	81a880        	src	a10, a8, a8
+     eac:	302290        	xor	a2, a2, a9
+     eaf:	404f10        	ssai	31
+     eb2:	382192        	l32i	a9, a1, 224
+     eb5:	812220        	src	a2, a2, a2
+     eb8:	404200        	ssai	2
+     ebb:	3b6122        	s32i	a2, a1, 236
+     ebe:	99da      	add.n	a9, a9, a13
+     ec0:	462122        	l32i	a2, a1, 0x118
+     ec3:	3a21d2        	l32i	a13, a1, 232
+     ec6:	814440        	src	a4, a4, a4
+     ec9:	99aa      	add.n	a9, a9, a10
+     ecb:	779a      	add.n	a7, a7, a9
+     ecd:	404b10        	ssai	27
+     ed0:	3b2192        	l32i	a9, a1, 236
+     ed3:	30ded0        	xor	a13, a14, a13
+     ed6:	30ff20        	xor	a15, a15, a2
+     ed9:	77ca      	add.n	a7, a7, a12
+     edb:	102480        	and	a2, a4, a8
+     ede:	81a770        	src	a10, a7, a7
+     ee1:	30ddf0        	xor	a13, a13, a15
+     ee4:	404f10        	ssai	31
+     ee7:	20f480        	or	a15, a4, a8
+     eea:	81ddd0        	src	a13, a13, a13
+     eed:	10fbf0        	and	a15, a11, a15
+     ef0:	20ff20        	or	a15, a15, a2
+     ef3:	404200        	ssai	2
+     ef6:	818880        	src	a8, a8, a8
+     ef9:	99fa      	add.n	a9, a9, a15
+     efb:	404b10        	ssai	27
+     efe:	3321f2        	l32i	a15, a1, 204
+     f01:	99aa      	add.n	a9, a9, a10
+     f03:	559a      	add.n	a5, a5, a9
+     f05:	4721a2        	l32i	a10, a1, 0x11c
+     f08:	342192        	l32i	a9, a1, 208
+     f0b:	55ca      	add.n	a5, a5, a12
+     f0d:	30aaf0        	xor	a10, a10, a15
+     f10:	812550        	src	a2, a5, a5
+     f13:	3821f2        	l32i	a15, a1, 224
+     f16:	404f10        	ssai	31
+     f19:	3099f0        	xor	a9, a9, a15
+     f1c:	3099a0        	xor	a9, a9, a10
+     f1f:	20f870        	or	a15, a8, a7
+     f22:	10f4f0        	and	a15, a4, a15
+     f25:	819990        	src	a9, a9, a9
+     f28:	396192        	s32i	a9, a1, 228
+     f2b:	404200        	ssai	2
+     f2e:	109870        	and	a9, a8, a7
+     f31:	817770        	src	a7, a7, a7
+     f34:	20ff90        	or	a15, a15, a9
+     f37:	404b10        	ssai	27
+     f3a:	392192        	l32i	a9, a1, 228
+     f3d:	20a750        	or	a10, a7, a5
+     f40:	fdfa      	add.n	a15, a13, a15
+     f42:	ff2a      	add.n	a15, a15, a2
+     f44:	10a8a0        	and	a10, a8, a10
+     f47:	3b2122        	l32i	a2, a1, 236
+     f4a:	bbfa      	add.n	a11, a11, a15
+     f4c:	bbca      	add.n	a11, a11, a12
+     f4e:	10f750        	and	a15, a7, a5
+     f51:	20aaf0        	or	a10, a10, a15
+     f54:	99aa      	add.n	a9, a9, a10
+     f56:	4621f2        	l32i	a15, a1, 0x118
+     f59:	81abb0        	src	a10, a11, a11
+     f5c:	99aa      	add.n	a9, a9, a10
+     f5e:	404f10        	ssai	31
+     f61:	3521a2        	l32i	a10, a1, 212
+     f64:	449a      	add.n	a4, a4, a9
+     f66:	44ca      	add.n	a4, a4, a12
+     f68:	30aa20        	xor	a10, a10, a2
+     f6b:	3221c2        	l32i	a12, a1, 200
+     f6e:	332122        	l32i	a2, a1, 204
+     f71:	30ffc0        	xor	a15, a15, a12
+     f74:	30aaf0        	xor	a10, a10, a15
+     f77:	30c6c0        	xor	a12, a6, a12
+     f7a:	302230        	xor	a2, a2, a3
+     f7d:	3066e0        	xor	a6, a6, a14
+     f80:	303030        	xor	a3, a0, a3
+     f83:	81aaa0        	src	a10, a10, a10
+     f86:	3721f2        	l32i	a15, a1, 220
+     f89:	404200        	ssai	2
+     f8c:	815550        	src	a5, a5, a5
+     f8f:	30ffd0        	xor	a15, a15, a13
+     f92:	30ff20        	xor	a15, a15, a2
+     f95:	404b10        	ssai	27
+     f98:	3095b0        	xor	a9, a5, a11
+     f9b:	309790        	xor	a9, a7, a9
+     f9e:	812440        	src	a2, a4, a4
+     fa1:	9a9a      	add.n	a9, a10, a9
+     fa3:	404f10        	ssai	31
+     fa6:	992a      	add.n	a9, a9, a2
+     fa8:	81fff0        	src	a15, a15, a15
+     fab:	362122        	l32i	a2, a1, 216
+     fae:	889a      	add.n	a8, a8, a9
+     fb0:	404200        	ssai	2
+     fb3:	81bbb0        	src	a11, a11, a11
+     fb6:	392192        	l32i	a9, a1, 228
+     fb9:	404b10        	ssai	27
+     fbc:	302290        	xor	a2, a2, a9
+     fbf:	fc3491        	l32r	a9, 90 <sha1_vector+0x90>
+     fc2:	30cc20        	xor	a12, a12, a2
+     fc5:	889a      	add.n	a8, a8, a9
+     fc7:	812880        	src	a2, a8, a8
+     fca:	309b40        	xor	a9, a11, a4
+     fcd:	309590        	xor	a9, a5, a9
+     fd0:	404f10        	ssai	31
+     fd3:	81ccc0        	src	a12, a12, a12
+     fd6:	9f9a      	add.n	a9, a15, a9
+     fd8:	992a      	add.n	a9, a9, a2
+     fda:	404200        	ssai	2
+     fdd:	779a      	add.n	a7, a7, a9
+     fdf:	3a2192        	l32i	a9, a1, 232
+     fe2:	814440        	src	a4, a4, a4
+     fe5:	3099a0        	xor	a9, a9, a10
+     fe8:	303390        	xor	a3, a3, a9
+     feb:	fc2a91        	l32r	a9, 94 <sha1_vector+0x94>
+     fee:	404b10        	ssai	27
+     ff1:	779a      	add.n	a7, a7, a9
+     ff3:	812770        	src	a2, a7, a7
+     ff6:	309480        	xor	a9, a4, a8
+     ff9:	309b90        	xor	a9, a11, a9
+     ffc:	404f10        	ssai	31
+     fff:	813330        	src	a3, a3, a3
+    1002:	9c9a      	add.n	a9, a12, a9
+    1004:	992a      	add.n	a9, a9, a2
+    1006:	404200        	ssai	2
+    1009:	818880        	src	a8, a8, a8
+    100c:	559a      	add.n	a5, a5, a9
+    100e:	404b10        	ssai	27
+    1011:	382192        	l32i	a9, a1, 224
+    1014:	302870        	xor	a2, a8, a7
+    1017:	302420        	xor	a2, a4, a2
+    101a:	3099f0        	xor	a9, a9, a15
+    101d:	306690        	xor	a6, a6, a9
+    1020:	fc1e91        	l32r	a9, 98 <sha1_vector+0x98>
+    1023:	232a      	add.n	a2, a3, a2
+    1025:	559a      	add.n	a5, a5, a9
+    1027:	819550        	src	a9, a5, a5
+    102a:	404f10        	ssai	31
+    102d:	229a      	add.n	a2, a2, a9
+    102f:	bb2a      	add.n	a11, a11, a2
+    1031:	816660        	src	a6, a6, a6
+    1034:	0169      	s32i.n	a6, a1, 0
+    1036:	404200        	ssai	2
+    1039:	342122        	l32i	a2, a1, 208
+    103c:	817770        	src	a7, a7, a7
+    103f:	404b10        	ssai	27
+    1042:	300020        	xor	a0, a0, a2
+    1045:	309750        	xor	a9, a7, a5
+    1048:	3b2122        	l32i	a2, a1, 236
+    104b:	309890        	xor	a9, a8, a9
+    104e:	3022c0        	xor	a2, a2, a12
+    1051:	300020        	xor	a0, a0, a2
+    1054:	fc1221        	l32r	a2, 9c <sha1_vector+0x9c>
+    1057:	969a      	add.n	a9, a6, a9
+    1059:	bb2a      	add.n	a11, a11, a2
+    105b:	812bb0        	src	a2, a11, a11
+    105e:	992a      	add.n	a9, a9, a2
+    1060:	404f10        	ssai	31
+    1063:	352122        	l32i	a2, a1, 212
+    1066:	449a      	add.n	a4, a4, a9
+    1068:	810000        	src	a0, a0, a0
+    106b:	fc0d91        	l32r	a9, a0 <sha1_vector+0xa0>
+    106e:	404200        	ssai	2
+    1071:	815550        	src	a5, a5, a5
+    1074:	30ee20        	xor	a14, a14, a2
+    1077:	404b10        	ssai	27
+    107a:	449a      	add.n	a4, a4, a9
+    107c:	302d30        	xor	a2, a13, a3
+    107f:	30ee20        	xor	a14, a14, a2
+    1082:	3095b0        	xor	a9, a5, a11
+    1085:	309790        	xor	a9, a7, a9
+    1088:	909a      	add.n	a9, a0, a9
+    108a:	812440        	src	a2, a4, a4
+    108d:	992a      	add.n	a9, a9, a2
+    108f:	404f10        	ssai	31
+    1092:	372122        	l32i	a2, a1, 220
+    1095:	889a      	add.n	a8, a8, a9
+    1097:	81eee0        	src	a14, a14, a14
+    109a:	392192        	l32i	a9, a1, 228
+    109d:	3c61e2        	s32i	a14, a1, 240
+    10a0:	404200        	ssai	2
+    10a3:	81bbb0        	src	a11, a11, a11
+    10a6:	3421e2        	l32i	a14, a1, 208
+    10a9:	404b10        	ssai	27
+    10ac:	309690        	xor	a9, a6, a9
+    10af:	30ee20        	xor	a14, a14, a2
+    10b2:	3099e0        	xor	a9, a9, a14
+    10b5:	fbfbe1        	l32r	a14, a4 <sha1_vector+0xa4>
+    10b8:	302b40        	xor	a2, a11, a4
+    10bb:	88ea      	add.n	a8, a8, a14
+    10bd:	3c21e2        	l32i	a14, a1, 240
+    10c0:	302520        	xor	a2, a5, a2
+    10c3:	ee2a      	add.n	a14, a14, a2
+    10c5:	812880        	src	a2, a8, a8
+    10c8:	ee2a      	add.n	a14, a14, a2
+    10ca:	404f10        	ssai	31
+    10cd:	362122        	l32i	a2, a1, 216
+    10d0:	77ea      	add.n	a7, a7, a14
+    10d2:	819990        	src	a9, a9, a9
+    10d5:	3521e2        	l32i	a14, a1, 212
+    10d8:	3d6192        	s32i	a9, a1, 244
+    10db:	404200        	ssai	2
+    10de:	3090a0        	xor	a9, a0, a10
+    10e1:	814440        	src	a4, a4, a4
+    10e4:	30ee20        	xor	a14, a14, a2
+    10e7:	404b10        	ssai	27
+    10ea:	3099e0        	xor	a9, a9, a14
+    10ed:	fbeee1        	l32r	a14, a8 <sha1_vector+0xa8>
+    10f0:	302480        	xor	a2, a4, a8
+    10f3:	77ea      	add.n	a7, a7, a14
+    10f5:	3d21e2        	l32i	a14, a1, 244
+    10f8:	302b20        	xor	a2, a11, a2
+    10fb:	ee2a      	add.n	a14, a14, a2
+    10fd:	812770        	src	a2, a7, a7
+    1100:	ee2a      	add.n	a14, a14, a2
+    1102:	404f10        	ssai	31
+    1105:	3a2122        	l32i	a2, a1, 232
+    1108:	55ea      	add.n	a5, a5, a14
+    110a:	819990        	src	a9, a9, a9
+    110d:	3721e2        	l32i	a14, a1, 220
+    1110:	3f6192        	s32i	a9, a1, 252
+    1113:	404200        	ssai	2
+    1116:	818880        	src	a8, a8, a8
+    1119:	3c2192        	l32i	a9, a1, 240
+    111c:	30ee20        	xor	a14, a14, a2
+    111f:	3099f0        	xor	a9, a9, a15
+    1122:	3099e0        	xor	a9, a9, a14
+    1125:	fbe1e1        	l32r	a14, ac <sha1_vector+0xac>
+    1128:	404b10        	ssai	27
+    112b:	55ea      	add.n	a5, a5, a14
+    112d:	812550        	src	a2, a5, a5
+    1130:	3821e2        	l32i	a14, a1, 224
+    1133:	404f10        	ssai	31
+    1136:	819990        	src	a9, a9, a9
+    1139:	446192        	s32i	a9, a1, 0x110
+    113c:	362192        	l32i	a9, a1, 216
+    113f:	1109      	s32i.n	a0, a1, 4
+    1141:	3099e0        	xor	a9, a9, a14
+    1144:	3d21e2        	l32i	a14, a1, 244
+    1147:	2e6142        	s32i	a4, a1, 184
+    114a:	30eec0        	xor	a14, a14, a12
+    114d:	30ee90        	xor	a14, a14, a9
+    1150:	382192        	l32i	a9, a1, 224
+    1153:	404200        	ssai	2
+    1156:	3099d0        	xor	a9, a9, a13
+    1159:	30dda0        	xor	a13, a13, a10
+    115c:	30aac0        	xor	a10, a10, a12
+    115f:	3e61a2        	s32i	a10, a1, 248
+    1162:	30c6c0        	xor	a12, a6, a12
+    1165:	4061c2        	s32i	a12, a1, 0x100
+    1168:	4421a2        	l32i	a10, a1, 0x110
+    116b:	3f21c2        	l32i	a12, a1, 252
+    116e:	3066a0        	xor	a6, a6, a10
+    1171:	306690        	xor	a6, a6, a9
+    1174:	3f21a2        	l32i	a10, a1, 252
+    1177:	309870        	xor	a9, a8, a7
+    117a:	30aa30        	xor	a10, a10, a3
+    117d:	304490        	xor	a4, a4, a9
+    1180:	817770        	src	a7, a7, a7
+    1183:	392192        	l32i	a9, a1, 228
+    1186:	cc4a      	add.n	a12, a12, a4
+    1188:	404b10        	ssai	27
+    118b:	cc2a      	add.n	a12, a12, a2
+    118d:	bbca      	add.n	a11, a11, a12
+    118f:	fbc8c1        	l32r	a12, b0 <sha1_vector+0xb0>
+    1192:	3b2142        	l32i	a4, a1, 236
+    1195:	bbca      	add.n	a11, a11, a12
+    1197:	812bb0        	src	a2, a11, a11
+    119a:	3a21c2        	l32i	a12, a1, 232
+    119d:	404f10        	ssai	31
+    11a0:	30cc40        	xor	a12, a12, a4
+    11a3:	81eee0        	src	a14, a14, a14
+    11a6:	61e9      	s32i.n	a14, a1, 24
+    11a8:	404200        	ssai	2
+    11ab:	304490        	xor	a4, a4, a9
+    11ae:	30aac0        	xor	a10, a10, a12
+    11b1:	3099f0        	xor	a9, a9, a15
+    11b4:	30ff30        	xor	a15, a15, a3
+    11b7:	4421c2        	l32i	a12, a1, 0x110
+    11ba:	303030        	xor	a3, a0, a3
+    11bd:	3000e0        	xor	a0, a0, a14
+    11c0:	300040        	xor	a0, a0, a4
+    11c3:	304750        	xor	a4, a7, a5
+    11c6:	304840        	xor	a4, a8, a4
+    11c9:	815550        	src	a5, a5, a5
+    11cc:	cc4a      	add.n	a12, a12, a4
+    11ce:	2e2142        	l32i	a4, a1, 184
+    11d1:	cc2a      	add.n	a12, a12, a2
+    11d3:	44ca      	add.n	a4, a4, a12
+    11d5:	fbb7c1        	l32r	a12, b4 <sha1_vector+0xb4>
+    11d8:	404b10        	ssai	27
+    11db:	44ca      	add.n	a4, a4, a12
+    11dd:	812440        	src	a2, a4, a4
+    11e0:	3c21c2        	l32i	a12, a1, 240
+    11e3:	21c9      	s32i.n	a12, a1, 8
+    11e5:	404f10        	ssai	31
+    11e8:	81aaa0        	src	a10, a10, a10
+    11eb:	71a9      	s32i.n	a10, a1, 28
+    11ed:	30cca0        	xor	a12, a12, a10
+    11f0:	404200        	ssai	2
+    11f3:	30ccd0        	xor	a12, a12, a13
+    11f6:	30d5b0        	xor	a13, a5, a11
+    11f9:	30d7d0        	xor	a13, a7, a13
+    11fc:	81bbb0        	src	a11, a11, a11
+    11ff:	deda      	add.n	a13, a14, a13
+    1201:	dd2a      	add.n	a13, a13, a2
+    1203:	88da      	add.n	a8, a8, a13
+    1205:	fbacd1        	l32r	a13, b8 <sha1_vector+0xb8>
+    1208:	404b10        	ssai	27
+    120b:	88da      	add.n	a8, a8, a13
+    120d:	812880        	src	a2, a8, a8
+    1210:	3d21d2        	l32i	a13, a1, 244
+    1213:	31d9      	s32i.n	a13, a1, 12
+    1215:	404f10        	ssai	31
+    1218:	816660        	src	a6, a6, a6
+    121b:	8169      	s32i.n	a6, a1, 32
+    121d:	30dd60        	xor	a13, a13, a6
+    1220:	30dd90        	xor	a13, a13, a9
+    1223:	404200        	ssai	2
+    1226:	309b40        	xor	a9, a11, a4
+    1229:	814440        	src	a4, a4, a4
+    122c:	309590        	xor	a9, a5, a9
+    122f:	404b10        	ssai	27
+    1232:	9a9a      	add.n	a9, a10, a9
+    1234:	992a      	add.n	a9, a9, a2
+    1236:	779a      	add.n	a7, a7, a9
+    1238:	fba121        	l32r	a2, bc <sha1_vector+0xbc>
+    123b:	309480        	xor	a9, a4, a8
+    123e:	309b90        	xor	a9, a11, a9
+    1241:	669a      	add.n	a6, a6, a9
+    1243:	772a      	add.n	a7, a7, a2
+    1245:	819770        	src	a9, a7, a7
+    1248:	669a      	add.n	a6, a6, a9
+    124a:	404f10        	ssai	31
+    124d:	3f2192        	l32i	a9, a1, 252
+    1250:	810000        	src	a0, a0, a0
+    1253:	556a      	add.n	a5, a5, a6
+    1255:	552a      	add.n	a5, a5, a2
+    1257:	9109      	s32i.n	a0, a1, 36
+    1259:	3e2162        	l32i	a6, a1, 248
+    125c:	4199      	s32i.n	a9, a1, 16
+    125e:	404200        	ssai	2
+    1261:	818880        	src	a8, a8, a8
+    1264:	309900        	xor	a9, a9, a0
+    1267:	309960        	xor	a9, a9, a6
+    126a:	404b10        	ssai	27
+    126d:	306870        	xor	a6, a8, a7
+    1270:	306460        	xor	a6, a4, a6
+    1273:	006a      	add.n	a0, a0, a6
+    1275:	816550        	src	a6, a5, a5
+    1278:	006a      	add.n	a0, a0, a6
+    127a:	404f10        	ssai	31
+    127d:	442162        	l32i	a6, a1, 0x110
+    1280:	bb0a      	add.n	a11, a11, a0
+    1282:	81ccc0        	src	a12, a12, a12
+    1285:	212102        	l32i	a0, a1, 132
+    1288:	bb2a      	add.n	a11, a11, a2
+    128a:	a1c9      	s32i.n	a12, a1, 40
+    128c:	5169      	s32i.n	a6, a1, 20
+    128e:	404200        	ssai	2
+    1291:	817770        	src	a7, a7, a7
+    1294:	3066c0        	xor	a6, a6, a12
+    1297:	3066f0        	xor	a6, a6, a15
+    129a:	404b10        	ssai	27
+    129d:	30f750        	xor	a15, a7, a5
+    12a0:	30f8f0        	xor	a15, a8, a15
+    12a3:	ccfa      	add.n	a12, a12, a15
+    12a5:	81fbb0        	src	a15, a11, a11
+    12a8:	ccfa      	add.n	a12, a12, a15
+    12aa:	404f10        	ssai	31
+    12ad:	81ddd0        	src	a13, a13, a13
+    12b0:	44ca      	add.n	a4, a4, a12
+    12b2:	442a      	add.n	a4, a4, a2
+    12b4:	b1d9      	s32i.n	a13, a1, 44
+    12b6:	30eed0        	xor	a14, a14, a13
+    12b9:	4021c2        	l32i	a12, a1, 0x100
+    12bc:	404200        	ssai	2
+    12bf:	815550        	src	a5, a5, a5
+    12c2:	30cce0        	xor	a12, a12, a14
+    12c5:	404b10        	ssai	27
+    12c8:	30e5b0        	xor	a14, a5, a11
+    12cb:	30e7e0        	xor	a14, a7, a14
+    12ce:	ddea      	add.n	a13, a13, a14
+    12d0:	81e440        	src	a14, a4, a4
+    12d3:	ddea      	add.n	a13, a13, a14
+    12d5:	404f10        	ssai	31
+    12d8:	1f21e2        	l32i	a14, a1, 124
+    12db:	819990        	src	a9, a9, a9
+    12de:	88da      	add.n	a8, a8, a13
+    12e0:	882a      	add.n	a8, a8, a2
+    12e2:	c199      	s32i.n	a9, a1, 48
+    12e4:	30aa90        	xor	a10, a10, a9
+    12e7:	404200        	ssai	2
+    12ea:	81bbb0        	src	a11, a11, a11
+    12ed:	3033a0        	xor	a3, a3, a10
+    12f0:	404b10        	ssai	27
+    12f3:	30ab40        	xor	a10, a11, a4
+    12f6:	30a5a0        	xor	a10, a5, a10
+    12f9:	99aa      	add.n	a9, a9, a10
+    12fb:	81a880        	src	a10, a8, a8
+    12fe:	99aa      	add.n	a9, a9, a10
+    1300:	404f10        	ssai	31
+    1303:	816660        	src	a6, a6, a6
+    1306:	779a      	add.n	a7, a7, a9
+    1308:	772a      	add.n	a7, a7, a2
+    130a:	d169      	s32i.n	a6, a1, 52
+    130c:	404200        	ssai	2
+    130f:	814440        	src	a4, a4, a4
+    1312:	309480        	xor	a9, a4, a8
+    1315:	404b10        	ssai	27
+    1318:	309b90        	xor	a9, a11, a9
+    131b:	669a      	add.n	a6, a6, a9
+    131d:	819770        	src	a9, a7, a7
+    1320:	669a      	add.n	a6, a6, a9
+    1322:	404f10        	ssai	31
+    1325:	81ccc0        	src	a12, a12, a12
+    1328:	556a      	add.n	a5, a5, a6
+    132a:	552a      	add.n	a5, a5, a2
+    132c:	e1c9      	s32i.n	a12, a1, 56
+    132e:	404200        	ssai	2
+    1331:	818880        	src	a8, a8, a8
+    1334:	30d870        	xor	a13, a8, a7
+    1337:	404b10        	ssai	27
+    133a:	30d4d0        	xor	a13, a4, a13
+    133d:	ccda      	add.n	a12, a12, a13
+    133f:	81d550        	src	a13, a5, a5
+    1342:	ccda      	add.n	a12, a12, a13
+    1344:	404f10        	ssai	31
+    1347:	1e21d2        	l32i	a13, a1, 120
+    134a:	813330        	src	a3, a3, a3
+    134d:	bbca      	add.n	a11, a11, a12
+    134f:	bb2a      	add.n	a11, a11, a2
+    1351:	404200        	ssai	2
+    1354:	f139      	s32i.n	a3, a1, 60
+    1356:	00f8      	l32i.n	a15, a0, 0
+    1358:	10a8      	l32i.n	a10, a0, 4
+    135a:	817770        	src	a7, a7, a7
+    135d:	4098      	l32i.n	a9, a0, 16
+    135f:	404b10        	ssai	27
+    1362:	998a      	add.n	a9, a9, a8
+    1364:	816bb0        	src	a6, a11, a11
+    1367:	aaba      	add.n	a10, a10, a11
+    1369:	10a9      	s32i.n	a10, a0, 4
+    136b:	404200        	ssai	2
+    136e:	4099      	s32i.n	a9, a0, 16
+    1370:	446a      	add.n	a4, a4, a6
+    1372:	309750        	xor	a9, a7, a5
+    1375:	3068      	l32i.n	a6, a0, 12
+    1377:	815550        	src	a5, a5, a5
+    137a:	308890        	xor	a8, a8, a9
+    137d:	667a      	add.n	a6, a6, a7
+    137f:	338a      	add.n	a3, a3, a8
+    1381:	334a      	add.n	a3, a3, a4
+    1383:	3069      	s32i.n	a6, a0, 12
+    1385:	2048      	l32i.n	a4, a0, 8
+    1387:	ff3a      	add.n	a15, a15, a3
+    1389:	ff2a      	add.n	a15, a15, a2
+    138b:	030c      	movi.n	a3, 0
+    138d:	012d      	mov.n	a2, a1
+    138f:	00f9      	s32i.n	a15, a0, 0
+    1391:	445a      	add.n	a4, a4, a5
+    1393:	2049      	s32i.n	a4, a0, 8
+    1395:	2021f2        	l32i	a15, a1, 128
+    1398:	044c      	movi.n	a4, 64
+    139a:	fb4a01        	l32r	a0, c4 <sha1_vector+0xc4>
+    139d:	0000c0        	callx0	a0
+    13a0:	1d21c2        	l32i	a12, a1, 116
+    13a3:	30a122        	movi	a2, 0x130
+    13a6:	1c2102        	l32i	a0, a1, 112
+    13a9:	112a      	add.n	a1, a1, a2
+    13ab:	f00d      	ret.n
+    13ad:	000000        	ill
+    13b0:	452301        	l32r	a0, fffd283c <SHA1Final+0xfffd13a0>
+    13b3:	ab8967        	bany	a9, a6, 1362 <SHA1Transform+0x129a>
+    13b6:	efcd      	excw
+    13b8:	fe          	.byte 0xfe
+    13b9:	badc      	bnez.n	a10, 13d8 <SHA1Init+0x14>
+    13bb:	7698      	l32i.n	a9, a6, 28
+    13bd:	103254        	excw
+    13c0:	d2e1f0        	excw
+    13c3:	ff31c3        	excw
+
+000013c4 <SHA1Init>:
+    13c4:	ffff31        	l32r	a3, 13c0 <SHA1Transform+0x12f8>
+    13c7:	fffd41        	l32r	a4, 13bc <SHA1Transform+0x12f4>
+    13ca:	fffb51        	l32r	a5, 13b8 <SHA1Transform+0x12f0>
+    13cd:	fff961        	l32r	a6, 13b4 <SHA1Transform+0x12ec>
+    13d0:	fff871        	l32r	a7, 13b0 <SHA1Transform+0x12e8>
+    13d3:	080c      	movi.n	a8, 0
+    13d5:	6289      	s32i.n	a8, a2, 24
+    13d7:	5289      	s32i.n	a8, a2, 20
+    13d9:	0279      	s32i.n	a7, a2, 0
+    13db:	1269      	s32i.n	a6, a2, 4
+    13dd:	2259      	s32i.n	a5, a2, 8
+    13df:	3249      	s32i.n	a4, a2, 12
+    13e1:	4239      	s32i.n	a3, a2, 16
+    13e3:	f00d      	ret.n
+	...
+
+000013f0 <SHA1Update>:
+    13f0:	e0c112        	addi	a1, a1, -32
+    13f3:	11c9      	s32i.n	a12, a1, 4
+    13f5:	21d9      	s32i.n	a13, a1, 8
+    13f7:	6149      	s32i.n	a4, a1, 24
+    13f9:	41f9      	s32i.n	a15, a1, 16
+    13fb:	31e9      	s32i.n	a14, a1, 12
+    13fd:	0109      	s32i.n	a0, a1, 0
+    13ff:	02ed      	mov.n	a14, a2
+    1401:	6208      	l32i.n	a0, a2, 24
+    1403:	04fd      	mov.n	a15, a4
+    1405:	255df0        	extui	a5, a15, 29, 3
+    1408:	5228      	l32i.n	a2, a2, 20
+    140a:	1144d0        	slli	a4, a4, 3
+    140d:	54d320        	extui	a13, a2, 3, 6
+    1410:	b02f20        	addx8	a2, a15, a2
+    1413:	5e29      	s32i.n	a2, a14, 20
+    1415:	03b247        	bgeu	a2, a4, 141c <SHA1Update+0x2c>
+    1418:	001b      	addi.n	a0, a0, 1
+    141a:	6e09      	s32i.n	a0, a14, 24
+    141c:	4fda      	add.n	a4, a15, a13
+    141e:	505a      	add.n	a5, a0, a5
+    1420:	6e59      	s32i.n	a5, a14, 24
+    1422:	3dd4b6        	bltui	a4, 64, 1463 <SHA1Update+0x73>
+    1425:	5139      	s32i.n	a3, a1, 20
+    1427:	0c4c      	movi.n	a12, 64
+    1429:	2eda      	add.n	a2, a14, a13
+    142b:	1cc222        	addi	a2, a2, 28
+    142e:	c0ccd0        	sub	a12, a12, a13
+    1431:	0c4d      	mov.n	a4, a12
+    1433:	ffed01        	l32r	a0, 13e8 <SHA1Init+0x24>
+    1436:	0000c0        	callx0	a0
+    1439:	0e2d      	mov.n	a2, a14
+    143b:	1cce32        	addi	a3, a14, 28
+    143e:	000005        	call0	1440 <SHA1Update+0x50>
+    1441:	7fa002        	movi	a0, 127
+    1444:	c0d0d0        	sub	a13, a0, a13
+    1447:	11bdf7        	bgeu	a13, a15, 145c <SHA1Update+0x6c>
+    144a:	5138      	l32i.n	a3, a1, 20
+    144c:	0e2d      	mov.n	a2, a14
+    144e:	33ca      	add.n	a3, a3, a12
+    1450:	000005        	call0	1454 <SHA1Update+0x64>
+    1453:	40ccc2        	addi	a12, a12, 64
+    1456:	40cdd2        	addi	a13, a13, 64
+    1459:	ed3df7        	bltu	a13, a15, 144a <SHA1Update+0x5a>
+    145c:	5138      	l32i.n	a3, a1, 20
+    145e:	0d0c      	movi.n	a13, 0
+    1460:	000046        	j	1465 <SHA1Update+0x75>
+    1463:	0c0c      	movi.n	a12, 0
+    1465:	33ca      	add.n	a3, a3, a12
+    1467:	c04fc0        	sub	a4, a15, a12
+    146a:	2eda      	add.n	a2, a14, a13
+    146c:	1cc222        	addi	a2, a2, 28
+    146f:	ffdf01        	l32r	a0, 13ec <SHA1Init+0x28>
+    1472:	0000c0        	callx0	a0
+    1475:	11c8      	l32i.n	a12, a1, 4
+    1477:	21d8      	l32i.n	a13, a1, 8
+    1479:	31e8      	l32i.n	a14, a1, 12
+    147b:	41f8      	l32i.n	a15, a1, 16
+    147d:	0108      	l32i.n	a0, a1, 0
+    147f:	20c112        	addi	a1, a1, 32
+    1482:	f00d      	ret.n
+	...
+
+0000149c <SHA1Final>:
+    149c:	e0c112        	addi	a1, a1, -32
+    149f:	61f9      	s32i.n	a15, a1, 24
+    14a1:	41d9      	s32i.n	a13, a1, 16
+    14a3:	31c9      	s32i.n	a12, a1, 12
+    14a5:	2109      	s32i.n	a0, a1, 8
+    14a7:	51e9      	s32i.n	a14, a1, 20
+    14a9:	000c      	movi.n	a0, 0
+    14ab:	fe7c      	movi.n	a14, -1
+    14ad:	03cd      	mov.n	a12, a3
+    14af:	02dd      	mov.n	a13, a2
+    14b1:	013d      	mov.n	a3, a1
+    14b3:	120c      	movi.n	a2, 1
+    14b5:	3050e0        	xor	a5, a0, a14
+    14b8:	145050        	extui	a5, a5, 0, 2
+    14bb:	1155d0        	slli	a5, a5, 3
+    14be:	400500        	ssr	a5
+    14c1:	0140b6        	bltui	a0, 4, 14c6 <SHA1Final+0x2a>
+    14c4:	020c      	movi.n	a2, 0
+    14c6:	001b      	addi.n	a0, a0, 1
+    14c8:	a042c0        	addx4	a4, a2, a12
+    14cb:	5448      	l32i.n	a4, a4, 20
+    14cd:	120c      	movi.n	a2, 1
+    14cf:	914040        	srl	a4, a4
+    14d2:	004342        	s8i	a4, a3, 0
+    14d5:	331b      	addi.n	a3, a3, 1
+    14d7:	da8066        	bnei	a0, 8, 14b5 <SHA1Final+0x19>
+    14da:	0c2d      	mov.n	a2, a12
+    14dc:	ffea31        	l32r	a3, 1484 <SHA1Update+0x94>
+    14df:	140c      	movi.n	a4, 1
+    14e1:	000005        	call0	14e4 <SHA1Final+0x48>
+    14e4:	5c58      	l32i.n	a5, a12, 20
+    14e6:	f8a162        	movi	a6, 0x1f8
+    14e9:	105560        	and	a5, a5, a6
+    14ec:	c0a162        	movi	a6, 0x1c0
+    14ef:	191567        	beq	a5, a6, 150c <SHA1Final+0x70>
+    14f2:	ffe5f1        	l32r	a15, 1488 <SHA1Update+0x98>
+    14f5:	0c2d      	mov.n	a2, a12
+    14f7:	140c      	movi.n	a4, 1
+    14f9:	0f3d      	mov.n	a3, a15
+    14fb:	000005        	call0	14fc <SHA1Final+0x60>
+    14fe:	5c78      	l32i.n	a7, a12, 20
+    1500:	f8a182        	movi	a8, 0x1f8
+    1503:	107780        	and	a7, a7, a8
+    1506:	c0a182        	movi	a8, 0x1c0
+    1509:	e89787        	bne	a7, a8, 14f5 <SHA1Final+0x59>
+    150c:	0c2d      	mov.n	a2, a12
+    150e:	013d      	mov.n	a3, a1
+    1510:	840c      	movi.n	a4, 8
+    1512:	000005        	call0	1514 <SHA1Final+0x78>
+    1515:	000c      	movi.n	a0, 0
+    1517:	421c      	movi.n	a2, 20
+    1519:	30a0e0        	xor	a10, a0, a14
+    151c:	419200        	srli	a9, a0, 2
+    151f:	a099c0        	addx4	a9, a9, a12
+    1522:	14a0a0        	extui	a10, a10, 0, 2
+    1525:	001b      	addi.n	a0, a0, 1
+    1527:	11aad0        	slli	a10, a10, 3
+    152a:	0998      	l32i.n	a9, a9, 0
+    152c:	400a00        	ssr	a10
+    152f:	919090        	srl	a9, a9
+    1532:	004d92        	s8i	a9, a13, 0
+    1535:	dd1b      	addi.n	a13, a13, 1
+    1537:	de9027        	bne	a0, a2, 1519 <SHA1Final+0x7d>
+    153a:	1ccc22        	addi	a2, a12, 28
+    153d:	030c      	movi.n	a3, 0
+    153f:	044c      	movi.n	a4, 64
+    1541:	ffd201        	l32r	a0, 148c <SHA1Update+0x9c>
+    1544:	0000c0        	callx0	a0
+    1547:	0c2d      	mov.n	a2, a12
+    1549:	030c      	movi.n	a3, 0
+    154b:	441c      	movi.n	a4, 20
+    154d:	ffd001        	l32r	a0, 1490 <SHA1Update+0xa0>
+    1550:	0000c0        	callx0	a0
+    1553:	14cc22        	addi	a2, a12, 20
+    1556:	030c      	movi.n	a3, 0
+    1558:	840c      	movi.n	a4, 8
+    155a:	ffce01        	l32r	a0, 1494 <SHA1Update+0xa4>
+    155d:	0000c0        	callx0	a0
+    1560:	012d      	mov.n	a2, a1
+    1562:	030c      	movi.n	a3, 0
+    1564:	840c      	movi.n	a4, 8
+    1566:	ffcc01        	l32r	a0, 1498 <SHA1Update+0xa8>
+    1569:	0000c0        	callx0	a0
+    156c:	31c8      	l32i.n	a12, a1, 12
+    156e:	41d8      	l32i.n	a13, a1, 16
+    1570:	51e8      	l32i.n	a14, a1, 20
+    1572:	61f8      	l32i.n	a15, a1, 24
+    1574:	2108      	l32i.n	a0, a1, 8
+    1576:	20c112        	addi	a1, a1, 32
+    1579:	f00d      	ret.n

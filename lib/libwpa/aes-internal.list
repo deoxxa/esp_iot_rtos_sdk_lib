@@ -1,0 +1,110 @@
+
+aes-internal.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <rijndaelKeySetupEnc-0x10>:
+   0:	ff0000        	excw
+   3:	ff0000        	excw
+   6:	000000        	ill
+   9:	ff0000        	excw
+   c:	000400        	excw
+	...
+
+00000010 <rijndaelKeySetupEnc>:
+  10:	fffc81        	l32r	a8, 0 <rijndaelKeySetupEnc-0x10>
+  13:	fffc71        	l32r	a7, 4 <rijndaelKeySetupEnc-0xc>
+  16:	f0c112        	addi	a1, a1, -16
+  19:	fffb61        	l32r	a6, 8 <rijndaelKeySetupEnc-0x8>
+  1c:	030352        	l8ui	a5, a3, 3
+  1f:	020342        	l8ui	a4, a3, 2
+  22:	000392        	l8ui	a9, a3, 0
+  25:	11c9      	s32i.n	a12, a1, 4
+  27:	0109      	s32i.n	a0, a1, 0
+  29:	0103c2        	l8ui	a12, a3, 1
+  2c:	fff801        	l32r	a0, c <rijndaelKeySetupEnc-0x4>
+  2f:	019980        	slli	a9, a9, 24
+  32:	114480        	slli	a4, a4, 8
+  35:	a0ab      	addi.n	a10, a0, 10
+  37:	fcd0b2        	addmi	a11, a0, 0xfffffc00
+  3a:	305540        	xor	a5, a5, a4
+  3d:	11cc00        	slli	a12, a12, 16
+  40:	3099c0        	xor	a9, a9, a12
+  43:	305590        	xor	a5, a5, a9
+  46:	0259      	s32i.n	a5, a2, 0
+  48:	070392        	l8ui	a9, a3, 7
+  4b:	060352        	l8ui	a5, a3, 6
+  4e:	050342        	l8ui	a4, a3, 5
+  51:	0403c2        	l8ui	a12, a3, 4
+  54:	114400        	slli	a4, a4, 16
+  57:	01cc80        	slli	a12, a12, 24
+  5a:	115580        	slli	a5, a5, 8
+  5d:	309950        	xor	a9, a9, a5
+  60:	30cc40        	xor	a12, a12, a4
+  63:	3099c0        	xor	a9, a9, a12
+  66:	1299      	s32i.n	a9, a2, 4
+  68:	0b03c2        	l8ui	a12, a3, 11
+  6b:	0a0392        	l8ui	a9, a3, 10
+  6e:	090352        	l8ui	a5, a3, 9
+  71:	080342        	l8ui	a4, a3, 8
+  74:	115500        	slli	a5, a5, 16
+  77:	014480        	slli	a4, a4, 24
+  7a:	119980        	slli	a9, a9, 8
+  7d:	30cc90        	xor	a12, a12, a9
+  80:	304450        	xor	a4, a4, a5
+  83:	30cc40        	xor	a12, a12, a4
+  86:	22c9      	s32i.n	a12, a2, 8
+  88:	0f0342        	l8ui	a4, a3, 15
+  8b:	0e03c2        	l8ui	a12, a3, 14
+  8e:	0d0392        	l8ui	a9, a3, 13
+  91:	0c0352        	l8ui	a5, a3, 12
+  94:	119900        	slli	a9, a9, 16
+  97:	015580        	slli	a5, a5, 24
+  9a:	11cc80        	slli	a12, a12, 8
+  9d:	3044c0        	xor	a4, a4, a12
+  a0:	305590        	xor	a5, a5, a9
+  a3:	304450        	xor	a4, a4, a5
+  a6:	3249      	s32i.n	a4, a2, 12
+  a8:	3248      	l32i.n	a4, a2, 12
+  aa:	000092        	l8ui	a9, a0, 0
+  ad:	001b      	addi.n	a0, a0, 1
+  af:	019980        	slli	a9, a9, 24
+  b2:	743040        	extui	a3, a4, 0, 8
+  b5:	75c840        	extui	a12, a4, 24, 8
+  b8:	755040        	extui	a5, a4, 16, 8
+  bb:	a055b0        	addx4	a5, a5, a11
+  be:	a0ccb0        	addx4	a12, a12, a11
+  c1:	a033b0        	addx4	a3, a3, a11
+  c4:	0338      	l32i.n	a3, a3, 0
+  c6:	0cc8      	l32i.n	a12, a12, 0
+  c8:	0558      	l32i.n	a5, a5, 0
+  ca:	74c8c0        	extui	a12, a12, 8, 8
+  cd:	115580        	slli	a5, a5, 8
+  d0:	3099c0        	xor	a9, a9, a12
+  d3:	74c840        	extui	a12, a4, 8, 8
+  d6:	a0ccb0        	addx4	a12, a12, a11
+  d9:	0cc8      	l32i.n	a12, a12, 0
+  db:	103370        	and	a3, a3, a7
+  de:	10cc80        	and	a12, a12, a8
+  e1:	3033c0        	xor	a3, a3, a12
+  e4:	02c8      	l32i.n	a12, a2, 0
+  e6:	105560        	and	a5, a5, a6
+  e9:	30cc50        	xor	a12, a12, a5
+  ec:	30cc30        	xor	a12, a12, a3
+  ef:	1258      	l32i.n	a5, a2, 4
+  f1:	2238      	l32i.n	a3, a2, 8
+  f3:	3099c0        	xor	a9, a9, a12
+  f6:	4299      	s32i.n	a9, a2, 16
+  f8:	305590        	xor	a5, a5, a9
+  fb:	303350        	xor	a3, a3, a5
+  fe:	5259      	s32i.n	a5, a2, 20
+ 100:	6239      	s32i.n	a3, a2, 24
+ 102:	303340        	xor	a3, a3, a4
+ 105:	7239      	s32i.n	a3, a2, 28
+ 107:	10c222        	addi	a2, a2, 16
+ 10a:	9a90a7        	bne	a0, a10, a8 <rijndaelKeySetupEnc+0x98>
+ 10d:	11c8      	l32i.n	a12, a1, 4
+ 10f:	0108      	l32i.n	a0, a1, 0
+ 111:	10c112        	addi	a1, a1, 16
+ 114:	f00d      	ret.n

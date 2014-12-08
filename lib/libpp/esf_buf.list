@@ -1,0 +1,682 @@
+
+esf_buf.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <esf_rx_buf_alloc-0x24>:
+	...
+   c:	effe00        	excw
+   f:	3f          	.byte 0x3f
+  10:	000000        	ill
+  13:	fe0000        	excw
+  16:	ef          	.byte 0xef
+  17:	3f          	.byte 0x3f
+	...
+
+00000024 <esf_rx_buf_alloc>:
+  24:	f0c112        	addi	a1, a1, -16
+  27:	0109      	s32i.n	a0, a1, 0
+  29:	117266        	bnei	a2, 7, 3e <esf_rx_buf_alloc+0x1a>
+  2c:	fff551        	l32r	a5, 0 <esf_rx_buf_alloc-0x24>
+  2f:	fff501        	l32r	a0, 4 <esf_rx_buf_alloc-0x20>
+  32:	4528      	l32i.n	a2, a5, 16
+  34:	000032        	l8ui	a3, a0, 0
+  37:	e2cc      	bnez.n	a2, 49 <esf_rx_buf_alloc+0x25>
+  39:	020c      	movi.n	a2, 0
+  3b:	0000c6        	j	42 <esf_rx_buf_alloc+0x1e>
+  3e:	000c      	movi.n	a0, 0
+  40:	002d      	mov.n	a2, a0
+  42:	0108      	l32i.n	a0, a1, 0
+  44:	10c112        	addi	a1, a1, 16
+  47:	f00d      	ret.n
+  49:	03ec      	bnez.n	a3, 6d <esf_rx_buf_alloc+0x49>
+  4b:	fff401        	l32r	a0, 1c <esf_rx_buf_alloc-0x8>
+  4e:	0000c0        	callx0	a0
+  51:	ffed01        	l32r	a0, 8 <esf_rx_buf_alloc-0x1c>
+  54:	0020c0        	memw
+  57:	ffed41        	l32r	a4, c <esf_rx_buf_alloc-0x18>
+  5a:	802452        	l32i	a5, a4, 0x200
+  5d:	066c      	movi.n	a6, -32
+  5f:	105560        	and	a5, a5, a6
+  62:	0020c0        	memw
+  65:	806452        	s32i	a5, a4, 0x200
+  68:	ffea51        	l32r	a5, 10 <esf_rx_buf_alloc-0x14>
+  6b:	4528      	l32i.n	a2, a5, 16
+  6d:	1129      	s32i.n	a2, a1, 4
+  6f:	080c      	movi.n	a8, 0
+  71:	7298      	l32i.n	a9, a2, 28
+  73:	4599      	s32i.n	a9, a5, 16
+  75:	7289      	s32i.n	a8, a2, 28
+  77:	000072        	l8ui	a7, a0, 0
+  7a:	020d      	mov.n	a0, a2
+  7c:	27ec      	bnez.n	a7, a2 <esf_rx_buf_alloc+0x7e>
+  7e:	100c      	movi.n	a0, 1
+  80:	0020c0        	memw
+  83:	ffe4b1        	l32r	a11, 14 <esf_rx_buf_alloc-0x10>
+  86:	802ba2        	l32i	a10, a11, 0x200
+  89:	026c      	movi.n	a2, -32
+  8b:	10aa20        	and	a10, a10, a2
+  8e:	20aa00        	or	a10, a10, a0
+  91:	0020c0        	memw
+  94:	806ba2        	s32i	a10, a11, 0x200
+  97:	ffe201        	l32r	a0, 20 <esf_rx_buf_alloc-0x4>
+  9a:	0000c0        	callx0	a0
+  9d:	ffde51        	l32r	a5, 18 <esf_rx_buf_alloc-0xc>
+  a0:	1108      	l32i.n	a0, a1, 4
+  a2:	5538      	l32i.n	a3, a5, 20
+  a4:	330b      	addi.n	a3, a3, -1
+  a6:	5539      	s32i.n	a3, a5, 20
+  a8:	ffe506        	j	40 <esf_rx_buf_alloc+0x1c>
+	...
+  b7:	fe0000        	excw
+  ba:	ef          	.byte 0xef
+  bb:	3f          	.byte 0x3f
+  bc:	000000        	ill
+  bf:	fe0000        	excw
+  c2:	ef          	.byte 0xef
+  c3:	3f          	.byte 0x3f
+  c4:	004000        	break	0, 0
+  c7:	000000        	ill
+  ca:	000000        	ill
+  cd:	fe          	.byte 0xfe
+  ce:	ef          	.byte 0xef
+  cf:	3f          	.byte 0x3f
+  d0:	000000        	ill
+  d3:	fe0000        	excw
+  d6:	ef          	.byte 0xef
+  d7:	3f          	.byte 0x3f
+  d8:	008000        	excw
+  db:	000000        	ill
+  de:	000000        	ill
+  e1:	fe          	.byte 0xfe
+  e2:	ef          	.byte 0xef
+  e3:	3f          	.byte 0x3f
+  e4:	000000        	ill
+  e7:	fe0000        	excw
+  ea:	ef          	.byte 0xef
+  eb:	3f          	.byte 0x3f
+  ec:	200000        	or	a0, a0, a0
+  ef:	000000        	ill
+  f2:	000000        	ill
+  f5:	fe          	.byte 0xfe
+  f6:	ef          	.byte 0xef
+  f7:	3f          	.byte 0x3f
+  f8:	000000        	ill
+  fb:	fe0000        	excw
+  fe:	ef          	.byte 0xef
+  ff:	3f          	.byte 0x3f
+ 100:	002000        	isync
+	...
+
+00000128 <esf_buf_alloc>:
+ 128:	0a0c      	movi.n	a10, 0
+ 12a:	ffe071        	l32r	a7, ac <esf_rx_buf_alloc+0x88>
+ 12d:	ffe061        	l32r	a6, b0 <esf_rx_buf_alloc+0x8c>
+ 130:	e0c112        	addi	a1, a1, -32
+ 133:	21c9      	s32i.n	a12, a1, 8
+ 135:	1109      	s32i.n	a0, a1, 4
+ 137:	0e1366        	bnei	a3, 1, 149 <esf_buf_alloc+0x21>
+ 13a:	b28c      	beqz.n	a2, 149 <esf_buf_alloc+0x21>
+ 13c:	06c8      	l32i.n	a12, a6, 0
+ 13e:	000782        	l8ui	a8, a7, 0
+ 141:	164c56        	bnez	a12, 2a9 <esf_buf_alloc+0x181>
+ 144:	0acd      	mov.n	a12, a10
+ 146:	005506        	j	29e <esf_buf_alloc+0x176>
+ 149:	6d4366        	bnei	a3, 4, 1ba <esf_buf_alloc+0x92>
+ 14c:	16c8      	l32i.n	a12, a6, 4
+ 14e:	000702        	l8ui	a0, a7, 0
+ 151:	1dcc16        	beqz	a12, 331 <esf_buf_alloc+0x209>
+ 154:	20ec      	bnez.n	a0, 17a <esf_buf_alloc+0x52>
+ 156:	ffeb01        	l32r	a0, 104 <esf_rx_buf_alloc+0xe0>
+ 159:	0000c0        	callx0	a0
+ 15c:	0a0c      	movi.n	a10, 0
+ 15e:	ffd571        	l32r	a7, b4 <esf_rx_buf_alloc+0x90>
+ 161:	0020c0        	memw
+ 164:	ffd531        	l32r	a3, b8 <esf_rx_buf_alloc+0x94>
+ 167:	802322        	l32i	a2, a3, 0x200
+ 16a:	046c      	movi.n	a4, -32
+ 16c:	102240        	and	a2, a2, a4
+ 16f:	0020c0        	memw
+ 172:	ffd261        	l32r	a6, bc <esf_rx_buf_alloc+0x98>
+ 175:	16c8      	l32i.n	a12, a6, 4
+ 177:	806322        	s32i	a2, a3, 0x200
+ 17a:	0c0d      	mov.n	a0, a12
+ 17c:	51c9      	s32i.n	a12, a1, 20
+ 17e:	7c88      	l32i.n	a8, a12, 28
+ 180:	7ca9      	s32i.n	a10, a12, 28
+ 182:	000752        	l8ui	a5, a7, 0
+ 185:	1689      	s32i.n	a8, a6, 4
+ 187:	f5dc      	bnez.n	a5, 1aa <esf_buf_alloc+0x82>
+ 189:	0020c0        	memw
+ 18c:	ffcda1        	l32r	a10, c0 <esf_rx_buf_alloc+0x9c>
+ 18f:	802a92        	l32i	a9, a10, 0x200
+ 192:	0b6c      	movi.n	a11, -32
+ 194:	1099b0        	and	a9, a9, a11
+ 197:	1b0c      	movi.n	a11, 1
+ 199:	2099b0        	or	a9, a9, a11
+ 19c:	0020c0        	memw
+ 19f:	806a92        	s32i	a9, a10, 0x200
+ 1a2:	ffd901        	l32r	a0, 108 <esf_rx_buf_alloc+0xe4>
+ 1a5:	0000c0        	callx0	a0
+ 1a8:	5108      	l32i.n	a0, a1, 20
+ 1aa:	1038      	l32i.n	a3, a0, 4
+ 1ac:	4028      	l32i.n	a2, a0, 16
+ 1ae:	1329      	s32i.n	a2, a3, 4
+ 1b0:	8028      	l32i.n	a2, a0, 32
+ 1b2:	ffc431        	l32r	a3, c4 <esf_rx_buf_alloc+0xa0>
+ 1b5:	0208      	l32i.n	a0, a2, 0
+ 1b7:	005886        	j	31d <esf_buf_alloc+0x1f5>
+ 1ba:	735366        	bnei	a3, 5, 231 <esf_buf_alloc+0x109>
+ 1bd:	26c8      	l32i.n	a12, a6, 8
+ 1bf:	000742        	l8ui	a4, a7, 0
+ 1c2:	16bc16        	beqz	a12, 331 <esf_buf_alloc+0x209>
+ 1c5:	24ec      	bnez.n	a4, 1eb <esf_buf_alloc+0xc3>
+ 1c7:	ffd101        	l32r	a0, 10c <esf_rx_buf_alloc+0xe8>
+ 1ca:	0000c0        	callx0	a0
+ 1cd:	0a0c      	movi.n	a10, 0
+ 1cf:	ffbe71        	l32r	a7, c8 <esf_rx_buf_alloc+0xa4>
+ 1d2:	0020c0        	memw
+ 1d5:	ffbd61        	l32r	a6, cc <esf_rx_buf_alloc+0xa8>
+ 1d8:	802652        	l32i	a5, a6, 0x200
+ 1db:	086c      	movi.n	a8, -32
+ 1dd:	105580        	and	a5, a5, a8
+ 1e0:	0020c0        	memw
+ 1e3:	806652        	s32i	a5, a6, 0x200
+ 1e6:	ffba61        	l32r	a6, d0 <esf_rx_buf_alloc+0xac>
+ 1e9:	26c8      	l32i.n	a12, a6, 8
+ 1eb:	7cb8      	l32i.n	a11, a12, 28
+ 1ed:	7ca9      	s32i.n	a10, a12, 28
+ 1ef:	000792        	l8ui	a9, a7, 0
+ 1f2:	26b9      	s32i.n	a11, a6, 8
+ 1f4:	d9dc      	bnez.n	a9, 215 <esf_buf_alloc+0xed>
+ 1f6:	0020c0        	memw
+ 1f9:	ffb621        	l32r	a2, d4 <esf_rx_buf_alloc+0xb0>
+ 1fc:	802202        	l32i	a0, a2, 0x200
+ 1ff:	036c      	movi.n	a3, -32
+ 201:	100030        	and	a0, a0, a3
+ 204:	130c      	movi.n	a3, 1
+ 206:	200030        	or	a0, a0, a3
+ 209:	0020c0        	memw
+ 20c:	806202        	s32i	a0, a2, 0x200
+ 20f:	ffc001        	l32r	a0, 110 <esf_rx_buf_alloc+0xec>
+ 212:	0000c0        	callx0	a0
+ 215:	8c28      	l32i.n	a2, a12, 32
+ 217:	030c      	movi.n	a3, 0
+ 219:	841c      	movi.n	a4, 24
+ 21b:	ffbe01        	l32r	a0, 114 <esf_rx_buf_alloc+0xf0>
+ 21e:	0000c0        	callx0	a0
+ 221:	1c58      	l32i.n	a5, a12, 4
+ 223:	4c48      	l32i.n	a4, a12, 16
+ 225:	1549      	s32i.n	a4, a5, 4
+ 227:	8c28      	l32i.n	a2, a12, 32
+ 229:	ffab31        	l32r	a3, d8 <esf_rx_buf_alloc+0xb4>
+ 22c:	0208      	l32i.n	a0, a2, 0
+ 22e:	003ac6        	j	31d <esf_buf_alloc+0x1f5>
+ 231:	676366        	bnei	a3, 6, 29c <esf_buf_alloc+0x174>
+ 234:	36c8      	l32i.n	a12, a6, 12
+ 236:	000782        	l8ui	a8, a7, 0
+ 239:	0f4c16        	beqz	a12, 331 <esf_buf_alloc+0x209>
+ 23c:	28ec      	bnez.n	a8, 262 <esf_buf_alloc+0x13a>
+ 23e:	ffb601        	l32r	a0, 118 <esf_rx_buf_alloc+0xf4>
+ 241:	0000c0        	callx0	a0
+ 244:	0a0c      	movi.n	a10, 0
+ 246:	ffa571        	l32r	a7, dc <esf_rx_buf_alloc+0xb8>
+ 249:	0020c0        	memw
+ 24c:	ffa5b1        	l32r	a11, e0 <esf_rx_buf_alloc+0xbc>
+ 24f:	802b92        	l32i	a9, a11, 0x200
+ 252:	0c6c      	movi.n	a12, -32
+ 254:	1099c0        	and	a9, a9, a12
+ 257:	0020c0        	memw
+ 25a:	ffa261        	l32r	a6, e4 <esf_rx_buf_alloc+0xc0>
+ 25d:	36c8      	l32i.n	a12, a6, 12
+ 25f:	806b92        	s32i	a9, a11, 0x200
+ 262:	0c0d      	mov.n	a0, a12
+ 264:	41c9      	s32i.n	a12, a1, 16
+ 266:	7c38      	l32i.n	a3, a12, 28
+ 268:	7ca9      	s32i.n	a10, a12, 28
+ 26a:	000722        	l8ui	a2, a7, 0
+ 26d:	3639      	s32i.n	a3, a6, 12
+ 26f:	f2dc      	bnez.n	a2, 292 <esf_buf_alloc+0x16a>
+ 271:	0020c0        	memw
+ 274:	ff9d51        	l32r	a5, e8 <esf_rx_buf_alloc+0xc4>
+ 277:	802542        	l32i	a4, a5, 0x200
+ 27a:	066c      	movi.n	a6, -32
+ 27c:	104460        	and	a4, a4, a6
+ 27f:	160c      	movi.n	a6, 1
+ 281:	204460        	or	a4, a4, a6
+ 284:	0020c0        	memw
+ 287:	806542        	s32i	a4, a5, 0x200
+ 28a:	ffa401        	l32r	a0, 11c <esf_rx_buf_alloc+0xf8>
+ 28d:	0000c0        	callx0	a0
+ 290:	4108      	l32i.n	a0, a1, 16
+ 292:	8028      	l32i.n	a2, a0, 32
+ 294:	ff9631        	l32r	a3, ec <esf_rx_buf_alloc+0xc8>
+ 297:	0208      	l32i.n	a0, a2, 0
+ 299:	002006        	j	31d <esf_buf_alloc+0x1f5>
+ 29c:	0c0c      	movi.n	a12, 0
+ 29e:	0c2d      	mov.n	a2, a12
+ 2a0:	1108      	l32i.n	a0, a1, 4
+ 2a2:	21c8      	l32i.n	a12, a1, 8
+ 2a4:	20c112        	addi	a1, a1, 32
+ 2a7:	f00d      	ret.n
+ 2a9:	0129      	s32i.n	a2, a1, 0
+ 2ab:	28ec      	bnez.n	a8, 2d1 <esf_buf_alloc+0x1a9>
+ 2ad:	ff9c01        	l32r	a0, 120 <esf_rx_buf_alloc+0xfc>
+ 2b0:	0000c0        	callx0	a0
+ 2b3:	0a0c      	movi.n	a10, 0
+ 2b5:	ff8e71        	l32r	a7, f0 <esf_rx_buf_alloc+0xcc>
+ 2b8:	0020c0        	memw
+ 2bb:	ff8eb1        	l32r	a11, f4 <esf_rx_buf_alloc+0xd0>
+ 2be:	802b92        	l32i	a9, a11, 0x200
+ 2c1:	0c6c      	movi.n	a12, -32
+ 2c3:	1099c0        	and	a9, a9, a12
+ 2c6:	0020c0        	memw
+ 2c9:	ff8b61        	l32r	a6, f8 <esf_rx_buf_alloc+0xd4>
+ 2cc:	06c8      	l32i.n	a12, a6, 0
+ 2ce:	806b92        	s32i	a9, a11, 0x200
+ 2d1:	0c0d      	mov.n	a0, a12
+ 2d3:	31c9      	s32i.n	a12, a1, 12
+ 2d5:	7c38      	l32i.n	a3, a12, 28
+ 2d7:	7ca9      	s32i.n	a10, a12, 28
+ 2d9:	000722        	l8ui	a2, a7, 0
+ 2dc:	0639      	s32i.n	a3, a6, 0
+ 2de:	f2dc      	bnez.n	a2, 301 <esf_buf_alloc+0x1d9>
+ 2e0:	0020c0        	memw
+ 2e3:	ff8651        	l32r	a5, fc <esf_rx_buf_alloc+0xd8>
+ 2e6:	802542        	l32i	a4, a5, 0x200
+ 2e9:	066c      	movi.n	a6, -32
+ 2eb:	104460        	and	a4, a4, a6
+ 2ee:	160c      	movi.n	a6, 1
+ 2f0:	204460        	or	a4, a4, a6
+ 2f3:	0020c0        	memw
+ 2f6:	806542        	s32i	a4, a5, 0x200
+ 2f9:	ff8a01        	l32r	a0, 124 <esf_rx_buf_alloc+0x100>
+ 2fc:	0000c0        	callx0	a0
+ 2ff:	3108      	l32i.n	a0, a1, 12
+ 301:	0178      	l32i.n	a7, a1, 0
+ 303:	1098      	l32i.n	a9, a0, 4
+ 305:	0079      	s32i.n	a7, a0, 0
+ 307:	051782        	l16ui	a8, a7, 10
+ 30a:	1778      	l32i.n	a7, a7, 4
+ 30c:	1979      	s32i.n	a7, a9, 4
+ 30e:	0b5082        	s16i	a8, a0, 22
+ 311:	dcc772        	addi	a7, a7, -36
+ 314:	8028      	l32i.n	a2, a0, 32
+ 316:	4079      	s32i.n	a7, a0, 16
+ 318:	0208      	l32i.n	a0, a2, 0
+ 31a:	ff7931        	l32r	a3, 100 <esf_rx_buf_alloc+0xdc>
+ 31d:	548000        	extui	a8, a0, 0, 6
+ 320:	419600        	srli	a9, a0, 6
+ 323:	209930        	or	a9, a9, a3
+ 326:	1199a0        	slli	a9, a9, 6
+ 329:	208890        	or	a8, a8, a9
+ 32c:	0289      	s32i.n	a8, a2, 0
+ 32e:	ffdb06        	j	29e <esf_buf_alloc+0x176>
+ 331:	0c0c      	movi.n	a12, 0
+ 333:	ffd9c6        	j	29e <esf_buf_alloc+0x176>
+	...
+ 33e:	000000        	ill
+ 341:	fe          	.byte 0xfe
+ 342:	ef          	.byte 0xef
+ 343:	3f          	.byte 0x3f
+ 344:	000000        	ill
+ 347:	fe0000        	excw
+ 34a:	ef          	.byte 0xef
+ 34b:	3f          	.byte 0x3f
+ 34c:	000000        	ill
+ 34f:	fe0000        	excw
+ 352:	ef          	.byte 0xef
+ 353:	3f          	.byte 0x3f
+	...
+ 35c:	effe00        	excw
+ 35f:	3f          	.byte 0x3f
+ 360:	000000        	ill
+ 363:	fe0000        	excw
+ 366:	ef          	.byte 0xef
+ 367:	3f          	.byte 0x3f
+	...
+ 370:	effe00        	excw
+ 373:	3f          	.byte 0x3f
+	...
+ 37c:	effe00        	excw
+ 37f:	3f          	.byte 0x3f
+ 380:	000000        	ill
+ 383:	fe0000        	excw
+ 386:	ef          	.byte 0xef
+ 387:	3f          	.byte 0x3f
+	...
+ 390:	effe00        	excw
+ 393:	3f          	.byte 0x3f
+ 394:	000000        	ill
+ 397:	fe0000        	excw
+ 39a:	ef          	.byte 0xef
+ 39b:	3f          	.byte 0x3f
+	...
+
+000003d8 <esf_buf_recycle>:
+ 3d8:	430b      	addi.n	a4, a3, -1
+ 3da:	f0c112        	addi	a1, a1, -16
+ 3dd:	1109      	s32i.n	a0, a1, 4
+ 3df:	0129      	s32i.n	a2, a1, 0
+ 3e1:	1a4416        	beqz	a4, 589 <esf_buf_recycle+0x1b1>
+ 3e4:	fec392        	addi	a9, a3, -2
+ 3e7:	19e916        	beqz	a9, 589 <esf_buf_recycle+0x1b1>
+ 3ea:	634366        	bnei	a3, 4, 451 <esf_buf_recycle+0x79>
+ 3ed:	8228      	l32i.n	a2, a2, 32
+ 3ef:	030c      	movi.n	a3, 0
+ 3f1:	841c      	movi.n	a4, 24
+ 3f3:	ffea01        	l32r	a0, 39c <esf_buf_alloc+0x274>
+ 3f6:	0000c0        	callx0	a0
+ 3f9:	ffcf01        	l32r	a0, 338 <esf_buf_alloc+0x210>
+ 3fc:	000032        	l8ui	a3, a0, 0
+ 3ff:	b3dc      	bnez.n	a3, 41e <esf_buf_recycle+0x46>
+ 401:	ffe701        	l32r	a0, 3a0 <esf_buf_alloc+0x278>
+ 404:	0000c0        	callx0	a0
+ 407:	ffcd01        	l32r	a0, 33c <esf_buf_alloc+0x214>
+ 40a:	0020c0        	memw
+ 40d:	ffcc51        	l32r	a5, 340 <esf_buf_alloc+0x218>
+ 410:	802542        	l32i	a4, a5, 0x200
+ 413:	066c      	movi.n	a6, -32
+ 415:	104460        	and	a4, a4, a6
+ 418:	0020c0        	memw
+ 41b:	806542        	s32i	a4, a5, 0x200
+ 41e:	ffc991        	l32r	a9, 344 <esf_buf_alloc+0x21c>
+ 421:	0188      	l32i.n	a8, a1, 0
+ 423:	19a8      	l32i.n	a10, a9, 4
+ 425:	78a9      	s32i.n	a10, a8, 28
+ 427:	000072        	l8ui	a7, a0, 0
+ 42a:	1989      	s32i.n	a8, a9, 4
+ 42c:	1bb756        	bnez	a7, 5eb <esf_buf_recycle+0x213>
+ 42f:	0020c0        	memw
+ 432:	ffc501        	l32r	a0, 348 <esf_buf_alloc+0x220>
+ 435:	8020b2        	l32i	a11, a0, 0x200
+ 438:	026c      	movi.n	a2, -32
+ 43a:	10bb20        	and	a11, a11, a2
+ 43d:	120c      	movi.n	a2, 1
+ 43f:	20bb20        	or	a11, a11, a2
+ 442:	0020c0        	memw
+ 445:	8060b2        	s32i	a11, a0, 0x200
+ 448:	ffd701        	l32r	a0, 3a4 <esf_buf_alloc+0x27c>
+ 44b:	0000c0        	callx0	a0
+ 44e:	006646        	j	5eb <esf_buf_recycle+0x213>
+ 451:	635366        	bnei	a3, 5, 4b8 <esf_buf_recycle+0xe0>
+ 454:	8228      	l32i.n	a2, a2, 32
+ 456:	030c      	movi.n	a3, 0
+ 458:	841c      	movi.n	a4, 24
+ 45a:	ffd301        	l32r	a0, 3a8 <esf_buf_alloc+0x280>
+ 45d:	0000c0        	callx0	a0
+ 460:	ffbb31        	l32r	a3, 34c <esf_buf_alloc+0x224>
+ 463:	000332        	l8ui	a3, a3, 0
+ 466:	83dc      	bnez.n	a3, 482 <esf_buf_recycle+0xaa>
+ 468:	ffd101        	l32r	a0, 3ac <esf_buf_alloc+0x284>
+ 46b:	0000c0        	callx0	a0
+ 46e:	0020c0        	memw
+ 471:	ffb751        	l32r	a5, 350 <esf_buf_alloc+0x228>
+ 474:	802542        	l32i	a4, a5, 0x200
+ 477:	066c      	movi.n	a6, -32
+ 479:	104460        	and	a4, a4, a6
+ 47c:	0020c0        	memw
+ 47f:	806542        	s32i	a4, a5, 0x200
+ 482:	ffb571        	l32r	a7, 358 <esf_buf_alloc+0x230>
+ 485:	ffb391        	l32r	a9, 354 <esf_buf_alloc+0x22c>
+ 488:	0188      	l32i.n	a8, a1, 0
+ 48a:	29a8      	l32i.n	a10, a9, 8
+ 48c:	78a9      	s32i.n	a10, a8, 28
+ 48e:	000772        	l8ui	a7, a7, 0
+ 491:	2989      	s32i.n	a8, a9, 8
+ 493:	154756        	bnez	a7, 5eb <esf_buf_recycle+0x213>
+ 496:	0020c0        	memw
+ 499:	ffb001        	l32r	a0, 35c <esf_buf_alloc+0x234>
+ 49c:	8020b2        	l32i	a11, a0, 0x200
+ 49f:	026c      	movi.n	a2, -32
+ 4a1:	10bb20        	and	a11, a11, a2
+ 4a4:	120c      	movi.n	a2, 1
+ 4a6:	20bb20        	or	a11, a11, a2
+ 4a9:	0020c0        	memw
+ 4ac:	8060b2        	s32i	a11, a0, 0x200
+ 4af:	ffc001        	l32r	a0, 3b0 <esf_buf_alloc+0x288>
+ 4b2:	0000c0        	callx0	a0
+ 4b5:	004c86        	j	5eb <esf_buf_recycle+0x213>
+ 4b8:	636366        	bnei	a3, 6, 51f <esf_buf_recycle+0x147>
+ 4bb:	8228      	l32i.n	a2, a2, 32
+ 4bd:	030c      	movi.n	a3, 0
+ 4bf:	841c      	movi.n	a4, 24
+ 4c1:	ffbc01        	l32r	a0, 3b4 <esf_buf_alloc+0x28c>
+ 4c4:	0000c0        	callx0	a0
+ 4c7:	ffa631        	l32r	a3, 360 <esf_buf_alloc+0x238>
+ 4ca:	000332        	l8ui	a3, a3, 0
+ 4cd:	83dc      	bnez.n	a3, 4e9 <esf_buf_recycle+0x111>
+ 4cf:	ffba01        	l32r	a0, 3b8 <esf_buf_alloc+0x290>
+ 4d2:	0000c0        	callx0	a0
+ 4d5:	0020c0        	memw
+ 4d8:	ffa351        	l32r	a5, 364 <esf_buf_alloc+0x23c>
+ 4db:	802542        	l32i	a4, a5, 0x200
+ 4de:	066c      	movi.n	a6, -32
+ 4e0:	104460        	and	a4, a4, a6
+ 4e3:	0020c0        	memw
+ 4e6:	806542        	s32i	a4, a5, 0x200
+ 4e9:	ffa071        	l32r	a7, 36c <esf_buf_alloc+0x244>
+ 4ec:	ff9f91        	l32r	a9, 368 <esf_buf_alloc+0x240>
+ 4ef:	0188      	l32i.n	a8, a1, 0
+ 4f1:	39a8      	l32i.n	a10, a9, 12
+ 4f3:	78a9      	s32i.n	a10, a8, 28
+ 4f5:	000772        	l8ui	a7, a7, 0
+ 4f8:	3989      	s32i.n	a8, a9, 12
+ 4fa:	0ed756        	bnez	a7, 5eb <esf_buf_recycle+0x213>
+ 4fd:	0020c0        	memw
+ 500:	ff9c01        	l32r	a0, 370 <esf_buf_alloc+0x248>
+ 503:	8020b2        	l32i	a11, a0, 0x200
+ 506:	026c      	movi.n	a2, -32
+ 508:	10bb20        	and	a11, a11, a2
+ 50b:	120c      	movi.n	a2, 1
+ 50d:	20bb20        	or	a11, a11, a2
+ 510:	0020c0        	memw
+ 513:	8060b2        	s32i	a11, a0, 0x200
+ 516:	ffa901        	l32r	a0, 3bc <esf_buf_alloc+0x294>
+ 519:	0000c0        	callx0	a0
+ 51c:	0032c6        	j	5eb <esf_buf_recycle+0x213>
+ 51f:	f9c342        	addi	a4, a3, -7
+ 522:	0c5456        	bnez	a4, 5eb <esf_buf_recycle+0x213>
+ 525:	8228      	l32i.n	a2, a2, 32
+ 527:	030c      	movi.n	a3, 0
+ 529:	c40c      	movi.n	a4, 12
+ 52b:	ffa501        	l32r	a0, 3c0 <esf_buf_alloc+0x298>
+ 52e:	0000c0        	callx0	a0
+ 531:	ff9001        	l32r	a0, 374 <esf_buf_alloc+0x24c>
+ 534:	000032        	l8ui	a3, a0, 0
+ 537:	b3dc      	bnez.n	a3, 556 <esf_buf_recycle+0x17e>
+ 539:	ffa201        	l32r	a0, 3c4 <esf_buf_alloc+0x29c>
+ 53c:	0000c0        	callx0	a0
+ 53f:	ff8e01        	l32r	a0, 378 <esf_buf_alloc+0x250>
+ 542:	0020c0        	memw
+ 545:	ff8d51        	l32r	a5, 37c <esf_buf_alloc+0x254>
+ 548:	802542        	l32i	a4, a5, 0x200
+ 54b:	066c      	movi.n	a6, -32
+ 54d:	104460        	and	a4, a4, a6
+ 550:	0020c0        	memw
+ 553:	806542        	s32i	a4, a5, 0x200
+ 556:	ff8a91        	l32r	a9, 380 <esf_buf_alloc+0x258>
+ 559:	0188      	l32i.n	a8, a1, 0
+ 55b:	49a8      	l32i.n	a10, a9, 16
+ 55d:	78a9      	s32i.n	a10, a8, 28
+ 55f:	000072        	l8ui	a7, a0, 0
+ 562:	4989      	s32i.n	a8, a9, 16
+ 564:	083756        	bnez	a7, 5eb <esf_buf_recycle+0x213>
+ 567:	0020c0        	memw
+ 56a:	ff8601        	l32r	a0, 384 <esf_buf_alloc+0x25c>
+ 56d:	8020b2        	l32i	a11, a0, 0x200
+ 570:	026c      	movi.n	a2, -32
+ 572:	10bb20        	and	a11, a11, a2
+ 575:	120c      	movi.n	a2, 1
+ 577:	20bb20        	or	a11, a11, a2
+ 57a:	0020c0        	memw
+ 57d:	8060b2        	s32i	a11, a0, 0x200
+ 580:	ff9201        	l32r	a0, 3c8 <esf_buf_alloc+0x2a0>
+ 583:	0000c0        	callx0	a0
+ 586:	001846        	j	5eb <esf_buf_recycle+0x213>
+ 589:	030c      	movi.n	a3, 0
+ 58b:	0128      	l32i.n	a2, a1, 0
+ 58d:	841c      	movi.n	a4, 24
+ 58f:	8228      	l32i.n	a2, a2, 32
+ 591:	ff8e01        	l32r	a0, 3cc <esf_buf_alloc+0x2a4>
+ 594:	0000c0        	callx0	a0
+ 597:	ff7c01        	l32r	a0, 388 <esf_buf_alloc+0x260>
+ 59a:	000032        	l8ui	a3, a0, 0
+ 59d:	b3dc      	bnez.n	a3, 5bc <esf_buf_recycle+0x1e4>
+ 59f:	ff8c01        	l32r	a0, 3d0 <esf_buf_alloc+0x2a8>
+ 5a2:	0000c0        	callx0	a0
+ 5a5:	ff7901        	l32r	a0, 38c <esf_buf_alloc+0x264>
+ 5a8:	0020c0        	memw
+ 5ab:	ff7951        	l32r	a5, 390 <esf_buf_alloc+0x268>
+ 5ae:	802542        	l32i	a4, a5, 0x200
+ 5b1:	066c      	movi.n	a6, -32
+ 5b3:	104460        	and	a4, a4, a6
+ 5b6:	0020c0        	memw
+ 5b9:	806542        	s32i	a4, a5, 0x200
+ 5bc:	ff7691        	l32r	a9, 394 <esf_buf_alloc+0x26c>
+ 5bf:	0188      	l32i.n	a8, a1, 0
+ 5c1:	09a8      	l32i.n	a10, a9, 0
+ 5c3:	78a9      	s32i.n	a10, a8, 28
+ 5c5:	000072        	l8ui	a7, a0, 0
+ 5c8:	0989      	s32i.n	a8, a9, 0
+ 5ca:	d7dc      	bnez.n	a7, 5eb <esf_buf_recycle+0x213>
+ 5cc:	0020c0        	memw
+ 5cf:	ff7201        	l32r	a0, 398 <esf_buf_alloc+0x270>
+ 5d2:	8020b2        	l32i	a11, a0, 0x200
+ 5d5:	026c      	movi.n	a2, -32
+ 5d7:	10bb20        	and	a11, a11, a2
+ 5da:	120c      	movi.n	a2, 1
+ 5dc:	20bb20        	or	a11, a11, a2
+ 5df:	0020c0        	memw
+ 5e2:	8060b2        	s32i	a11, a0, 0x200
+ 5e5:	ff7b01        	l32r	a0, 3d4 <esf_buf_alloc+0x2ac>
+ 5e8:	0000c0        	callx0	a0
+ 5eb:	1108      	l32i.n	a0, a1, 4
+ 5ed:	10c112        	addi	a1, a1, 16
+ 5f0:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <esf_buf_setup-0x34>:
+   0:	0008a0        	jx	a8
+   3:	002000        	isync
+   6:	000000        	ill
+   9:	000000        	ill
+   c:	000340        	excw
+   f:	f00000        	subx8	a0, a0, a0
+  12:	700000        	excw
+  15:	000007        	bnone	a0, a0, 19 <esf_buf_setup-0x1b>
+  18:	00f000        	excw
+  1b:	0a4000        	excw
+	...
+
+00000034 <esf_buf_setup>:
+  34:	e0c112        	addi	a1, a1, -32
+  37:	0109      	s32i.n	a0, a1, 0
+  39:	41f9      	s32i.n	a15, a1, 16
+  3b:	11c9      	s32i.n	a12, a1, 4
+  3d:	31e9      	s32i.n	a14, a1, 12
+  3f:	21d9      	s32i.n	a13, a1, 8
+  41:	ce3c      	movi.n	a14, 60
+  43:	ffefd1        	l32r	a13, 0 <esf_buf_setup-0x34>
+  46:	ffefc1        	l32r	a12, 4 <esf_buf_setup-0x30>
+  49:	1f0c      	movi.n	a15, 1
+  4b:	ffef41        	l32r	a4, 8 <esf_buf_setup-0x2c>
+  4e:	0c2d      	mov.n	a2, a12
+  50:	3448      	l32i.n	a4, a4, 12
+  52:	130c      	movi.n	a3, 1
+  54:	5e4a      	add.n	a5, a14, a4
+  56:	1c59      	s32i.n	a5, a12, 4
+  58:	2c59      	s32i.n	a5, a12, 8
+  5a:	1448      	l32i.n	a4, a4, 4
+  5c:	4c49      	s32i.n	a4, a12, 16
+  5e:	065cf2        	s16i	a15, a12, 12
+  61:	8cd9      	s32i.n	a13, a12, 32
+  63:	ffef01        	l32r	a0, 20 <esf_buf_setup-0x14>
+  66:	0000c0        	callx0	a0
+  69:	24ccc2        	addi	a12, a12, 36
+  6c:	18cdd2        	addi	a13, a13, 24
+  6f:	f4cee2        	addi	a14, a14, -12
+  72:	d51ee6        	bgei	a14, 1, 4b <esf_buf_setup+0x17>
+  75:	4e0c      	movi.n	a14, 4
+  77:	ffe5f1        	l32r	a15, c <esf_buf_setup-0x28>
+  7a:	0020c0        	memw
+  7d:	ffe4b1        	l32r	a11, 10 <esf_buf_setup-0x24>
+  80:	001fa2        	l16ui	a10, a15, 0
+  83:	10aab0        	and	a10, a10, a11
+  86:	00a1b2        	movi	a11, 0x100
+  89:	20aab0        	or	a10, a10, a11
+  8c:	0020c0        	memw
+  8f:	005fa2        	s16i	a10, a15, 0
+  92:	1cf9      	s32i.n	a15, a12, 4
+  94:	2cf9      	s32i.n	a15, a12, 8
+  96:	8cd9      	s32i.n	a13, a12, 32
+  98:	0c2d      	mov.n	a2, a12
+  9a:	430c      	movi.n	a3, 4
+  9c:	8fcb      	addi.n	a8, a15, 12
+  9e:	190c      	movi.n	a9, 1
+  a0:	065c92        	s16i	a9, a12, 12
+  a3:	4c89      	s32i.n	a8, a12, 16
+  a5:	ffdf01        	l32r	a0, 24 <esf_buf_setup-0x10>
+  a8:	0000c0        	callx0	a0
+  ab:	24ccc2        	addi	a12, a12, 36
+  ae:	18cdd2        	addi	a13, a13, 24
+  b1:	ee0b      	addi.n	a14, a14, -1
+  b3:	0ca102        	movi	a0, 0x10c
+  b6:	ff0a      	add.n	a15, a15, a0
+  b8:	be1ee6        	bgei	a14, 1, 7a <esf_buf_setup+0x46>
+  bb:	4e0c      	movi.n	a14, 4
+  bd:	ffd5f1        	l32r	a15, 14 <esf_buf_setup-0x20>
+  c0:	0020c0        	memw
+  c3:	ffd561        	l32r	a6, 18 <esf_buf_setup-0x1c>
+  c6:	001f52        	l16ui	a5, a15, 0
+  c9:	105560        	and	a5, a5, a6
+  cc:	064c      	movi.n	a6, 64
+  ce:	205560        	or	a5, a5, a6
+  d1:	0020c0        	memw
+  d4:	005f52        	s16i	a5, a15, 0
+  d7:	1cf9      	s32i.n	a15, a12, 4
+  d9:	2cf9      	s32i.n	a15, a12, 8
+  db:	8cd9      	s32i.n	a13, a12, 32
+  dd:	0c2d      	mov.n	a2, a12
+  df:	140c      	movi.n	a4, 1
+  e1:	3fcb      	addi.n	a3, a15, 12
+  e3:	4c39      	s32i.n	a3, a12, 16
+  e5:	065c42        	s16i	a4, a12, 12
+  e8:	530c      	movi.n	a3, 5
+  ea:	ffcf01        	l32r	a0, 28 <esf_buf_setup-0xc>
+  ed:	0000c0        	callx0	a0
+  f0:	24ccc2        	addi	a12, a12, 36
+  f3:	4ccff2        	addi	a15, a15, 76
+  f6:	18cdd2        	addi	a13, a13, 24
+  f9:	ee0b      	addi.n	a14, a14, -1
+  fb:	c11ee6        	bgei	a14, 1, c0 <esf_buf_setup+0x8c>
+  fe:	4e0c      	movi.n	a14, 4
+ 100:	8cd9      	s32i.n	a13, a12, 32
+ 102:	0c2d      	mov.n	a2, a12
+ 104:	630c      	movi.n	a3, 6
+ 106:	ffc901        	l32r	a0, 2c <esf_buf_setup-0x8>
+ 109:	0000c0        	callx0	a0
+ 10c:	24ccc2        	addi	a12, a12, 36
+ 10f:	18cdd2        	addi	a13, a13, 24
+ 112:	ee0b      	addi.n	a14, a14, -1
+ 114:	e81ee6        	bgei	a14, 1, 100 <esf_buf_setup+0xcc>
+ 117:	5e0c      	movi.n	a14, 5
+ 119:	ffc0d1        	l32r	a13, 1c <esf_buf_setup-0x18>
+ 11c:	8cd9      	s32i.n	a13, a12, 32
+ 11e:	0c2d      	mov.n	a2, a12
+ 120:	730c      	movi.n	a3, 7
+ 122:	ffc301        	l32r	a0, 30 <esf_buf_setup-0x4>
+ 125:	0000c0        	callx0	a0
+ 128:	24ccc2        	addi	a12, a12, 36
+ 12b:	ddcb      	addi.n	a13, a13, 12
+ 12d:	ee0b      	addi.n	a14, a14, -1
+ 12f:	e91ee6        	bgei	a14, 1, 11c <esf_buf_setup+0xe8>
+ 132:	11c8      	l32i.n	a12, a1, 4
+ 134:	21d8      	l32i.n	a13, a1, 8
+ 136:	31e8      	l32i.n	a14, a1, 12
+ 138:	41f8      	l32i.n	a15, a1, 16
+ 13a:	0108      	l32i.n	a0, a1, 0
+ 13c:	20c112        	addi	a1, a1, 32
+ 13f:	f00d      	ret.n

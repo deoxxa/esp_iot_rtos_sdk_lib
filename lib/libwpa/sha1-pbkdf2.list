@@ -1,0 +1,143 @@
+
+sha1-pbkdf2.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <pbkdf2_sha1-0x100>:
+	...
+  14:	90a082        	movi	a8, 144
+  17:	c01180        	sub	a1, a1, a8
+  1a:	1f6152        	s32i	a5, a1, 124
+  1d:	186172        	s32i	a7, a1, 96
+  20:	196102        	s32i	a0, a1, 100
+  23:	206132        	s32i	a3, a1, 128
+  26:	1d61f2        	s32i	a15, a1, 116
+  29:	1c61e2        	s32i	a14, a1, 112
+  2c:	1a61c2        	s32i	a12, a1, 104
+  2f:	1b61d2        	s32i	a13, a1, 108
+  32:	06cd      	mov.n	a12, a6
+  34:	04dd      	mov.n	a13, a4
+  36:	02ed      	mov.n	a14, a2
+  38:	2021f2        	l32i	a15, a1, 128
+  3b:	fff101        	l32r	a0, 0 <pbkdf2_sha1-0x100>
+  3e:	0000c0        	callx0	a0
+  41:	01f9      	s32i.n	a15, a1, 0
+  43:	21d9      	s32i.n	a13, a1, 8
+  45:	618b      	addi.n	a6, a1, 8
+  47:	20c172        	addi	a7, a1, 32
+  4a:	1341c2        	s8i	a12, a1, 19
+  4d:	7558c0        	extui	a5, a12, 24, 8
+  50:	f540c0        	extui	a4, a12, 16, 16
+  53:	4138c0        	srli	a3, a12, 8
+  56:	400c      	movi.n	a0, 4
+  58:	3109      	s32i.n	a0, a1, 12
+  5a:	124132        	s8i	a3, a1, 18
+  5d:	114142        	s8i	a4, a1, 17
+  60:	104152        	s8i	a5, a1, 16
+  63:	240c      	movi.n	a4, 2
+  65:	015d      	mov.n	a5, a1
+  67:	02cd      	mov.n	a12, a2
+  69:	10c122        	addi	a2, a1, 16
+  6c:	0c3d      	mov.n	a3, a12
+  6e:	1129      	s32i.n	a2, a1, 4
+  70:	0e2d      	mov.n	a2, a14
+  72:	ffe401        	l32r	a0, 4 <pbkdf2_sha1-0xfc>
+  75:	0000c0        	callx0	a0
+  78:	079256        	bnez	a2, f5 <pbkdf2_sha1-0xb>
+  7b:	20c132        	addi	a3, a1, 32
+  7e:	441c      	movi.n	a4, 20
+  80:	1821f2        	l32i	a15, a1, 96
+  83:	1e61c2        	s32i	a12, a1, 120
+  86:	0f2d      	mov.n	a2, a15
+  88:	ffe001        	l32r	a0, 8 <pbkdf2_sha1-0xf8>
+  8b:	0000c0        	callx0	a0
+  8e:	1f2162        	l32i	a6, a1, 124
+  91:	4826a6        	blti	a6, 2, dd <pbkdf2_sha1-0x23>
+  94:	14cfc2        	addi	a12, a15, 20
+  97:	1d0c      	movi.n	a13, 1
+  99:	0e2d      	mov.n	a2, a14
+  9b:	1e2132        	l32i	a3, a1, 120
+  9e:	20c142        	addi	a4, a1, 32
+  a1:	451c      	movi.n	a5, 20
+  a3:	40c162        	addi	a6, a1, 64
+  a6:	ffd901        	l32r	a0, c <pbkdf2_sha1-0xf4>
+  a9:	0000c0        	callx0	a0
+  ac:	045256        	bnez	a2, f5 <pbkdf2_sha1-0xb>
+  af:	20c122        	addi	a2, a1, 32
+  b2:	40c132        	addi	a3, a1, 64
+  b5:	441c      	movi.n	a4, 20
+  b7:	ffd601        	l32r	a0, 10 <pbkdf2_sha1-0xf0>
+  ba:	0000c0        	callx0	a0
+  bd:	0f2d      	mov.n	a2, a15
+  bf:	40c102        	addi	a0, a1, 64
+  c2:	1f2192        	l32i	a9, a1, 124
+  c5:	dd1b      	addi.n	a13, a13, 1
+  c7:	000272        	l8ui	a7, a2, 0
+  ca:	000082        	l8ui	a8, a0, 0
+  cd:	001b      	addi.n	a0, a0, 1
+  cf:	307780        	xor	a7, a7, a8
+  d2:	004272        	s8i	a7, a2, 0
+  d5:	221b      	addi.n	a2, a2, 1
+  d7:	ec92c7        	bne	a2, a12, c7 <pbkdf2_sha1-0x39>
+  da:	bb99d7        	bne	a9, a13, 99 <pbkdf2_sha1-0x67>
+  dd:	020c      	movi.n	a2, 0
+  df:	1a21c2        	l32i	a12, a1, 104
+  e2:	1b21d2        	l32i	a13, a1, 108
+  e5:	1c21e2        	l32i	a14, a1, 112
+  e8:	1d21f2        	l32i	a15, a1, 116
+  eb:	90a032        	movi	a3, 144
+  ee:	192102        	l32i	a0, a1, 100
+  f1:	113a      	add.n	a1, a1, a3
+  f3:	f00d      	ret.n
+  f5:	f27c      	movi.n	a2, -1
+  f7:	fff906        	j	df <pbkdf2_sha1-0x21>
+  fa:	000000        	ill
+  fd:	000000        	ill
+
+00000100 <pbkdf2_sha1>:
+ 100:	b0c112        	addi	a1, a1, -80
+ 103:	b1e9      	s32i.n	a14, a1, 44
+ 105:	8109      	s32i.n	a0, a1, 32
+ 107:	d129      	s32i.n	a2, a1, 52
+ 109:	e139      	s32i.n	a3, a1, 56
+ 10b:	f149      	s32i.n	a4, a1, 60
+ 10d:	106152        	s32i	a5, a1, 64
+ 110:	c1f9      	s32i.n	a15, a1, 48
+ 112:	a1d9      	s32i.n	a13, a1, 40
+ 114:	91c9      	s32i.n	a12, a1, 36
+ 116:	06dd      	mov.n	a13, a6
+ 118:	07cd      	mov.n	a12, a7
+ 11a:	67bc      	beqz.n	a7, 154 <pbkdf2_sha1+0x54>
+ 11c:	0f0c      	movi.n	a15, 0
+ 11e:	d128      	l32i.n	a2, a1, 52
+ 120:	e138      	l32i.n	a3, a1, 56
+ 122:	f148      	l32i.n	a4, a1, 60
+ 124:	102152        	l32i	a5, a1, 64
+ 127:	017d      	mov.n	a7, a1
+ 129:	ff1b      	addi.n	a15, a15, 1
+ 12b:	0f6d      	mov.n	a6, a15
+ 12d:	ffee45        	call0	14 <pbkdf2_sha1-0xec>
+ 130:	328c      	beqz.n	a2, 137 <pbkdf2_sha1+0x37>
+ 132:	f27c      	movi.n	a2, -1
+ 134:	000786        	j	156 <pbkdf2_sha1+0x56>
+ 137:	421c      	movi.n	a2, 20
+ 139:	02ed      	mov.n	a14, a2
+ 13b:	0132c7        	bltu	a2, a12, 140 <pbkdf2_sha1+0x40>
+ 13e:	0ced      	mov.n	a14, a12
+ 140:	0d2d      	mov.n	a2, a13
+ 142:	013d      	mov.n	a3, a1
+ 144:	0e4d      	mov.n	a4, a14
+ 146:	ffed01        	l32r	a0, fc <pbkdf2_sha1-0x4>
+ 149:	0000c0        	callx0	a0
+ 14c:	ddea      	add.n	a13, a13, a14
+ 14e:	c0cce0        	sub	a12, a12, a14
+ 151:	fc9c56        	bnez	a12, 11e <pbkdf2_sha1+0x1e>
+ 154:	020c      	movi.n	a2, 0
+ 156:	91c8      	l32i.n	a12, a1, 36
+ 158:	a1d8      	l32i.n	a13, a1, 40
+ 15a:	b1e8      	l32i.n	a14, a1, 44
+ 15c:	c1f8      	l32i.n	a15, a1, 48
+ 15e:	8108      	l32i.n	a0, a1, 32
+ 160:	50c112        	addi	a1, a1, 80
+ 163:	f00d      	ret.n

@@ -1,0 +1,396 @@
+
+wpabuf.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	2248      	l32i.n	a4, a2, 8
+   2:	32cb      	addi.n	a3, a2, 12
+   4:	834340        	moveqz	a4, a3, a4
+   7:	042d      	mov.n	a2, a4
+   9:	f00d      	ret.n
+	...
+  13:	c11200        	mul16u	a1, a2, a0
+  16:	0109f0        	slli	a0, a9, 17
+  19:	11c9      	s32i.n	a12, a1, 4
+  1b:	21d9      	s32i.n	a13, a1, 8
+  1d:	03cd      	mov.n	a12, a3
+  1f:	04dd      	mov.n	a13, a4
+  21:	039c      	beqz.n	a3, 35 <.text+0x35>
+  23:	043d      	mov.n	a3, a4
+  25:	fff901        	l32r	a0, c <.text+0xc>
+  28:	0000c0        	callx0	a0
+  2b:	0d4d      	mov.n	a4, a13
+  2d:	0c3d      	mov.n	a3, a12
+  2f:	fff801        	l32r	a0, 10 <.text+0x10>
+  32:	0000c0        	callx0	a0
+  35:	11c8      	l32i.n	a12, a1, 4
+  37:	21d8      	l32i.n	a13, a1, 8
+  39:	0108      	l32i.n	a0, a1, 0
+  3b:	10c112        	addi	a1, a1, 16
+  3e:	f00d      	ret.n
+  40:	036d      	mov.n	a6, a3
+  42:	f0c112        	addi	a1, a1, -16
+  45:	0109      	s32i.n	a0, a1, 0
+  47:	1648      	l32i.n	a4, a6, 4
+  49:	2338      	l32i.n	a3, a3, 8
+  4b:	06cb      	addi.n	a0, a6, 12
+  4d:	833030        	moveqz	a3, a0, a3
+  50:	fffc05        	call0	14 <.text+0x14>
+  53:	0108      	l32i.n	a0, a1, 0
+  55:	10c112        	addi	a1, a1, 16
+  58:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <wpabuf_resize-0x30>:
+	...
+   8:	fffe21        	l32r	a2, 0 <wpabuf_resize-0x30>
+   b:	f0c112        	addi	a1, a1, -16
+   e:	0109      	s32i.n	a0, a1, 0
+  10:	fffd01        	l32r	a0, 4 <wpabuf_resize-0x2c>
+  13:	0000c0        	callx0	a0
+  16:	0108      	l32i.n	a0, a1, 0
+  18:	10c112        	addi	a1, a1, 16
+  1b:	f00d      	ret.n
+	...
+
+00000030 <wpabuf_resize>:
+  30:	f0c112        	addi	a1, a1, -16
+  33:	0109      	s32i.n	a0, a1, 0
+  35:	21d9      	s32i.n	a13, a1, 8
+  37:	31e9      	s32i.n	a14, a1, 12
+  39:	11c9      	s32i.n	a12, a1, 4
+  3b:	02ed      	mov.n	a14, a2
+  3d:	02c8      	l32i.n	a12, a2, 0
+  3f:	03dd      	mov.n	a13, a3
+  41:	1cdc      	bnez.n	a12, 56 <wpabuf_resize+0x26>
+  43:	032d      	mov.n	a2, a3
+  45:	000005        	call0	48 <wpabuf_resize+0x18>
+  48:	023d      	mov.n	a3, a2
+  4a:	0e29      	s32i.n	a2, a14, 0
+  4c:	f07c      	movi.n	a0, -1
+  4e:	020c      	movi.n	a2, 0
+  50:	832030        	moveqz	a2, a0, a3
+  53:	001146        	j	9c <wpabuf_resize+0x6c>
+  56:	1c38      	l32i.n	a3, a12, 4
+  58:	0c48      	l32i.n	a4, a12, 0
+  5a:	33da      	add.n	a3, a3, a13
+  5c:	3ab437        	bgeu	a4, a3, 9a <wpabuf_resize+0x6a>
+  5f:	2c28      	l32i.n	a2, a12, 8
+  61:	044216        	beqz	a2, a9 <wpabuf_resize+0x79>
+  64:	ffef01        	l32r	a0, 20 <wpabuf_resize-0x10>
+  67:	0000c0        	callx0	a0
+  6a:	02ed      	mov.n	a14, a2
+  6c:	048216        	beqz	a2, b8 <wpabuf_resize+0x88>
+  6f:	030c      	movi.n	a3, 0
+  71:	1c28      	l32i.n	a2, a12, 4
+  73:	0d4d      	mov.n	a4, a13
+  75:	22ea      	add.n	a2, a2, a14
+  77:	ffeb01        	l32r	a0, 24 <wpabuf_resize-0xc>
+  7a:	0000c0        	callx0	a0
+  7d:	2ce9      	s32i.n	a14, a12, 8
+  7f:	000446        	j	94 <wpabuf_resize+0x64>
+  82:	030c      	movi.n	a3, 0
+  84:	1228      	l32i.n	a2, a2, 4
+  86:	0d4d      	mov.n	a4, a13
+  88:	22ca      	add.n	a2, a2, a12
+  8a:	22cb      	addi.n	a2, a2, 12
+  8c:	ffe701        	l32r	a0, 28 <wpabuf_resize-0x8>
+  8f:	0000c0        	callx0	a0
+  92:	0ec9      	s32i.n	a12, a14, 0
+  94:	1c38      	l32i.n	a3, a12, 4
+  96:	33da      	add.n	a3, a3, a13
+  98:	0c39      	s32i.n	a3, a12, 0
+  9a:	020c      	movi.n	a2, 0
+  9c:	11c8      	l32i.n	a12, a1, 4
+  9e:	21d8      	l32i.n	a13, a1, 8
+  a0:	31e8      	l32i.n	a14, a1, 12
+  a2:	0108      	l32i.n	a0, a1, 0
+  a4:	10c112        	addi	a1, a1, 16
+  a7:	f00d      	ret.n
+  a9:	0c2d      	mov.n	a2, a12
+  ab:	33cb      	addi.n	a3, a3, 12
+  ad:	ffdf01        	l32r	a0, 2c <wpabuf_resize-0x4>
+  b0:	0000c0        	callx0	a0
+  b3:	02cd      	mov.n	a12, a2
+  b5:	fc9256        	bnez	a2, 82 <wpabuf_resize+0x52>
+  b8:	f27c      	movi.n	a2, -1
+  ba:	fff786        	j	9c <wpabuf_resize+0x6c>
+  bd:	000000        	ill
+  c0:	000000        	ill
+	...
+
+000000c4 <wpabuf_alloc>:
+  c4:	f0c112        	addi	a1, a1, -16
+  c7:	11c9      	s32i.n	a12, a1, 4
+  c9:	0109      	s32i.n	a0, a1, 0
+  cb:	02cd      	mov.n	a12, a2
+  cd:	22cb      	addi.n	a2, a2, 12
+  cf:	fffc01        	l32r	a0, c0 <wpabuf_resize+0x90>
+  d2:	0000c0        	callx0	a0
+  d5:	0108      	l32i.n	a0, a1, 0
+  d7:	32cc      	bnez.n	a2, de <wpabuf_alloc+0x1a>
+  d9:	020c      	movi.n	a2, 0
+  db:	000046        	j	e0 <wpabuf_alloc+0x1c>
+  de:	02c9      	s32i.n	a12, a2, 0
+  e0:	11c8      	l32i.n	a12, a1, 4
+  e2:	10c112        	addi	a1, a1, 16
+  e5:	f00d      	ret.n
+  e7:	000000        	ill
+	...
+
+000000ec <wpabuf_alloc_ext_data>:
+  ec:	f0c112        	addi	a1, a1, -16
+  ef:	1139      	s32i.n	a3, a1, 4
+  f1:	0129      	s32i.n	a2, a1, 0
+  f3:	2109      	s32i.n	a0, a1, 8
+  f5:	c20c      	movi.n	a2, 12
+  f7:	fffc01        	l32r	a0, e8 <wpabuf_alloc+0x24>
+  fa:	0000c0        	callx0	a0
+  fd:	32cc      	bnez.n	a2, 104 <wpabuf_alloc_ext_data+0x18>
+  ff:	020c      	movi.n	a2, 0
+ 101:	000246        	j	10e <wpabuf_alloc_ext_data+0x22>
+ 104:	0108      	l32i.n	a0, a1, 0
+ 106:	1138      	l32i.n	a3, a1, 4
+ 108:	0239      	s32i.n	a3, a2, 0
+ 10a:	1239      	s32i.n	a3, a2, 4
+ 10c:	2209      	s32i.n	a0, a2, 8
+ 10e:	2108      	l32i.n	a0, a1, 8
+ 110:	10c112        	addi	a1, a1, 16
+ 113:	f00d      	ret.n
+ 115:	000000        	ill
+ 118:	000014        	excw
+	...
+
+0000011c <wpabuf_alloc_copy>:
+ 11c:	029d      	mov.n	a9, a2
+ 11e:	f0c112        	addi	a1, a1, -16
+ 121:	21c9      	s32i.n	a12, a1, 8
+ 123:	032d      	mov.n	a2, a3
+ 125:	31d9      	s32i.n	a13, a1, 12
+ 127:	1109      	s32i.n	a0, a1, 4
+ 129:	03dd      	mov.n	a13, a3
+ 12b:	0199      	s32i.n	a9, a1, 0
+ 12d:	000005        	call0	130 <wpabuf_alloc_copy+0x14>
+ 130:	02cd      	mov.n	a12, a2
+ 132:	828c      	beqz.n	a2, 13e <wpabuf_alloc_copy+0x22>
+ 134:	0d4d      	mov.n	a4, a13
+ 136:	0138      	l32i.n	a3, a1, 0
+ 138:	fff801        	l32r	a0, 118 <wpabuf_alloc_ext_data+0x2c>
+ 13b:	0000c0        	callx0	a0
+ 13e:	1108      	l32i.n	a0, a1, 4
+ 140:	0c2d      	mov.n	a2, a12
+ 142:	31d8      	l32i.n	a13, a1, 12
+ 144:	21c8      	l32i.n	a12, a1, 8
+ 146:	10c112        	addi	a1, a1, 16
+ 149:	f00d      	ret.n
+ 14b:	001400        	excw
+	...
+
+00000150 <wpabuf_dup>:
+ 150:	f0c112        	addi	a1, a1, -16
+ 153:	11c9      	s32i.n	a12, a1, 4
+ 155:	21d9      	s32i.n	a13, a1, 8
+ 157:	0109      	s32i.n	a0, a1, 0
+ 159:	02dd      	mov.n	a13, a2
+ 15b:	1228      	l32i.n	a2, a2, 4
+ 15d:	000005        	call0	160 <wpabuf_dup+0x10>
+ 160:	02cd      	mov.n	a12, a2
+ 162:	d28c      	beqz.n	a2, 173 <wpabuf_dup+0x23>
+ 164:	1d48      	l32i.n	a4, a13, 4
+ 166:	2d38      	l32i.n	a3, a13, 8
+ 168:	0dcb      	addi.n	a0, a13, 12
+ 16a:	833030        	moveqz	a3, a0, a3
+ 16d:	fff701        	l32r	a0, 14c <wpabuf_alloc_copy+0x30>
+ 170:	0000c0        	callx0	a0
+ 173:	0108      	l32i.n	a0, a1, 0
+ 175:	0c2d      	mov.n	a2, a12
+ 177:	21d8      	l32i.n	a13, a1, 8
+ 179:	11c8      	l32i.n	a12, a1, 4
+ 17b:	10c112        	addi	a1, a1, 16
+ 17e:	f00d      	ret.n
+	...
+
+00000188 <wpabuf_free>:
+ 188:	f0c112        	addi	a1, a1, -16
+ 18b:	11c9      	s32i.n	a12, a1, 4
+ 18d:	0109      	s32i.n	a0, a1, 0
+ 18f:	02cd      	mov.n	a12, a2
+ 191:	e28c      	beqz.n	a2, 1a3 <wpabuf_free+0x1b>
+ 193:	2228      	l32i.n	a2, a2, 8
+ 195:	fffa01        	l32r	a0, 180 <wpabuf_dup+0x30>
+ 198:	0000c0        	callx0	a0
+ 19b:	0c2d      	mov.n	a2, a12
+ 19d:	fff901        	l32r	a0, 184 <wpabuf_dup+0x34>
+ 1a0:	0000c0        	callx0	a0
+ 1a3:	11c8      	l32i.n	a12, a1, 4
+ 1a5:	0108      	l32i.n	a0, a1, 0
+ 1a7:	10c112        	addi	a1, a1, 16
+ 1aa:	f00d      	ret.n
+ 1ac:	000000        	ill
+	...
+
+000001b0 <wpabuf_put>:
+ 1b0:	e0c112        	addi	a1, a1, -32
+ 1b3:	0109      	s32i.n	a0, a1, 0
+ 1b5:	21d9      	s32i.n	a13, a1, 8
+ 1b7:	11c9      	s32i.n	a12, a1, 4
+ 1b9:	03dd      	mov.n	a13, a3
+ 1bb:	02cd      	mov.n	a12, a2
+ 1bd:	fffb01        	l32r	a0, 1ac <wpabuf_free+0x24>
+ 1c0:	0000c0        	callx0	a0
+ 1c3:	3129      	s32i.n	a2, a1, 12
+ 1c5:	0c38      	l32i.n	a3, a12, 0
+ 1c7:	1c08      	l32i.n	a0, a12, 4
+ 1c9:	4109      	s32i.n	a0, a1, 16
+ 1cb:	40da      	add.n	a4, a0, a13
+ 1cd:	1c49      	s32i.n	a4, a12, 4
+ 1cf:	0ab347        	bgeu	a3, a4, 1dd <wpabuf_put+0x2d>
+ 1d2:	0d3d      	mov.n	a3, a13
+ 1d4:	0c2d      	mov.n	a2, a12
+ 1d6:	ffe305        	call0	8 <wpabuf_resize-0x28>
+ 1d9:	4108      	l32i.n	a0, a1, 16
+ 1db:	3128      	l32i.n	a2, a1, 12
+ 1dd:	11c8      	l32i.n	a12, a1, 4
+ 1df:	21d8      	l32i.n	a13, a1, 8
+ 1e1:	220a      	add.n	a2, a2, a0
+ 1e3:	0108      	l32i.n	a0, a1, 0
+ 1e5:	20c112        	addi	a1, a1, 32
+ 1e8:	f00d      	ret.n
+ 1ea:	400000        	ssr	a0
+ 1ed:	000000        	ill
+ 1f0:	000040        	excw
+	...
+
+000001f4 <wpabuf_concat>:
+ 1f4:	f0c112        	addi	a1, a1, -16
+ 1f7:	0109      	s32i.n	a0, a1, 0
+ 1f9:	31e9      	s32i.n	a14, a1, 12
+ 1fb:	11c9      	s32i.n	a12, a1, 4
+ 1fd:	21d9      	s32i.n	a13, a1, 8
+ 1ff:	02cd      	mov.n	a12, a2
+ 201:	03dd      	mov.n	a13, a3
+ 203:	33cc      	bnez.n	a3, 20a <wpabuf_concat+0x16>
+ 205:	02ed      	mov.n	a14, a2
+ 207:	000c46        	j	23c <wpabuf_concat+0x48>
+ 20a:	32cc      	bnez.n	a2, 211 <wpabuf_concat+0x1d>
+ 20c:	000c      	movi.n	a0, 0
+ 20e:	000046        	j	213 <wpabuf_concat+0x1f>
+ 211:	1208      	l32i.n	a0, a2, 4
+ 213:	1d28      	l32i.n	a2, a13, 4
+ 215:	220a      	add.n	a2, a2, a0
+ 217:	000005        	call0	218 <wpabuf_concat+0x24>
+ 21a:	02ed      	mov.n	a14, a2
+ 21c:	229c      	beqz.n	a2, 232 <wpabuf_concat+0x3e>
+ 21e:	6c8c      	beqz.n	a12, 228 <wpabuf_concat+0x34>
+ 220:	0c3d      	mov.n	a3, a12
+ 222:	fff201        	l32r	a0, 1ec <wpabuf_put+0x3c>
+ 225:	0000c0        	callx0	a0
+ 228:	0e2d      	mov.n	a2, a14
+ 22a:	0d3d      	mov.n	a3, a13
+ 22c:	fff101        	l32r	a0, 1f0 <wpabuf_put+0x40>
+ 22f:	0000c0        	callx0	a0
+ 232:	0c2d      	mov.n	a2, a12
+ 234:	000005        	call0	238 <wpabuf_concat+0x44>
+ 237:	0d2d      	mov.n	a2, a13
+ 239:	000005        	call0	23c <wpabuf_concat+0x48>
+ 23c:	0108      	l32i.n	a0, a1, 0
+ 23e:	11c8      	l32i.n	a12, a1, 4
+ 240:	0e2d      	mov.n	a2, a14
+ 242:	21d8      	l32i.n	a13, a1, 8
+ 244:	31e8      	l32i.n	a14, a1, 12
+ 246:	10c112        	addi	a1, a1, 16
+ 249:	f00d      	ret.n
+ 24b:	000000        	ill
+ 24e:	400000        	ssr	a0
+ 251:	000000        	ill
+
+00000254 <wpabuf_zeropad>:
+ 254:	e0c112        	addi	a1, a1, -32
+ 257:	2109      	s32i.n	a0, a1, 8
+ 259:	31c9      	s32i.n	a12, a1, 12
+ 25b:	41d9      	s32i.n	a13, a1, 16
+ 25d:	02cd      	mov.n	a12, a2
+ 25f:	03dd      	mov.n	a13, a3
+ 261:	32cc      	bnez.n	a2, 268 <wpabuf_zeropad+0x14>
+ 263:	0c0c      	movi.n	a12, 0
+ 265:	000e06        	j	2a1 <wpabuf_zeropad+0x4d>
+ 268:	1208      	l32i.n	a0, a2, 4
+ 26a:	0109      	s32i.n	a0, a1, 0
+ 26c:	31b037        	bgeu	a0, a3, 2a1 <wpabuf_zeropad+0x4d>
+ 26f:	032d      	mov.n	a2, a3
+ 271:	000005        	call0	274 <wpabuf_zeropad+0x20>
+ 274:	1129      	s32i.n	a2, a1, 4
+ 276:	e29c      	beqz.n	a2, 298 <wpabuf_zeropad+0x44>
+ 278:	0128      	l32i.n	a2, a1, 0
+ 27a:	c0dd20        	sub	a13, a13, a2
+ 27d:	1128      	l32i.n	a2, a1, 4
+ 27f:	0d3d      	mov.n	a3, a13
+ 281:	000005        	call0	284 <wpabuf_zeropad+0x30>
+ 284:	0d4d      	mov.n	a4, a13
+ 286:	030c      	movi.n	a3, 0
+ 288:	fff101        	l32r	a0, 24c <wpabuf_concat+0x58>
+ 28b:	0000c0        	callx0	a0
+ 28e:	1128      	l32i.n	a2, a1, 4
+ 290:	0c3d      	mov.n	a3, a12
+ 292:	ffef01        	l32r	a0, 250 <wpabuf_concat+0x5c>
+ 295:	0000c0        	callx0	a0
+ 298:	0c2d      	mov.n	a2, a12
+ 29a:	11d8      	l32i.n	a13, a1, 4
+ 29c:	000005        	call0	2a0 <wpabuf_zeropad+0x4c>
+ 29f:	0dcd      	mov.n	a12, a13
+ 2a1:	2108      	l32i.n	a0, a1, 8
+ 2a3:	0c2d      	mov.n	a2, a12
+ 2a5:	41d8      	l32i.n	a13, a1, 16
+ 2a7:	31c8      	l32i.n	a12, a1, 12
+ 2a9:	20c112        	addi	a1, a1, 32
+ 2ac:	f00d      	ret.n
+	...
+
+000002b8 <wpabuf_printf>:
+ 2b8:	c0c112        	addi	a1, a1, -64
+ 2bb:	a149      	s32i.n	a4, a1, 40
+ 2bd:	b159      	s32i.n	a5, a1, 44
+ 2bf:	c169      	s32i.n	a6, a1, 48
+ 2c1:	d179      	s32i.n	a7, a1, 52
+ 2c3:	3109      	s32i.n	a0, a1, 12
+ 2c5:	41c9      	s32i.n	a12, a1, 16
+ 2c7:	51d9      	s32i.n	a13, a1, 20
+ 2c9:	02cd      	mov.n	a12, a2
+ 2cb:	03dd      	mov.n	a13, a3
+ 2cd:	fff801        	l32r	a0, 2b0 <wpabuf_zeropad+0x5c>
+ 2d0:	0000c0        	callx0	a0
+ 2d3:	0d4d      	mov.n	a4, a13
+ 2d5:	0c38      	l32i.n	a3, a12, 0
+ 2d7:	1c58      	l32i.n	a5, a12, 4
+ 2d9:	860c      	movi.n	a6, 8
+ 2db:	20c192        	addi	a9, a1, 32
+ 2de:	1199      	s32i.n	a9, a1, 4
+ 2e0:	0199      	s32i.n	a9, a1, 0
+ 2e2:	2169      	s32i.n	a6, a1, 8
+ 2e4:	225a      	add.n	a2, a2, a5
+ 2e6:	c03350        	sub	a3, a3, a5
+ 2e9:	096d      	mov.n	a6, a9
+ 2eb:	095d      	mov.n	a5, a9
+ 2ed:	2178      	l32i.n	a7, a1, 8
+ 2ef:	fff101        	l32r	a0, 2b4 <wpabuf_zeropad+0x60>
+ 2f2:	0000c0        	callx0	a0
+ 2f5:	02dd      	mov.n	a13, a2
+ 2f7:	009296        	bltz	a2, 304 <wpabuf_printf+0x4c>
+ 2fa:	1c08      	l32i.n	a0, a12, 4
+ 2fc:	0c78      	l32i.n	a7, a12, 0
+ 2fe:	c07700        	sub	a7, a7, a0
+ 301:	083277        	bltu	a2, a7, 30d <wpabuf_printf+0x55>
+ 304:	0c2d      	mov.n	a2, a12
+ 306:	0d3d      	mov.n	a3, a13
+ 308:	ffcfc5        	call0	8 <wpabuf_resize-0x28>
+ 30b:	1c08      	l32i.n	a0, a12, 4
+ 30d:	8d0a      	add.n	a8, a13, a0
+ 30f:	1c89      	s32i.n	a8, a12, 4
+ 311:	51d8      	l32i.n	a13, a1, 20
+ 313:	41c8      	l32i.n	a12, a1, 16
+ 315:	3108      	l32i.n	a0, a1, 12
+ 317:	40c112        	addi	a1, a1, 64
+ 31a:	f00d      	ret.n

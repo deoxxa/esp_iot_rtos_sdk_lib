@@ -1,0 +1,1700 @@
+
+phy_chip_v5_ana_romfunc.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <rom_ana_inf_gating_en-0x4>:
+       0:	000000        	ill
+	...
+
+00000004 <rom_ana_inf_gating_en>:
+       4:	e0c112        	addi	a1, a1, -32
+       7:	1109      	s32i.n	a0, a1, 4
+       9:	0139      	s32i.n	a3, a1, 0
+       b:	21c9      	s32i.n	a12, a1, 8
+       d:	31d9      	s32i.n	a13, a1, 12
+       f:	41e9      	s32i.n	a14, a1, 16
+      11:	02dd      	mov.n	a13, a2
+      13:	04ed      	mov.n	a14, a4
+      15:	fffac1        	l32r	a12, 0 <rom_ana_inf_gating_en-0x4>
+      18:	0f2216        	beqz	a2, 10e <rom_ana_inf_gating_en+0x10a>
+      1b:	77a022        	movi	a2, 119
+      1e:	030c      	movi.n	a3, 0
+      20:	c41c      	movi.n	a4, 28
+      22:	050c      	movi.n	a5, 0
+      24:	0c08      	l32i.n	a0, a12, 0
+      26:	060c      	movi.n	a6, 0
+      28:	272002        	l32i	a0, a0, 156
+      2b:	070c      	movi.n	a7, 0
+      2d:	0000c0        	callx0	a0
+      30:	77a022        	movi	a2, 119
+      33:	030c      	movi.n	a3, 0
+      35:	a41c      	movi.n	a4, 26
+      37:	450c      	movi.n	a5, 4
+      39:	0c08      	l32i.n	a0, a12, 0
+      3b:	460c      	movi.n	a6, 4
+      3d:	272002        	l32i	a0, a0, 156
+      40:	070c      	movi.n	a7, 0
+      42:	0000c0        	callx0	a0
+      45:	77a022        	movi	a2, 119
+      48:	030c      	movi.n	a3, 0
+      4a:	a41c      	movi.n	a4, 26
+      4c:	450c      	movi.n	a5, 4
+      4e:	0c08      	l32i.n	a0, a12, 0
+      50:	460c      	movi.n	a6, 4
+      52:	272002        	l32i	a0, a0, 156
+      55:	170c      	movi.n	a7, 1
+      57:	0000c0        	callx0	a0
+      5a:	77a022        	movi	a2, 119
+      5d:	030c      	movi.n	a3, 0
+      5f:	a41c      	movi.n	a4, 26
+      61:	550c      	movi.n	a5, 5
+      63:	0c08      	l32i.n	a0, a12, 0
+      65:	560c      	movi.n	a6, 5
+      67:	272002        	l32i	a0, a0, 156
+      6a:	070c      	movi.n	a7, 0
+      6c:	0000c0        	callx0	a0
+      6f:	77a022        	movi	a2, 119
+      72:	030c      	movi.n	a3, 0
+      74:	a41c      	movi.n	a4, 26
+      76:	550c      	movi.n	a5, 5
+      78:	0c08      	l32i.n	a0, a12, 0
+      7a:	560c      	movi.n	a6, 5
+      7c:	272002        	l32i	a0, a0, 156
+      7f:	170c      	movi.n	a7, 1
+      81:	0000c0        	callx0	a0
+      84:	77a022        	movi	a2, 119
+      87:	030c      	movi.n	a3, 0
+      89:	040c      	movi.n	a4, 0
+      8b:	750c      	movi.n	a5, 7
+      8d:	060c      	movi.n	a6, 0
+      8f:	0c08      	l32i.n	a0, a12, 0
+      91:	0178      	l32i.n	a7, a1, 0
+      93:	272002        	l32i	a0, a0, 156
+      96:	747c70        	extui	a7, a7, 12, 8
+      99:	0000c0        	callx0	a0
+      9c:	77a022        	movi	a2, 119
+      9f:	030c      	movi.n	a3, 0
+      a1:	140c      	movi.n	a4, 1
+      a3:	750c      	movi.n	a5, 7
+      a5:	060c      	movi.n	a6, 0
+      a7:	0c08      	l32i.n	a0, a12, 0
+      a9:	0178      	l32i.n	a7, a1, 0
+      ab:	272002        	l32i	a0, a0, 156
+      ae:	747470        	extui	a7, a7, 4, 8
+      b1:	0000c0        	callx0	a0
+      b4:	77a022        	movi	a2, 119
+      b7:	030c      	movi.n	a3, 0
+      b9:	240c      	movi.n	a4, 2
+      bb:	350c      	movi.n	a5, 3
+      bd:	060c      	movi.n	a6, 0
+      bf:	0c08      	l32i.n	a0, a12, 0
+      c1:	0178      	l32i.n	a7, a1, 0
+      c3:	272002        	l32i	a0, a0, 156
+      c6:	347070        	extui	a7, a7, 0, 4
+      c9:	0000c0        	callx0	a0
+      cc:	77a022        	movi	a2, 119
+      cf:	030c      	movi.n	a3, 0
+      d1:	440c      	movi.n	a4, 4
+      d3:	750c      	movi.n	a5, 7
+      d5:	0c08      	l32i.n	a0, a12, 0
+      d7:	060c      	movi.n	a6, 0
+      d9:	272002        	l32i	a0, a0, 156
+      dc:	7470e0        	extui	a7, a14, 0, 8
+      df:	0000c0        	callx0	a0
+      e2:	77a022        	movi	a2, 119
+      e5:	030c      	movi.n	a3, 0
+      e7:	340c      	movi.n	a4, 3
+      e9:	750c      	movi.n	a5, 7
+      eb:	0c08      	l32i.n	a0, a12, 0
+      ed:	060c      	movi.n	a6, 0
+      ef:	272002        	l32i	a0, a0, 156
+      f2:	7478e0        	extui	a7, a14, 8, 8
+      f5:	0000c0        	callx0	a0
+      f8:	3570e0        	extui	a7, a14, 16, 4
+      fb:	77a022        	movi	a2, 119
+      fe:	030c      	movi.n	a3, 0
+     100:	240c      	movi.n	a4, 2
+     102:	0c08      	l32i.n	a0, a12, 0
+     104:	750c      	movi.n	a5, 7
+     106:	272002        	l32i	a0, a0, 156
+     109:	460c      	movi.n	a6, 4
+     10b:	0000c0        	callx0	a0
+     10e:	f40c      	movi.n	a4, 15
+     110:	350c      	movi.n	a5, 3
+     112:	360c      	movi.n	a6, 3
+     114:	0430d0        	extui	a3, a13, 0, 1
+     117:	120c      	movi.n	a2, 1
+     119:	0c08      	l32i.n	a0, a12, 0
+     11b:	0e0c      	movi.n	a14, 0
+     11d:	272002        	l32i	a0, a0, 156
+     120:	83e230        	moveqz	a14, a2, a3
+     123:	0e7d      	mov.n	a7, a14
+     125:	77a022        	movi	a2, 119
+     128:	030c      	movi.n	a3, 0
+     12a:	0000c0        	callx0	a0
+     12d:	0e7d      	mov.n	a7, a14
+     12f:	77a022        	movi	a2, 119
+     132:	030c      	movi.n	a3, 0
+     134:	841c      	movi.n	a4, 24
+     136:	0c08      	l32i.n	a0, a12, 0
+     138:	050c      	movi.n	a5, 0
+     13a:	272002        	l32i	a0, a0, 156
+     13d:	060c      	movi.n	a6, 0
+     13f:	0000c0        	callx0	a0
+     142:	0d7d      	mov.n	a7, a13
+     144:	77a022        	movi	a2, 119
+     147:	030c      	movi.n	a3, 0
+     149:	c41c      	movi.n	a4, 28
+     14b:	0c08      	l32i.n	a0, a12, 0
+     14d:	050c      	movi.n	a5, 0
+     14f:	272002        	l32i	a0, a0, 156
+     152:	060c      	movi.n	a6, 0
+     154:	0000c0        	callx0	a0
+     157:	21c8      	l32i.n	a12, a1, 8
+     159:	31d8      	l32i.n	a13, a1, 12
+     15b:	41e8      	l32i.n	a14, a1, 16
+     15d:	1108      	l32i.n	a0, a1, 4
+     15f:	20c112        	addi	a1, a1, 32
+     162:	f00d      	ret.n
+     164:	000000        	ill
+     167:	01fe00        	slli	a15, a14, 32
+     16a:	b40000        	extui	a0, a0, 0, 12
+     16d:	0009      	s32i.n	a0, a0, 0
+     16f:	026200        	excw
+	...
+     17a:	6c0000        	excw
+     17d:	0009      	s32i.n	a0, a0, 0
+     17f:	09a800        	excw
+     182:	a30000        	movltz	a0, a0, a0
+     185:	0009      	s32i.n	a0, a0, 0
+     187:	099e00        	excw
+     18a:	990000        	excw
+     18d:	0009      	s32i.n	a0, a0, 0
+     18f:	099400        	excw
+     192:	8f0000        	excw
+     195:	0009      	s32i.n	a0, a0, 0
+     197:	098a00        	excw
+     19a:	850000        	extui	a0, a0, 16, 9
+     19d:	0009      	s32i.n	a0, a0, 0
+     19f:	098000        	excw
+     1a2:	7b0000        	excw
+     1a5:	0009      	s32i.n	a0, a0, 0
+     1a7:	097600        	excw
+     1aa:	710000        	excw
+     1ad:	0009      	s32i.n	a0, a0, 0
+     1af:	03c300        	rsr.eps3	a0
+     1b2:	000000        	ill
+     1b5:	000000        	ill
+
+000001b8 <rom_set_channel_freq>:
+     1b8:	d0c112        	addi	a1, a1, -48
+     1bb:	51c9      	s32i.n	a12, a1, 20
+     1bd:	3139      	s32i.n	a3, a1, 12
+     1bf:	2169      	s32i.n	a6, a1, 8
+     1c1:	8179      	s32i.n	a7, a1, 32
+     1c3:	1159      	s32i.n	a5, a1, 4
+     1c5:	4109      	s32i.n	a0, a1, 16
+     1c7:	61d9      	s32i.n	a13, a1, 24
+     1c9:	71e9      	s32i.n	a14, a1, 28
+     1cb:	02dd      	mov.n	a13, a2
+     1cd:	0c12a6        	blti	a2, 1, 1dd <rom_set_channel_freq+0x25>
+     1d0:	d00c      	movi.n	a0, 13
+     1d2:	072027        	blt	a0, a2, 1dd <rom_set_channel_freq+0x25>
+     1d5:	e20b      	addi.n	a14, a2, -1
+     1d7:	74e0e0        	extui	a14, a14, 0, 8
+     1da:	000046        	j	1df <rom_set_channel_freq+0x27>
+     1dd:	de0c      	movi.n	a14, 13
+     1df:	ffe1c1        	l32r	a12, 164 <rom_ana_inf_gating_en+0x160>
+     1e2:	0c08      	l32i.n	a0, a12, 0
+     1e4:	372002        	l32i	a0, a0, 220
+     1e7:	9149      	s32i.n	a4, a1, 36
+     1e9:	0000c0        	callx0	a0
+     1ec:	9108      	l32i.n	a0, a1, 36
+     1ee:	e20c      	movi.n	a2, 14
+     1f0:	34bd27        	bgeu	a13, a2, 228 <rom_set_channel_freq+0x70>
+     1f3:	ffdd41        	l32r	a4, 168 <rom_ana_inf_gating_en+0x164>
+     1f6:	903dd0        	addx2	a3, a13, a13
+     1f9:	334a      	add.n	a3, a3, a4
+     1fb:	0003a0        	jx	a3
+     1fe:	000986        	j	228 <rom_set_channel_freq+0x70>
+     201:	005346        	j	352 <rom_set_channel_freq+0x19a>
+     204:	006486        	j	39a <rom_set_channel_freq+0x1e2>
+     207:	006246        	j	394 <rom_set_channel_freq+0x1dc>
+     20a:	006006        	j	38e <rom_set_channel_freq+0x1d6>
+     20d:	005dc6        	j	388 <rom_set_channel_freq+0x1d0>
+     210:	005b86        	j	382 <rom_set_channel_freq+0x1ca>
+     213:	005946        	j	37c <rom_set_channel_freq+0x1c4>
+     216:	005706        	j	376 <rom_set_channel_freq+0x1be>
+     219:	0054c6        	j	370 <rom_set_channel_freq+0x1b8>
+     21c:	005286        	j	36a <rom_set_channel_freq+0x1b2>
+     21f:	005046        	j	364 <rom_set_channel_freq+0x1ac>
+     222:	004e06        	j	35e <rom_set_channel_freq+0x1a6>
+     225:	004bc6        	j	358 <rom_set_channel_freq+0x1a0>
+     228:	ffd1c1        	l32r	a12, 16c <rom_ana_inf_gating_en+0x168>
+     22b:	904e00        	addx2	a4, a14, a0
+     22e:	009442        	l16si	a4, a4, 0
+     231:	400e00        	ssr	a14
+     234:	054456        	bnez	a4, 28c <rom_set_channel_freq+0xd4>
+     237:	3158      	l32i.n	a5, a1, 12
+     239:	b03c      	movi.n	a0, 59
+     23b:	161516        	beqz	a5, 3a0 <rom_set_channel_freq+0x1e8>
+     23e:	b65c      	movi.n	a6, 91
+     240:	da5c      	movi.n	a10, 93
+     242:	e35c      	movi.n	a3, 94
+     244:	76a0b2        	movi	a11, 118
+     247:	83afe2        	movi	a14, -125
+     24a:	b7af42        	movi	a4, -73
+     24d:	c55c      	movi.n	a5, 92
+     24f:	e70c      	movi.n	a7, 14
+     251:	023d77        	bltu	a13, a7, 257 <rom_set_channel_freq+0x9f>
+     254:	003386        	j	326 <rom_set_channel_freq+0x16e>
+     257:	ffc691        	l32r	a9, 170 <rom_ana_inf_gating_en+0x16c>
+     25a:	908dd0        	addx2	a8, a13, a13
+     25d:	889a      	add.n	a8, a8, a9
+     25f:	0008a0        	jx	a8
+     262:	003006        	j	326 <rom_set_channel_freq+0x16e>
+     265:	0020c6        	j	2ec <rom_set_channel_freq+0x134>
+     268:	003286        	j	336 <rom_set_channel_freq+0x17e>
+     26b:	0082c6        	j	47a <rom_set_channel_freq+0x2c2>
+     26e:	007f46        	j	46f <rom_set_channel_freq+0x2b7>
+     271:	007b86        	j	463 <rom_set_channel_freq+0x2ab>
+     274:	003306        	j	344 <rom_set_channel_freq+0x18c>
+     277:	007806        	j	45b <rom_set_channel_freq+0x2a3>
+     27a:	0073c6        	j	44d <rom_set_channel_freq+0x295>
+     27d:	006fc6        	j	440 <rom_set_channel_freq+0x288>
+     280:	006c46        	j	435 <rom_set_channel_freq+0x27d>
+     283:	006806        	j	427 <rom_set_channel_freq+0x26f>
+     286:	006486        	j	41c <rom_set_channel_freq+0x264>
+     289:	006106        	j	411 <rom_set_channel_freq+0x259>
+     28c:	11a8      	l32i.n	a10, a1, 4
+     28e:	21d8      	l32i.n	a13, a1, 8
+     290:	0aa8      	l32i.n	a10, a10, 0
+     292:	a0ded0        	addx4	a13, a14, a13
+     295:	91a0a0        	srl	a10, a10
+     298:	3bea07        	bbsi	a10, 0, 2d7 <rom_set_channel_freq+0x11f>
+     29b:	ffb601        	l32r	a0, 174 <rom_ana_inf_gating_en+0x170>
+     29e:	3138      	l32i.n	a3, a1, 12
+     2a0:	0008      	l32i.n	a0, a0, 0
+     2a2:	0c2d      	mov.n	a2, a12
+     2a4:	392002        	l32i	a0, a0, 228
+     2a7:	015d      	mov.n	a5, a1
+     2a9:	0000c0        	callx0	a0
+     2ac:	401e00        	ssl	a14
+     2af:	140c      	movi.n	a4, 1
+     2b1:	1138      	l32i.n	a3, a1, 4
+     2b3:	020152        	l8ui	a5, a1, 2
+     2b6:	010172        	l8ui	a7, a1, 1
+     2b9:	000162        	l8ui	a6, a1, 0
+     2bc:	117780        	slli	a7, a7, 8
+     2bf:	116600        	slli	a6, a6, 16
+     2c2:	206670        	or	a6, a6, a7
+     2c5:	205560        	or	a5, a5, a6
+     2c8:	0d59      	s32i.n	a5, a13, 0
+     2ca:	0328      	l32i.n	a2, a3, 0
+     2cc:	a14400        	sll	a4, a4
+     2cf:	202240        	or	a2, a2, a4
+     2d2:	0329      	s32i.n	a2, a3, 0
+     2d4:	000806        	j	2f8 <rom_set_channel_freq+0x140>
+     2d7:	0d98      	l32i.n	a9, a13, 0
+     2d9:	f59090        	extui	a9, a9, 16, 16
+     2dc:	004192        	s8i	a9, a1, 0
+     2df:	0d88      	l32i.n	a8, a13, 0
+     2e1:	418880        	srli	a8, a8, 8
+     2e4:	014182        	s8i	a8, a1, 1
+     2e7:	0d08      	l32i.n	a0, a13, 0
+     2e9:	000206        	j	2f5 <rom_set_channel_freq+0x13d>
+     2ec:	004162        	s8i	a6, a1, 0
+     2ef:	b1af32        	movi	a3, -79
+     2f2:	014132        	s8i	a3, a1, 1
+     2f5:	024102        	s8i	a0, a1, 2
+     2f8:	ffa0e1        	l32r	a14, 178 <rom_ana_inf_gating_en+0x174>
+     2fb:	0e08      	l32i.n	a0, a14, 0
+     2fd:	382002        	l32i	a0, a0, 224
+     300:	012d      	mov.n	a2, a1
+     302:	0000c0        	callx0	a0
+     305:	0e08      	l32i.n	a0, a14, 0
+     307:	362002        	l32i	a0, a0, 216
+     30a:	81d8      	l32i.n	a13, a1, 32
+     30c:	0000c0        	callx0	a0
+     30f:	0d2d      	mov.n	a2, a13
+     311:	ffa801        	l32r	a0, 1b4 <rom_ana_inf_gating_en+0x1b0>
+     314:	0000c0        	callx0	a0
+     317:	4108      	l32i.n	a0, a1, 16
+     319:	61d8      	l32i.n	a13, a1, 24
+     31b:	0c2d      	mov.n	a2, a12
+     31d:	71e8      	l32i.n	a14, a1, 28
+     31f:	51c8      	l32i.n	a12, a1, 20
+     321:	30c112        	addi	a1, a1, 48
+     324:	f00d      	ret.n
+     326:	0b0d      	mov.n	a0, a11
+     328:	f35c      	movi.n	a3, 95
+     32a:	62a022        	movi	a2, 98
+     32d:	014122        	s8i	a2, a1, 1
+     330:	004132        	s8i	a3, a1, 0
+     333:	ffef86        	j	2f5 <rom_set_channel_freq+0x13d>
+     336:	004162        	s8i	a6, a1, 0
+     339:	dfaf02        	movi	a0, -33
+     33c:	247c      	movi.n	a4, -14
+     33e:	014142        	s8i	a4, a1, 1
+     341:	ffec06        	j	2f5 <rom_set_channel_freq+0x13d>
+     344:	004152        	s8i	a5, a1, 0
+     347:	6fa002        	movi	a0, 111
+     34a:	967c      	movi.n	a6, -7
+     34c:	014162        	s8i	a6, a1, 1
+     34f:	ffe886        	j	2f5 <rom_set_channel_freq+0x13d>
+     352:	ff8ac1        	l32r	a12, 17c <rom_ana_inf_gating_en+0x178>
+     355:	ffb486        	j	22b <rom_set_channel_freq+0x73>
+     358:	ff8ac1        	l32r	a12, 180 <rom_ana_inf_gating_en+0x17c>
+     35b:	ffb306        	j	22b <rom_set_channel_freq+0x73>
+     35e:	ff89c1        	l32r	a12, 184 <rom_ana_inf_gating_en+0x180>
+     361:	ffb186        	j	22b <rom_set_channel_freq+0x73>
+     364:	ff89c1        	l32r	a12, 188 <rom_ana_inf_gating_en+0x184>
+     367:	ffb006        	j	22b <rom_set_channel_freq+0x73>
+     36a:	ff88c1        	l32r	a12, 18c <rom_ana_inf_gating_en+0x188>
+     36d:	ffae86        	j	22b <rom_set_channel_freq+0x73>
+     370:	ff88c1        	l32r	a12, 190 <rom_ana_inf_gating_en+0x18c>
+     373:	ffad06        	j	22b <rom_set_channel_freq+0x73>
+     376:	ff87c1        	l32r	a12, 194 <rom_ana_inf_gating_en+0x190>
+     379:	ffab86        	j	22b <rom_set_channel_freq+0x73>
+     37c:	ff87c1        	l32r	a12, 198 <rom_ana_inf_gating_en+0x194>
+     37f:	ffaa06        	j	22b <rom_set_channel_freq+0x73>
+     382:	ff86c1        	l32r	a12, 19c <rom_ana_inf_gating_en+0x198>
+     385:	ffa886        	j	22b <rom_set_channel_freq+0x73>
+     388:	ff86c1        	l32r	a12, 1a0 <rom_ana_inf_gating_en+0x19c>
+     38b:	ffa706        	j	22b <rom_set_channel_freq+0x73>
+     38e:	ff85c1        	l32r	a12, 1a4 <rom_ana_inf_gating_en+0x1a0>
+     391:	ffa586        	j	22b <rom_set_channel_freq+0x73>
+     394:	ff85c1        	l32r	a12, 1a8 <rom_ana_inf_gating_en+0x1a4>
+     397:	ffa406        	j	22b <rom_set_channel_freq+0x73>
+     39a:	ff84c1        	l32r	a12, 1ac <rom_ana_inf_gating_en+0x1a8>
+     39d:	ffa286        	j	22b <rom_set_channel_freq+0x73>
+     3a0:	161c      	movi.n	a6, 17
+     3a2:	6a6c      	movi.n	a10, -26
+     3a4:	bbaf52        	movi	a5, -69
+     3a7:	91afe2        	movi	a14, -111
+     3aa:	66a032        	movi	a3, 102
+     3ad:	273c      	movi.n	a7, 50
+     3af:	1b3c      	movi.n	a11, 49
+     3b1:	043c      	movi.n	a4, 48
+     3b3:	e80c      	movi.n	a8, 14
+     3b5:	34bd87        	bgeu	a13, a8, 3ed <rom_set_channel_freq+0x235>
+     3b8:	ff7e21        	l32r	a2, 1b0 <rom_ana_inf_gating_en+0x1ac>
+     3bb:	909dd0        	addx2	a9, a13, a13
+     3be:	992a      	add.n	a9, a9, a2
+     3c0:	0009a0        	jx	a9
+     3c3:	000986        	j	3ed <rom_set_channel_freq+0x235>
+     3c6:	000f06        	j	406 <rom_set_channel_freq+0x24e>
+     3c9:	0009c6        	j	3f4 <rom_set_channel_freq+0x23c>
+     3cc:	003546        	j	4a5 <rom_set_channel_freq+0x2ed>
+     3cf:	003586        	j	4a9 <rom_set_channel_freq+0x2f1>
+     3d2:	0038c6        	j	4b9 <rom_set_channel_freq+0x301>
+     3d5:	000846        	j	3fa <rom_set_channel_freq+0x242>
+     3d8:	002ac6        	j	487 <rom_set_channel_freq+0x2cf>
+     3db:	002b06        	j	48b <rom_set_channel_freq+0x2d3>
+     3de:	003406        	j	4b2 <rom_set_channel_freq+0x2fa>
+     3e1:	002a86        	j	48f <rom_set_channel_freq+0x2d7>
+     3e4:	002bc6        	j	497 <rom_set_channel_freq+0x2df>
+     3e7:	002c06        	j	49b <rom_set_channel_freq+0x2e3>
+     3ea:	000586        	j	404 <rom_set_channel_freq+0x24c>
+     3ed:	074d      	mov.n	a4, a7
+     3ef:	ccaf62        	movi	a6, -52
+     3f2:	06ed      	mov.n	a14, a6
+     3f4:	065d      	mov.n	a5, a6
+     3f6:	0e0d      	mov.n	a0, a14
+     3f8:	04bd      	mov.n	a11, a4
+     3fa:	053d      	mov.n	a3, a5
+     3fc:	0b4d      	mov.n	a4, a11
+     3fe:	014102        	s8i	a0, a1, 1
+     401:	000106        	j	409 <rom_set_channel_freq+0x251>
+     404:	074d      	mov.n	a4, a7
+     406:	014132        	s8i	a3, a1, 1
+     409:	030d      	mov.n	a0, a3
+     40b:	004142        	s8i	a4, a1, 0
+     40e:	ffb8c6        	j	2f5 <rom_set_channel_freq+0x13d>
+     411:	004132        	s8i	a3, a1, 0
+     414:	c06c      	movi.n	a0, -20
+     416:	c4af32        	movi	a3, -60
+     419:	ffb546        	j	2f2 <rom_set_channel_freq+0x13a>
+     41c:	004132        	s8i	a3, a1, 0
+     41f:	0141e2        	s8i	a14, a1, 1
+     422:	804c      	movi.n	a0, 72
+     424:	ffb346        	j	2f5 <rom_set_channel_freq+0x13d>
+     427:	004132        	s8i	a3, a1, 0
+     42a:	a4af02        	movi	a0, -92
+     42d:	144c      	movi.n	a4, 65
+     42f:	014142        	s8i	a4, a1, 1
+     432:	ffafc6        	j	2f5 <rom_set_channel_freq+0x13d>
+     435:	000c      	movi.n	a0, 0
+     437:	014102        	s8i	a0, a1, 1
+     43a:	004132        	s8i	a3, a1, 0
+     43d:	ffad06        	j	2f5 <rom_set_channel_freq+0x13d>
+     440:	060d      	mov.n	a0, a6
+     442:	0a3d      	mov.n	a3, a10
+     444:	beaf52        	movi	a5, -66
+     447:	014152        	s8i	a5, a1, 1
+     44a:	fffb06        	j	43a <rom_set_channel_freq+0x282>
+     44d:	0041a2        	s8i	a10, a1, 0
+     450:	7ca002        	movi	a0, 124
+     453:	014102        	s8i	a0, a1, 1
+     456:	040d      	mov.n	a0, a4
+     458:	ffa646        	j	2f5 <rom_set_channel_freq+0x13d>
+     45b:	0041a2        	s8i	a10, a1, 0
+     45e:	341c      	movi.n	a4, 19
+     460:	fffbc6        	j	453 <rom_set_channel_freq+0x29b>
+     463:	004152        	s8i	a5, a1, 0
+     466:	014142        	s8i	a4, a1, 1
+     469:	cbaf02        	movi	a0, -53
+     46c:	ffa146        	j	2f5 <rom_set_channel_freq+0x13d>
+     46f:	004152        	s8i	a5, a1, 0
+     472:	0141b2        	s8i	a11, a1, 1
+     475:	702c      	movi.n	a0, 39
+     477:	ff9e86        	j	2f5 <rom_set_channel_freq+0x13d>
+     47a:	0e0d      	mov.n	a0, a14
+     47c:	004152        	s8i	a5, a1, 0
+     47f:	463c      	movi.n	a6, 52
+     481:	014162        	s8i	a6, a1, 1
+     484:	ff9b46        	j	2f5 <rom_set_channel_freq+0x13d>
+     487:	036d      	mov.n	a6, a3
+     489:	06ed      	mov.n	a14, a6
+     48b:	063d      	mov.n	a3, a6
+     48d:	0ead      	mov.n	a10, a14
+     48f:	0b4d      	mov.n	a4, a11
+     491:	0141a2        	s8i	a10, a1, 1
+     494:	ffdc46        	j	409 <rom_set_channel_freq+0x251>
+     497:	065d      	mov.n	a5, a6
+     499:	050d      	mov.n	a0, a5
+     49b:	053d      	mov.n	a3, a5
+     49d:	074d      	mov.n	a4, a7
+     49f:	014102        	s8i	a0, a1, 1
+     4a2:	ffd8c6        	j	409 <rom_set_channel_freq+0x251>
+     4a5:	053d      	mov.n	a3, a5
+     4a7:	03ad      	mov.n	a10, a3
+     4a9:	035d      	mov.n	a5, a3
+     4ab:	0a0d      	mov.n	a0, a10
+     4ad:	04bd      	mov.n	a11, a4
+     4af:	ffd1c6        	j	3fa <rom_set_channel_freq+0x242>
+     4b2:	053d      	mov.n	a3, a5
+     4b4:	03ad      	mov.n	a10, a3
+     4b6:	fff546        	j	48f <rom_set_channel_freq+0x2d7>
+     4b9:	065d      	mov.n	a5, a6
+     4bb:	050d      	mov.n	a0, a5
+     4bd:	ffce46        	j	3fa <rom_set_channel_freq+0x242>
+     4c0:	000000        	ill
+     4c3:	055d00        	extui	a5, a0, 29, 1
+     4c6:	000000        	ill
+     4c9:	f20a      	add.n	a15, a2, a0
+     4cb:	3f          	.byte 0x3f
+     4cc:	000000        	ill
+     4cf:	096000        	excw
+     4d2:	000000        	ill
+     4d5:	000000        	ill
+     4d8:	009a00        	excw
+     4db:	520860        	excw
+     4de:	000000        	ill
+     4e1:	000060        	excw
+     4e4:	e00000        	subx4	a0, a0, a0
+     4e7:	3f          	.byte 0x3f
+     4e8:	9999      	s32i.n	a9, a9, 36
+     4ea:	4049      	s32i.n	a4, a0, 16
+     4ec:	999a      	add.n	a9, a9, a9
+     4ee:	9999      	s32i.n	a9, a9, 36
+     4f0:	9999      	s32i.n	a9, a9, 36
+     4f2:	40e9      	s32i.n	a14, a0, 16
+     4f4:	999a      	add.n	a9, a9, a9
+     4f6:	9999      	s32i.n	a9, a9, 36
+     4f8:	009600        	excw
+     4fb:	ffff60        	excw
+     4fe:	0f          	.byte 0xf
+     4ff:	000000        	ill
+     502:	00c000        	excw
+	...
+
+00000524 <rom_chip_50_set_channel>:
+     524:	e0c112        	addi	a1, a1, -32
+     527:	2109      	s32i.n	a0, a1, 8
+     529:	41d9      	s32i.n	a13, a1, 16
+     52b:	31c9      	s32i.n	a12, a1, 12
+     52d:	51e9      	s32i.n	a14, a1, 20
+     52f:	02cd      	mov.n	a12, a2
+     531:	04ed      	mov.n	a14, a4
+     533:	ffe3d1        	l32r	a13, 4c0 <rom_set_channel_freq+0x308>
+     536:	054d      	mov.n	a4, a5
+     538:	71e9      	s32i.n	a14, a1, 28
+     53a:	065d      	mov.n	a5, a6
+     53c:	0d08      	l32i.n	a0, a13, 0
+     53e:	076d      	mov.n	a6, a7
+     540:	202002        	l32i	a0, a0, 128
+     543:	101172        	l16ui	a7, a1, 32
+     546:	0000c0        	callx0	a0
+     549:	023d      	mov.n	a3, a2
+     54b:	7108      	l32i.n	a0, a1, 28
+     54d:	e80c      	movi.n	a8, 14
+     54f:	34bc87        	bgeu	a12, a8, 587 <rom_chip_50_set_channel+0x63>
+     552:	ffdca1        	l32r	a10, 4c4 <rom_set_channel_freq+0x30c>
+     555:	909cc0        	addx2	a9, a12, a12
+     558:	99aa      	add.n	a9, a9, a10
+     55a:	0009a0        	jx	a9
+     55d:	000986        	j	587 <rom_chip_50_set_channel+0x63>
+     560:	0052c6        	j	6af <rom_chip_50_set_channel+0x18b>
+     563:	006d06        	j	71b <rom_chip_50_set_channel+0x1f7>
+     566:	006a06        	j	712 <rom_chip_50_set_channel+0x1ee>
+     569:	006706        	j	709 <rom_chip_50_set_channel+0x1e5>
+     56c:	006406        	j	700 <rom_chip_50_set_channel+0x1dc>
+     56f:	006106        	j	6f7 <rom_chip_50_set_channel+0x1d3>
+     572:	005e06        	j	6ee <rom_chip_50_set_channel+0x1ca>
+     575:	005b06        	j	6e5 <rom_chip_50_set_channel+0x1c1>
+     578:	005806        	j	6dc <rom_chip_50_set_channel+0x1b8>
+     57b:	005506        	j	6d3 <rom_chip_50_set_channel+0x1af>
+     57e:	005206        	j	6ca <rom_chip_50_set_channel+0x1a6>
+     581:	004f06        	j	6c1 <rom_chip_50_set_channel+0x19d>
+     584:	004c06        	j	6b8 <rom_chip_50_set_channel+0x194>
+     587:	6aa0d2        	movi	a13, 106
+     58a:	08a1e2        	movi	a14, 0x108
+     58d:	041016        	beqz	a0, 5d2 <rom_chip_50_set_channel+0xae>
+     590:	ffceb1        	l32r	a11, 4c8 <rom_set_channel_freq+0x310>
+     593:	0020c0        	memw
+     596:	9c2bb2        	l32i	a11, a11, 0x270
+     599:	6139      	s32i.n	a3, a1, 24
+     59b:	15eb17        	bbsi	a11, 1, 5b4 <rom_chip_50_set_channel+0x90>
+     59e:	67a022        	movi	a2, 103
+     5a1:	ffca01        	l32r	a0, 4cc <rom_set_channel_freq+0x314>
+     5a4:	430c      	movi.n	a3, 4
+     5a6:	0008      	l32i.n	a0, a0, 0
+     5a8:	740c      	movi.n	a4, 7
+     5aa:	262002        	l32i	a0, a0, 152
+     5ad:	450c      	movi.n	a5, 4
+     5af:	0000c0        	callx0	a0
+     5b2:	6138      	l32i.n	a3, a1, 24
+     5b4:	120c      	movi.n	a2, 1
+     5b6:	ffc701        	l32r	a0, 4d4 <rom_set_channel_freq+0x31c>
+     5b9:	ffc541        	l32r	a4, 4d0 <rom_set_channel_freq+0x318>
+     5bc:	0008      	l32i.n	a0, a0, 0
+     5be:	8233e0        	mull	a3, a3, a14
+     5c1:	1f2002        	l32i	a0, a0, 124
+     5c4:	c14e40        	mul16u	a4, a14, a4
+     5c7:	0000c0        	callx0	a0
+     5ca:	520c      	movi.n	a2, 5
+     5cc:	ffce01        	l32r	a0, 504 <rom_set_channel_freq+0x34c>
+     5cf:	0000c0        	callx0	a0
+     5d2:	ffc151        	l32r	a5, 4d8 <rom_set_channel_freq+0x320>
+     5d5:	ffc171        	l32r	a7, 4dc <rom_set_channel_freq+0x324>
+     5d8:	ffc261        	l32r	a6, 4e0 <rom_set_channel_freq+0x328>
+     5db:	7d7a      	add.n	a7, a13, a7
+     5dd:	0177f0        	slli	a7, a7, 17
+     5e0:	0020c0        	memw
+     5e3:	452542        	l32i	a4, a5, 0x114
+     5e6:	c44040        	extui	a4, a4, 0, 13
+     5e9:	204470        	or	a4, a4, a7
+     5ec:	204460        	or	a4, a4, a6
+     5ef:	0020c0        	memw
+     5f2:	456542        	s32i	a4, a5, 0x114
+     5f5:	fbcc22        	addi	a2, a12, -5
+     5f8:	0a4216        	beqz	a2, 6a0 <rom_chip_50_set_channel+0x17c>
+     5fb:	1e6c26        	beqi	a12, 6, 61d <rom_chip_50_set_channel+0xf9>
+     5fe:	f9cc82        	addi	a8, a12, -7
+     601:	0a0816        	beqz	a8, 6a5 <rom_chip_50_set_channel+0x181>
+     604:	f8cc92        	addi	a9, a12, -8
+     607:	09f916        	beqz	a9, 6aa <rom_chip_50_set_channel+0x186>
+     60a:	f3cca2        	addi	a10, a12, -13
+     60d:	08fa16        	beqz	a10, 6a0 <rom_chip_50_set_channel+0x17c>
+     610:	f2ccd2        	addi	a13, a12, -14
+     613:	cb7c      	movi.n	a11, -4
+     615:	020c      	movi.n	a2, 0
+     617:	832bd0        	moveqz	a2, a11, a13
+     61a:	000046        	j	61f <rom_chip_50_set_channel+0xfb>
+     61d:	320c      	movi.n	a2, 3
+     61f:	ffb1d1        	l32r	a13, 4e4 <rom_set_channel_freq+0x32c>
+     622:	0c0c      	movi.n	a12, 0
+     624:	ffb901        	l32r	a0, 508 <rom_set_channel_freq+0x350>
+     627:	0000c0        	callx0	a0
+     62a:	1129      	s32i.n	a2, a1, 4
+     62c:	0139      	s32i.n	a3, a1, 0
+     62e:	ffae51        	l32r	a5, 4e8 <rom_set_channel_freq+0x330>
+     631:	ffae41        	l32r	a4, 4ec <rom_set_channel_freq+0x334>
+     634:	ffb601        	l32r	a0, 50c <rom_set_channel_freq+0x354>
+     637:	0000c0        	callx0	a0
+     63a:	0d5d      	mov.n	a5, a13
+     63c:	0c4d      	mov.n	a4, a12
+     63e:	ffb401        	l32r	a0, 510 <rom_set_channel_freq+0x358>
+     641:	0000c0        	callx0	a0
+     644:	ffb401        	l32r	a0, 514 <rom_set_channel_freq+0x35c>
+     647:	0000c0        	callx0	a0
+     64a:	0138      	l32i.n	a3, a1, 0
+     64c:	ffa951        	l32r	a5, 4f0 <rom_set_channel_freq+0x338>
+     64f:	02ed      	mov.n	a14, a2
+     651:	ffa841        	l32r	a4, 4f4 <rom_set_channel_freq+0x33c>
+     654:	1128      	l32i.n	a2, a1, 4
+     656:	ffb001        	l32r	a0, 518 <rom_set_channel_freq+0x360>
+     659:	0000c0        	callx0	a0
+     65c:	0c4d      	mov.n	a4, a12
+     65e:	0d5d      	mov.n	a5, a13
+     660:	ffaf01        	l32r	a0, 51c <rom_set_channel_freq+0x364>
+     663:	0000c0        	callx0	a0
+     666:	ffa4c1        	l32r	a12, 4f8 <rom_set_channel_freq+0x340>
+     669:	ffad01        	l32r	a0, 520 <rom_set_channel_freq+0x368>
+     66c:	0000c0        	callx0	a0
+     66f:	ffa301        	l32r	a0, 4fc <rom_set_channel_freq+0x344>
+     672:	9430e0        	extui	a3, a14, 0, 10
+     675:	100200        	and	a0, a2, a0
+     678:	0133c0        	slli	a3, a3, 20
+     67b:	ffa121        	l32r	a2, 500 <rom_set_channel_freq+0x348>
+     67e:	0020c0        	memw
+     681:	a82ce2        	l32i	a14, a12, 0x2a0
+     684:	10ee20        	and	a14, a14, a2
+     687:	20ee30        	or	a14, a14, a3
+     68a:	20ee00        	or	a14, a14, a0
+     68d:	0020c0        	memw
+     690:	a86ce2        	s32i	a14, a12, 0x2a0
+     693:	41d8      	l32i.n	a13, a1, 16
+     695:	31c8      	l32i.n	a12, a1, 12
+     697:	51e8      	l32i.n	a14, a1, 20
+     699:	2108      	l32i.n	a0, a1, 8
+     69b:	20c112        	addi	a1, a1, 32
+     69e:	f00d      	ret.n
+     6a0:	820c      	movi.n	a2, 8
+     6a2:	ffde46        	j	61f <rom_chip_50_set_channel+0xfb>
+     6a5:	e27c      	movi.n	a2, -2
+     6a7:	ffdd06        	j	61f <rom_chip_50_set_channel+0xfb>
+     6aa:	927c      	movi.n	a2, -7
+     6ac:	ffdbc6        	j	61f <rom_chip_50_set_channel+0xfb>
+     6af:	09a1e2        	movi	a14, 0x109
+     6b2:	e1a2d2        	movi	a13, 0x2e1
+     6b5:	ffb506        	j	58d <rom_chip_50_set_channel+0x69>
+     6b8:	08a1e2        	movi	a14, 0x108
+     6bb:	d1a0d2        	movi	a13, 209
+     6be:	ffb2c6        	j	58d <rom_chip_50_set_channel+0x69>
+     6c1:	08a1e2        	movi	a14, 0x108
+     6c4:	fca0d2        	movi	a13, 252
+     6c7:	ffb086        	j	58d <rom_chip_50_set_channel+0x69>
+     6ca:	02a1e2        	movi	a14, 0x102
+     6cd:	27a1d2        	movi	a13, 0x127
+     6d0:	ffae46        	j	58d <rom_chip_50_set_channel+0x69>
+     6d3:	01a1e2        	movi	a14, 0x101
+     6d6:	53a1d2        	movi	a13, 0x153
+     6d9:	ffac06        	j	58d <rom_chip_50_set_channel+0x69>
+     6dc:	08a1e2        	movi	a14, 0x108
+     6df:	7ea1d2        	movi	a13, 0x17e
+     6e2:	ffa9c6        	j	58d <rom_chip_50_set_channel+0x69>
+     6e5:	1ba1e2        	movi	a14, 0x11b
+     6e8:	aaa1d2        	movi	a13, 0x1aa
+     6eb:	ffa786        	j	58d <rom_chip_50_set_channel+0x69>
+     6ee:	ffa0e2        	movi	a14, 255
+     6f1:	d6a1d2        	movi	a13, 0x1d6
+     6f4:	ffa546        	j	58d <rom_chip_50_set_channel+0x69>
+     6f7:	0da1e2        	movi	a14, 0x10d
+     6fa:	02a2d2        	movi	a13, 0x202
+     6fd:	ffa306        	j	58d <rom_chip_50_set_channel+0x69>
+     700:	09a1e2        	movi	a14, 0x109
+     703:	2ea2d2        	movi	a13, 0x22e
+     706:	ffa0c6        	j	58d <rom_chip_50_set_channel+0x69>
+     709:	09a1e2        	movi	a14, 0x109
+     70c:	5aa2d2        	movi	a13, 0x25a
+     70f:	ff9e86        	j	58d <rom_chip_50_set_channel+0x69>
+     712:	08a1e2        	movi	a14, 0x108
+     715:	87a2d2        	movi	a13, 0x287
+     718:	ff9c46        	j	58d <rom_chip_50_set_channel+0x69>
+     71b:	05a1e2        	movi	a14, 0x105
+     71e:	b4a2d2        	movi	a13, 0x2b4
+     721:	ff9a06        	j	58d <rom_chip_50_set_channel+0x69>
+     724:	000000        	ill
+	...
+
+00000728 <rom_chip_v5_rx_init>:
+     728:	61a022        	movi	a2, 97
+     72b:	130c      	movi.n	a3, 1
+     72d:	f0c112        	addi	a1, a1, -16
+     730:	11c9      	s32i.n	a12, a1, 4
+     732:	fffcc1        	l32r	a12, 724 <rom_chip_50_set_channel+0x200>
+     735:	0109      	s32i.n	a0, a1, 0
+     737:	0c08      	l32i.n	a0, a12, 0
+     739:	840c      	movi.n	a4, 8
+     73b:	262002        	l32i	a0, a0, 152
+     73e:	151c      	movi.n	a5, 17
+     740:	0000c0        	callx0	a0
+     743:	61a022        	movi	a2, 97
+     746:	130c      	movi.n	a3, 1
+     748:	0c08      	l32i.n	a0, a12, 0
+     74a:	640c      	movi.n	a4, 6
+     74c:	262002        	l32i	a0, a0, 152
+     74f:	551c      	movi.n	a5, 21
+     751:	0000c0        	callx0	a0
+     754:	61a022        	movi	a2, 97
+     757:	130c      	movi.n	a3, 1
+     759:	0c08      	l32i.n	a0, a12, 0
+     75b:	740c      	movi.n	a4, 7
+     75d:	262002        	l32i	a0, a0, 152
+     760:	155c      	movi.n	a5, 81
+     762:	0000c0        	callx0	a0
+     765:	64a022        	movi	a2, 100
+     768:	030c      	movi.n	a3, 0
+     76a:	0c08      	l32i.n	a0, a12, 0
+     76c:	440c      	movi.n	a4, 4
+     76e:	262002        	l32i	a0, a0, 152
+     771:	79a052        	movi	a5, 121
+     774:	0000c0        	callx0	a0
+     777:	64a022        	movi	a2, 100
+     77a:	030c      	movi.n	a3, 0
+     77c:	0c08      	l32i.n	a0, a12, 0
+     77e:	740c      	movi.n	a4, 7
+     780:	262002        	l32i	a0, a0, 152
+     783:	7ba052        	movi	a5, 123
+     786:	0000c0        	callx0	a0
+     789:	11c8      	l32i.n	a12, a1, 4
+     78b:	0108      	l32i.n	a0, a1, 0
+     78d:	10c112        	addi	a1, a1, 16
+     790:	f00d      	ret.n
+     792:	000000        	ill
+     795:	000000        	ill
+
+00000798 <rom_chip_v5_tx_init>:
+     798:	6ba022        	movi	a2, 107
+     79b:	230c      	movi.n	a3, 2
+     79d:	f0c112        	addi	a1, a1, -16
+     7a0:	11c9      	s32i.n	a12, a1, 4
+     7a2:	fffcc1        	l32r	a12, 794 <rom_chip_v5_rx_init+0x6c>
+     7a5:	0109      	s32i.n	a0, a1, 0
+     7a7:	0c08      	l32i.n	a0, a12, 0
+     7a9:	140c      	movi.n	a4, 1
+     7ab:	262002        	l32i	a0, a0, 152
+     7ae:	68a052        	movi	a5, 104
+     7b1:	0000c0        	callx0	a0
+     7b4:	6ba022        	movi	a2, 107
+     7b7:	230c      	movi.n	a3, 2
+     7b9:	0c08      	l32i.n	a0, a12, 0
+     7bb:	240c      	movi.n	a4, 2
+     7bd:	262002        	l32i	a0, a0, 152
+     7c0:	f50c      	movi.n	a5, 15
+     7c2:	0000c0        	callx0	a0
+     7c5:	6ba022        	movi	a2, 107
+     7c8:	230c      	movi.n	a3, 2
+     7ca:	0c08      	l32i.n	a0, a12, 0
+     7cc:	340c      	movi.n	a4, 3
+     7ce:	262002        	l32i	a0, a0, 152
+     7d1:	a8a052        	movi	a5, 168
+     7d4:	0000c0        	callx0	a0
+     7d7:	6ba022        	movi	a2, 107
+     7da:	230c      	movi.n	a3, 2
+     7dc:	0c08      	l32i.n	a0, a12, 0
+     7de:	440c      	movi.n	a4, 4
+     7e0:	262002        	l32i	a0, a0, 152
+     7e3:	650c      	movi.n	a5, 6
+     7e5:	0000c0        	callx0	a0
+     7e8:	6ba022        	movi	a2, 107
+     7eb:	230c      	movi.n	a3, 2
+     7ed:	0c08      	l32i.n	a0, a12, 0
+     7ef:	540c      	movi.n	a4, 5
+     7f1:	262002        	l32i	a0, a0, 152
+     7f4:	850c      	movi.n	a5, 8
+     7f6:	0000c0        	callx0	a0
+     7f9:	6ba022        	movi	a2, 107
+     7fc:	230c      	movi.n	a3, 2
+     7fe:	0c08      	l32i.n	a0, a12, 0
+     800:	640c      	movi.n	a4, 6
+     802:	262002        	l32i	a0, a0, 152
+     805:	b8a052        	movi	a5, 184
+     808:	0000c0        	callx0	a0
+     80b:	6ba022        	movi	a2, 107
+     80e:	230c      	movi.n	a3, 2
+     810:	0c08      	l32i.n	a0, a12, 0
+     812:	740c      	movi.n	a4, 7
+     814:	262002        	l32i	a0, a0, 152
+     817:	b55c      	movi.n	a5, 91
+     819:	0000c0        	callx0	a0
+     81c:	6ba022        	movi	a2, 107
+     81f:	230c      	movi.n	a3, 2
+     821:	0c08      	l32i.n	a0, a12, 0
+     823:	840c      	movi.n	a4, 8
+     825:	262002        	l32i	a0, a0, 152
+     828:	450c      	movi.n	a5, 4
+     82a:	0000c0        	callx0	a0
+     82d:	6ba022        	movi	a2, 107
+     830:	230c      	movi.n	a3, 2
+     832:	0c08      	l32i.n	a0, a12, 0
+     834:	940c      	movi.n	a4, 9
+     836:	262002        	l32i	a0, a0, 152
+     839:	050c      	movi.n	a5, 0
+     83b:	0000c0        	callx0	a0
+     83e:	6ba022        	movi	a2, 107
+     841:	230c      	movi.n	a3, 2
+     843:	0c08      	l32i.n	a0, a12, 0
+     845:	a40c      	movi.n	a4, 10
+     847:	262002        	l32i	a0, a0, 152
+     84a:	74a052        	movi	a5, 116
+     84d:	0000c0        	callx0	a0
+     850:	6ba022        	movi	a2, 107
+     853:	230c      	movi.n	a3, 2
+     855:	0c08      	l32i.n	a0, a12, 0
+     857:	b40c      	movi.n	a4, 11
+     859:	262002        	l32i	a0, a0, 152
+     85c:	750c      	movi.n	a5, 7
+     85e:	0000c0        	callx0	a0
+     861:	11c8      	l32i.n	a12, a1, 4
+     863:	0108      	l32i.n	a0, a1, 0
+     865:	10c112        	addi	a1, a1, 16
+     868:	f00d      	ret.n
+     86a:	000000        	ill
+     86d:	000a      	add.n	a0, a0, a0
+     86f:	ff8160        	excw
+
+00000870 <rom_i2c_readReg>:
+     870:	ffff81        	l32r	a8, 86c <rom_chip_v5_tx_init+0xd4>
+     873:	116480        	slli	a6, a4, 8
+     876:	1173e0        	slli	a7, a3, 2
+     879:	206260        	or	a6, a2, a6
+     87c:	278a      	add.n	a2, a7, a8
+     87e:	0020c0        	memw
+     881:	c06262        	s32i	a6, a2, 0x300
+     884:	0020c0        	memw
+     887:	c02252        	l32i	a5, a2, 0x300
+     88a:	087597        	bbci	a5, 25, 896 <rom_i2c_readReg+0x26>
+     88d:	0020c0        	memw
+     890:	c02272        	l32i	a7, a2, 0x300
+     893:	f6f797        	bbsi	a7, 25, 88d <rom_i2c_readReg+0x1d>
+     896:	0020c0        	memw
+     899:	c02222        	l32i	a2, a2, 0x300
+     89c:	752020        	extui	a2, a2, 16, 8
+     89f:	f00d      	ret.n
+     8a1:	000000        	ill
+     8a4:	000000        	ill
+	...
+
+000008a8 <rom_i2c_readReg_Mask>:
+     8a8:	f0c112        	addi	a1, a1, -16
+     8ab:	2109      	s32i.n	a0, a1, 8
+     8ad:	fffd01        	l32r	a0, 8a4 <rom_i2c_readReg+0x34>
+     8b0:	0008      	l32i.n	a0, a0, 0
+     8b2:	0159      	s32i.n	a5, a1, 0
+     8b4:	242002        	l32i	a0, a0, 144
+     8b7:	1169      	s32i.n	a6, a1, 4
+     8b9:	0000c0        	callx0	a0
+     8bc:	0148      	l32i.n	a4, a1, 0
+     8be:	1158      	l32i.n	a5, a1, 4
+     8c0:	2108      	l32i.n	a0, a1, 8
+     8c2:	400500        	ssr	a5
+     8c5:	10c112        	addi	a1, a1, 16
+     8c8:	b13020        	sra	a3, a2
+     8cb:	c04450        	sub	a4, a4, a5
+     8ce:	120c      	movi.n	a2, 1
+     8d0:	441b      	addi.n	a4, a4, 1
+     8d2:	401400        	ssl	a4
+     8d5:	a12200        	sll	a2, a2
+     8d8:	220b      	addi.n	a2, a2, -1
+     8da:	102230        	and	a2, a2, a3
+     8dd:	742020        	extui	a2, a2, 0, 8
+     8e0:	f00d      	ret.n
+     8e2:	000000        	ill
+     8e5:	010000        	slli	a0, a0, 32
+     8e8:	000a00        	excw
+     8eb:	850060        	extui	a0, a6, 16, 9
+
+000008ec <rom_i2c_writeReg>:
+     8ec:	118500        	slli	a8, a5, 16
+     8ef:	117480        	slli	a7, a4, 8
+     8f2:	fffd91        	l32r	a9, 8e8 <rom_i2c_readReg_Mask+0x40>
+     8f5:	207780        	or	a7, a7, a8
+     8f8:	fffb81        	l32r	a8, 8e4 <rom_i2c_readReg_Mask+0x3c>
+     8fb:	207270        	or	a7, a2, a7
+     8fe:	207780        	or	a7, a7, a8
+     901:	1183e0        	slli	a8, a3, 2
+     904:	289a      	add.n	a2, a8, a9
+     906:	0020c0        	memw
+     909:	c06272        	s32i	a7, a2, 0x300
+     90c:	0020c0        	memw
+     90f:	c02262        	l32i	a6, a2, 0x300
+     912:	087697        	bbci	a6, 25, 91e <rom_i2c_writeReg+0x32>
+     915:	0020c0        	memw
+     918:	c02292        	l32i	a9, a2, 0x300
+     91b:	f6f997        	bbsi	a9, 25, 915 <rom_i2c_writeReg+0x29>
+     91e:	f00d      	ret.n
+	...
+
+00000928 <rom_i2c_writeReg_Mask>:
+     928:	e0c112        	addi	a1, a1, -32
+     92b:	0159      	s32i.n	a5, a1, 0
+     92d:	1169      	s32i.n	a6, a1, 4
+     92f:	2179      	s32i.n	a7, a1, 8
+     931:	41c9      	s32i.n	a12, a1, 16
+     933:	51d9      	s32i.n	a13, a1, 20
+     935:	61e9      	s32i.n	a14, a1, 24
+     937:	3109      	s32i.n	a0, a1, 12
+     939:	fff901        	l32r	a0, 920 <rom_i2c_writeReg+0x34>
+     93c:	02ed      	mov.n	a14, a2
+     93e:	0008      	l32i.n	a0, a0, 0
+     940:	03dd      	mov.n	a13, a3
+     942:	242002        	l32i	a0, a0, 144
+     945:	04cd      	mov.n	a12, a4
+     947:	0000c0        	callx0	a0
+     94a:	0c4d      	mov.n	a4, a12
+     94c:	0d3d      	mov.n	a3, a13
+     94e:	150c      	movi.n	a5, 1
+     950:	0188      	l32i.n	a8, a1, 0
+     952:	2168      	l32i.n	a6, a1, 8
+     954:	fff401        	l32r	a0, 924 <rom_i2c_writeReg+0x38>
+     957:	1178      	l32i.n	a7, a1, 4
+     959:	0008      	l32i.n	a0, a0, 0
+     95b:	401700        	ssl	a7
+     95e:	a16600        	sll	a6, a6
+     961:	c08870        	sub	a8, a8, a7
+     964:	881b      	addi.n	a8, a8, 1
+     966:	262002        	l32i	a0, a0, 152
+     969:	401800        	ssl	a8
+     96c:	a15500        	sll	a5, a5
+     96f:	401700        	ssl	a7
+     972:	550b      	addi.n	a5, a5, -1
+     974:	f77c      	movi.n	a7, -1
+     976:	a15500        	sll	a5, a5
+     979:	305570        	xor	a5, a5, a7
+     97c:	105250        	and	a5, a2, a5
+     97f:	0e2d      	mov.n	a2, a14
+     981:	205560        	or	a5, a5, a6
+     984:	745050        	extui	a5, a5, 0, 8
+     987:	0000c0        	callx0	a0
+     98a:	41c8      	l32i.n	a12, a1, 16
+     98c:	51d8      	l32i.n	a13, a1, 20
+     98e:	61e8      	l32i.n	a14, a1, 24
+     990:	3108      	l32i.n	a0, a1, 12
+     992:	20c112        	addi	a1, a1, 32
+     995:	f00d      	ret.n
+     997:	020000        	excw
+     99a:	006000        	rsil	a0, 0
+     99d:	f20a      	add.n	a15, a2, a0
+     99f:	3f          	.byte 0x3f
+     9a0:	000000        	ill
+     9a3:	000000        	ill
+     9a6:	000800        	excw
+     9a9:	009a      	add.n	a0, a0, a9
+     9ab:	020060        	excw
+     9ae:	006000        	rsil	a0, 0
+     9b1:	000000        	ill
+
+000009b4 <rom_pbus_debugmode>:
+     9b4:	f0c112        	addi	a1, a1, -16
+     9b7:	0109      	s32i.n	a0, a1, 0
+     9b9:	21d9      	s32i.n	a13, a1, 8
+     9bb:	11c9      	s32i.n	a12, a1, 4
+     9bd:	005d      	mov.n	a5, a0
+     9bf:	fff621        	l32r	a2, 998 <rom_i2c_writeReg_Mask+0x70>
+     9c2:	0020c0        	memw
+     9c5:	e52222        	l32i	a2, a2, 0x394
+     9c8:	fff561        	l32r	a6, 99c <rom_i2c_writeReg_Mask+0x74>
+     9cb:	41e207        	bbsi	a2, 0, a10 <rom_pbus_debugmode+0x5c>
+     9ce:	0020c0        	memw
+     9d1:	9c2662        	l32i	a6, a6, 0x270
+     9d4:	386617        	bbci	a6, 1, a10 <rom_pbus_debugmode+0x5c>
+     9d7:	fff2c1        	l32r	a12, 9a0 <rom_i2c_writeReg_Mask+0x78>
+     9da:	0c08      	l32i.n	a0, a12, 0
+     9dc:	1d2002        	l32i	a0, a0, 116
+     9df:	0000c0        	callx0	a0
+     9e2:	520c      	movi.n	a2, 5
+     9e4:	fff301        	l32r	a0, 9b0 <rom_i2c_writeReg_Mask+0x88>
+     9e7:	0000c0        	callx0	a0
+     9ea:	84a1d2        	movi	a13, 0x184
+     9ed:	0c08      	l32i.n	a0, a12, 0
+     9ef:	220c      	movi.n	a2, 2
+     9f1:	2c2002        	l32i	a0, a0, 176
+     9f4:	130c      	movi.n	a3, 1
+     9f6:	0000c0        	callx0	a0
+     9f9:	f0c2d7        	bnall	a2, a13, 9ed <rom_pbus_debugmode+0x39>
+     9fc:	0c08      	l32i.n	a0, a12, 0
+     9fe:	320c      	movi.n	a2, 3
+     a00:	2c2002        	l32i	a0, a0, 176
+     a03:	230c      	movi.n	a3, 2
+     a05:	0000c0        	callx0	a0
+     a08:	630c      	movi.n	a3, 6
+     a0a:	102230        	and	a2, a2, a3
+     a0d:	dc6266        	bnei	a2, 6, 9ed <rom_pbus_debugmode+0x39>
+     a10:	ffe591        	l32r	a9, 9a4 <rom_i2c_writeReg_Mask+0x7c>
+     a13:	ffe581        	l32r	a8, 9a8 <rom_i2c_writeReg_Mask+0x80>
+     a16:	0020c0        	memw
+     a19:	422872        	l32i	a7, a8, 0x108
+     a1c:	207790        	or	a7, a7, a9
+     a1f:	0020c0        	memw
+     a22:	426872        	s32i	a7, a8, 0x108
+     a25:	0020c0        	memw
+     a28:	ffe151        	l32r	a5, 9ac <rom_i2c_writeReg_Mask+0x84>
+     a2b:	e52542        	l32i	a4, a5, 0x394
+     a2e:	160c      	movi.n	a6, 1
+     a30:	204460        	or	a4, a4, a6
+     a33:	0020c0        	memw
+     a36:	e56542        	s32i	a4, a5, 0x394
+     a39:	11c8      	l32i.n	a12, a1, 4
+     a3b:	21d8      	l32i.n	a13, a1, 8
+     a3d:	0108      	l32i.n	a0, a1, 0
+     a3f:	10c112        	addi	a1, a1, 16
+     a42:	f00d      	ret.n
+	...
+
+00000a50 <rom_pbus_enter_debugmode>:
+     a50:	f0c112        	addi	a1, a1, -16
+     a53:	1109      	s32i.n	a0, a1, 4
+     a55:	fffb01        	l32r	a0, a44 <rom_pbus_debugmode+0x90>
+     a58:	0008      	l32i.n	a0, a0, 0
+     a5a:	282002        	l32i	a0, a0, 160
+     a5d:	0129      	s32i.n	a2, a1, 0
+     a5f:	0000c0        	callx0	a0
+     a62:	fff901        	l32r	a0, a48 <rom_pbus_debugmode+0x94>
+     a65:	0008      	l32i.n	a0, a0, 0
+     a67:	302002        	l32i	a0, a0, 192
+     a6a:	120c      	movi.n	a2, 1
+     a6c:	0000c0        	callx0	a0
+     a6f:	fff701        	l32r	a0, a4c <rom_pbus_debugmode+0x98>
+     a72:	0008      	l32i.n	a0, a0, 0
+     a74:	342002        	l32i	a0, a0, 208
+     a77:	0128      	l32i.n	a2, a1, 0
+     a79:	0000c0        	callx0	a0
+     a7c:	1108      	l32i.n	a0, a1, 4
+     a7e:	10c112        	addi	a1, a1, 16
+     a81:	f00d      	ret.n
+	...
+
+00000a90 <rom_pbus_exit_debugmode>:
+     a90:	f0c112        	addi	a1, a1, -16
+     a93:	0109      	s32i.n	a0, a1, 0
+     a95:	fffb01        	l32r	a0, a84 <rom_pbus_enter_debugmode+0x34>
+     a98:	0008      	l32i.n	a0, a0, 0
+     a9a:	322002        	l32i	a0, a0, 200
+     a9d:	0000c0        	callx0	a0
+     aa0:	fffa01        	l32r	a0, a88 <rom_pbus_enter_debugmode+0x38>
+     aa3:	0008      	l32i.n	a0, a0, 0
+     aa5:	312002        	l32i	a0, a0, 196
+     aa8:	0000c0        	callx0	a0
+     aab:	fff801        	l32r	a0, a8c <rom_pbus_enter_debugmode+0x3c>
+     aae:	0008      	l32i.n	a0, a0, 0
+     ab0:	2f2002        	l32i	a0, a0, 188
+     ab3:	0000c0        	callx0	a0
+     ab6:	0108      	l32i.n	a0, a1, 0
+     ab8:	10c112        	addi	a1, a1, 16
+     abb:	f00d      	ret.n
+     abd:	000000        	ill
+     ac0:	ff0001        	l32r	a0, 6c0 <rom_chip_50_set_channel+0x19c>
+     ac3:	ff          	.byte 0xff
+     ac4:	000200        	excw
+     ac7:	932060        	movnez	a2, a0, a6
+
+00000ac8 <rom_pbus_force_test>:
+     ac8:	119320        	slli	a9, a3, 14
+     acb:	fffda1        	l32r	a10, ac0 <rom_pbus_exit_debugmode+0x30>
+     ace:	280c      	movi.n	a8, 2
+     ad0:	1172e0        	slli	a7, a2, 2
+     ad3:	207780        	or	a7, a7, a8
+     ad6:	fffb21        	l32r	a2, ac4 <rom_pbus_exit_debugmode+0x34>
+     ad9:	1184b0        	slli	a8, a4, 5
+     adc:	0020c0        	memw
+     adf:	e52262        	l32i	a6, a2, 0x394
+     ae2:	1066a0        	and	a6, a6, a10
+     ae5:	206690        	or	a6, a6, a9
+     ae8:	206680        	or	a6, a6, a8
+     aeb:	206670        	or	a6, a6, a7
+     aee:	0020c0        	memw
+     af1:	e56262        	s32i	a6, a2, 0x394
+     af4:	0020c0        	memw
+     af7:	e82252        	l32i	a5, a2, 0x3a0
+     afa:	0085d6        	bgez	a5, b06 <rom_pbus_force_test+0x3e>
+     afd:	0020c0        	memw
+     b00:	e82292        	l32i	a9, a2, 0x3a0
+     b03:	ff6996        	bltz	a9, afd <rom_pbus_force_test+0x35>
+     b06:	db7c      	movi.n	a11, -3
+     b08:	0020c0        	memw
+     b0b:	e522a2        	l32i	a10, a2, 0x394
+     b0e:	10aab0        	and	a10, a10, a11
+     b11:	0020c0        	memw
+     b14:	e562a2        	s32i	a10, a2, 0x394
+     b17:	f00d      	ret.n
+     b19:	000000        	ill
+     b1c:	000000        	ill
+     b1f:	05a400        	extui	a10, a0, 20, 1
+     b22:	006000        	rsil	a0, 0
+     b25:	000000        	ill
+     b28:	000000        	ill
+	...
+
+00000b2c <rom_pbus_rd>:
+     b2c:	fcc342        	addi	a4, a3, -4
+     b2f:	f0c112        	addi	a1, a1, -16
+     b32:	11c9      	s32i.n	a12, a1, 4
+     b34:	0109      	s32i.n	a0, a1, 0
+     b36:	21d9      	s32i.n	a13, a1, 8
+     b38:	200c      	movi.n	a0, 2
+     b3a:	fff8d1        	l32r	a13, b1c <rom_pbus_force_test+0x54>
+     b3d:	c30b      	addi.n	a12, a3, -1
+     b3f:	d2da      	add.n	a13, a2, a13
+     b41:	000dd2        	l8ui	a13, a13, 0
+     b44:	83c040        	moveqz	a12, a0, a4
+     b47:	ccda      	add.n	a12, a12, a13
+     b49:	74c0c0        	extui	a12, a12, 0, 8
+     b4c:	17ac26        	beqi	a12, 12, b67 <rom_pbus_rd+0x3b>
+     b4f:	0c2d      	mov.n	a2, a12
+     b51:	330c      	movi.n	a3, 3
+     b53:	fff401        	l32r	a0, b24 <rom_pbus_force_test+0x5c>
+     b56:	0000c0        	callx0	a0
+     b59:	2d1c      	movi.n	a13, 18
+     b5b:	740020        	extui	a0, a2, 0, 8
+     b5e:	b00000        	addx8	a0, a0, a0
+     b61:	c0dd00        	sub	a13, a13, a0
+     b64:	000046        	j	b69 <rom_pbus_rd+0x3d>
+     b67:	0d0c      	movi.n	a13, 0
+     b69:	0c2d      	mov.n	a2, a12
+     b6b:	330c      	movi.n	a3, 3
+     b6d:	ffee01        	l32r	a0, b28 <rom_pbus_force_test+0x60>
+     b70:	0000c0        	callx0	a0
+     b73:	742020        	extui	a2, a2, 0, 8
+     b76:	ffea31        	l32r	a3, b20 <rom_pbus_force_test+0x58>
+     b79:	1122e0        	slli	a2, a2, 2
+     b7c:	223a      	add.n	a2, a2, a3
+     b7e:	0020c0        	memw
+     b81:	0108      	l32i.n	a0, a1, 0
+     b83:	11c8      	l32i.n	a12, a1, 4
+     b85:	400d00        	ssr	a13
+     b88:	0228      	l32i.n	a2, a2, 0
+     b8a:	21d8      	l32i.n	a13, a1, 8
+     b8c:	912020        	srl	a2, a2
+     b8f:	842020        	extui	a2, a2, 0, 9
+     b92:	10c112        	addi	a1, a1, 16
+     b95:	f00d      	ret.n
+     b97:	000000        	ill
+	...
+
+00000b9c <rom_pbus_set_rxgain>:
+     b9c:	230c      	movi.n	a3, 2
+     b9e:	e0c112        	addi	a1, a1, -32
+     ba1:	41c9      	s32i.n	a12, a1, 16
+     ba3:	51d9      	s32i.n	a13, a1, 20
+     ba5:	fffcd1        	l32r	a13, b98 <rom_pbus_rd+0x6c>
+     ba8:	3109      	s32i.n	a0, a1, 12
+     baa:	0d08      	l32i.n	a0, a13, 0
+     bac:	02cd      	mov.n	a12, a2
+     bae:	2c2002        	l32i	a0, a0, 176
+     bb1:	320c      	movi.n	a2, 3
+     bb3:	0000c0        	callx0	a0
+     bb6:	130c      	movi.n	a3, 1
+     bb8:	0d08      	l32i.n	a0, a13, 0
+     bba:	0129      	s32i.n	a2, a1, 0
+     bbc:	2c2002        	l32i	a0, a0, 176
+     bbf:	220c      	movi.n	a2, 2
+     bc1:	0000c0        	callx0	a0
+     bc4:	130c      	movi.n	a3, 1
+     bc6:	0d08      	l32i.n	a0, a13, 0
+     bc8:	0466c0        	extui	a6, a12, 6, 1
+     bcb:	0477c0        	extui	a7, a12, 7, 1
+     bce:	0448c0        	extui	a4, a12, 8, 1
+     bd1:	1129      	s32i.n	a2, a1, 4
+     bd3:	0453c0        	extui	a5, a12, 3, 1
+     bd6:	320c      	movi.n	a2, 3
+     bd8:	1155a0        	slli	a5, a5, 6
+     bdb:	1144f0        	slli	a4, a4, 1
+     bde:	1177e0        	slli	a7, a7, 2
+     be1:	1166d0        	slli	a6, a6, 3
+     be4:	2b2002        	l32i	a0, a0, 172
+     be7:	206670        	or	a6, a6, a7
+     bea:	2149      	s32i.n	a4, a1, 8
+     bec:	0474c0        	extui	a7, a12, 4, 1
+     bef:	1177b0        	slli	a7, a7, 5
+     bf2:	205570        	or	a5, a5, a7
+     bf5:	0475c0        	extui	a7, a12, 5, 1
+     bf8:	1177c0        	slli	a7, a7, 4
+     bfb:	205570        	or	a5, a5, a7
+     bfe:	205560        	or	a5, a5, a6
+     c01:	0469c0        	extui	a6, a12, 9, 1
+     c04:	204460        	or	a4, a4, a6
+     c07:	204450        	or	a4, a4, a5
+     c0a:	f44040        	extui	a4, a4, 0, 16
+     c0d:	0000c0        	callx0	a0
+     c10:	320c      	movi.n	a2, 3
+     c12:	230c      	movi.n	a3, 2
+     c14:	0d08      	l32i.n	a0, a13, 0
+     c16:	0148      	l32i.n	a4, a1, 0
+     c18:	c7a152        	movi	a5, 0x1c7
+     c1b:	104450        	and	a4, a4, a5
+     c1e:	2b2002        	l32i	a0, a0, 172
+     c21:	2450c0        	extui	a5, a12, 0, 3
+     c24:	1155d0        	slli	a5, a5, 3
+     c27:	204450        	or	a4, a4, a5
+     c2a:	f44040        	extui	a4, a4, 0, 16
+     c2d:	0000c0        	callx0	a0
+     c30:	220c      	movi.n	a2, 2
+     c32:	130c      	movi.n	a3, 1
+     c34:	2148      	l32i.n	a4, a1, 8
+     c36:	85a172        	movi	a7, 0x185
+     c39:	1158      	l32i.n	a5, a1, 4
+     c3b:	0d08      	l32i.n	a0, a13, 0
+     c3d:	346bc0        	extui	a6, a12, 11, 4
+     c40:	1166d0        	slli	a6, a6, 3
+     c43:	2b2002        	l32i	a0, a0, 172
+     c46:	105570        	and	a5, a5, a7
+     c49:	205560        	or	a5, a5, a6
+     c4c:	204450        	or	a4, a4, a5
+     c4f:	f44040        	extui	a4, a4, 0, 16
+     c52:	0000c0        	callx0	a0
+     c55:	41c8      	l32i.n	a12, a1, 16
+     c57:	51d8      	l32i.n	a13, a1, 20
+     c59:	3108      	l32i.n	a0, a1, 12
+     c5b:	20c112        	addi	a1, a1, 32
+     c5e:	f00d      	ret.n
+     c60:	000000        	ill
+	...
+
+00000c64 <rom_pbus_set_txgain>:
+     c64:	130c      	movi.n	a3, 1
+     c66:	144720        	extui	a4, a2, 7, 2
+     c69:	445020        	extui	a5, a2, 0, 5
+     c6c:	f0c112        	addi	a1, a1, -16
+     c6f:	146520        	extui	a6, a2, 5, 2
+     c72:	1166e0        	slli	a6, a6, 2
+     c75:	0109      	s32i.n	a0, a1, 0
+     c77:	1155c0        	slli	a5, a5, 4
+     c7a:	fff901        	l32r	a0, c60 <rom_pbus_set_rxgain+0xc4>
+     c7d:	420c      	movi.n	a2, 4
+     c7f:	205560        	or	a5, a5, a6
+     c82:	0008      	l32i.n	a0, a0, 0
+     c84:	204450        	or	a4, a4, a5
+     c87:	2b2002        	l32i	a0, a0, 172
+     c8a:	f44040        	extui	a4, a4, 0, 16
+     c8d:	0000c0        	callx0	a0
+     c90:	0108      	l32i.n	a0, a1, 0
+     c92:	10c112        	addi	a1, a1, 16
+     c95:	f00d      	ret.n
+     c97:	9a0000        	excw
+     c9a:	006000        	rsil	a0, 0
+     c9d:	600002        	l8ui	a0, a0, 96
+     ca0:	ff          	.byte 0xff
+     ca1:	ff          	.byte 0xff
+     ca2:	ff          	.byte 0xff
+     ca3:	0000f7        	bnone	a0, a15, ca7 <rom_pbus_set_txgain+0x43>
+	...
+
+00000ca8 <rom_pbus_workmode>:
+     ca8:	f0c112        	addi	a1, a1, -16
+     cab:	0109      	s32i.n	a0, a1, 0
+     cad:	e77c      	movi.n	a7, -2
+     caf:	fffa31        	l32r	a3, c98 <rom_pbus_set_txgain+0x34>
+     cb2:	fffa61        	l32r	a6, c9c <rom_pbus_set_txgain+0x38>
+     cb5:	0020c0        	memw
+     cb8:	e52652        	l32i	a5, a6, 0x394
+     cbb:	105570        	and	a5, a5, a7
+     cbe:	0020c0        	memw
+     cc1:	e56652        	s32i	a5, a6, 0x394
+     cc4:	fff741        	l32r	a4, ca0 <rom_pbus_set_txgain+0x3c>
+     cc7:	0020c0        	memw
+     cca:	422322        	l32i	a2, a3, 0x108
+     ccd:	102240        	and	a2, a2, a4
+     cd0:	0020c0        	memw
+     cd3:	fff401        	l32r	a0, ca4 <rom_pbus_set_txgain+0x40>
+     cd6:	0008      	l32i.n	a0, a0, 0
+     cd8:	1e2002        	l32i	a0, a0, 120
+     cdb:	426322        	s32i	a2, a3, 0x108
+     cde:	0000c0        	callx0	a0
+     ce1:	0108      	l32i.n	a0, a1, 0
+     ce3:	10c112        	addi	a1, a1, 16
+     ce6:	f00d      	ret.n
+	...
+
+00000cf4 <rom_pbus_xpd_rx_off>:
+     cf4:	130c      	movi.n	a3, 1
+     cf6:	80a042        	movi	a4, 128
+     cf9:	f0c112        	addi	a1, a1, -16
+     cfc:	0109      	s32i.n	a0, a1, 0
+     cfe:	fffa01        	l32r	a0, ce8 <rom_pbus_workmode+0x40>
+     d01:	424a      	add.n	a4, a2, a4
+     d03:	0008      	l32i.n	a0, a0, 0
+     d05:	f44040        	extui	a4, a4, 0, 16
+     d08:	2b2002        	l32i	a0, a0, 172
+     d0b:	220c      	movi.n	a2, 2
+     d0d:	0000c0        	callx0	a0
+     d10:	fff701        	l32r	a0, cec <rom_pbus_workmode+0x44>
+     d13:	320c      	movi.n	a2, 3
+     d15:	0008      	l32i.n	a0, a0, 0
+     d17:	130c      	movi.n	a3, 1
+     d19:	2b2002        	l32i	a0, a0, 172
+     d1c:	040c      	movi.n	a4, 0
+     d1e:	0000c0        	callx0	a0
+     d21:	fff301        	l32r	a0, cf0 <rom_pbus_workmode+0x48>
+     d24:	320c      	movi.n	a2, 3
+     d26:	0008      	l32i.n	a0, a0, 0
+     d28:	230c      	movi.n	a3, 2
+     d2a:	2b2002        	l32i	a0, a0, 172
+     d2d:	040c      	movi.n	a4, 0
+     d2f:	0000c0        	callx0	a0
+     d32:	0108      	l32i.n	a0, a1, 0
+     d34:	10c112        	addi	a1, a1, 16
+     d37:	f00d      	ret.n
+	...
+
+00000d44 <rom_pbus_xpd_rx_on>:
+     d44:	f0c112        	addi	a1, a1, -16
+     d47:	0109      	s32i.n	a0, a1, 0
+     d49:	fffc01        	l32r	a0, d3c <rom_pbus_xpd_rx_off+0x48>
+     d4c:	220c      	movi.n	a2, 2
+     d4e:	0008      	l32i.n	a0, a0, 0
+     d50:	130c      	movi.n	a3, 1
+     d52:	2b2002        	l32i	a0, a0, 172
+     d55:	84a142        	movi	a4, 0x184
+     d58:	0000c0        	callx0	a0
+     d5b:	fff901        	l32r	a0, d40 <rom_pbus_xpd_rx_off+0x4c>
+     d5e:	320c      	movi.n	a2, 3
+     d60:	0008      	l32i.n	a0, a0, 0
+     d62:	230c      	movi.n	a3, 2
+     d64:	2b2002        	l32i	a0, a0, 172
+     d67:	640c      	movi.n	a4, 6
+     d69:	0000c0        	callx0	a0
+     d6c:	0108      	l32i.n	a0, a1, 0
+     d6e:	10c112        	addi	a1, a1, 16
+     d71:	f00d      	ret.n
+	...
+
+00000d80 <rom_pbus_xpd_tx_off>:
+     d80:	f0c112        	addi	a1, a1, -16
+     d83:	0109      	s32i.n	a0, a1, 0
+     d85:	fffb01        	l32r	a0, d74 <rom_pbus_xpd_rx_on+0x30>
+     d88:	620c      	movi.n	a2, 6
+     d8a:	0008      	l32i.n	a0, a0, 0
+     d8c:	130c      	movi.n	a3, 1
+     d8e:	2b2002        	l32i	a0, a0, 172
+     d91:	040c      	movi.n	a4, 0
+     d93:	0000c0        	callx0	a0
+     d96:	fff801        	l32r	a0, d78 <rom_pbus_xpd_rx_on+0x34>
+     d99:	120c      	movi.n	a2, 1
+     d9b:	0008      	l32i.n	a0, a0, 0
+     d9d:	130c      	movi.n	a3, 1
+     d9f:	2b2002        	l32i	a0, a0, 172
+     da2:	c40c      	movi.n	a4, 12
+     da4:	0000c0        	callx0	a0
+     da7:	fff501        	l32r	a0, d7c <rom_pbus_xpd_rx_on+0x38>
+     daa:	220c      	movi.n	a2, 2
+     dac:	0008      	l32i.n	a0, a0, 0
+     dae:	130c      	movi.n	a3, 1
+     db0:	2b2002        	l32i	a0, a0, 172
+     db3:	80a042        	movi	a4, 128
+     db6:	0000c0        	callx0	a0
+     db9:	0108      	l32i.n	a0, a1, 0
+     dbb:	10c112        	addi	a1, a1, 16
+     dbe:	f00d      	ret.n
+     dc0:	000000        	ill
+	...
+
+00000dc4 <rom_pbus_xpd_tx_on>:
+     dc4:	130c      	movi.n	a3, 1
+     dc6:	81a042        	movi	a4, 129
+     dc9:	f0c112        	addi	a1, a1, -16
+     dcc:	21c9      	s32i.n	a12, a1, 8
+     dce:	fffcc1        	l32r	a12, dc0 <rom_pbus_xpd_tx_off+0x40>
+     dd1:	1109      	s32i.n	a0, a1, 4
+     dd3:	0c08      	l32i.n	a0, a12, 0
+     dd5:	0129      	s32i.n	a2, a1, 0
+     dd7:	2b2002        	l32i	a0, a0, 172
+     dda:	220c      	movi.n	a2, 2
+     ddc:	0000c0        	callx0	a0
+     ddf:	720c      	movi.n	a2, 7
+     de1:	0c08      	l32i.n	a0, a12, 0
+     de3:	130c      	movi.n	a3, 1
+     de5:	2b2002        	l32i	a0, a0, 172
+     de8:	f45c      	movi.n	a4, 95
+     dea:	0000c0        	callx0	a0
+     ded:	0148      	l32i.n	a4, a1, 0
+     def:	0c08      	l32i.n	a0, a12, 0
+     df1:	020c      	movi.n	a2, 0
+     df3:	2b2002        	l32i	a0, a0, 172
+     df6:	130c      	movi.n	a3, 1
+     df8:	0000c0        	callx0	a0
+     dfb:	120c      	movi.n	a2, 1
+     dfd:	0c08      	l32i.n	a0, a12, 0
+     dff:	130c      	movi.n	a3, 1
+     e01:	2b2002        	l32i	a0, a0, 172
+     e04:	7fa042        	movi	a4, 127
+     e07:	0000c0        	callx0	a0
+     e0a:	620c      	movi.n	a2, 6
+     e0c:	0c08      	l32i.n	a0, a12, 0
+     e0e:	130c      	movi.n	a3, 1
+     e10:	2b2002        	l32i	a0, a0, 172
+     e13:	7fa042        	movi	a4, 127
+     e16:	0000c0        	callx0	a0
+     e19:	21c8      	l32i.n	a12, a1, 8
+     e1b:	1108      	l32i.n	a0, a1, 4
+     e1d:	10c112        	addi	a1, a1, 16
+     e20:	f00d      	ret.n
+     e22:	000000        	ill
+     e25:	000000        	ill
+
+00000e28 <rom_pbus_xpd_tx_on__low_gain>:
+     e28:	130c      	movi.n	a3, 1
+     e2a:	81a042        	movi	a4, 129
+     e2d:	f0c112        	addi	a1, a1, -16
+     e30:	21c9      	s32i.n	a12, a1, 8
+     e32:	fffcc1        	l32r	a12, e24 <rom_pbus_xpd_tx_on+0x60>
+     e35:	1109      	s32i.n	a0, a1, 4
+     e37:	0c08      	l32i.n	a0, a12, 0
+     e39:	0129      	s32i.n	a2, a1, 0
+     e3b:	2b2002        	l32i	a0, a0, 172
+     e3e:	220c      	movi.n	a2, 2
+     e40:	0000c0        	callx0	a0
+     e43:	720c      	movi.n	a2, 7
+     e45:	0c08      	l32i.n	a0, a12, 0
+     e47:	130c      	movi.n	a3, 1
+     e49:	2b2002        	l32i	a0, a0, 172
+     e4c:	040c      	movi.n	a4, 0
+     e4e:	0000c0        	callx0	a0
+     e51:	0148      	l32i.n	a4, a1, 0
+     e53:	0c08      	l32i.n	a0, a12, 0
+     e55:	020c      	movi.n	a2, 0
+     e57:	2b2002        	l32i	a0, a0, 172
+     e5a:	130c      	movi.n	a3, 1
+     e5c:	0000c0        	callx0	a0
+     e5f:	120c      	movi.n	a2, 1
+     e61:	0c08      	l32i.n	a0, a12, 0
+     e63:	130c      	movi.n	a3, 1
+     e65:	2b2002        	l32i	a0, a0, 172
+     e68:	7fa042        	movi	a4, 127
+     e6b:	0000c0        	callx0	a0
+     e6e:	620c      	movi.n	a2, 6
+     e70:	0c08      	l32i.n	a0, a12, 0
+     e72:	130c      	movi.n	a3, 1
+     e74:	2b2002        	l32i	a0, a0, 172
+     e77:	7fa042        	movi	a4, 127
+     e7a:	0000c0        	callx0	a0
+     e7d:	21c8      	l32i.n	a12, a1, 8
+     e7f:	1108      	l32i.n	a0, a1, 4
+     e81:	10c112        	addi	a1, a1, 16
+     e84:	f00d      	ret.n
+     e86:	ff0000        	excw
+     e89:	ff          	.byte 0xff
+     e8a:	ff          	.byte 0xff
+     e8b:	0600c3        	excw
+     e8e:	416000        	srli	a6, a0, 0
+
+00000e90 <rom_phy_reset_req>:
+     e90:	fffe41        	l32r	a4, e88 <rom_pbus_xpd_tx_on__low_gain+0x60>
+     e93:	fffe31        	l32r	a3, e8c <rom_pbus_xpd_tx_on__low_gain+0x64>
+     e96:	0020c0        	memw
+     e99:	442322        	l32i	a2, a3, 0x110
+     e9c:	102240        	and	a2, a2, a4
+     e9f:	0020c0        	memw
+     ea2:	446322        	s32i	a2, a3, 0x110
+     ea5:	f00d      	ret.n
+	...
+
+00000eb4 <rom_restart_cal>:
+     eb4:	62a022        	movi	a2, 98
+     eb7:	f0c112        	addi	a1, a1, -16
+     eba:	0109      	s32i.n	a0, a1, 0
+     ebc:	fffb01        	l32r	a0, ea8 <rom_phy_reset_req+0x18>
+     ebf:	130c      	movi.n	a3, 1
+     ec1:	0008      	l32i.n	a0, a0, 0
+     ec3:	040c      	movi.n	a4, 0
+     ec5:	262002        	l32i	a0, a0, 152
+     ec8:	f55c      	movi.n	a5, 95
+     eca:	0000c0        	callx0	a0
+     ecd:	62a022        	movi	a2, 98
+     ed0:	fff701        	l32r	a0, eac <rom_phy_reset_req+0x1c>
+     ed3:	130c      	movi.n	a3, 1
+     ed5:	0008      	l32i.n	a0, a0, 0
+     ed7:	040c      	movi.n	a4, 0
+     ed9:	262002        	l32i	a0, a0, 152
+     edc:	7fa052        	movi	a5, 127
+     edf:	0000c0        	callx0	a0
+     ee2:	62a022        	movi	a2, 98
+     ee5:	fff201        	l32r	a0, eb0 <rom_phy_reset_req+0x20>
+     ee8:	130c      	movi.n	a3, 1
+     eea:	0008      	l32i.n	a0, a0, 0
+     eec:	040c      	movi.n	a4, 0
+     eee:	262002        	l32i	a0, a0, 152
+     ef1:	f53c      	movi.n	a5, 63
+     ef3:	0000c0        	callx0	a0
+     ef6:	0108      	l32i.n	a0, a1, 0
+     ef8:	10c112        	addi	a1, a1, 16
+     efb:	f00d      	ret.n
+     efd:	000000        	ill
+     f00:	000000        	ill
+	...
+
+00000f04 <rom_rfpll_reset>:
+     f04:	62a022        	movi	a2, 98
+     f07:	130c      	movi.n	a3, 1
+     f09:	f0c112        	addi	a1, a1, -16
+     f0c:	11c9      	s32i.n	a12, a1, 4
+     f0e:	fffcc1        	l32r	a12, f00 <rom_restart_cal+0x4c>
+     f11:	0109      	s32i.n	a0, a1, 0
+     f13:	0c08      	l32i.n	a0, a12, 0
+     f15:	a40c      	movi.n	a4, 10
+     f17:	262002        	l32i	a0, a0, 152
+     f1a:	a6a052        	movi	a5, 166
+     f1d:	0000c0        	callx0	a0
+     f20:	62a022        	movi	a2, 98
+     f23:	130c      	movi.n	a3, 1
+     f25:	0c08      	l32i.n	a0, a12, 0
+     f27:	a40c      	movi.n	a4, 10
+     f29:	262002        	l32i	a0, a0, 152
+     f2c:	a7a052        	movi	a5, 167
+     f2f:	0000c0        	callx0	a0
+     f32:	62a022        	movi	a2, 98
+     f35:	130c      	movi.n	a3, 1
+     f37:	0c08      	l32i.n	a0, a12, 0
+     f39:	a40c      	movi.n	a4, 10
+     f3b:	262002        	l32i	a0, a0, 152
+     f3e:	a5a052        	movi	a5, 165
+     f41:	0000c0        	callx0	a0
+     f44:	63a022        	movi	a2, 99
+     f47:	030c      	movi.n	a3, 0
+     f49:	0c08      	l32i.n	a0, a12, 0
+     f4b:	140c      	movi.n	a4, 1
+     f4d:	262002        	l32i	a0, a0, 152
+     f50:	f3a052        	movi	a5, 243
+     f53:	0000c0        	callx0	a0
+     f56:	62a022        	movi	a2, 98
+     f59:	130c      	movi.n	a3, 1
+     f5b:	0c08      	l32i.n	a0, a12, 0
+     f5d:	b40c      	movi.n	a4, 11
+     f5f:	262002        	l32i	a0, a0, 152
+     f62:	c0a052        	movi	a5, 192
+     f65:	0000c0        	callx0	a0
+     f68:	11c8      	l32i.n	a12, a1, 4
+     f6a:	0108      	l32i.n	a0, a1, 0
+     f6c:	10c112        	addi	a1, a1, 16
+     f6f:	f00d      	ret.n
+     f71:	000000        	ill
+     f74:	000000        	ill
+	...
+
+00000f78 <rom_write_rfpll_sdm>:
+     f78:	030c      	movi.n	a3, 0
+     f7a:	040c      	movi.n	a4, 0
+     f7c:	750c      	movi.n	a5, 7
+     f7e:	f0c112        	addi	a1, a1, -16
+     f81:	11c9      	s32i.n	a12, a1, 4
+     f83:	21d9      	s32i.n	a13, a1, 8
+     f85:	fffbd1        	l32r	a13, f74 <rom_rfpll_reset+0x70>
+     f88:	0109      	s32i.n	a0, a1, 0
+     f8a:	0d08      	l32i.n	a0, a13, 0
+     f8c:	02cd      	mov.n	a12, a2
+     f8e:	262002        	l32i	a0, a0, 152
+     f91:	63a022        	movi	a2, 99
+     f94:	0000c0        	callx0	a0
+     f97:	63a022        	movi	a2, 99
+     f9a:	030c      	movi.n	a3, 0
+     f9c:	0d08      	l32i.n	a0, a13, 0
+     f9e:	340c      	movi.n	a4, 3
+     fa0:	262002        	l32i	a0, a0, 152
+     fa3:	000c52        	l8ui	a5, a12, 0
+     fa6:	0000c0        	callx0	a0
+     fa9:	63a022        	movi	a2, 99
+     fac:	030c      	movi.n	a3, 0
+     fae:	0d08      	l32i.n	a0, a13, 0
+     fb0:	440c      	movi.n	a4, 4
+     fb2:	262002        	l32i	a0, a0, 152
+     fb5:	010c52        	l8ui	a5, a12, 1
+     fb8:	0000c0        	callx0	a0
+     fbb:	020c52        	l8ui	a5, a12, 2
+     fbe:	63a022        	movi	a2, 99
+     fc1:	0d08      	l32i.n	a0, a13, 0
+     fc3:	030c      	movi.n	a3, 0
+     fc5:	262002        	l32i	a0, a0, 152
+     fc8:	540c      	movi.n	a4, 5
+     fca:	0000c0        	callx0	a0
+     fcd:	63a022        	movi	a2, 99
+     fd0:	030c      	movi.n	a3, 0
+     fd2:	0d08      	l32i.n	a0, a13, 0
+     fd4:	040c      	movi.n	a4, 0
+     fd6:	262002        	l32i	a0, a0, 152
+     fd9:	751c      	movi.n	a5, 23
+     fdb:	0000c0        	callx0	a0
+     fde:	11c8      	l32i.n	a12, a1, 4
+     fe0:	21d8      	l32i.n	a13, a1, 8
+     fe2:	0108      	l32i.n	a0, a1, 0
+     fe4:	10c112        	addi	a1, a1, 16
+     fe7:	f00d      	ret.n
+     fe9:	000000        	ill
+     fec:	400000        	ssr	a0
+     fef:	0000c0        	callx0	a0
+     ff2:	4008      	l32i.n	a0, a0, 16
+     ff4:	da0000        	excw
+     ff7:	000040        	excw
+     ffa:	0040e4        	excw
+     ffd:	438000        	excw
+	...
+
+0000104c <rom_rfpll_set_freq>:
+    104c:	e0c112        	addi	a1, a1, -32
+    104f:	0139      	s32i.n	a3, a1, 0
+    1051:	1109      	s32i.n	a0, a1, 4
+    1053:	31d9      	s32i.n	a13, a1, 12
+    1055:	21c9      	s32i.n	a12, a1, 8
+    1057:	41e9      	s32i.n	a14, a1, 16
+    1059:	05cd      	mov.n	a12, a5
+    105b:	ffe4e1        	l32r	a14, fec <rom_write_rfpll_sdm+0x74>
+    105e:	0d0c      	movi.n	a13, 0
+    1060:	110260        	slli	a0, a2, 10
+    1063:	040a      	add.n	a0, a4, a0
+    1065:	1120e0        	slli	a2, a0, 2
+    1068:	ffe601        	l32r	a0, 1000 <rom_write_rfpll_sdm+0x88>
+    106b:	0000c0        	callx0	a0
+    106e:	ffe051        	l32r	a5, ff0 <rom_write_rfpll_sdm+0x78>
+    1071:	040c      	movi.n	a4, 0
+    1073:	ffe401        	l32r	a0, 1004 <rom_write_rfpll_sdm+0x8c>
+    1076:	0000c0        	callx0	a0
+    1079:	ffe301        	l32r	a0, 1008 <rom_write_rfpll_sdm+0x90>
+    107c:	0000c0        	callx0	a0
+    107f:	ffe301        	l32r	a0, 100c <rom_write_rfpll_sdm+0x94>
+    1082:	0000c0        	callx0	a0
+    1085:	0148      	l32i.n	a4, a1, 0
+    1087:	e49c      	beqz.n	a4, 10a9 <rom_rfpll_set_freq+0x5d>
+    1089:	ffda51        	l32r	a5, ff4 <rom_write_rfpll_sdm+0x7c>
+    108c:	040c      	movi.n	a4, 0
+    108e:	ffe001        	l32r	a0, 1010 <rom_write_rfpll_sdm+0x98>
+    1091:	0000c0        	callx0	a0
+    1094:	0d4d      	mov.n	a4, a13
+    1096:	0e5d      	mov.n	a5, a14
+    1098:	ffdf01        	l32r	a0, 1014 <rom_write_rfpll_sdm+0x9c>
+    109b:	0000c0        	callx0	a0
+    109e:	ffde01        	l32r	a0, 1018 <rom_write_rfpll_sdm+0xa0>
+    10a1:	0000c0        	callx0	a0
+    10a4:	02ed      	mov.n	a14, a2
+    10a6:	000706        	j	10c6 <rom_rfpll_set_freq+0x7a>
+    10a9:	ffd351        	l32r	a5, ff8 <rom_write_rfpll_sdm+0x80>
+    10ac:	040c      	movi.n	a4, 0
+    10ae:	ffdb01        	l32r	a0, 101c <rom_write_rfpll_sdm+0xa4>
+    10b1:	0000c0        	callx0	a0
+    10b4:	0d4d      	mov.n	a4, a13
+    10b6:	0e5d      	mov.n	a5, a14
+    10b8:	ffda01        	l32r	a0, 1020 <rom_write_rfpll_sdm+0xa8>
+    10bb:	0000c0        	callx0	a0
+    10be:	ffd901        	l32r	a0, 1024 <rom_write_rfpll_sdm+0xac>
+    10c1:	0000c0        	callx0	a0
+    10c4:	02ed      	mov.n	a14, a2
+    10c6:	ffcdd1        	l32r	a13, ffc <rom_write_rfpll_sdm+0x84>
+    10c9:	0e2d      	mov.n	a2, a14
+    10cb:	ffd701        	l32r	a0, 1028 <rom_write_rfpll_sdm+0xb0>
+    10ce:	0000c0        	callx0	a0
+    10d1:	004c22        	s8i	a2, a12, 0
+    10d4:	742020        	extui	a2, a2, 0, 8
+    10d7:	ffd501        	l32r	a0, 102c <rom_write_rfpll_sdm+0xb4>
+    10da:	0000c0        	callx0	a0
+    10dd:	023d      	mov.n	a3, a2
+    10df:	0e2d      	mov.n	a2, a14
+    10e1:	ffd301        	l32r	a0, 1030 <rom_write_rfpll_sdm+0xb8>
+    10e4:	0000c0        	callx0	a0
+    10e7:	0d3d      	mov.n	a3, a13
+    10e9:	ffd201        	l32r	a0, 1034 <rom_write_rfpll_sdm+0xbc>
+    10ec:	0000c0        	callx0	a0
+    10ef:	02ed      	mov.n	a14, a2
+    10f1:	ffd101        	l32r	a0, 1038 <rom_write_rfpll_sdm+0xc0>
+    10f4:	0000c0        	callx0	a0
+    10f7:	014c22        	s8i	a2, a12, 1
+    10fa:	742020        	extui	a2, a2, 0, 8
+    10fd:	ffcf01        	l32r	a0, 103c <rom_write_rfpll_sdm+0xc4>
+    1100:	0000c0        	callx0	a0
+    1103:	023d      	mov.n	a3, a2
+    1105:	0e2d      	mov.n	a2, a14
+    1107:	ffce01        	l32r	a0, 1040 <rom_write_rfpll_sdm+0xc8>
+    110a:	0000c0        	callx0	a0
+    110d:	0d3d      	mov.n	a3, a13
+    110f:	ffcd01        	l32r	a0, 1044 <rom_write_rfpll_sdm+0xcc>
+    1112:	0000c0        	callx0	a0
+    1115:	ffcc01        	l32r	a0, 1048 <rom_write_rfpll_sdm+0xd0>
+    1118:	0000c0        	callx0	a0
+    111b:	1108      	l32i.n	a0, a1, 4
+    111d:	31d8      	l32i.n	a13, a1, 12
+    111f:	024c22        	s8i	a2, a12, 2
+    1122:	41e8      	l32i.n	a14, a1, 16
+    1124:	21c8      	l32i.n	a12, a1, 8
+    1126:	20c112        	addi	a1, a1, 32
+    1129:	f00d      	ret.n

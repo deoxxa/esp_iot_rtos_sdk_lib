@@ -1,0 +1,161 @@
+
+ieee80211_phy.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <ieee80211_get_11g_ratetable-0x4>:
+   0:	000000        	ill
+	...
+
+00000004 <ieee80211_get_11g_ratetable>:
+   4:	ffff21        	l32r	a2, 0 <ieee80211_get_11g_ratetable-0x4>
+   7:	f00d      	ret.n
+   9:	000000        	ill
+   c:	0000d4        	excw
+   f:	000000        	ill
+	...
+
+00000014 <ieee80211_get_ratetable>:
+  14:	0228      	l32i.n	a2, a2, 0
+  16:	c0a032        	movi	a3, 192
+  19:	0a4237        	ball	a2, a3, 27 <ieee80211_get_ratetable+0x13>
+  1c:	80a442        	movi	a4, 0x480
+  1f:	044247        	ball	a2, a4, 27 <ieee80211_get_ratetable+0x13>
+  22:	fffa21        	l32r	a2, c <ieee80211_get_11g_ratetable+0x8>
+  25:	f00d      	ret.n
+  27:	fffa21        	l32r	a2, 10 <ieee80211_get_11g_ratetable+0xc>
+  2a:	f00d      	ret.n
+  2c:	000000        	ill
+	...
+
+00000030 <ieee80211_phy_init>:
+  30:	f0c112        	addi	a1, a1, -16
+  33:	11c9      	s32i.n	a12, a1, 4
+  35:	0109      	s32i.n	a0, a1, 0
+  37:	02cd      	mov.n	a12, a2
+  39:	000005        	call0	3c <ieee80211_phy_init+0xc>
+  3c:	c30c      	movi.n	a3, 12
+  3e:	300c      	movi.n	a0, 3
+  40:	450c      	movi.n	a5, 4
+  42:	fffa21        	l32r	a2, 2c <ieee80211_get_ratetable+0x18>
+  45:	4c0b      	addi.n	a4, a12, -1
+  47:	060c      	movi.n	a6, 0
+  49:	11c8      	l32i.n	a12, a1, 4
+  4b:	7d4262        	s8i	a6, a2, 125
+  4e:	7e4262        	s8i	a6, a2, 126
+  51:	7f4252        	s8i	a5, a2, 127
+  54:	930340        	movnez	a0, a3, a4
+  57:	7c4202        	s8i	a0, a2, 124
+  5a:	0108      	l32i.n	a0, a1, 0
+  5c:	10c112        	addi	a1, a1, 16
+  5f:	f00d      	ret.n
+  61:	000000        	ill
+  64:	000000        	ill
+	...
+
+00000068 <ieee80211_phy_type_get>:
+  68:	ffff21        	l32r	a2, 64 <ieee80211_phy_init+0x34>
+  6b:	c62222        	l32i	a2, a2, 0x318
+  6e:	130c      	movi.n	a3, 1
+  70:	220b      	addi.n	a2, a2, -1
+  72:	932320        	movnez	a2, a3, a2
+  75:	f00d      	ret.n
+  77:	000000        	ill
+  7a:	d40000        	extui	a0, a0, 0, 14
+  7d:	000000        	ill
+  80:	000000        	ill
+	...
+
+00000084 <ieee80211_setup_ratetable>:
+  84:	fffd41        	l32r	a4, 78 <ieee80211_phy_type_get+0x10>
+  87:	fffd51        	l32r	a5, 7c <ieee80211_phy_type_get+0x14>
+  8a:	620b      	addi.n	a6, a2, -1
+  8c:	935460        	movnez	a5, a4, a6
+  8f:	fffc61        	l32r	a6, 80 <ieee80211_phy_type_get+0x18>
+  92:	000532        	l8ui	a3, a5, 0
+  95:	2c4632        	s8i	a3, a6, 44
+  98:	839c      	beqz.n	a3, b4 <ieee80211_setup_ratetable+0x30>
+  9a:	020c      	movi.n	a2, 0
+  9c:	426a      	add.n	a4, a2, a6
+  9e:	1132c0        	slli	a3, a2, 4
+  a1:	353a      	add.n	a3, a5, a3
+  a3:	221b      	addi.n	a2, a2, 1
+  a5:	1e0332        	l8ui	a3, a3, 30
+  a8:	2d4432        	s8i	a3, a4, 45
+  ab:	2c0672        	l8ui	a7, a6, 44
+  ae:	742020        	extui	a2, a2, 0, 8
+  b1:	e73277        	bltu	a2, a7, 9c <ieee80211_setup_ratetable+0x18>
+  b4:	f00d      	ret.n
+	...
+
+000000c4 <ieee80211_compute_duration>:
+  c4:	f0c112        	addi	a1, a1, -16
+  c7:	2109      	s32i.n	a0, a1, 8
+  c9:	042a      	add.n	a0, a4, a2
+  cb:	040002        	l8ui	a0, a0, 4
+  ce:	037d      	mov.n	a7, a3
+  d0:	1100c0        	slli	a0, a0, 4
+  d3:	020a      	add.n	a0, a2, a0
+  d5:	6038      	l32i.n	a3, a0, 24
+  d7:	140022        	l8ui	a2, a0, 20
+  da:	33cc      	bnez.n	a3, e1 <ieee80211_compute_duration+0x1d>
+  dc:	020c      	movi.n	a2, 0
+  de:	001406        	j	132 <ieee80211_compute_duration+0x6e>
+  e1:	1179      	s32i.n	a7, a1, 4
+  e3:	52ac      	beqz.n	a2, 10c <ieee80211_compute_duration+0x48>
+  e5:	461266        	bnei	a2, 1, 12f <ieee80211_compute_duration+0x6b>
+  e8:	1123e0        	slli	a2, a3, 2
+  eb:	e8a332        	movi	a3, 0x3e8
+  ee:	fff201        	l32r	a0, b8 <ieee80211_setup_ratetable+0x34>
+  f1:	0000c0        	callx0	a0
+  f4:	023d      	mov.n	a3, a2
+  f6:	1128      	l32i.n	a2, a1, 4
+  f8:	b02230        	addx8	a2, a2, a3
+  fb:	15c222        	addi	a2, a2, 21
+  fe:	ffef01        	l32r	a0, bc <ieee80211_setup_ratetable+0x38>
+ 101:	0000c0        	callx0	a0
+ 104:	402c      	movi.n	a0, 36
+ 106:	a00200        	addx4	a0, a2, a0
+ 109:	000886        	j	12f <ieee80211_compute_duration+0x6b>
+ 10c:	95ac      	beqz.n	a5, 139 <ieee80211_compute_duration+0x75>
+ 10e:	1c0022        	l8ui	a2, a0, 28
+ 111:	60a042        	movi	a4, 96
+ 114:	12ac      	beqz.n	a2, 139 <ieee80211_compute_duration+0x75>
+ 116:	0149      	s32i.n	a4, a1, 0
+ 118:	1128      	l32i.n	a2, a1, 4
+ 11a:	e8a342        	movi	a4, 0x3e8
+ 11d:	1122d0        	slli	a2, a2, 3
+ 120:	822240        	mull	a2, a2, a4
+ 123:	ffe701        	l32r	a0, c0 <ieee80211_setup_ratetable+0x3c>
+ 126:	0000c0        	callx0	a0
+ 129:	0108      	l32i.n	a0, a1, 0
+ 12b:	002a      	add.n	a0, a0, a2
+ 12d:	00ab      	addi.n	a0, a0, 10
+ 12f:	f42000        	extui	a2, a0, 0, 16
+ 132:	2108      	l32i.n	a0, a1, 8
+ 134:	10c112        	addi	a1, a1, 16
+ 137:	f00d      	ret.n
+ 139:	c0a022        	movi	a2, 192
+ 13c:	0129      	s32i.n	a2, a1, 0
+ 13e:	fff586        	j	118 <ieee80211_compute_duration+0x54>
+ 141:	000000        	ill
+ 144:	000000        	ill
+	...
+
+00000148 <ieee80211_dot11Rate_rix>:
+ 148:	060c      	movi.n	a6, 0
+ 14a:	fffe81        	l32r	a8, 144 <ieee80211_compute_duration+0x80>
+ 14d:	1176c0        	slli	a7, a6, 4
+ 150:	787a      	add.n	a7, a8, a7
+ 152:	1e0742        	l8ui	a4, a7, 30
+ 155:	099427        	bne	a4, a2, 162 <ieee80211_dot11Rate_rix+0x1a>
+ 158:	062d      	mov.n	a2, a6
+ 15a:	1d0782        	l8ui	a8, a7, 29
+ 15d:	004382        	s8i	a8, a3, 0
+ 160:	f00d      	ret.n
+ 162:	661b      	addi.n	a6, a6, 1
+ 164:	746060        	extui	a6, a6, 0, 8
+ 167:	e2a666        	bnei	a6, 12, 14d <ieee80211_dot11Rate_rix+0x5>
+ 16a:	ffa022        	movi	a2, 255
+ 16d:	f00d      	ret.n

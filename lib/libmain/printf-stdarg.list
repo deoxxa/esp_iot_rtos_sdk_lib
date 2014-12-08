@@ -1,0 +1,515 @@
+
+printf-stdarg.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <ets_printf-0x3fc>:
+   0:	000000        	ill
+   3:	c11200        	mul16u	a1, a2, a0
+   6:	0109f0        	slli	a0, a9, 17
+   9:	c28c      	beqz.n	a2, 19 <ets_printf-0x3e3>
+   b:	0248      	l32i.n	a4, a2, 0
+   d:	004432        	s8i	a3, a4, 0
+  10:	0208      	l32i.n	a0, a2, 0
+  12:	001b      	addi.n	a0, a0, 1
+  14:	0209      	s32i.n	a0, a2, 0
+  16:	000286        	j	24 <ets_printf-0x3d8>
+  19:	fff901        	l32r	a0, 0 <ets_printf-0x3fc>
+  1c:	0008      	l32i.n	a0, a0, 0
+  1e:	742030        	extui	a2, a3, 0, 8
+  21:	0000c0        	callx0	a0
+  24:	0108      	l32i.n	a0, a1, 0
+  26:	10c112        	addi	a1, a1, 16
+  29:	f00d      	ret.n
+  2b:	c11200        	mul16u	a1, a2, a0
+  2e:	41e9e0        	srli	a14, a14, 9
+  31:	51f9      	s32i.n	a15, a1, 20
+  33:	1109      	s32i.n	a0, a1, 4
+  35:	6139      	s32i.n	a3, a1, 24
+  37:	31d9      	s32i.n	a13, a1, 12
+  39:	21c9      	s32i.n	a12, a1, 8
+  3b:	02dd      	mov.n	a13, a2
+  3d:	04cd      	mov.n	a12, a4
+  3f:	3114a6        	blti	a4, 1, 74 <ets_printf-0x388>
+  42:	000302        	l8ui	a0, a3, 0
+  45:	032d      	mov.n	a2, a3
+  47:	d08c      	beqz.n	a0, 58 <ets_printf-0x3a4>
+  49:	000c      	movi.n	a0, 0
+  4b:	001b      	addi.n	a0, a0, 1
+  4d:	010232        	l8ui	a3, a2, 1
+  50:	221b      	addi.n	a2, a2, 1
+  52:	ff5356        	bnez	a3, 4b <ets_printf-0x3b1>
+  55:	000046        	j	5a <ets_printf-0x3a2>
+  58:	000c      	movi.n	a0, 0
+  5a:	043c      	movi.n	a4, 48
+  5c:	0420c7        	blt	a0, a12, 64 <ets_printf-0x398>
+  5f:	0c0c      	movi.n	a12, 0
+  61:	000086        	j	67 <ets_printf-0x395>
+  64:	c0cc00        	sub	a12, a12, a0
+  67:	0e2c      	movi.n	a14, 32
+  69:	260c      	movi.n	a6, 2
+  6b:	106560        	and	a6, a5, a6
+  6e:	93e460        	movnez	a14, a4, a6
+  71:	000046        	j	76 <ets_printf-0x386>
+  74:	0e2c      	movi.n	a14, 32
+  76:	15e507        	bbsi	a5, 0, 8f <ets_printf-0x36d>
+  79:	0cfd      	mov.n	a15, a12
+  7b:	101ca6        	blti	a12, 1, 8f <ets_printf-0x36d>
+  7e:	0d2d      	mov.n	a2, a13
+  80:	0e3d      	mov.n	a3, a14
+  82:	fff805        	call0	4 <ets_printf-0x3f8>
+  85:	cc0b      	addi.n	a12, a12, -1
+  87:	ff3c56        	bnez	a12, 7e <ets_printf-0x37e>
+  8a:	0c0c      	movi.n	a12, 0
+  8c:	000046        	j	91 <ets_printf-0x36b>
+  8f:	0f0c      	movi.n	a15, 0
+  91:	6138      	l32i.n	a3, a1, 24
+  93:	000332        	l8ui	a3, a3, 0
+  96:	139c      	beqz.n	a3, ab <ets_printf-0x351>
+  98:	0d2d      	mov.n	a2, a13
+  9a:	fff685        	call0	4 <ets_printf-0x3f8>
+  9d:	6148      	l32i.n	a4, a1, 24
+  9f:	ff1b      	addi.n	a15, a15, 1
+  a1:	010432        	l8ui	a3, a4, 1
+  a4:	441b      	addi.n	a4, a4, 1
+  a6:	6149      	s32i.n	a4, a1, 24
+  a8:	fec356        	bnez	a3, 98 <ets_printf-0x364>
+  ab:	01c9      	s32i.n	a12, a1, 0
+  ad:	0f1ca6        	blti	a12, 1, c0 <ets_printf-0x33c>
+  b0:	0e3d      	mov.n	a3, a14
+  b2:	0d2d      	mov.n	a2, a13
+  b4:	fff4c5        	call0	4 <ets_printf-0x3f8>
+  b7:	cc0b      	addi.n	a12, a12, -1
+  b9:	ff3c56        	bnez	a12, b0 <ets_printf-0x34c>
+  bc:	0168      	l32i.n	a6, a1, 0
+  be:	f6fa      	add.n	a15, a6, a15
+  c0:	1108      	l32i.n	a0, a1, 4
+  c2:	21c8      	l32i.n	a12, a1, 8
+  c4:	31d8      	l32i.n	a13, a1, 12
+  c6:	71f9      	s32i.n	a15, a1, 28
+  c8:	0f2d      	mov.n	a2, a15
+  ca:	41e8      	l32i.n	a14, a1, 16
+  cc:	51f8      	l32i.n	a15, a1, 20
+  ce:	20c112        	addi	a1, a1, 32
+  d1:	f00d      	ret.n
+	...
+  db:	c11200        	mul16u	a1, a2, a0
+  de:	91d9c0        	excw
+  e1:	b1f9      	s32i.n	a15, a1, 44
+  e3:	6129      	s32i.n	a2, a1, 24
+  e5:	5179      	s32i.n	a7, a1, 20
+  e7:	7109      	s32i.n	a0, a1, 28
+  e9:	81c9      	s32i.n	a12, a1, 32
+  eb:	a1e9      	s32i.n	a14, a1, 40
+  ed:	03cd      	mov.n	a12, a3
+  ef:	04ed      	mov.n	a14, a4
+  f1:	000c      	movi.n	a0, 0
+  f3:	064d      	mov.n	a4, a6
+  f5:	4149      	s32i.n	a4, a1, 16
+  f7:	43dc      	bnez.n	a3, 10f <ets_printf-0x2ed>
+  f9:	6128      	l32i.n	a2, a1, 24
+  fb:	013d      	mov.n	a3, a1
+  fd:	4148      	l32i.n	a4, a1, 16
+  ff:	014102        	s8i	a0, a1, 1
+ 102:	5158      	l32i.n	a5, a1, 20
+ 104:	003c      	movi.n	a0, 48
+ 106:	004102        	s8i	a0, a1, 0
+ 109:	fff205        	call0	2c <ets_printf-0x3d0>
+ 10c:	002006        	j	190 <ets_printf-0x26c>
+ 10f:	0b4102        	s8i	a0, a1, 11
+ 112:	d1bb      	addi.n	a13, a1, 11
+ 114:	e58c      	beqz.n	a5, 126 <ets_printf-0x2d6>
+ 116:	0c9e66        	bnei	a14, 10, 126 <ets_printf-0x2d6>
+ 119:	0093d6        	bgez	a3, 126 <ets_printf-0x2d6>
+ 11c:	60c030        	neg	a12, a3
+ 11f:	120c      	movi.n	a2, 1
+ 121:	c129      	s32i.n	a2, a1, 48
+ 123:	000046        	j	128 <ets_printf-0x2d4>
+ 126:	c109      	s32i.n	a0, a1, 48
+ 128:	acac      	beqz.n	a12, 156 <ets_printf-0x2a6>
+ 12a:	1021f2        	l32i	a15, a1, 64
+ 12d:	0c2d      	mov.n	a2, a12
+ 12f:	0e3d      	mov.n	a3, a14
+ 131:	ffe801        	l32r	a0, d4 <ets_printf-0x328>
+ 134:	0000c0        	callx0	a0
+ 137:	0492a6        	blti	a2, 10, 13f <ets_printf-0x2bd>
+ 13a:	2f2a      	add.n	a2, a15, a2
+ 13c:	c6c222        	addi	a2, a2, -58
+ 13f:	30c232        	addi	a3, a2, 48
+ 142:	dd0b      	addi.n	a13, a13, -1
+ 144:	0c2d      	mov.n	a2, a12
+ 146:	004d32        	s8i	a3, a13, 0
+ 149:	0e3d      	mov.n	a3, a14
+ 14b:	ffe301        	l32r	a0, d8 <ets_printf-0x324>
+ 14e:	0000c0        	callx0	a0
+ 151:	02cd      	mov.n	a12, a2
+ 153:	fd6256        	bnez	a2, 12d <ets_printf-0x2cf>
+ 156:	c148      	l32i.n	a4, a1, 48
+ 158:	4158      	l32i.n	a5, a1, 16
+ 15a:	34ac      	beqz.n	a4, 181 <ets_printf-0x27b>
+ 15c:	559c      	beqz.n	a5, 175 <ets_printf-0x287>
+ 15e:	5168      	l32i.n	a6, a1, 20
+ 160:	116617        	bbci	a6, 1, 175 <ets_printf-0x287>
+ 163:	6128      	l32i.n	a2, a1, 24
+ 165:	d32c      	movi.n	a3, 45
+ 167:	ffe9c5        	call0	4 <ets_printf-0x3f8>
+ 16a:	4178      	l32i.n	a7, a1, 16
+ 16c:	1c0c      	movi.n	a12, 1
+ 16e:	770b      	addi.n	a7, a7, -1
+ 170:	4179      	s32i.n	a7, a1, 16
+ 172:	000346        	j	183 <ets_printf-0x279>
+ 175:	0c0c      	movi.n	a12, 0
+ 177:	dd0b      	addi.n	a13, a13, -1
+ 179:	d82c      	movi.n	a8, 45
+ 17b:	004d82        	s8i	a8, a13, 0
+ 17e:	000046        	j	183 <ets_printf-0x279>
+ 181:	0c0c      	movi.n	a12, 0
+ 183:	0d3d      	mov.n	a3, a13
+ 185:	6128      	l32i.n	a2, a1, 24
+ 187:	4148      	l32i.n	a4, a1, 16
+ 189:	5158      	l32i.n	a5, a1, 20
+ 18b:	ffea05        	call0	2c <ets_printf-0x3d0>
+ 18e:	22ca      	add.n	a2, a2, a12
+ 190:	81c8      	l32i.n	a12, a1, 32
+ 192:	91d8      	l32i.n	a13, a1, 36
+ 194:	a1e8      	l32i.n	a14, a1, 40
+ 196:	b1f8      	l32i.n	a15, a1, 44
+ 198:	7108      	l32i.n	a0, a1, 28
+ 19a:	40c112        	addi	a1, a1, 64
+ 19d:	f00d      	ret.n
+ 19f:	000000        	ill
+ 1a2:	120000        	excw
+ 1a5:	e9c0c1        	l32r	a12, ffffa8a8 <__write+0xffffa404>
+ 1a8:	c129a1        	l32r	a10, ffff064c <__write+0xffff01a8>
+ 1ab:	7109      	s32i.n	a0, a1, 28
+ 1ad:	81c9      	s32i.n	a12, a1, 32
+ 1af:	91d9      	s32i.n	a13, a1, 36
+ 1b1:	b1f9      	s32i.n	a15, a1, 44
+ 1b3:	06dd      	mov.n	a13, a6
+ 1b5:	02fd      	mov.n	a15, a2
+ 1b7:	03cd      	mov.n	a12, a3
+ 1b9:	000332        	l8ui	a3, a3, 0
+ 1bc:	000c      	movi.n	a0, 0
+ 1be:	0f2316        	beqz	a3, 2b4 <ets_printf-0x148>
+ 1c1:	00ed      	mov.n	a14, a0
+ 1c3:	562c      	movi.n	a6, 37
+ 1c5:	6149      	s32i.n	a4, a1, 24
+ 1c7:	5159      	s32i.n	a5, a1, 20
+ 1c9:	1b9367        	bne	a3, a6, 1e8 <ets_printf-0x214>
+ 1cc:	010c32        	l8ui	a3, a12, 1
+ 1cf:	cc1b      	addi.n	a12, a12, 1
+ 1d1:	0e1316        	beqz	a3, 2b6 <ets_printf-0x146>
+ 1d4:	101367        	beq	a3, a6, 1e8 <ets_printf-0x214>
+ 1d7:	003c      	movi.n	a0, 48
+ 1d9:	d42c      	movi.n	a4, 45
+ 1db:	1d9347        	bne	a3, a4, 1fc <ets_printf-0x200>
+ 1de:	150c      	movi.n	a5, 1
+ 1e0:	cc1b      	addi.n	a12, a12, 1
+ 1e2:	000c32        	l8ui	a3, a12, 0
+ 1e5:	000546        	j	1fe <ets_printf-0x1fe>
+ 1e8:	0f2d      	mov.n	a2, a15
+ 1ea:	ffe185        	call0	4 <ets_printf-0x3f8>
+ 1ed:	562c      	movi.n	a6, 37
+ 1ef:	ee1b      	addi.n	a14, a14, 1
+ 1f1:	010c32        	l8ui	a3, a12, 1
+ 1f4:	cc1b      	addi.n	a12, a12, 1
+ 1f6:	fcf356        	bnez	a3, 1c9 <ets_printf-0x233>
+ 1f9:	002e46        	j	2b6 <ets_printf-0x146>
+ 1fc:	050c      	movi.n	a5, 0
+ 1fe:	0c9307        	bne	a3, a0, 20e <ets_printf-0x1ee>
+ 201:	220c      	movi.n	a2, 2
+ 203:	cc1b      	addi.n	a12, a12, 1
+ 205:	000c32        	l8ui	a3, a12, 0
+ 208:	205520        	or	a5, a5, a2
+ 20b:	f41307        	beq	a3, a0, 203 <ets_printf-0x1f9>
+ 20e:	040c      	movi.n	a4, 0
+ 210:	73a072        	movi	a7, 115
+ 213:	f02c      	movi.n	a0, 47
+ 215:	923c      	movi.n	a2, 57
+ 217:	13b037        	bgeu	a0, a3, 22e <ets_printf-0x1ce>
+ 21a:	103237        	bltu	a2, a3, 22e <ets_printf-0x1ce>
+ 21d:	cc1b      	addi.n	a12, a12, 1
+ 21f:	a04440        	addx4	a4, a4, a4
+ 222:	904430        	addx2	a4, a4, a3
+ 225:	d0c442        	addi	a4, a4, -48
+ 228:	000c32        	l8ui	a3, a12, 0
+ 22b:	fffa06        	j	217 <ets_printf-0x1e5>
+ 22e:	109377        	bne	a3, a7, 242 <ets_printf-0x1ba>
+ 231:	871c      	movi.n	a7, 24
+ 233:	0d0d      	mov.n	a0, a13
+ 235:	dd4b      	addi.n	a13, a13, 4
+ 237:	02a7d7        	bge	a7, a13, 23d <ets_printf-0x1bf>
+ 23a:	002a46        	j	2e7 <ets_printf-0x115>
+ 23d:	5108      	l32i.n	a0, a1, 20
+ 23f:	002b46        	j	2f0 <ets_printf-0x10c>
+ 242:	64a082        	movi	a8, 100
+ 245:	109387        	bne	a3, a8, 259 <ets_printf-0x1a3>
+ 248:	891c      	movi.n	a9, 24
+ 24a:	0d0d      	mov.n	a0, a13
+ 24c:	dd4b      	addi.n	a13, a13, 4
+ 24e:	02a9d7        	bge	a9, a13, 254 <ets_printf-0x1a8>
+ 251:	002d46        	j	30a <ets_printf-0xf2>
+ 254:	5108      	l32i.n	a0, a1, 20
+ 256:	002e46        	j	313 <ets_printf-0xe9>
+ 259:	78a0a2        	movi	a10, 120
+ 25c:	1093a7        	bne	a3, a10, 270 <ets_printf-0x18c>
+ 25f:	8b1c      	movi.n	a11, 24
+ 261:	0d0d      	mov.n	a0, a13
+ 263:	dd4b      	addi.n	a13, a13, 4
+ 265:	02abd7        	bge	a11, a13, 26b <ets_printf-0x191>
+ 268:	003186        	j	332 <ets_printf-0xca>
+ 26b:	5108      	l32i.n	a0, a1, 20
+ 26d:	003286        	j	33b <ets_printf-0xc1>
+ 270:	70a002        	movi	a0, 112
+ 273:	109307        	bne	a3, a0, 287 <ets_printf-0x175>
+ 276:	821c      	movi.n	a2, 24
+ 278:	0d0d      	mov.n	a0, a13
+ 27a:	dd4b      	addi.n	a13, a13, 4
+ 27c:	02a2d7        	bge	a2, a13, 282 <ets_printf-0x17a>
+ 27f:	0035c6        	j	35a <ets_printf-0xa2>
+ 282:	5108      	l32i.n	a0, a1, 20
+ 284:	0036c6        	j	363 <ets_printf-0x99>
+ 287:	875c      	movi.n	a7, 88
+ 289:	109377        	bne	a3, a7, 29d <ets_printf-0x15f>
+ 28c:	881c      	movi.n	a8, 24
+ 28e:	0d0d      	mov.n	a0, a13
+ 290:	dd4b      	addi.n	a13, a13, 4
+ 292:	02a8d7        	bge	a8, a13, 298 <ets_printf-0x164>
+ 295:	003a46        	j	382 <ets_printf-0x7a>
+ 298:	5108      	l32i.n	a0, a1, 20
+ 29a:	003b46        	j	38b <ets_printf-0x71>
+ 29d:	75a092        	movi	a9, 117
+ 2a0:	2c9397        	bne	a3, a9, 2d0 <ets_printf-0x12c>
+ 2a3:	8a1c      	movi.n	a10, 24
+ 2a5:	0d0d      	mov.n	a0, a13
+ 2a7:	dd4b      	addi.n	a13, a13, 4
+ 2a9:	02aad7        	bge	a10, a13, 2af <ets_printf-0x14d>
+ 2ac:	003e46        	j	3a9 <ets_printf-0x53>
+ 2af:	5108      	l32i.n	a0, a1, 20
+ 2b1:	003f46        	j	3b2 <ets_printf-0x4a>
+ 2b4:	0e0c      	movi.n	a14, 0
+ 2b6:	5f8c      	beqz.n	a15, 2bf <ets_printf-0x13d>
+ 2b8:	0fc8      	l32i.n	a12, a15, 0
+ 2ba:	0b0c      	movi.n	a11, 0
+ 2bc:	004cb2        	s8i	a11, a12, 0
+ 2bf:	7108      	l32i.n	a0, a1, 28
+ 2c1:	81c8      	l32i.n	a12, a1, 32
+ 2c3:	91d8      	l32i.n	a13, a1, 36
+ 2c5:	0e2d      	mov.n	a2, a14
+ 2c7:	b1f8      	l32i.n	a15, a1, 44
+ 2c9:	a1e8      	l32i.n	a14, a1, 40
+ 2cb:	40c112        	addi	a1, a1, 64
+ 2ce:	f00d      	ret.n
+ 2d0:	9dc302        	addi	a0, a3, -99
+ 2d3:	f1a056        	bnez	a0, 1f1 <ets_printf-0x20b>
+ 2d6:	821c      	movi.n	a2, 24
+ 2d8:	0d0d      	mov.n	a0, a13
+ 2da:	dd4b      	addi.n	a13, a13, 4
+ 2dc:	02a2d7        	bge	a2, a13, 2e2 <ets_printf-0x11a>
+ 2df:	003b86        	j	3d1 <ets_printf-0x2b>
+ 2e2:	5108      	l32i.n	a0, a1, 20
+ 2e4:	003c86        	j	3da <ets_printf-0x22>
+ 2e7:	831c      	movi.n	a3, 24
+ 2e9:	012307        	blt	a3, a0, 2ee <ets_printf-0x10e>
+ 2ec:	4d2c      	movi.n	a13, 36
+ 2ee:	6108      	l32i.n	a0, a1, 24
+ 2f0:	ffac61        	l32r	a6, 1a0 <ets_printf-0x25c>
+ 2f3:	3d0a      	add.n	a3, a13, a0
+ 2f5:	ffd332        	addmi	a3, a3, 0xffffff00
+ 2f8:	3f2332        	l32i	a3, a3, 252
+ 2fb:	0f2d      	mov.n	a2, a15
+ 2fd:	833630        	moveqz	a3, a6, a3
+ 300:	ffd285        	call0	2c <ets_printf-0x3d0>
+ 303:	562c      	movi.n	a6, 37
+ 305:	e2ea      	add.n	a14, a2, a14
+ 307:	ffb986        	j	1f1 <ets_printf-0x20b>
+ 30a:	871c      	movi.n	a7, 24
+ 30c:	012707        	blt	a7, a0, 311 <ets_printf-0xeb>
+ 30f:	4d2c      	movi.n	a13, 36
+ 311:	6108      	l32i.n	a0, a1, 24
+ 313:	0f2d      	mov.n	a2, a15
+ 315:	61a082        	movi	a8, 97
+ 318:	3d0a      	add.n	a3, a13, a0
+ 31a:	046d      	mov.n	a6, a4
+ 31c:	057d      	mov.n	a7, a5
+ 31e:	a40c      	movi.n	a4, 10
+ 320:	150c      	movi.n	a5, 1
+ 322:	ffd332        	addmi	a3, a3, 0xffffff00
+ 325:	3f2332        	l32i	a3, a3, 252
+ 328:	0189      	s32i.n	a8, a1, 0
+ 32a:	ffdb05        	call0	dc <ets_printf-0x320>
+ 32d:	562c      	movi.n	a6, 37
+ 32f:	fff486        	j	305 <ets_printf-0xf7>
+ 332:	871c      	movi.n	a7, 24
+ 334:	012707        	blt	a7, a0, 339 <ets_printf-0xc3>
+ 337:	4d2c      	movi.n	a13, 36
+ 339:	6108      	l32i.n	a0, a1, 24
+ 33b:	0f2d      	mov.n	a2, a15
+ 33d:	61a082        	movi	a8, 97
+ 340:	3d0a      	add.n	a3, a13, a0
+ 342:	046d      	mov.n	a6, a4
+ 344:	057d      	mov.n	a7, a5
+ 346:	041c      	movi.n	a4, 16
+ 348:	050c      	movi.n	a5, 0
+ 34a:	ffd332        	addmi	a3, a3, 0xffffff00
+ 34d:	3f2332        	l32i	a3, a3, 252
+ 350:	0189      	s32i.n	a8, a1, 0
+ 352:	ffd885        	call0	dc <ets_printf-0x320>
+ 355:	562c      	movi.n	a6, 37
+ 357:	ffea86        	j	305 <ets_printf-0xf7>
+ 35a:	841c      	movi.n	a4, 24
+ 35c:	012407        	blt	a4, a0, 361 <ets_printf-0x9b>
+ 35f:	4d2c      	movi.n	a13, 36
+ 361:	6108      	l32i.n	a0, a1, 24
+ 363:	0f2d      	mov.n	a2, a15
+ 365:	041c      	movi.n	a4, 16
+ 367:	860c      	movi.n	a6, 8
+ 369:	057d      	mov.n	a7, a5
+ 36b:	3d0a      	add.n	a3, a13, a0
+ 36d:	ffd332        	addmi	a3, a3, 0xffffff00
+ 370:	61a052        	movi	a5, 97
+ 373:	3f2332        	l32i	a3, a3, 252
+ 376:	0159      	s32i.n	a5, a1, 0
+ 378:	050c      	movi.n	a5, 0
+ 37a:	ffd605        	call0	dc <ets_printf-0x320>
+ 37d:	562c      	movi.n	a6, 37
+ 37f:	ffe086        	j	305 <ets_printf-0xf7>
+ 382:	871c      	movi.n	a7, 24
+ 384:	012707        	blt	a7, a0, 389 <ets_printf-0x73>
+ 387:	4d2c      	movi.n	a13, 36
+ 389:	6108      	l32i.n	a0, a1, 24
+ 38b:	0f2d      	mov.n	a2, a15
+ 38d:	184c      	movi.n	a8, 65
+ 38f:	3d0a      	add.n	a3, a13, a0
+ 391:	046d      	mov.n	a6, a4
+ 393:	057d      	mov.n	a7, a5
+ 395:	041c      	movi.n	a4, 16
+ 397:	050c      	movi.n	a5, 0
+ 399:	ffd332        	addmi	a3, a3, 0xffffff00
+ 39c:	3f2332        	l32i	a3, a3, 252
+ 39f:	0189      	s32i.n	a8, a1, 0
+ 3a1:	ffd385        	call0	dc <ets_printf-0x320>
+ 3a4:	562c      	movi.n	a6, 37
+ 3a6:	ffd6c6        	j	305 <ets_printf-0xf7>
+ 3a9:	871c      	movi.n	a7, 24
+ 3ab:	012707        	blt	a7, a0, 3b0 <ets_printf-0x4c>
+ 3ae:	4d2c      	movi.n	a13, 36
+ 3b0:	6108      	l32i.n	a0, a1, 24
+ 3b2:	0f2d      	mov.n	a2, a15
+ 3b4:	61a082        	movi	a8, 97
+ 3b7:	3d0a      	add.n	a3, a13, a0
+ 3b9:	046d      	mov.n	a6, a4
+ 3bb:	057d      	mov.n	a7, a5
+ 3bd:	a40c      	movi.n	a4, 10
+ 3bf:	050c      	movi.n	a5, 0
+ 3c1:	ffd332        	addmi	a3, a3, 0xffffff00
+ 3c4:	3f2332        	l32i	a3, a3, 252
+ 3c7:	0189      	s32i.n	a8, a1, 0
+ 3c9:	ffd105        	call0	dc <ets_printf-0x320>
+ 3cc:	562c      	movi.n	a6, 37
+ 3ce:	ffccc6        	j	305 <ets_printf-0xf7>
+ 3d1:	871c      	movi.n	a7, 24
+ 3d3:	012707        	blt	a7, a0, 3d8 <ets_printf-0x24>
+ 3d6:	4d2c      	movi.n	a13, 36
+ 3d8:	6108      	l32i.n	a0, a1, 24
+ 3da:	0f2d      	mov.n	a2, a15
+ 3dc:	10c132        	addi	a3, a1, 16
+ 3df:	080c      	movi.n	a8, 0
+ 3e1:	9d0a      	add.n	a9, a13, a0
+ 3e3:	ffd992        	addmi	a9, a9, 0xffffff00
+ 3e6:	3f2992        	l32i	a9, a9, 252
+ 3e9:	104192        	s8i	a9, a1, 16
+ 3ec:	114182        	s8i	a8, a1, 17
+ 3ef:	ffc3c5        	call0	2c <ets_printf-0x3d0>
+ 3f2:	562c      	movi.n	a6, 37
+ 3f4:	e2ea      	add.n	a14, a2, a14
+ 3f6:	ff7dc6        	j	1f1 <ets_printf-0x20b>
+ 3f9:	000000        	ill
+
+000003fc <ets_printf>:
+ 3fc:	039d      	mov.n	a9, a3
+ 3fe:	d0c112        	addi	a1, a1, -48
+ 401:	9179      	s32i.n	a7, a1, 36
+ 403:	8169      	s32i.n	a6, a1, 32
+ 405:	023d      	mov.n	a3, a2
+ 407:	4129      	s32i.n	a2, a1, 16
+ 409:	6149      	s32i.n	a4, a1, 24
+ 40b:	7159      	s32i.n	a5, a1, 28
+ 40d:	3109      	s32i.n	a0, a1, 12
+ 40f:	10c182        	addi	a8, a1, 16
+ 412:	1189      	s32i.n	a8, a1, 4
+ 414:	5199      	s32i.n	a9, a1, 20
+ 416:	0189      	s32i.n	a8, a1, 0
+ 418:	400c      	movi.n	a0, 4
+ 41a:	085d      	mov.n	a5, a8
+ 41c:	084d      	mov.n	a4, a8
+ 41e:	020c      	movi.n	a2, 0
+ 420:	2109      	s32i.n	a0, a1, 8
+ 422:	006d      	mov.n	a6, a0
+ 424:	ffd7c5        	call0	1a4 <ets_printf-0x258>
+ 427:	3108      	l32i.n	a0, a1, 12
+ 429:	30c112        	addi	a1, a1, 48
+ 42c:	f00d      	ret.n
+	...
+
+00000430 <sprintf>:
+ 430:	d0c112        	addi	a1, a1, -48
+ 433:	9179      	s32i.n	a7, a1, 36
+ 435:	8169      	s32i.n	a6, a1, 32
+ 437:	4129      	s32i.n	a2, a1, 16
+ 439:	7159      	s32i.n	a5, a1, 28
+ 43b:	3109      	s32i.n	a0, a1, 12
+ 43d:	6149      	s32i.n	a4, a1, 24
+ 43f:	800c      	movi.n	a0, 8
+ 441:	10c142        	addi	a4, a1, 16
+ 444:	0149      	s32i.n	a4, a1, 0
+ 446:	045d      	mov.n	a5, a4
+ 448:	1149      	s32i.n	a4, a1, 4
+ 44a:	042d      	mov.n	a2, a4
+ 44c:	2109      	s32i.n	a0, a1, 8
+ 44e:	006d      	mov.n	a6, a0
+ 450:	ffd505        	call0	1a4 <ets_printf-0x258>
+ 453:	3108      	l32i.n	a0, a1, 12
+ 455:	30c112        	addi	a1, a1, 48
+ 458:	f00d      	ret.n
+	...
+
+0000045c <snprintf>:
+ 45c:	043d      	mov.n	a3, a4
+ 45e:	d0c112        	addi	a1, a1, -48
+ 461:	9179      	s32i.n	a7, a1, 36
+ 463:	8169      	s32i.n	a6, a1, 32
+ 465:	4129      	s32i.n	a2, a1, 16
+ 467:	3109      	s32i.n	a0, a1, 12
+ 469:	7159      	s32i.n	a5, a1, 28
+ 46b:	c00c      	movi.n	a0, 12
+ 46d:	10c142        	addi	a4, a1, 16
+ 470:	0149      	s32i.n	a4, a1, 0
+ 472:	045d      	mov.n	a5, a4
+ 474:	1149      	s32i.n	a4, a1, 4
+ 476:	042d      	mov.n	a2, a4
+ 478:	2109      	s32i.n	a0, a1, 8
+ 47a:	006d      	mov.n	a6, a0
+ 47c:	ffd245        	call0	1a4 <ets_printf-0x258>
+ 47f:	3108      	l32i.n	a0, a1, 12
+ 481:	30c112        	addi	a1, a1, 48
+ 484:	f00d      	ret.n
+ 486:	080000        	excw
+ 489:	000000        	ill
+
+0000048c <puts>:
+ 48c:	023d      	mov.n	a3, a2
+ 48e:	f0c112        	addi	a1, a1, -16
+ 491:	fffd21        	l32r	a2, 488 <snprintf+0x2c>
+ 494:	0109      	s32i.n	a0, a1, 0
+ 496:	000005        	call0	498 <puts+0xc>
+ 499:	020c      	movi.n	a2, 0
+ 49b:	0108      	l32i.n	a0, a1, 0
+ 49d:	10c112        	addi	a1, a1, 16
+ 4a0:	f00d      	ret.n
+	...
+
+000004a4 <__write>:
+ 4a4:	020c      	movi.n	a2, 0
+ 4a6:	f00d      	ret.n

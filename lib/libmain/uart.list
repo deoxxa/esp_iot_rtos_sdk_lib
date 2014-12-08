@@ -1,0 +1,42 @@
+
+uart.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <uart_buff_switch>:
+   0:	f00d      	ret.n
+   2:	000000        	ill
+   5:	0f          	.byte 0xf
+   6:	000000        	ill
+   9:	fe          	.byte 0xfe
+   a:	ff          	.byte 0xff
+   b:	5f          	.byte 0x5f
+   c:	060000        	excw
+   f:	ffff00        	excw
+  12:	fff9      	s32i.n	a15, a15, 60
+
+00000014 <uart_div_modify>:
+  14:	fffc51        	l32r	a5, 4 <uart_buff_switch+0x4>
+  17:	fffc61        	l32r	a6, 8 <uart_buff_switch+0x8>
+  1a:	d15520        	mul16s	a5, a5, a2
+  1d:	556a      	add.n	a5, a5, a6
+  1f:	0020c0        	memw
+  22:	856532        	s32i	a3, a5, 0x214
+  25:	fff981        	l32r	a8, c <uart_buff_switch+0xc>
+  28:	0020c0        	memw
+  2b:	882572        	l32i	a7, a5, 0x220
+  2e:	207780        	or	a7, a7, a8
+  31:	0020c0        	memw
+  34:	886572        	s32i	a7, a5, 0x220
+  37:	fff661        	l32r	a6, 10 <uart_buff_switch+0x10>
+  3a:	0020c0        	memw
+  3d:	882542        	l32i	a4, a5, 0x220
+  40:	104460        	and	a4, a4, a6
+  43:	0020c0        	memw
+  46:	886542        	s32i	a4, a5, 0x220
+  49:	f00d      	ret.n
+	...
+
+0000004c <Uart_Init>:
+  4c:	f00d      	ret.n

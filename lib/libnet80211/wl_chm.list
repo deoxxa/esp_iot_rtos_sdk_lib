@@ -1,0 +1,372 @@
+
+wl_chm.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <chm_acquire_lock-0x8>:
+	...
+
+00000008 <chm_acquire_lock>:
+   8:	f0c112        	addi	a1, a1, -16
+   b:	11c9      	s32i.n	a12, a1, 4
+   d:	0109      	s32i.n	a0, a1, 0
+   f:	02cd      	mov.n	a12, a2
+  11:	fffb01        	l32r	a0, 0 <chm_acquire_lock-0x8>
+  14:	042d      	mov.n	a2, a4
+  16:	400042        	l8ui	a4, a0, 64
+  19:	410052        	l8ui	a5, a0, 65
+  1c:	449c      	beqz.n	a4, 34 <chm_acquire_lock+0x2c>
+  1e:	3129      	s32i.n	a2, a1, 12
+  20:	2139      	s32i.n	a3, a1, 8
+  22:	04b5c7        	bgeu	a5, a12, 2a <chm_acquire_lock+0x22>
+  25:	320c      	movi.n	a2, 3
+  27:	0005c6        	j	42 <chm_acquire_lock+0x3a>
+  2a:	000005        	call0	2c <chm_acquire_lock+0x24>
+  2d:	3128      	l32i.n	a2, a1, 12
+  2f:	fff501        	l32r	a0, 4 <chm_acquire_lock-0x4>
+  32:	2138      	l32i.n	a3, a1, 8
+  34:	4140c2        	s8i	a12, a0, 65
+  37:	6039      	s32i.n	a3, a0, 24
+  39:	7029      	s32i.n	a2, a0, 28
+  3b:	160c      	movi.n	a6, 1
+  3d:	020c      	movi.n	a2, 0
+  3f:	404062        	s8i	a6, a0, 64
+  42:	11c8      	l32i.n	a12, a1, 4
+  44:	0108      	l32i.n	a0, a1, 0
+  46:	10c112        	addi	a1, a1, 16
+  49:	f00d      	ret.n
+  4b:	000000        	ill
+	...
+
+00000050 <chm_release_lock>:
+  50:	ffff31        	l32r	a3, 4c <chm_acquire_lock+0x44>
+  53:	020c      	movi.n	a2, 0
+  55:	7329      	s32i.n	a2, a3, 28
+  57:	6329      	s32i.n	a2, a3, 24
+  59:	404322        	s8i	a2, a3, 64
+  5c:	414322        	s8i	a2, a3, 65
+  5f:	f00d      	ret.n
+	...
+
+00000074 <chm_cancel_op>:
+  74:	f0c112        	addi	a1, a1, -16
+  77:	0109      	s32i.n	a0, a1, 0
+  79:	fffa01        	l32r	a0, 64 <chm_release_lock+0x14>
+  7c:	1028      	l32i.n	a2, a0, 4
+  7e:	429c      	beqz.n	a2, 96 <chm_cancel_op+0x22>
+  80:	002d      	mov.n	a2, a0
+  82:	20c222        	addi	a2, a2, 32
+  85:	fff901        	l32r	a0, 6c <chm_release_lock+0x1c>
+  88:	0000c0        	callx0	a0
+  8b:	420c      	movi.n	a2, 4
+  8d:	fff801        	l32r	a0, 70 <chm_release_lock+0x20>
+  90:	0000c0        	callx0	a0
+  93:	fff501        	l32r	a0, 68 <chm_release_lock+0x18>
+  96:	6058      	l32i.n	a5, a0, 24
+  98:	558c      	beqz.n	a5, a1 <chm_cancel_op+0x2d>
+  9a:	430c      	movi.n	a3, 4
+  9c:	7028      	l32i.n	a2, a0, 28
+  9e:	0005c0        	callx0	a5
+  a1:	0108      	l32i.n	a0, a1, 0
+  a3:	10c112        	addi	a1, a1, 16
+  a6:	f00d      	ret.n
+	...
+
+000000b0 <chm_return_home_channel>:
+  b0:	f0c112        	addi	a1, a1, -16
+  b3:	11c9      	s32i.n	a12, a1, 4
+  b5:	fffcc1        	l32r	a12, a8 <chm_cancel_op+0x34>
+  b8:	0109      	s32i.n	a0, a1, 0
+  ba:	532cc2        	l32i	a12, a12, 0x14c
+  bd:	000005        	call0	c0 <chm_return_home_channel+0x10>
+  c0:	021202        	l16ui	a0, a2, 4
+  c3:	021c22        	l16ui	a2, a12, 4
+  c6:	071027        	beq	a0, a2, d1 <chm_return_home_channel+0x21>
+  c9:	0c2d      	mov.n	a2, a12
+  cb:	fff801        	l32r	a0, ac <chm_cancel_op+0x38>
+  ce:	0000c0        	callx0	a0
+  d1:	11c8      	l32i.n	a12, a1, 4
+  d3:	0108      	l32i.n	a0, a1, 0
+  d5:	10c112        	addi	a1, a1, 16
+  d8:	f00d      	ret.n
+  da:	000000        	ill
+  dd:	000000        	ill
+
+000000e0 <chm_get_current_channel>:
+  e0:	ffff21        	l32r	a2, dc <chm_return_home_channel+0x2c>
+  e3:	f228      	l32i.n	a2, a2, 60
+  e5:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <chm_init-0x30>:
+   0:	effe00        	excw
+   3:	3f          	.byte 0x3f
+	...
+  14:	effe00        	excw
+  17:	3f          	.byte 0x3f
+  18:	000020        	excw
+  1b:	01dc00        	slli	a13, a12, 32
+	...
+
+00000030 <chm_init>:
+  30:	066c      	movi.n	a6, -32
+  32:	fff341        	l32r	a4, 0 <chm_init-0x30>
+  35:	fff551        	l32r	a5, c <chm_init-0x24>
+  38:	fff331        	l32r	a3, 4 <chm_init-0x2c>
+  3b:	fff371        	l32r	a7, 8 <chm_init-0x28>
+  3e:	f0c112        	addi	a1, a1, -16
+  41:	0109      	s32i.n	a0, a1, 0
+  43:	11c9      	s32i.n	a12, a1, 4
+  45:	000c      	movi.n	a0, 0
+  47:	0729      	s32i.n	a2, a7, 0
+  49:	02cd      	mov.n	a12, a2
+  4b:	5c0372        	l8ui	a7, a3, 92
+  4e:	000522        	l8ui	a2, a5, 0
+  51:	01d332        	addmi	a3, a3, 0x100
+  54:	890332        	l8ui	a3, a3, 137
+  57:	770b      	addi.n	a7, a7, -1
+  59:	330b      	addi.n	a3, a3, -1
+  5b:	743030        	extui	a3, a3, 0, 8
+  5e:	930370        	movnez	a0, a3, a7
+  61:	3109      	s32i.n	a0, a1, 12
+  63:	d2dc      	bnez.n	a2, 84 <chm_init+0x54>
+  65:	ffee01        	l32r	a0, 20 <chm_init-0x10>
+  68:	0000c0        	callx0	a0
+  6b:	3108      	l32i.n	a0, a1, 12
+  6d:	ffe851        	l32r	a5, 10 <chm_init-0x20>
+  70:	0020c0        	memw
+  73:	ffe841        	l32r	a4, 14 <chm_init-0x1c>
+  76:	802482        	l32i	a8, a4, 0x200
+  79:	066c      	movi.n	a6, -32
+  7b:	108860        	and	a8, a8, a6
+  7e:	0020c0        	memw
+  81:	806482        	s32i	a8, a4, 0x200
+  84:	84a022        	movi	a2, 132
+  87:	900000        	addx2	a0, a0, a0
+  8a:	a000c0        	addx4	a0, a0, a12
+  8d:	002a      	add.n	a0, a0, a2
+  8f:	536c02        	s32i	a0, a12, 0x14c
+  92:	000592        	l8ui	a9, a5, 0
+  95:	2109      	s32i.n	a0, a1, 8
+  97:	a9dc      	bnez.n	a9, b5 <chm_init+0x85>
+  99:	130c      	movi.n	a3, 1
+  9b:	0020c0        	memw
+  9e:	802422        	l32i	a2, a4, 0x200
+  a1:	102260        	and	a2, a2, a6
+  a4:	202230        	or	a2, a2, a3
+  a7:	0020c0        	memw
+  aa:	806422        	s32i	a2, a4, 0x200
+  ad:	ffdd01        	l32r	a0, 24 <chm_init-0xc>
+  b0:	0000c0        	callx0	a0
+  b3:	2108      	l32i.n	a0, a1, 8
+  b5:	002d      	mov.n	a2, a0
+  b7:	ffdc01        	l32r	a0, 28 <chm_init-0x8>
+  ba:	0000c0        	callx0	a0
+  bd:	ffd621        	l32r	a2, 18 <chm_init-0x18>
+  c0:	ffd731        	l32r	a3, 1c <chm_init-0x14>
+  c3:	040c      	movi.n	a4, 0
+  c5:	ffd901        	l32r	a0, 2c <chm_init-0x4>
+  c8:	0000c0        	callx0	a0
+  cb:	11c8      	l32i.n	a12, a1, 4
+  cd:	0108      	l32i.n	a0, a1, 0
+  cf:	10c112        	addi	a1, a1, 16
+  d2:	f00d      	ret.n
+	...
+
+000000dc <chm_start_op>:
+  dc:	f0c112        	addi	a1, a1, -16
+  df:	0109      	s32i.n	a0, a1, 0
+  e1:	fffc01        	l32r	a0, d4 <chm_init+0xa4>
+  e4:	1078      	l32i.n	a7, a0, 4
+  e6:	f78c      	beqz.n	a7, f9 <chm_start_op+0x1d>
+  e8:	320c      	movi.n	a2, 3
+  ea:	000106        	j	f2 <chm_start_op+0x16>
+  ed:	000445        	call0	134 <chm_start_op+0x58>
+  f0:	020c      	movi.n	a2, 0
+  f2:	0108      	l32i.n	a0, a1, 0
+  f4:	10c112        	addi	a1, a1, 16
+  f7:	f00d      	ret.n
+  f9:	1029      	s32i.n	a2, a0, 4
+  fb:	4049      	s32i.n	a4, a0, 16
+  fd:	fff681        	l32r	a8, d8 <chm_init+0xa8>
+ 100:	5059      	s32i.n	a5, a0, 20
+ 102:	0888      	l32i.n	a8, a8, 0
+ 104:	2039      	s32i.n	a3, a0, 8
+ 106:	0888      	l32i.n	a8, a8, 0
+ 108:	3069      	s32i.n	a6, a0, 12
+ 10a:	df6817        	bbci	a8, 1, ed <chm_start_op+0x11>
+ 10d:	000245        	call0	134 <chm_start_op+0x58>
+ 110:	fff706        	j	f0 <chm_start_op+0x14>
+ 113:	000000        	ill
+ 116:	040000        	extui	a0, a0, 0, 1
+ 119:	000000        	ill
+ 11c:	000020        	excw
+	...
+ 133:	c11200        	mul16u	a1, a2, a0
+ 136:	31d9f0        	srai	a13, a15, 25
+ 139:	21c9      	s32i.n	a12, a1, 8
+ 13b:	fff6d1        	l32r	a13, 114 <chm_start_op+0x38>
+ 13e:	1109      	s32i.n	a0, a1, 4
+ 140:	4dc8      	l32i.n	a12, a13, 16
+ 142:	3d08      	l32i.n	a0, a13, 12
+ 144:	0109      	s32i.n	a0, a1, 0
+ 146:	fff601        	l32r	a0, 120 <chm_start_op+0x44>
+ 149:	0000c0        	callx0	a0
+ 14c:	023d      	mov.n	a3, a2
+ 14e:	1d28      	l32i.n	a2, a13, 4
+ 150:	021332        	l16ui	a3, a3, 4
+ 153:	021242        	l16ui	a4, a2, 4
+ 156:	051347        	beq	a3, a4, 15f <chm_start_op+0x83>
+ 159:	fff201        	l32r	a0, 124 <chm_start_op+0x48>
+ 15c:	0000c0        	callx0	a0
+ 15f:	5c8c      	beqz.n	a12, 168 <chm_start_op+0x8c>
+ 161:	0128      	l32i.n	a2, a1, 0
+ 163:	030c      	movi.n	a3, 0
+ 165:	000cc0        	callx0	a12
+ 168:	2d48      	l32i.n	a4, a13, 8
+ 16a:	c4cc      	bnez.n	a4, 17a <chm_start_op+0x9e>
+ 16c:	ffeb21        	l32r	a2, 118 <chm_start_op+0x3c>
+ 16f:	431c      	movi.n	a3, 20
+ 171:	ffed01        	l32r	a0, 128 <chm_start_op+0x4c>
+ 174:	0000c0        	callx0	a0
+ 177:	000586        	j	191 <chm_start_op+0xb5>
+ 17a:	ffe8c1        	l32r	a12, 11c <chm_start_op+0x40>
+ 17d:	0c2d      	mov.n	a2, a12
+ 17f:	ffeb01        	l32r	a0, 12c <chm_start_op+0x50>
+ 182:	0000c0        	callx0	a0
+ 185:	0c2d      	mov.n	a2, a12
+ 187:	2d38      	l32i.n	a3, a13, 8
+ 189:	040c      	movi.n	a4, 0
+ 18b:	ffe901        	l32r	a0, 130 <chm_start_op+0x54>
+ 18e:	0000c0        	callx0	a0
+ 191:	21c8      	l32i.n	a12, a1, 8
+ 193:	31d8      	l32i.n	a13, a1, 12
+ 195:	1108      	l32i.n	a0, a1, 4
+ 197:	10c112        	addi	a1, a1, 16
+ 19a:	f00d      	ret.n
+	...
+
+000001a8 <chm_end_op>:
+ 1a8:	c37c      	movi.n	a3, -4
+ 1aa:	f0c112        	addi	a1, a1, -16
+ 1ad:	1109      	s32i.n	a0, a1, 4
+ 1af:	fffb01        	l32r	a0, 19c <chm_start_op+0xc0>
+ 1b2:	0129      	s32i.n	a2, a1, 0
+ 1b4:	1d1037        	beq	a0, a3, 1d5 <chm_end_op+0x2d>
+ 1b7:	002d      	mov.n	a2, a0
+ 1b9:	5238      	l32i.n	a3, a2, 20
+ 1bb:	2139      	s32i.n	a3, a1, 8
+ 1bd:	224b      	addi.n	a2, a2, 4
+ 1bf:	431c      	movi.n	a3, 20
+ 1c1:	fff801        	l32r	a0, 1a4 <chm_start_op+0xc8>
+ 1c4:	0000c0        	callx0	a0
+ 1c7:	2158      	l32i.n	a5, a1, 8
+ 1c9:	858c      	beqz.n	a5, 1d5 <chm_end_op+0x2d>
+ 1cb:	fff521        	l32r	a2, 1a0 <chm_start_op+0xc4>
+ 1ce:	0138      	l32i.n	a3, a1, 0
+ 1d0:	3228      	l32i.n	a2, a2, 12
+ 1d2:	0005c0        	callx0	a5
+ 1d5:	1108      	l32i.n	a0, a1, 4
+ 1d7:	10c112        	addi	a1, a1, 16
+ 1da:	f00d      	ret.n
+ 1dc:	020c      	movi.n	a2, 0
+ 1de:	f0c112        	addi	a1, a1, -16
+ 1e1:	0109      	s32i.n	a0, a1, 0
+ 1e3:	000005        	call0	1e4 <chm_end_op+0x3c>
+ 1e6:	0108      	l32i.n	a0, a1, 0
+ 1e8:	10c112        	addi	a1, a1, 16
+ 1eb:	f00d      	ret.n
+	...
+ 1f5:	fe          	.byte 0xfe
+ 1f6:	ef          	.byte 0xef
+ 1f7:	3f          	.byte 0x3f
+ 1f8:	effe00        	excw
+ 1fb:	3f          	.byte 0x3f
+	...
+
+00000210 <chm_set_current_channel>:
+ 210:	130c      	movi.n	a3, 1
+ 212:	040c      	movi.n	a4, 0
+ 214:	f0c112        	addi	a1, a1, -16
+ 217:	11c9      	s32i.n	a12, a1, 4
+ 219:	0109      	s32i.n	a0, a1, 0
+ 21b:	02cd      	mov.n	a12, a2
+ 21d:	021222        	l16ui	a2, a2, 4
+ 220:	fff901        	l32r	a0, 204 <chm_end_op+0x5c>
+ 223:	0000c0        	callx0	a0
+ 226:	fff241        	l32r	a4, 1f0 <chm_end_op+0x48>
+ 229:	026c      	movi.n	a2, -32
+ 22b:	000442        	l8ui	a4, a4, 0
+ 22e:	fff101        	l32r	a0, 1f4 <chm_end_op+0x4c>
+ 231:	e4dc      	bnez.n	a4, 253 <chm_set_current_channel+0x43>
+ 233:	fff501        	l32r	a0, 208 <chm_end_op+0x60>
+ 236:	0000c0        	callx0	a0
+ 239:	0020c0        	memw
+ 23c:	ffef01        	l32r	a0, 1f8 <chm_end_op+0x50>
+ 23f:	802052        	l32i	a5, a0, 0x200
+ 242:	026c      	movi.n	a2, -32
+ 244:	105520        	and	a5, a5, a2
+ 247:	0020c0        	memw
+ 24a:	ffec41        	l32r	a4, 1fc <chm_end_op+0x54>
+ 24d:	806052        	s32i	a5, a0, 0x200
+ 250:	000442        	l8ui	a4, a4, 0
+ 253:	ffeb61        	l32r	a6, 200 <chm_end_op+0x58>
+ 256:	f6c9      	s32i.n	a12, a6, 60
+ 258:	84dc      	bnez.n	a4, 274 <chm_set_current_channel+0x64>
+ 25a:	180c      	movi.n	a8, 1
+ 25c:	0020c0        	memw
+ 25f:	802072        	l32i	a7, a0, 0x200
+ 262:	107720        	and	a7, a7, a2
+ 265:	207780        	or	a7, a7, a8
+ 268:	0020c0        	memw
+ 26b:	806072        	s32i	a7, a0, 0x200
+ 26e:	ffe701        	l32r	a0, 20c <chm_end_op+0x64>
+ 271:	0000c0        	callx0	a0
+ 274:	11c8      	l32i.n	a12, a1, 4
+ 276:	0108      	l32i.n	a0, a1, 0
+ 278:	10c112        	addi	a1, a1, 16
+ 27b:	f00d      	ret.n
+ 27d:	000000        	ill
+ 280:	000000        	ill
+	...
+
+00000284 <chm_freq2index>:
+ 284:	050c      	movi.n	a5, 0
+ 286:	fffe61        	l32r	a6, 280 <chm_set_current_channel+0x70>
+ 289:	e70c      	movi.n	a7, 14
+ 28b:	0668      	l32i.n	a6, a6, 0
+ 28d:	908550        	addx2	a8, a5, a5
+ 290:	a08860        	addx4	a8, a8, a6
+ 293:	441882        	l16ui	a8, a8, 136
+ 296:	039827        	bne	a8, a2, 29d <chm_freq2index+0x19>
+ 299:	052d      	mov.n	a2, a5
+ 29b:	f00d      	ret.n
+ 29d:	551b      	addi.n	a5, a5, 1
+ 29f:	745050        	extui	a5, a5, 0, 8
+ 2a2:	e79577        	bne	a5, a7, 28d <chm_freq2index+0x9>
+ 2a5:	ffa022        	movi	a2, 255
+ 2a8:	f00d      	ret.n
+	...
+
+000002bc <chm_check_same_channel>:
+ 2bc:	fffc21        	l32r	a2, 2ac <chm_freq2index+0x28>
+ 2bf:	f0c112        	addi	a1, a1, -16
+ 2c2:	1109      	s32i.n	a0, a1, 4
+ 2c4:	532222        	l32i	a2, a2, 0x14c
+ 2c7:	fffa01        	l32r	a0, 2b0 <chm_freq2index+0x2c>
+ 2ca:	0000c0        	callx0	a0
+ 2cd:	0129      	s32i.n	a2, a1, 0
+ 2cf:	fff901        	l32r	a0, 2b4 <chm_freq2index+0x30>
+ 2d2:	0000c0        	callx0	a0
+ 2d5:	fff801        	l32r	a0, 2b8 <chm_freq2index+0x34>
+ 2d8:	0000c0        	callx0	a0
+ 2db:	030c      	movi.n	a3, 0
+ 2dd:	0148      	l32i.n	a4, a1, 0
+ 2df:	1108      	l32i.n	a0, a1, 4
+ 2e1:	c04420        	sub	a4, a4, a2
+ 2e4:	10c112        	addi	a1, a1, 16
+ 2e7:	120c      	movi.n	a2, 1
+ 2e9:	932340        	movnez	a2, a3, a4
+ 2ec:	f00d      	ret.n

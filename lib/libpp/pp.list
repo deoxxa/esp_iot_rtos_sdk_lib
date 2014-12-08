@@ -1,0 +1,3113 @@
+
+pp.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <ppTask-0xac>:
+       0:	88a042        	movi	a4, 136
+       3:	861c      	movi.n	a6, 24
+       5:	e51c      	movi.n	a5, 30
+       7:	010272        	l8ui	a7, a2, 1
+       a:	000232        	l8ui	a3, a2, 0
+       d:	8ca082        	movi	a8, 140
+      10:	103380        	and	a3, a3, a8
+      13:	147070        	extui	a7, a7, 0, 2
+      16:	fdc772        	addi	a7, a7, -3
+      19:	935670        	movnez	a5, a6, a7
+      1c:	019347        	bne	a3, a4, 21 <ppTask-0x8b>
+      1f:	552b      	addi.n	a5, a5, 2
+      21:	052d      	mov.n	a2, a5
+      23:	f00d      	ret.n
+      25:	000000        	ill
+      28:	000000        	ill
+      2b:	ff5100        	excw
+      2e:	ff          	.byte 0xff
+      2f:	02d532        	addmi	a3, a5, 0x200
+      32:	020522        	l8ui	a2, a5, 2
+      35:	030562        	l8ui	a6, a5, 3
+      38:	421b      	addi.n	a4, a2, 1
+      3a:	661b      	addi.n	a6, a6, 1
+      3c:	a02230        	addx4	a2, a2, a3
+      3f:	034562        	s8i	a6, a5, 3
+      42:	744040        	extui	a4, a4, 0, 8
+      45:	0194b6        	bltui	a4, 10, 4a <ppTask-0x62>
+      48:	040c      	movi.n	a4, 0
+      4a:	024542        	s8i	a4, a5, 2
+      4d:	f00d      	ret.n
+      4f:	fe0000        	excw
+      52:	ef          	.byte 0xef
+      53:	3f          	.byte 0x3f
+      54:	000230        	excw
+	...
+      63:	000800        	excw
+	...
+      86:	5c0000        	excw
+      89:	000010        	excw
+	...
+      94:	0588      	l32i.n	a8, a5, 0
+	...
+      9e:	ac0000        	excw
+      a1:	000004        	excw
+      a4:	0000a0        	jx	a0
+      a7:	000000        	ill
+	...
+
+000000ac <ppTask>:
+      ac:	a20c      	movi.n	a2, 10
+      ae:	830c      	movi.n	a3, 8
+      b0:	040c      	movi.n	a4, 0
+      b2:	e0c112        	addi	a1, a1, -32
+      b5:	51f9      	s32i.n	a15, a1, 20
+      b7:	41e9      	s32i.n	a14, a1, 16
+      b9:	31d9      	s32i.n	a13, a1, 12
+      bb:	21c9      	s32i.n	a12, a1, 8
+      bd:	1109      	s32i.n	a0, a1, 4
+      bf:	ffea01        	l32r	a0, 68 <ppTask-0x44>
+      c2:	0000c0        	callx0	a0
+      c5:	ffe2d1        	l32r	a13, 50 <ppTask-0x5c>
+      c8:	ffe3f1        	l32r	a15, 54 <ppTask-0x58>
+      cb:	ffe4c1        	l32r	a12, 5c <ppTask-0x50>
+      ce:	ffe2e1        	l32r	a14, 58 <ppTask-0x54>
+      d1:	126c22        	s32i	a2, a12, 72
+      d4:	013d      	mov.n	a3, a1
+      d6:	140c      	movi.n	a4, 1
+      d8:	050c      	movi.n	a5, 0
+      da:	ffe401        	l32r	a0, 6c <ppTask-0x40>
+      dd:	0000c0        	callx0	a0
+      e0:	520b      	addi.n	a5, a2, -1
+      e2:	1a2556        	bnez	a5, 288 <ppTask+0x1dc>
+      e5:	0108      	l32i.n	a0, a1, 0
+      e7:	0008      	l32i.n	a0, a0, 0
+      e9:	1540f6        	bgeui	a0, 4, 102 <ppTask+0x56>
+      ec:	40fa      	add.n	a4, a0, a15
+      ee:	000432        	l8ui	a3, a4, 0
+      f1:	742000        	extui	a2, a0, 0, 8
+      f4:	330b      	addi.n	a3, a3, -1
+      f6:	004432        	s8i	a3, a4, 0
+      f9:	ffdd01        	l32r	a0, 70 <ppTask-0x3c>
+      fc:	0000c0        	callx0	a0
+      ff:	005fc6        	j	282 <ppTask+0x1d6>
+     102:	fcc042        	addi	a4, a0, -4
+     105:	126416        	beqz	a4, 22f <ppTask+0x183>
+     108:	fbc052        	addi	a5, a0, -5
+     10b:	0cc516        	beqz	a5, 1db <ppTask+0x12f>
+     10e:	f9c062        	addi	a6, a0, -7
+     111:	16d616        	beqz	a6, 282 <ppTask+0x1d6>
+     114:	f8c072        	addi	a7, a0, -8
+     117:	0ad716        	beqz	a7, 1c8 <ppTask+0x11c>
+     11a:	980c      	movi.n	a8, 9
+     11c:	541087        	beq	a0, a8, 174 <ppTask+0xc8>
+     11f:	f6c092        	addi	a9, a0, -10
+     122:	168956        	bnez	a9, 28e <ppTask+0x1e2>
+     125:	000e22        	l8ui	a2, a14, 0
+     128:	c2dc      	bnez.n	a2, 148 <ppTask+0x9c>
+     12a:	ffd201        	l32r	a0, 74 <ppTask-0x38>
+     12d:	0000c0        	callx0	a0
+     130:	0020c0        	memw
+     133:	802d22        	l32i	a2, a13, 0x200
+     136:	036c      	movi.n	a3, -32
+     138:	102230        	and	a2, a2, a3
+     13b:	0020c0        	memw
+     13e:	0108      	l32i.n	a0, a1, 0
+     140:	806d22        	s32i	a2, a13, 0x200
+     143:	0008      	l32i.n	a0, a0, 0
+     145:	000e22        	l8ui	a2, a14, 0
+     148:	50fa      	add.n	a5, a0, a15
+     14a:	000542        	l8ui	a4, a5, 0
+     14d:	440b      	addi.n	a4, a4, -1
+     14f:	004542        	s8i	a4, a5, 0
+     152:	12c256        	bnez	a2, 282 <ppTask+0x1d6>
+     155:	0020c0        	memw
+     158:	802d52        	l32i	a5, a13, 0x200
+     15b:	066c      	movi.n	a6, -32
+     15d:	105560        	and	a5, a5, a6
+     160:	160c      	movi.n	a6, 1
+     162:	205560        	or	a5, a5, a6
+     165:	0020c0        	memw
+     168:	806d52        	s32i	a5, a13, 0x200
+     16b:	ffc301        	l32r	a0, 78 <ppTask-0x34>
+     16e:	0000c0        	callx0	a0
+     171:	004346        	j	282 <ppTask+0x1d6>
+     174:	000e22        	l8ui	a2, a14, 0
+     177:	c2dc      	bnez.n	a2, 197 <ppTask+0xeb>
+     179:	ffc001        	l32r	a0, 7c <ppTask-0x30>
+     17c:	0000c0        	callx0	a0
+     17f:	0020c0        	memw
+     182:	802d22        	l32i	a2, a13, 0x200
+     185:	036c      	movi.n	a3, -32
+     187:	102230        	and	a2, a2, a3
+     18a:	0020c0        	memw
+     18d:	0108      	l32i.n	a0, a1, 0
+     18f:	806d22        	s32i	a2, a13, 0x200
+     192:	0008      	l32i.n	a0, a0, 0
+     194:	000e22        	l8ui	a2, a14, 0
+     197:	50fa      	add.n	a5, a0, a15
+     199:	000542        	l8ui	a4, a5, 0
+     19c:	440b      	addi.n	a4, a4, -1
+     19e:	004542        	s8i	a4, a5, 0
+     1a1:	a2dc      	bnez.n	a2, 1bf <ppTask+0x113>
+     1a3:	0020c0        	memw
+     1a6:	802d52        	l32i	a5, a13, 0x200
+     1a9:	066c      	movi.n	a6, -32
+     1ab:	105560        	and	a5, a5, a6
+     1ae:	160c      	movi.n	a6, 1
+     1b0:	205560        	or	a5, a5, a6
+     1b3:	0020c0        	memw
+     1b6:	806d52        	s32i	a5, a13, 0x200
+     1b9:	ffb101        	l32r	a0, 80 <ppTask-0x2c>
+     1bc:	0000c0        	callx0	a0
+     1bf:	ffb101        	l32r	a0, 84 <ppTask-0x28>
+     1c2:	0000c0        	callx0	a0
+     1c5:	002e46        	j	282 <ppTask+0x1d6>
+     1c8:	80fa      	add.n	a8, a0, a15
+     1ca:	000872        	l8ui	a7, a8, 0
+     1cd:	770b      	addi.n	a7, a7, -1
+     1cf:	004872        	s8i	a7, a8, 0
+     1d2:	ffad01        	l32r	a0, 88 <ppTask-0x24>
+     1d5:	0000c0        	callx0	a0
+     1d8:	002986        	j	282 <ppTask+0x1d6>
+     1db:	000e22        	l8ui	a2, a14, 0
+     1de:	c2dc      	bnez.n	a2, 1fe <ppTask+0x152>
+     1e0:	ffab01        	l32r	a0, 8c <ppTask-0x20>
+     1e3:	0000c0        	callx0	a0
+     1e6:	0020c0        	memw
+     1e9:	802d22        	l32i	a2, a13, 0x200
+     1ec:	036c      	movi.n	a3, -32
+     1ee:	102230        	and	a2, a2, a3
+     1f1:	0020c0        	memw
+     1f4:	0108      	l32i.n	a0, a1, 0
+     1f6:	806d22        	s32i	a2, a13, 0x200
+     1f9:	0008      	l32i.n	a0, a0, 0
+     1fb:	000e22        	l8ui	a2, a14, 0
+     1fe:	50fa      	add.n	a5, a0, a15
+     200:	000542        	l8ui	a4, a5, 0
+     203:	440b      	addi.n	a4, a4, -1
+     205:	004542        	s8i	a4, a5, 0
+     208:	a2dc      	bnez.n	a2, 226 <ppTask+0x17a>
+     20a:	0020c0        	memw
+     20d:	802d52        	l32i	a5, a13, 0x200
+     210:	066c      	movi.n	a6, -32
+     212:	105560        	and	a5, a5, a6
+     215:	160c      	movi.n	a6, 1
+     217:	205560        	or	a5, a5, a6
+     21a:	0020c0        	memw
+     21d:	806d52        	s32i	a5, a13, 0x200
+     220:	ff9c01        	l32r	a0, 90 <ppTask-0x1c>
+     223:	0000c0        	callx0	a0
+     226:	ff9b01        	l32r	a0, 94 <ppTask-0x18>
+     229:	0000c0        	callx0	a0
+     22c:	001486        	j	282 <ppTask+0x1d6>
+     22f:	000e22        	l8ui	a2, a14, 0
+     232:	c2dc      	bnez.n	a2, 252 <ppTask+0x1a6>
+     234:	ff9901        	l32r	a0, 98 <ppTask-0x14>
+     237:	0000c0        	callx0	a0
+     23a:	0020c0        	memw
+     23d:	802d22        	l32i	a2, a13, 0x200
+     240:	036c      	movi.n	a3, -32
+     242:	102230        	and	a2, a2, a3
+     245:	0020c0        	memw
+     248:	0108      	l32i.n	a0, a1, 0
+     24a:	806d22        	s32i	a2, a13, 0x200
+     24d:	0008      	l32i.n	a0, a0, 0
+     24f:	000e22        	l8ui	a2, a14, 0
+     252:	50fa      	add.n	a5, a0, a15
+     254:	000542        	l8ui	a4, a5, 0
+     257:	440b      	addi.n	a4, a4, -1
+     259:	004542        	s8i	a4, a5, 0
+     25c:	a2dc      	bnez.n	a2, 27a <ppTask+0x1ce>
+     25e:	0020c0        	memw
+     261:	802d52        	l32i	a5, a13, 0x200
+     264:	066c      	movi.n	a6, -32
+     266:	105560        	and	a5, a5, a6
+     269:	160c      	movi.n	a6, 1
+     26b:	205560        	or	a5, a5, a6
+     26e:	0020c0        	memw
+     271:	806d52        	s32i	a5, a13, 0x200
+     274:	ff8a01        	l32r	a0, 9c <ppTask-0x10>
+     277:	0000c0        	callx0	a0
+     27a:	120c      	movi.n	a2, 1
+     27c:	ff8901        	l32r	a0, a0 <ppTask-0xc>
+     27f:	0000c0        	callx0	a0
+     282:	ff8801        	l32r	a0, a4 <ppTask-0x8>
+     285:	0000c0        	callx0	a0
+     288:	122c22        	l32i	a2, a12, 72
+     28b:	ff9146        	j	d4 <ppTask+0x28>
+     28e:	ff7421        	l32r	a2, 60 <ppTask-0x4c>
+     291:	ff7431        	l32r	a3, 64 <ppTask-0x48>
+     294:	7ba142        	movi	a4, 0x17b
+     297:	ff8401        	l32r	a0, a8 <ppTask-0x4>
+     29a:	0000c0        	callx0	a0
+     29d:	ffff06        	j	29d <ppTask+0x1f1>
+
+000002a0 <ppProcessWaitQ>:
+     2a0:	f0c112        	addi	a1, a1, -16
+     2a3:	0109      	s32i.n	a0, a1, 0
+     2a5:	00db45        	call0	105c <ppEnqueueRxq+0x6ac>
+     2a8:	0108      	l32i.n	a0, a1, 0
+     2aa:	10c112        	addi	a1, a1, 16
+     2ad:	f00d      	ret.n
+	...
+
+000002c0 <ppRecycleRxPkt>:
+     2c0:	f0c112        	addi	a1, a1, -16
+     2c3:	11c9      	s32i.n	a12, a1, 4
+     2c5:	0109      	s32i.n	a0, a1, 0
+     2c7:	02cd      	mov.n	a12, a2
+     2c9:	1228      	l32i.n	a2, a2, 4
+     2cb:	4c38      	l32i.n	a3, a12, 16
+     2cd:	1239      	s32i.n	a3, a2, 4
+     2cf:	8c08      	l32i.n	a0, a12, 32
+     2d1:	001002        	l16ui	a0, a0, 0
+     2d4:	061c42        	l16ui	a4, a12, 12
+     2d7:	b40000        	extui	a0, a0, 0, 12
+     2da:	0ae047        	bbsi	a0, 4, 2e8 <ppRecycleRxPkt+0x28>
+     2dd:	2c38      	l32i.n	a3, a12, 8
+     2df:	fff401        	l32r	a0, 2b0 <ppProcessWaitQ+0x10>
+     2e2:	0000c0        	callx0	a0
+     2e5:	000806        	j	309 <ppRecycleRxPkt+0x49>
+     2e8:	340b      	addi.n	a3, a4, -1
+     2ea:	f43030        	extui	a3, a3, 0, 16
+     2ed:	fff101        	l32r	a0, 2b4 <ppProcessWaitQ+0x14>
+     2f0:	0000c0        	callx0	a0
+     2f3:	023d      	mov.n	a3, a2
+     2f5:	061c42        	l16ui	a4, a12, 12
+     2f8:	050c      	movi.n	a5, 0
+     2fa:	440b      	addi.n	a4, a4, -1
+     2fc:	2259      	s32i.n	a5, a2, 8
+     2fe:	1c28      	l32i.n	a2, a12, 4
+     300:	f44040        	extui	a4, a4, 0, 16
+     303:	ffed01        	l32r	a0, 2b8 <ppProcessWaitQ+0x18>
+     306:	0000c0        	callx0	a0
+     309:	0c2d      	mov.n	a2, a12
+     30b:	730c      	movi.n	a3, 7
+     30d:	ffeb01        	l32r	a0, 2bc <ppProcessWaitQ+0x1c>
+     310:	0000c0        	callx0	a0
+     313:	11c8      	l32i.n	a12, a1, 4
+     315:	0108      	l32i.n	a0, a1, 0
+     317:	10c112        	addi	a1, a1, 16
+     31a:	f00d      	ret.n
+     31c:	000000        	ill
+     31f:	fe0000        	excw
+     322:	ef          	.byte 0xef
+     323:	3f          	.byte 0x3f
+	...
+     32c:	effe00        	excw
+     32f:	3f          	.byte 0x3f
+     330:	000000        	ill
+     333:	fe0000        	excw
+     336:	ef          	.byte 0xef
+     337:	3f          	.byte 0x3f
+	...
+
+0000034c <ppCheckTxIdle>:
+     34c:	f0c112        	addi	a1, a1, -16
+     34f:	fff331        	l32r	a3, 31c <ppRecycleRxPkt+0x5c>
+     352:	11c9      	s32i.n	a12, a1, 4
+     354:	000332        	l8ui	a3, a3, 0
+     357:	0109      	s32i.n	a0, a1, 0
+     359:	83dc      	bnez.n	a3, 375 <ppCheckTxIdle+0x29>
+     35b:	fff701        	l32r	a0, 338 <ppRecycleRxPkt+0x78>
+     35e:	0000c0        	callx0	a0
+     361:	0020c0        	memw
+     364:	ffef01        	l32r	a0, 320 <ppRecycleRxPkt+0x60>
+     367:	802042        	l32i	a4, a0, 0x200
+     36a:	026c      	movi.n	a2, -32
+     36c:	104420        	and	a4, a4, a2
+     36f:	0020c0        	memw
+     372:	806042        	s32i	a4, a0, 0x200
+     375:	0c0c      	movi.n	a12, 0
+     377:	0c2d      	mov.n	a2, a12
+     379:	fff001        	l32r	a0, 33c <ppRecycleRxPkt+0x7c>
+     37c:	0000c0        	callx0	a0
+     37f:	07a216        	beqz	a2, 3fd <ppCheckTxIdle+0xb1>
+     382:	cc1b      	addi.n	a12, a12, 1
+     384:	74c0c0        	extui	a12, a12, 0, 8
+     387:	ec4c66        	bnei	a12, 4, 377 <ppCheckTxIdle+0x2b>
+     38a:	ffe6c1        	l32r	a12, 324 <ppRecycleRxPkt+0x64>
+     38d:	1c08      	l32i.n	a0, a12, 4
+     38f:	0038      	l32i.n	a3, a0, 0
+     391:	602030        	neg	a2, a3
+     394:	102230        	and	a2, a2, a3
+     397:	40f220        	nsau	a2, a2
+     39a:	602020        	neg	a2, a2
+     39d:	1fc222        	addi	a2, a2, 31
+     3a0:	08b296        	bltz	a2, 42f <ppCheckTxIdle+0xe3>
+     3a3:	1142b0        	slli	a4, a2, 5
+     3a6:	404a      	add.n	a4, a0, a4
+     3a8:	6458      	l32i.n	a5, a4, 24
+     3aa:	04f556        	bnez	a5, 3fd <ppCheckTxIdle+0xb1>
+     3ad:	b458      	l32i.n	a5, a4, 44
+     3af:	240442        	l8ui	a4, a4, 36
+     3b2:	047556        	bnez	a5, 3fd <ppCheckTxIdle+0xb1>
+     3b5:	349c      	beqz.n	a4, 3cc <ppCheckTxIdle+0x80>
+     3b7:	113426        	beqi	a4, 3, 3cc <ppCheckTxIdle+0x80>
+     3ba:	0934b6        	bltui	a4, 3, 3c7 <ppCheckTxIdle+0x7b>
+     3bd:	150c      	movi.n	a5, 1
+     3bf:	0b64b6        	bltui	a4, 6, 3ce <ppCheckTxIdle+0x82>
+     3c2:	050c      	movi.n	a5, 0
+     3c4:	000186        	j	3ce <ppCheckTxIdle+0x82>
+     3c7:	350c      	movi.n	a5, 3
+     3c9:	000046        	j	3ce <ppCheckTxIdle+0x82>
+     3cc:	250c      	movi.n	a5, 2
+     3ce:	170c      	movi.n	a7, 1
+     3d0:	749050        	extui	a9, a5, 0, 8
+     3d3:	74a020        	extui	a10, a2, 0, 8
+     3d6:	401a00        	ssl	a10
+     3d9:	a09900        	addx4	a9, a9, a0
+     3dc:	1988      	l32i.n	a8, a9, 4
+     3de:	fa7c      	movi.n	a10, -1
+     3e0:	a17700        	sll	a7, a7
+     3e3:	3077a0        	xor	a7, a7, a10
+     3e6:	108870        	and	a8, a8, a7
+     3e9:	1989      	s32i.n	a8, a9, 4
+     3eb:	0068      	l32i.n	a6, a0, 0
+     3ed:	820c      	movi.n	a2, 8
+     3ef:	106670        	and	a6, a6, a7
+     3f2:	0069      	s32i.n	a6, a0, 0
+     3f4:	ffd301        	l32r	a0, 340 <ppRecycleRxPkt+0x80>
+     3f7:	0000c0        	callx0	a0
+     3fa:	ffe3c6        	j	38d <ppCheckTxIdle+0x41>
+     3fd:	ffcab1        	l32r	a11, 328 <ppRecycleRxPkt+0x68>
+     400:	000bb2        	l8ui	a11, a11, 0
+     403:	dbdc      	bnez.n	a11, 424 <ppCheckTxIdle+0xd8>
+     405:	0020c0        	memw
+     408:	ffc901        	l32r	a0, 32c <ppRecycleRxPkt+0x6c>
+     40b:	8020c2        	l32i	a12, a0, 0x200
+     40e:	026c      	movi.n	a2, -32
+     410:	10cc20        	and	a12, a12, a2
+     413:	120c      	movi.n	a2, 1
+     415:	20cc20        	or	a12, a12, a2
+     418:	0020c0        	memw
+     41b:	8060c2        	s32i	a12, a0, 0x200
+     41e:	ffc901        	l32r	a0, 344 <ppRecycleRxPkt+0x84>
+     421:	0000c0        	callx0	a0
+     424:	120c      	movi.n	a2, 1
+     426:	11c8      	l32i.n	a12, a1, 4
+     428:	0108      	l32i.n	a0, a1, 0
+     42a:	10c112        	addi	a1, a1, 16
+     42d:	f00d      	ret.n
+     42f:	6038      	l32i.n	a3, a0, 24
+     431:	fc8356        	bnez	a3, 3fd <ppCheckTxIdle+0xb1>
+     434:	e048      	l32i.n	a4, a0, 56
+     436:	fc3456        	bnez	a4, 3fd <ppCheckTxIdle+0xb1>
+     439:	462052        	l32i	a5, a0, 0x118
+     43c:	fbd556        	bnez	a5, 3fd <ppCheckTxIdle+0xb1>
+     43f:	482062        	l32i	a6, a0, 0x120
+     442:	fb7656        	bnez	a6, 3fd <ppCheckTxIdle+0xb1>
+     445:	ffba71        	l32r	a7, 330 <ppRecycleRxPkt+0x70>
+     448:	000772        	l8ui	a7, a7, 0
+     44b:	d7dc      	bnez.n	a7, 46c <ppCheckTxIdle+0x120>
+     44d:	0020c0        	memw
+     450:	ffb991        	l32r	a9, 334 <ppRecycleRxPkt+0x74>
+     453:	802982        	l32i	a8, a9, 0x200
+     456:	0a6c      	movi.n	a10, -32
+     458:	1088a0        	and	a8, a8, a10
+     45b:	1a0c      	movi.n	a10, 1
+     45d:	2088a0        	or	a8, a8, a10
+     460:	0020c0        	memw
+     463:	806982        	s32i	a8, a9, 0x200
+     466:	ffb801        	l32r	a0, 348 <ppRecycleRxPkt+0x88>
+     469:	0000c0        	callx0	a0
+     46c:	020c      	movi.n	a2, 0
+     46e:	ffed06        	j	426 <ppCheckTxIdle+0xda>
+	...
+     479:	000000        	ill
+     47c:	000240        	excw
+     47f:	024000        	excw
+     482:	400000        	ssr	a0
+     485:	000002        	l8ui	a0, a0, 0
+     488:	ff          	.byte 0xff
+     489:	ff          	.byte 0xff
+     48a:	ff          	.byte 0xff
+     48b:	0fff00        	excw
+     48e:	00ff00        	excw
+	...
+     4a9:	000000        	ill
+     4ac:	090c      	movi.n	a9, 0
+     4ae:	e0c112        	addi	a1, a1, -32
+     4b1:	21c9      	s32i.n	a12, a1, 8
+     4b3:	31d9      	s32i.n	a13, a1, 12
+     4b5:	1109      	s32i.n	a0, a1, 4
+     4b7:	41e9      	s32i.n	a14, a1, 16
+     4b9:	51f9      	s32i.n	a15, a1, 20
+     4bb:	6199      	s32i.n	a9, a1, 24
+     4bd:	ff7c      	movi.n	a15, -1
+     4bf:	1e0c      	movi.n	a14, 1
+     4c1:	004705        	call0	934 <ppEnqueueTxDone+0x50>
+     4c4:	14b216        	beqz	a2, 613 <ppCheckTxIdle+0x2c7>
+     4c7:	b8a052        	movi	a5, 184
+     4ca:	82d8      	l32i.n	a13, a2, 32
+     4cc:	ffea01        	l32r	a0, 474 <ppCheckTxIdle+0x128>
+     4cf:	0e0dd2        	l8ui	a13, a13, 14
+     4d2:	0129      	s32i.n	a2, a1, 0
+     4d4:	60c0d0        	neg	a12, a13
+     4d7:	10ccd0        	and	a12, a12, a13
+     4da:	40fcc0        	nsau	a12, a12
+     4dd:	60c0c0        	neg	a12, a12
+     4e0:	1fccc2        	addi	a12, a12, 31
+     4e3:	02fc96        	bltz	a12, 516 <ppCheckTxIdle+0x1ca>
+     4e6:	1068      	l32i.n	a6, a0, 4
+     4e8:	365a      	add.n	a3, a6, a5
+     4ea:	800332        	l8ui	a3, a3, 128
+     4ed:	400c00        	ssr	a12
+     4f0:	913030        	srl	a3, a3
+     4f3:	106307        	bbci	a3, 0, 507 <ppCheckTxIdle+0x1bb>
+     4f6:	a00c60        	addx4	a0, a12, a6
+     4f9:	4f2002        	l32i	a0, a0, 0x13c
+     4fc:	0128      	l32i.n	a2, a1, 0
+     4fe:	0000c0        	callx0	a0
+     501:	ffdd01        	l32r	a0, 478 <ppCheckTxIdle+0x12c>
+     504:	b8a052        	movi	a5, 184
+     507:	401c00        	ssl	a12
+     50a:	a13e00        	sll	a3, a14
+     50d:	3033f0        	xor	a3, a3, a15
+     510:	10dd30        	and	a13, a13, a3
+     513:	ffef46        	j	4d4 <ppCheckTxIdle+0x188>
+     516:	0158      	l32i.n	a5, a1, 0
+     518:	8558      	l32i.n	a5, a5, 32
+     51a:	0548      	l32i.n	a4, a5, 0
+     51c:	040562        	l8ui	a6, a5, 4
+     51f:	410640        	srli	a0, a4, 6
+     522:	34f4c7        	bbsi	a4, 28, 55a <ppCheckTxIdle+0x20e>
+     525:	ffd551        	l32r	a5, 47c <ppCheckTxIdle+0x130>
+     528:	ffd731        	l32r	a3, 484 <ppCheckTxIdle+0x138>
+     52b:	000552        	l8ui	a5, a5, 0
+     52e:	416460        	srli	a6, a6, 4
+     531:	556a      	add.n	a5, a5, a6
+     533:	745050        	extui	a5, a5, 0, 8
+     536:	1d55b6        	bltui	a5, 5, 557 <ppCheckTxIdle+0x20b>
+     539:	120c      	movi.n	a2, 1
+     53b:	030c      	movi.n	a3, 0
+     53d:	ffd071        	l32r	a7, 480 <ppCheckTxIdle+0x134>
+     540:	060c      	movi.n	a6, 0
+     542:	004762        	s8i	a6, a7, 0
+     545:	ffd501        	l32r	a0, 49c <ppCheckTxIdle+0x150>
+     548:	0000c0        	callx0	a0
+     54b:	0108      	l32i.n	a0, a1, 0
+     54d:	8008      	l32i.n	a0, a0, 32
+     54f:	0008      	l32i.n	a0, a0, 0
+     551:	410600        	srli	a0, a0, 6
+     554:	000086        	j	55a <ppCheckTxIdle+0x20e>
+     557:	004352        	s8i	a5, a3, 0
+     55a:	1960d7        	bbci	a0, 13, 577 <ppCheckTxIdle+0x22b>
+     55d:	0128      	l32i.n	a2, a1, 0
+     55f:	0228      	l32i.n	a2, a2, 0
+     561:	ffcf01        	l32r	a0, 4a0 <ppCheckTxIdle+0x154>
+     564:	0000c0        	callx0	a0
+     567:	0108      	l32i.n	a0, a1, 0
+     569:	8008      	l32i.n	a0, a0, 32
+     56b:	130c      	movi.n	a3, 1
+     56d:	0008      	l32i.n	a0, a0, 0
+     56f:	6139      	s32i.n	a3, a1, 24
+     571:	410600        	srli	a0, a0, 6
+     574:	000486        	j	58a <ppCheckTxIdle+0x23e>
+     577:	02e0e7        	bbsi	a0, 14, 57d <ppCheckTxIdle+0x231>
+     57a:	002206        	j	606 <ppCheckTxIdle+0x2ba>
+     57d:	430c      	movi.n	a3, 4
+     57f:	6139      	s32i.n	a3, a1, 24
+     581:	000146        	j	58a <ppCheckTxIdle+0x23e>
+     584:	054500        	extui	a4, a0, 21, 1
+     587:	f36456        	bnez	a4, 4c1 <ppCheckTxIdle+0x175>
+     58a:	6b7077        	bbci	a0, 23, 5f9 <ppCheckTxIdle+0x2ad>
+     58d:	0178      	l32i.n	a7, a1, 0
+     58f:	0b1782        	l16ui	a8, a7, 22
+     592:	fcc882        	addi	a8, a8, -4
+     595:	0b5782        	s16i	a8, a7, 22
+     598:	2778      	l32i.n	a7, a7, 8
+     59a:	0020c0        	memw
+     59d:	011782        	l16ui	a8, a7, 2
+     5a0:	118800        	slli	a8, a8, 16
+     5a3:	0020c0        	memw
+     5a6:	001792        	l16ui	a9, a7, 0
+     5a9:	208890        	or	a8, a8, a9
+     5ac:	ffb791        	l32r	a9, 488 <ppCheckTxIdle+0x13c>
+     5af:	108890        	and	a8, a8, a9
+     5b2:	418c80        	srli	a8, a8, 12
+     5b5:	fcc882        	addi	a8, a8, -4
+     5b8:	b48080        	extui	a8, a8, 0, 12
+     5bb:	118840        	slli	a8, a8, 12
+     5be:	0020c0        	memw
+     5c1:	011762        	l16ui	a6, a7, 2
+     5c4:	116600        	slli	a6, a6, 16
+     5c7:	0020c0        	memw
+     5ca:	001792        	l16ui	a9, a7, 0
+     5cd:	206690        	or	a6, a6, a9
+     5d0:	ffaf91        	l32r	a9, 48c <ppCheckTxIdle+0x140>
+     5d3:	106690        	and	a6, a6, a9
+     5d6:	206680        	or	a6, a6, a8
+     5d9:	0020c0        	memw
+     5dc:	005762        	s16i	a6, a7, 0
+     5df:	f56060        	extui	a6, a6, 16, 16
+     5e2:	0020c0        	memw
+     5e5:	ffaa51        	l32r	a5, 490 <ppCheckTxIdle+0x144>
+     5e8:	015762        	s16i	a6, a7, 2
+     5eb:	000552        	l8ui	a5, a5, 0
+     5ee:	ecf516        	beqz	a5, 4c1 <ppCheckTxIdle+0x175>
+     5f1:	ffa8a1        	l32r	a10, 494 <ppCheckTxIdle+0x148>
+     5f4:	090c      	movi.n	a9, 0
+     5f6:	004a92        	s8i	a9, a10, 0
+     5f9:	0128      	l32i.n	a2, a1, 0
+     5fb:	6138      	l32i.n	a3, a1, 24
+     5fd:	ffa901        	l32r	a0, 4a4 <ppCheckTxIdle+0x158>
+     600:	0000c0        	callx0	a0
+     603:	ffae86        	j	4c1 <ppCheckTxIdle+0x175>
+     606:	02e0f7        	bbsi	a0, 15, 60c <ppCheckTxIdle+0x2c0>
+     609:	ffddc6        	j	584 <ppCheckTxIdle+0x238>
+     60c:	5b0c      	movi.n	a11, 5
+     60e:	61b9      	s32i.n	a11, a1, 24
+     610:	ffdd86        	j	58a <ppCheckTxIdle+0x23e>
+     613:	120c      	movi.n	a2, 1
+     615:	000005        	call0	618 <ppCheckTxIdle+0x2cc>
+     618:	ffa001        	l32r	a0, 498 <ppCheckTxIdle+0x14c>
+     61b:	70c8      	l32i.n	a12, a0, 28
+     61d:	096ce7        	bbci	a12, 14, 62a <ppCheckTxIdle+0x2de>
+     620:	1028      	l32i.n	a2, a0, 4
+     622:	224b      	addi.n	a2, a2, 4
+     624:	ffa101        	l32r	a0, 4a8 <ppCheckTxIdle+0x15c>
+     627:	0000c0        	callx0	a0
+     62a:	21c8      	l32i.n	a12, a1, 8
+     62c:	31d8      	l32i.n	a13, a1, 12
+     62e:	41e8      	l32i.n	a14, a1, 16
+     630:	51f8      	l32i.n	a15, a1, 20
+     632:	1108      	l32i.n	a0, a1, 4
+     634:	20c112        	addi	a1, a1, 32
+     637:	f00d      	ret.n
+	...
+     641:	fe          	.byte 0xfe
+     642:	ef          	.byte 0xef
+     643:	3f          	.byte 0x3f
+	...
+     660:	000b14        	excw
+	...
+
+00000670 <ppProcessTxQ>:
+     670:	f0c112        	addi	a1, a1, -16
+     673:	31d9      	s32i.n	a13, a1, 12
+     675:	21c9      	s32i.n	a12, a1, 8
+     677:	1109      	s32i.n	a0, a1, 4
+     679:	fff001        	l32r	a0, 63c <ppCheckTxIdle+0x2f0>
+     67c:	02cd      	mov.n	a12, a2
+     67e:	000002        	l8ui	a0, a0, 0
+     681:	ffefd1        	l32r	a13, 640 <ppCheckTxIdle+0x2f4>
+     684:	50dc      	bnez.n	a0, 69d <ppProcessTxQ+0x2d>
+     686:	fff301        	l32r	a0, 654 <ppCheckTxIdle+0x308>
+     689:	0000c0        	callx0	a0
+     68c:	0020c0        	memw
+     68f:	802d32        	l32i	a3, a13, 0x200
+     692:	046c      	movi.n	a4, -32
+     694:	103340        	and	a3, a3, a4
+     697:	0020c0        	memw
+     69a:	806d32        	s32i	a3, a13, 0x200
+     69d:	0c2d      	mov.n	a2, a12
+     69f:	ffee01        	l32r	a0, 658 <ppCheckTxIdle+0x30c>
+     6a2:	0000c0        	callx0	a0
+     6a5:	100c      	movi.n	a0, 1
+     6a7:	52ec      	bnez.n	a2, 6d0 <ppProcessTxQ+0x60>
+     6a9:	ffe651        	l32r	a5, 644 <ppCheckTxIdle+0x2f8>
+     6ac:	000552        	l8ui	a5, a5, 0
+     6af:	85dc      	bnez.n	a5, 6cb <ppProcessTxQ+0x5b>
+     6b1:	0020c0        	memw
+     6b4:	802d62        	l32i	a6, a13, 0x200
+     6b7:	076c      	movi.n	a7, -32
+     6b9:	106670        	and	a6, a6, a7
+     6bc:	206600        	or	a6, a6, a0
+     6bf:	0020c0        	memw
+     6c2:	806d62        	s32i	a6, a13, 0x200
+     6c5:	ffe501        	l32r	a0, 65c <ppCheckTxIdle+0x310>
+     6c8:	0000c0        	callx0	a0
+     6cb:	f27c      	movi.n	a2, -1
+     6cd:	002006        	j	751 <ppProcessTxQ+0xe1>
+     6d0:	0c2d      	mov.n	a2, a12
+     6d2:	ffe301        	l32r	a0, 660 <ppCheckTxIdle+0x314>
+     6d5:	0000c0        	callx0	a0
+     6d8:	72ec      	bnez.n	a2, 703 <ppProcessTxQ+0x93>
+     6da:	ffdb81        	l32r	a8, 648 <ppCheckTxIdle+0x2fc>
+     6dd:	000882        	l8ui	a8, a8, 0
+     6e0:	a8dc      	bnez.n	a8, 6fe <ppProcessTxQ+0x8e>
+     6e2:	0020c0        	memw
+     6e5:	802d92        	l32i	a9, a13, 0x200
+     6e8:	0a6c      	movi.n	a10, -32
+     6ea:	1099a0        	and	a9, a9, a10
+     6ed:	1a0c      	movi.n	a10, 1
+     6ef:	2099a0        	or	a9, a9, a10
+     6f2:	0020c0        	memw
+     6f5:	806d92        	s32i	a9, a13, 0x200
+     6f8:	ffdb01        	l32r	a0, 664 <ppCheckTxIdle+0x318>
+     6fb:	0000c0        	callx0	a0
+     6fe:	e27c      	movi.n	a2, -2
+     700:	001346        	j	751 <ppProcessTxQ+0xe1>
+     703:	82b8      	l32i.n	a11, a2, 32
+     705:	0129      	s32i.n	a2, a1, 0
+     707:	0bb8      	l32i.n	a11, a11, 0
+     709:	ffd021        	l32r	a2, 64c <ppCheckTxIdle+0x300>
+     70c:	117bd7        	bbci	a11, 29, 721 <ppProcessTxQ+0xb1>
+     70f:	1228      	l32i.n	a2, a2, 4
+     711:	562202        	l32i	a0, a2, 0x158
+     714:	572232        	l32i	a3, a2, 0x15c
+     717:	001b      	addi.n	a0, a0, 1
+     719:	330b      	addi.n	a3, a3, -1
+     71b:	576232        	s32i	a3, a2, 0x15c
+     71e:	566202        	s32i	a0, a2, 0x158
+     721:	ffcb31        	l32r	a3, 650 <ppCheckTxIdle+0x304>
+     724:	000332        	l8ui	a3, a3, 0
+     727:	a3dc      	bnez.n	a3, 745 <ppProcessTxQ+0xd5>
+     729:	0020c0        	memw
+     72c:	802d42        	l32i	a4, a13, 0x200
+     72f:	056c      	movi.n	a5, -32
+     731:	104450        	and	a4, a4, a5
+     734:	150c      	movi.n	a5, 1
+     736:	204450        	or	a4, a4, a5
+     739:	0020c0        	memw
+     73c:	806d42        	s32i	a4, a13, 0x200
+     73f:	ffca01        	l32r	a0, 668 <ppCheckTxIdle+0x31c>
+     742:	0000c0        	callx0	a0
+     745:	0c3d      	mov.n	a3, a12
+     747:	0128      	l32i.n	a2, a1, 0
+     749:	ffc801        	l32r	a0, 66c <ppCheckTxIdle+0x320>
+     74c:	0000c0        	callx0	a0
+     74f:	020c      	movi.n	a2, 0
+     751:	21c8      	l32i.n	a12, a1, 8
+     753:	31d8      	l32i.n	a13, a1, 12
+     755:	1108      	l32i.n	a0, a1, 4
+     757:	10c112        	addi	a1, a1, 16
+     75a:	f00d      	ret.n
+	...
+     764:	effe00        	excw
+     767:	3f          	.byte 0x3f
+	...
+     770:	effe00        	excw
+     773:	3f          	.byte 0x3f
+	...
+
+0000077c <ppGetTxQFirstAvail_Locked>:
+     77c:	f0c112        	addi	a1, a1, -16
+     77f:	1109      	s32i.n	a0, a1, 4
+     781:	6c82f6        	bgeui	a2, 8, 7f1 <ppGetTxQFirstAvail_Locked+0x75>
+     784:	fff671        	l32r	a7, 75c <ppProcessTxQ+0xec>
+     787:	1708      	l32i.n	a0, a7, 4
+     789:	1152b0        	slli	a5, a2, 5
+     78c:	005a      	add.n	a0, a0, a5
+     78e:	270032        	l8ui	a3, a0, 39
+     791:	05c356        	bnez	a3, 7f1 <ppGetTxQFirstAvail_Locked+0x75>
+     794:	fff321        	l32r	a2, 760 <ppProcessTxQ+0xf0>
+     797:	000222        	l8ui	a2, a2, 0
+     79a:	0159      	s32i.n	a5, a1, 0
+     79c:	72ec      	bnez.n	a2, 7c7 <ppGetTxQFirstAvail_Locked+0x4b>
+     79e:	fff501        	l32r	a0, 774 <ppProcessTxQ+0x104>
+     7a1:	0000c0        	callx0	a0
+     7a4:	0020c0        	memw
+     7a7:	ffef41        	l32r	a4, 764 <ppProcessTxQ+0xf4>
+     7aa:	802422        	l32i	a2, a4, 0x200
+     7ad:	066c      	movi.n	a6, -32
+     7af:	102260        	and	a2, a2, a6
+     7b2:	0020c0        	memw
+     7b5:	0138      	l32i.n	a3, a1, 0
+     7b7:	806422        	s32i	a2, a4, 0x200
+     7ba:	ffeb01        	l32r	a0, 768 <ppProcessTxQ+0xf8>
+     7bd:	ffeb21        	l32r	a2, 76c <ppProcessTxQ+0xfc>
+     7c0:	1008      	l32i.n	a0, a0, 4
+     7c2:	000222        	l8ui	a2, a2, 0
+     7c5:	003a      	add.n	a0, a0, a3
+     7c7:	6008      	l32i.n	a0, a0, 24
+     7c9:	2109      	s32i.n	a0, a1, 8
+     7cb:	42ec      	bnez.n	a2, 7f3 <ppGetTxQFirstAvail_Locked+0x77>
+     7cd:	150c      	movi.n	a5, 1
+     7cf:	0020c0        	memw
+     7d2:	ffe741        	l32r	a4, 770 <ppProcessTxQ+0x100>
+     7d5:	802432        	l32i	a3, a4, 0x200
+     7d8:	066c      	movi.n	a6, -32
+     7da:	103360        	and	a3, a3, a6
+     7dd:	203350        	or	a3, a3, a5
+     7e0:	0020c0        	memw
+     7e3:	806432        	s32i	a3, a4, 0x200
+     7e6:	ffe401        	l32r	a0, 778 <ppProcessTxQ+0x108>
+     7e9:	0000c0        	callx0	a0
+     7ec:	2108      	l32i.n	a0, a1, 8
+     7ee:	000046        	j	7f3 <ppGetTxQFirstAvail_Locked+0x77>
+     7f1:	000c      	movi.n	a0, 0
+     7f3:	708c      	beqz.n	a0, 7fe <ppGetTxQFirstAvail_Locked+0x82>
+     7f5:	8078      	l32i.n	a7, a0, 32
+     7f7:	0778      	l32i.n	a7, a7, 0
+     7f9:	017787        	bbci	a7, 24, 7fe <ppGetTxQFirstAvail_Locked+0x82>
+     7fc:	000c      	movi.n	a0, 0
+     7fe:	002d      	mov.n	a2, a0
+     800:	1108      	l32i.n	a0, a1, 4
+     802:	10c112        	addi	a1, a1, 16
+     805:	f00d      	ret.n
+     807:	000000        	ill
+	...
+
+0000080c <ppFetchTxQFirstAvail>:
+     80c:	2b82f6        	bgeui	a2, 8, 83b <ppFetchTxQFirstAvail+0x2f>
+     80f:	fffe41        	l32r	a4, 808 <ppGetTxQFirstAvail_Locked+0x8c>
+     812:	1448      	l32i.n	a4, a4, 4
+     814:	1152b0        	slli	a5, a2, 5
+     817:	445a      	add.n	a4, a4, a5
+     819:	270432        	l8ui	a3, a4, 39
+     81c:	6428      	l32i.n	a2, a4, 24
+     81e:	93dc      	bnez.n	a3, 83b <ppFetchTxQFirstAvail+0x2f>
+     820:	929c      	beqz.n	a2, 83d <ppFetchTxQFirstAvail+0x31>
+     822:	8258      	l32i.n	a5, a2, 32
+     824:	0558      	l32i.n	a5, a5, 0
+     826:	7268      	l32i.n	a6, a2, 28
+     828:	11f587        	bbsi	a5, 24, 83d <ppFetchTxQFirstAvail+0x31>
+     82b:	6469      	s32i.n	a6, a4, 24
+     82d:	080c      	movi.n	a8, 0
+     82f:	36cc      	bnez.n	a6, 836 <ppFetchTxQFirstAvail+0x2a>
+     831:	18c472        	addi	a7, a4, 24
+     834:	7479      	s32i.n	a7, a4, 28
+     836:	7289      	s32i.n	a8, a2, 28
+     838:	000046        	j	83d <ppFetchTxQFirstAvail+0x31>
+     83b:	020c      	movi.n	a2, 0
+     83d:	728c      	beqz.n	a2, 848 <ppFetchTxQFirstAvail+0x3c>
+     83f:	8298      	l32i.n	a9, a2, 32
+     841:	0998      	l32i.n	a9, a9, 0
+     843:	017987        	bbci	a9, 24, 848 <ppFetchTxQFirstAvail+0x3c>
+     846:	020c      	movi.n	a2, 0
+     848:	f00d      	ret.n
+     84a:	000000        	ill
+     84d:	000000        	ill
+
+00000850 <ppDequeueTxQ>:
+     850:	1e82f6        	bgeui	a2, 8, 872 <ppDequeueTxQ+0x22>
+     853:	fffe41        	l32r	a4, 84c <ppFetchTxQFirstAvail+0x40>
+     856:	1448      	l32i.n	a4, a4, 4
+     858:	1152b0        	slli	a5, a2, 5
+     85b:	445a      	add.n	a4, a4, a5
+     85d:	6428      	l32i.n	a2, a4, 24
+     85f:	129c      	beqz.n	a2, 874 <ppDequeueTxQ+0x24>
+     861:	070c      	movi.n	a7, 0
+     863:	7258      	l32i.n	a5, a2, 28
+     865:	6459      	s32i.n	a5, a4, 24
+     867:	35cc      	bnez.n	a5, 86e <ppDequeueTxQ+0x1e>
+     869:	18c462        	addi	a6, a4, 24
+     86c:	7469      	s32i.n	a6, a4, 28
+     86e:	7279      	s32i.n	a7, a2, 28
+     870:	f00d      	ret.n
+     872:	020c      	movi.n	a2, 0
+     874:	f00d      	ret.n
+     876:	000000        	ill
+     879:	000000        	ill
+
+0000087c <ppRollBackTxQ>:
+     87c:	8248      	l32i.n	a4, a2, 32
+     87e:	fffe61        	l32r	a6, 878 <ppDequeueTxQ+0x28>
+     881:	000442        	l8ui	a4, a4, 0
+     884:	1668      	l32i.n	a6, a6, 4
+     886:	344240        	extui	a4, a4, 2, 4
+     889:	1184f6        	bgeui	a4, 8, 89e <ppRollBackTxQ+0x22>
+     88c:	1144b0        	slli	a4, a4, 5
+     88f:	464a      	add.n	a4, a6, a4
+     891:	6458      	l32i.n	a5, a4, 24
+     893:	7259      	s32i.n	a5, a2, 28
+     895:	35cc      	bnez.n	a5, 89c <ppRollBackTxQ+0x20>
+     897:	1cc272        	addi	a7, a2, 28
+     89a:	7479      	s32i.n	a7, a4, 28
+     89c:	6429      	s32i.n	a2, a4, 24
+     89e:	f00d      	ret.n
+     8a0:	000000        	ill
+	...
+
+000008a4 <ppRecordBarRRC>:
+     8a4:	ffff41        	l32r	a4, 8a0 <ppRollBackTxQ+0x24>
+     8a7:	1448      	l32i.n	a4, a4, 4
+     8a9:	1152b0        	slli	a5, a2, 5
+     8ac:	445a      	add.n	a4, a4, a5
+     8ae:	204432        	s8i	a3, a4, 32
+     8b1:	f00d      	ret.n
+     8b3:	000000        	ill
+	...
+
+000008b8 <ppTxqUpdateBitmap>:
+     8b8:	ffff81        	l32r	a8, 8b4 <ppRecordBarRRC+0x10>
+     8bb:	1888      	l32i.n	a8, a8, 4
+     8bd:	1192b0        	slli	a9, a2, 5
+     8c0:	889a      	add.n	a8, a8, a9
+     8c2:	115832        	s16i	a3, a8, 34
+     8c5:	c859      	s32i.n	a5, a8, 48
+     8c7:	200872        	l8ui	a7, a8, 32
+     8ca:	d849      	s32i.n	a4, a8, 52
+     8cc:	776a      	add.n	a7, a7, a6
+     8ce:	204872        	s8i	a7, a8, 32
+     8d1:	f00d      	ret.n
+     8d3:	000000        	ill
+     8d6:	080000        	excw
+	...
+
+000008e4 <ppEnqueueTxDone>:
+     8e4:	f0c112        	addi	a1, a1, -16
+     8e7:	0109      	s32i.n	a0, a1, 0
+     8e9:	02dc      	bnez.n	a2, 8fd <ppEnqueueTxDone+0x19>
+     8eb:	fffa21        	l32r	a2, 8d4 <ppTxqUpdateBitmap+0x1c>
+     8ee:	fffa31        	l32r	a3, 8d8 <ppTxqUpdateBitmap+0x20>
+     8f1:	31a742        	movi	a4, 0x731
+     8f4:	fffb01        	l32r	a0, 8e0 <ppTxqUpdateBitmap+0x28>
+     8f7:	0000c0        	callx0	a0
+     8fa:	ffff06        	j	8fa <ppEnqueueTxDone+0x16>
+     8fd:	fff731        	l32r	a3, 8dc <ppTxqUpdateBitmap+0x24>
+     900:	1cc202        	addi	a0, a2, 28
+     903:	1338      	l32i.n	a3, a3, 4
+     905:	050c      	movi.n	a5, 0
+     907:	4b2342        	l32i	a4, a3, 0x12c
+     90a:	7259      	s32i.n	a5, a2, 28
+     90c:	0429      	s32i.n	a2, a4, 0
+     90e:	4b6302        	s32i	a0, a3, 0x12c
+     911:	0108      	l32i.n	a0, a1, 0
+     913:	10c112        	addi	a1, a1, 16
+     916:	f00d      	ret.n
+	...
+     920:	effe00        	excw
+     923:	3f          	.byte 0x3f
+     924:	000000        	ill
+     927:	fe0000        	excw
+     92a:	ef          	.byte 0xef
+     92b:	3f          	.byte 0x3f
+	...
+     934:	f0c112        	addi	a1, a1, -16
+     937:	fff851        	l32r	a5, 918 <ppEnqueueTxDone+0x34>
+     93a:	0109      	s32i.n	a0, a1, 0
+     93c:	000502        	l8ui	a0, a5, 0
+     93f:	b0dc      	bnez.n	a0, 95e <ppEnqueueTxDone+0x7a>
+     941:	fffa01        	l32r	a0, 92c <ppEnqueueTxDone+0x48>
+     944:	0000c0        	callx0	a0
+     947:	fff551        	l32r	a5, 91c <ppEnqueueTxDone+0x38>
+     94a:	0020c0        	memw
+     94d:	fff441        	l32r	a4, 920 <ppEnqueueTxDone+0x3c>
+     950:	802422        	l32i	a2, a4, 0x200
+     953:	066c      	movi.n	a6, -32
+     955:	102260        	and	a2, a2, a6
+     958:	0020c0        	memw
+     95b:	806422        	s32i	a2, a4, 0x200
+     95e:	fff121        	l32r	a2, 924 <ppEnqueueTxDone+0x40>
+     961:	1228      	l32i.n	a2, a2, 4
+     963:	4a2202        	l32i	a0, a2, 0x128
+     966:	1109      	s32i.n	a0, a1, 4
+     968:	109c      	beqz.n	a0, 97d <ppEnqueueTxDone+0x99>
+     96a:	080c      	movi.n	a8, 0
+     96c:	7038      	l32i.n	a3, a0, 28
+     96e:	4a6232        	s32i	a3, a2, 0x128
+     971:	63cc      	bnez.n	a3, 97b <ppEnqueueTxDone+0x97>
+     973:	28a172        	movi	a7, 0x128
+     976:	727a      	add.n	a7, a2, a7
+     978:	4b6272        	s32i	a7, a2, 0x12c
+     97b:	7089      	s32i.n	a8, a0, 28
+     97d:	000592        	l8ui	a9, a5, 0
+     980:	f9dc      	bnez.n	a9, 9a3 <ppEnqueueTxDone+0xbf>
+     982:	100c      	movi.n	a0, 1
+     984:	0020c0        	memw
+     987:	ffe8b1        	l32r	a11, 928 <ppEnqueueTxDone+0x44>
+     98a:	802ba2        	l32i	a10, a11, 0x200
+     98d:	026c      	movi.n	a2, -32
+     98f:	10aa20        	and	a10, a10, a2
+     992:	20aa00        	or	a10, a10, a0
+     995:	0020c0        	memw
+     998:	806ba2        	s32i	a10, a11, 0x200
+     99b:	ffe501        	l32r	a0, 930 <ppEnqueueTxDone+0x4c>
+     99e:	0000c0        	callx0	a0
+     9a1:	1108      	l32i.n	a0, a1, 4
+     9a3:	002d      	mov.n	a2, a0
+     9a5:	0108      	l32i.n	a0, a1, 0
+     9a7:	10c112        	addi	a1, a1, 16
+     9aa:	f00d      	ret.n
+     9ac:	000000        	ill
+	...
+
+000009b0 <ppEnqueueRxq>:
+     9b0:	ffff41        	l32r	a4, 9ac <ppEnqueueTxDone+0xc8>
+     9b3:	1cc232        	addi	a3, a2, 28
+     9b6:	1448      	l32i.n	a4, a4, 4
+     9b8:	060c      	movi.n	a6, 0
+     9ba:	4d2452        	l32i	a5, a4, 0x134
+     9bd:	7269      	s32i.n	a6, a2, 28
+     9bf:	0529      	s32i.n	a2, a5, 0
+     9c1:	4d6432        	s32i	a3, a4, 0x134
+     9c4:	f00d      	ret.n
+	...
+     9ce:	000000        	ill
+     9d1:	fe          	.byte 0xfe
+     9d2:	ef          	.byte 0xef
+     9d3:	3f          	.byte 0x3f
+     9d4:	000000        	ill
+     9d7:	fe0000        	excw
+     9da:	ef          	.byte 0xef
+     9db:	3f          	.byte 0x3f
+	...
+     9e4:	f0c112        	addi	a1, a1, -16
+     9e7:	fff851        	l32r	a5, 9c8 <ppEnqueueRxq+0x18>
+     9ea:	0109      	s32i.n	a0, a1, 0
+     9ec:	000502        	l8ui	a0, a5, 0
+     9ef:	b0dc      	bnez.n	a0, a0e <ppEnqueueRxq+0x5e>
+     9f1:	fffa01        	l32r	a0, 9dc <ppEnqueueRxq+0x2c>
+     9f4:	0000c0        	callx0	a0
+     9f7:	fff551        	l32r	a5, 9cc <ppEnqueueRxq+0x1c>
+     9fa:	0020c0        	memw
+     9fd:	fff441        	l32r	a4, 9d0 <ppEnqueueRxq+0x20>
+     a00:	802422        	l32i	a2, a4, 0x200
+     a03:	066c      	movi.n	a6, -32
+     a05:	102260        	and	a2, a2, a6
+     a08:	0020c0        	memw
+     a0b:	806422        	s32i	a2, a4, 0x200
+     a0e:	fff121        	l32r	a2, 9d4 <ppEnqueueRxq+0x24>
+     a11:	1228      	l32i.n	a2, a2, 4
+     a13:	4c2202        	l32i	a0, a2, 0x130
+     a16:	1109      	s32i.n	a0, a1, 4
+     a18:	109c      	beqz.n	a0, a2d <ppEnqueueRxq+0x7d>
+     a1a:	080c      	movi.n	a8, 0
+     a1c:	7038      	l32i.n	a3, a0, 28
+     a1e:	4c6232        	s32i	a3, a2, 0x130
+     a21:	63cc      	bnez.n	a3, a2b <ppEnqueueRxq+0x7b>
+     a23:	30a172        	movi	a7, 0x130
+     a26:	727a      	add.n	a7, a2, a7
+     a28:	4d6272        	s32i	a7, a2, 0x134
+     a2b:	7089      	s32i.n	a8, a0, 28
+     a2d:	000592        	l8ui	a9, a5, 0
+     a30:	f9dc      	bnez.n	a9, a53 <ppEnqueueRxq+0xa3>
+     a32:	100c      	movi.n	a0, 1
+     a34:	0020c0        	memw
+     a37:	ffe8b1        	l32r	a11, 9d8 <ppEnqueueRxq+0x28>
+     a3a:	802ba2        	l32i	a10, a11, 0x200
+     a3d:	026c      	movi.n	a2, -32
+     a3f:	10aa20        	and	a10, a10, a2
+     a42:	20aa00        	or	a10, a10, a0
+     a45:	0020c0        	memw
+     a48:	806ba2        	s32i	a10, a11, 0x200
+     a4b:	ffe501        	l32r	a0, 9e0 <ppEnqueueRxq+0x30>
+     a4e:	0000c0        	callx0	a0
+     a51:	1108      	l32i.n	a0, a1, 4
+     a53:	002d      	mov.n	a2, a0
+     a55:	0108      	l32i.n	a0, a1, 0
+     a57:	10c112        	addi	a1, a1, 16
+     a5a:	f00d      	ret.n
+	...
+     a70:	f0c112        	addi	a1, a1, -16
+     a73:	31d9      	s32i.n	a13, a1, 12
+     a75:	21c9      	s32i.n	a12, a1, 8
+     a77:	fff9c1        	l32r	a12, a5c <ppEnqueueRxq+0xac>
+     a7a:	1109      	s32i.n	a0, a1, 4
+     a7c:	1c08      	l32i.n	a0, a12, 4
+     a7e:	11d2b0        	slli	a13, a2, 5
+     a81:	00da      	add.n	a0, a0, a13
+     a83:	240002        	l8ui	a0, a0, 36
+     a86:	309c      	beqz.n	a0, a9d <ppEnqueueRxq+0xed>
+     a88:	113026        	beqi	a0, 3, a9d <ppEnqueueRxq+0xed>
+     a8b:	0930b6        	bltui	a0, 3, a98 <ppEnqueueRxq+0xe8>
+     a8e:	120c      	movi.n	a2, 1
+     a90:	0b60b6        	bltui	a0, 6, a9f <ppEnqueueRxq+0xef>
+     a93:	020c      	movi.n	a2, 0
+     a95:	000186        	j	a9f <ppEnqueueRxq+0xef>
+     a98:	320c      	movi.n	a2, 3
+     a9a:	000046        	j	a9f <ppEnqueueRxq+0xef>
+     a9d:	220c      	movi.n	a2, 2
+     a9f:	fff101        	l32r	a0, a64 <ppEnqueueRxq+0xb4>
+     aa2:	0000c0        	callx0	a0
+     aa5:	1c58      	l32i.n	a5, a12, 4
+     aa7:	020d      	mov.n	a0, a2
+     aa9:	55da      	add.n	a5, a5, a13
+     aab:	210562        	l8ui	a6, a5, 33
+     aae:	0c0c      	movi.n	a12, 0
+     ab0:	96cc      	bnez.n	a6, abd <ppEnqueueRxq+0x10d>
+     ab2:	b528      	l32i.n	a2, a5, 44
+     ab4:	328c      	beqz.n	a2, abb <ppEnqueueRxq+0x10b>
+     ab6:	02cd      	mov.n	a12, a2
+     ab8:	000046        	j	abd <ppEnqueueRxq+0x10d>
+     abb:	b68c      	beqz.n	a6, aca <ppEnqueueRxq+0x11a>
+     abd:	1108      	l32i.n	a0, a1, 4
+     abf:	0c2d      	mov.n	a2, a12
+     ac1:	31d8      	l32i.n	a13, a1, 12
+     ac3:	21c8      	l32i.n	a12, a1, 8
+     ac5:	10c112        	addi	a1, a1, 16
+     ac8:	f00d      	ret.n
+     aca:	0109      	s32i.n	a0, a1, 0
+     acc:	65c8      	l32i.n	a12, a5, 24
+     ace:	000c      	movi.n	a0, 0
+     ad0:	fe9c16        	beqz	a12, abd <ppEnqueueRxq+0x10d>
+     ad3:	7c68      	l32i.n	a6, a12, 28
+     ad5:	6569      	s32i.n	a6, a5, 24
+     ad7:	36cc      	bnez.n	a6, ade <ppEnqueueRxq+0x12e>
+     ad9:	18c572        	addi	a7, a5, 24
+     adc:	7579      	s32i.n	a7, a5, 28
+     ade:	0c2d      	mov.n	a2, a12
+     ae0:	7c09      	s32i.n	a0, a12, 28
+     ae2:	ffe101        	l32r	a0, a68 <ppEnqueueRxq+0xb8>
+     ae5:	0000c0        	callx0	a0
+     ae8:	fd1216        	beqz	a2, abd <ppEnqueueRxq+0x10d>
+     aeb:	0c3d      	mov.n	a3, a12
+     aed:	0128      	l32i.n	a2, a1, 0
+     aef:	040c      	movi.n	a4, 0
+     af1:	ffde01        	l32r	a0, a6c <ppEnqueueRxq+0xbc>
+     af4:	0000c0        	callx0	a0
+     af7:	ffda51        	l32r	a5, a60 <ppEnqueueRxq+0xb0>
+     afa:	1558      	l32i.n	a5, a5, 4
+     afc:	55da      	add.n	a5, a5, a13
+     afe:	fff286        	j	acc <ppEnqueueRxq+0x11c>
+	...
+     b11:	000000        	ill
+     b14:	e0c112        	addi	a1, a1, -32
+     b17:	21c9      	s32i.n	a12, a1, 8
+     b19:	41e9      	s32i.n	a14, a1, 16
+     b1b:	51f9      	s32i.n	a15, a1, 20
+     b1d:	31d9      	s32i.n	a13, a1, 12
+     b1f:	1109      	s32i.n	a0, a1, 4
+     b21:	02dd      	mov.n	a13, a2
+     b23:	000f05        	call0	c14 <ppEnqueueRxq+0x264>
+     b26:	fff701        	l32r	a0, b04 <ppEnqueueRxq+0x154>
+     b29:	1f0c      	movi.n	a15, 1
+     b2b:	1008      	l32i.n	a0, a0, 4
+     b2d:	11ede0        	slli	a14, a13, 2
+     b30:	2d0a      	add.n	a2, a13, a0
+     b32:	a04d00        	addx4	a4, a13, a0
+     b35:	1448      	l32i.n	a4, a4, 4
+     b37:	140222        	l8ui	a2, a2, 20
+     b3a:	fdec      	bnez.n	a13, b6d <ppEnqueueRxq+0x1bd>
+     b3c:	400200        	ssr	a2
+     b3f:	913040        	srl	a3, a4
+     b42:	0a6307        	bbci	a3, 0, b50 <ppEnqueueRxq+0x1a0>
+     b45:	1152b0        	slli	a5, a2, 5
+     b48:	505a      	add.n	a5, a0, a5
+     b4a:	280552        	l8ui	a5, a5, 40
+     b4d:	1c1526        	beqi	a5, 1, b6d <ppEnqueueRxq+0x1bd>
+     b50:	0c0c      	movi.n	a12, 0
+     b52:	6129      	s32i.n	a2, a1, 24
+     b54:	7420c0        	extui	a2, a12, 0, 8
+     b57:	fff185        	call0	a70 <ppEnqueueRxq+0xc0>
+     b5a:	063256        	bnez	a2, bc1 <ppEnqueueRxq+0x211>
+     b5d:	cc1b      	addi.n	a12, a12, 1
+     b5f:	f12c66        	bnei	a12, 2, b54 <ppEnqueueRxq+0x1a4>
+     b62:	ffe941        	l32r	a4, b08 <ppEnqueueRxq+0x158>
+     b65:	1448      	l32i.n	a4, a4, 4
+     b67:	6128      	l32i.n	a2, a1, 24
+     b69:	44ea      	add.n	a4, a4, a14
+     b6b:	1448      	l32i.n	a4, a4, 4
+     b6d:	01d9      	s32i.n	a13, a1, 0
+     b6f:	401200        	ssl	a2
+     b72:	a1cf00        	sll	a12, a15
+     b75:	cc0b      	addi.n	a12, a12, -1
+     b77:	10c4c0        	and	a12, a4, a12
+     b7a:	30e4c0        	xor	a14, a4, a12
+     b7d:	60d0e0        	neg	a13, a14
+     b80:	10dde0        	and	a13, a13, a14
+     b83:	40fdd0        	nsau	a13, a13
+     b86:	60d0d0        	neg	a13, a13
+     b89:	1fcdd2        	addi	a13, a13, 31
+     b8c:	040d96        	bltz	a13, bd0 <ppEnqueueRxq+0x220>
+     b8f:	7420d0        	extui	a2, a13, 0, 8
+     b92:	ffedc5        	call0	a70 <ppEnqueueRxq+0xc0>
+     b95:	529c      	beqz.n	a2, bae <ppEnqueueRxq+0x1fe>
+     b97:	ffdd01        	l32r	a0, b0c <ppEnqueueRxq+0x15c>
+     b9a:	01e8      	l32i.n	a14, a1, 0
+     b9c:	1008      	l32i.n	a0, a0, 4
+     b9e:	ee0a      	add.n	a14, a14, a0
+     ba0:	144ed2        	s8i	a13, a14, 20
+     ba3:	113db0        	slli	a3, a13, 5
+     ba6:	303a      	add.n	a3, a0, a3
+     ba8:	2843f2        	s8i	a15, a3, 40
+     bab:	000486        	j	bc1 <ppEnqueueRxq+0x211>
+     bae:	f57c      	movi.n	a5, -1
+     bb0:	401d00        	ssl	a13
+     bb3:	a14f00        	sll	a4, a15
+     bb6:	304450        	xor	a4, a4, a5
+     bb9:	10ee40        	and	a14, a14, a4
+     bbc:	ffef46        	j	b7d <ppEnqueueRxq+0x1cd>
+     bbf:	020c      	movi.n	a2, 0
+     bc1:	21c8      	l32i.n	a12, a1, 8
+     bc3:	31d8      	l32i.n	a13, a1, 12
+     bc5:	41e8      	l32i.n	a14, a1, 16
+     bc7:	51f8      	l32i.n	a15, a1, 20
+     bc9:	1108      	l32i.n	a0, a1, 4
+     bcb:	20c112        	addi	a1, a1, 32
+     bce:	f00d      	ret.n
+     bd0:	60d0c0        	neg	a13, a12
+     bd3:	10ddc0        	and	a13, a13, a12
+     bd6:	40fdd0        	nsau	a13, a13
+     bd9:	60d0d0        	neg	a13, a13
+     bdc:	1fcdd2        	addi	a13, a13, 31
+     bdf:	fdcd96        	bltz	a13, bbf <ppEnqueueRxq+0x20f>
+     be2:	7420d0        	extui	a2, a13, 0, 8
+     be5:	ffe885        	call0	a70 <ppEnqueueRxq+0xc0>
+     be8:	f2cc      	bnez.n	a2, bfb <ppEnqueueRxq+0x24b>
+     bea:	f07c      	movi.n	a0, -1
+     bec:	401d00        	ssl	a13
+     bef:	a1ef00        	sll	a14, a15
+     bf2:	30ee00        	xor	a14, a14, a0
+     bf5:	10cce0        	and	a12, a12, a14
+     bf8:	fff506        	j	bd0 <ppEnqueueRxq+0x220>
+     bfb:	ffc501        	l32r	a0, b10 <ppEnqueueRxq+0x160>
+     bfe:	0138      	l32i.n	a3, a1, 0
+     c00:	1008      	l32i.n	a0, a0, 4
+     c02:	330a      	add.n	a3, a3, a0
+     c04:	1443d2        	s8i	a13, a3, 20
+     c07:	ffe606        	j	ba3 <ppEnqueueRxq+0x1f3>
+	...
+     c12:	0c0000        	excw
+     c15:	1219      	s32i.n	a1, a2, 4
+     c17:	81f0c1        	l32r	a12, fffe13d8 <ppCalFrameTimes+0xfffdfeb4>
+     c1a:	fffc      	bnez.n	a15, c5d <ppEnqueueRxq+0x2ad>
+     c1c:	2109      	s32i.n	a0, a1, 8
+     c1e:	1808      	l32i.n	a0, a8, 4
+     c20:	1172e0        	slli	a7, a2, 2
+     c23:	a05200        	addx4	a5, a2, a0
+     c26:	420a      	add.n	a4, a2, a0
+     c28:	140442        	l8ui	a4, a4, 20
+     c2b:	1538      	l32i.n	a3, a5, 4
+     c2d:	400400        	ssr	a4
+     c30:	913030        	srl	a3, a3
+     c33:	02e307        	bbsi	a3, 0, c39 <ppEnqueueRxq+0x289>
+     c36:	002046        	j	cbb <ppEnqueueRxq+0x30b>
+     c39:	1164b0        	slli	a6, a4, 5
+     c3c:	606a      	add.n	a6, a0, a6
+     c3e:	2806a2        	l8ui	a10, a6, 40
+     c41:	f87c      	movi.n	a8, -1
+     c43:	074a16        	beqz	a10, cbb <ppEnqueueRxq+0x30b>
+     c46:	0b0c      	movi.n	a11, 0
+     c48:	66a8      	l32i.n	a10, a6, 24
+     c4a:	2846b2        	s8i	a11, a6, 40
+     c4d:	bafc      	bnez.n	a10, c8c <ppEnqueueRxq+0x2dc>
+     c4f:	1179      	s32i.n	a7, a1, 4
+     c51:	0149      	s32i.n	a4, a1, 0
+     c53:	b638      	l32i.n	a3, a6, 44
+     c55:	3129      	s32i.n	a2, a1, 12
+     c57:	13fc      	bnez.n	a3, c8c <ppEnqueueRxq+0x2dc>
+     c59:	1578      	l32i.n	a7, a5, 4
+     c5b:	0188      	l32i.n	a8, a1, 0
+     c5d:	160c      	movi.n	a6, 1
+     c5f:	401800        	ssl	a8
+     c62:	f87c      	movi.n	a8, -1
+     c64:	a16600        	sll	a6, a6
+     c67:	306680        	xor	a6, a6, a8
+     c6a:	107760        	and	a7, a7, a6
+     c6d:	1579      	s32i.n	a7, a5, 4
+     c6f:	0048      	l32i.n	a4, a0, 0
+     c71:	820c      	movi.n	a2, 8
+     c73:	104460        	and	a4, a4, a6
+     c76:	0049      	s32i.n	a4, a0, 0
+     c78:	000005        	call0	c7c <ppEnqueueRxq+0x2cc>
+     c7b:	3128      	l32i.n	a2, a1, 12
+     c7d:	0148      	l32i.n	a4, a1, 0
+     c7f:	f87c      	movi.n	a8, -1
+     c81:	ffe301        	l32r	a0, c10 <ppEnqueueRxq+0x260>
+     c84:	1158      	l32i.n	a5, a1, 4
+     c86:	1008      	l32i.n	a0, a0, 4
+     c88:	190c      	movi.n	a9, 1
+     c8a:	550a      	add.n	a5, a5, a0
+     c8c:	1558      	l32i.n	a5, a5, 4
+     c8e:	95ac      	beqz.n	a5, cbb <ppEnqueueRxq+0x30b>
+     c90:	401400        	ssl	a4
+     c93:	a16900        	sll	a6, a9
+     c96:	307680        	xor	a7, a6, a8
+     c99:	660b      	addi.n	a6, a6, -1
+     c9b:	106560        	and	a6, a5, a6
+     c9e:	30a560        	xor	a10, a5, a6
+     ca1:	1077a0        	and	a7, a7, a10
+     ca4:	604070        	neg	a4, a7
+     ca7:	104470        	and	a4, a4, a7
+     caa:	40f440        	nsau	a4, a4
+     cad:	604040        	neg	a4, a4
+     cb0:	1fc442        	addi	a4, a4, 31
+     cb3:	00b496        	bltz	a4, cc2 <ppEnqueueRxq+0x312>
+     cb6:	720a      	add.n	a7, a2, a0
+     cb8:	144742        	s8i	a4, a7, 20
+     cbb:	2108      	l32i.n	a0, a1, 8
+     cbd:	10c112        	addi	a1, a1, 16
+     cc0:	f00d      	ret.n
+     cc2:	604060        	neg	a4, a6
+     cc5:	104460        	and	a4, a4, a6
+     cc8:	40f440        	nsau	a4, a4
+     ccb:	604040        	neg	a4, a4
+     cce:	1fc442        	addi	a4, a4, 31
+     cd1:	fe14d6        	bgez	a4, cb6 <ppEnqueueRxq+0x306>
+     cd4:	fff8c6        	j	cbb <ppEnqueueRxq+0x30b>
+     cd7:	000000        	ill
+     cda:	0c0000        	excw
+     cdd:	0c1b      	addi.n	a0, a12, 1
+     cdf:	a108      	l32i.n	a0, a1, 40
+     ce1:	fe          	.byte 0xfe
+     ce2:	ff          	.byte 0xff
+     ce3:	f0c112        	addi	a1, a1, -16
+     ce6:	11c9      	s32i.n	a12, a1, 4
+     ce8:	21d9      	s32i.n	a13, a1, 8
+     cea:	1aa8      	l32i.n	a10, a10, 4
+     cec:	0109      	s32i.n	a0, a1, 0
+     cee:	a075a0        	addx4	a7, a5, a10
+     cf1:	1708      	l32i.n	a0, a7, 4
+     cf3:	0ad8      	l32i.n	a13, a10, 0
+     cf5:	041056        	bnez	a0, d3a <ppEnqueueRxq+0x38a>
+     cf8:	95aa      	add.n	a9, a5, a10
+     cfa:	140992        	l8ui	a9, a9, 20
+     cfd:	400900        	ssr	a9
+     d00:	91c0d0        	srl	a12, a13
+     d03:	33ec07        	bbsi	a12, 0, d3a <ppEnqueueRxq+0x38a>
+     d06:	090d      	mov.n	a0, a9
+     d08:	401900        	ssl	a9
+     d0b:	1159b0        	slli	a5, a9, 5
+     d0e:	5a5a      	add.n	a5, a10, a5
+     d10:	244542        	s8i	a4, a5, 36
+     d13:	254532        	s8i	a3, a5, 37
+     d16:	284582        	s8i	a8, a5, 40
+     d19:	264522        	s8i	a2, a5, 38
+     d1c:	1728      	l32i.n	a2, a7, 4
+     d1e:	a13b00        	sll	a3, a11
+     d21:	202230        	or	a2, a2, a3
+     d24:	1729      	s32i.n	a2, a7, 4
+     d26:	0a68      	l32i.n	a6, a10, 0
+     d28:	206630        	or	a6, a6, a3
+     d2b:	0a69      	s32i.n	a6, a10, 0
+     d2d:	11c8      	l32i.n	a12, a1, 4
+     d2f:	21d8      	l32i.n	a13, a1, 8
+     d31:	002d      	mov.n	a2, a0
+     d33:	0108      	l32i.n	a0, a1, 0
+     d35:	10c112        	addi	a1, a1, 16
+     d38:	f00d      	ret.n
+     d3a:	fc7c      	movi.n	a12, -1
+     d3c:	608000        	neg	a8, a0
+     d3f:	108800        	and	a8, a8, a0
+     d42:	40f880        	nsau	a8, a8
+     d45:	608080        	neg	a8, a8
+     d48:	1fc882        	addi	a8, a8, 31
+     d4b:	028896        	bltz	a8, d77 <ppEnqueueRxq+0x3c7>
+     d4e:	1198b0        	slli	a9, a8, 5
+     d51:	9a9a      	add.n	a9, a10, a9
+     d53:	240962        	l8ui	a6, a9, 36
+     d56:	401800        	ssl	a8
+     d59:	0e9647        	bne	a6, a4, d6b <ppEnqueueRxq+0x3bb>
+     d5c:	250962        	l8ui	a6, a9, 37
+     d5f:	260972        	l8ui	a7, a9, 38
+     d62:	059637        	bne	a6, a3, d6b <ppEnqueueRxq+0x3bb>
+     d65:	c07720        	sub	a7, a7, a2
+     d68:	08c716        	beqz	a7, df8 <ppEnqueueRxq+0x448>
+     d6b:	a19b00        	sll	a9, a11
+     d6e:	3099c0        	xor	a9, a9, a12
+     d71:	100090        	and	a0, a0, a9
+     d74:	fff086        	j	d3a <ppEnqueueRxq+0x38a>
+     d77:	ffa0c2        	movi	a12, 255
+     d7a:	380c      	movi.n	a8, 3
+     d7c:	95aa      	add.n	a9, a5, a10
+     d7e:	140992        	l8ui	a9, a9, 20
+     d81:	208d80        	or	a8, a13, a8
+     d84:	401900        	ssl	a9
+     d87:	3098c0        	xor	a9, a8, a12
+     d8a:	a17b00        	sll	a7, a11
+     d8d:	770b      	addi.n	a7, a7, -1
+     d8f:	107790        	and	a7, a7, a9
+     d92:	40f700        	nsau	a0, a7
+     d95:	f91c      	movi.n	a9, 31
+     d97:	c00900        	sub	a0, a9, a0
+     d9a:	0130d6        	bgez	a0, db1 <ppEnqueueRxq+0x401>
+     d9d:	300870        	xor	a0, a8, a7
+     da0:	3000c0        	xor	a0, a0, a12
+     da3:	40f000        	nsau	a0, a0
+     da6:	c00900        	sub	a0, a9, a0
+     da9:	0040d6        	bgez	a0, db1 <ppEnqueueRxq+0x401>
+     dac:	800c      	movi.n	a0, 8
+     dae:	ffdec6        	j	d2d <ppEnqueueRxq+0x37d>
+     db1:	a075a0        	addx4	a7, a5, a10
+     db4:	401000        	ssl	a0
+     db7:	a18b00        	sll	a8, a11
+     dba:	880b      	addi.n	a8, a8, -1
+     dbc:	1058d0        	and	a5, a8, a13
+     dbf:	40f550        	nsau	a5, a5
+     dc2:	c06950        	sub	a6, a9, a5
+     dc5:	035696        	bltz	a6, dfe <ppEnqueueRxq+0x44e>
+     dc8:	c00050        	sub	a0, a0, a5
+     dcb:	080c      	movi.n	a8, 0
+     dcd:	20c062        	addi	a6, a0, 32
+     dd0:	21c002        	addi	a0, a0, 33
+     dd3:	b30660        	movgez	a0, a6, a6
+     dd6:	740100        	extui	a0, a0, 1, 8
+     dd9:	401000        	ssl	a0
+     ddc:	1160b0        	slli	a6, a0, 5
+     ddf:	6a6a      	add.n	a6, a10, a6
+     de1:	284682        	s8i	a8, a6, 40
+     de4:	254632        	s8i	a3, a6, 37
+     de7:	244642        	s8i	a4, a6, 36
+     dea:	264622        	s8i	a2, a6, 38
+     ded:	1728      	l32i.n	a2, a7, 4
+     def:	a13b00        	sll	a3, a11
+     df2:	202230        	or	a2, a2, a3
+     df5:	ffcac6        	j	d24 <ppEnqueueRxq+0x374>
+     df8:	740080        	extui	a0, a8, 0, 8
+     dfb:	ffcb86        	j	d2d <ppEnqueueRxq+0x37d>
+     dfe:	f57c      	movi.n	a5, -1
+     e00:	305850        	xor	a5, a8, a5
+     e03:	105d50        	and	a5, a13, a5
+     e06:	40f550        	nsau	a5, a5
+     e09:	c05050        	sub	a5, a0, a5
+     e0c:	25c562        	addi	a6, a5, 37
+     e0f:	26c552        	addi	a5, a5, 38
+     e12:	b35660        	movgez	a5, a6, a6
+     e15:	060c      	movi.n	a6, 0
+     e17:	215150        	srai	a5, a5, 1
+     e1a:	050d      	mov.n	a0, a5
+     e1c:	0285a6        	blti	a5, 8, e22 <ppEnqueueRxq+0x472>
+     e1f:	fac502        	addi	a0, a5, -6
+     e22:	740000        	extui	a0, a0, 0, 8
+     e25:	401000        	ssl	a0
+     e28:	1150b0        	slli	a5, a0, 5
+     e2b:	5a5a      	add.n	a5, a10, a5
+     e2d:	244542        	s8i	a4, a5, 36
+     e30:	254532        	s8i	a3, a5, 37
+     e33:	284562        	s8i	a6, a5, 40
+     e36:	264522        	s8i	a2, a5, 38
+     e39:	1728      	l32i.n	a2, a7, 4
+     e3b:	a13b00        	sll	a3, a11
+     e3e:	202230        	or	a2, a2, a3
+     e41:	ffb7c6        	j	d24 <ppEnqueueRxq+0x374>
+     e44:	000000        	ill
+     e47:	fe0000        	excw
+     e4a:	ef          	.byte 0xef
+     e4b:	3f          	.byte 0x3f
+     e4c:	000000        	ill
+     e4f:	fe0000        	excw
+     e52:	ef          	.byte 0xef
+     e53:	3f          	.byte 0x3f
+     e54:	000000        	ill
+     e57:	fe0000        	excw
+     e5a:	ef          	.byte 0xef
+     e5b:	3f          	.byte 0x3f
+     e5c:	effe00        	excw
+     e5f:	3f          	.byte 0x3f
+     e60:	000000        	ill
+     e63:	fe0000        	excw
+     e66:	ef          	.byte 0xef
+     e67:	3f          	.byte 0x3f
+     e68:	000000        	ill
+     e6b:	fe0000        	excw
+     e6e:	ef          	.byte 0xef
+     e6f:	3f          	.byte 0x3f
+	...
+     e8c:	c0c112        	addi	a1, a1, -64
+     e8f:	c1e9      	s32i.n	a14, a1, 48
+     e91:	d1f9      	s32i.n	a15, a1, 52
+     e93:	a1c9      	s32i.n	a12, a1, 40
+     e95:	b1d9      	s32i.n	a13, a1, 44
+     e97:	ffebd1        	l32r	a13, e44 <ppEnqueueRxq+0x494>
+     e9a:	9109      	s32i.n	a0, a1, 36
+     e9c:	000d02        	l8ui	a0, a13, 0
+     e9f:	02cd      	mov.n	a12, a2
+     ea1:	b0dc      	bnez.n	a0, ec0 <ppEnqueueRxq+0x510>
+     ea3:	fff301        	l32r	a0, e70 <ppEnqueueRxq+0x4c0>
+     ea6:	0000c0        	callx0	a0
+     ea9:	0020c0        	memw
+     eac:	ffe751        	l32r	a5, e48 <ppEnqueueRxq+0x498>
+     eaf:	802542        	l32i	a4, a5, 0x200
+     eb2:	066c      	movi.n	a6, -32
+     eb4:	104460        	and	a4, a4, a6
+     eb7:	0020c0        	memw
+     eba:	806542        	s32i	a4, a5, 0x200
+     ebd:	000d02        	l8ui	a0, a13, 0
+     ec0:	ffe3e1        	l32r	a14, e4c <ppEnqueueRxq+0x49c>
+     ec3:	1ee8      	l32i.n	a14, a14, 4
+     ec5:	0ee8      	l32i.n	a14, a14, 0
+     ec7:	d0dc      	bnez.n	a0, ee8 <ppEnqueueRxq+0x538>
+     ec9:	0020c0        	memw
+     ecc:	ffe101        	l32r	a0, e50 <ppEnqueueRxq+0x4a0>
+     ecf:	8020f2        	l32i	a15, a0, 0x200
+     ed2:	026c      	movi.n	a2, -32
+     ed4:	10ff20        	and	a15, a15, a2
+     ed7:	120c      	movi.n	a2, 1
+     ed9:	20ff20        	or	a15, a15, a2
+     edc:	0020c0        	memw
+     edf:	8060f2        	s32i	a15, a0, 0x200
+     ee2:	ffe401        	l32r	a0, e74 <ppEnqueueRxq+0x4c4>
+     ee5:	0000c0        	callx0	a0
+     ee8:	ffa042        	movi	a4, 255
+     eeb:	330c      	movi.n	a3, 3
+     eed:	203e30        	or	a3, a14, a3
+     ef0:	303340        	xor	a3, a3, a4
+     ef3:	158316        	beqz	a3, 104f <ppEnqueueRxq+0x69f>
+     ef6:	ffd701        	l32r	a0, e54 <ppEnqueueRxq+0x4a4>
+     ef9:	18a122        	movi	a2, 0x118
+     efc:	1008      	l32i.n	a0, a0, 4
+     efe:	114cd0        	slli	a4, a12, 3
+     f01:	b00c00        	addx8	a0, a12, a0
+     f04:	4620e2        	l32i	a14, a0, 0x118
+     f07:	e149      	s32i.n	a4, a1, 56
+     f09:	142e16        	beqz	a14, 104f <ppEnqueueRxq+0x69f>
+     f0c:	71e9      	s32i.n	a14, a1, 28
+     f0e:	202a      	add.n	a2, a0, a2
+     f10:	040c      	movi.n	a4, 0
+     f12:	466042        	s32i	a4, a0, 0x118
+     f15:	476022        	s32i	a2, a0, 0x11c
+     f18:	0ecd      	mov.n	a12, a14
+     f1a:	120e16        	beqz	a14, 103e <ppEnqueueRxq+0x68e>
+     f1d:	7ee8      	l32i.n	a14, a14, 28
+     f1f:	7c49      	s32i.n	a4, a12, 28
+     f21:	000d52        	l8ui	a5, a13, 0
+     f24:	71e9      	s32i.n	a14, a1, 28
+     f26:	85dc      	bnez.n	a5, f42 <ppEnqueueRxq+0x592>
+     f28:	ffd401        	l32r	a0, e78 <ppEnqueueRxq+0x4c8>
+     f2b:	0000c0        	callx0	a0
+     f2e:	0020c0        	memw
+     f31:	ffc971        	l32r	a7, e58 <ppEnqueueRxq+0x4a8>
+     f34:	802762        	l32i	a6, a7, 0x200
+     f37:	086c      	movi.n	a8, -32
+     f39:	106680        	and	a6, a6, a8
+     f3c:	0020c0        	memw
+     f3f:	806762        	s32i	a6, a7, 0x200
+     f42:	6c38      	l32i.n	a3, a12, 24
+     f44:	8c48      	l32i.n	a4, a12, 32
+     f46:	760332        	l8ui	a3, a3, 118
+     f49:	000422        	l8ui	a2, a4, 0
+     f4c:	060452        	l8ui	a5, a4, 6
+     f4f:	042120        	extui	a2, a2, 1, 1
+     f52:	040442        	l8ui	a4, a4, 4
+     f55:	245450        	extui	a5, a5, 4, 3
+     f58:	344040        	extui	a4, a4, 0, 4
+     f5b:	ffd805        	call0	cdc <ppEnqueueRxq+0x32c>
+     f5e:	040c      	movi.n	a4, 0
+     f60:	020d      	mov.n	a0, a2
+     f62:	000d52        	l8ui	a5, a13, 0
+     f65:	f129      	s32i.n	a2, a1, 60
+     f67:	15ec      	bnez.n	a5, f8c <ppEnqueueRxq+0x5dc>
+     f69:	0020c0        	memw
+     f6c:	ffbc71        	l32r	a7, e5c <ppEnqueueRxq+0x4ac>
+     f6f:	802762        	l32i	a6, a7, 0x200
+     f72:	086c      	movi.n	a8, -32
+     f74:	106680        	and	a6, a6, a8
+     f77:	180c      	movi.n	a8, 1
+     f79:	206680        	or	a6, a6, a8
+     f7c:	0020c0        	memw
+     f7f:	806762        	s32i	a6, a7, 0x200
+     f82:	ffbe01        	l32r	a0, e7c <ppEnqueueRxq+0x4cc>
+     f85:	0000c0        	callx0	a0
+     f88:	f108      	l32i.n	a0, a1, 60
+     f8a:	040c      	movi.n	a4, 0
+     f8c:	002d      	mov.n	a2, a0
+     f8e:	1cccf2        	addi	a15, a12, 28
+     f91:	158066        	bnei	a0, 8, faa <ppEnqueueRxq+0x5fa>
+     f94:	ffb391        	l32r	a9, e60 <ppEnqueueRxq+0x4b0>
+     f97:	e1a8      	l32i.n	a10, a1, 56
+     f99:	1998      	l32i.n	a9, a9, 4
+     f9b:	99aa      	add.n	a9, a9, a10
+     f9d:	4729a2        	l32i	a10, a9, 0x11c
+     fa0:	7c49      	s32i.n	a4, a12, 28
+     fa2:	0ac9      	s32i.n	a12, a10, 0
+     fa4:	4769f2        	s32i	a15, a9, 0x11c
+     fa7:	ffdb46        	j	f18 <ppEnqueueRxq+0x568>
+     faa:	c3a052        	movi	a5, 195
+     fad:	8c08      	l32i.n	a0, a12, 32
+     faf:	343020        	extui	a3, a2, 0, 4
+     fb2:	0000b2        	l8ui	a11, a0, 0
+     fb5:	1133e0        	slli	a3, a3, 2
+     fb8:	10bb50        	and	a11, a11, a5
+     fbb:	20bb30        	or	a11, a11, a3
+     fbe:	0040b2        	s8i	a11, a0, 0
+     fc1:	000da2        	l8ui	a10, a13, 0
+     fc4:	aadc      	bnez.n	a10, fe2 <ppEnqueueRxq+0x632>
+     fc6:	ffae01        	l32r	a0, e80 <ppEnqueueRxq+0x4d0>
+     fc9:	0000c0        	callx0	a0
+     fcc:	040c      	movi.n	a4, 0
+     fce:	0020c0        	memw
+     fd1:	ffa461        	l32r	a6, e64 <ppEnqueueRxq+0x4b4>
+     fd4:	802652        	l32i	a5, a6, 0x200
+     fd7:	076c      	movi.n	a7, -32
+     fd9:	105570        	and	a5, a5, a7
+     fdc:	0020c0        	memw
+     fdf:	806652        	s32i	a5, a6, 0x200
+     fe2:	ffa191        	l32r	a9, e68 <ppEnqueueRxq+0x4b8>
+     fe5:	8c08      	l32i.n	a0, a12, 32
+     fe7:	7c49      	s32i.n	a4, a12, 28
+     fe9:	0000b2        	l8ui	a11, a0, 0
+     fec:	1998      	l32i.n	a9, a9, 4
+     fee:	34b2b0        	extui	a11, a11, 2, 4
+     ff1:	11bbb0        	slli	a11, a11, 5
+     ff4:	b9ba      	add.n	a11, a9, a11
+     ff6:	7bb8      	l32i.n	a11, a11, 28
+     ff8:	0bc9      	s32i.n	a12, a11, 0
+     ffa:	0000a2        	l8ui	a10, a0, 0
+     ffd:	34a2a0        	extui	a10, a10, 2, 4
+    1000:	11aab0        	slli	a10, a10, 5
+    1003:	99aa      	add.n	a9, a9, a10
+    1005:	79f9      	s32i.n	a15, a9, 28
+    1007:	000d82        	l8ui	a8, a13, 0
+    100a:	f8dc      	bnez.n	a8, 102d <ppEnqueueRxq+0x67d>
+    100c:	0020c0        	memw
+    100f:	ff97b1        	l32r	a11, e6c <ppEnqueueRxq+0x4bc>
+    1012:	802ba2        	l32i	a10, a11, 0x200
+    1015:	0f6c      	movi.n	a15, -32
+    1017:	10aaf0        	and	a10, a10, a15
+    101a:	1f0c      	movi.n	a15, 1
+    101c:	20aaf0        	or	a10, a10, a15
+    101f:	0020c0        	memw
+    1022:	806ba2        	s32i	a10, a11, 0x200
+    1025:	ff9701        	l32r	a0, e84 <ppEnqueueRxq+0x4d4>
+    1028:	0000c0        	callx0	a0
+    102b:	8c08      	l32i.n	a0, a12, 32
+    102d:	060022        	l8ui	a2, a0, 6
+    1030:	242420        	extui	a2, a2, 4, 3
+    1033:	ff9501        	l32r	a0, e88 <ppEnqueueRxq+0x4d8>
+    1036:	0000c0        	callx0	a0
+    1039:	040c      	movi.n	a4, 0
+    103b:	ffb646        	j	f18 <ppEnqueueRxq+0x568>
+    103e:	120c      	movi.n	a2, 1
+    1040:	a1c8      	l32i.n	a12, a1, 40
+    1042:	b1d8      	l32i.n	a13, a1, 44
+    1044:	c1e8      	l32i.n	a14, a1, 48
+    1046:	d1f8      	l32i.n	a15, a1, 52
+    1048:	9108      	l32i.n	a0, a1, 36
+    104a:	40c112        	addi	a1, a1, 64
+    104d:	f00d      	ret.n
+    104f:	020c      	movi.n	a2, 0
+    1051:	fffac6        	j	1040 <ppEnqueueRxq+0x690>
+    1054:	000241        	l32r	a4, fffc105c <ppCalFrameTimes+0xfffbfb38>
+    1057:	000000        	ill
+    105a:	120000        	excw
+    105d:	09e0c1        	l32r	a12, fffc37e0 <ppCalFrameTimes+0xfffc22bc>
+    1060:	31e901        	l32r	a0, fffcd804 <ppCalFrameTimes+0xfffcc2e0>
+    1063:	11c9      	s32i.n	a12, a1, 4
+    1065:	21d9      	s32i.n	a13, a1, 8
+    1067:	41f9      	s32i.n	a15, a1, 16
+    1069:	fffaf1        	l32r	a15, 1054 <ppEnqueueRxq+0x6a4>
+    106c:	fd7c      	movi.n	a13, -1
+    106e:	000fc2        	l8ui	a12, a15, 0
+    1071:	0e0c      	movi.n	a14, 0
+    1073:	0c2d      	mov.n	a2, a12
+    1075:	fff801        	l32r	a0, 1058 <ppEnqueueRxq+0x6a8>
+    1078:	0000c0        	callx0	a0
+    107b:	628c      	beqz.n	a2, 1085 <ppEnqueueRxq+0x6d5>
+    107d:	0c2d      	mov.n	a2, a12
+    107f:	ffe0c5        	call0	e8c <ppEnqueueRxq+0x4dc>
+    1082:	93dc20        	movnez	a13, a12, a2
+    1085:	000f02        	l8ui	a0, a15, 0
+    1088:	cc1b      	addi.n	a12, a12, 1
+    108a:	74c0c0        	extui	a12, a12, 0, 8
+    108d:	fecc22        	addi	a2, a12, -2
+    1090:	83ce20        	moveqz	a12, a14, a2
+    1093:	dc90c7        	bne	a0, a12, 1073 <ppEnqueueRxq+0x6c3>
+    1096:	11c8      	l32i.n	a12, a1, 4
+    1098:	0c0d26        	beqi	a13, -1, 10a8 <ppEnqueueRxq+0x6f8>
+    109b:	0d1b      	addi.n	a0, a13, 1
+    109d:	742000        	extui	a2, a0, 0, 8
+    10a0:	012226        	beqi	a2, 2, 10a5 <ppEnqueueRxq+0x6f5>
+    10a3:	00ed      	mov.n	a14, a0
+    10a5:	004fe2        	s8i	a14, a15, 0
+    10a8:	21d8      	l32i.n	a13, a1, 8
+    10aa:	31e8      	l32i.n	a14, a1, 12
+    10ac:	41f8      	l32i.n	a15, a1, 16
+    10ae:	0108      	l32i.n	a0, a1, 0
+    10b0:	20c112        	addi	a1, a1, 32
+    10b3:	f00d      	ret.n
+	...
+    10bd:	fe          	.byte 0xfe
+    10be:	ef          	.byte 0xef
+    10bf:	3f          	.byte 0x3f
+    10c0:	000000        	ill
+    10c3:	fe0000        	excw
+    10c6:	ef          	.byte 0xef
+    10c7:	3f          	.byte 0x3f
+	...
+    10f8:	e0c112        	addi	a1, a1, -32
+    10fb:	31c9      	s32i.n	a12, a1, 12
+    10fd:	2109      	s32i.n	a0, a1, 8
+    10ff:	02cd      	mov.n	a12, a2
+    1101:	4208      	l32i.n	a0, a2, 16
+    1103:	1109      	s32i.n	a0, a1, 4
+    1105:	fff545        	call0	105c <ppEnqueueRxq+0x6ac>
+    1108:	8c88      	l32i.n	a8, a12, 32
+    110a:	000822        	l8ui	a2, a8, 0
+    110d:	6c38      	l32i.n	a3, a12, 24
+    110f:	042120        	extui	a2, a2, 1, 1
+    1112:	05e356        	bnez	a3, 1174 <ppEnqueueRxq+0x7c4>
+    1115:	0838      	l32i.n	a3, a8, 0
+    1117:	043930        	extui	a3, a3, 9, 1
+    111a:	168356        	bnez	a3, 1286 <ppEnqueueRxq+0x8d6>
+    111d:	ffea01        	l32r	a0, 10c8 <ppEnqueueRxq+0x718>
+    1120:	0000c0        	callx0	a0
+    1123:	8c88      	l32i.n	a8, a12, 32
+    1125:	a2cc      	bnez.n	a2, 1133 <ppEnqueueRxq+0x783>
+    1127:	0e0802        	l8ui	a0, a8, 14
+    112a:	05c026        	beqi	a0, 32, 1133 <ppEnqueueRxq+0x783>
+    112d:	c0c042        	addi	a4, a0, -64
+    1130:	16a456        	bnez	a4, 129e <ppEnqueueRxq+0x8ee>
+    1133:	000822        	l8ui	a2, a8, 0
+    1136:	c3a002        	movi	a0, 195
+    1139:	100200        	and	a0, a2, a0
+    113c:	042120        	extui	a2, a2, 1, 1
+    113f:	1122e0        	slli	a2, a2, 2
+    1142:	200020        	or	a0, a0, a2
+    1145:	004802        	s8i	a0, a8, 0
+    1148:	8ca8      	l32i.n	a10, a12, 32
+    114a:	060a92        	l8ui	a9, a10, 6
+    114d:	8fa0b2        	movi	a11, 143
+    1150:	1099b0        	and	a9, a9, a11
+    1153:	064a92        	s8i	a9, a10, 6
+    1156:	8c68      	l32i.n	a6, a12, 32
+    1158:	040652        	l8ui	a5, a6, 4
+    115b:	f0a072        	movi	a7, 240
+    115e:	105570        	and	a5, a5, a7
+    1161:	770c      	movi.n	a7, 7
+    1163:	205570        	or	a5, a5, a7
+    1166:	044652        	s8i	a5, a6, 4
+    1169:	020c      	movi.n	a2, 0
+    116b:	31c8      	l32i.n	a12, a1, 12
+    116d:	2108      	l32i.n	a0, a1, 8
+    116f:	20c112        	addi	a1, a1, 32
+    1172:	f00d      	ret.n
+    1174:	1138      	l32i.n	a3, a1, 4
+    1176:	000332        	l8ui	a3, a3, 0
+    1179:	143230        	extui	a3, a3, 2, 2
+    117c:	043356        	bnez	a3, 11c3 <ppEnqueueRxq+0x813>
+    117f:	ffd301        	l32r	a0, 10cc <ppEnqueueRxq+0x71c>
+    1182:	0000c0        	callx0	a0
+    1185:	10a216        	beqz	a2, 1293 <ppEnqueueRxq+0x8e3>
+    1188:	8cb8      	l32i.n	a11, a12, 32
+    118a:	000b02        	l8ui	a0, a11, 0
+    118d:	c3a0a2        	movi	a10, 195
+    1190:	10a0a0        	and	a10, a0, a10
+    1193:	040100        	extui	a0, a0, 1, 1
+    1196:	1100e0        	slli	a0, a0, 2
+    1199:	20aa00        	or	a10, a10, a0
+    119c:	004ba2        	s8i	a10, a11, 0
+    119f:	8c88      	l32i.n	a8, a12, 32
+    11a1:	060872        	l8ui	a7, a8, 6
+    11a4:	8fa092        	movi	a9, 143
+    11a7:	107790        	and	a7, a7, a9
+    11aa:	064872        	s8i	a7, a8, 6
+    11ad:	8c58      	l32i.n	a5, a12, 32
+    11af:	040542        	l8ui	a4, a5, 4
+    11b2:	f0a062        	movi	a6, 240
+    11b5:	104460        	and	a4, a4, a6
+    11b8:	760c      	movi.n	a6, 7
+    11ba:	204460        	or	a4, a4, a6
+    11bd:	044542        	s8i	a4, a5, 4
+    11c0:	ffe946        	j	1169 <ppEnqueueRxq+0x7b9>
+    11c3:	ffc301        	l32r	a0, 10d0 <ppEnqueueRxq+0x720>
+    11c6:	0000c0        	callx0	a0
+    11c9:	02dc      	bnez.n	a2, 11dd <ppEnqueueRxq+0x82d>
+    11cb:	8cb8      	l32i.n	a11, a12, 32
+    11cd:	0bb8      	l32i.n	a11, a11, 0
+    11cf:	0a7b37        	bbci	a11, 19, 11dd <ppEnqueueRxq+0x82d>
+    11d2:	120c      	movi.n	a2, 1
+    11d4:	ffc001        	l32r	a0, 10d4 <ppEnqueueRxq+0x724>
+    11d7:	0000c0        	callx0	a0
+    11da:	0028c6        	j	1281 <ppEnqueueRxq+0x8d1>
+    11dd:	ffb601        	l32r	a0, 10b8 <ppEnqueueRxq+0x708>
+    11e0:	000002        	l8ui	a0, a0, 0
+    11e3:	80dc      	bnez.n	a0, 11ff <ppEnqueueRxq+0x84f>
+    11e5:	ffbc01        	l32r	a0, 10d8 <ppEnqueueRxq+0x728>
+    11e8:	0000c0        	callx0	a0
+    11eb:	0020c0        	memw
+    11ee:	ffb341        	l32r	a4, 10bc <ppEnqueueRxq+0x70c>
+    11f1:	802432        	l32i	a3, a4, 0x200
+    11f4:	056c      	movi.n	a5, -32
+    11f6:	103350        	and	a3, a3, a5
+    11f9:	0020c0        	memw
+    11fc:	806432        	s32i	a3, a4, 0x200
+    11ff:	6c38      	l32i.n	a3, a12, 24
+    1201:	8c48      	l32i.n	a4, a12, 32
+    1203:	760332        	l8ui	a3, a3, 118
+    1206:	000422        	l8ui	a2, a4, 0
+    1209:	060452        	l8ui	a5, a4, 6
+    120c:	042120        	extui	a2, a2, 1, 1
+    120f:	040442        	l8ui	a4, a4, 4
+    1212:	245450        	extui	a5, a5, 4, 3
+    1215:	344040        	extui	a4, a4, 0, 4
+    1218:	ffac05        	call0	cdc <ppEnqueueRxq+0x32c>
+    121b:	ffa941        	l32r	a4, 10c0 <ppEnqueueRxq+0x710>
+    121e:	020d      	mov.n	a0, a2
+    1220:	000442        	l8ui	a4, a4, 0
+    1223:	4129      	s32i.n	a2, a1, 16
+    1225:	f4dc      	bnez.n	a4, 1248 <ppEnqueueRxq+0x898>
+    1227:	0020c0        	memw
+    122a:	ffa661        	l32r	a6, 10c4 <ppEnqueueRxq+0x714>
+    122d:	802652        	l32i	a5, a6, 0x200
+    1230:	076c      	movi.n	a7, -32
+    1232:	105570        	and	a5, a5, a7
+    1235:	170c      	movi.n	a7, 1
+    1237:	205570        	or	a5, a5, a7
+    123a:	0020c0        	memw
+    123d:	806652        	s32i	a5, a6, 0x200
+    1240:	ffa701        	l32r	a0, 10dc <ppEnqueueRxq+0x72c>
+    1243:	0000c0        	callx0	a0
+    1246:	4108      	l32i.n	a0, a1, 16
+    1248:	0109      	s32i.n	a0, a1, 0
+    124a:	338026        	beqi	a0, 8, 1281 <ppEnqueueRxq+0x8d1>
+    124d:	8c28      	l32i.n	a2, a12, 32
+    124f:	000222        	l8ui	a2, a2, 0
+    1252:	042120        	extui	a2, a2, 1, 1
+    1255:	ffa201        	l32r	a0, 10e0 <ppEnqueueRxq+0x730>
+    1258:	0000c0        	callx0	a0
+    125b:	a29c      	beqz.n	a2, 1279 <ppEnqueueRxq+0x8c9>
+    125d:	c3a062        	movi	a6, 195
+    1260:	8c48      	l32i.n	a4, a12, 32
+    1262:	0158      	l32i.n	a5, a1, 0
+    1264:	000432        	l8ui	a3, a4, 0
+    1267:	345050        	extui	a5, a5, 0, 4
+    126a:	1155e0        	slli	a5, a5, 2
+    126d:	103360        	and	a3, a3, a6
+    1270:	203350        	or	a3, a3, a5
+    1273:	004432        	s8i	a3, a4, 0
+    1276:	ffbbc6        	j	1169 <ppEnqueueRxq+0x7b9>
+    1279:	120c      	movi.n	a2, 1
+    127b:	ff9a01        	l32r	a0, 10e4 <ppEnqueueRxq+0x734>
+    127e:	0000c0        	callx0	a0
+    1281:	120c      	movi.n	a2, 1
+    1283:	ffb906        	j	116b <ppEnqueueRxq+0x7bb>
+    1286:	ff9801        	l32r	a0, 10e8 <ppEnqueueRxq+0x738>
+    1289:	0000c0        	callx0	a0
+    128c:	929c      	beqz.n	a2, 12a9 <ppEnqueueRxq+0x8f9>
+    128e:	8c88      	l32i.n	a8, a12, 32
+    1290:	ffa7c6        	j	1133 <ppEnqueueRxq+0x783>
+    1293:	120c      	movi.n	a2, 1
+    1295:	ff9501        	l32r	a0, 10ec <ppEnqueueRxq+0x73c>
+    1298:	0000c0        	callx0	a0
+    129b:	fff886        	j	1281 <ppEnqueueRxq+0x8d1>
+    129e:	120c      	movi.n	a2, 1
+    12a0:	ff9401        	l32r	a0, 10f0 <ppEnqueueRxq+0x740>
+    12a3:	0000c0        	callx0	a0
+    12a6:	fff5c6        	j	1281 <ppEnqueueRxq+0x8d1>
+    12a9:	120c      	movi.n	a2, 1
+    12ab:	ff9201        	l32r	a0, 10f4 <ppEnqueueRxq+0x744>
+    12ae:	0000c0        	callx0	a0
+    12b1:	fff306        	j	1281 <ppEnqueueRxq+0x8d1>
+
+000012b4 <ppDiscardMPDU>:
+    12b4:	040c      	movi.n	a4, 0
+    12b6:	f0c112        	addi	a1, a1, -16
+    12b9:	0109      	s32i.n	a0, a1, 0
+    12bb:	8238      	l32i.n	a3, a2, 32
+    12bd:	400c      	movi.n	a0, 4
+    12bf:	0e4342        	s8i	a4, a3, 14
+    12c2:	0f4302        	s8i	a0, a3, 15
+    12c5:	000005        	call0	12c8 <ppDiscardMPDU+0x14>
+    12c8:	420c      	movi.n	a2, 4
+    12ca:	000005        	call0	12cc <ppDiscardMPDU+0x18>
+    12cd:	0108      	l32i.n	a0, a1, 0
+    12cf:	10c112        	addi	a1, a1, 16
+    12d2:	f00d      	ret.n
+    12d4:	000000        	ill
+    12d7:	fe0000        	excw
+    12da:	ef          	.byte 0xef
+    12db:	3f          	.byte 0x3f
+    12dc:	000000        	ill
+    12df:	023000        	excw
+    12e2:	000000        	ill
+    12e5:	fe          	.byte 0xfe
+    12e6:	ef          	.byte 0xef
+    12e7:	3f          	.byte 0x3f
+    12e8:	effe00        	excw
+    12eb:	3f          	.byte 0x3f
+    12ec:	000074        	excw
+    12ef:	000000        	ill
+    12f2:	840000        	extui	a0, a0, 0, 9
+    12f5:	000000        	ill
+    12f8:	0088      	l32i.n	a8, a0, 0
+	...
+    1306:	200000        	or	a0, a0, a0
+	...
+
+00001320 <pp_post>:
+    1320:	f0c112        	addi	a1, a1, -16
+    1323:	1109      	s32i.n	a0, a1, 4
+    1325:	ffeb01        	l32r	a0, 12d4 <ppDiscardMPDU+0x20>
+    1328:	21c9      	s32i.n	a12, a1, 8
+    132a:	000002        	l8ui	a0, a0, 0
+    132d:	02cd      	mov.n	a12, a2
+    132f:	e0dc      	bnez.n	a0, 1351 <pp_post+0x31>
+    1331:	fff201        	l32r	a0, 12fc <ppDiscardMPDU+0x48>
+    1334:	0000c0        	callx0	a0
+    1337:	0020c0        	memw
+    133a:	ffe721        	l32r	a2, 12d8 <ppDiscardMPDU+0x24>
+    133d:	802232        	l32i	a3, a2, 0x200
+    1340:	066c      	movi.n	a6, -32
+    1342:	103360        	and	a3, a3, a6
+    1345:	0020c0        	memw
+    1348:	ffe501        	l32r	a0, 12dc <ppDiscardMPDU+0x28>
+    134b:	806232        	s32i	a3, a2, 0x200
+    134e:	000002        	l8ui	a0, a0, 0
+    1351:	ffe351        	l32r	a5, 12e0 <ppDiscardMPDU+0x2c>
+    1354:	5c5a      	add.n	a5, a12, a5
+    1356:	000542        	l8ui	a4, a5, 0
+    1359:	170c      	movi.n	a7, 1
+    135b:	84ac      	beqz.n	a4, 1387 <pp_post+0x67>
+    135d:	b0dc      	bnez.n	a0, 137c <pp_post+0x5c>
+    135f:	0020c0        	memw
+    1362:	ffe081        	l32r	a8, 12e4 <ppDiscardMPDU+0x30>
+    1365:	802862        	l32i	a6, a8, 0x200
+    1368:	096c      	movi.n	a9, -32
+    136a:	106690        	and	a6, a6, a9
+    136d:	206670        	or	a6, a6, a7
+    1370:	0020c0        	memw
+    1373:	806862        	s32i	a6, a8, 0x200
+    1376:	ffe201        	l32r	a0, 1300 <ppDiscardMPDU+0x4c>
+    1379:	0000c0        	callx0	a0
+    137c:	020c      	movi.n	a2, 0
+    137e:	21c8      	l32i.n	a12, a1, 8
+    1380:	1108      	l32i.n	a0, a1, 4
+    1382:	10c112        	addi	a1, a1, 16
+    1385:	f00d      	ret.n
+    1387:	a41b      	addi.n	a10, a4, 1
+    1389:	0045a2        	s8i	a10, a5, 0
+    138c:	b0dc      	bnez.n	a0, 13ab <pp_post+0x8b>
+    138e:	0020c0        	memw
+    1391:	ffd501        	l32r	a0, 12e8 <ppDiscardMPDU+0x34>
+    1394:	8020b2        	l32i	a11, a0, 0x200
+    1397:	026c      	movi.n	a2, -32
+    1399:	10bb20        	and	a11, a11, a2
+    139c:	20bb70        	or	a11, a11, a7
+    139f:	0020c0        	memw
+    13a2:	8060b2        	s32i	a11, a0, 0x200
+    13a5:	ffd701        	l32r	a0, 1304 <ppDiscardMPDU+0x50>
+    13a8:	0000c0        	callx0	a0
+    13ab:	374cf6        	bgeui	a12, 4, 13e6 <pp_post+0xc6>
+    13ae:	ffd601        	l32r	a0, 1308 <ppDiscardMPDU+0x54>
+    13b1:	0000c0        	callx0	a0
+    13b4:	0129      	s32i.n	a2, a1, 0
+    13b6:	92cc      	bnez.n	a2, 13c3 <pp_post+0xa3>
+    13b8:	ffcd21        	l32r	a2, 12ec <ppDiscardMPDU+0x38>
+    13bb:	ffd401        	l32r	a0, 130c <ppDiscardMPDU+0x58>
+    13be:	0000c0        	callx0	a0
+    13c1:	0128      	l32i.n	a2, a1, 0
+    13c3:	140c      	movi.n	a4, 1
+    13c5:	ffca31        	l32r	a3, 12f0 <ppDiscardMPDU+0x3c>
+    13c8:	02c9      	s32i.n	a12, a2, 0
+    13ca:	050c      	movi.n	a5, 0
+    13cc:	122322        	l32i	a2, a3, 72
+    13cf:	013d      	mov.n	a3, a1
+    13d1:	ffcf01        	l32r	a0, 1310 <ppDiscardMPDU+0x5c>
+    13d4:	0000c0        	callx0	a0
+    13d7:	a11226        	beqi	a2, 1, 137c <pp_post+0x5c>
+    13da:	ffc621        	l32r	a2, 12f4 <ppDiscardMPDU+0x40>
+    13dd:	ffcd01        	l32r	a0, 1314 <ppDiscardMPDU+0x60>
+    13e0:	0000c0        	callx0	a0
+    13e3:	ffe546        	j	137c <pp_post+0x5c>
+    13e6:	fec445        	call0	2c <ppTask-0x80>
+    13e9:	020d      	mov.n	a0, a2
+    13eb:	3129      	s32i.n	a2, a1, 12
+    13ed:	92cc      	bnez.n	a2, 13fa <pp_post+0xda>
+    13ef:	ffc221        	l32r	a2, 12f8 <ppDiscardMPDU+0x44>
+    13f2:	ffc901        	l32r	a0, 1318 <ppDiscardMPDU+0x64>
+    13f5:	0000c0        	callx0	a0
+    13f8:	3108      	l32i.n	a0, a1, 12
+    13fa:	220c      	movi.n	a2, 2
+    13fc:	00c9      	s32i.n	a12, a0, 0
+    13fe:	ffc701        	l32r	a0, 131c <ppDiscardMPDU+0x68>
+    1401:	0000c0        	callx0	a0
+    1404:	ffdd06        	j	137c <pp_post+0x5c>
+	...
+    140f:	fe0000        	excw
+    1412:	ef          	.byte 0xef
+    1413:	3f          	.byte 0x3f
+	...
+    1420:	0008      	l32i.n	a0, a0, 0
+    1422:	b50000        	extui	a0, a0, 16, 12
+    1425:	0009      	s32i.n	a0, a0, 0
+    1427:	fe0000        	excw
+    142a:	ef          	.byte 0xef
+    142b:	3f          	.byte 0x3f
+    142c:	effe00        	excw
+    142f:	3f          	.byte 0x3f
+	...
+
+00001440 <ppCalTxop>:
+    1440:	037d      	mov.n	a7, a3
+    1442:	f0c112        	addi	a1, a1, -16
+    1445:	043d      	mov.n	a3, a4
+    1447:	fff041        	l32r	a4, 1408 <pp_post+0xe8>
+    144a:	2109      	s32i.n	a0, a1, 8
+    144c:	1408      	l32i.n	a0, a4, 4
+    144e:	1122b0        	slli	a2, a2, 5
+    1451:	002a      	add.n	a0, a0, a2
+    1453:	270052        	l8ui	a5, a0, 39
+    1456:	08e556        	bnez	a5, 14e8 <ppCalTxop+0xa8>
+    1459:	1129      	s32i.n	a2, a1, 4
+    145b:	ffec81        	l32r	a8, 140c <pp_post+0xec>
+    145e:	0139      	s32i.n	a3, a1, 0
+    1460:	000882        	l8ui	a8, a8, 0
+    1463:	3179      	s32i.n	a7, a1, 12
+    1465:	98ec      	bnez.n	a8, 1492 <ppCalTxop+0x52>
+    1467:	fff201        	l32r	a0, 1430 <pp_post+0x110>
+    146a:	0000c0        	callx0	a0
+    146d:	3178      	l32i.n	a7, a1, 12
+    146f:	0020c0        	memw
+    1472:	ffe791        	l32r	a9, 1410 <pp_post+0xf0>
+    1475:	802922        	l32i	a2, a9, 0x200
+    1478:	0a6c      	movi.n	a10, -32
+    147a:	1022a0        	and	a2, a2, a10
+    147d:	0020c0        	memw
+    1480:	ffe681        	l32r	a8, 1418 <pp_post+0xf8>
+    1483:	806922        	s32i	a2, a9, 0x200
+    1486:	ffe301        	l32r	a0, 1414 <pp_post+0xf4>
+    1489:	1128      	l32i.n	a2, a1, 4
+    148b:	1008      	l32i.n	a0, a0, 4
+    148d:	000882        	l8ui	a8, a8, 0
+    1490:	002a      	add.n	a0, a0, a2
+    1492:	6008      	l32i.n	a0, a0, 24
+    1494:	1b0c      	movi.n	a11, 1
+    1496:	b0ac      	beqz.n	a0, 14c5 <ppCalTxop+0x85>
+    1498:	8068      	l32i.n	a6, a0, 32
+    149a:	0638      	l32i.n	a3, a6, 0
+    149c:	051622        	l16ui	a2, a6, 10
+    149f:	22f387        	bbsi	a3, 24, 14c5 <ppCalTxop+0x85>
+    14a2:	727a      	add.n	a7, a2, a7
+    14a4:	f47070        	extui	a7, a7, 0, 16
+    14a7:	00dc      	bnez.n	a0, 14bb <ppCalTxop+0x7b>
+    14a9:	ffdc21        	l32r	a2, 141c <pp_post+0xfc>
+    14ac:	ffdd31        	l32r	a3, 1420 <pp_post+0x100>
+    14af:	ffdd41        	l32r	a4, 1424 <pp_post+0x104>
+    14b2:	ffe001        	l32r	a0, 1434 <pp_post+0x114>
+    14b5:	0000c0        	callx0	a0
+    14b8:	ffff06        	j	14b8 <ppCalTxop+0x78>
+    14bb:	0138      	l32i.n	a3, a1, 0
+    14bd:	32b737        	bgeu	a7, a3, 14f3 <ppCalTxop+0xb3>
+    14c0:	7008      	l32i.n	a0, a0, 28
+    14c2:	fd2056        	bnez	a0, 1498 <ppCalTxop+0x58>
+    14c5:	3179      	s32i.n	a7, a1, 12
+    14c7:	d8dc      	bnez.n	a8, 14e8 <ppCalTxop+0xa8>
+    14c9:	0020c0        	memw
+    14cc:	ffd751        	l32r	a5, 1428 <pp_post+0x108>
+    14cf:	802542        	l32i	a4, a5, 0x200
+    14d2:	066c      	movi.n	a6, -32
+    14d4:	104460        	and	a4, a4, a6
+    14d7:	2044b0        	or	a4, a4, a11
+    14da:	0020c0        	memw
+    14dd:	806542        	s32i	a4, a5, 0x200
+    14e0:	ffd601        	l32r	a0, 1438 <pp_post+0x118>
+    14e3:	0000c0        	callx0	a0
+    14e6:	3178      	l32i.n	a7, a1, 12
+    14e8:	074d      	mov.n	a4, a7
+    14ea:	042d      	mov.n	a2, a4
+    14ec:	2108      	l32i.n	a0, a1, 8
+    14ee:	10c112        	addi	a1, a1, 16
+    14f1:	f00d      	ret.n
+    14f3:	b8dc      	bnez.n	a8, 1512 <ppCalTxop+0xd2>
+    14f5:	0020c0        	memw
+    14f8:	ffcd81        	l32r	a8, 142c <pp_post+0x10c>
+    14fb:	802872        	l32i	a7, a8, 0x200
+    14fe:	096c      	movi.n	a9, -32
+    1500:	107790        	and	a7, a7, a9
+    1503:	2077b0        	or	a7, a7, a11
+    1506:	0020c0        	memw
+    1509:	806872        	s32i	a7, a8, 0x200
+    150c:	ffcc01        	l32r	a0, 143c <pp_post+0x11c>
+    150f:	0000c0        	callx0	a0
+    1512:	0148      	l32i.n	a4, a1, 0
+    1514:	fff486        	j	14ea <ppCalTxop+0xaa>
+	...
+
+00001524 <ppCalFrameTimes>:
+    1524:	f0c112        	addi	a1, a1, -16
+    1527:	11c9      	s32i.n	a12, a1, 4
+    1529:	0109      	s32i.n	a0, a1, 0
+    152b:	8208      	l32i.n	a0, a2, 32
+    152d:	02cd      	mov.n	a12, a2
+    152f:	0028      	l32i.n	a2, a0, 0
+    1531:	0d7297        	bbci	a2, 25, 1542 <ppCalFrameTimes+0x1e>
+    1534:	080022        	l8ui	a2, a0, 8
+    1537:	fff801        	l32r	a0, 1518 <ppCalTxop+0xd8>
+    153a:	0000c0        	callx0	a0
+    153d:	8c08      	l32i.n	a0, a12, 32
+    153f:	000546        	j	1558 <ppCalFrameTimes+0x34>
+    1542:	10f207        	bbsi	a2, 16, 1556 <ppCalFrameTimes+0x32>
+    1545:	0de277        	bbsi	a2, 7, 1556 <ppCalFrameTimes+0x32>
+    1548:	080022        	l8ui	a2, a0, 8
+    154b:	fff401        	l32r	a0, 151c <ppCalTxop+0xdc>
+    154e:	0000c0        	callx0	a0
+    1551:	8c08      	l32i.n	a0, a12, 32
+    1553:	000046        	j	1558 <ppCalFrameTimes+0x34>
+    1556:	020c      	movi.n	a2, 0
+    1558:	8c48      	l32i.n	a4, a12, 32
+    155a:	031052        	l16ui	a5, a0, 6
+    155d:	846020        	extui	a6, a2, 0, 9
+    1560:	116690        	slli	a6, a6, 7
+    1563:	645050        	extui	a5, a5, 0, 7
+    1566:	205560        	or	a5, a5, a6
+    1569:	035052        	s16i	a5, a0, 6
+    156c:	080422        	l8ui	a2, a4, 8
+    156f:	0b1c52        	l16ui	a5, a12, 22
+    1572:	031442        	l16ui	a4, a4, 6
+    1575:	0a1c32        	l16ui	a3, a12, 20
+    1578:	414740        	srli	a4, a4, 7
+    157b:	335a      	add.n	a3, a3, a5
+    157d:	f43030        	extui	a3, a3, 0, 16
+    1580:	ffe801        	l32r	a0, 1520 <ppCalTxop+0xe0>
+    1583:	0000c0        	callx0	a0
+    1586:	0108      	l32i.n	a0, a1, 0
+    1588:	8c78      	l32i.n	a7, a12, 32
+    158a:	11c8      	l32i.n	a12, a1, 4
+    158c:	055722        	s16i	a2, a7, 10
+    158f:	10c112        	addi	a1, a1, 16
+    1592:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <pp_disable_noise_timer-0xcc>:
+   0:	000000        	ill
+   3:	fe0000        	excw
+   6:	ef          	.byte 0xef
+   7:	3f          	.byte 0x3f
+	...
+  10:	0001b0        	excw
+  13:	fe0000        	excw
+  16:	ef          	.byte 0xef
+  17:	3f          	.byte 0x3f
+	...
+  20:	fff821        	l32r	a2, 0 <pp_disable_noise_timer-0xcc>
+  23:	f0c112        	addi	a1, a1, -16
+  26:	000222        	l8ui	a2, a2, 0
+  29:	0109      	s32i.n	a0, a1, 0
+  2b:	e2dc      	bnez.n	a2, 4d <pp_disable_noise_timer-0x7f>
+  2d:	fffa01        	l32r	a0, 18 <pp_disable_noise_timer-0xb4>
+  30:	0000c0        	callx0	a0
+  33:	0020c0        	memw
+  36:	fff351        	l32r	a5, 4 <pp_disable_noise_timer-0xc8>
+  39:	802532        	l32i	a3, a5, 0x200
+  3c:	076c      	movi.n	a7, -32
+  3e:	103370        	and	a3, a3, a7
+  41:	0020c0        	memw
+  44:	fff121        	l32r	a2, 8 <pp_disable_noise_timer-0xc4>
+  47:	806532        	s32i	a3, a5, 0x200
+  4a:	000222        	l8ui	a2, a2, 0
+  4d:	ffef61        	l32r	a6, c <pp_disable_noise_timer-0xc0>
+  50:	fff001        	l32r	a0, 10 <pp_disable_noise_timer-0xbc>
+  53:	010632        	l8ui	a3, a6, 1
+  56:	000642        	l8ui	a4, a6, 0
+  59:	331b      	addi.n	a3, a3, 1
+  5b:	b00400        	addx8	a0, a4, a0
+  5e:	1109      	s32i.n	a0, a1, 4
+  60:	014632        	s8i	a3, a6, 1
+  63:	441b      	addi.n	a4, a4, 1
+  65:	744040        	extui	a4, a4, 0, 8
+  68:	0194b6        	bltui	a4, 10, 6d <pp_disable_noise_timer-0x5f>
+  6b:	040c      	movi.n	a4, 0
+  6d:	004642        	s8i	a4, a6, 0
+  70:	f2dc      	bnez.n	a2, 93 <pp_disable_noise_timer-0x39>
+  72:	160c      	movi.n	a6, 1
+  74:	0020c0        	memw
+  77:	ffe751        	l32r	a5, 14 <pp_disable_noise_timer-0xb8>
+  7a:	802542        	l32i	a4, a5, 0x200
+  7d:	076c      	movi.n	a7, -32
+  7f:	104470        	and	a4, a4, a7
+  82:	204460        	or	a4, a4, a6
+  85:	0020c0        	memw
+  88:	806542        	s32i	a4, a5, 0x200
+  8b:	ffe401        	l32r	a0, 1c <pp_disable_noise_timer-0xb0>
+  8e:	0000c0        	callx0	a0
+  91:	1108      	l32i.n	a0, a1, 4
+  93:	002d      	mov.n	a2, a0
+  95:	0108      	l32i.n	a0, a1, 0
+  97:	10c112        	addi	a1, a1, 16
+  9a:	f00d      	ret.n
+  9c:	000000        	ill
+  9f:	ff3100        	excw
+  a2:	ff          	.byte 0xff
+  a3:	010322        	l8ui	a2, a3, 1
+  a6:	220b      	addi.n	a2, a2, -1
+  a8:	014322        	s8i	a2, a3, 1
+  ab:	f00d      	ret.n
+  ad:	000000        	ill
+  b0:	000000        	ill
+  b3:	ff3100        	excw
+  b6:	ff          	.byte 0xff
+  b7:	030322        	l8ui	a2, a3, 3
+  ba:	220b      	addi.n	a2, a2, -1
+  bc:	034322        	s8i	a2, a3, 3
+  bf:	f00d      	ret.n
+  c1:	000000        	ill
+  c4:	000004        	excw
+  c7:	000000        	ill
+	...
+
+000000cc <pp_disable_noise_timer>:
+  cc:	fffe21        	l32r	a2, c4 <pp_disable_noise_timer-0x8>
+  cf:	f0c112        	addi	a1, a1, -16
+  d2:	0109      	s32i.n	a0, a1, 0
+  d4:	fffd01        	l32r	a0, c8 <pp_disable_noise_timer-0x4>
+  d7:	0000c0        	callx0	a0
+  da:	0108      	l32i.n	a0, a1, 0
+  dc:	10c112        	addi	a1, a1, 16
+  df:	f00d      	ret.n
+  e1:	000000        	ill
+  e4:	000004        	excw
+	...
+  ef:	000400        	excw
+	...
+
+00000108 <pp_enable_noise_timer>:
+ 108:	fff721        	l32r	a2, e4 <pp_disable_noise_timer+0x18>
+ 10b:	f0c112        	addi	a1, a1, -16
+ 10e:	0109      	s32i.n	a0, a1, 0
+ 110:	fff901        	l32r	a0, f4 <pp_disable_noise_timer+0x28>
+ 113:	0000c0        	callx0	a0
+ 116:	120c      	movi.n	a2, 1
+ 118:	130c      	movi.n	a3, 1
+ 11a:	fff701        	l32r	a0, f8 <pp_disable_noise_timer+0x2c>
+ 11d:	0000c0        	callx0	a0
+ 120:	fff701        	l32r	a0, fc <pp_disable_noise_timer+0x30>
+ 123:	0000c0        	callx0	a0
+ 126:	fff051        	l32r	a5, e8 <pp_disable_noise_timer+0x1c>
+ 129:	fff031        	l32r	a3, ec <pp_disable_noise_timer+0x20>
+ 12c:	222b      	addi.n	a2, a2, 2
+ 12e:	212220        	srai	a2, a2, 2
+ 131:	004322        	s8i	a2, a3, 0
+ 134:	101502        	l16ui	a0, a5, 32
+ 137:	9528      	l32i.n	a2, a5, 36
+ 139:	001b      	addi.n	a0, a0, 1
+ 13b:	f40000        	extui	a0, a0, 0, 16
+ 13e:	0d9207        	bne	a2, a0, 14f <pp_enable_noise_timer+0x47>
+ 141:	020c      	movi.n	a2, 0
+ 143:	105522        	s16i	a2, a5, 32
+ 146:	ffee01        	l32r	a0, 100 <pp_disable_noise_timer+0x34>
+ 149:	0000c0        	callx0	a0
+ 14c:	000086        	j	152 <pp_enable_noise_timer+0x4a>
+ 14f:	105502        	s16i	a0, a5, 32
+ 152:	ffe721        	l32r	a2, f0 <pp_disable_noise_timer+0x24>
+ 155:	64a032        	movi	a3, 100
+ 158:	040c      	movi.n	a4, 0
+ 15a:	ffea01        	l32r	a0, 104 <pp_disable_noise_timer+0x38>
+ 15d:	0000c0        	callx0	a0
+ 160:	0108      	l32i.n	a0, a1, 0
+ 162:	10c112        	addi	a1, a1, 16
+ 165:	f00d      	ret.n
+ 167:	000000        	ill
+	...
+
+0000016c <pp_noise_test>:
+ 16c:	f0c112        	addi	a1, a1, -16
+ 16f:	0109      	s32i.n	a0, a1, 0
+ 171:	fffd01        	l32r	a0, 168 <pp_enable_noise_timer+0x60>
+ 174:	0000c0        	callx0	a0
+ 177:	12cc      	bnez.n	a2, 17c <pp_noise_test+0x10>
+ 179:	000005        	call0	17c <pp_noise_test+0x10>
+ 17c:	0108      	l32i.n	a0, a1, 0
+ 17e:	10c112        	addi	a1, a1, 16
+ 181:	f00d      	ret.n
+	...
+
+0000018c <pp_disable_idle_timer>:
+ 18c:	fffe21        	l32r	a2, 184 <pp_noise_test+0x18>
+ 18f:	030c      	movi.n	a3, 0
+ 191:	f0c112        	addi	a1, a1, -16
+ 194:	0109      	s32i.n	a0, a1, 0
+ 196:	284232        	s8i	a3, a2, 40
+ 199:	2cc222        	addi	a2, a2, 44
+ 19c:	fffb01        	l32r	a0, 188 <pp_noise_test+0x1c>
+ 19f:	0000c0        	callx0	a0
+ 1a2:	0108      	l32i.n	a0, a1, 0
+ 1a4:	10c112        	addi	a1, a1, 16
+ 1a7:	f00d      	ret.n
+	...
+ 1b1:	000000        	ill
+ 1b4:	002c      	movi.n	a0, 32
+	...
+
+000001c0 <pp_enable_idle_timer>:
+ 1c0:	f0c112        	addi	a1, a1, -16
+ 1c3:	fffa21        	l32r	a2, 1ac <pp_disable_idle_timer+0x20>
+ 1c6:	0109      	s32i.n	a0, a1, 0
+ 1c8:	100c      	movi.n	a0, 1
+ 1ca:	284202        	s8i	a0, a2, 40
+ 1cd:	fffa01        	l32r	a0, 1b8 <pp_disable_idle_timer+0x2c>
+ 1d0:	0000c0        	callx0	a0
+ 1d3:	fff731        	l32r	a3, 1b0 <pp_disable_idle_timer+0x24>
+ 1d6:	040c      	movi.n	a4, 0
+ 1d8:	014322        	s8i	a2, a3, 1
+ 1db:	743020        	extui	a3, a2, 0, 8
+ 1de:	fff521        	l32r	a2, 1b4 <pp_disable_idle_timer+0x28>
+ 1e1:	fff601        	l32r	a0, 1bc <pp_disable_idle_timer+0x30>
+ 1e4:	0000c0        	callx0	a0
+ 1e7:	0108      	l32i.n	a0, a1, 0
+ 1e9:	10c112        	addi	a1, a1, 16
+ 1ec:	f00d      	ret.n
+ 1ee:	000000        	ill
+ 1f1:	000000        	ill
+
+000001f4 <pp_try_enable_idle_timer>:
+ 1f4:	f0c112        	addi	a1, a1, -16
+ 1f7:	0109      	s32i.n	a0, a1, 0
+ 1f9:	fffd01        	l32r	a0, 1f0 <pp_enable_idle_timer+0x30>
+ 1fc:	280002        	l8ui	a0, a0, 40
+ 1ff:	10cc      	bnez.n	a0, 204 <pp_try_enable_idle_timer+0x10>
+ 201:	000005        	call0	204 <pp_try_enable_idle_timer+0x10>
+ 204:	0108      	l32i.n	a0, a1, 0
+ 206:	10c112        	addi	a1, a1, 16
+ 209:	f00d      	ret.n
+ 20b:	fff700        	excw
+ 20e:	ff          	.byte 0xff
+ 20f:	000003        	excw
+ 212:	000080        	ret
+ 215:	000000        	ill
+ 218:	000010        	excw
+ 21b:	080000        	excw
+ 21e:	000000        	ill
+ 221:	000000        	ill
+ 224:	240c      	movi.n	a4, 2
+ 226:	c90c      	movi.n	a9, 12
+ 228:	f0c112        	addi	a1, a1, -16
+ 22b:	0109      	s32i.n	a0, a1, 0
+ 22d:	4278      	l32i.n	a7, a2, 16
+ 22f:	8258      	l32i.n	a5, a2, 32
+ 231:	040732        	l8ui	a3, a7, 4
+ 234:	0508      	l32i.n	a0, a5, 0
+ 236:	106307        	bbci	a3, 0, 24a <pp_try_enable_idle_timer+0x56>
+ 239:	413600        	srli	a3, a0, 6
+ 23c:	540000        	extui	a0, a0, 0, 6
+ 23f:	203340        	or	a3, a3, a4
+ 242:	1133a0        	slli	a3, a3, 6
+ 245:	200030        	or	a0, a0, a3
+ 248:	0509      	s32i.n	a0, a5, 0
+ 24a:	000782        	l8ui	a8, a7, 0
+ 24d:	f0a062        	movi	a6, 240
+ 250:	104890        	and	a4, a8, a9
+ 253:	106860        	and	a6, a8, a6
+ 256:	498466        	bnei	a4, 8, 2a3 <pp_try_enable_idle_timer+0xaf>
+ 259:	548000        	extui	a8, a0, 0, 6
+ 25c:	830c      	movi.n	a3, 8
+ 25e:	410600        	srli	a0, a0, 6
+ 261:	200030        	or	a0, a0, a3
+ 264:	1100a0        	slli	a0, a0, 6
+ 267:	200800        	or	a0, a8, a0
+ 26a:	0509      	s32i.n	a0, a5, 0
+ 26c:	05d626        	beqi	a6, 64, 275 <pp_try_enable_idle_timer+0x81>
+ 26f:	c0a042        	movi	a4, 192
+ 272:	139647        	bne	a6, a4, 289 <pp_try_enable_idle_timer+0x95>
+ 275:	546000        	extui	a6, a0, 0, 6
+ 278:	ffe531        	l32r	a3, 20c <pp_try_enable_idle_timer+0x18>
+ 27b:	410600        	srli	a0, a0, 6
+ 27e:	100030        	and	a0, a0, a3
+ 281:	1100a0        	slli	a0, a0, 6
+ 284:	200600        	or	a0, a6, a0
+ 287:	0509      	s32i.n	a0, a5, 0
+ 289:	414600        	srli	a4, a0, 6
+ 28c:	0108      	l32i.n	a0, a1, 0
+ 28e:	0c7427        	bbci	a4, 18, 29e <pp_try_enable_idle_timer+0xaa>
+ 291:	1258      	l32i.n	a5, a2, 4
+ 293:	0b1742        	l16ui	a4, a7, 22
+ 296:	1558      	l32i.n	a5, a5, 4
+ 298:	414440        	srli	a4, a4, 4
+ 29b:	034542        	s8i	a4, a5, 3
+ 29e:	10c112        	addi	a1, a1, 16
+ 2a1:	f00d      	ret.n
+ 2a3:	e28897        	bany	a8, a9, 289 <pp_try_enable_idle_timer+0x95>
+ 2a6:	414600        	srli	a4, a0, 6
+ 2a9:	3be666        	bnei	a6, 128, 2e8 <pp_try_enable_idle_timer+0xf4>
+ 2ac:	1179      	s32i.n	a7, a1, 4
+ 2ae:	549000        	extui	a9, a0, 0, 6
+ 2b1:	ffd881        	l32r	a8, 214 <pp_try_enable_idle_timer+0x20>
+ 2b4:	ffd7a1        	l32r	a10, 210 <pp_try_enable_idle_timer+0x1c>
+ 2b7:	1888      	l32i.n	a8, a8, 4
+ 2b9:	20a4a0        	or	a10, a4, a10
+ 2bc:	11aaa0        	slli	a10, a10, 6
+ 2bf:	2099a0        	or	a9, a9, a10
+ 2c2:	0599      	s32i.n	a9, a5, 0
+ 2c4:	572862        	l32i	a6, a8, 0x15c
+ 2c7:	2129      	s32i.n	a2, a1, 8
+ 2c9:	661b      	addi.n	a6, a6, 1
+ 2cb:	576862        	s32i	a6, a8, 0x15c
+ 2ce:	0e66b6        	bltui	a6, 6, 2e0 <pp_try_enable_idle_timer+0xec>
+ 2d1:	ffd121        	l32r	a2, 218 <pp_try_enable_idle_timer+0x24>
+ 2d4:	ffd301        	l32r	a0, 220 <pp_try_enable_idle_timer+0x2c>
+ 2d7:	0000c0        	callx0	a0
+ 2da:	2128      	l32i.n	a2, a1, 8
+ 2dc:	8258      	l32i.n	a5, a2, 32
+ 2de:	1178      	l32i.n	a7, a1, 4
+ 2e0:	0508      	l32i.n	a0, a5, 0
+ 2e2:	414600        	srli	a4, a0, 6
+ 2e5:	ffe8c6        	j	28c <pp_try_enable_idle_timer+0x98>
+ 2e8:	a0d666        	bnei	a6, 64, 28c <pp_try_enable_idle_timer+0x98>
+ 2eb:	9de077        	bbsi	a0, 7, 28c <pp_try_enable_idle_timer+0x98>
+ 2ee:	ffcb31        	l32r	a3, 21c <pp_try_enable_idle_timer+0x28>
+ 2f1:	540000        	extui	a0, a0, 0, 6
+ 2f4:	203430        	or	a3, a4, a3
+ 2f7:	1133a0        	slli	a3, a3, 6
+ 2fa:	200030        	or	a0, a0, a3
+ 2fd:	0509      	s32i.n	a0, a5, 0
+ 2ff:	fff7c6        	j	2e2 <pp_try_enable_idle_timer+0xee>
+ 302:	000000        	ill
+ 305:	000000        	ill
+ 308:	0008      	l32i.n	a0, a0, 0
+ 30a:	000000        	ill
+ 30d:	000000        	ill
+ 310:	effe00        	excw
+ 313:	3f          	.byte 0x3f
+	...
+ 31c:	000014        	excw
+ 31f:	000000        	ill
+ 322:	ac0000        	excw
+ 325:	000a      	add.n	a0, a0, a0
+	...
+ 337:	10f800        	and	a15, a8, a0
+	...
+
+00000358 <ppTxPkt>:
+ 358:	e0c112        	addi	a1, a1, -32
+ 35b:	21d9      	s32i.n	a13, a1, 8
+ 35d:	31e9      	s32i.n	a14, a1, 12
+ 35f:	41f9      	s32i.n	a15, a1, 16
+ 361:	0109      	s32i.n	a0, a1, 0
+ 363:	11c9      	s32i.n	a12, a1, 4
+ 365:	8208      	l32i.n	a0, a2, 32
+ 367:	02cd      	mov.n	a12, a2
+ 369:	060032        	l8ui	a3, a0, 6
+ 36c:	040022        	l8ui	a2, a0, 4
+ 36f:	243430        	extui	a3, a3, 4, 3
+ 372:	342020        	extui	a2, a2, 0, 4
+ 375:	529c      	beqz.n	a2, 38e <ppTxPkt+0x36>
+ 377:	133226        	beqi	a2, 3, 38e <ppTxPkt+0x36>
+ 37a:	0932a6        	blti	a2, 3, 387 <ppTxPkt+0x2f>
+ 37d:	140c      	movi.n	a4, 1
+ 37f:	0662a6        	blti	a2, 6, 389 <ppTxPkt+0x31>
+ 382:	040c      	movi.n	a4, 0
+ 384:	000046        	j	389 <ppTxPkt+0x31>
+ 387:	340c      	movi.n	a4, 3
+ 389:	042d      	mov.n	a2, a4
+ 38b:	000046        	j	390 <ppTxPkt+0x38>
+ 38e:	220c      	movi.n	a2, 2
+ 390:	111237        	beq	a2, a3, 3a5 <ppTxPkt+0x4d>
+ 393:	ffdc21        	l32r	a2, 304 <pp_try_enable_idle_timer+0x110>
+ 396:	ffdc31        	l32r	a3, 308 <pp_try_enable_idle_timer+0x114>
+ 399:	eda142        	movi	a4, 0x1ed
+ 39c:	ffe101        	l32r	a0, 320 <pp_try_enable_idle_timer+0x12c>
+ 39f:	0000c0        	callx0	a0
+ 3a2:	ffff06        	j	3a2 <ppTxPkt+0x4a>
+ 3a5:	0c2d      	mov.n	a2, a12
+ 3a7:	ffe7c5        	call0	224 <pp_try_enable_idle_timer+0x30>
+ 3aa:	0c2d      	mov.n	a2, a12
+ 3ac:	ffde01        	l32r	a0, 324 <pp_try_enable_idle_timer+0x130>
+ 3af:	0000c0        	callx0	a0
+ 3b2:	0f6c      	movi.n	a15, -32
+ 3b4:	ffd7d1        	l32r	a13, 310 <pp_try_enable_idle_timer+0x11c>
+ 3b7:	ffd5e1        	l32r	a14, 30c <pp_try_enable_idle_timer+0x118>
+ 3ba:	420b      	addi.n	a4, a2, -1
+ 3bc:	105416        	beqz	a4, 4c5 <ppTxPkt+0x16d>
+ 3bf:	000e52        	l8ui	a5, a14, 0
+ 3c2:	35dc      	bnez.n	a5, 3d9 <ppTxPkt+0x81>
+ 3c4:	ffd901        	l32r	a0, 328 <pp_try_enable_idle_timer+0x134>
+ 3c7:	0000c0        	callx0	a0
+ 3ca:	0020c0        	memw
+ 3cd:	802d62        	l32i	a6, a13, 0x200
+ 3d0:	1066f0        	and	a6, a6, a15
+ 3d3:	0020c0        	memw
+ 3d6:	806d62        	s32i	a6, a13, 0x200
+ 3d9:	6c28      	l32i.n	a2, a12, 24
+ 3db:	8c38      	l32i.n	a3, a12, 32
+ 3dd:	ffd301        	l32r	a0, 32c <pp_try_enable_idle_timer+0x138>
+ 3e0:	0000c0        	callx0	a0
+ 3e3:	000e72        	l8ui	a7, a14, 0
+ 3e6:	87dc      	bnez.n	a7, 402 <ppTxPkt+0xaa>
+ 3e8:	0020c0        	memw
+ 3eb:	802d82        	l32i	a8, a13, 0x200
+ 3ee:	190c      	movi.n	a9, 1
+ 3f0:	1088f0        	and	a8, a8, a15
+ 3f3:	208890        	or	a8, a8, a9
+ 3f6:	0020c0        	memw
+ 3f9:	806d82        	s32i	a8, a13, 0x200
+ 3fc:	ffcd01        	l32r	a0, 330 <pp_try_enable_idle_timer+0x13c>
+ 3ff:	0000c0        	callx0	a0
+ 402:	0c2d      	mov.n	a2, a12
+ 404:	ffcc01        	l32r	a0, 334 <pp_try_enable_idle_timer+0x140>
+ 407:	0000c0        	callx0	a0
+ 40a:	0c2d      	mov.n	a2, a12
+ 40c:	ffcb01        	l32r	a0, 338 <pp_try_enable_idle_timer+0x144>
+ 40f:	0000c0        	callx0	a0
+ 412:	050c      	movi.n	a5, 0
+ 414:	ffc041        	l32r	a4, 314 <pp_try_enable_idle_timer+0x120>
+ 417:	073256        	bnez	a2, 48e <ppTxPkt+0x136>
+ 41a:	000e92        	l8ui	a9, a14, 0
+ 41d:	89dc      	bnez.n	a9, 439 <ppTxPkt+0xe1>
+ 41f:	ffc701        	l32r	a0, 33c <pp_try_enable_idle_timer+0x148>
+ 422:	0000c0        	callx0	a0
+ 425:	050c      	movi.n	a5, 0
+ 427:	ffbc41        	l32r	a4, 318 <pp_try_enable_idle_timer+0x124>
+ 42a:	0020c0        	memw
+ 42d:	802da2        	l32i	a10, a13, 0x200
+ 430:	10aaf0        	and	a10, a10, a15
+ 433:	0020c0        	memw
+ 436:	806da2        	s32i	a10, a13, 0x200
+ 439:	8c08      	l32i.n	a0, a12, 32
+ 43b:	7c59      	s32i.n	a5, a12, 28
+ 43d:	000072        	l8ui	a7, a0, 0
+ 440:	1438      	l32i.n	a3, a4, 4
+ 442:	347270        	extui	a7, a7, 2, 4
+ 445:	1177b0        	slli	a7, a7, 5
+ 448:	737a      	add.n	a7, a3, a7
+ 44a:	7778      	l32i.n	a7, a7, 28
+ 44c:	07c9      	s32i.n	a12, a7, 0
+ 44e:	000062        	l8ui	a6, a0, 0
+ 451:	1ccc22        	addi	a2, a12, 28
+ 454:	346260        	extui	a6, a6, 2, 4
+ 457:	1166b0        	slli	a6, a6, 5
+ 45a:	336a      	add.n	a3, a3, a6
+ 45c:	7329      	s32i.n	a2, a3, 28
+ 45e:	000eb2        	l8ui	a11, a14, 0
+ 461:	abdc      	bnez.n	a11, 47f <ppTxPkt+0x127>
+ 463:	0020c0        	memw
+ 466:	802d82        	l32i	a8, a13, 0x200
+ 469:	190c      	movi.n	a9, 1
+ 46b:	1088f0        	and	a8, a8, a15
+ 46e:	208890        	or	a8, a8, a9
+ 471:	0020c0        	memw
+ 474:	806d82        	s32i	a8, a13, 0x200
+ 477:	ffb201        	l32r	a0, 340 <pp_try_enable_idle_timer+0x14c>
+ 47a:	0000c0        	callx0	a0
+ 47d:	8c08      	l32i.n	a0, a12, 32
+ 47f:	060022        	l8ui	a2, a0, 6
+ 482:	242420        	extui	a2, a2, 4, 3
+ 485:	ffaf01        	l32r	a0, 344 <pp_try_enable_idle_timer+0x150>
+ 488:	0000c0        	callx0	a0
+ 48b:	001e46        	j	508 <ppTxPkt+0x1b0>
+ 48e:	271266        	bnei	a2, 1, 4b9 <ppTxPkt+0x161>
+ 491:	8c68      	l32i.n	a6, a12, 32
+ 493:	7c59      	s32i.n	a5, a12, 28
+ 495:	000682        	l8ui	a8, a6, 0
+ 498:	1478      	l32i.n	a7, a4, 4
+ 49a:	048180        	extui	a8, a8, 1, 1
+ 49d:	b08870        	addx8	a8, a8, a7
+ 4a0:	472882        	l32i	a8, a8, 0x11c
+ 4a3:	08c9      	s32i.n	a12, a8, 0
+ 4a5:	000662        	l8ui	a6, a6, 0
+ 4a8:	1ccc32        	addi	a3, a12, 28
+ 4ab:	046160        	extui	a6, a6, 1, 1
+ 4ae:	b06670        	addx8	a6, a6, a7
+ 4b1:	476632        	s32i	a3, a6, 0x11c
+ 4b4:	020c      	movi.n	a2, 0
+ 4b6:	001386        	j	508 <ppTxPkt+0x1b0>
+ 4b9:	f72266        	bnei	a2, 2, 4b4 <ppTxPkt+0x15c>
+ 4bc:	ff9821        	l32r	a2, 31c <pp_try_enable_idle_timer+0x128>
+ 4bf:	ffa201        	l32r	a0, 348 <pp_try_enable_idle_timer+0x154>
+ 4c2:	0000c0        	callx0	a0
+ 4c5:	000e92        	l8ui	a9, a14, 0
+ 4c8:	39dc      	bnez.n	a9, 4df <ppTxPkt+0x187>
+ 4ca:	ffa001        	l32r	a0, 34c <pp_try_enable_idle_timer+0x158>
+ 4cd:	0000c0        	callx0	a0
+ 4d0:	0020c0        	memw
+ 4d3:	802da2        	l32i	a10, a13, 0x200
+ 4d6:	10aaf0        	and	a10, a10, a15
+ 4d9:	0020c0        	memw
+ 4dc:	806da2        	s32i	a10, a13, 0x200
+ 4df:	0c2d      	mov.n	a2, a12
+ 4e1:	ff9b01        	l32r	a0, 350 <pp_try_enable_idle_timer+0x15c>
+ 4e4:	0000c0        	callx0	a0
+ 4e7:	000eb2        	l8ui	a11, a14, 0
+ 4ea:	8bdc      	bnez.n	a11, 506 <ppTxPkt+0x1ae>
+ 4ec:	0020c0        	memw
+ 4ef:	802dc2        	l32i	a12, a13, 0x200
+ 4f2:	1e0c      	movi.n	a14, 1
+ 4f4:	10ccf0        	and	a12, a12, a15
+ 4f7:	20cce0        	or	a12, a12, a14
+ 4fa:	0020c0        	memw
+ 4fd:	806dc2        	s32i	a12, a13, 0x200
+ 500:	ff9501        	l32r	a0, 354 <pp_try_enable_idle_timer+0x160>
+ 503:	0000c0        	callx0	a0
+ 506:	120c      	movi.n	a2, 1
+ 508:	11c8      	l32i.n	a12, a1, 4
+ 50a:	21d8      	l32i.n	a13, a1, 8
+ 50c:	31e8      	l32i.n	a14, a1, 12
+ 50e:	41f8      	l32i.n	a15, a1, 16
+ 510:	0108      	l32i.n	a0, a1, 0
+ 512:	20c112        	addi	a1, a1, 32
+ 515:	f00d      	ret.n
+ 517:	000000        	ill
+	...
+
+0000051c <ppRegisterTxCallback>:
+ 51c:	ffff71        	l32r	a7, 518 <ppTxPkt+0x1c0>
+ 51f:	180c      	movi.n	a8, 1
+ 521:	1778      	l32i.n	a7, a7, 4
+ 523:	b8a062        	movi	a6, 184
+ 526:	676a      	add.n	a6, a7, a6
+ 528:	800652        	l8ui	a5, a6, 128
+ 52b:	400300        	ssr	a3
+ 52e:	b14050        	sra	a4, a5
+ 531:	036407        	bbci	a4, 0, 538 <ppRegisterTxCallback+0x1c>
+ 534:	082d      	mov.n	a2, a8
+ 536:	f00d      	ret.n
+ 538:	401300        	ssl	a3
+ 53b:	a09370        	addx4	a9, a3, a7
+ 53e:	a1a800        	sll	a10, a8
+ 541:	20a5a0        	or	a10, a5, a10
+ 544:	8046a2        	s8i	a10, a6, 128
+ 547:	4f6922        	s32i	a2, a9, 0x13c
+ 54a:	020c      	movi.n	a2, 0
+ 54c:	f00d      	ret.n
+ 54e:	200000        	or	a0, a0, a0
+ 551:	000000        	ill
+ 554:	0028      	l32i.n	a2, a0, 0
+	...
+ 56e:	e40000        	extui	a0, a0, 0, 15
+ 571:	0009      	s32i.n	a0, a0, 0
+ 573:	069c00        	excw
+	...
+ 586:	120000        	excw
+ 589:	c9f0c1        	l32r	a12, ffff2d4c <ppCalFrameTimes+0xffff1828>
+ 58c:	21d911        	l32r	a1, fffc8cf0 <ppCalFrameTimes+0xfffc77cc>
+ 58f:	31e9      	s32i.n	a14, a1, 12
+ 591:	0109      	s32i.n	a0, a1, 0
+ 593:	f5a0e2        	movi	a14, 245
+ 596:	000386        	j	5a8 <ppRegisterTxCallback+0x8c>
+ 599:	fff301        	l32r	a0, 568 <ppRegisterTxCallback+0x4c>
+ 59c:	0000c0        	callx0	a0
+ 59f:	ffec21        	l32r	a2, 550 <ppRegisterTxCallback+0x34>
+ 5a2:	fff201        	l32r	a0, 56c <ppRegisterTxCallback+0x50>
+ 5a5:	0000c0        	callx0	a0
+ 5a8:	fff201        	l32r	a0, 570 <ppRegisterTxCallback+0x54>
+ 5ab:	0000c0        	callx0	a0
+ 5ae:	02cd      	mov.n	a12, a2
+ 5b0:	095216        	beqz	a2, 649 <ppRegisterTxCallback+0x12d>
+ 5b3:	42d8      	l32i.n	a13, a2, 16
+ 5b5:	1268      	l32i.n	a6, a2, 4
+ 5b7:	5dcb      	addi.n	a5, a13, 12
+ 5b9:	1659      	s32i.n	a5, a6, 4
+ 5bb:	080d02        	l8ui	a0, a13, 8
+ 5be:	108c      	beqz.n	a0, 5c3 <ppRegisterTxCallback+0xa7>
+ 5c0:	d590e7        	bne	a0, a14, 599 <ppRegisterTxCallback+0x7d>
+ 5c3:	0c2d      	mov.n	a2, a12
+ 5c5:	0d3d      	mov.n	a3, a13
+ 5c7:	ffeb01        	l32r	a0, 574 <ppRegisterTxCallback+0x58>
+ 5ca:	0000c0        	callx0	a0
+ 5cd:	a28c      	beqz.n	a2, 5db <ppRegisterTxCallback+0xbf>
+ 5cf:	ffe121        	l32r	a2, 554 <ppRegisterTxCallback+0x38>
+ 5d2:	ffe901        	l32r	a0, 578 <ppRegisterTxCallback+0x5c>
+ 5d5:	0000c0        	callx0	a0
+ 5d8:	fff306        	j	5a8 <ppRegisterTxCallback+0x8c>
+ 5db:	030d02        	l8ui	a0, a13, 3
+ 5de:	ffde91        	l32r	a9, 558 <ppRegisterTxCallback+0x3c>
+ 5e1:	02e047        	bbsi	a0, 4, 5e7 <ppRegisterTxCallback+0xcb>
+ 5e4:	046067        	bbci	a0, 6, 5ec <ppRegisterTxCallback+0xd0>
+ 5e7:	418700        	srli	a8, a0, 7
+ 5ea:	488c      	beqz.n	a8, 5f2 <ppRegisterTxCallback+0xd6>
+ 5ec:	510992        	l8ui	a9, a9, 81
+ 5ef:	1c1966        	bnei	a9, 1, 60f <ppRegisterTxCallback+0xf3>
+ 5f2:	0c3d      	mov.n	a3, a12
+ 5f4:	050c      	movi.n	a5, 0
+ 5f6:	4c48      	l32i.n	a4, a12, 16
+ 5f8:	ffd921        	l32r	a2, 55c <ppRegisterTxCallback+0x40>
+ 5fb:	000442        	l8ui	a4, a4, 0
+ 5fe:	4228      	l32i.n	a2, a2, 16
+ 600:	014480        	slli	a4, a4, 24
+ 603:	314840        	srai	a4, a4, 24
+ 606:	ffdd01        	l32r	a0, 57c <ppRegisterTxCallback+0x60>
+ 609:	0000c0        	callx0	a0
+ 60c:	030d02        	l8ui	a0, a13, 3
+ 60f:	05e057        	bbsi	a0, 5, 618 <ppRegisterTxCallback+0xfc>
+ 612:	413700        	srli	a3, a0, 7
+ 615:	f8f316        	beqz	a3, 5a8 <ppRegisterTxCallback+0x8c>
+ 618:	ffd241        	l32r	a4, 560 <ppRegisterTxCallback+0x44>
+ 61b:	000442        	l8ui	a4, a4, 0
+ 61e:	0a1466        	bnei	a4, 1, 62c <ppRegisterTxCallback+0x110>
+ 621:	0c2d      	mov.n	a2, a12
+ 623:	ffd701        	l32r	a0, 580 <ppRegisterTxCallback+0x64>
+ 626:	0000c0        	callx0	a0
+ 629:	ffdec6        	j	5a8 <ppRegisterTxCallback+0x8c>
+ 62c:	0c3d      	mov.n	a3, a12
+ 62e:	050c      	movi.n	a5, 0
+ 630:	4c48      	l32i.n	a4, a12, 16
+ 632:	ffcc21        	l32r	a2, 564 <ppRegisterTxCallback+0x48>
+ 635:	000442        	l8ui	a4, a4, 0
+ 638:	5228      	l32i.n	a2, a2, 20
+ 63a:	014480        	slli	a4, a4, 24
+ 63d:	314840        	srai	a4, a4, 24
+ 640:	ffd101        	l32r	a0, 584 <ppRegisterTxCallback+0x68>
+ 643:	0000c0        	callx0	a0
+ 646:	ffd786        	j	5a8 <ppRegisterTxCallback+0x8c>
+ 649:	11c8      	l32i.n	a12, a1, 4
+ 64b:	21d8      	l32i.n	a13, a1, 8
+ 64d:	31e8      	l32i.n	a14, a1, 12
+ 64f:	0108      	l32i.n	a0, a1, 0
+ 651:	10c112        	addi	a1, a1, 16
+ 654:	f00d      	ret.n
+	...
+ 69a:	420000        	excw
+ 69d:	12f0a0        	excw
+ 6a0:	29d0c1        	l32r	a12, fffcade0 <ppCalFrameTimes+0xfffc98bc>
+ 6a3:	310991        	l32r	a9, fffccac8 <ppCalFrameTimes+0xfffcb5a4>
+ 6a6:	41c9      	s32i.n	a12, a1, 16
+ 6a8:	61e9      	s32i.n	a14, a1, 24
+ 6aa:	71f9      	s32i.n	a15, a1, 28
+ 6ac:	51d9      	s32i.n	a13, a1, 20
+ 6ae:	cf0c      	movi.n	a15, 12
+ 6b0:	03dd      	mov.n	a13, a3
+ 6b2:	12e8      	l32i.n	a14, a2, 4
+ 6b4:	ffe9c1        	l32r	a12, 658 <ppRegisterTxCallback+0x13c>
+ 6b7:	1ee8      	l32i.n	a14, a14, 4
+ 6b9:	000c32        	l8ui	a3, a12, 0
+ 6bc:	000e02        	l8ui	a0, a14, 0
+ 6bf:	013380        	slli	a3, a3, 24
+ 6c2:	10f0f0        	and	a15, a0, a15
+ 6c5:	313830        	srai	a3, a3, 24
+ 6c8:	100040        	and	a0, a0, a4
+ 6cb:	8109      	s32i.n	a0, a1, 32
+ 6cd:	0d13a6        	blti	a3, 1, 6de <ppRegisterTxCallback+0x1c2>
+ 6d0:	ffe401        	l32r	a0, 660 <ppRegisterTxCallback+0x144>
+ 6d3:	0000c0        	callx0	a0
+ 6d6:	322b      	addi.n	a3, a2, 2
+ 6d8:	213230        	srai	a3, a3, 2
+ 6db:	004c32        	s8i	a3, a12, 0
+ 6de:	030d02        	l8ui	a0, a13, 3
+ 6e1:	0b4d32        	s8i	a3, a13, 11
+ 6e4:	05e047        	bbsi	a0, 4, 6ed <ppRegisterTxCallback+0x1d1>
+ 6e7:	044600        	extui	a4, a0, 6, 1
+ 6ea:	14d416        	beqz	a4, 83b <ppRegisterTxCallback+0x31f>
+ 6ed:	09e057        	bbsi	a0, 5, 6fa <ppRegisterTxCallback+0x1de>
+ 6f0:	415700        	srli	a5, a0, 7
+ 6f3:	35cc      	bnez.n	a5, 6fa <ppRegisterTxCallback+0x1de>
+ 6f5:	0c0c      	movi.n	a12, 0
+ 6f7:	000046        	j	6fc <ppRegisterTxCallback+0x1e0>
+ 6fa:	2c0c      	movi.n	a12, 2
+ 6fc:	288f66        	bnei	a15, 8, 728 <ppRegisterTxCallback+0x20c>
+ 6ff:	ffd721        	l32r	a2, 65c <ppRegisterTxCallback+0x140>
+ 702:	030c      	movi.n	a3, 0
+ 704:	284232        	s8i	a3, a2, 40
+ 707:	2cc222        	addi	a2, a2, 44
+ 70a:	ffd601        	l32r	a0, 664 <ppRegisterTxCallback+0x148>
+ 70d:	0000c0        	callx0	a0
+ 710:	ffd601        	l32r	a0, 668 <ppRegisterTxCallback+0x14c>
+ 713:	0000c0        	callx0	a0
+ 716:	06b216        	beqz	a2, 785 <ppRegisterTxCallback+0x269>
+ 719:	ffd401        	l32r	a0, 66c <ppRegisterTxCallback+0x150>
+ 71c:	0000c0        	callx0	a0
+ 71f:	062216        	beqz	a2, 785 <ppRegisterTxCallback+0x269>
+ 722:	000005        	call0	724 <ppRegisterTxCallback+0x208>
+ 725:	001706        	j	785 <ppRegisterTxCallback+0x269>
+ 728:	059f56        	bnez	a15, 785 <ppRegisterTxCallback+0x269>
+ 72b:	8158      	l32i.n	a5, a1, 32
+ 72d:	54e566        	bnei	a5, 128, 785 <ppRegisterTxCallback+0x269>
+ 730:	0e2d      	mov.n	a2, a14
+ 732:	ffcf01        	l32r	a0, 670 <ppRegisterTxCallback+0x154>
+ 735:	0000c0        	callx0	a0
+ 738:	010d62        	l8ui	a6, a13, 1
+ 73b:	1129      	s32i.n	a2, a1, 4
+ 73d:	416660        	srli	a6, a6, 6
+ 740:	96cc      	bnez.n	a6, 74d <ppRegisterTxCallback+0x231>
+ 742:	011d72        	l16ui	a7, a13, 2
+ 745:	b47070        	extui	a7, a7, 0, 12
+ 748:	0179      	s32i.n	a7, a1, 0
+ 74a:	000406        	j	75e <ppRegisterTxCallback+0x242>
+ 74d:	031d82        	l16ui	a8, a13, 6
+ 750:	021d92        	l16ui	a9, a13, 4
+ 753:	118800        	slli	a8, a8, 16
+ 756:	208890        	or	a8, a8, a9
+ 759:	f48880        	extui	a8, a8, 8, 16
+ 75c:	0189      	s32i.n	a8, a1, 0
+ 75e:	2eab      	addi.n	a2, a14, 10
+ 760:	ffc501        	l32r	a0, 674 <ppRegisterTxCallback+0x158>
+ 763:	0000c0        	callx0	a0
+ 766:	b29c      	beqz.n	a2, 785 <ppRegisterTxCallback+0x269>
+ 768:	9128      	l32i.n	a2, a1, 36
+ 76a:	1158      	l32i.n	a5, a1, 4
+ 76c:	0148      	l32i.n	a4, a1, 0
+ 76e:	18ce32        	addi	a3, a14, 24
+ 771:	c04450        	sub	a4, a4, a5
+ 774:	fcc442        	addi	a4, a4, -4
+ 777:	f44040        	extui	a4, a4, 0, 16
+ 77a:	4e4a      	add.n	a4, a14, a4
+ 77c:	18c442        	addi	a4, a4, 24
+ 77f:	ffbe01        	l32r	a0, 678 <ppRegisterTxCallback+0x15c>
+ 782:	0000c0        	callx0	a0
+ 785:	4e2cf6        	bgeui	a12, 2, 7d7 <ppRegisterTxCallback+0x2bb>
+ 788:	0c2d      	mov.n	a2, a12
+ 78a:	3eab      	addi.n	a3, a14, 10
+ 78c:	2139      	s32i.n	a3, a1, 8
+ 78e:	ffbb01        	l32r	a0, 67c <ppRegisterTxCallback+0x160>
+ 791:	0000c0        	callx0	a0
+ 794:	9168      	l32i.n	a6, a1, 36
+ 796:	0d3d      	mov.n	a3, a13
+ 798:	6629      	s32i.n	a2, a6, 24
+ 79a:	ffb901        	l32r	a0, 680 <ppRegisterTxCallback+0x164>
+ 79d:	0000c0        	callx0	a0
+ 7a0:	000d72        	l8ui	a7, a13, 0
+ 7a3:	0c2d      	mov.n	a2, a12
+ 7a5:	773b      	addi.n	a7, a7, 3
+ 7a7:	004d72        	s8i	a7, a13, 0
+ 7aa:	ffb601        	l32r	a0, 684 <ppRegisterTxCallback+0x168>
+ 7ad:	0000c0        	callx0	a0
+ 7b0:	070216        	beqz	a2, 824 <ppRegisterTxCallback+0x308>
+ 7b3:	06df56        	bnez	a15, 824 <ppRegisterTxCallback+0x308>
+ 7b6:	0e2d      	mov.n	a2, a14
+ 7b8:	ffb401        	l32r	a0, 688 <ppRegisterTxCallback+0x16c>
+ 7bb:	0000c0        	callx0	a0
+ 7be:	010d82        	l8ui	a8, a13, 1
+ 7c1:	418680        	srli	a8, a8, 6
+ 7c4:	08ec      	bnez.n	a8, 7e8 <ppRegisterTxCallback+0x2cc>
+ 7c6:	011d02        	l16ui	a0, a13, 2
+ 7c9:	b40000        	extui	a0, a0, 0, 12
+ 7cc:	0009c6        	j	7f7 <ppRegisterTxCallback+0x2db>
+ 7cf:	0c2d      	mov.n	a2, a12
+ 7d1:	ffae01        	l32r	a0, 68c <ppRegisterTxCallback+0x170>
+ 7d4:	0000c0        	callx0	a0
+ 7d7:	020c      	movi.n	a2, 0
+ 7d9:	41c8      	l32i.n	a12, a1, 16
+ 7db:	51d8      	l32i.n	a13, a1, 20
+ 7dd:	61e8      	l32i.n	a14, a1, 24
+ 7df:	71f8      	l32i.n	a15, a1, 28
+ 7e1:	3108      	l32i.n	a0, a1, 12
+ 7e3:	30c112        	addi	a1, a1, 48
+ 7e6:	f00d      	ret.n
+ 7e8:	031d02        	l16ui	a0, a13, 6
+ 7eb:	021d32        	l16ui	a3, a13, 4
+ 7ee:	110000        	slli	a0, a0, 16
+ 7f1:	200030        	or	a0, a0, a3
+ 7f4:	f40800        	extui	a0, a0, 8, 16
+ 7f7:	8138      	l32i.n	a3, a1, 32
+ 7f9:	04b326        	beqi	a3, 16, 801 <ppRegisterTxCallback+0x2e5>
+ 7fc:	053c      	movi.n	a5, 48
+ 7fe:	229357        	bne	a3, a5, 824 <ppRegisterTxCallback+0x308>
+ 801:	c03020        	sub	a3, a0, a2
+ 804:	18ce22        	addi	a2, a14, 24
+ 807:	fcc332        	addi	a3, a3, -4
+ 80a:	f43030        	extui	a3, a3, 0, 16
+ 80d:	3e3a      	add.n	a3, a14, a3
+ 80f:	18c332        	addi	a3, a3, 24
+ 812:	ff9f01        	l32r	a0, 690 <ppRegisterTxCallback+0x174>
+ 815:	0000c0        	callx0	a0
+ 818:	828c      	beqz.n	a2, 824 <ppRegisterTxCallback+0x308>
+ 81a:	0c2d      	mov.n	a2, a12
+ 81c:	2138      	l32i.n	a3, a1, 8
+ 81e:	ff9d01        	l32r	a0, 694 <ppRegisterTxCallback+0x178>
+ 821:	0000c0        	callx0	a0
+ 824:	010e42        	l8ui	a4, a14, 1
+ 827:	040e52        	l8ui	a5, a14, 4
+ 82a:	a96467        	bbci	a4, 6, 7d7 <ppRegisterTxCallback+0x2bb>
+ 82d:	9e6507        	bbci	a5, 0, 7cf <ppRegisterTxCallback+0x2b3>
+ 830:	0c2d      	mov.n	a2, a12
+ 832:	ff9901        	l32r	a0, 698 <ppRegisterTxCallback+0x17c>
+ 835:	0000c0        	callx0	a0
+ 838:	ffe6c6        	j	7d7 <ppRegisterTxCallback+0x2bb>
+ 83b:	04e057        	bbsi	a0, 5, 843 <ppRegisterTxCallback+0x327>
+ 83e:	416700        	srli	a6, a0, 7
+ 841:	368c      	beqz.n	a6, 848 <ppRegisterTxCallback+0x32c>
+ 843:	1c0c      	movi.n	a12, 1
+ 845:	ffacc6        	j	6fc <ppRegisterTxCallback+0x1e0>
+ 848:	2c0c      	movi.n	a12, 2
+ 84a:	ffab86        	j	6fc <ppRegisterTxCallback+0x1e0>
+	...
+ 855:	0e          	.byte 0xe
+ 856:	006000        	rsil	a0, 0
+ 859:	000000        	ill
+ 85c:	000030        	excw
+ 85f:	003800        	excw
+ 862:	000000        	ill
+ 865:	000000        	ill
+ 868:	001770        	excw
+	...
+
+00000884 <pp_attach>:
+ 884:	040c      	movi.n	a4, 0
+ 886:	160c      	movi.n	a6, 1
+ 888:	e0c112        	addi	a1, a1, -32
+ 88b:	fff131        	l32r	a3, 850 <ppRegisterTxCallback+0x334>
+ 88e:	5109      	s32i.n	a0, a1, 20
+ 890:	000c      	movi.n	a0, 0
+ 892:	1338      	l32i.n	a3, a3, 4
+ 894:	1120b0        	slli	a2, a0, 5
+ 897:	001b      	addi.n	a0, a0, 1
+ 899:	232a      	add.n	a2, a3, a2
+ 89b:	6249      	s32i.n	a4, a2, 24
+ 89d:	274242        	s8i	a4, a2, 39
+ 8a0:	740000        	extui	a0, a0, 0, 8
+ 8a3:	18c252        	addi	a5, a2, 24
+ 8a6:	7259      	s32i.n	a5, a2, 28
+ 8a8:	e88066        	bnei	a0, 8, 894 <pp_attach+0x10>
+ 8ab:	000c      	movi.n	a0, 0
+ 8ad:	750c      	movi.n	a5, 7
+ 8af:	1120b0        	slli	a2, a0, 5
+ 8b2:	001b      	addi.n	a0, a0, 1
+ 8b4:	232a      	add.n	a2, a3, a2
+ 8b6:	274262        	s8i	a6, a2, 39
+ 8b9:	244252        	s8i	a5, a2, 36
+ 8bc:	740000        	extui	a0, a0, 0, 8
+ 8bf:	ec2066        	bnei	a0, 2, 8af <pp_attach+0x2b>
+ 8c2:	0349      	s32i.n	a4, a3, 0
+ 8c4:	000c      	movi.n	a0, 0
+ 8c6:	906000        	addx2	a6, a0, a0
+ 8c9:	a05030        	addx4	a5, a0, a3
+ 8cc:	1549      	s32i.n	a4, a5, 4
+ 8ce:	1166f0        	slli	a6, a6, 1
+ 8d1:	503a      	add.n	a5, a0, a3
+ 8d3:	263b      	addi.n	a2, a6, 3
+ 8d5:	b32660        	movgez	a2, a6, a6
+ 8d8:	001b      	addi.n	a0, a0, 1
+ 8da:	740000        	extui	a0, a0, 0, 8
+ 8dd:	212220        	srai	a2, a2, 2
+ 8e0:	222b      	addi.n	a2, a2, 2
+ 8e2:	144522        	s8i	a2, a5, 20
+ 8e5:	dd4066        	bnei	a0, 4, 8c6 <pp_attach+0x42>
+ 8e8:	000c      	movi.n	a0, 0
+ 8ea:	18a162        	movi	a6, 0x118
+ 8ed:	b02030        	addx8	a2, a0, a3
+ 8f0:	466242        	s32i	a4, a2, 0x118
+ 8f3:	001b      	addi.n	a0, a0, 1
+ 8f5:	526a      	add.n	a5, a2, a6
+ 8f7:	476252        	s32i	a5, a2, 0x11c
+ 8fa:	740000        	extui	a0, a0, 0, 8
+ 8fd:	ec2066        	bnei	a0, 2, 8ed <pp_attach+0x69>
+ 900:	4c6342        	s32i	a4, a3, 0x130
+ 903:	4a6342        	s32i	a4, a3, 0x128
+ 906:	30a192        	movi	a9, 0x130
+ 909:	28a182        	movi	a8, 0x128
+ 90c:	838a      	add.n	a8, a3, a8
+ 90e:	939a      	add.n	a9, a3, a9
+ 910:	4d6392        	s32i	a9, a3, 0x134
+ 913:	4b6382        	s32i	a8, a3, 0x12c
+ 916:	660c      	movi.n	a6, 6
+ 918:	ffcf71        	l32r	a7, 854 <ppRegisterTxCallback+0x338>
+ 91b:	0020c0        	memw
+ 91e:	fe6762        	s32i	a6, a7, 0x3f8
+ 921:	ffd401        	l32r	a0, 874 <ppRegisterTxCallback+0x358>
+ 924:	0000c0        	callx0	a0
+ 927:	ffcc21        	l32r	a2, 858 <ppRegisterTxCallback+0x33c>
+ 92a:	ffcc31        	l32r	a3, 85c <ppRegisterTxCallback+0x340>
+ 92d:	00a242        	movi	a4, 0x200
+ 930:	050c      	movi.n	a5, 0
+ 932:	461c      	movi.n	a6, 20
+ 934:	10c172        	addi	a7, a1, 16
+ 937:	0a0c      	movi.n	a10, 0
+ 939:	01a9      	s32i.n	a10, a1, 0
+ 93b:	11a9      	s32i.n	a10, a1, 4
+ 93d:	ffce01        	l32r	a0, 878 <ppRegisterTxCallback+0x35c>
+ 940:	0000c0        	callx0	a0
+ 943:	ffc721        	l32r	a2, 860 <ppRegisterTxCallback+0x344>
+ 946:	4138      	l32i.n	a3, a1, 16
+ 948:	441c      	movi.n	a4, 20
+ 94a:	00a252        	movi	a5, 0x200
+ 94d:	ffcb01        	l32r	a0, 87c <ppRegisterTxCallback+0x360>
+ 950:	0000c0        	callx0	a0
+ 953:	ffc431        	l32r	a3, 864 <ppRegisterTxCallback+0x348>
+ 956:	040c      	movi.n	a4, 0
+ 958:	ffc4b1        	l32r	a11, 868 <ppRegisterTxCallback+0x34c>
+ 95b:	64a052        	movi	a5, 100
+ 95e:	ffc361        	l32r	a6, 86c <ppRegisterTxCallback+0x350>
+ 961:	ffc301        	l32r	a0, 870 <ppRegisterTxCallback+0x354>
+ 964:	6a0662        	l8ui	a6, a6, 106
+ 967:	204b      	addi.n	a2, a0, 4
+ 969:	c15650        	mul16u	a5, a6, a5
+ 96c:	93b560        	movnez	a11, a5, a6
+ 96f:	90b9      	s32i.n	a11, a0, 36
+ 971:	ffc301        	l32r	a0, 880 <ppRegisterTxCallback+0x364>
+ 974:	0000c0        	callx0	a0
+ 977:	000005        	call0	978 <pp_attach+0xf4>
+ 97a:	5108      	l32i.n	a0, a1, 20
+ 97c:	20c112        	addi	a1, a1, 32
+ 97f:	f00d      	ret.n
+	...
+ 989:	000000        	ill
+ 98c:	000060        	excw
+ 98f:	020000        	excw
+ 992:	000000        	ill
+ 995:	fe          	.byte 0xfe
+ 996:	ef          	.byte 0xef
+ 997:	3f          	.byte 0x3f
+ 998:	effe00        	excw
+ 99b:	3f          	.byte 0x3f
+ 99c:	000070        	excw
+	...
+
+000009b4 <MacIsrSigPostDefHdl>:
+ 9b4:	e0c112        	addi	a1, a1, -32
+ 9b7:	31c9      	s32i.n	a12, a1, 12
+ 9b9:	51e9      	s32i.n	a14, a1, 20
+ 9bb:	41d9      	s32i.n	a13, a1, 16
+ 9bd:	fff1d1        	l32r	a13, 984 <pp_attach+0x100>
+ 9c0:	2109      	s32i.n	a0, a1, 8
+ 9c2:	030d02        	l8ui	a0, a13, 3
+ 9c5:	61f9      	s32i.n	a15, a1, 24
+ 9c7:	0a7016        	beqz	a0, a72 <MacIsrSigPostDefHdl+0xbe>
+ 9ca:	1f0c      	movi.n	a15, 1
+ 9cc:	ffefe1        	l32r	a14, 988 <pp_attach+0x104>
+ 9cf:	0c0c      	movi.n	a12, 0
+ 9d1:	ff64c5        	call0	20 <pp_disable_noise_timer-0xac>
+ 9d4:	0129      	s32i.n	a2, a1, 0
+ 9d6:	92cc      	bnez.n	a2, 9e3 <MacIsrSigPostDefHdl+0x2f>
+ 9d8:	ffed21        	l32r	a2, 98c <pp_attach+0x108>
+ 9db:	fff101        	l32r	a0, 9a0 <pp_attach+0x11c>
+ 9de:	0000c0        	callx0	a0
+ 9e1:	0128      	l32i.n	a2, a1, 0
+ 9e3:	ffeb31        	l32r	a3, 990 <pp_attach+0x10c>
+ 9e6:	4c0d02        	l8ui	a0, a13, 76
+ 9e9:	040c      	movi.n	a4, 0
+ 9eb:	a03030        	addx4	a3, a0, a3
+ 9ee:	0338      	l32i.n	a3, a3, 0
+ 9f0:	001b      	addi.n	a0, a0, 1
+ 9f2:	740000        	extui	a0, a0, 0, 8
+ 9f5:	0239      	s32i.n	a3, a2, 0
+ 9f7:	000e52        	l8ui	a5, a14, 0
+ 9fa:	0590b6        	bltui	a0, 10, a03 <MacIsrSigPostDefHdl+0x4f>
+ 9fd:	4c4d42        	s8i	a4, a13, 76
+ a00:	000086        	j	a06 <MacIsrSigPostDefHdl+0x52>
+ a03:	4c4d02        	s8i	a0, a13, 76
+ a06:	85dc      	bnez.n	a5, a22 <MacIsrSigPostDefHdl+0x6e>
+ a08:	ffe701        	l32r	a0, 9a4 <pp_attach+0x120>
+ a0b:	0000c0        	callx0	a0
+ a0e:	0020c0        	memw
+ a11:	ffe071        	l32r	a7, 994 <pp_attach+0x110>
+ a14:	802762        	l32i	a6, a7, 0x200
+ a17:	086c      	movi.n	a8, -32
+ a19:	106680        	and	a6, a6, a8
+ a1c:	0020c0        	memw
+ a1f:	806762        	s32i	a6, a7, 0x200
+ a22:	ff6905        	call0	b4 <pp_disable_noise_timer-0x18>
+ a25:	000e92        	l8ui	a9, a14, 0
+ a28:	b9dc      	bnez.n	a9, a47 <MacIsrSigPostDefHdl+0x93>
+ a2a:	0020c0        	memw
+ a2d:	ffdab1        	l32r	a11, 998 <pp_attach+0x114>
+ a30:	802ba2        	l32i	a10, a11, 0x200
+ a33:	006c      	movi.n	a0, -32
+ a35:	10aa00        	and	a10, a10, a0
+ a38:	20aaf0        	or	a10, a10, a15
+ a3b:	0020c0        	memw
+ a3e:	806ba2        	s32i	a10, a11, 0x200
+ a41:	ffd901        	l32r	a0, 9a8 <pp_attach+0x124>
+ a44:	0000c0        	callx0	a0
+ a47:	013d      	mov.n	a3, a1
+ a49:	414b      	addi.n	a4, a1, 4
+ a4b:	050c      	movi.n	a5, 0
+ a4d:	122d22        	l32i	a2, a13, 72
+ a50:	ffd701        	l32r	a0, 9ac <pp_attach+0x128>
+ a53:	0000c0        	callx0	a0
+ a56:	081226        	beqi	a2, 1, a62 <MacIsrSigPostDefHdl+0xae>
+ a59:	ffd021        	l32r	a2, 99c <pp_attach+0x118>
+ a5c:	ffd501        	l32r	a0, 9b0 <pp_attach+0x12c>
+ a5f:	0000c0        	callx0	a0
+ a62:	1158      	l32i.n	a5, a1, 4
+ a64:	030d42        	l8ui	a4, a13, 3
+ a67:	550b      	addi.n	a5, a5, -1
+ a69:	83cf50        	moveqz	a12, a15, a5
+ a6c:	f61456        	bnez	a4, 9d1 <MacIsrSigPostDefHdl+0x1d>
+ a6f:	000046        	j	a74 <MacIsrSigPostDefHdl+0xc0>
+ a72:	0c0c      	movi.n	a12, 0
+ a74:	2108      	l32i.n	a0, a1, 8
+ a76:	41d8      	l32i.n	a13, a1, 16
+ a78:	51e8      	l32i.n	a14, a1, 20
+ a7a:	0c2d      	mov.n	a2, a12
+ a7c:	61f8      	l32i.n	a15, a1, 24
+ a7e:	31c8      	l32i.n	a12, a1, 12
+ a80:	20c112        	addi	a1, a1, 32
+ a83:	f00d      	ret.n
+ a85:	000000        	ill
+ a88:	ff          	.byte 0xff
+ a89:	ff          	.byte 0xff
+ a8a:	ff          	.byte 0xff
+ a8b:	0fff00        	excw
+ a8e:	00ff00        	excw
+ a91:	000000        	ill
+ a94:	0008      	l32i.n	a0, a0, 0
+ a96:	9d0000        	excw
+ a99:	0009      	s32i.n	a0, a0, 0
+ a9b:	fffc00        	excw
+ a9e:	000000        	ill
+ aa1:	0000f0        	excw
+ aa4:	0f          	.byte 0xf
+ aa5:	00f8      	l32i.n	a15, a0, 0
+ aa7:	000000        	ill
+ aaa:	120000        	excw
+ aad:	09f0c1        	l32r	a12, fffc3270 <ppCalFrameTimes+0xfffc1d4c>
+ ab0:	820801        	l32r	a0, fffe12d0 <ppCalFrameTimes+0xfffdfdac>
+ ab3:	6258      	l32i.n	a5, a2, 24
+ ab5:	0d0002        	l8ui	a0, a0, 13
+ ab8:	0b12a2        	l16ui	a10, a2, 22
+ abb:	340000        	extui	a0, a0, 0, 4
+ abe:	d08c      	beqz.n	a0, acf <MacIsrSigPostDefHdl+0x11b>
+ ac0:	101026        	beqi	a0, 1, ad4 <MacIsrSigPostDefHdl+0x120>
+ ac3:	fec032        	addi	a3, a0, -2
+ ac6:	0c8316        	beqz	a3, b92 <MacIsrSigPostDefHdl+0x1de>
+ ac9:	fdc042        	addi	a4, a0, -3
+ acc:	128416        	beqz	a4, bf8 <MacIsrSigPostDefHdl+0x244>
+ acf:	400c      	movi.n	a0, 4
+ ad1:	000046        	j	ad6 <MacIsrSigPostDefHdl+0x122>
+ ad4:	800c      	movi.n	a0, 8
+ ad6:	aa0a      	add.n	a10, a10, a0
+ ad8:	0b52a2        	s16i	a10, a2, 22
+ adb:	ffebb1        	l32r	a11, a88 <MacIsrSigPostDefHdl+0xd4>
+ ade:	2288      	l32i.n	a8, a2, 8
+ ae0:	0020c0        	memw
+ ae3:	011892        	l16ui	a9, a8, 2
+ ae6:	119900        	slli	a9, a9, 16
+ ae9:	0020c0        	memw
+ aec:	001832        	l16ui	a3, a8, 0
+ aef:	ffe7a1        	l32r	a10, a8c <MacIsrSigPostDefHdl+0xd8>
+ af2:	209930        	or	a9, a9, a3
+ af5:	1099b0        	and	a9, a9, a11
+ af8:	419c90        	srli	a9, a9, 12
+ afb:	990a      	add.n	a9, a9, a0
+ afd:	b49090        	extui	a9, a9, 0, 12
+ b00:	119940        	slli	a9, a9, 12
+ b03:	0020c0        	memw
+ b06:	011872        	l16ui	a7, a8, 2
+ b09:	117700        	slli	a7, a7, 16
+ b0c:	0020c0        	memw
+ b0f:	0018b2        	l16ui	a11, a8, 0
+ b12:	2077b0        	or	a7, a7, a11
+ b15:	1077a0        	and	a7, a7, a10
+ b18:	207790        	or	a7, a7, a9
+ b1b:	0020c0        	memw
+ b1e:	005872        	s16i	a7, a8, 0
+ b21:	f57070        	extui	a7, a7, 16, 16
+ b24:	0020c0        	memw
+ b27:	8268      	l32i.n	a6, a2, 32
+ b29:	034c      	movi.n	a3, 64
+ b2b:	0668      	l32i.n	a6, a6, 0
+ b2d:	015872        	s16i	a7, a8, 2
+ b30:	067687        	bbci	a6, 24, b3a <MacIsrSigPostDefHdl+0x186>
+ b33:	35ec      	bnez.n	a5, b5a <MacIsrSigPostDefHdl+0x1a6>
+ b35:	120c      	movi.n	a2, 1
+ b37:	000606        	j	b53 <MacIsrSigPostDefHdl+0x19f>
+ b3a:	bfa042        	movi	a4, 191
+ b3d:	2208      	l32i.n	a0, a2, 8
+ b3f:	0020c0        	memw
+ b42:	0300b2        	l8ui	a11, a0, 3
+ b45:	10bb40        	and	a11, a11, a4
+ b48:	20bb30        	or	a11, a11, a3
+ b4b:	0020c0        	memw
+ b4e:	0340b2        	s8i	a11, a0, 3
+ b51:	020c      	movi.n	a2, 0
+ b53:	0108      	l32i.n	a0, a1, 0
+ b55:	10c112        	addi	a1, a1, 16
+ b58:	f00d      	ret.n
+ b5a:	062c      	movi.n	a6, 32
+ b5c:	dfa072        	movi	a7, 223
+ b5f:	1248      	l32i.n	a4, a2, 4
+ b61:	0020c0        	memw
+ b64:	030432        	l8ui	a3, a4, 3
+ b67:	103370        	and	a3, a3, a7
+ b6a:	203360        	or	a3, a3, a6
+ b6d:	0020c0        	memw
+ b70:	034432        	s8i	a3, a4, 3
+ b73:	8208      	l32i.n	a0, a2, 32
+ b75:	0d0002        	l8ui	a0, a0, 13
+ b78:	340000        	extui	a0, a0, 0, 4
+ b7b:	183026        	beqi	a0, 3, b97 <MacIsrSigPostDefHdl+0x1e3>
+ b7e:	509c      	beqz.n	a0, b97 <MacIsrSigPostDefHdl+0x1e3>
+ b80:	ffc421        	l32r	a2, a90 <MacIsrSigPostDefHdl+0xdc>
+ b83:	ffc431        	l32r	a3, a94 <MacIsrSigPostDefHdl+0xe0>
+ b86:	ffc441        	l32r	a4, a98 <MacIsrSigPostDefHdl+0xe4>
+ b89:	ffc701        	l32r	a0, aa8 <MacIsrSigPostDefHdl+0xf4>
+ b8c:	0000c0        	callx0	a0
+ b8f:	ffff06        	j	b8f <MacIsrSigPostDefHdl+0x1db>
+ b92:	001c      	movi.n	a0, 16
+ b94:	ffcf86        	j	ad6 <MacIsrSigPostDefHdl+0x122>
+ b97:	ffc141        	l32r	a4, a9c <MacIsrSigPostDefHdl+0xe8>
+ b9a:	0b1232        	l16ui	a3, a2, 22
+ b9d:	1228      	l32i.n	a2, a2, 4
+ b9f:	334a      	add.n	a3, a3, a4
+ ba1:	1228      	l32i.n	a2, a2, 4
+ ba3:	ffbf41        	l32r	a4, aa0 <MacIsrSigPostDefHdl+0xec>
+ ba6:	001202        	l16ui	a0, a2, 0
+ ba9:	b43030        	extui	a3, a3, 0, 12
+ bac:	100040        	and	a0, a0, a4
+ baf:	200030        	or	a0, a0, a3
+ bb2:	020232        	l8ui	a3, a2, 2
+ bb5:	005202        	s16i	a0, a2, 0
+ bb8:	740552        	l8ui	a5, a5, 116
+ bbb:	010262        	l8ui	a6, a2, 1
+ bbe:	b40000        	extui	a0, a0, 0, 12
+ bc1:	804b      	addi.n	a8, a0, 4
+ bc3:	113380        	slli	a3, a3, 8
+ bc6:	203360        	or	a3, a3, a6
+ bc9:	082587        	blt	a5, a8, bd5 <MacIsrSigPostDefHdl+0x221>
+ bcc:	c00500        	sub	a0, a5, a0
+ bcf:	210200        	srai	a0, a0, 2
+ bd2:	000046        	j	bd7 <MacIsrSigPostDefHdl+0x223>
+ bd5:	000c      	movi.n	a0, 0
+ bd7:	ffb351        	l32r	a5, aa4 <MacIsrSigPostDefHdl+0xf0>
+ bda:	644000        	extui	a4, a0, 0, 7
+ bdd:	1144c0        	slli	a4, a4, 4
+ be0:	103350        	and	a3, a3, a5
+ be3:	203340        	or	a3, a3, a4
+ be6:	014232        	s8i	a3, a2, 1
+ be9:	cfa042        	movi	a4, 207
+ bec:	743830        	extui	a3, a3, 8, 8
+ bef:	103340        	and	a3, a3, a4
+ bf2:	024232        	s8i	a3, a2, 2
+ bf5:	ffd606        	j	b51 <MacIsrSigPostDefHdl+0x19d>
+ bf8:	c00c      	movi.n	a0, 12
+ bfa:	ffb606        	j	ad6 <MacIsrSigPostDefHdl+0x122>

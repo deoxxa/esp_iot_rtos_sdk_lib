@@ -1,0 +1,2194 @@
+
+wpa.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <wpa_sm_rx_eapol-0x10a4>:
+       0:	f00d      	ret.n
+	...
+      1e:	120000        	excw
+      21:	e9d0c1        	l32r	a12, ffffa764 <wpa_sm_set_state+0xffff90cc>
+      24:	7169b1        	l32r	a11, fffdc5c8 <wpa_sm_set_state+0xfffdaf30>
+      27:	5149      	s32i.n	a4, a1, 20
+      29:	8109      	s32i.n	a0, a1, 32
+      2b:	91c9      	s32i.n	a12, a1, 36
+      2d:	a1d9      	s32i.n	a13, a1, 40
+      2f:	02cd      	mov.n	a12, a2
+      31:	05dd      	mov.n	a13, a5
+      33:	010d82        	l8ui	a8, a13, 1
+      36:	030d92        	l8ui	a9, a13, 3
+      39:	050da2        	l8ui	a10, a13, 5
+      3c:	040d02        	l8ui	a0, a13, 4
+      3f:	075d      	mov.n	a5, a7
+      41:	032d      	mov.n	a2, a3
+      43:	6129      	s32i.n	a2, a1, 24
+      45:	4159      	s32i.n	a5, a1, 16
+      47:	000d32        	l8ui	a3, a13, 0
+      4a:	020d72        	l8ui	a7, a13, 2
+      4d:	2000a0        	or	a0, a0, a10
+      50:	207790        	or	a7, a7, a9
+      53:	203380        	or	a3, a3, a8
+      56:	203370        	or	a3, a3, a7
+      59:	200030        	or	a0, a0, a3
+      5c:	740000        	extui	a0, a0, 0, 8
+      5f:	a0fc      	bnez.n	a0, 9d <wpa_sm_rx_eapol-0x1007>
+      61:	e3a002        	movi	a0, 227
+      64:	0c0a      	add.n	a0, a12, a0
+      66:	7c0022        	l8ui	a2, a0, 124
+      69:	7b00e2        	l8ui	a14, a0, 123
+      6c:	800042        	l8ui	a4, a0, 128
+      6f:	7f00b2        	l8ui	a11, a0, 127
+      72:	7e0032        	l8ui	a3, a0, 126
+      75:	20bb40        	or	a11, a11, a4
+      78:	7d0002        	l8ui	a0, a0, 125
+      7b:	20ee20        	or	a14, a14, a2
+      7e:	200030        	or	a0, a0, a3
+      81:	20ee00        	or	a14, a14, a0
+      84:	20bbe0        	or	a11, a11, a14
+      87:	74b0b0        	extui	a11, a11, 0, 8
+      8a:	fbcc      	bnez.n	a11, 9d <wpa_sm_rx_eapol-0x1007>
+      8c:	640c      	movi.n	a4, 6
+      8e:	5ea1d2        	movi	a13, 0x15e
+      91:	dcda      	add.n	a13, a12, a13
+      93:	0d2d      	mov.n	a2, a13
+      95:	0d3d      	mov.n	a3, a13
+      97:	ffdb01        	l32r	a0, 4 <wpa_sm_rx_eapol-0x10a0>
+      9a:	0000c0        	callx0	a0
+      9d:	d168      	l32i.n	a6, a1, 52
+      9f:	c1e8      	l32i.n	a14, a1, 48
+      a1:	f68c      	beqz.n	a6, b4 <wpa_sm_rx_eapol-0xff0>
+      a3:	6128      	l32i.n	a2, a1, 24
+      a5:	5138      	l32i.n	a3, a1, 20
+      a7:	4148      	l32i.n	a4, a1, 16
+      a9:	0e5d      	mov.n	a5, a14
+      ab:	ffd701        	l32r	a0, 8 <wpa_sm_rx_eapol-0x109c>
+      ae:	0000c0        	callx0	a0
+      b1:	064256        	bnez	a2, 119 <wpa_sm_rx_eapol-0xf8b>
+      b4:	012d      	mov.n	a2, a1
+      b6:	030c      	movi.n	a3, 0
+      b8:	e40c      	movi.n	a4, 14
+      ba:	ffd401        	l32r	a0, c <wpa_sm_rx_eapol-0x1098>
+      bd:	0000c0        	callx0	a0
+      c0:	0d3d      	mov.n	a3, a13
+      c2:	012d      	mov.n	a2, a1
+      c4:	640c      	movi.n	a4, 6
+      c6:	ffd201        	l32r	a0, 10 <wpa_sm_rx_eapol-0x1094>
+      c9:	0000c0        	callx0	a0
+      cc:	216b      	addi.n	a2, a1, 6
+      ce:	640c      	movi.n	a4, 6
+      d0:	58a132        	movi	a3, 0x158
+      d3:	3c3a      	add.n	a3, a12, a3
+      d5:	ffcf01        	l32r	a0, 14 <wpa_sm_rx_eapol-0x1090>
+      d8:	0000c0        	callx0	a0
+      db:	4eeb      	addi.n	a4, a14, 14
+      dd:	7178      	l32i.n	a7, a1, 28
+      df:	842c52        	l32i	a5, a12, 0x210
+      e2:	746870        	extui	a6, a7, 8, 8
+      e5:	15d8      	l32i.n	a13, a5, 4
+      e7:	747070        	extui	a7, a7, 0, 8
+      ea:	117780        	slli	a7, a7, 8
+      ed:	206670        	or	a6, a6, a7
+      f0:	065162        	s16i	a6, a1, 12
+      f3:	055542        	s16i	a4, a5, 10
+      f6:	fd9c      	beqz.n	a13, 119 <wpa_sm_rx_eapol-0xf8b>
+      f8:	0d2d      	mov.n	a2, a13
+      fa:	013d      	mov.n	a3, a1
+      fc:	e40c      	movi.n	a4, 14
+      fe:	ffc601        	l32r	a0, 18 <wpa_sm_rx_eapol-0x108c>
+     101:	0000c0        	callx0	a0
+     104:	0e4d      	mov.n	a4, a14
+     106:	2deb      	addi.n	a2, a13, 14
+     108:	4138      	l32i.n	a3, a1, 16
+     10a:	ffc401        	l32r	a0, 1c <wpa_sm_rx_eapol-0x1088>
+     10d:	0000c0        	callx0	a0
+     110:	852c02        	l32i	a0, a12, 0x214
+     113:	842c22        	l32i	a2, a12, 0x210
+     116:	0000c0        	callx0	a0
+     119:	91c8      	l32i.n	a12, a1, 36
+     11b:	a1d8      	l32i.n	a13, a1, 40
+     11d:	b1e8      	l32i.n	a14, a1, 44
+     11f:	8108      	l32i.n	a0, a1, 32
+     121:	30c112        	addi	a1, a1, 48
+     124:	f00d      	ret.n
+     126:	000000        	ill
+     129:	0008      	l32i.n	a0, a0, 0
+     12b:	888e00        	excw
+	...
+     13e:	0c0000        	excw
+     141:	c11216        	beqz	a2, fffffd56 <wpa_sm_set_state+0xffffe6be>
+     144:	f1d9c0        	excw
+     147:	b139      	s32i.n	a3, a1, 44
+     149:	a149      	s32i.n	a4, a1, 40
+     14b:	472272        	l32i	a7, a2, 0x11c
+     14e:	e1c9      	s32i.n	a12, a1, 56
+     150:	d109      	s32i.n	a0, a1, 52
+     152:	02cd      	mov.n	a12, a2
+     154:	200c      	movi.n	a0, 2
+     156:	04d726        	beqi	a7, 64, 15e <wpa_sm_rx_eapol-0xf46>
+     159:	01c726        	beqi	a7, 32, 15e <wpa_sm_rx_eapol-0xf46>
+     15c:	060c      	movi.n	a6, 0
+     15e:	86dc      	bnez.n	a6, 17a <wpa_sm_rx_eapol-0xf2a>
+     160:	120c      	movi.n	a2, 1
+     162:	04f726        	beqi	a7, 0x100, 16a <wpa_sm_rx_eapol-0xf3a>
+     165:	01e726        	beqi	a7, 128, 16a <wpa_sm_rx_eapol-0xf3a>
+     168:	020c      	movi.n	a2, 0
+     16a:	c2cc      	bnez.n	a2, 17a <wpa_sm_rx_eapol-0xf2a>
+     16c:	452c22        	l32i	a2, a12, 0x114
+     16f:	1d0c      	movi.n	a13, 1
+     171:	f8c222        	addi	a2, a2, -8
+     174:	83d020        	moveqz	a13, a0, a2
+     177:	000046        	j	17c <wpa_sm_rx_eapol-0xf28>
+     17a:	3d0c      	movi.n	a13, 3
+     17c:	10c122        	addi	a2, a1, 16
+     17f:	640c      	movi.n	a4, 6
+     181:	5ea132        	movi	a3, 0x15e
+     184:	3c3a      	add.n	a3, a12, a3
+     186:	ffea01        	l32r	a0, 130 <wpa_sm_rx_eapol-0xf74>
+     189:	0000c0        	callx0	a0
+     18c:	0c2d      	mov.n	a2, a12
+     18e:	330c      	movi.n	a3, 3
+     190:	040c      	movi.n	a4, 0
+     192:	f55c      	movi.n	a5, 95
+     194:	18c162        	addi	a6, a1, 24
+     197:	1cc172        	addi	a7, a1, 28
+     19a:	ffe601        	l32r	a0, 134 <wpa_sm_rx_eapol-0xf70>
+     19d:	0000c0        	callx0	a0
+     1a0:	c129      	s32i.n	a2, a1, 48
+     1a2:	0a2216        	beqz	a2, 248 <wpa_sm_rx_eapol-0xe5c>
+     1a5:	a128      	l32i.n	a2, a1, 40
+     1a7:	00a632        	movi	a3, 0x600
+     1aa:	71a8      	l32i.n	a10, a1, 28
+     1ac:	2b0c      	movi.n	a11, 2
+     1ae:	fea092        	movi	a9, 254
+     1b1:	00a142        	movi	a4, 0x100
+     1b4:	592c02        	l32i	a0, a12, 0x164
+     1b7:	ffdc81        	l32r	a8, 128 <wpa_sm_rx_eapol-0xf7c>
+     1ba:	fec002        	addi	a0, a0, -2
+     1bd:	208d80        	or	a8, a13, a8
+     1c0:	204840        	or	a4, a8, a4
+     1c3:	839b00        	moveqz	a9, a11, a0
+     1c6:	004a92        	s8i	a9, a10, 0
+     1c9:	2c2c52        	l32i	a5, a12, 176
+     1cc:	71b8      	l32i.n	a11, a1, 28
+     1ce:	938450        	movnez	a8, a4, a5
+     1d1:	b148      	l32i.n	a4, a1, 44
+     1d3:	203830        	or	a3, a8, a3
+     1d6:	050c      	movi.n	a5, 0
+     1d8:	938340        	movnez	a8, a3, a4
+     1db:	840c      	movi.n	a4, 8
+     1dd:	200840        	or	a0, a8, a4
+     1e0:	938020        	movnez	a8, a0, a2
+     1e3:	41a880        	srli	a10, a8, 8
+     1e6:	014ba2        	s8i	a10, a11, 1
+     1e9:	7198      	l32i.n	a9, a1, 28
+     1eb:	08a132        	movi	a3, 0x108
+     1ee:	024982        	s8i	a8, a9, 2
+     1f1:	7178      	l32i.n	a7, a1, 28
+     1f3:	3c3a      	add.n	a3, a12, a3
+     1f5:	034752        	s8i	a5, a7, 3
+     1f8:	7168      	l32i.n	a6, a1, 28
+     1fa:	9139      	s32i.n	a3, a1, 36
+     1fc:	044652        	s8i	a5, a6, 4
+     1ff:	7128      	l32i.n	a2, a1, 28
+     201:	8189      	s32i.n	a8, a1, 32
+     203:	225b      	addi.n	a2, a2, 5
+     205:	ffcc01        	l32r	a0, 138 <wpa_sm_rx_eapol-0xf6c>
+     208:	0000c0        	callx0	a0
+     20b:	9128      	l32i.n	a2, a1, 36
+     20d:	830c      	movi.n	a3, 8
+     20f:	ffcb01        	l32r	a0, 13c <wpa_sm_rx_eapol-0xf68>
+     212:	0000c0        	callx0	a0
+     215:	7158      	l32i.n	a5, a1, 28
+     217:	030c      	movi.n	a3, 0
+     219:	5d4532        	s8i	a3, a5, 93
+     21c:	7148      	l32i.n	a4, a1, 28
+     21e:	8128      	l32i.n	a2, a1, 32
+     220:	5e4432        	s8i	a3, a4, 94
+     223:	076287        	bbci	a2, 8, 22e <wpa_sm_rx_eapol-0xe76>
+     226:	7108      	l32i.n	a0, a1, 28
+     228:	4dc002        	addi	a0, a0, 77
+     22b:	000046        	j	230 <wpa_sm_rx_eapol-0xe74>
+     22e:	000c      	movi.n	a0, 0
+     230:	0d4d      	mov.n	a4, a13
+     232:	30cc32        	addi	a3, a12, 48
+     235:	c178      	l32i.n	a7, a1, 48
+     237:	10c152        	addi	a5, a1, 16
+     23a:	ffbc61        	l32r	a6, 12c <wpa_sm_rx_eapol-0xf78>
+     23d:	6128      	l32i.n	a2, a1, 24
+     23f:	0129      	s32i.n	a2, a1, 0
+     241:	1109      	s32i.n	a0, a1, 4
+     243:	0c2d      	mov.n	a2, a12
+     245:	ffdd85        	call0	20 <wpa_sm_rx_eapol-0x1084>
+     248:	e1c8      	l32i.n	a12, a1, 56
+     24a:	f1d8      	l32i.n	a13, a1, 60
+     24c:	d108      	l32i.n	a0, a1, 52
+     24e:	40c112        	addi	a1, a1, 64
+     251:	f00d      	ret.n
+     253:	130c00        	excw
+     256:	8248      	l32i.n	a4, a2, 32
+     258:	020c      	movi.n	a2, 0
+     25a:	832340        	moveqz	a2, a3, a4
+     25d:	f00d      	ret.n
+     25f:	888e00        	excw
+	...
+     276:	120000        	excw
+     279:	09c0c1        	l32r	a12, fffc297c <wpa_sm_set_state+0xfffc12e4>
+     27c:	a139b1        	l32r	a11, fffe8760 <wpa_sm_set_state+0xfffe70c8>
+     27f:	9169      	s32i.n	a6, a1, 36
+     281:	d1d9      	s32i.n	a13, a1, 52
+     283:	e1e9      	s32i.n	a14, a1, 56
+     285:	c1c9      	s32i.n	a12, a1, 48
+     287:	05ed      	mov.n	a14, a5
+     289:	02cd      	mov.n	a12, a2
+     28b:	07dd      	mov.n	a13, a7
+     28d:	042d      	mov.n	a2, a4
+     28f:	8129      	s32i.n	a2, a1, 32
+     291:	07ac      	beqz.n	a7, 2b5 <wpa_sm_rx_eapol-0xdef>
+     293:	0c2d      	mov.n	a2, a12
+     295:	330c      	movi.n	a3, 3
+     297:	040c      	movi.n	a4, 0
+     299:	10c162        	addi	a6, a1, 16
+     29c:	14c172        	addi	a7, a1, 20
+     29f:	102152        	l32i	a5, a1, 64
+     2a2:	7159      	s32i.n	a5, a1, 28
+     2a4:	5fc552        	addi	a5, a5, 95
+     2a7:	f45050        	extui	a5, a5, 0, 16
+     2aa:	ffee01        	l32r	a0, 264 <wpa_sm_rx_eapol-0xe40>
+     2ad:	0000c0        	callx0	a0
+     2b0:	020d      	mov.n	a0, a2
+     2b2:	077256        	bnez	a2, 32d <wpa_sm_rx_eapol-0xd77>
+     2b5:	f27c      	movi.n	a2, -1
+     2b7:	001946        	j	320 <wpa_sm_rx_eapol-0xd84>
+     2ba:	293b      	addi.n	a2, a9, 3
+     2bc:	8138      	l32i.n	a3, a1, 32
+     2be:	240c      	movi.n	a4, 2
+     2c0:	333b      	addi.n	a3, a3, 3
+     2c2:	ffe901        	l32r	a0, 268 <wpa_sm_rx_eapol-0xe3c>
+     2c5:	0000c0        	callx0	a0
+     2c8:	840c      	movi.n	a4, 8
+     2ca:	8138      	l32i.n	a3, a1, 32
+     2cc:	5128      	l32i.n	a2, a1, 20
+     2ce:	335b      	addi.n	a3, a3, 5
+     2d0:	225b      	addi.n	a2, a2, 5
+     2d2:	ffe601        	l32r	a0, 26c <wpa_sm_rx_eapol-0xe38>
+     2d5:	0000c0        	callx0	a0
+     2d8:	7148      	l32i.n	a4, a1, 28
+     2da:	5168      	l32i.n	a6, a1, 20
+     2dc:	415840        	srli	a5, a4, 8
+     2df:	5d4652        	s8i	a5, a6, 93
+     2e2:	5138      	l32i.n	a3, a1, 20
+     2e4:	5e4342        	s8i	a4, a3, 94
+     2e7:	5128      	l32i.n	a2, a1, 20
+     2e9:	0d3d      	mov.n	a3, a13
+     2eb:	5fc222        	addi	a2, a2, 95
+     2ee:	ffe001        	l32r	a0, 270 <wpa_sm_rx_eapol-0xe34>
+     2f1:	0000c0        	callx0	a0
+     2f4:	9138      	l32i.n	a3, a1, 36
+     2f6:	5128      	l32i.n	a2, a1, 20
+     2f8:	042c      	movi.n	a4, 32
+     2fa:	22db      	addi.n	a2, a2, 13
+     2fc:	ffde01        	l32r	a0, 274 <wpa_sm_rx_eapol-0xe30>
+     2ff:	0000c0        	callx0	a0
+     302:	0e4d      	mov.n	a4, a14
+     304:	0c2d      	mov.n	a2, a12
+     306:	a158      	l32i.n	a5, a1, 40
+     308:	6178      	l32i.n	a7, a1, 24
+     30a:	112132        	l32i	a3, a1, 68
+     30d:	4198      	l32i.n	a9, a1, 16
+     30f:	0199      	s32i.n	a9, a1, 0
+     311:	5188      	l32i.n	a8, a1, 20
+     313:	ffd361        	l32r	a6, 260 <wpa_sm_rx_eapol-0xe44>
+     316:	4dc882        	addi	a8, a8, 77
+     319:	1189      	s32i.n	a8, a1, 4
+     31b:	ffd045        	call0	20 <wpa_sm_rx_eapol-0x1084>
+     31e:	020c      	movi.n	a2, 0
+     320:	c1c8      	l32i.n	a12, a1, 48
+     322:	d1d8      	l32i.n	a13, a1, 52
+     324:	e1e8      	l32i.n	a14, a1, 56
+     326:	b108      	l32i.n	a0, a1, 44
+     328:	40c112        	addi	a1, a1, 64
+     32b:	f00d      	ret.n
+     32d:	51a8      	l32i.n	a10, a1, 20
+     32f:	2b0c      	movi.n	a11, 2
+     331:	fea092        	movi	a9, 254
+     334:	08a152        	movi	a5, 0x108
+     337:	592c22        	l32i	a2, a12, 0x164
+     33a:	205e50        	or	a5, a14, a5
+     33d:	fec222        	addi	a2, a2, -2
+     340:	839b20        	moveqz	a9, a11, a2
+     343:	004a92        	s8i	a9, a10, 0
+     346:	5188      	l32i.n	a8, a1, 20
+     348:	417850        	srli	a7, a5, 8
+     34b:	014872        	s8i	a7, a8, 1
+     34e:	5168      	l32i.n	a6, a1, 20
+     350:	6109      	s32i.n	a0, a1, 24
+     352:	024652        	s8i	a5, a6, 2
+     355:	592c42        	l32i	a4, a12, 0x164
+     358:	5198      	l32i.n	a9, a1, 20
+     35a:	fec442        	addi	a4, a4, -2
+     35d:	f59456        	bnez	a4, 2ba <wpa_sm_rx_eapol-0xdea>
+     360:	060c      	movi.n	a6, 0
+     362:	034962        	s8i	a6, a9, 3
+     365:	5178      	l32i.n	a7, a1, 20
+     367:	044762        	s8i	a6, a7, 4
+     36a:	ffd686        	j	2c8 <wpa_sm_rx_eapol-0xddc>
+	...
+     375:	000000        	ill
+     378:	e0c112        	addi	a1, a1, -32
+     37b:	4109      	s32i.n	a0, a1, 16
+     37d:	472262        	l32i	a6, a2, 0x11c
+     380:	100c      	movi.n	a0, 1
+     382:	04f626        	beqi	a6, 0x100, 38a <wpa_sm_rx_eapol-0xd1a>
+     385:	01e626        	beqi	a6, 128, 38a <wpa_sm_rx_eapol-0xd1a>
+     388:	000c      	movi.n	a0, 0
+     38a:	073c      	movi.n	a7, 48
+     38c:	064c      	movi.n	a6, 64
+     38e:	8238      	l32i.n	a3, a2, 32
+     390:	94db      	addi.n	a9, a4, 13
+     392:	452282        	l32i	a8, a2, 0x114
+     395:	fff641        	l32r	a4, 370 <wpa_sm_rx_eapol-0xd34>
+     398:	3109      	s32i.n	a0, a1, 12
+     39a:	1159      	s32i.n	a5, a1, 4
+     39c:	f8c882        	addi	a8, a8, -8
+     39f:	0199      	s32i.n	a9, a1, 0
+     3a1:	836780        	moveqz	a6, a7, a8
+     3a4:	58a152        	movi	a5, 0x158
+     3a7:	525a      	add.n	a5, a2, a5
+     3a9:	2169      	s32i.n	a6, a1, 8
+     3ab:	b8a072        	movi	a7, 184
+     3ae:	727a      	add.n	a7, a2, a7
+     3b0:	5ea162        	movi	a6, 0x15e
+     3b3:	626a      	add.n	a6, a2, a6
+     3b5:	ffef01        	l32r	a0, 374 <wpa_sm_rx_eapol-0xd30>
+     3b8:	0000c0        	callx0	a0
+     3bb:	020c      	movi.n	a2, 0
+     3bd:	4108      	l32i.n	a0, a1, 16
+     3bf:	20c112        	addi	a1, a1, 32
+     3c2:	f00d      	ret.n
+	...
+     3d8:	b0c112        	addi	a1, a1, -80
+     3db:	e139      	s32i.n	a3, a1, 56
+     3dd:	f159      	s32i.n	a5, a1, 60
+     3df:	116102        	s32i	a0, a1, 68
+     3e2:	1261c2        	s32i	a12, a1, 72
+     3e5:	1361d2        	s32i	a13, a1, 76
+     3e8:	02cd      	mov.n	a12, a2
+     3ea:	04dd      	mov.n	a13, a4
+     3ec:	620c      	movi.n	a2, 6
+     3ee:	000005        	call0	3f0 <wpa_sm_rx_eapol-0xcb4>
+     3f1:	10c122        	addi	a2, a1, 16
+     3f4:	030c      	movi.n	a3, 0
+     3f6:	442c      	movi.n	a4, 36
+     3f8:	fff301        	l32r	a0, 3c4 <wpa_sm_rx_eapol-0xce0>
+     3fb:	0000c0        	callx0	a0
+     3fe:	592c02        	l32i	a0, a12, 0x164
+     401:	1a2066        	bnei	a0, 2, 41f <wpa_sm_rx_eapol-0xc85>
+     404:	5fcd22        	addi	a2, a13, 95
+     407:	5d0d42        	l8ui	a4, a13, 93
+     40a:	5e0d32        	l8ui	a3, a13, 94
+     40d:	114480        	slli	a4, a4, 8
+     410:	203340        	or	a3, a3, a4
+     413:	f43030        	extui	a3, a3, 0, 16
+     416:	10c142        	addi	a4, a1, 16
+     419:	ffeb01        	l32r	a0, 3c8 <wpa_sm_rx_eapol-0xcdc>
+     41c:	0000c0        	callx0	a0
+     41f:	0c2d      	mov.n	a2, a12
+     421:	ffe305        	call0	254 <wpa_sm_rx_eapol-0xe50>
+     424:	e57c      	movi.n	a5, -2
+     426:	741257        	beq	a2, a5, 49e <wpa_sm_rx_eapol-0xc06>
+     429:	067256        	bnez	a2, 494 <wpa_sm_rx_eapol-0xc10>
+     42c:	3e2c62        	l32i	a6, a12, 248
+     42f:	b8a082        	movi	a8, 184
+     432:	8c8a      	add.n	a8, a12, a8
+     434:	106182        	s32i	a8, a1, 64
+     437:	069c      	beqz.n	a6, 44b <wpa_sm_rx_eapol-0xc59>
+     439:	082d      	mov.n	a2, a8
+     43b:	032c      	movi.n	a3, 32
+     43d:	ffe301        	l32r	a0, 3cc <wpa_sm_rx_eapol-0xcd8>
+     440:	0000c0        	callx0	a0
+     443:	04d256        	bnez	a2, 494 <wpa_sm_rx_eapol-0xc10>
+     446:	090c      	movi.n	a9, 0
+     448:	3e6c92        	s32i	a9, a12, 248
+     44b:	0c2d      	mov.n	a2, a12
+     44d:	e138      	l32i.n	a3, a1, 56
+     44f:	0d4d      	mov.n	a4, a13
+     451:	70cc52        	addi	a5, a12, 112
+     454:	d159      	s32i.n	a5, a1, 52
+     456:	fff205        	call0	378 <wpa_sm_rx_eapol-0xd2c>
+     459:	0c2d      	mov.n	a2, a12
+     45b:	d148      	l32i.n	a4, a1, 52
+     45d:	532c52        	l32i	a5, a12, 0x14c
+     460:	070c      	movi.n	a7, 0
+     462:	160c      	movi.n	a6, 1
+     464:	5ea132        	movi	a3, 0x15e
+     467:	3c3a      	add.n	a3, a12, a3
+     469:	2d6c62        	s32i	a6, a12, 180
+     46c:	2c6c72        	s32i	a7, a12, 176
+     46f:	102162        	l32i	a6, a1, 64
+     472:	522c72        	l32i	a7, a12, 0x148
+     475:	0159      	s32i.n	a5, a1, 0
+     477:	1149      	s32i.n	a4, a1, 4
+     479:	f158      	l32i.n	a5, a1, 60
+     47b:	0d4d      	mov.n	a4, a13
+     47d:	ffdf85        	call0	278 <wpa_sm_rx_eapol-0xe2c>
+     480:	02dc      	bnez.n	a2, 494 <wpa_sm_rx_eapol-0xc10>
+     482:	3ddb      	addi.n	a3, a13, 13
+     484:	042c      	movi.n	a4, 32
+     486:	d8a022        	movi	a2, 216
+     489:	2c2a      	add.n	a2, a12, a2
+     48b:	ffd101        	l32r	a0, 3d0 <wpa_sm_rx_eapol-0xcd4>
+     48e:	0000c0        	callx0	a0
+     491:	000246        	j	49e <wpa_sm_rx_eapol-0xc06>
+     494:	0c2d      	mov.n	a2, a12
+     496:	130c      	movi.n	a3, 1
+     498:	ffcf01        	l32r	a0, 3d4 <wpa_sm_rx_eapol-0xcd0>
+     49b:	0000c0        	callx0	a0
+     49e:	1221c2        	l32i	a12, a1, 72
+     4a1:	1321d2        	l32i	a13, a1, 76
+     4a4:	112102        	l32i	a0, a1, 68
+     4a7:	50c112        	addi	a1, a1, 80
+     4aa:	f00d      	ret.n
+     4ac:	030c      	movi.n	a3, 0
+     4ae:	140c      	movi.n	a4, 1
+     4b0:	f0c112        	addi	a1, a1, -16
+     4b3:	0109      	s32i.n	a0, a1, 0
+     4b5:	ffc885        	call0	140 <wpa_sm_rx_eapol-0xf64>
+     4b8:	0108      	l32i.n	a0, a1, 0
+     4ba:	10c112        	addi	a1, a1, 16
+     4bd:	f00d      	ret.n
+     4bf:	04ac00        	extui	a10, a0, 12, 1
+     4c2:	ac0000        	excw
+     4c5:	000004        	excw
+	...
+     4d0:	e0c112        	addi	a1, a1, -32
+     4d3:	51c9      	s32i.n	a12, a1, 20
+     4d5:	4109      	s32i.n	a0, a1, 16
+     4d7:	452202        	l32i	a0, a2, 0x114
+     4da:	02cd      	mov.n	a12, a2
+     4dc:	641026        	beqi	a0, 1, 544 <wpa_sm_rx_eapol-0xb60>
+     4df:	092026        	beqi	a0, 2, 4ec <wpa_sm_rx_eapol-0xbb8>
+     4e2:	358066        	bnei	a0, 8, 51b <wpa_sm_rx_eapol-0xb89>
+     4e5:	330c      	movi.n	a3, 3
+     4e7:	001c      	movi.n	a0, 16
+     4e9:	0000c6        	j	4f0 <wpa_sm_rx_eapol-0xbb4>
+     4ec:	002c      	movi.n	a0, 32
+     4ee:	230c      	movi.n	a3, 2
+     4f0:	850c      	movi.n	a5, 8
+     4f2:	50cc42        	addi	a4, a12, 80
+     4f5:	560c      	movi.n	a6, 5
+     4f7:	98a172        	movi	a7, 0x198
+     4fa:	7ca122        	movi	a2, 0x17c
+     4fd:	2c2a      	add.n	a2, a12, a2
+     4ff:	7c7a      	add.n	a7, a12, a7
+     501:	836c62        	s32i	a6, a12, 0x20c
+     504:	2109      	s32i.n	a0, a1, 8
+     506:	1149      	s32i.n	a4, a1, 4
+     508:	0159      	s32i.n	a5, a1, 0
+     50a:	3169      	s32i.n	a6, a1, 12
+     50c:	050c      	movi.n	a5, 0
+     50e:	160c      	movi.n	a6, 1
+     510:	5ea142        	movi	a4, 0x15e
+     513:	4c4a      	add.n	a4, a12, a4
+     515:	00f645        	call0	147c <wpa_set_bss+0x1d4>
+     518:	0042d6        	bgez	a2, 520 <wpa_sm_rx_eapol-0xb84>
+     51b:	f27c      	movi.n	a2, -1
+     51d:	000946        	j	546 <wpa_sm_rx_eapol-0xb5e>
+     520:	552c72        	l32i	a7, a12, 0x154
+     523:	d79c      	beqz.n	a7, 544 <wpa_sm_rx_eapol-0xb60>
+     525:	0c3d      	mov.n	a3, a12
+     527:	ffe621        	l32r	a2, 4c0 <wpa_sm_rx_eapol-0xbe4>
+     52a:	040c      	movi.n	a4, 0
+     52c:	ffe701        	l32r	a0, 4c8 <wpa_sm_rx_eapol-0xbdc>
+     52f:	0000c0        	callx0	a0
+     532:	0c5d      	mov.n	a5, a12
+     534:	ffe441        	l32r	a4, 4c4 <wpa_sm_rx_eapol-0xbe0>
+     537:	552c22        	l32i	a2, a12, 0x154
+     53a:	030c      	movi.n	a3, 0
+     53c:	060c      	movi.n	a6, 0
+     53e:	ffe301        	l32r	a0, 4cc <wpa_sm_rx_eapol-0xbd8>
+     541:	0000c0        	callx0	a0
+     544:	020c      	movi.n	a2, 0
+     546:	51c8      	l32i.n	a12, a1, 20
+     548:	4108      	l32i.n	a0, a1, 16
+     54a:	20c112        	addi	a1, a1, 32
+     54d:	f00d      	ret.n
+     54f:	680c00        	excw
+     552:	1c2226        	beqi	a2, 2, 572 <wpa_sm_rx_eapol-0xb32>
+     555:	268226        	beqi	a2, 8, 57f <wpa_sm_rx_eapol-0xb25>
+     558:	090c      	movi.n	a9, 0
+     55a:	31e226        	beqi	a2, 128, 58f <wpa_sm_rx_eapol-0xb15>
+     55d:	03f226        	beqi	a2, 0x100, 564 <wpa_sm_rx_eapol-0xb40>
+     560:	f27c      	movi.n	a2, -1
+     562:	f00d      	ret.n
+     564:	d20c      	movi.n	a2, 13
+     566:	049327        	bne	a3, a2, 56e <wpa_sm_rx_eapol-0xb36>
+     569:	c30c      	movi.n	a3, 12
+     56b:	2d2347        	blt	a3, a4, 59c <wpa_sm_rx_eapol-0xb08>
+     56e:	f27c      	movi.n	a2, -1
+     570:	f00d      	ret.n
+     572:	f8c366        	bnei	a3, 32, 56e <wpa_sm_rx_eapol-0xb36>
+     575:	f5c4a6        	blti	a4, 32, 56e <wpa_sm_rx_eapol-0xb36>
+     578:	0589      	s32i.n	a8, a5, 0
+     57a:	220c      	movi.n	a2, 2
+     57c:	000246        	j	589 <wpa_sm_rx_eapol-0xb1b>
+     57f:	ebb366        	bnei	a3, 16, 56e <wpa_sm_rx_eapol-0xb36>
+     582:	e8b4a6        	blti	a4, 16, 56e <wpa_sm_rx_eapol-0xb36>
+     585:	0589      	s32i.n	a8, a5, 0
+     587:	320c      	movi.n	a2, 3
+     589:	0629      	s32i.n	a2, a6, 0
+     58b:	020c      	movi.n	a2, 0
+     58d:	f00d      	ret.n
+     58f:	db5366        	bnei	a3, 5, 56e <wpa_sm_rx_eapol-0xb36>
+     592:	d854a6        	blti	a4, 5, 56e <wpa_sm_rx_eapol-0xb36>
+     595:	0599      	s32i.n	a9, a5, 0
+     597:	130c      	movi.n	a3, 1
+     599:	0000c6        	j	5a0 <wpa_sm_rx_eapol-0xb04>
+     59c:	0599      	s32i.n	a9, a5, 0
+     59e:	530c      	movi.n	a3, 5
+     5a0:	092d      	mov.n	a2, a9
+     5a2:	0639      	s32i.n	a3, a6, 0
+     5a4:	f00d      	ret.n
+     5a6:	000000        	ill
+     5a9:	000000        	ill
+     5ac:	f0c112        	addi	a1, a1, -16
+     5af:	0139      	s32i.n	a3, a1, 0
+     5b1:	1149      	s32i.n	a4, a1, 4
+     5b3:	31c9      	s32i.n	a12, a1, 12
+     5b5:	2109      	s32i.n	a0, a1, 8
+     5b7:	02cd      	mov.n	a12, a2
+     5b9:	920c      	movi.n	a2, 9
+     5bb:	000005        	call0	5bc <wpa_sm_rx_eapol-0xae8>
+     5be:	892c02        	l32i	a0, a12, 0x224
+     5c1:	0000c0        	callx0	a0
+     5c4:	1128      	l32i.n	a2, a1, 4
+     5c6:	32ac      	beqz.n	a2, 5ed <wpa_sm_rx_eapol-0xab7>
+     5c8:	0138      	l32i.n	a3, a1, 0
+     5ca:	0c2d      	mov.n	a2, a12
+     5cc:	340c      	movi.n	a4, 3
+     5ce:	150c      	movi.n	a5, 1
+     5d0:	fff601        	l32r	a0, 5a8 <wpa_sm_rx_eapol-0xafc>
+     5d3:	0000c0        	callx0	a0
+     5d6:	472c22        	l32i	a2, a12, 0x11c
+     5d9:	100c      	movi.n	a0, 1
+     5db:	072226        	beqi	a2, 2, 5e6 <wpa_sm_rx_eapol-0xabe>
+     5de:	04d226        	beqi	a2, 64, 5e6 <wpa_sm_rx_eapol-0xabe>
+     5e1:	01f226        	beqi	a2, 0x100, 5e6 <wpa_sm_rx_eapol-0xabe>
+     5e4:	000c      	movi.n	a0, 0
+     5e6:	308c      	beqz.n	a0, 5ed <wpa_sm_rx_eapol-0xab7>
+     5e8:	120c      	movi.n	a2, 1
+     5ea:	ffa145        	call0	0 <wpa_sm_rx_eapol-0x10a4>
+     5ed:	31c8      	l32i.n	a12, a1, 12
+     5ef:	2108      	l32i.n	a0, a1, 8
+     5f1:	10c112        	addi	a1, a1, 16
+     5f4:	f00d      	ret.n
+	...
+     602:	7c0000        	excw
+     605:	000014        	excw
+     608:	c0c112        	addi	a1, a1, -64
+     60b:	c109      	s32i.n	a0, a1, 48
+     60d:	e1d9      	s32i.n	a13, a1, 56
+     60f:	d1c9      	s32i.n	a12, a1, 52
+     611:	02dd      	mov.n	a13, a2
+     613:	03cd      	mov.n	a12, a3
+     615:	462202        	l32i	a0, a2, 0x118
+     618:	10c332        	addi	a3, a3, 16
+     61b:	292066        	bnei	a0, 2, 648 <wpa_sm_rx_eapol-0xa5c>
+     61e:	10c122        	addi	a2, a1, 16
+     621:	041c      	movi.n	a4, 16
+     623:	fff501        	l32r	a0, 5f8 <wpa_sm_rx_eapol-0xaac>
+     626:	0000c0        	callx0	a0
+     629:	20c122        	addi	a2, a1, 32
+     62c:	20cc32        	addi	a3, a12, 32
+     62f:	840c      	movi.n	a4, 8
+     631:	fff201        	l32r	a0, 5fc <wpa_sm_rx_eapol-0xaa8>
+     634:	0000c0        	callx0	a0
+     637:	28c122        	addi	a2, a1, 40
+     63a:	28cc32        	addi	a3, a12, 40
+     63d:	840c      	movi.n	a4, 8
+     63f:	fff001        	l32r	a0, 600 <wpa_sm_rx_eapol-0xaa4>
+     642:	0000c0        	callx0	a0
+     645:	10c132        	addi	a3, a1, 16
+     648:	452d62        	l32i	a6, a13, 0x114
+     64b:	3cb8      	l32i.n	a11, a12, 12
+     64d:	e0a172        	movi	a7, 0x1e0
+     650:	5ea142        	movi	a4, 0x15e
+     653:	c4a122        	movi	a2, 0x1c4
+     656:	2d2a      	add.n	a2, a13, a2
+     658:	4d4a      	add.n	a4, a13, a4
+     65a:	7d7a      	add.n	a7, a13, a7
+     65c:	836db2        	s32i	a11, a13, 0x20c
+     65f:	3c58      	l32i.n	a5, a12, 12
+     661:	0ca8      	l32i.n	a10, a12, 0
+     663:	2c98      	l32i.n	a9, a12, 8
+     665:	cc08      	l32i.n	a0, a12, 48
+     667:	191666        	bnei	a6, 1, 684 <wpa_sm_rx_eapol-0xa20>
+     66a:	0199      	s32i.n	a9, a1, 0
+     66c:	31b9      	s32i.n	a11, a1, 12
+     66e:	160c      	movi.n	a6, 1
+     670:	1139      	s32i.n	a3, a1, 4
+     672:	2109      	s32i.n	a0, a1, 8
+     674:	0a3d      	mov.n	a3, a10
+     676:	ffe301        	l32r	a0, 604 <wpa_sm_rx_eapol-0xaa0>
+     679:	0000c0        	callx0	a0
+     67c:	0162d6        	bgez	a2, 696 <wpa_sm_rx_eapol-0xa0e>
+     67f:	f27c      	movi.n	a2, -1
+     681:	0004c6        	j	698 <wpa_sm_rx_eapol-0xa0c>
+     684:	1c68      	l32i.n	a6, a12, 4
+     686:	0199      	s32i.n	a9, a1, 0
+     688:	31b9      	s32i.n	a11, a1, 12
+     68a:	1139      	s32i.n	a3, a1, 4
+     68c:	2109      	s32i.n	a0, a1, 8
+     68e:	0a3d      	mov.n	a3, a10
+     690:	00de85        	call0	147c <wpa_set_bss+0x1d4>
+     693:	fe8296        	bltz	a2, 67f <wpa_sm_rx_eapol-0xa25>
+     696:	020c      	movi.n	a2, 0
+     698:	d1c8      	l32i.n	a12, a1, 52
+     69a:	e1d8      	l32i.n	a13, a1, 56
+     69c:	c108      	l32i.n	a0, a1, 48
+     69e:	40c112        	addi	a1, a1, 64
+     6a1:	f00d      	ret.n
+     6a3:	025d00        	excw
+     6a6:	032d      	mov.n	a2, a3
+     6a8:	638c      	beqz.n	a3, 6b2 <wpa_sm_rx_eapol-0x9f2>
+     6aa:	452532        	l32i	a3, a5, 0x114
+     6ad:	011326        	beqi	a3, 1, 6b2 <wpa_sm_rx_eapol-0x9f2>
+     6b0:	020c      	movi.n	a2, 0
+     6b2:	f00d      	ret.n
+	...
+     6bc:	e0c112        	addi	a1, a1, -32
+     6bf:	1109      	s32i.n	a0, a1, 4
+     6c1:	31d9      	s32i.n	a13, a1, 12
+     6c3:	21c9      	s32i.n	a12, a1, 8
+     6c5:	41e9      	s32i.n	a14, a1, 16
+     6c7:	02cd      	mov.n	a12, a2
+     6c9:	03ed      	mov.n	a14, a3
+     6cb:	04dd      	mov.n	a13, a4
+     6cd:	030c      	movi.n	a3, 0
+     6cf:	443c      	movi.n	a4, 52
+     6d1:	28a222        	movi	a2, 0x228
+     6d4:	2c2a      	add.n	a2, a12, a2
+     6d6:	0129      	s32i.n	a2, a1, 0
+     6d8:	fff701        	l32r	a0, 6b4 <wpa_sm_rx_eapol-0x9f0>
+     6db:	0000c0        	callx0	a0
+     6de:	482db6        	bltui	a13, 2, 72a <wpa_sm_rx_eapol-0x97a>
+     6e1:	fecdd2        	addi	a13, a13, -2
+     6e4:	032c      	movi.n	a3, 32
+     6e6:	4033d7        	bltu	a3, a13, 72a <wpa_sm_rx_eapol-0x97a>
+     6e9:	000e42        	l8ui	a4, a14, 0
+     6ec:	144040        	extui	a4, a4, 0, 2
+     6ef:	8d6c42        	s32i	a4, a12, 0x234
+     6f2:	000e32        	l8ui	a3, a14, 0
+     6f5:	0c2d      	mov.n	a2, a12
+     6f7:	043230        	extui	a3, a3, 2, 1
+     6fa:	fffa85        	call0	6a4 <wpa_sm_rx_eapol-0xa00>
+     6fd:	3e2b      	addi.n	a3, a14, 2
+     6ff:	8b6c22        	s32i	a2, a12, 0x22c
+     702:	0d4d      	mov.n	a4, a13
+     704:	38a222        	movi	a2, 0x238
+     707:	2c2a      	add.n	a2, a12, a2
+     709:	ffeb01        	l32r	a0, 6b8 <wpa_sm_rx_eapol-0x9ec>
+     70c:	0000c0        	callx0	a0
+     70f:	0d4d      	mov.n	a4, a13
+     711:	966cd2        	s32i	a13, a12, 0x258
+     714:	0d3d      	mov.n	a3, a13
+     716:	462c22        	l32i	a2, a12, 0x118
+     719:	0168      	l32i.n	a6, a1, 0
+     71b:	30a252        	movi	a5, 0x230
+     71e:	5c5a      	add.n	a5, a12, a5
+     720:	ffe2c5        	call0	550 <wpa_sm_rx_eapol-0xb54>
+     723:	32cc      	bnez.n	a2, 72a <wpa_sm_rx_eapol-0x97a>
+     725:	020c      	movi.n	a2, 0
+     727:	000046        	j	72c <wpa_sm_rx_eapol-0x978>
+     72a:	f27c      	movi.n	a2, -1
+     72c:	21c8      	l32i.n	a12, a1, 8
+     72e:	31d8      	l32i.n	a13, a1, 12
+     730:	41e8      	l32i.n	a14, a1, 16
+     732:	1108      	l32i.n	a0, a1, 4
+     734:	20c112        	addi	a1, a1, 32
+     737:	f00d      	ret.n
+     739:	000000        	ill
+     73c:	000000        	ill
+     73f:	131c00        	excw
+     742:	f0c112        	addi	a1, a1, -16
+     745:	0109      	s32i.n	a0, a1, 0
+     747:	fffd01        	l32r	a0, 73c <wpa_sm_rx_eapol-0x968>
+     74a:	0000c0        	callx0	a0
+     74d:	0108      	l32i.n	a0, a1, 0
+     74f:	10c112        	addi	a1, a1, 16
+     752:	f00d      	ret.n
+     754:	020c      	movi.n	a2, 0
+     756:	f00d      	ret.n
+	...
+     764:	e0c112        	addi	a1, a1, -32
+     767:	51e9      	s32i.n	a14, a1, 20
+     769:	61f9      	s32i.n	a15, a1, 24
+     76b:	1139      	s32i.n	a3, a1, 4
+     76d:	31c9      	s32i.n	a12, a1, 12
+     76f:	41d9      	s32i.n	a13, a1, 16
+     771:	2109      	s32i.n	a0, a1, 8
+     773:	04dd      	mov.n	a13, a4
+     775:	5b2202        	l32i	a0, a2, 0x16c
+     778:	02cd      	mov.n	a12, a2
+     77a:	b0cc      	bnez.n	a0, 789 <wpa_sm_rx_eapol-0x91b>
+     77c:	5c2222        	l32i	a2, a2, 0x170
+     77f:	62cc      	bnez.n	a2, 789 <wpa_sm_rx_eapol-0x91b>
+     781:	0c2d      	mov.n	a2, a12
+     783:	fff501        	l32r	a0, 758 <wpa_sm_rx_eapol-0x94c>
+     786:	0000c0        	callx0	a0
+     789:	0df8      	l32i.n	a15, a13, 0
+     78b:	2de8      	l32i.n	a14, a13, 8
+     78d:	efcc      	bnez.n	a15, 79f <wpa_sm_rx_eapol-0x905>
+     78f:	aecc      	bnez.n	a14, 79d <wpa_sm_rx_eapol-0x907>
+     791:	5b2c32        	l32i	a3, a12, 0x16c
+     794:	061356        	bnez	a3, 7f9 <wpa_sm_rx_eapol-0x8ab>
+     797:	5c2c42        	l32i	a4, a12, 0x170
+     79a:	05b456        	bnez	a4, 7f9 <wpa_sm_rx_eapol-0x8ab>
+     79d:	bf9c      	beqz.n	a15, 7bc <wpa_sm_rx_eapol-0x8e8>
+     79f:	5b2c32        	l32i	a3, a12, 0x16c
+     7a2:	5d2c52        	l32i	a5, a12, 0x174
+     7a5:	339c      	beqz.n	a3, 7bc <wpa_sm_rx_eapol-0x8e8>
+     7a7:	1d08      	l32i.n	a0, a13, 4
+     7a9:	0109      	s32i.n	a0, a1, 0
+     7ab:	389507        	bne	a5, a0, 7e7 <wpa_sm_rx_eapol-0x8bd>
+     7ae:	0f2d      	mov.n	a2, a15
+     7b0:	004d      	mov.n	a4, a0
+     7b2:	ffea01        	l32r	a0, 75c <wpa_sm_rx_eapol-0x948>
+     7b5:	0000c0        	callx0	a0
+     7b8:	0108      	l32i.n	a0, a1, 0
+     7ba:	92ec      	bnez.n	a2, 7e7 <wpa_sm_rx_eapol-0x8bd>
+     7bc:	05ce16        	beqz	a14, 81c <wpa_sm_rx_eapol-0x888>
+     7bf:	5c2c32        	l32i	a3, a12, 0x170
+     7c2:	120c      	movi.n	a2, 1
+     7c4:	054316        	beqz	a3, 81c <wpa_sm_rx_eapol-0x888>
+     7c7:	472c02        	l32i	a0, a12, 0x11c
+     7ca:	04d026        	beqi	a0, 64, 7d2 <wpa_sm_rx_eapol-0x8d2>
+     7cd:	01c026        	beqi	a0, 32, 7d2 <wpa_sm_rx_eapol-0x8d2>
+     7d0:	020c      	movi.n	a2, 0
+     7d2:	0e5d      	mov.n	a5, a14
+     7d4:	5e2c42        	l32i	a4, a12, 0x178
+     7d7:	3d68      	l32i.n	a6, a13, 12
+     7d9:	ffe101        	l32r	a0, 760 <wpa_sm_rx_eapol-0x944>
+     7dc:	0000c0        	callx0	a0
+     7df:	92bc      	beqz.n	a2, 81c <wpa_sm_rx_eapol-0x888>
+     7e1:	0df8      	l32i.n	a15, a13, 0
+     7e3:	2de8      	l32i.n	a14, a13, 8
+     7e5:	1d08      	l32i.n	a0, a13, 4
+     7e7:	0e6d      	mov.n	a6, a14
+     7e9:	0f4d      	mov.n	a4, a15
+     7eb:	0c2d      	mov.n	a2, a12
+     7ed:	1138      	l32i.n	a3, a1, 4
+     7ef:	3d78      	l32i.n	a7, a13, 12
+     7f1:	005d      	mov.n	a5, a0
+     7f3:	fff4c5        	call0	740 <wpa_sm_rx_eapol-0x964>
+     7f6:	000386        	j	808 <wpa_sm_rx_eapol-0x89c>
+     7f9:	0e6d      	mov.n	a6, a14
+     7fb:	0f4d      	mov.n	a4, a15
+     7fd:	0c2d      	mov.n	a2, a12
+     7ff:	1138      	l32i.n	a3, a1, 4
+     801:	1d58      	l32i.n	a5, a13, 4
+     803:	3d78      	l32i.n	a7, a13, 12
+     805:	fff385        	call0	740 <wpa_sm_rx_eapol-0x964>
+     808:	f27c      	movi.n	a2, -1
+     80a:	ffffc6        	j	80d <wpa_sm_rx_eapol-0x897>
+     80d:	31c8      	l32i.n	a12, a1, 12
+     80f:	41d8      	l32i.n	a13, a1, 16
+     811:	51e8      	l32i.n	a14, a1, 20
+     813:	61f8      	l32i.n	a15, a1, 24
+     815:	2108      	l32i.n	a0, a1, 8
+     817:	20c112        	addi	a1, a1, 32
+     81a:	f00d      	ret.n
+     81c:	592c62        	l32i	a6, a12, 0x164
+     81f:	020c      	movi.n	a2, 0
+     821:	e81666        	bnei	a6, 1, 80d <wpa_sm_rx_eapol-0x897>
+     824:	2de8      	l32i.n	a14, a13, 8
+     826:	fe3e16        	beqz	a14, 80d <wpa_sm_rx_eapol-0x897>
+     829:	5c2c72        	l32i	a7, a12, 0x170
+     82c:	fdd756        	bnez	a7, 80d <wpa_sm_rx_eapol-0x897>
+     82f:	492c82        	l32i	a8, a12, 0x124
+     832:	fd7816        	beqz	a8, 80d <wpa_sm_rx_eapol-0x897>
+     835:	0e6d      	mov.n	a6, a14
+     837:	0c2d      	mov.n	a2, a12
+     839:	1138      	l32i.n	a3, a1, 4
+     83b:	0d48      	l32i.n	a4, a13, 0
+     83d:	1d58      	l32i.n	a5, a13, 4
+     83f:	3d78      	l32i.n	a7, a13, 12
+     841:	ffefc5        	call0	740 <wpa_sm_rx_eapol-0x964>
+     844:	fff006        	j	808 <wpa_sm_rx_eapol-0x89c>
+     847:	888e00        	excw
+	...
+     85a:	120000        	excw
+     85d:	09c0c1        	l32r	a12, fffc2f60 <wpa_sm_set_state+0xfffc18c8>
+     860:	d1f991        	l32r	a9, ffff5044 <wpa_sm_set_state+0xffff39ac>
+     863:	c1e9      	s32i.n	a14, a1, 48
+     865:	b1d9      	s32i.n	a13, a1, 44
+     867:	e179      	s32i.n	a7, a1, 56
+     869:	8169      	s32i.n	a6, a1, 32
+     86b:	a1c9      	s32i.n	a12, a1, 40
+     86d:	7139      	s32i.n	a3, a1, 28
+     86f:	02cd      	mov.n	a12, a2
+     871:	330c      	movi.n	a3, 3
+     873:	10c162        	addi	a6, a1, 16
+     876:	14c172        	addi	a7, a1, 20
+     879:	05dd      	mov.n	a13, a5
+     87b:	04ed      	mov.n	a14, a4
+     87d:	1021f2        	l32i	a15, a1, 64
+     880:	040c      	movi.n	a4, 0
+     882:	5fcf52        	addi	a5, a15, 95
+     885:	f45050        	extui	a5, a5, 0, 16
+     888:	fff101        	l32r	a0, 84c <wpa_sm_rx_eapol-0x858>
+     88b:	0000c0        	callx0	a0
+     88e:	020d      	mov.n	a0, a2
+     890:	32cc      	bnez.n	a2, 897 <wpa_sm_rx_eapol-0x80d>
+     892:	f27c      	movi.n	a2, -1
+     894:	002746        	j	935 <wpa_sm_rx_eapol-0x76f>
+     897:	5188      	l32i.n	a8, a1, 20
+     899:	08a142        	movi	a4, 0x108
+     89c:	290c      	movi.n	a9, 2
+     89e:	fea072        	movi	a7, 254
+     8a1:	592ca2        	l32i	a10, a12, 0x164
+     8a4:	8138      	l32i.n	a3, a1, 32
+     8a6:	00a252        	movi	a5, 0x200
+     8a9:	103350        	and	a3, a3, a5
+     8ac:	fecaa2        	addi	a10, a10, -2
+     8af:	8379a0        	moveqz	a7, a9, a10
+     8b2:	203d30        	or	a3, a13, a3
+     8b5:	203340        	or	a3, a3, a4
+     8b8:	004872        	s8i	a7, a8, 0
+     8bb:	5168      	l32i.n	a6, a1, 20
+     8bd:	415830        	srli	a5, a3, 8
+     8c0:	014652        	s8i	a5, a6, 1
+     8c3:	5148      	l32i.n	a4, a1, 20
+     8c5:	6109      	s32i.n	a0, a1, 24
+     8c7:	024432        	s8i	a3, a4, 2
+     8ca:	592c22        	l32i	a2, a12, 0x164
+     8cd:	5148      	l32i.n	a4, a1, 20
+     8cf:	0c2266        	bnei	a2, 2, 8df <wpa_sm_rx_eapol-0x7c5>
+     8d2:	060c      	movi.n	a6, 0
+     8d4:	034462        	s8i	a6, a4, 3
+     8d7:	5178      	l32i.n	a7, a1, 20
+     8d9:	044762        	s8i	a6, a7, 4
+     8dc:	0002c6        	j	8eb <wpa_sm_rx_eapol-0x7b9>
+     8df:	243b      	addi.n	a2, a4, 3
+     8e1:	3e3b      	addi.n	a3, a14, 3
+     8e3:	240c      	movi.n	a4, 2
+     8e5:	ffda01        	l32r	a0, 850 <wpa_sm_rx_eapol-0x854>
+     8e8:	0000c0        	callx0	a0
+     8eb:	3e5b      	addi.n	a3, a14, 5
+     8ed:	5128      	l32i.n	a2, a1, 20
+     8ef:	840c      	movi.n	a4, 8
+     8f1:	225b      	addi.n	a2, a2, 5
+     8f3:	ffd801        	l32r	a0, 854 <wpa_sm_rx_eapol-0x850>
+     8f6:	0000c0        	callx0	a0
+     8f9:	5168      	l32i.n	a6, a1, 20
+     8fb:	4158f0        	srli	a5, a15, 8
+     8fe:	5d4652        	s8i	a5, a6, 93
+     901:	5148      	l32i.n	a4, a1, 20
+     903:	e138      	l32i.n	a3, a1, 56
+     905:	5e44f2        	s8i	a15, a4, 94
+     908:	b38c      	beqz.n	a3, 917 <wpa_sm_rx_eapol-0x78d>
+     90a:	5128      	l32i.n	a2, a1, 20
+     90c:	0f4d      	mov.n	a4, a15
+     90e:	5fc222        	addi	a2, a2, 95
+     911:	ffd101        	l32r	a0, 858 <wpa_sm_rx_eapol-0x84c>
+     914:	0000c0        	callx0	a0
+     917:	0d4d      	mov.n	a4, a13
+     919:	0c2d      	mov.n	a2, a12
+     91b:	7158      	l32i.n	a5, a1, 28
+     91d:	6178      	l32i.n	a7, a1, 24
+     91f:	112132        	l32i	a3, a1, 68
+     922:	4198      	l32i.n	a9, a1, 16
+     924:	0199      	s32i.n	a9, a1, 0
+     926:	5188      	l32i.n	a8, a1, 20
+     928:	ffc861        	l32r	a6, 848 <wpa_sm_rx_eapol-0x85c>
+     92b:	4dc882        	addi	a8, a8, 77
+     92e:	1189      	s32i.n	a8, a1, 4
+     930:	ff6ec5        	call0	20 <wpa_sm_rx_eapol-0x1084>
+     933:	020c      	movi.n	a2, 0
+     935:	a1c8      	l32i.n	a12, a1, 40
+     937:	b1d8      	l32i.n	a13, a1, 44
+     939:	c1e8      	l32i.n	a14, a1, 48
+     93b:	d1f8      	l32i.n	a15, a1, 52
+     93d:	9108      	l32i.n	a0, a1, 36
+     93f:	40c112        	addi	a1, a1, 64
+     942:	f00d      	ret.n
+	...
+     950:	e0c112        	addi	a1, a1, -32
+     953:	4109      	s32i.n	a0, a1, 16
+     955:	2149      	s32i.n	a4, a1, 8
+     957:	3139      	s32i.n	a3, a1, 12
+     959:	51c9      	s32i.n	a12, a1, 20
+     95b:	fffa31        	l32r	a3, 944 <wpa_sm_rx_eapol-0x760>
+     95e:	02cd      	mov.n	a12, a2
+     960:	840c      	movi.n	a4, 8
+     962:	012d      	mov.n	a2, a1
+     964:	fff901        	l32r	a0, 948 <wpa_sm_rx_eapol-0x75c>
+     967:	0000c0        	callx0	a0
+     96a:	592c02        	l32i	a0, a12, 0x164
+     96d:	3138      	l32i.n	a3, a1, 12
+     96f:	042066        	bnei	a0, 2, 977 <wpa_sm_rx_eapol-0x72d>
+     972:	013d      	mov.n	a3, a1
+     974:	000086        	j	97a <wpa_sm_rx_eapol-0x72a>
+     977:	3dc332        	addi	a3, a3, 61
+     97a:	2158      	l32i.n	a5, a1, 8
+     97c:	e0a142        	movi	a4, 0x1e0
+     97f:	98a122        	movi	a2, 0x198
+     982:	832450        	moveqz	a2, a4, a5
+     985:	2c2a      	add.n	a2, a12, a2
+     987:	840c      	movi.n	a4, 8
+     989:	fff001        	l32r	a0, 94c <wpa_sm_rx_eapol-0x758>
+     98c:	0000c0        	callx0	a0
+     98f:	51c8      	l32i.n	a12, a1, 20
+     991:	4108      	l32i.n	a0, a1, 16
+     993:	20c112        	addi	a1, a1, 32
+     996:	f00d      	ret.n
+	...
+     9a4:	b0c112        	addi	a1, a1, -80
+     9a7:	1361e2        	s32i	a14, a1, 76
+     9aa:	e149      	s32i.n	a4, a1, 56
+     9ac:	106102        	s32i	a0, a1, 64
+     9af:	1161c2        	s32i	a12, a1, 68
+     9b2:	1261d2        	s32i	a13, a1, 72
+     9b5:	02cd      	mov.n	a12, a2
+     9b7:	03dd      	mov.n	a13, a3
+     9b9:	720c      	movi.n	a2, 7
+     9bb:	000005        	call0	9bc <wpa_sm_rx_eapol-0x6e8>
+     9be:	5fcd22        	addi	a2, a13, 95
+     9c1:	020de2        	l8ui	a14, a13, 2
+     9c4:	5e0d32        	l8ui	a3, a13, 94
+     9c7:	010d02        	l8ui	a0, a13, 1
+     9ca:	5d0d42        	l8ui	a4, a13, 93
+     9cd:	110080        	slli	a0, a0, 8
+     9d0:	114480        	slli	a4, a4, 8
+     9d3:	203340        	or	a3, a3, a4
+     9d6:	20ee00        	or	a14, a14, a0
+     9d9:	f4e0e0        	extui	a14, a14, 0, 16
+     9dc:	f43030        	extui	a3, a3, 0, 16
+     9df:	10c142        	addi	a4, a1, 16
+     9e2:	ffed01        	l32r	a0, 998 <wpa_sm_rx_eapol-0x70c>
+     9e5:	0000c0        	callx0	a0
+     9e8:	9158      	l32i.n	a5, a1, 36
+     9ea:	c59c      	beqz.n	a5, a0a <wpa_sm_rx_eapol-0x69a>
+     9ec:	1aeec7        	bbsi	a14, 12, a0a <wpa_sm_rx_eapol-0x69a>
+     9ef:	0c2d      	mov.n	a2, a12
+     9f1:	130c      	movi.n	a3, 1
+     9f3:	ffea01        	l32r	a0, 99c <wpa_sm_rx_eapol-0x708>
+     9f6:	0000c0        	callx0	a0
+     9f9:	1121c2        	l32i	a12, a1, 68
+     9fc:	1221d2        	l32i	a13, a1, 72
+     9ff:	1321e2        	l32i	a14, a1, 76
+     a02:	102102        	l32i	a0, a1, 64
+     a05:	50c112        	addi	a1, a1, 80
+     a08:	f00d      	ret.n
+     a0a:	0c2d      	mov.n	a2, a12
+     a0c:	10c142        	addi	a4, a1, 16
+     a0f:	5ea132        	movi	a3, 0x15e
+     a12:	3c3a      	add.n	a3, a12, a3
+     a14:	d139      	s32i.n	a3, a1, 52
+     a16:	ffd4c5        	call0	764 <wpa_sm_rx_eapol-0x940>
+     a19:	fd2296        	bltz	a2, 9ef <wpa_sm_rx_eapol-0x6b5>
+     a1c:	3ddb      	addi.n	a3, a13, 13
+     a1e:	042c      	movi.n	a4, 32
+     a20:	d8a022        	movi	a2, 216
+     a23:	2c2a      	add.n	a2, a12, a2
+     a25:	ffde01        	l32r	a0, 9a0 <wpa_sm_rx_eapol-0x704>
+     a28:	0000c0        	callx0	a0
+     a2b:	fc0256        	bnez	a2, 9ef <wpa_sm_rx_eapol-0x6b5>
+     a2e:	030d22        	l8ui	a2, a13, 3
+     a31:	040d02        	l8ui	a0, a13, 4
+     a34:	112280        	slli	a2, a2, 8
+     a37:	200020        	or	a0, a0, a2
+     a3a:	aca022        	movi	a2, 172
+     a3d:	2c2a      	add.n	a2, a12, a2
+     a3f:	f129      	s32i.n	a2, a1, 60
+     a41:	452c22        	l32i	a2, a12, 0x114
+     a44:	f40000        	extui	a0, a0, 0, 16
+     a47:	082226        	beqi	a2, 2, a53 <wpa_sm_rx_eapol-0x651>
+     a4a:	088266        	bnei	a2, 8, a56 <wpa_sm_rx_eapol-0x64e>
+     a4d:	05b026        	beqi	a0, 16, a56 <wpa_sm_rx_eapol-0x64e>
+     a50:	ffe6c6        	j	9ef <wpa_sm_rx_eapol-0x6b5>
+     a53:	98c066        	bnei	a0, 32, 9ef <wpa_sm_rx_eapol-0x6b5>
+     a56:	f138      	l32i.n	a3, a1, 60
+     a58:	140c      	movi.n	a4, 1
+     a5a:	0c2d      	mov.n	a2, a12
+     a5c:	136342        	s32i	a4, a3, 76
+     a5f:	0d3d      	mov.n	a3, a13
+     a61:	ffeec5        	call0	950 <wpa_sm_rx_eapol-0x754>
+     a64:	040c      	movi.n	a4, 0
+     a66:	f168      	l32i.n	a6, a1, 60
+     a68:	9158      	l32i.n	a5, a1, 36
+     a6a:	d856e2        	s16i	a14, a6, 0x1b0
+     a6d:	6b6642        	s32i	a4, a6, 0x1ac
+     a70:	359c      	beqz.n	a5, a87 <wpa_sm_rx_eapol-0x61d>
+     a72:	0c2d      	mov.n	a2, a12
+     a74:	0d3d      	mov.n	a3, a13
+     a76:	ffed85        	call0	950 <wpa_sm_rx_eapol-0x754>
+     a79:	0c2d      	mov.n	a2, a12
+     a7b:	9138      	l32i.n	a3, a1, 36
+     a7d:	a148      	l32i.n	a4, a1, 40
+     a7f:	0e5d      	mov.n	a5, a14
+     a81:	ffc385        	call0	6bc <wpa_sm_rx_eapol-0x9e8>
+     a84:	f67296        	bltz	a2, 9ef <wpa_sm_rx_eapol-0x6b5>
+     a87:	0c2d      	mov.n	a2, a12
+     a89:	10c132        	addi	a3, a1, 16
+     a8c:	ffcc45        	call0	754 <wpa_sm_rx_eapol-0x950>
+     a8f:	f5c296        	bltz	a2, 9ef <wpa_sm_rx_eapol-0x6b5>
+     a92:	0e6d      	mov.n	a6, a14
+     a94:	0d4d      	mov.n	a4, a13
+     a96:	d138      	l32i.n	a3, a1, 52
+     a98:	e158      	l32i.n	a5, a1, 56
+     a9a:	0c2d      	mov.n	a2, a12
+     a9c:	080c      	movi.n	a8, 0
+     a9e:	30cc72        	addi	a7, a12, 48
+     aa1:	1179      	s32i.n	a7, a1, 4
+     aa3:	0189      	s32i.n	a8, a1, 0
+     aa5:	070c      	movi.n	a7, 0
+     aa7:	ffdb45        	call0	85c <wpa_sm_rx_eapol-0x848>
+     aaa:	f41256        	bnez	a2, 9ef <wpa_sm_rx_eapol-0x6b5>
+     aad:	ffd206        	j	9f9 <wpa_sm_rx_eapol-0x6ab>
+	...
+     ab8:	f0c112        	addi	a1, a1, -16
+     abb:	31c9      	s32i.n	a12, a1, 12
+     abd:	2109      	s32i.n	a0, a1, 8
+     abf:	02cd      	mov.n	a12, a2
+     ac1:	5ca102        	movi	a0, 0x15c
+     ac4:	020a      	add.n	a0, a2, a0
+     ac6:	0109      	s32i.n	a0, a1, 0
+     ac8:	801002        	l16ui	a0, a0, 0x100
+     acb:	1109      	s32i.n	a0, a1, 4
+     acd:	056067        	bbci	a0, 6, ad6 <wpa_sm_rx_eapol-0x5ce>
+     ad0:	ff9fc5        	call0	4d0 <wpa_sm_rx_eapol-0xbd4>
+     ad3:	050256        	bnez	a2, b27 <wpa_sm_rx_eapol-0x57d>
+     ad6:	820c      	movi.n	a2, 8
+     ad8:	fff601        	l32r	a0, ab0 <wpa_sm_rx_eapol-0x5f4>
+     adb:	0000c0        	callx0	a0
+     ade:	0128      	l32i.n	a2, a1, 0
+     ae0:	3f2222        	l32i	a2, a2, 252
+     ae3:	5ea102        	movi	a0, 0x15e
+     ae6:	f29c      	beqz.n	a2, b09 <wpa_sm_rx_eapol-0x59b>
+     ae8:	0c2d      	mov.n	a2, a12
+     aea:	28a232        	movi	a3, 0x228
+     aed:	3c3a      	add.n	a3, a12, a3
+     aef:	ffb185        	call0	608 <wpa_sm_rx_eapol-0xa9c>
+     af2:	12fc      	bnez.n	a2, b27 <wpa_sm_rx_eapol-0x57d>
+     af4:	0c2d      	mov.n	a2, a12
+     af6:	00a252        	movi	a5, 0x200
+     af9:	1148      	l32i.n	a4, a1, 4
+     afb:	5ea132        	movi	a3, 0x15e
+     afe:	3c3a      	add.n	a3, a12, a3
+     b00:	104450        	and	a4, a4, a5
+     b03:	ffaa85        	call0	5ac <wpa_sm_rx_eapol-0xaf8>
+     b06:	5ea102        	movi	a0, 0x15e
+     b09:	1168      	l32i.n	a6, a1, 4
+     b0b:	0d6697        	bbci	a6, 9, b1c <wpa_sm_rx_eapol-0x588>
+     b0e:	0c2d      	mov.n	a2, a12
+     b10:	140c      	movi.n	a4, 1
+     b12:	150c      	movi.n	a5, 1
+     b14:	3c0a      	add.n	a3, a12, a0
+     b16:	ffe701        	l32r	a0, ab4 <wpa_sm_rx_eapol-0x5f0>
+     b19:	0000c0        	callx0	a0
+     b1c:	020c      	movi.n	a2, 0
+     b1e:	31c8      	l32i.n	a12, a1, 12
+     b20:	2108      	l32i.n	a0, a1, 8
+     b22:	10c112        	addi	a1, a1, 16
+     b25:	f00d      	ret.n
+     b27:	120c      	movi.n	a2, 1
+     b29:	fffc46        	j	b1e <wpa_sm_rx_eapol-0x586>
+	...
+     b34:	c0c112        	addi	a1, a1, -64
+     b37:	9159      	s32i.n	a5, a1, 36
+     b39:	a109      	s32i.n	a0, a1, 40
+     b3b:	c1d9      	s32i.n	a13, a1, 48
+     b3d:	b1c9      	s32i.n	a12, a1, 44
+     b3f:	02dd      	mov.n	a13, a2
+     b41:	032d      	mov.n	a2, a3
+     b43:	06cd      	mov.n	a12, a6
+     b45:	043d      	mov.n	a3, a4
+     b47:	014d      	mov.n	a4, a1
+     b49:	fff801        	l32r	a0, b2c <wpa_sm_rx_eapol-0x578>
+     b4c:	0000c0        	callx0	a0
+     b4f:	5108      	l32i.n	a0, a1, 20
+     b51:	9128      	l32i.n	a2, a1, 36
+     b53:	108c      	beqz.n	a0, b58 <wpa_sm_rx_eapol-0x54c>
+     b55:	04e2c7        	bbsi	a2, 12, b5d <wpa_sm_rx_eapol-0x547>
+     b58:	f27c      	movi.n	a2, -1
+     b5a:	0013c6        	j	bad <wpa_sm_rx_eapol-0x4f7>
+     b5d:	ff7016        	beqz	a0, b58 <wpa_sm_rx_eapol-0x54c>
+     b60:	5c8b      	addi.n	a5, a12, 8
+     b62:	6148      	l32i.n	a4, a1, 24
+     b64:	0c6d      	mov.n	a6, a12
+     b66:	fec442        	addi	a4, a4, -2
+     b69:	043d      	mov.n	a3, a4
+     b6b:	cc49      	s32i.n	a4, a12, 48
+     b6d:	462d22        	l32i	a2, a13, 0x118
+     b70:	ff9dc5        	call0	550 <wpa_sm_rx_eapol-0xb54>
+     b73:	fe1256        	bnez	a2, b58 <wpa_sm_rx_eapol-0x54c>
+     b76:	5138      	l32i.n	a3, a1, 20
+     b78:	000342        	l8ui	a4, a3, 0
+     b7b:	144040        	extui	a4, a4, 0, 2
+     b7e:	3c49      	s32i.n	a4, a12, 12
+     b80:	000332        	l8ui	a3, a3, 0
+     b83:	0d2d      	mov.n	a2, a13
+     b85:	043230        	extui	a3, a3, 2, 1
+     b88:	ffb185        	call0	6a4 <wpa_sm_rx_eapol-0xa00>
+     b8b:	1c29      	s32i.n	a2, a12, 4
+     b8d:	6148      	l32i.n	a4, a1, 24
+     b8f:	052c      	movi.n	a5, 32
+     b91:	fec442        	addi	a4, a4, -2
+     b94:	c03547        	bltu	a5, a4, b58 <wpa_sm_rx_eapol-0x54c>
+     b97:	5138      	l32i.n	a3, a1, 20
+     b99:	10cc22        	addi	a2, a12, 16
+     b9c:	332b      	addi.n	a3, a3, 2
+     b9e:	ffe401        	l32r	a0, b30 <wpa_sm_rx_eapol-0x574>
+     ba1:	0000c0        	callx0	a0
+     ba4:	0d2d      	mov.n	a2, a13
+     ba6:	013d      	mov.n	a3, a1
+     ba8:	ffba85        	call0	754 <wpa_sm_rx_eapol-0x950>
+     bab:	020c      	movi.n	a2, 0
+     bad:	b1c8      	l32i.n	a12, a1, 44
+     baf:	c1d8      	l32i.n	a13, a1, 48
+     bb1:	a108      	l32i.n	a0, a1, 40
+     bb3:	40c112        	addi	a1, a1, 64
+     bb6:	f00d      	ret.n
+	...
+     bcc:	c0c112        	addi	a1, a1, -64
+     bcf:	b109      	s32i.n	a0, a1, 44
+     bd1:	f1f9      	s32i.n	a15, a1, 60
+     bd3:	e1e9      	s32i.n	a14, a1, 56
+     bd5:	d1d9      	s32i.n	a13, a1, 52
+     bd7:	c1c9      	s32i.n	a12, a1, 48
+     bd9:	1021d2        	l32i	a13, a1, 64
+     bdc:	04cd      	mov.n	a12, a4
+     bde:	03ed      	mov.n	a14, a3
+     be0:	074d      	mov.n	a4, a7
+     be2:	0cfd      	mov.n	a15, a12
+     be4:	030e72        	l8ui	a7, a14, 3
+     be7:	040332        	l8ui	a3, a3, 4
+     bea:	117780        	slli	a7, a7, 8
+     bed:	203370        	or	a3, a3, a7
+     bf0:	f43030        	extui	a3, a3, 0, 16
+     bf3:	cd39      	s32i.n	a3, a13, 48
+     bf5:	49b6c7        	bgeu	a6, a12, c42 <wpa_sm_rx_eapol-0x462>
+     bf8:	f07c      	movi.n	a0, -1
+     bfa:	000cc6        	j	c31 <wpa_sm_rx_eapol-0x473>
+     bfd:	9188      	l32i.n	a8, a1, 36
+     bff:	790c      	movi.n	a9, 7
+     c01:	f32866        	bnei	a8, 2, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c04:	f089c7        	bany	a9, a12, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c07:	0a2c      	movi.n	a10, 32
+     c09:	eb3af7        	bltu	a10, a15, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c0c:	4133f0        	srli	a3, a15, 3
+     c0f:	5fce42        	addi	a4, a14, 95
+     c12:	8128      	l32i.n	a2, a1, 32
+     c14:	10cd52        	addi	a5, a13, 16
+     c17:	40c222        	addi	a2, a2, 64
+     c1a:	ffe701        	l32r	a0, bb8 <wpa_sm_rx_eapol-0x4ec>
+     c1d:	0000c0        	callx0	a0
+     c20:	fd4256        	bnez	a2, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c23:	a138      	l32i.n	a3, a1, 40
+     c25:	8128      	l32i.n	a2, a1, 32
+     c27:	043630        	extui	a3, a3, 6, 1
+     c2a:	ffa785        	call0	6a4 <wpa_sm_rx_eapol-0xa00>
+     c2d:	000c      	movi.n	a0, 0
+     c2f:	1d29      	s32i.n	a2, a13, 4
+     c31:	c1c8      	l32i.n	a12, a1, 48
+     c33:	d1d8      	l32i.n	a13, a1, 52
+     c35:	e1e8      	l32i.n	a14, a1, 56
+     c37:	f1f8      	l32i.n	a15, a1, 60
+     c39:	002d      	mov.n	a2, a0
+     c3b:	b108      	l32i.n	a0, a1, 44
+     c3d:	40c112        	addi	a1, a1, 64
+     c40:	f00d      	ret.n
+     c42:	9149      	s32i.n	a4, a1, 36
+     c44:	a159      	s32i.n	a5, a1, 40
+     c46:	8129      	s32i.n	a2, a1, 32
+     c48:	052466        	bnei	a4, 2, c51 <wpa_sm_rx_eapol-0x453>
+     c4b:	a98cb6        	bltui	a12, 8, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c4e:	f8ccf2        	addi	a15, a12, -8
+     c51:	0f4d      	mov.n	a4, a15
+     c53:	5d8b      	addi.n	a5, a13, 8
+     c55:	8128      	l32i.n	a2, a1, 32
+     c57:	0d6d      	mov.n	a6, a13
+     c59:	462222        	l32i	a2, a2, 0x118
+     c5c:	ff8f05        	call0	550 <wpa_sm_rx_eapol-0xb54>
+     c5f:	f95256        	bnez	a2, bf8 <wpa_sm_rx_eapol-0x4ac>
+     c62:	a148      	l32i.n	a4, a1, 40
+     c64:	9138      	l32i.n	a3, a1, 36
+     c66:	144440        	extui	a4, a4, 4, 2
+     c69:	3d49      	s32i.n	a4, a13, 12
+     c6b:	8e1366        	bnei	a3, 1, bfd <wpa_sm_rx_eapol-0x4a7>
+     c6e:	012d      	mov.n	a2, a1
+     c70:	2dce32        	addi	a3, a14, 45
+     c73:	041c      	movi.n	a4, 16
+     c75:	ffd101        	l32r	a0, bbc <wpa_sm_rx_eapol-0x4e8>
+     c78:	0000c0        	callx0	a0
+     c7b:	10c122        	addi	a2, a1, 16
+     c7e:	8138      	l32i.n	a3, a1, 32
+     c80:	041c      	movi.n	a4, 16
+     c82:	40c332        	addi	a3, a3, 64
+     c85:	ffce01        	l32r	a0, bc0 <wpa_sm_rx_eapol-0x4e4>
+     c88:	0000c0        	callx0	a0
+     c8b:	042c      	movi.n	a4, 32
+     c8d:	02b4c7        	bgeu	a4, a12, c93 <wpa_sm_rx_eapol-0x411>
+     c90:	ffd906        	j	bf8 <wpa_sm_rx_eapol-0x4ac>
+     c93:	5fce32        	addi	a3, a14, 95
+     c96:	0c4d      	mov.n	a4, a12
+     c98:	10cde2        	addi	a14, a13, 16
+     c9b:	0e2d      	mov.n	a2, a14
+     c9d:	ffc901        	l32r	a0, bc4 <wpa_sm_rx_eapol-0x4e0>
+     ca0:	0000c0        	callx0	a0
+     ca3:	0c6d      	mov.n	a6, a12
+     ca5:	0e5d      	mov.n	a5, a14
+     ca7:	012d      	mov.n	a2, a1
+     ca9:	032c      	movi.n	a3, 32
+     cab:	00a142        	movi	a4, 0x100
+     cae:	ffc601        	l32r	a0, bc8 <wpa_sm_rx_eapol-0x4dc>
+     cb1:	0000c0        	callx0	a0
+     cb4:	f40256        	bnez	a2, bf8 <wpa_sm_rx_eapol-0x4ac>
+     cb7:	ffda06        	j	c23 <wpa_sm_rx_eapol-0x481>
+     cba:	8e0000        	excw
+     cbd:	0088      	l32i.n	a8, a0, 0
+	...
+     ccb:	c11200        	mul16u	a1, a2, a0
+     cce:	c162d0        	mul16u	a6, a2, a13
+     cd1:	c17210        	mul16u	a7, a2, a1
+     cd4:	810914        	excw
+     cd7:	a1d9      	s32i.n	a13, a1, 40
+     cd9:	b1e9      	s32i.n	a14, a1, 44
+     cdb:	91c9      	s32i.n	a12, a1, 36
+     cdd:	7159      	s32i.n	a5, a1, 28
+     cdf:	02cd      	mov.n	a12, a2
+     ce1:	f55c      	movi.n	a5, 95
+     ce3:	03ed      	mov.n	a14, a3
+     ce5:	04dd      	mov.n	a13, a4
+     ce7:	330c      	movi.n	a3, 3
+     ce9:	040c      	movi.n	a4, 0
+     ceb:	fff501        	l32r	a0, cc0 <wpa_sm_rx_eapol-0x3e4>
+     cee:	0000c0        	callx0	a0
+     cf1:	020d      	mov.n	a0, a2
+     cf3:	32cc      	bnez.n	a2, cfa <wpa_sm_rx_eapol-0x3aa>
+     cf5:	f27c      	movi.n	a2, -1
+     cf7:	002346        	j	d88 <wpa_sm_rx_eapol-0x31c>
+     cfa:	5198      	l32i.n	a9, a1, 20
+     cfc:	00a342        	movi	a4, 0x300
+     cff:	2a0c      	movi.n	a10, 2
+     d01:	fea082        	movi	a8, 254
+     d04:	592cb2        	l32i	a11, a12, 0x164
+     d07:	7138      	l32i.n	a3, a1, 28
+     d09:	053c      	movi.n	a5, 48
+     d0b:	103350        	and	a3, a3, a5
+     d0e:	fecbb2        	addi	a11, a11, -2
+     d11:	838ab0        	moveqz	a8, a10, a11
+     d14:	203d30        	or	a3, a13, a3
+     d17:	203340        	or	a3, a3, a4
+     d1a:	004982        	s8i	a8, a9, 0
+     d1d:	5178      	l32i.n	a7, a1, 20
+     d1f:	416830        	srli	a6, a3, 8
+     d22:	014762        	s8i	a6, a7, 1
+     d25:	5148      	l32i.n	a4, a1, 20
+     d27:	6109      	s32i.n	a0, a1, 24
+     d29:	024432        	s8i	a3, a4, 2
+     d2c:	592c22        	l32i	a2, a12, 0x164
+     d2f:	5158      	l32i.n	a5, a1, 20
+     d31:	0c2266        	bnei	a2, 2, d41 <wpa_sm_rx_eapol-0x363>
+     d34:	060c      	movi.n	a6, 0
+     d36:	034562        	s8i	a6, a5, 3
+     d39:	5178      	l32i.n	a7, a1, 20
+     d3b:	044762        	s8i	a6, a7, 4
+     d3e:	0002c6        	j	d4d <wpa_sm_rx_eapol-0x357>
+     d41:	253b      	addi.n	a2, a5, 3
+     d43:	3e3b      	addi.n	a3, a14, 3
+     d45:	240c      	movi.n	a4, 2
+     d47:	ffdf01        	l32r	a0, cc4 <wpa_sm_rx_eapol-0x3e0>
+     d4a:	0000c0        	callx0	a0
+     d4d:	3e5b      	addi.n	a3, a14, 5
+     d4f:	5128      	l32i.n	a2, a1, 20
+     d51:	840c      	movi.n	a4, 8
+     d53:	225b      	addi.n	a2, a2, 5
+     d55:	ffdc01        	l32r	a0, cc8 <wpa_sm_rx_eapol-0x3dc>
+     d58:	0000c0        	callx0	a0
+     d5b:	0d4d      	mov.n	a4, a13
+     d5d:	6178      	l32i.n	a7, a1, 24
+     d5f:	0c2d      	mov.n	a2, a12
+     d61:	30cc32        	addi	a3, a12, 48
+     d64:	ffd661        	l32r	a6, cbc <wpa_sm_rx_eapol-0x3e8>
+     d67:	51b8      	l32i.n	a11, a1, 20
+     d69:	090c      	movi.n	a9, 0
+     d6b:	5d4b92        	s8i	a9, a11, 93
+     d6e:	51a8      	l32i.n	a10, a1, 20
+     d70:	5ea152        	movi	a5, 0x15e
+     d73:	5e4a92        	s8i	a9, a10, 94
+     d76:	4188      	l32i.n	a8, a1, 16
+     d78:	0189      	s32i.n	a8, a1, 0
+     d7a:	5188      	l32i.n	a8, a1, 20
+     d7c:	5c5a      	add.n	a5, a12, a5
+     d7e:	4dc882        	addi	a8, a8, 77
+     d81:	1189      	s32i.n	a8, a1, 4
+     d83:	ff29c5        	call0	20 <wpa_sm_rx_eapol-0x1084>
+     d86:	020c      	movi.n	a2, 0
+     d88:	91c8      	l32i.n	a12, a1, 36
+     d8a:	a1d8      	l32i.n	a13, a1, 40
+     d8c:	b1e8      	l32i.n	a14, a1, 44
+     d8e:	8108      	l32i.n	a0, a1, 32
+     d90:	30c112        	addi	a1, a1, 48
+     d93:	f00d      	ret.n
+	...
+     da1:	000000        	ill
+     da4:	030c      	movi.n	a3, 0
+     da6:	d0c112        	addi	a1, a1, -48
+     da9:	a1e9      	s32i.n	a14, a1, 40
+     dab:	6159      	s32i.n	a5, a1, 24
+     dad:	4169      	s32i.n	a6, a1, 16
+     daf:	7109      	s32i.n	a0, a1, 28
+     db1:	b1f9      	s32i.n	a15, a1, 44
+     db3:	81c9      	s32i.n	a12, a1, 32
+     db5:	91d9      	s32i.n	a13, a1, 36
+     db7:	02cd      	mov.n	a12, a2
+     db9:	04dd      	mov.n	a13, a4
+     dbb:	28a2f2        	movi	a15, 0x228
+     dbe:	443c      	movi.n	a4, 52
+     dc0:	f2fa      	add.n	a15, a2, a15
+     dc2:	0f2d      	mov.n	a2, a15
+     dc4:	fff501        	l32r	a0, d98 <wpa_sm_rx_eapol-0x30c>
+     dc7:	0000c0        	callx0	a0
+     dca:	020de2        	l8ui	a14, a13, 2
+     dcd:	5e0d42        	l8ui	a4, a13, 94
+     dd0:	010d02        	l8ui	a0, a13, 1
+     dd3:	5d0d52        	l8ui	a5, a13, 93
+     dd6:	110080        	slli	a0, a0, 8
+     dd9:	115580        	slli	a5, a5, 8
+     ddc:	204450        	or	a4, a4, a5
+     ddf:	20ee00        	or	a14, a14, a0
+     de2:	f4e0e0        	extui	a14, a14, 0, 16
+     de5:	e4a002        	movi	a0, 228
+     de8:	0c0a      	add.n	a0, a12, a0
+     dea:	5109      	s32i.n	a0, a1, 20
+     dec:	592c02        	l32i	a0, a12, 0x164
+     def:	f44040        	extui	a4, a4, 0, 16
+     df2:	102066        	bnei	a0, 2, e06 <wpa_sm_rx_eapol-0x29e>
+     df5:	0f6d      	mov.n	a6, a15
+     df7:	0c2d      	mov.n	a2, a12
+     df9:	5fcd32        	addi	a3, a13, 95
+     dfc:	0e5d      	mov.n	a5, a14
+     dfe:	ffd345        	call0	b34 <wpa_sm_rx_eapol-0x570>
+     e01:	02fd      	mov.n	a15, a2
+     e03:	000406        	j	e17 <wpa_sm_rx_eapol-0x28d>
+     e06:	01f9      	s32i.n	a15, a1, 0
+     e08:	6168      	l32i.n	a6, a1, 24
+     e0a:	0c2d      	mov.n	a2, a12
+     e0c:	0d3d      	mov.n	a3, a13
+     e0e:	0e5d      	mov.n	a5, a14
+     e10:	4178      	l32i.n	a7, a1, 16
+     e12:	ffdb85        	call0	bcc <wpa_sm_rx_eapol-0x4d8>
+     e15:	02fd      	mov.n	a15, a2
+     e17:	820c      	movi.n	a2, 8
+     e19:	ffe001        	l32r	a0, d9c <wpa_sm_rx_eapol-0x308>
+     e1c:	0000c0        	callx0	a0
+     e1f:	bfdc      	bnez.n	a15, e3e <wpa_sm_rx_eapol-0x266>
+     e21:	41f8      	l32i.n	a15, a1, 16
+     e23:	0c2d      	mov.n	a2, a12
+     e25:	0d3d      	mov.n	a3, a13
+     e27:	040c      	movi.n	a4, 0
+     e29:	ffb245        	call0	950 <wpa_sm_rx_eapol-0x754>
+     e2c:	0e5d      	mov.n	a5, a14
+     e2e:	0f4d      	mov.n	a4, a15
+     e30:	0d3d      	mov.n	a3, a13
+     e32:	5168      	l32i.n	a6, a1, 20
+     e34:	0c2d      	mov.n	a2, a12
+     e36:	bc56e2        	s16i	a14, a6, 0x178
+     e39:	ffe905        	call0	ccc <wpa_sm_rx_eapol-0x3d8>
+     e3c:	828c      	beqz.n	a2, e48 <wpa_sm_rx_eapol-0x25c>
+     e3e:	0c2d      	mov.n	a2, a12
+     e40:	130c      	movi.n	a3, 1
+     e42:	ffd701        	l32r	a0, da0 <wpa_sm_rx_eapol-0x304>
+     e45:	0000c0        	callx0	a0
+     e48:	81c8      	l32i.n	a12, a1, 32
+     e4a:	91d8      	l32i.n	a13, a1, 36
+     e4c:	a1e8      	l32i.n	a14, a1, 40
+     e4e:	b1f8      	l32i.n	a15, a1, 44
+     e50:	7108      	l32i.n	a0, a1, 28
+     e52:	30c112        	addi	a1, a1, 48
+     e55:	f00d      	ret.n
+     e57:	150c00        	extui	a0, a0, 28, 2
+     e5a:	040c      	movi.n	a4, 0
+     e5c:	e4a072        	movi	a7, 228
+     e5f:	f0c112        	addi	a1, a1, -16
+     e62:	28a232        	movi	a3, 0x228
+     e65:	323a      	add.n	a3, a2, a3
+     e67:	2109      	s32i.n	a0, a1, 8
+     e69:	5a2262        	l32i	a6, a2, 0x168
+     e6c:	31c9      	s32i.n	a12, a1, 12
+     e6e:	727a      	add.n	a7, a2, a7
+     e70:	02cd      	mov.n	a12, a2
+     e72:	bc1772        	l16ui	a7, a7, 0x178
+     e75:	0179      	s32i.n	a7, a1, 0
+     e77:	f7c662        	addi	a6, a6, -9
+     e7a:	834560        	moveqz	a4, a5, a6
+     e7d:	1149      	s32i.n	a4, a1, 4
+     e7f:	ff7885        	call0	608 <wpa_sm_rx_eapol-0xa9c>
+     e82:	a2cc      	bnez.n	a2, e90 <wpa_sm_rx_eapol-0x214>
+     e84:	1188      	l32i.n	a8, a1, 4
+     e86:	189c      	beqz.n	a8, e9b <wpa_sm_rx_eapol-0x209>
+     e88:	920c      	movi.n	a2, 9
+     e8a:	000005        	call0	e8c <wpa_sm_rx_eapol-0x218>
+     e8d:	000706        	j	ead <wpa_sm_rx_eapol-0x1f7>
+     e90:	120c      	movi.n	a2, 1
+     e92:	31c8      	l32i.n	a12, a1, 12
+     e94:	2108      	l32i.n	a0, a1, 8
+     e96:	10c112        	addi	a1, a1, 16
+     e99:	f00d      	ret.n
+     e9b:	0c2d      	mov.n	a2, a12
+     e9d:	00a252        	movi	a5, 0x200
+     ea0:	0148      	l32i.n	a4, a1, 0
+     ea2:	5ea132        	movi	a3, 0x15e
+     ea5:	3c3a      	add.n	a3, a12, a3
+     ea7:	104450        	and	a4, a4, a5
+     eaa:	ff7005        	call0	5ac <wpa_sm_rx_eapol-0xaf8>
+     ead:	020c      	movi.n	a2, 0
+     eaf:	fff7c6        	j	e92 <wpa_sm_rx_eapol-0x212>
+	...
+     eda:	120000        	excw
+     edd:	59d0c1        	l32r	a12, fffd7620 <wpa_sm_set_state+0xfffd5f88>
+     ee0:	b169a1        	l32r	a10, fffed484 <wpa_sm_set_state+0xfffebdec>
+     ee3:	5109      	s32i.n	a0, a1, 20
+     ee5:	71d9      	s32i.n	a13, a1, 28
+     ee7:	61c9      	s32i.n	a12, a1, 24
+     ee9:	9149      	s32i.n	a4, a1, 36
+     eeb:	81e9      	s32i.n	a14, a1, 32
+     eed:	041c      	movi.n	a4, 16
+     eef:	03ed      	mov.n	a14, a3
+     ef1:	02cd      	mov.n	a12, a2
+     ef3:	4dc3d2        	addi	a13, a3, 77
+     ef6:	012d      	mov.n	a2, a1
+     ef8:	0d3d      	mov.n	a3, a13
+     efa:	ffee01        	l32r	a0, eb4 <wpa_sm_rx_eapol-0x1f0>
+     efd:	0000c0        	callx0	a0
+     f00:	2d2c22        	l32i	a2, a12, 180
+     f03:	12bc      	beqz.n	a2, f38 <wpa_sm_rx_eapol-0x16c>
+     f05:	0d2d      	mov.n	a2, a13
+     f07:	030c      	movi.n	a3, 0
+     f09:	041c      	movi.n	a4, 16
+     f0b:	ffeb01        	l32r	a0, eb8 <wpa_sm_rx_eapol-0x1ec>
+     f0e:	0000c0        	callx0	a0
+     f11:	9138      	l32i.n	a3, a1, 36
+     f13:	a148      	l32i.n	a4, a1, 40
+     f15:	b158      	l32i.n	a5, a1, 44
+     f17:	0d6d      	mov.n	a6, a13
+     f19:	70cc22        	addi	a2, a12, 112
+     f1c:	4129      	s32i.n	a2, a1, 16
+     f1e:	ffe701        	l32r	a0, ebc <wpa_sm_rx_eapol-0x1e8>
+     f21:	0000c0        	callx0	a0
+     f24:	012d      	mov.n	a2, a1
+     f26:	0d3d      	mov.n	a3, a13
+     f28:	041c      	movi.n	a4, 16
+     f2a:	ffe501        	l32r	a0, ec0 <wpa_sm_rx_eapol-0x1e4>
+     f2d:	0000c0        	callx0	a0
+     f30:	076216        	beqz	a2, faa <wpa_sm_rx_eapol-0xfa>
+     f33:	020c      	movi.n	a2, 0
+     f35:	000046        	j	f3a <wpa_sm_rx_eapol-0x16a>
+     f38:	020c      	movi.n	a2, 0
+     f3a:	82fc      	bnez.n	a2, f76 <wpa_sm_rx_eapol-0x12e>
+     f3c:	2c2c32        	l32i	a3, a12, 176
+     f3f:	03bc      	beqz.n	a3, f73 <wpa_sm_rx_eapol-0x131>
+     f41:	0d2d      	mov.n	a2, a13
+     f43:	030c      	movi.n	a3, 0
+     f45:	041c      	movi.n	a4, 16
+     f47:	ffdf01        	l32r	a0, ec4 <wpa_sm_rx_eapol-0x1e0>
+     f4a:	0000c0        	callx0	a0
+     f4d:	30cc22        	addi	a2, a12, 48
+     f50:	9138      	l32i.n	a3, a1, 36
+     f52:	a148      	l32i.n	a4, a1, 40
+     f54:	b158      	l32i.n	a5, a1, 44
+     f56:	0d6d      	mov.n	a6, a13
+     f58:	ffdc01        	l32r	a0, ec8 <wpa_sm_rx_eapol-0x1dc>
+     f5b:	0000c0        	callx0	a0
+     f5e:	0d3d      	mov.n	a3, a13
+     f60:	012d      	mov.n	a2, a1
+     f62:	041c      	movi.n	a4, 16
+     f64:	ffda01        	l32r	a0, ecc <wpa_sm_rx_eapol-0x1d8>
+     f67:	0000c0        	callx0	a0
+     f6a:	328c      	beqz.n	a2, f71 <wpa_sm_rx_eapol-0x133>
+     f6c:	f27c      	movi.n	a2, -1
+     f6e:	000ac6        	j	f9d <wpa_sm_rx_eapol-0x107>
+     f71:	120c      	movi.n	a2, 1
+     f73:	ff5216        	beqz	a2, f6c <wpa_sm_rx_eapol-0x138>
+     f76:	840c      	movi.n	a4, 8
+     f78:	de5b      	addi.n	a13, a14, 5
+     f7a:	fca022        	movi	a2, 252
+     f7d:	2c2a      	add.n	a2, a12, a2
+     f7f:	0d3d      	mov.n	a3, a13
+     f81:	ffd301        	l32r	a0, ed0 <wpa_sm_rx_eapol-0x1d4>
+     f84:	0000c0        	callx0	a0
+     f87:	840c      	movi.n	a4, 8
+     f89:	08a122        	movi	a2, 0x108
+     f8c:	130c      	movi.n	a3, 1
+     f8e:	416c32        	s32i	a3, a12, 0x104
+     f91:	2c2a      	add.n	a2, a12, a2
+     f93:	0d3d      	mov.n	a3, a13
+     f95:	ffcf01        	l32r	a0, ed4 <wpa_sm_rx_eapol-0x1d0>
+     f98:	0000c0        	callx0	a0
+     f9b:	020c      	movi.n	a2, 0
+     f9d:	61c8      	l32i.n	a12, a1, 24
+     f9f:	71d8      	l32i.n	a13, a1, 28
+     fa1:	81e8      	l32i.n	a14, a1, 32
+     fa3:	5108      	l32i.n	a0, a1, 20
+     fa5:	30c112        	addi	a1, a1, 48
+     fa8:	f00d      	ret.n
+     faa:	4138      	l32i.n	a3, a1, 16
+     fac:	30cc22        	addi	a2, a12, 48
+     faf:	150c      	movi.n	a5, 1
+     fb1:	040c      	movi.n	a4, 0
+     fb3:	2d6c42        	s32i	a4, a12, 180
+     fb6:	2c6c52        	s32i	a5, a12, 176
+     fb9:	044c      	movi.n	a4, 64
+     fbb:	ffc701        	l32r	a0, ed8 <wpa_sm_rx_eapol-0x1cc>
+     fbe:	0000c0        	callx0	a0
+     fc1:	120c      	movi.n	a2, 1
+     fc3:	ffdcc6        	j	f3a <wpa_sm_rx_eapol-0x16a>
+	...
+     fda:	120000        	excw
+     fdd:	09c0c1        	l32r	a12, fffc36e0 <wpa_sm_set_state+0xfffc2048>
+     fe0:	e1d9c1        	l32r	a12, ffff9744 <wpa_sm_set_state+0xffff80ac>
+     fe3:	d1c9      	s32i.n	a12, a1, 52
+     fe5:	02dd      	mov.n	a13, a2
+     fe7:	03cd      	mov.n	a12, a3
+     fe9:	5d0322        	l8ui	a2, a3, 93
+     fec:	5e0302        	l8ui	a0, a3, 94
+     fef:	112280        	slli	a2, a2, 8
+     ff2:	200020        	or	a0, a0, a2
+     ff5:	2c2d22        	l32i	a2, a13, 176
+     ff8:	f40000        	extui	a0, a0, 0, 16
+     ffb:	056256        	bnez	a2, 1055 <wpa_sm_rx_eapol-0x4f>
+     ffe:	f27c      	movi.n	a2, -1
+    1000:	001186        	j	104a <wpa_sm_rx_eapol-0x5a>
+    1003:	022426        	beqi	a4, 2, 1009 <wpa_sm_rx_eapol-0x9b>
+    1006:	f43466        	bnei	a4, 3, ffe <wpa_sm_rx_eapol-0xa6>
+    1009:	8109      	s32i.n	a0, a1, 32
+    100b:	730c      	movi.n	a3, 7
+    100d:	ed8307        	bany	a3, a0, ffe <wpa_sm_rx_eapol-0xa6>
+    1010:	40cd22        	addi	a2, a13, 64
+    1013:	f8c032        	addi	a3, a0, -8
+    1016:	67cc52        	addi	a5, a12, 103
+    1019:	5fcc42        	addi	a4, a12, 95
+    101c:	a149      	s32i.n	a4, a1, 40
+    101e:	b159      	s32i.n	a5, a1, 44
+    1020:	9139      	s32i.n	a3, a1, 36
+    1022:	f4d030        	extui	a13, a3, 0, 16
+    1025:	c43330        	extui	a3, a3, 3, 13
+    1028:	ffe801        	l32r	a0, fc8 <wpa_sm_rx_eapol-0xdc>
+    102b:	0000c0        	callx0	a0
+    102e:	fcc256        	bnez	a2, ffe <wpa_sm_rx_eapol-0xa6>
+    1031:	a128      	l32i.n	a2, a1, 40
+    1033:	b138      	l32i.n	a3, a1, 44
+    1035:	0d4d      	mov.n	a4, a13
+    1037:	ffe501        	l32r	a0, fcc <wpa_sm_rx_eapol-0xd8>
+    103a:	0000c0        	callx0	a0
+    103d:	4148d0        	srli	a4, a13, 8
+    1040:	9158      	l32i.n	a5, a1, 36
+    1042:	5e4c52        	s8i	a5, a12, 94
+    1045:	5d4c42        	s8i	a4, a12, 93
+    1048:	020c      	movi.n	a2, 0
+    104a:	d1c8      	l32i.n	a12, a1, 52
+    104c:	e1d8      	l32i.n	a13, a1, 56
+    104e:	c108      	l32i.n	a0, a1, 48
+    1050:	40c112        	addi	a1, a1, 64
+    1053:	f00d      	ret.n
+    1055:	8109      	s32i.n	a0, a1, 32
+    1057:	a81466        	bnei	a4, 1, 1003 <wpa_sm_rx_eapol-0xa1>
+    105a:	012d      	mov.n	a2, a1
+    105c:	2dc332        	addi	a3, a3, 45
+    105f:	041c      	movi.n	a4, 16
+    1061:	ffdb01        	l32r	a0, fd0 <wpa_sm_rx_eapol-0xd4>
+    1064:	0000c0        	callx0	a0
+    1067:	40cd32        	addi	a3, a13, 64
+    106a:	10c122        	addi	a2, a1, 16
+    106d:	041c      	movi.n	a4, 16
+    106f:	ffd901        	l32r	a0, fd4 <wpa_sm_rx_eapol-0xd0>
+    1072:	0000c0        	callx0	a0
+    1075:	5fcc52        	addi	a5, a12, 95
+    1078:	012d      	mov.n	a2, a1
+    107a:	032c      	movi.n	a3, 32
+    107c:	00a142        	movi	a4, 0x100
+    107f:	8168      	l32i.n	a6, a1, 32
+    1081:	ffd501        	l32r	a0, fd8 <wpa_sm_rx_eapol-0xcc>
+    1084:	0000c0        	callx0	a0
+    1087:	f73256        	bnez	a2, ffe <wpa_sm_rx_eapol-0xa6>
+    108a:	ffee86        	j	1048 <wpa_sm_rx_eapol-0x5c>
+    108d:	000000        	ill
+    1090:	f00d      	ret.n
+    1092:	000000        	ill
+    1095:	000000        	ill
+    1098:	00fc      	bnez.n	a0, 10cc <wpa_sm_rx_eapol+0x28>
+    109a:	800000        	add	a0, a0, a0
+    109d:	000020        	excw
+    10a0:	000000        	ill
+	...
+
+000010a4 <wpa_sm_rx_eapol>:
+    10a4:	025d      	mov.n	a5, a2
+    10a6:	d0c112        	addi	a1, a1, -48
+    10a9:	51d9      	s32i.n	a13, a1, 20
+    10ab:	61e9      	s32i.n	a14, a1, 24
+    10ad:	71f9      	s32i.n	a15, a1, 28
+    10af:	41c9      	s32i.n	a12, a1, 16
+    10b1:	3109      	s32i.n	a0, a1, 12
+    10b3:	03cd      	mov.n	a12, a3
+    10b5:	62a002        	movi	a0, 98
+    10b8:	043047        	bltu	a0, a4, 10c0 <wpa_sm_rx_eapol+0x1c>
+    10bb:	020c      	movi.n	a2, 0
+    10bd:	001286        	j	110b <wpa_sm_rx_eapol+0x67>
+    10c0:	010332        	l8ui	a3, a3, 1
+    10c3:	030c22        	l8ui	a2, a12, 3
+    10c6:	020c62        	l8ui	a6, a12, 2
+    10c9:	112280        	slli	a2, a2, 8
+    10cc:	202260        	or	a2, a2, a6
+    10cf:	223366        	bnei	a3, 3, 10f5 <wpa_sm_rx_eapol+0x51>
+    10d2:	fcc432        	addi	a3, a4, -4
+    10d5:	746820        	extui	a6, a2, 8, 8
+    10d8:	747020        	extui	a7, a2, 0, 8
+    10db:	117780        	slli	a7, a7, 8
+    10de:	206670        	or	a6, a6, a7
+    10e1:	103367        	bltu	a3, a6, 10f5 <wpa_sm_rx_eapol+0x51>
+    10e4:	e85c      	movi.n	a8, 94
+    10e6:	0bb867        	bgeu	a8, a6, 10f5 <wpa_sm_rx_eapol+0x51>
+    10e9:	040c02        	l8ui	a0, a12, 4
+    10ec:	fea092        	movi	a9, 254
+    10ef:	271097        	beq	a0, a9, 111a <wpa_sm_rx_eapol+0x76>
+    10f2:	242026        	beqi	a0, 2, 111a <wpa_sm_rx_eapol+0x76>
+    10f5:	020c      	movi.n	a2, 0
+    10f7:	000406        	j	110b <wpa_sm_rx_eapol+0x67>
+    10fa:	01a8      	l32i.n	a10, a1, 0
+    10fc:	9a8c      	beqz.n	a10, 1109 <wpa_sm_rx_eapol+0x65>
+    10fe:	0d6d      	mov.n	a6, a13
+    1100:	0f4d      	mov.n	a4, a15
+    1102:	0e2d      	mov.n	a2, a14
+    1104:	1138      	l32i.n	a3, a1, 4
+    1106:	ffc9c5        	call0	da4 <wpa_sm_rx_eapol-0x300>
+    1109:	120c      	movi.n	a2, 1
+    110b:	41c8      	l32i.n	a12, a1, 16
+    110d:	51d8      	l32i.n	a13, a1, 20
+    110f:	61e8      	l32i.n	a14, a1, 24
+    1111:	71f8      	l32i.n	a15, a1, 28
+    1113:	3108      	l32i.n	a0, a1, 12
+    1115:	30c112        	addi	a1, a1, 48
+    1118:	f00d      	ret.n
+    111a:	020c      	movi.n	a2, 0
+    111c:	2169      	s32i.n	a6, a1, 8
+    111e:	1159      	s32i.n	a5, a1, 4
+    1120:	fc4b      	addi.n	a15, a12, 4
+    1122:	0f3d      	mov.n	a3, a15
+    1124:	fff685        	call0	1090 <wpa_sm_rx_eapol-0x14>
+    1127:	050c22        	l8ui	a2, a12, 5
+    112a:	060c02        	l8ui	a0, a12, 6
+    112d:	112280        	slli	a2, a2, 8
+    1130:	200020        	or	a0, a0, a2
+    1133:	24d000        	extui	a13, a0, 0, 3
+    1136:	071d26        	beqi	a13, 1, 1141 <wpa_sm_rx_eapol+0x9d>
+    1139:	042d26        	beqi	a13, 2, 1141 <wpa_sm_rx_eapol+0x9d>
+    113c:	f27c      	movi.n	a2, -1
+    113e:	fff246        	j	110b <wpa_sm_rx_eapol+0x67>
+    1141:	ffd4e1        	l32r	a14, 1094 <wpa_sm_rx_eapol-0x10>
+    1144:	452e32        	l32i	a3, a14, 0x114
+    1147:	0b8366        	bnei	a3, 8, 1156 <wpa_sm_rx_eapol+0xb2>
+    114a:	082d26        	beqi	a13, 2, 1156 <wpa_sm_rx_eapol+0xb2>
+    114d:	462e42        	l32i	a4, a14, 0x118
+    1150:	e88426        	beqi	a4, 8, 113c <wpa_sm_rx_eapol+0x98>
+    1153:	e5e037        	bbsi	a0, 3, 113c <wpa_sm_rx_eapol+0x98>
+    1156:	412e52        	l32i	a5, a14, 0x104
+    1159:	8109      	s32i.n	a0, a1, 32
+    115b:	059c      	beqz.n	a5, 116f <wpa_sm_rx_eapol+0xcb>
+    115d:	2c9b      	addi.n	a2, a12, 9
+    115f:	ffce31        	l32r	a3, 1098 <wpa_sm_rx_eapol-0xc>
+    1162:	840c      	movi.n	a4, 8
+    1164:	ffcf01        	l32r	a0, 10a0 <wpa_sm_rx_eapol-0x4>
+    1167:	0000c0        	callx0	a0
+    116a:	8108      	l32i.n	a0, a1, 32
+    116c:	cc12a6        	blti	a2, 1, 113c <wpa_sm_rx_eapol+0x98>
+    116f:	ffcb61        	l32r	a6, 109c <wpa_sm_rx_eapol-0x8>
+    1172:	c60067        	bnone	a0, a6, 113c <wpa_sm_rx_eapol+0x98>
+    1175:	c3e0b7        	bbsi	a0, 11, 113c <wpa_sm_rx_eapol+0x98>
+    1178:	8109      	s32i.n	a0, a1, 32
+    117a:	00a172        	movi	a7, 0x100
+    117d:	107070        	and	a7, a0, a7
+    1180:	0179      	s32i.n	a7, a1, 0
+    1182:	136087        	bbci	a0, 8, 1199 <wpa_sm_rx_eapol+0xf5>
+    1185:	0e2d      	mov.n	a2, a14
+    1187:	0f3d      	mov.n	a3, a15
+    1189:	0d4d      	mov.n	a4, a13
+    118b:	2168      	l32i.n	a6, a1, 8
+    118d:	0c5d      	mov.n	a5, a12
+    118f:	664b      	addi.n	a6, a6, 4
+    1191:	ffd485        	call0	edc <wpa_sm_rx_eapol-0x1c8>
+    1194:	8108      	l32i.n	a0, a1, 32
+    1196:	fa2256        	bnez	a2, 113c <wpa_sm_rx_eapol+0x98>
+    1199:	620c52        	l8ui	a5, a12, 98
+    119c:	2178      	l32i.n	a7, a1, 8
+    119e:	610c62        	l8ui	a6, a12, 97
+    11a1:	a1c772        	addi	a7, a7, -95
+    11a4:	116680        	slli	a6, a6, 8
+    11a7:	205560        	or	a5, a5, a6
+    11aa:	f45050        	extui	a5, a5, 0, 16
+    11ad:	8b3757        	bltu	a7, a5, 113c <wpa_sm_rx_eapol+0x98>
+    11b0:	592e82        	l32i	a8, a14, 0x164
+    11b3:	212866        	bnei	a8, 2, 11d8 <wpa_sm_rx_eapol+0x134>
+    11b6:	8109      	s32i.n	a0, a1, 32
+    11b8:	1c60c7        	bbci	a0, 12, 11d8 <wpa_sm_rx_eapol+0x134>
+    11bb:	0e2d      	mov.n	a2, a14
+    11bd:	0f3d      	mov.n	a3, a15
+    11bf:	0d4d      	mov.n	a4, a13
+    11c1:	ffe185        	call0	fdc <wpa_sm_rx_eapol-0xc8>
+    11c4:	f74256        	bnez	a2, 113c <wpa_sm_rx_eapol+0x98>
+    11c7:	8108      	l32i.n	a0, a1, 32
+    11c9:	610c62        	l8ui	a6, a12, 97
+    11cc:	620c52        	l8ui	a5, a12, 98
+    11cf:	116680        	slli	a6, a6, 8
+    11d2:	205560        	or	a5, a5, a6
+    11d5:	f45050        	extui	a5, a5, 0, 16
+    11d8:	047300        	extui	a7, a0, 3, 1
+    11db:	f1b716        	beqz	a7, 10fa <wpa_sm_rx_eapol+0x56>
+    11de:	083c      	movi.n	a8, 48
+    11e0:	020087        	bnone	a0, a8, 11e6 <wpa_sm_rx_eapol+0x142>
+    11e3:	ffd546        	j	113c <wpa_sm_rx_eapol+0x98>
+    11e6:	0198      	l32i.n	a9, a1, 0
+    11e8:	a98c      	beqz.n	a9, 11f6 <wpa_sm_rx_eapol+0x152>
+    11ea:	0d4d      	mov.n	a4, a13
+    11ec:	0f3d      	mov.n	a3, a15
+    11ee:	0e2d      	mov.n	a2, a14
+    11f0:	ff7b05        	call0	9a4 <wpa_sm_rx_eapol-0x700>
+    11f3:	ffc486        	j	1109 <wpa_sm_rx_eapol+0x65>
+    11f6:	0d5d      	mov.n	a5, a13
+    11f8:	0f4d      	mov.n	a4, a15
+    11fa:	0e2d      	mov.n	a2, a14
+    11fc:	1138      	l32i.n	a3, a1, 4
+    11fe:	ff1d85        	call0	3d8 <wpa_sm_rx_eapol-0xccc>
+    1201:	ffc106        	j	1109 <wpa_sm_rx_eapol+0x65>
+    1204:	0000d0        	excw
+	...
+
+00001208 <wpa_register>:
+    1208:	ffff81        	l32r	a8, 1204 <wpa_sm_rx_eapol+0x160>
+    120b:	120c      	movi.n	a2, 1
+    120d:	f0c112        	addi	a1, a1, -16
+    1210:	0109      	s32i.n	a0, a1, 0
+    1212:	804822        	s8i	a2, a8, 128
+    1215:	516832        	s32i	a3, a8, 0x144
+    1218:	526842        	s32i	a4, a8, 0x148
+    121b:	536852        	s32i	a5, a8, 0x14c
+    121e:	546862        	s32i	a6, a8, 0x150
+    1221:	556872        	s32i	a7, a8, 0x154
+    1224:	000c      	movi.n	a0, 0
+    1226:	4f6802        	s32i	a0, a8, 0x13c
+    1229:	000005        	call0	122c <wpa_register+0x24>
+    122c:	0108      	l32i.n	a0, a1, 0
+    122e:	10c112        	addi	a1, a1, 16
+    1231:	f00d      	ret.n
+    1233:	000000        	ill
+	...
+
+00001238 <wpa_set_profile>:
+    1238:	ffff41        	l32r	a4, 1234 <wpa_register+0x2c>
+    123b:	230c      	movi.n	a3, 2
+    123d:	596422        	s32i	a2, a4, 0x164
+    1240:	476432        	s32i	a3, a4, 0x11c
+    1243:	f00d      	ret.n
+	...
+
+00001254 <wpa_set_pmk>:
+    1254:	042c      	movi.n	a4, 32
+    1256:	023d      	mov.n	a3, a2
+    1258:	f0c112        	addi	a1, a1, -16
+    125b:	fffb21        	l32r	a2, 1248 <wpa_set_profile+0x10>
+    125e:	0109      	s32i.n	a0, a1, 0
+    1260:	fffc01        	l32r	a0, 1250 <wpa_set_profile+0x18>
+    1263:	0000c0        	callx0	a0
+    1266:	fff921        	l32r	a2, 124c <wpa_set_profile+0x14>
+    1269:	002c      	movi.n	a0, 32
+    126b:	8209      	s32i.n	a0, a2, 32
+    126d:	0108      	l32i.n	a0, a1, 0
+    126f:	10c112        	addi	a1, a1, 16
+    1272:	f00d      	ret.n
+    1274:	000000        	ill
+    1277:	00fc00        	excw
+    127a:	000000        	ill
+    127d:	000000        	ill
+    1280:	0158      	l32i.n	a5, a1, 0
+    1282:	5e0000        	excw
+    1285:	000001        	l32r	a0, fffc1288 <wpa_sm_set_state+0xfffbfbf0>
+    1288:	000260        	excw
+	...
+    129b:	143c00        	extui	a3, a0, 12, 2
+    129e:	000000        	ill
+    12a1:	000000        	ill
+    12a4:	138c      	beqz.n	a3, 12a9 <wpa_set_bss+0x1>
+	...
+
+000012a8 <wpa_set_bss>:
+    12a8:	401400        	ssl	a4
+    12ab:	e0c112        	addi	a1, a1, -32
+    12ae:	2169      	s32i.n	a6, a1, 8
+    12b0:	3179      	s32i.n	a7, a1, 12
+    12b2:	840c      	movi.n	a4, 8
+    12b4:	1139      	s32i.n	a3, a1, 4
+    12b6:	4109      	s32i.n	a0, a1, 16
+    12b8:	0129      	s32i.n	a2, a1, 0
+    12ba:	ffee01        	l32r	a0, 1274 <wpa_set_pmk+0x20>
+    12bd:	120c      	movi.n	a2, 1
+    12bf:	a13200        	sll	a3, a2
+    12c2:	456032        	s32i	a3, a0, 0x114
+    12c5:	401500        	ssl	a5
+    12c8:	030c      	movi.n	a3, 0
+    12ca:	a12200        	sll	a2, a2
+    12cd:	466022        	s32i	a2, a0, 0x118
+    12d0:	416032        	s32i	a3, a0, 0x104
+    12d3:	ffe921        	l32r	a2, 1278 <wpa_set_pmk+0x24>
+    12d6:	ffee01        	l32r	a0, 1290 <wpa_set_pmk+0x3c>
+    12d9:	0000c0        	callx0	a0
+    12dc:	0138      	l32i.n	a3, a1, 0
+    12de:	ffe821        	l32r	a2, 1280 <wpa_set_pmk+0x2c>
+    12e1:	060c      	movi.n	a6, 0
+    12e3:	ffe651        	l32r	a5, 127c <wpa_set_pmk+0x28>
+    12e6:	140c      	movi.n	a4, 1
+    12e8:	3e6542        	s32i	a4, a5, 248
+    12eb:	556562        	s32i	a6, a5, 0x154
+    12ee:	640c      	movi.n	a4, 6
+    12f0:	ffe901        	l32r	a0, 1294 <wpa_set_pmk+0x40>
+    12f3:	0000c0        	callx0	a0
+    12f6:	1138      	l32i.n	a3, a1, 4
+    12f8:	ffe321        	l32r	a2, 1284 <wpa_set_pmk+0x30>
+    12fb:	640c      	movi.n	a4, 6
+    12fd:	ffe601        	l32r	a0, 1298 <wpa_set_pmk+0x44>
+    1300:	0000c0        	callx0	a0
+    1303:	ffe121        	l32r	a2, 1288 <wpa_set_pmk+0x34>
+    1306:	ffe501        	l32r	a0, 129c <wpa_set_pmk+0x48>
+    1309:	0000c0        	callx0	a0
+    130c:	ffe041        	l32r	a4, 128c <wpa_set_pmk+0x38>
+    130f:	042d      	mov.n	a2, a4
+    1311:	522432        	l32i	a3, a4, 0x148
+    1314:	532442        	l32i	a4, a4, 0x14c
+    1317:	ffe201        	l32r	a0, 12a0 <wpa_set_pmk+0x4c>
+    131a:	0000c0        	callx0	a0
+    131d:	2128      	l32i.n	a2, a1, 8
+    131f:	3138      	l32i.n	a3, a1, 12
+    1321:	8148      	l32i.n	a4, a1, 32
+    1323:	ffe001        	l32r	a0, 12a4 <wpa_set_pmk+0x50>
+    1326:	0000c0        	callx0	a0
+    1329:	4108      	l32i.n	a0, a1, 16
+    132b:	20c112        	addi	a1, a1, 32
+    132e:	f00d      	ret.n
+	...
+    1338:	fffe21        	l32r	a2, 1330 <wpa_set_bss+0x88>
+    133b:	f0c112        	addi	a1, a1, -16
+    133e:	0109      	s32i.n	a0, a1, 0
+    1340:	fffd01        	l32r	a0, 1334 <wpa_set_bss+0x8c>
+    1343:	0000c0        	callx0	a0
+    1346:	0108      	l32i.n	a0, a1, 0
+    1348:	10c112        	addi	a1, a1, 16
+    134b:	f00d      	ret.n
+	...
+    1359:	fe          	.byte 0xfe
+    135a:	ef          	.byte 0xef
+    135b:	3f          	.byte 0x3f
+	...
+    1364:	001000        	excw
+    1367:	fe0000        	excw
+    136a:	ef          	.byte 0xef
+    136b:	3f          	.byte 0x3f
+	...
+    138c:	f0c112        	addi	a1, a1, -16
+    138f:	21c9      	s32i.n	a12, a1, 8
+    1391:	1109      	s32i.n	a0, a1, 4
+    1393:	097216        	beqz	a2, 142e <wpa_set_bss+0x186>
+    1396:	ffee01        	l32r	a0, 1350 <wpa_set_bss+0xa8>
+    1399:	8a0002        	l8ui	a0, a0, 138
+    139c:	ffeec1        	l32r	a12, 1354 <wpa_set_bss+0xac>
+    139f:	078016        	beqz	a0, 141b <wpa_set_bss+0x173>
+    13a2:	bfcc22        	addi	a2, a12, -65
+    13a5:	0129      	s32i.n	a2, a1, 0
+    13a7:	fff301        	l32r	a0, 1374 <wpa_set_bss+0xcc>
+    13aa:	0000c0        	callx0	a0
+    13ad:	0ed266        	bnei	a2, 64, 13bf <wpa_set_bss+0x117>
+    13b0:	0128      	l32i.n	a2, a1, 0
+    13b2:	0c3d      	mov.n	a3, a12
+    13b4:	042c      	movi.n	a4, 32
+    13b6:	fff001        	l32r	a0, 1378 <wpa_set_bss+0xd0>
+    13b9:	0000c0        	callx0	a0
+    13bc:	001606        	j	1418 <wpa_set_bss+0x170>
+    13bf:	140c      	movi.n	a4, 1
+    13c1:	ffe531        	l32r	a3, 1358 <wpa_set_bss+0xb0>
+    13c4:	0020c0        	memw
+    13c7:	852322        	l32i	a2, a3, 0x214
+    13ca:	202240        	or	a2, a2, a4
+    13cd:	0020c0        	memw
+    13d0:	856322        	s32i	a2, a3, 0x214
+    13d3:	a0a022        	movi	a2, 160
+    13d6:	ffe901        	l32r	a0, 137c <wpa_set_bss+0xd4>
+    13d9:	0000c0        	callx0	a0
+    13dc:	0128      	l32i.n	a2, a1, 0
+    13de:	ffe031        	l32r	a3, 1360 <wpa_set_bss+0xb8>
+    13e1:	ffe051        	l32r	a5, 1364 <wpa_set_bss+0xbc>
+    13e4:	0c6d      	mov.n	a6, a12
+    13e6:	ffdd41        	l32r	a4, 135c <wpa_set_bss+0xb4>
+    13e9:	072c      	movi.n	a7, 32
+    13eb:	782442        	l32i	a4, a4, 0x1e0
+    13ee:	ffe401        	l32r	a0, 1380 <wpa_set_bss+0xd8>
+    13f1:	0000c0        	callx0	a0
+    13f4:	e77c      	movi.n	a7, -2
+    13f6:	0020c0        	memw
+    13f9:	ffdb61        	l32r	a6, 1368 <wpa_set_bss+0xc0>
+    13fc:	852652        	l32i	a5, a6, 0x214
+    13ff:	105570        	and	a5, a5, a7
+    1402:	0020c0        	memw
+    1405:	856652        	s32i	a5, a6, 0x214
+    1408:	025c      	movi.n	a2, 80
+    140a:	ffde01        	l32r	a0, 1384 <wpa_set_bss+0xdc>
+    140d:	0000c0        	callx0	a0
+    1410:	ffd791        	l32r	a9, 136c <wpa_set_bss+0xc4>
+    1413:	080c      	movi.n	a8, 0
+    1415:	0a4982        	s8i	a8, a9, 10
+    1418:	fff1c5        	call0	1338 <wpa_set_bss+0x90>
+    141b:	0c3d      	mov.n	a3, a12
+    141d:	ffd4c1        	l32r	a12, 1370 <wpa_set_bss+0xc8>
+    1420:	042c      	movi.n	a4, 32
+    1422:	0c2d      	mov.n	a2, a12
+    1424:	ffd901        	l32r	a0, 1388 <wpa_set_bss+0xe0>
+    1427:	0000c0        	callx0	a0
+    142a:	0a2c      	movi.n	a10, 32
+    142c:	8ca9      	s32i.n	a10, a12, 32
+    142e:	21c8      	l32i.n	a12, a1, 8
+    1430:	1108      	l32i.n	a0, a1, 4
+    1432:	10c112        	addi	a1, a1, 16
+    1435:	f00d      	ret.n
+    1437:	000000        	ill
+    143a:	3d0000        	excw
+    143d:	c11202        	l16ui	a0, a2, 0x182
+    1440:	fd61f0        	excw
+    1443:	ff          	.byte 0xff
+    1444:	0109      	s32i.n	a0, a1, 0
+    1446:	022b      	addi.n	a0, a2, 2
+    1448:	592622        	l32i	a2, a6, 0x164
+    144b:	526602        	s32i	a0, a6, 0x148
+    144e:	161266        	bnei	a2, 1, 1468 <wpa_set_bss+0x1c0>
+    1451:	841c      	movi.n	a4, 24
+    1453:	801c      	movi.n	a0, 24
+    1455:	536602        	s32i	a0, a6, 0x14c
+    1458:	862602        	l32i	a0, a6, 0x218
+    145b:	742020        	extui	a2, a2, 0, 8
+    145e:	0000c0        	callx0	a0
+    1461:	0108      	l32i.n	a0, a1, 0
+    1463:	10c112        	addi	a1, a1, 16
+    1466:	f00d      	ret.n
+    1468:	601c      	movi.n	a0, 22
+    146a:	641c      	movi.n	a4, 22
+    146c:	fff946        	j	1455 <wpa_set_bss+0x1ad>
+	...
+    147b:	c11200        	mul16u	a1, a2, a0
+    147e:	a149c0        	excw
+    1481:	b159      	s32i.n	a5, a1, 44
+    1483:	4179      	s32i.n	a7, a1, 16
+    1485:	c169      	s32i.n	a6, a1, 48
+    1487:	91f9      	s32i.n	a15, a1, 36
+    1489:	71d9      	s32i.n	a13, a1, 28
+    148b:	5109      	s32i.n	a0, a1, 20
+    148d:	81e9      	s32i.n	a14, a1, 32
+    148f:	61c9      	s32i.n	a12, a1, 24
+    1491:	02ed      	mov.n	a14, a2
+    1493:	03cd      	mov.n	a12, a3
+    1495:	000c      	movi.n	a0, 0
+    1497:	1221d2        	l32i	a13, a1, 72
+    149a:	c1f8      	l32i.n	a15, a1, 48
+    149c:	042366        	bnei	a3, 2, 14a4 <wpa_set_bss+0x1fc>
+    149f:	01cd66        	bnei	a13, 32, 14a4 <wpa_set_bss+0x1fc>
+    14a2:	0209      	s32i.n	a0, a2, 0
+    14a4:	2ec9      	s32i.n	a12, a14, 8
+    14a6:	2ecb      	addi.n	a2, a14, 12
+    14a8:	a138      	l32i.n	a3, a1, 40
+    14aa:	640c      	movi.n	a4, 6
+    14ac:	1e09      	s32i.n	a0, a14, 4
+    14ae:	fff101        	l32r	a0, 1474 <wpa_set_bss+0x1cc>
+    14b1:	0000c0        	callx0	a0
+    14b4:	b128      	l32i.n	a2, a1, 44
+    14b6:	6ef9      	s32i.n	a15, a14, 24
+    14b8:	5e29      	s32i.n	a2, a14, 20
+    14ba:	26ce22        	addi	a2, a14, 38
+    14bd:	1121e2        	l32i	a14, a1, 68
+    14c0:	0d4d      	mov.n	a4, a13
+    14c2:	0e3d      	mov.n	a3, a14
+    14c4:	ffed01        	l32r	a0, 1478 <wpa_set_bss+0x1d0>
+    14c7:	0000c0        	callx0	a0
+    14ca:	0f5d      	mov.n	a5, a15
+    14cc:	0c2d      	mov.n	a2, a12
+    14ce:	a138      	l32i.n	a3, a1, 40
+    14d0:	b148      	l32i.n	a4, a1, 44
+    14d2:	102172        	l32i	a7, a1, 64
+    14d5:	01e9      	s32i.n	a14, a1, 0
+    14d7:	11d9      	s32i.n	a13, a1, 4
+    14d9:	ffe501        	l32r	a0, 1470 <wpa_set_bss+0x1c8>
+    14dc:	132162        	l32i	a6, a1, 76
+    14df:	2169      	s32i.n	a6, a1, 8
+    14e1:	872002        	l32i	a0, a0, 0x21c
+    14e4:	4168      	l32i.n	a6, a1, 16
+    14e6:	0000c0        	callx0	a0
+    14e9:	020c      	movi.n	a2, 0
+    14eb:	61c8      	l32i.n	a12, a1, 24
+    14ed:	71d8      	l32i.n	a13, a1, 28
+    14ef:	81e8      	l32i.n	a14, a1, 32
+    14f1:	91f8      	l32i.n	a15, a1, 36
+    14f3:	5108      	l32i.n	a0, a1, 20
+    14f5:	40c112        	addi	a1, a1, 64
+    14f8:	f00d      	ret.n
+    14fa:	000000        	ill
+    14fd:	000000        	ill
+    1500:	ffff31        	l32r	a3, 14fc <wpa_set_bss+0x254>
+    1503:	020c      	movi.n	a2, 0
+    1505:	5f6322        	s32i	a2, a3, 0x17c
+    1508:	716322        	s32i	a2, a3, 0x1c4
+    150b:	f00d      	ret.n
+    150d:	000000        	ill
+    1510:	000000        	ill
+    1513:	c11200        	mul16u	a1, a2, a0
+    1516:	0109f0        	slli	a0, a9, 17
+    1519:	fffd01        	l32r	a0, 1510 <wpa_set_bss+0x268>
+    151c:	4a2022        	l32i	a2, a0, 0x128
+    151f:	628c      	beqz.n	a2, 1529 <wpa_set_bss+0x281>
+    1521:	020c      	movi.n	a2, 0
+    1523:	4a6022        	s32i	a2, a0, 0x128
+    1526:	fffd85        	call0	1500 <wpa_set_bss+0x258>
+    1529:	020c      	movi.n	a2, 0
+    152b:	000005        	call0	152c <wpa_set_bss+0x284>
+    152e:	0108      	l32i.n	a0, a1, 0
+    1530:	10c112        	addi	a1, a1, 16
+    1533:	f00d      	ret.n
+    1535:	000000        	ill
+    1538:	000000        	ill
+    153b:	01c400        	slli	a12, a4, 32
+    153e:	2c0000        	excw
+    1541:	000001        	l32r	a0, fffc1544 <wpa_sm_set_state+0xfffbfeac>
+	...
+    154c:	002710        	excw
+    154f:	151400        	extui	a1, a0, 20, 2
+    1552:	600000        	neg	a0, a0
+    1555:	00ea      	add.n	a0, a0, a14
+    1557:	000000        	ill
+    155a:	000000        	ill
+    155d:	000015        	excw
+    1560:	00ea60        	excw
+	...
+
+00001580 <pp_michael_mic_failure>:
+    1580:	ffef41        	l32r	a4, 153c <wpa_set_bss+0x294>
+    1583:	f0c112        	addi	a1, a1, -16
+    1586:	11c9      	s32i.n	a12, a1, 4
+    1588:	0109      	s32i.n	a0, a1, 0
+    158a:	ffedc1        	l32r	a12, 1540 <wpa_set_bss+0x298>
+    158d:	ffea01        	l32r	a0, 1538 <wpa_set_bss+0x290>
+    1590:	b8c452        	addi	a5, a4, -72
+    1593:	712032        	l32i	a3, a0, 0x1c4
+    1596:	5f2002        	l32i	a0, a0, 0x17c
+    1599:	835420        	moveqz	a5, a4, a2
+    159c:	003a      	add.n	a0, a0, a3
+    159e:	047016        	beqz	a0, 15e9 <pp_michael_mic_failure+0x69>
+    15a1:	b20c      	movi.n	a2, 11
+    15a3:	fff001        	l32r	a0, 1564 <wpa_set_bss+0x2bc>
+    15a6:	0000c0        	callx0	a0
+    15a9:	ffe621        	l32r	a2, 1544 <wpa_set_bss+0x29c>
+    15ac:	130c      	movi.n	a3, 1
+    15ae:	040c      	movi.n	a4, 0
+    15b0:	feb8c5        	call0	140 <wpa_sm_rx_eapol-0xf64>
+    15b3:	ffe531        	l32r	a3, 1548 <wpa_set_bss+0x2a0>
+    15b6:	120c      	movi.n	a2, 1
+    15b8:	4a6322        	s32i	a2, a3, 0x128
+    15bb:	ffe421        	l32r	a2, 154c <wpa_set_bss+0x2a4>
+    15be:	ffea01        	l32r	a0, 1568 <wpa_set_bss+0x2c0>
+    15c1:	0000c0        	callx0	a0
+    15c4:	0c2d      	mov.n	a2, a12
+    15c6:	ffe901        	l32r	a0, 156c <wpa_set_bss+0x2c4>
+    15c9:	0000c0        	callx0	a0
+    15cc:	0c2d      	mov.n	a2, a12
+    15ce:	ffe031        	l32r	a3, 1550 <wpa_set_bss+0x2a8>
+    15d1:	040c      	movi.n	a4, 0
+    15d3:	ffe701        	l32r	a0, 1570 <wpa_set_bss+0x2c8>
+    15d6:	0000c0        	callx0	a0
+    15d9:	0c2d      	mov.n	a2, a12
+    15db:	ffde31        	l32r	a3, 1554 <wpa_set_bss+0x2ac>
+    15de:	040c      	movi.n	a4, 0
+    15e0:	ffe501        	l32r	a0, 1574 <wpa_set_bss+0x2cc>
+    15e3:	0000c0        	callx0	a0
+    15e6:	000b86        	j	1618 <pp_michael_mic_failure+0x98>
+    15e9:	0548      	l32i.n	a4, a5, 0
+    15eb:	a20c      	movi.n	a2, 10
+    15ed:	441b      	addi.n	a4, a4, 1
+    15ef:	0549      	s32i.n	a4, a5, 0
+    15f1:	000005        	call0	15f4 <pp_michael_mic_failure+0x74>
+    15f4:	ffd921        	l32r	a2, 1558 <wpa_set_bss+0x2b0>
+    15f7:	130c      	movi.n	a3, 1
+    15f9:	040c      	movi.n	a4, 0
+    15fb:	feb445        	call0	140 <wpa_sm_rx_eapol-0xf64>
+    15fe:	0c2d      	mov.n	a2, a12
+    1600:	ffd731        	l32r	a3, 155c <wpa_set_bss+0x2b4>
+    1603:	040c      	movi.n	a4, 0
+    1605:	ffdc01        	l32r	a0, 1578 <wpa_set_bss+0x2d0>
+    1608:	0000c0        	callx0	a0
+    160b:	0c2d      	mov.n	a2, a12
+    160d:	ffd431        	l32r	a3, 1560 <wpa_set_bss+0x2b8>
+    1610:	040c      	movi.n	a4, 0
+    1612:	ffda01        	l32r	a0, 157c <wpa_set_bss+0x2d4>
+    1615:	0000c0        	callx0	a0
+    1618:	11c8      	l32i.n	a12, a1, 4
+    161a:	0108      	l32i.n	a0, a1, 0
+    161c:	10c112        	addi	a1, a1, 16
+    161f:	f00d      	ret.n
+	...
+
+00001634 <eapol_txcb>:
+    1634:	f0c112        	addi	a1, a1, -16
+    1637:	0109      	s32i.n	a0, a1, 0
+    1639:	fffa01        	l32r	a0, 1624 <pp_michael_mic_failure+0xa4>
+    163c:	4008      	l32i.n	a0, a0, 16
+    163e:	f008      	l32i.n	a0, a0, 60
+    1640:	2a5066        	bnei	a0, 5, 166e <eapol_txcb+0x3a>
+    1643:	fff901        	l32r	a0, 1628 <pp_michael_mic_failure+0xa8>
+    1646:	5a2032        	l32i	a3, a0, 0x168
+    1649:	0f6326        	beqi	a3, 6, 165c <eapol_txcb+0x28>
+    164c:	257326        	beqi	a3, 7, 1675 <eapol_txcb+0x41>
+    164f:	2a8326        	beqi	a3, 8, 167d <eapol_txcb+0x49>
+    1652:	b20c      	movi.n	a2, 11
+    1654:	099327        	bne	a3, a2, 1661 <eapol_txcb+0x2d>
+    1657:	e30c      	movi.n	a3, 14
+    1659:	000186        	j	1663 <eapol_txcb+0x2f>
+    165c:	720c      	movi.n	a2, 7
+    165e:	000005        	call0	1660 <eapol_txcb+0x2c>
+    1661:	030c      	movi.n	a3, 0
+    1663:	738c      	beqz.n	a3, 166e <eapol_txcb+0x3a>
+    1665:	fff121        	l32r	a2, 162c <pp_michael_mic_failure+0xac>
+    1668:	fff201        	l32r	a0, 1630 <pp_michael_mic_failure+0xb0>
+    166b:	0000c0        	callx0	a0
+    166e:	0108      	l32i.n	a0, a1, 0
+    1670:	10c112        	addi	a1, a1, 16
+    1673:	f00d      	ret.n
+    1675:	002d      	mov.n	a2, a0
+    1677:	ff4405        	call0	ab8 <wpa_sm_rx_eapol-0x5ec>
+    167a:	000106        	j	1682 <eapol_txcb+0x4e>
+    167d:	002d      	mov.n	a2, a0
+    167f:	ff7d85        	call0	e58 <wpa_sm_rx_eapol-0x24c>
+    1682:	743020        	extui	a3, a2, 0, 8
+    1685:	fff686        	j	1663 <eapol_txcb+0x2f>
+    1688:	000000        	ill
+    168b:	012c00        	slli	a2, a12, 32
+	...
+
+00001698 <wpa_sm_set_state>:
+    1698:	f0c112        	addi	a1, a1, -16
+    169b:	0109      	s32i.n	a0, a1, 0
+    169d:	fffa01        	l32r	a0, 1688 <eapol_txcb+0x54>
+    16a0:	5a2032        	l32i	a3, a0, 0x168
+    16a3:	1129      	s32i.n	a2, a1, 4
+    16a5:	0d9366        	bnei	a3, 10, 16b6 <wpa_sm_set_state+0x1e>
+    16a8:	fff921        	l32r	a2, 168c <eapol_txcb+0x58>
+    16ab:	fffa01        	l32r	a0, 1694 <eapol_txcb+0x60>
+    16ae:	0000c0        	callx0	a0
+    16b1:	fff701        	l32r	a0, 1690 <eapol_txcb+0x5c>
+    16b4:	1128      	l32i.n	a2, a1, 4
+    16b6:	5a6022        	s32i	a2, a0, 0x168
+    16b9:	0108      	l32i.n	a0, a1, 0
+    16bb:	10c112        	addi	a1, a1, 16
+    16be:	f00d      	ret.n

@@ -1,0 +1,2350 @@
+
+lmac.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <lmacIsActive-0x4>:
+       0:	000000        	ill
+	...
+
+00000004 <lmacIsActive>:
+       4:	ffff31        	l32r	a3, 0 <lmacIsActive-0x4>
+       7:	000332        	l8ui	a3, a3, 0
+       a:	120c      	movi.n	a2, 1
+       c:	0183b6        	bltui	a3, 8, 11 <lmacIsActive+0xd>
+       f:	020c      	movi.n	a2, 0
+      11:	f00d      	ret.n
+      13:	003000        	rfe
+	...
+
+00000018 <lmacIsIdle>:
+      18:	130c      	movi.n	a3, 1
+      1a:	fffe51        	l32r	a5, 14 <lmacIsActive+0x10>
+      1d:	b04220        	addx8	a4, a2, a2
+      20:	a04450        	addx4	a4, a4, a5
+      23:	110442        	l8ui	a4, a4, 17
+      26:	020c      	movi.n	a2, 0
+      28:	832340        	moveqz	a2, a3, a4
+      2b:	f00d      	ret.n
+	...
+      35:	000000        	ill
+      38:	0008      	l32i.n	a0, a0, 0
+	...
+      46:	120000        	excw
+      49:	09f0c1        	l32r	a12, fffc280c <lmacRxDone+0xfffc0fe4>
+      4c:	f80111        	l32r	a1, ffffe050 <lmacRxDone+0xffffc828>
+      4f:	ff          	.byte 0xff
+      50:	9008      	l32i.n	a0, a0, 36
+      52:	0129      	s32i.n	a2, a1, 0
+      54:	00dc      	bnez.n	a0, 68 <lmacIsIdle+0x50>
+      56:	fff721        	l32r	a2, 34 <lmacIsIdle+0x1c>
+      59:	fff731        	l32r	a3, 38 <lmacIsIdle+0x20>
+      5c:	eda042        	movi	a4, 237
+      5f:	fff701        	l32r	a0, 3c <lmacIsIdle+0x24>
+      62:	0000c0        	callx0	a0
+      65:	ffff06        	j	65 <lmacIsIdle+0x4d>
+      68:	032d      	mov.n	a2, a3
+      6a:	330c      	movi.n	a3, 3
+      6c:	fff501        	l32r	a0, 40 <lmacIsIdle+0x28>
+      6f:	0000c0        	callx0	a0
+      72:	0138      	l32i.n	a3, a1, 0
+      74:	104322        	s8i	a2, a3, 16
+      77:	a20c      	movi.n	a2, 10
+      79:	fff201        	l32r	a0, 44 <lmacIsIdle+0x2c>
+      7c:	0000c0        	callx0	a0
+      7f:	1108      	l32i.n	a0, a1, 4
+      81:	10c112        	addi	a1, a1, 16
+      84:	f00d      	ret.n
+	...
+      8e:	080000        	excw
+	...
+      9d:	000000        	ill
+      a0:	f0c112        	addi	a1, a1, -16
+      a3:	0109      	s32i.n	a0, a1, 0
+      a5:	fff801        	l32r	a0, 88 <lmacIsIdle+0x70>
+      a8:	9008      	l32i.n	a0, a0, 36
+      aa:	029d      	mov.n	a9, a2
+      ac:	00dc      	bnez.n	a0, c0 <lmacIsIdle+0xa8>
+      ae:	fff721        	l32r	a2, 8c <lmacIsIdle+0x74>
+      b1:	fff731        	l32r	a3, 90 <lmacIsIdle+0x78>
+      b4:	f8a042        	movi	a4, 248
+      b7:	fff701        	l32r	a0, 94 <lmacIsIdle+0x7c>
+      ba:	0000c0        	callx0	a0
+      bd:	ffff06        	j	bd <lmacIsIdle+0xa5>
+      c0:	032d      	mov.n	a2, a3
+      c2:	100932        	l8ui	a3, a9, 16
+      c5:	fff401        	l32r	a0, 98 <lmacIsIdle+0x80>
+      c8:	0000c0        	callx0	a0
+      cb:	a20c      	movi.n	a2, 10
+      cd:	fff301        	l32r	a0, 9c <lmacIsIdle+0x84>
+      d0:	0000c0        	callx0	a0
+      d3:	0108      	l32i.n	a0, a1, 0
+      d5:	10c112        	addi	a1, a1, 16
+      d8:	f00d      	ret.n
+      da:	120000        	excw
+      dd:	09f0c1        	l32r	a12, fffc28a0 <lmacRxDone+0xfffc1078>
+      e0:	04c501        	l32r	a0, fffc13f4 <lmacRxDone+0xfffbfbcc>
+      e3:	010800        	slli	a0, a8, 32
+      e6:	10c112        	addi	a1, a1, 16
+      e9:	f00d      	ret.n
+	...
+      f3:	000800        	excw
+      f6:	ff0000        	excw
+      f9:	ff          	.byte 0xff
+      fa:	000003        	excw
+      fd:	f20a      	add.n	a15, a2, a0
+      ff:	3f          	.byte 0x3f
+     100:	000000        	ill
+     103:	000001        	l32r	a0, fffc0104 <lmacRxDone+0xfffbe8dc>
+     106:	001000        	excw
+     109:	080000        	excw
+     10c:	400000        	ssr	a0
+     10f:	000000        	ill
+     112:	000040        	excw
+     115:	010000        	slli	a0, a0, 32
+     118:	000000        	ill
+     11b:	000010        	excw
+     11e:	000800        	excw
+	...
+     12d:	000000        	ill
+     130:	080c      	movi.n	a8, 0
+     132:	80a0a2        	movi	a10, 128
+     135:	ffedb1        	l32r	a11, ec <lmacIsIdle+0xd4>
+     138:	d0c112        	addi	a1, a1, -48
+     13b:	5109      	s32i.n	a0, a1, 20
+     13d:	81e9      	s32i.n	a14, a1, 32
+     13f:	61c9      	s32i.n	a12, a1, 24
+     141:	71d9      	s32i.n	a13, a1, 28
+     143:	02cd      	mov.n	a12, a2
+     145:	03dd      	mov.n	a13, a3
+     147:	33cc      	bnez.n	a3, 14e <lmacIsIdle+0x136>
+     149:	02e8      	l32i.n	a14, a2, 0
+     14b:	000046        	j	150 <lmacIsIdle+0x138>
+     14e:	9be8      	l32i.n	a14, a11, 36
+     150:	4e68      	l32i.n	a6, a14, 16
+     152:	0b1e72        	l16ui	a7, a14, 22
+     155:	8e08      	l32i.n	a0, a14, 32
+     157:	0a1e52        	l16ui	a5, a14, 20
+     15a:	0098      	l32i.n	a9, a0, 0
+     15c:	031032        	l16ui	a3, a0, 6
+     15f:	557a      	add.n	a5, a5, a7
+     161:	f45050        	extui	a5, a5, 0, 16
+     164:	110c72        	l8ui	a7, a12, 17
+     167:	413730        	srli	a3, a3, 7
+     16a:	412690        	srli	a2, a9, 6
+     16d:	10a2a0        	and	a10, a2, a10
+     170:	0469d7        	bbci	a9, 13, 178 <lmacIsIdle+0x160>
+     173:	01e9c7        	bbsi	a9, 12, 178 <lmacIsIdle+0x160>
+     176:	180c      	movi.n	a8, 1
+     178:	679c      	beqz.n	a7, 192 <lmacIsIdle+0x17a>
+     17a:	143726        	beqi	a7, 3, 192 <lmacIsIdle+0x17a>
+     17d:	112726        	beqi	a7, 2, 192 <lmacIsIdle+0x17a>
+     180:	ffdc21        	l32r	a2, f0 <lmacIsIdle+0xd8>
+     183:	ffdc31        	l32r	a3, f4 <lmacIsIdle+0xdc>
+     186:	15a142        	movi	a4, 0x115
+     189:	ffe501        	l32r	a0, 120 <lmacIsIdle+0x108>
+     18c:	0000c0        	callx0	a0
+     18f:	ffff06        	j	18f <lmacIsIdle+0x177>
+     192:	070c      	movi.n	a7, 0
+     194:	1189      	s32i.n	a8, a1, 4
+     196:	3159      	s32i.n	a5, a1, 12
+     198:	140c      	movi.n	a4, 1
+     19a:	4149      	s32i.n	a4, a1, 16
+     19c:	107267        	bbci	a2, 22, 1b0 <lmacIsIdle+0x198>
+     19f:	180c      	movi.n	a8, 1
+     1a1:	8e08      	l32i.n	a0, a14, 32
+     1a3:	150c      	movi.n	a5, 1
+     1a5:	0028      	l32i.n	a2, a0, 0
+     1a7:	015632        	s16i	a3, a6, 2
+     1aa:	412620        	srli	a2, a2, 6
+     1ad:	0015c6        	j	208 <lmacIsIdle+0x1f0>
+     1b0:	0b0c42        	l8ui	a4, a12, 11
+     1b3:	44cc      	bnez.n	a4, 1bb <lmacIsIdle+0x1a3>
+     1b5:	0d0c52        	l8ui	a5, a12, 13
+     1b8:	251516        	beqz	a5, 40d <lmacIsIdle+0x3f5>
+     1bb:	0b9c92        	l16si	a9, a12, 22
+     1be:	0a9c52        	l16si	a5, a12, 20
+     1c1:	ab48      	l32i.n	a4, a11, 40
+     1c3:	118300        	slli	a8, a3, 16
+     1c6:	318080        	srai	a8, a8, 16
+     1c9:	8448      	l32i.n	a4, a4, 32
+     1cb:	c05590        	sub	a5, a5, a9
+     1ce:	031442        	l16ui	a4, a4, 6
+     1d1:	0a5c52        	s16i	a5, a12, 20
+     1d4:	0a9c92        	l16si	a9, a12, 20
+     1d7:	051002        	l16ui	a0, a0, 10
+     1da:	414740        	srli	a4, a4, 7
+     1dd:	004a      	add.n	a0, a0, a4
+     1df:	c00030        	sub	a0, a0, a3
+     1e2:	110000        	slli	a0, a0, 16
+     1e5:	310000        	srai	a0, a0, 16
+     1e8:	0b5c02        	s16i	a0, a12, 22
+     1eb:	c00900        	sub	a0, a9, a0
+     1ee:	082807        	blt	a8, a0, 1fa <lmacIsIdle+0x1e2>
+     1f1:	015632        	s16i	a3, a6, 2
+     1f4:	0c4c72        	s8i	a7, a12, 12
+     1f7:	000086        	j	1fd <lmacIsIdle+0x1e5>
+     1fa:	015602        	s16i	a0, a6, 2
+     1fd:	8e08      	l32i.n	a0, a14, 32
+     1ff:	080c      	movi.n	a8, 0
+     201:	0028      	l32i.n	a2, a0, 0
+     203:	050c      	movi.n	a5, 0
+     205:	412620        	srli	a2, a2, 6
+     208:	00a192        	movi	a9, 0x100
+     20b:	103290        	and	a3, a2, a9
+     20e:	35ac      	beqz.n	a5, 235 <lmacIsIdle+0x21d>
+     210:	9189      	s32i.n	a8, a1, 36
+     212:	a179      	s32i.n	a7, a1, 40
+     214:	b169      	s32i.n	a6, a1, 44
+     216:	1b6287        	bbci	a2, 8, 235 <lmacIsIdle+0x21d>
+     219:	080022        	l8ui	a2, a0, 8
+     21c:	ffc201        	l32r	a0, 124 <lmacIsIdle+0x10c>
+     21f:	0000c0        	callx0	a0
+     222:	b168      	l32i.n	a6, a1, 44
+     224:	a178      	l32i.n	a7, a1, 40
+     226:	8e08      	l32i.n	a0, a14, 32
+     228:	9188      	l32i.n	a8, a1, 36
+     22a:	0028      	l32i.n	a2, a0, 0
+     22c:	00a132        	movi	a3, 0x100
+     22f:	412620        	srli	a2, a2, 6
+     232:	103230        	and	a3, a2, a3
+     235:	02a442        	movi	a4, 0x402
+     238:	0b8247        	bany	a2, a4, 247 <lmacIsIdle+0x22f>
+     23b:	055620        	extui	a5, a2, 22, 1
+     23e:	18a516        	beqz	a5, 3cc <lmacIsIdle+0x3b4>
+     241:	059320        	extui	a9, a2, 19, 1
+     244:	184956        	bnez	a9, 3cc <lmacIsIdle+0x3b4>
+     247:	050c      	movi.n	a5, 0
+     249:	000246        	j	256 <lmacIsIdle+0x23e>
+     24c:	05b320        	extui	a11, a2, 19, 1
+     24f:	4158      	l32i.n	a5, a1, 16
+     251:	2a0c      	movi.n	a10, 2
+     253:	935ab0        	movnez	a5, a10, a11
+     256:	ffa8b1        	l32r	a11, f8 <lmacIsIdle+0xe0>
+     259:	1e98      	l32i.n	a9, a14, 4
+     25b:	0116a2        	l16ui	a10, a6, 2
+     25e:	0a9ce2        	l16si	a14, a12, 20
+     261:	246050        	extui	a6, a5, 0, 3
+     264:	016680        	slli	a6, a6, 24
+     267:	11aa00        	slli	a10, a10, 16
+     26a:	1099b0        	and	a9, a9, a11
+     26d:	31b8      	l32i.n	a11, a1, 12
+     26f:	ffa351        	l32r	a5, fc <lmacIsIdle+0xe4>
+     272:	b4b0b0        	extui	a11, a11, 0, 12
+     275:	163d16        	beqz	a13, 3dc <lmacIsIdle+0x3c4>
+     278:	ffa2c1        	l32r	a12, 100 <lmacIsIdle+0xe8>
+     27b:	016297        	bbci	a2, 9, 280 <lmacIsIdle+0x268>
+     27e:	38cc      	bnez.n	a8, 285 <lmacIsIdle+0x26d>
+     280:	0d0c      	movi.n	a13, 0
+     282:	000086        	j	288 <lmacIsIdle+0x270>
+     285:	ff9fd1        	l32r	a13, 104 <lmacIsIdle+0xec>
+     288:	14b316        	beqz	a3, 3d7 <lmacIsIdle+0x3bf>
+     28b:	148816        	beqz	a8, 3d7 <lmacIsIdle+0x3bf>
+     28e:	ff9e31        	l32r	a3, 108 <lmacIsIdle+0xf0>
+     291:	0c1ee6        	bgei	a14, 1, 2a1 <lmacIsIdle+0x289>
+     294:	1188      	l32i.n	a8, a1, 4
+     296:	748080        	extui	a8, a8, 0, 8
+     299:	48cc      	bnez.n	a8, 2a1 <lmacIsIdle+0x289>
+     29b:	0800e2        	l8ui	a14, a0, 8
+     29e:	04beb6        	bltui	a14, 16, 2a6 <lmacIsIdle+0x28e>
+     2a1:	020c      	movi.n	a2, 0
+     2a3:	000086        	j	2a9 <lmacIsIdle+0x291>
+     2a6:	ff9921        	l32r	a2, 10c <lmacIsIdle+0xf4>
+     2a9:	208d30        	or	a8, a13, a3
+     2ac:	20e290        	or	a14, a2, a9
+     2af:	208680        	or	a8, a6, a8
+     2b2:	0c2d      	mov.n	a2, a12
+     2b4:	2088e0        	or	a8, a8, a14
+     2b7:	0020c0        	memw
+     2ba:	b76582        	s32i	a8, a5, 0x2dc
+     2bd:	0020c0        	memw
+     2c0:	ba65a2        	s32i	a10, a5, 0x2e8
+     2c3:	0c0062        	l8ui	a6, a0, 12
+     2c6:	080032        	l8ui	a3, a0, 8
+     2c9:	116600        	slli	a6, a6, 16
+     2cc:	349030        	extui	a9, a3, 0, 4
+     2cf:	119940        	slli	a9, a9, 12
+     2d2:	209b90        	or	a9, a11, a9
+     2d5:	01b3f6        	bgeui	a3, 16, 2da <lmacIsIdle+0x2c2>
+     2d8:	072d      	mov.n	a2, a7
+     2da:	20a260        	or	a10, a2, a6
+     2dd:	2099a0        	or	a9, a9, a10
+     2e0:	0020c0        	memw
+     2e3:	b86592        	s32i	a9, a5, 0x2e0
+     2e6:	080032        	l8ui	a3, a0, 8
+     2e9:	87a022        	movi	a2, 135
+     2ec:	02b3f6        	bgeui	a3, 16, 2f2 <lmacIsIdle+0x2da>
+     2ef:	003306        	j	3bf <lmacIsIdle+0x3a7>
+     2f2:	8a0c      	movi.n	a10, 8
+     2f4:	00b8      	l32i.n	a11, a0, 0
+     2f6:	31e8      	l32i.n	a14, a1, 12
+     2f8:	f0c302        	addi	a0, a3, -16
+     2fb:	11ee80        	slli	a14, a14, 8
+     2fe:	24c000        	extui	a12, a0, 0, 3
+     301:	05bcb0        	extui	a11, a11, 28, 1
+     304:	937ab0        	movnez	a7, a10, a11
+     307:	076d      	mov.n	a6, a7
+     309:	20cce0        	or	a12, a12, a14
+     30c:	0180e6        	bgei	a0, 8, 311 <lmacIsIdle+0x2f9>
+     30f:	720c      	movi.n	a2, 7
+     311:	20d260        	or	a13, a2, a6
+     314:	01dd80        	slli	a13, a13, 24
+     317:	20ccd0        	or	a12, a12, a13
+     31a:	0020c0        	memw
+     31d:	b965c2        	s32i	a12, a5, 0x2e4
+     320:	0026c6        	j	3bf <lmacIsIdle+0x3a7>
+     323:	ff7b31        	l32r	a3, 110 <lmacIsIdle+0xf8>
+     326:	ff7b21        	l32r	a2, 114 <lmacIsIdle+0xfc>
+     329:	204d80        	or	a4, a13, a8
+     32c:	20e390        	or	a14, a3, a9
+     32f:	204640        	or	a4, a6, a4
+     332:	040c62        	l8ui	a6, a12, 4
+     335:	886c      	movi.n	a8, -24
+     337:	d16860        	mul16s	a6, a8, a6
+     33a:	2044e0        	or	a4, a4, a14
+     33d:	665a      	add.n	a6, a6, a5
+     33f:	0020c0        	memw
+     342:	f16642        	s32i	a4, a6, 0x3c4
+     345:	040c32        	l8ui	a3, a12, 4
+     348:	d13830        	mul16s	a3, a8, a3
+     34b:	335a      	add.n	a3, a3, a5
+     34d:	0020c0        	memw
+     350:	f463a2        	s32i	a10, a3, 0x3d0
+     353:	080032        	l8ui	a3, a0, 8
+     356:	0c0062        	l8ui	a6, a0, 12
+     359:	040ce2        	l8ui	a14, a12, 4
+     35c:	116600        	slli	a6, a6, 16
+     35f:	d188e0        	mul16s	a8, a8, a14
+     362:	885a      	add.n	a8, a8, a5
+     364:	01b3f6        	bgeui	a3, 16, 369 <lmacIsIdle+0x351>
+     367:	072d      	mov.n	a2, a7
+     369:	20a260        	or	a10, a2, a6
+     36c:	349030        	extui	a9, a3, 0, 4
+     36f:	119940        	slli	a9, a9, 12
+     372:	209b90        	or	a9, a11, a9
+     375:	2099a0        	or	a9, a9, a10
+     378:	0020c0        	memw
+     37b:	f26892        	s32i	a9, a8, 0x3c8
+     37e:	080032        	l8ui	a3, a0, 8
+     381:	3ab3b6        	bltui	a3, 16, 3bf <lmacIsIdle+0x3a7>
+     384:	87a022        	movi	a2, 135
+     387:	8d0c      	movi.n	a13, 8
+     389:	040cb2        	l8ui	a11, a12, 4
+     38c:	8a6c      	movi.n	a10, -24
+     38e:	00e8      	l32i.n	a14, a0, 0
+     390:	f0c302        	addi	a0, a3, -16
+     393:	05ece0        	extui	a14, a14, 28, 1
+     396:	d1aab0        	mul16s	a10, a10, a11
+     399:	937de0        	movnez	a7, a13, a14
+     39c:	076d      	mov.n	a6, a7
+     39e:	5a5a      	add.n	a5, a10, a5
+     3a0:	0180e6        	bgei	a0, 8, 3a5 <lmacIsIdle+0x38d>
+     3a3:	720c      	movi.n	a2, 7
+     3a5:	243000        	extui	a3, a0, 0, 3
+     3a8:	3178      	l32i.n	a7, a1, 12
+     3aa:	204260        	or	a4, a2, a6
+     3ad:	014480        	slli	a4, a4, 24
+     3b0:	117780        	slli	a7, a7, 8
+     3b3:	203370        	or	a3, a3, a7
+     3b6:	203340        	or	a3, a3, a4
+     3b9:	0020c0        	memw
+     3bc:	f36532        	s32i	a3, a5, 0x3cc
+     3bf:	61c8      	l32i.n	a12, a1, 24
+     3c1:	71d8      	l32i.n	a13, a1, 28
+     3c3:	81e8      	l32i.n	a14, a1, 32
+     3c5:	5108      	l32i.n	a0, a1, 20
+     3c7:	30c112        	addi	a1, a1, 48
+     3ca:	f00d      	ret.n
+     3cc:	059420        	extui	a9, a2, 20, 1
+     3cf:	e79916        	beqz	a9, 24c <lmacIsIdle+0x234>
+     3d2:	350c      	movi.n	a5, 3
+     3d4:	ff9f86        	j	256 <lmacIsIdle+0x23e>
+     3d7:	030c      	movi.n	a3, 0
+     3d9:	ffad06        	j	291 <lmacIsIdle+0x279>
+     3dc:	016297        	bbci	a2, 9, 3e1 <lmacIsIdle+0x3c9>
+     3df:	38cc      	bnez.n	a8, 3e6 <lmacIsIdle+0x3ce>
+     3e1:	0d0c      	movi.n	a13, 0
+     3e3:	000086        	j	3e9 <lmacIsIdle+0x3d1>
+     3e6:	ff4cd1        	l32r	a13, 118 <lmacIsIdle+0x100>
+     3e9:	b39c      	beqz.n	a3, 408 <lmacIsIdle+0x3f0>
+     3eb:	989c      	beqz.n	a8, 408 <lmacIsIdle+0x3f0>
+     3ed:	ff4b81        	l32r	a8, 11c <lmacIsIdle+0x104>
+     3f0:	0f1ee6        	bgei	a14, 1, 403 <lmacIsIdle+0x3eb>
+     3f3:	11e8      	l32i.n	a14, a1, 4
+     3f5:	74e0e0        	extui	a14, a14, 0, 8
+     3f8:	7ecc      	bnez.n	a14, 403 <lmacIsIdle+0x3eb>
+     3fa:	080022        	l8ui	a2, a0, 8
+     3fd:	02b2f6        	bgeui	a2, 16, 403 <lmacIsIdle+0x3eb>
+     400:	ffc7c6        	j	323 <lmacIsIdle+0x30b>
+     403:	030c      	movi.n	a3, 0
+     405:	ffc746        	j	326 <lmacIsIdle+0x30e>
+     408:	080c      	movi.n	a8, 0
+     40a:	fff886        	j	3f0 <lmacIsIdle+0x3d8>
+     40d:	0c1c42        	l16ui	a4, a12, 24
+     410:	074416        	beqz	a4, 488 <lmacIsIdle+0x470>
+     413:	015632        	s16i	a3, a6, 2
+     416:	8e08      	l32i.n	a0, a14, 32
+     418:	032d      	mov.n	a2, a3
+     41a:	0098      	l32i.n	a9, a0, 0
+     41c:	0139      	s32i.n	a3, a1, 0
+     41e:	2af907        	bbsi	a9, 16, 44c <lmacIsIdle+0x434>
+     421:	27e977        	bbsi	a9, 7, 44c <lmacIsIdle+0x434>
+     424:	a179      	s32i.n	a7, a1, 40
+     426:	b169      	s32i.n	a6, a1, 44
+     428:	0679c7        	bbci	a9, 28, 432 <lmacIsIdle+0x41a>
+     42b:	a179      	s32i.n	a7, a1, 40
+     42d:	b169      	s32i.n	a6, a1, 44
+     42f:	197997        	bbci	a9, 25, 44c <lmacIsIdle+0x434>
+     432:	0138      	l32i.n	a3, a1, 0
+     434:	000022        	l8ui	a2, a0, 0
+     437:	0c1c42        	l16ui	a4, a12, 24
+     43a:	342220        	extui	a2, a2, 2, 4
+     43d:	ff3a01        	l32r	a0, 128 <lmacIsIdle+0x110>
+     440:	0000c0        	callx0	a0
+     443:	a178      	l32i.n	a7, a1, 40
+     445:	b168      	l32i.n	a6, a1, 44
+     447:	8e08      	l32i.n	a0, a14, 32
+     449:	015622        	s16i	a2, a6, 2
+     44c:	0148      	l32i.n	a4, a1, 0
+     44e:	f44040        	extui	a4, a4, 0, 16
+     451:	0fb427        	bgeu	a4, a2, 464 <lmacIsIdle+0x44c>
+     454:	0a5c22        	s16i	a2, a12, 20
+     457:	4158      	l32i.n	a5, a1, 16
+     459:	0b5c72        	s16i	a7, a12, 22
+     45c:	0c4c52        	s8i	a5, a12, 12
+     45f:	150c      	movi.n	a5, 1
+     461:	000106        	j	469 <lmacIsIdle+0x451>
+     464:	0a5c72        	s16i	a7, a12, 20
+     467:	050c      	movi.n	a5, 0
+     469:	0028      	l32i.n	a2, a0, 0
+     46b:	412620        	srli	a2, a2, 6
+     46e:	000446        	j	483 <lmacIsIdle+0x46b>
+     471:	080042        	l8ui	a4, a0, 8
+     474:	09b4b6        	bltui	a4, 16, 481 <lmacIsIdle+0x469>
+     477:	8e08      	l32i.n	a0, a14, 32
+     479:	0028      	l32i.n	a2, a0, 0
+     47b:	015632        	s16i	a3, a6, 2
+     47e:	412620        	srli	a2, a2, 6
+     481:	050c      	movi.n	a5, 0
+     483:	180c      	movi.n	a8, 1
+     485:	ff5fc6        	j	208 <lmacIsIdle+0x1f0>
+     488:	fe5a16        	beqz	a10, 471 <lmacIsIdle+0x459>
+     48b:	2139      	s32i.n	a3, a1, 8
+     48d:	a179      	s32i.n	a7, a1, 40
+     48f:	b169      	s32i.n	a6, a1, 44
+     491:	dce267        	bbsi	a2, 6, 471 <lmacIsIdle+0x459>
+     494:	000022        	l8ui	a2, a0, 0
+     497:	342220        	extui	a2, a2, 2, 4
+     49a:	ff2401        	l32r	a0, 12c <lmacIsIdle+0x114>
+     49d:	0000c0        	callx0	a0
+     4a0:	b168      	l32i.n	a6, a1, 44
+     4a2:	2138      	l32i.n	a3, a1, 8
+     4a4:	0139      	s32i.n	a3, a1, 0
+     4a6:	015632        	s16i	a3, a6, 2
+     4a9:	32cc      	bnez.n	a2, 4b0 <lmacIsIdle+0x498>
+     4ab:	050c      	movi.n	a5, 0
+     4ad:	0002c6        	j	4bc <lmacIsIdle+0x4a4>
+     4b0:	8248      	l32i.n	a4, a2, 32
+     4b2:	051442        	l16ui	a4, a4, 10
+     4b5:	150c      	movi.n	a5, 1
+     4b7:	443a      	add.n	a4, a4, a3
+     4b9:	015642        	s16i	a4, a6, 2
+     4bc:	a178      	l32i.n	a7, a1, 40
+     4be:	8e08      	l32i.n	a0, a14, 32
+     4c0:	ffe946        	j	469 <lmacIsIdle+0x451>
+     4c3:	000000        	ill
+     4c6:	000000        	ill
+     4c9:	fe          	.byte 0xfe
+     4ca:	ef          	.byte 0xef
+     4cb:	3f          	.byte 0x3f
+     4cc:	000000        	ill
+     4cf:	003000        	rfe
+     4d2:	000000        	ill
+     4d5:	fe          	.byte 0xfe
+     4d6:	ef          	.byte 0xef
+     4d7:	3f          	.byte 0x3f
+	...
+
+000004e0 <lmacSetAcParam>:
+     4e0:	e0c112        	addi	a1, a1, -32
+     4e3:	3129      	s32i.n	a2, a1, 12
+     4e5:	4139      	s32i.n	a3, a1, 16
+     4e7:	0109      	s32i.n	a0, a1, 0
+     4e9:	11c9      	s32i.n	a12, a1, 4
+     4eb:	21d9      	s32i.n	a13, a1, 8
+     4ed:	05cd      	mov.n	a12, a5
+     4ef:	04dd      	mov.n	a13, a4
+     4f1:	fff401        	l32r	a0, 4c4 <lmacIsIdle+0x4ac>
+     4f4:	064d      	mov.n	a4, a6
+     4f6:	000002        	l8ui	a0, a0, 0
+     4f9:	5149      	s32i.n	a4, a1, 20
+     4fb:	40ec      	bnez.n	a0, 523 <lmacSetAcParam+0x43>
+     4fd:	fff601        	l32r	a0, 4d8 <lmacIsIdle+0x4c0>
+     500:	0000c0        	callx0	a0
+     503:	5148      	l32i.n	a4, a1, 20
+     505:	4138      	l32i.n	a3, a1, 16
+     507:	3128      	l32i.n	a2, a1, 12
+     509:	0020c0        	memw
+     50c:	ffef51        	l32r	a5, 4c8 <lmacIsIdle+0x4b0>
+     50f:	802572        	l32i	a7, a5, 0x200
+     512:	066c      	movi.n	a6, -32
+     514:	107760        	and	a7, a7, a6
+     517:	0020c0        	memw
+     51a:	ffec01        	l32r	a0, 4cc <lmacIsIdle+0x4b4>
+     51d:	806572        	s32i	a7, a5, 0x200
+     520:	000002        	l8ui	a0, a0, 0
+     523:	ffeb71        	l32r	a7, 4d0 <lmacIsIdle+0x4b8>
+     526:	b02220        	addx8	a2, a2, a2
+     529:	a02270        	addx4	a2, a2, a7
+     52c:	0742d2        	s8i	a13, a2, 7
+     52f:	054232        	s8i	a3, a2, 5
+     532:	060232        	l8ui	a3, a2, 6
+     535:	0842c2        	s8i	a12, a2, 8
+     538:	043c37        	bltu	a12, a3, 540 <lmacSetAcParam+0x60>
+     53b:	04b3d7        	bgeu	a3, a13, 543 <lmacSetAcParam+0x63>
+     53e:	0dcd      	mov.n	a12, a13
+     540:	0642c2        	s8i	a12, a2, 6
+     543:	0c5242        	s16i	a4, a2, 24
+     546:	d0dc      	bnez.n	a0, 567 <lmacSetAcParam+0x87>
+     548:	1a0c      	movi.n	a10, 1
+     54a:	0020c0        	memw
+     54d:	ffe191        	l32r	a9, 4d4 <lmacIsIdle+0x4bc>
+     550:	802982        	l32i	a8, a9, 0x200
+     553:	0b6c      	movi.n	a11, -32
+     555:	1088b0        	and	a8, a8, a11
+     558:	2088a0        	or	a8, a8, a10
+     55b:	0020c0        	memw
+     55e:	806982        	s32i	a8, a9, 0x200
+     561:	ffde01        	l32r	a0, 4dc <lmacIsIdle+0x4c4>
+     564:	0000c0        	callx0	a0
+     567:	11c8      	l32i.n	a12, a1, 4
+     569:	21d8      	l32i.n	a13, a1, 8
+     56b:	0108      	l32i.n	a0, a1, 0
+     56d:	20c112        	addi	a1, a1, 32
+     570:	f00d      	ret.n
+	...
+     57a:	080000        	excw
+     57d:	000000        	ill
+     580:	000000        	ill
+     583:	000800        	excw
+	...
+     58e:	080000        	excw
+	...
+     59d:	000000        	ill
+     5a0:	000674        	excw
+	...
+
+000005a4 <lmacProcessTXStartData>:
+     5a4:	f6c232        	addi	a3, a2, -10
+     5a7:	f0c112        	addi	a1, a1, -16
+     5aa:	fff241        	l32r	a4, 574 <lmacSetAcParam+0x94>
+     5ad:	1109      	s32i.n	a0, a1, 4
+     5af:	000402        	l8ui	a0, a4, 0
+     5b2:	025d      	mov.n	a5, a2
+     5b4:	835030        	moveqz	a5, a0, a3
+     5b7:	740050        	extui	a0, a5, 0, 8
+     5ba:	1180b6        	bltui	a0, 8, 5cf <lmacProcessTXStartData+0x2b>
+     5bd:	ffee21        	l32r	a2, 578 <lmacSetAcParam+0x98>
+     5c0:	ffef31        	l32r	a3, 57c <lmacSetAcParam+0x9c>
+     5c3:	39a242        	movi	a4, 0x239
+     5c6:	fff301        	l32r	a0, 594 <lmacSetAcParam+0xb4>
+     5c9:	0000c0        	callx0	a0
+     5cc:	ffff06        	j	5cc <lmacProcessTXStartData+0x28>
+     5cf:	30c432        	addi	a3, a4, 48
+     5d2:	b00000        	addx8	a0, a0, a0
+     5d5:	a00030        	addx4	a0, a0, a3
+     5d8:	110062        	l8ui	a6, a0, 17
+     5db:	111626        	beqi	a6, 1, 5f0 <lmacProcessTXStartData+0x4c>
+     5de:	ffe821        	l32r	a2, 580 <lmacSetAcParam+0xa0>
+     5e1:	ffe831        	l32r	a3, 584 <lmacSetAcParam+0xa4>
+     5e4:	44a242        	movi	a4, 0x244
+     5e7:	ffec01        	l32r	a0, 598 <lmacSetAcParam+0xb8>
+     5ea:	0000c0        	callx0	a0
+     5ed:	ffff06        	j	5ed <lmacProcessTXStartData+0x49>
+     5f0:	004452        	s8i	a5, a4, 0
+     5f3:	0109      	s32i.n	a0, a1, 0
+     5f5:	129266        	bnei	a2, 10, 60b <lmacProcessTXStartData+0x67>
+     5f8:	002d      	mov.n	a2, a0
+     5fa:	043d      	mov.n	a3, a4
+     5fc:	2c0332        	l8ui	a3, a3, 44
+     5ff:	ffaa05        	call0	a0 <lmacIsIdle+0x88>
+     602:	0108      	l32i.n	a0, a1, 0
+     604:	ffe151        	l32r	a5, 588 <lmacSetAcParam+0xa8>
+     607:	040c      	movi.n	a4, 0
+     609:	9549      	s32i.n	a4, a5, 36
+     60b:	0068      	l32i.n	a6, a0, 0
+     60d:	06dc      	bnez.n	a6, 621 <lmacProcessTXStartData+0x7d>
+     60f:	ffdf21        	l32r	a2, 58c <lmacSetAcParam+0xac>
+     612:	ffdf31        	l32r	a3, 590 <lmacSetAcParam+0xb0>
+     615:	4ca242        	movi	a4, 0x24c
+     618:	ffe101        	l32r	a0, 59c <lmacSetAcParam+0xbc>
+     61b:	0000c0        	callx0	a0
+     61e:	ffff06        	j	61e <lmacProcessTXStartData+0x7a>
+     621:	002d      	mov.n	a2, a0
+     623:	270c      	movi.n	a7, 2
+     625:	114072        	s8i	a7, a0, 17
+     628:	ffde01        	l32r	a0, 5a0 <lmacSetAcParam+0xc0>
+     62b:	0000c0        	callx0	a0
+     62e:	000005        	call0	630 <lmacProcessTXStartData+0x8c>
+     631:	1108      	l32i.n	a0, a1, 4
+     633:	10c112        	addi	a1, a1, 16
+     636:	f00d      	ret.n
+     638:	000000        	ill
+     63b:	000800        	excw
+	...
+     646:	080000        	excw
+     649:	000000        	ill
+     64c:	000000        	ill
+     64f:	000800        	excw
+	...
+     672:	120000        	excw
+     675:	c9f0c1        	l32r	a12, ffff2e38 <lmacRxDone+0xffff1610>
+     678:	02cd21        	l32r	a2, fffc11ac <lmacRxDone+0xfffbf984>
+     67b:	0228      	l32i.n	a2, a2, 0
+     67d:	1109      	s32i.n	a0, a1, 4
+     67f:	02dc      	bnez.n	a2, 693 <lmacProcessTXStartData+0xef>
+     681:	ffed21        	l32r	a2, 638 <lmacProcessTXStartData+0x94>
+     684:	ffee31        	l32r	a3, 63c <lmacProcessTXStartData+0x98>
+     687:	64a242        	movi	a4, 0x264
+     68a:	fff401        	l32r	a0, 65c <lmacProcessTXStartData+0xb8>
+     68d:	0000c0        	callx0	a0
+     690:	ffff06        	j	690 <lmacProcessTXStartData+0xec>
+     693:	ffeb41        	l32r	a4, 640 <lmacProcessTXStartData+0x9c>
+     696:	a408      	l32i.n	a0, a4, 40
+     698:	9438      	l32i.n	a3, a4, 36
+     69a:	009c      	beqz.n	a0, 6ae <lmacProcessTXStartData+0x10a>
+     69c:	ffea21        	l32r	a2, 644 <lmacProcessTXStartData+0xa0>
+     69f:	ffea31        	l32r	a3, 648 <lmacProcessTXStartData+0xa4>
+     6a2:	65a242        	movi	a4, 0x265
+     6a5:	ffee01        	l32r	a0, 660 <lmacProcessTXStartData+0xbc>
+     6a8:	0000c0        	callx0	a0
+     6ab:	ffff06        	j	6ab <lmacProcessTXStartData+0x107>
+     6ae:	039c      	beqz.n	a3, 6c2 <lmacProcessTXStartData+0x11e>
+     6b0:	ffe721        	l32r	a2, 64c <lmacProcessTXStartData+0xa8>
+     6b3:	ffe731        	l32r	a3, 650 <lmacProcessTXStartData+0xac>
+     6b6:	66a242        	movi	a4, 0x266
+     6b9:	ffea01        	l32r	a0, 664 <lmacProcessTXStartData+0xc0>
+     6bc:	0000c0        	callx0	a0
+     6bf:	ffff06        	j	6bf <lmacProcessTXStartData+0x11b>
+     6c2:	a429      	s32i.n	a2, a4, 40
+     6c4:	8208      	l32i.n	a0, a2, 32
+     6c6:	060c      	movi.n	a6, 0
+     6c8:	0058      	l32i.n	a5, a0, 0
+     6ca:	0c69      	s32i.n	a6, a12, 0
+     6cc:	67f5c7        	bbsi	a5, 28, 737 <lmacProcessTXStartData+0x193>
+     6cf:	0129      	s32i.n	a2, a1, 0
+     6d1:	0b0c72        	l8ui	a7, a12, 11
+     6d4:	0c1ca2        	l16ui	a10, a12, 24
+     6d7:	97cc      	bnez.n	a7, 6e4 <lmacProcessTXStartData+0x140>
+     6d9:	0a9c82        	l16si	a8, a12, 20
+     6dc:	0418a6        	blti	a8, 1, 6e4 <lmacProcessTXStartData+0x140>
+     6df:	190c      	movi.n	a9, 1
+     6e1:	0d4c92        	s8i	a9, a12, 13
+     6e4:	058a16        	beqz	a10, 740 <lmacProcessTXStartData+0x19c>
+     6e7:	0b0cb2        	l8ui	a11, a12, 11
+     6ea:	0c0c22        	l8ui	a2, a12, 12
+     6ed:	0b8c      	beqz.n	a11, 6f1 <lmacProcessTXStartData+0x14d>
+     6ef:	42cc      	bnez.n	a2, 6f7 <lmacProcessTXStartData+0x153>
+     6f1:	0d0c32        	l8ui	a3, a12, 13
+     6f4:	048316        	beqz	a3, 740 <lmacProcessTXStartData+0x19c>
+     6f7:	000022        	l8ui	a2, a0, 0
+     6fa:	342220        	extui	a2, a2, 2, 4
+     6fd:	ffda01        	l32r	a0, 668 <lmacProcessTXStartData+0xc4>
+     700:	0000c0        	callx0	a0
+     703:	0108      	l32i.n	a0, a1, 0
+     705:	8008      	l32i.n	a0, a0, 32
+     707:	52bc      	beqz.n	a2, 740 <lmacProcessTXStartData+0x19c>
+     709:	0048      	l32i.n	a4, a0, 0
+     70b:	415640        	srli	a5, a4, 6
+     70e:	19f407        	bbsi	a4, 16, 72b <lmacProcessTXStartData+0x187>
+     711:	16e477        	bbsi	a4, 7, 72b <lmacProcessTXStartData+0x187>
+     714:	ffd031        	l32r	a3, 654 <lmacProcessTXStartData+0xb0>
+     717:	9329      	s32i.n	a2, a3, 36
+     719:	0c2d      	mov.n	a2, a12
+     71b:	130c      	movi.n	a3, 1
+     71d:	ff9bc5        	call0	dc <lmacIsIdle+0xc4>
+     720:	0c2d      	mov.n	a2, a12
+     722:	d4a032        	movi	a3, 212
+     725:	ff9205        	call0	48 <lmacIsIdle+0x30>
+     728:	0002c6        	j	737 <lmacProcessTXStartData+0x193>
+     72b:	3f6557        	bbci	a5, 5, 76e <lmacProcessTXStartData+0x1ca>
+     72e:	040042        	l8ui	a4, a0, 4
+     731:	414440        	srli	a4, a4, 4
+     734:	3624e6        	bgei	a4, 2, 76e <lmacProcessTXStartData+0x1ca>
+     737:	21c8      	l32i.n	a12, a1, 8
+     739:	1108      	l32i.n	a0, a1, 4
+     73b:	10c112        	addi	a1, a1, 16
+     73e:	f00d      	ret.n
+     740:	0048      	l32i.n	a4, a0, 0
+     742:	f164d7        	bbci	a4, 13, 737 <lmacProcessTXStartData+0x193>
+     745:	eee4c7        	bbsi	a4, 12, 737 <lmacProcessTXStartData+0x193>
+     748:	000022        	l8ui	a2, a0, 0
+     74b:	342220        	extui	a2, a2, 2, 4
+     74e:	ffc701        	l32r	a0, 66c <lmacProcessTXStartData+0xc8>
+     751:	0000c0        	callx0	a0
+     754:	fdf216        	beqz	a2, 737 <lmacProcessTXStartData+0x193>
+     757:	ffc031        	l32r	a3, 658 <lmacProcessTXStartData+0xb4>
+     75a:	9329      	s32i.n	a2, a3, 36
+     75c:	0c2d      	mov.n	a2, a12
+     75e:	130c      	movi.n	a3, 1
+     760:	ff9785        	call0	dc <lmacIsIdle+0xc4>
+     763:	0c2d      	mov.n	a2, a12
+     765:	d4a032        	movi	a3, 212
+     768:	ff8dc5        	call0	48 <lmacIsIdle+0x30>
+     76b:	fff206        	j	737 <lmacProcessTXStartData+0x193>
+     76e:	0c29      	s32i.n	a2, a12, 0
+     770:	030c      	movi.n	a3, 0
+     772:	0c2d      	mov.n	a2, a12
+     774:	ff9645        	call0	dc <lmacIsIdle+0xc4>
+     777:	040c22        	l8ui	a2, a12, 4
+     77a:	030c      	movi.n	a3, 0
+     77c:	040c      	movi.n	a4, 0
+     77e:	ffbc01        	l32r	a0, 670 <lmacProcessTXStartData+0xcc>
+     781:	0000c0        	callx0	a0
+     784:	ffebc6        	j	737 <lmacProcessTXStartData+0x193>
+     787:	000000        	ill
+     78a:	080000        	excw
+	...
+     795:	000000        	ill
+     798:	0008      	l32i.n	a0, a0, 0
+     79a:	000000        	ill
+     79d:	000000        	ill
+     7a0:	0008      	l32i.n	a0, a0, 0
+	...
+     7ae:	240000        	extui	a0, a0, 0, 3
+     7b1:	000b      	addi.n	a0, a0, -1
+	...
+
+000007b4 <lmacProcessTxSuccess>:
+     7b4:	f0c112        	addi	a1, a1, -16
+     7b7:	11c9      	s32i.n	a12, a1, 4
+     7b9:	0109      	s32i.n	a0, a1, 0
+     7bb:	03cd      	mov.n	a12, a3
+     7bd:	000005        	call0	7c0 <lmacProcessTxSuccess+0xc>
+     7c0:	02dc      	bnez.n	a2, 7d4 <lmacProcessTxSuccess+0x20>
+     7c2:	fff121        	l32r	a2, 788 <lmacProcessTXStartData+0x1e4>
+     7c5:	fff131        	l32r	a3, 78c <lmacProcessTXStartData+0x1e8>
+     7c8:	a3a242        	movi	a4, 0x2a3
+     7cb:	fff601        	l32r	a0, 7a4 <lmacProcessTXStartData+0x200>
+     7ce:	0000c0        	callx0	a0
+     7d1:	ffff06        	j	7d1 <lmacProcessTxSuccess+0x1d>
+     7d4:	ffef21        	l32r	a2, 790 <lmacProcessTXStartData+0x1ec>
+     7d7:	a208      	l32i.n	a0, a2, 40
+     7d9:	000242        	l8ui	a4, a2, 0
+     7dc:	00dc      	bnez.n	a0, 7f0 <lmacProcessTxSuccess+0x3c>
+     7de:	ffed21        	l32r	a2, 794 <lmacProcessTXStartData+0x1f0>
+     7e1:	ffed31        	l32r	a3, 798 <lmacProcessTXStartData+0x1f4>
+     7e4:	a6a242        	movi	a4, 0x2a6
+     7e7:	fff001        	l32r	a0, 7a8 <lmacProcessTXStartData+0x204>
+     7ea:	0000c0        	callx0	a0
+     7ed:	ffff06        	j	7ed <lmacProcessTxSuccess+0x39>
+     7f0:	000252        	l8ui	a5, a2, 0
+     7f3:	30c232        	addi	a3, a2, 48
+     7f6:	b02450        	addx8	a2, a4, a5
+     7f9:	a02230        	addx4	a2, a2, a3
+     7fc:	110232        	l8ui	a3, a2, 17
+     7ff:	112326        	beqi	a3, 2, 814 <lmacProcessTxSuccess+0x60>
+     802:	ffe621        	l32r	a2, 79c <lmacProcessTXStartData+0x1f8>
+     805:	ffe631        	l32r	a3, 7a0 <lmacProcessTXStartData+0x1fc>
+     808:	a7a242        	movi	a4, 0x2a7
+     80b:	ffe801        	l32r	a0, 7ac <lmacProcessTXStartData+0x208>
+     80e:	0000c0        	callx0	a0
+     811:	ffff06        	j	811 <lmacProcessTxSuccess+0x5d>
+     814:	8008      	l32i.n	a0, a0, 32
+     816:	060c      	movi.n	a6, 0
+     818:	0038      	l32i.n	a3, a0, 0
+     81a:	02a482        	movi	a8, 0x402
+     81d:	417630        	srli	a7, a3, 6
+     820:	058787        	bany	a7, a8, 829 <lmacProcessTxSuccess+0x75>
+     823:	5173c7        	bbci	a3, 28, 878 <lmacProcessTxSuccess+0xc4>
+     826:	4ef397        	bbsi	a3, 25, 878 <lmacProcessTxSuccess+0xc4>
+     829:	094262        	s8i	a6, a2, 9
+     82c:	0a4262        	s8i	a6, a2, 10
+     82f:	7fa0c2        	movi	a12, 127
+     832:	070292        	l8ui	a9, a2, 7
+     835:	064292        	s8i	a9, a2, 6
+     838:	00a8      	l32i.n	a10, a0, 0
+     83a:	0940c2        	s8i	a12, a0, 9
+     83d:	2a6ab7        	bbci	a10, 11, 86b <lmacProcessTxSuccess+0xb7>
+     840:	040052        	l8ui	a5, a0, 4
+     843:	413450        	srli	a3, a5, 4
+     846:	2123e6        	bgei	a3, 2, 86b <lmacProcessTxSuccess+0xb7>
+     849:	c31b      	addi.n	a12, a3, 1
+     84b:	34b050        	extui	a11, a5, 0, 4
+     84e:	130c      	movi.n	a3, 1
+     850:	34c0c0        	extui	a12, a12, 0, 4
+     853:	11ccc0        	slli	a12, a12, 4
+     856:	20bbc0        	or	a11, a11, a12
+     859:	0440b2        	s8i	a11, a0, 4
+     85c:	ffd501        	l32r	a0, 7b0 <lmacProcessTXStartData+0x20c>
+     85f:	0000c0        	callx0	a0
+     862:	11c8      	l32i.n	a12, a1, 4
+     864:	0108      	l32i.n	a0, a1, 0
+     866:	10c112        	addi	a1, a1, 16
+     869:	f00d      	ret.n
+     86b:	030c      	movi.n	a3, 0
+     86d:	500c      	movi.n	a0, 5
+     86f:	114202        	s8i	a0, a2, 17
+     872:	002b05        	call0	b24 <lmacRecycleMPDU+0x200>
+     875:	fffa46        	j	862 <lmacProcessTxSuccess+0xae>
+     878:	070232        	l8ui	a3, a2, 7
+     87b:	08e787        	bbsi	a7, 8, 887 <lmacProcessTxSuccess+0xd3>
+     87e:	064232        	s8i	a3, a2, 6
+     881:	094262        	s8i	a6, a2, 9
+     884:	ffec06        	j	838 <lmacProcessTxSuccess+0x84>
+     887:	064232        	s8i	a3, a2, 6
+     88a:	094262        	s8i	a6, a2, 9
+     88d:	0a4262        	s8i	a6, a2, 10
+     890:	ffe906        	j	838 <lmacProcessTxSuccess+0x84>
+     893:	000000        	ill
+     896:	120000        	excw
+     899:	09e0c1        	l32r	a12, fffc301c <lmacRxDone+0xfffc17f4>
+     89c:	515901        	l32r	a0, fffd4e00 <lmacRxDone+0xfffd35d8>
+     89f:	41f9      	s32i.n	a15, a1, 16
+     8a1:	31e9      	s32i.n	a14, a1, 12
+     8a3:	11c9      	s32i.n	a12, a1, 4
+     8a5:	21d9      	s32i.n	a13, a1, 8
+     8a7:	03cd      	mov.n	a12, a3
+     8a9:	04dd      	mov.n	a13, a4
+     8ab:	02ed      	mov.n	a14, a2
+     8ad:	05fd      	mov.n	a15, a5
+     8af:	8e38      	l32i.n	a3, a14, 32
+     8b1:	8c28      	l32i.n	a2, a12, 32
+     8b3:	331b      	addi.n	a3, a3, 1
+     8b5:	8e39      	s32i.n	a3, a14, 32
+     8b7:	0208      	l32i.n	a0, a2, 0
+     8b9:	0f42d2        	s8i	a13, a2, 15
+     8bc:	0c60d7        	bbci	a0, 13, 8cc <lmacProcessTxSuccess+0x118>
+     8bf:	09e0c7        	bbsi	a0, 12, 8cc <lmacProcessTxSuccess+0x118>
+     8c2:	0c2d      	mov.n	a2, a12
+     8c4:	030c      	movi.n	a3, 0
+     8c6:	00f045        	call0	17cc <lmacTxFrame+0x180>
+     8c9:	000186        	j	8d3 <lmacProcessTxSuccess+0x11f>
+     8cc:	0f3d      	mov.n	a3, a15
+     8ce:	0c2d      	mov.n	a2, a12
+     8d0:	00ef85        	call0	17cc <lmacTxFrame+0x180>
+     8d3:	8c28      	l32i.n	a2, a12, 32
+     8d5:	0208      	l32i.n	a0, a2, 0
+     8d7:	1360d7        	bbci	a0, 13, 8ee <lmacProcessTxSuccess+0x13a>
+     8da:	10e0c7        	bbsi	a0, 12, 8ee <lmacProcessTxSuccess+0x13a>
+     8dd:	000222        	l8ui	a2, a2, 0
+     8e0:	342220        	extui	a2, a2, 2, 4
+     8e3:	ffec01        	l32r	a0, 894 <lmacProcessTxSuccess+0xe0>
+     8e6:	0000c0        	callx0	a0
+     8e9:	02cd      	mov.n	a12, a2
+     8eb:	fc0256        	bnez	a2, 8af <lmacProcessTxSuccess+0xfb>
+     8ee:	11c8      	l32i.n	a12, a1, 4
+     8f0:	21d8      	l32i.n	a13, a1, 8
+     8f2:	31e8      	l32i.n	a14, a1, 12
+     8f4:	41f8      	l32i.n	a15, a1, 16
+     8f6:	0108      	l32i.n	a0, a1, 0
+     8f8:	20c112        	addi	a1, a1, 32
+     8fb:	f00d      	ret.n
+     8fd:	000000        	ill
+     900:	000030        	excw
+	...
+
+00000904 <GetAccess>:
+     904:	ffff31        	l32r	a3, 900 <lmacProcessTxSuccess+0x14c>
+     907:	b02220        	addx8	a2, a2, a2
+     90a:	a02230        	addx4	a2, a2, a3
+     90d:	f00d      	ret.n
+	...
+
+00000910 <lmacDiscardAgedMSDU>:
+     910:	045d      	mov.n	a5, a4
+     912:	f0c112        	addi	a1, a1, -16
+     915:	440c      	movi.n	a4, 4
+     917:	0109      	s32i.n	a0, a1, 0
+     919:	fff7c5        	call0	898 <lmacProcessTxSuccess+0xe4>
+     91c:	0108      	l32i.n	a0, a1, 0
+     91e:	10c112        	addi	a1, a1, 16
+     921:	f00d      	ret.n
+	...
+
+00000924 <lmacRecycleMPDU>:
+     924:	026d      	mov.n	a6, a2
+     926:	f0c112        	addi	a1, a1, -16
+     929:	0109      	s32i.n	a0, a1, 0
+     92b:	032d      	mov.n	a2, a3
+     92d:	100c      	movi.n	a0, 1
+     92f:	043d      	mov.n	a3, a4
+     931:	7658      	l32i.n	a5, a6, 28
+     933:	8248      	l32i.n	a4, a2, 32
+     935:	551b      	addi.n	a5, a5, 1
+     937:	7659      	s32i.n	a5, a6, 28
+     939:	0f4402        	s8i	a0, a4, 15
+     93c:	00e8c5        	call0	17cc <lmacTxFrame+0x180>
+     93f:	0108      	l32i.n	a0, a1, 0
+     941:	10c112        	addi	a1, a1, 16
+     944:	f00d      	ret.n
+     946:	000000        	ill
+     949:	000000        	ill
+     94c:	0008      	l32i.n	a0, a0, 0
+	...
+     95a:	120000        	excw
+     95d:	09f0c1        	l32r	a12, fffc3120 <lmacRxDone+0xfffc18f8>
+     960:	020201        	l32r	a0, fffc1168 <lmacRxDone+0xfffbf940>
+     963:	023811        	l32r	a1, fffc1244 <lmacRxDone+0xfffbfa1c>
+     966:	116026        	beqi	a0, 6, 97b <lmacRecycleMPDU+0x57>
+     969:	fff721        	l32r	a2, 948 <lmacRecycleMPDU+0x24>
+     96c:	fff831        	l32r	a3, 94c <lmacRecycleMPDU+0x28>
+     96f:	f0a242        	movi	a4, 0x2f0
+     972:	fff801        	l32r	a0, 954 <lmacRecycleMPDU+0x30>
+     975:	0000c0        	callx0	a0
+     978:	ffff06        	j	978 <lmacRecycleMPDU+0x54>
+     97b:	050c      	movi.n	a5, 0
+     97d:	114252        	s8i	a5, a2, 17
+     980:	8308      	l32i.n	a0, a3, 32
+     982:	0048      	l32i.n	a4, a0, 0
+     984:	0259      	s32i.n	a5, a2, 0
+     986:	1974b7        	bbci	a4, 27, 9a3 <lmacRecycleMPDU+0x7f>
+     989:	000022        	l8ui	a2, a0, 0
+     98c:	040032        	l8ui	a3, a0, 4
+     98f:	342220        	extui	a2, a2, 2, 4
+     992:	413430        	srli	a3, a3, 4
+     995:	332b      	addi.n	a3, a3, 2
+     997:	743030        	extui	a3, a3, 0, 8
+     99a:	ffef01        	l32r	a0, 958 <lmacRecycleMPDU+0x34>
+     99d:	0000c0        	callx0	a0
+     9a0:	0007c6        	j	9c3 <lmacRecycleMPDU+0x9f>
+     9a3:	ffeb51        	l32r	a5, 950 <lmacRecycleMPDU+0x2c>
+     9a6:	050042        	l8ui	a4, a0, 5
+     9a9:	0d0552        	l8ui	a5, a5, 13
+     9ac:	544040        	extui	a4, a4, 0, 6
+     9af:	093457        	bltu	a4, a5, 9bc <lmacRecycleMPDU+0x98>
+     9b2:	240c      	movi.n	a4, 2
+     9b4:	150c      	movi.n	a5, 1
+     9b6:	ffee05        	call0	898 <lmacProcessTxSuccess+0xe4>
+     9b9:	000186        	j	9c3 <lmacRecycleMPDU+0x9f>
+     9bc:	340c      	movi.n	a4, 3
+     9be:	150c      	movi.n	a5, 1
+     9c0:	ffed45        	call0	898 <lmacProcessTxSuccess+0xe4>
+     9c3:	0108      	l32i.n	a0, a1, 0
+     9c5:	10c112        	addi	a1, a1, 16
+     9c8:	f00d      	ret.n
+     9ca:	420000        	excw
+     9cd:	0c0d02        	l8ui	a0, a13, 12
+     9d0:	448c05        	call0	45294 <lmacRxDone+0x43a6c>
+     9d3:	0b4232        	s8i	a3, a2, 11
+     9d6:	0d4252        	s8i	a5, a2, 13
+     9d9:	f00d      	ret.n
+     9db:	000000        	ill
+     9de:	7c0000        	excw
+     9e1:	000011        	l32r	a1, fffc09e4 <lmacRxDone+0xfffbf1bc>
+     9e4:	f0c112        	addi	a1, a1, -16
+     9e7:	11c9      	s32i.n	a12, a1, 4
+     9e9:	0109      	s32i.n	a0, a1, 0
+     9eb:	0b0202        	l8ui	a0, a2, 11
+     9ee:	02cd      	mov.n	a12, a2
+     9f0:	d0ac      	beqz.n	a0, a21 <lmacRecycleMPDU+0xfd>
+     9f2:	0c0222        	l8ui	a2, a2, 12
+     9f5:	000c      	movi.n	a0, 0
+     9f7:	329c      	beqz.n	a2, a0e <lmacRecycleMPDU+0xea>
+     9f9:	0c28      	l32i.n	a2, a12, 0
+     9fb:	8228      	l32i.n	a2, a2, 32
+     9fd:	000222        	l8ui	a2, a2, 0
+     a00:	342220        	extui	a2, a2, 2, 4
+     a03:	fff601        	l32r	a0, 9dc <lmacRecycleMPDU+0xb8>
+     a06:	0000c0        	callx0	a0
+     a09:	0c29      	s32i.n	a2, a12, 0
+     a0b:	0000c6        	j	a12 <lmacRecycleMPDU+0xee>
+     a0e:	002d      	mov.n	a2, a0
+     a10:	0c29      	s32i.n	a2, a12, 0
+     a12:	02ac      	beqz.n	a2, a36 <lmacRecycleMPDU+0x112>
+     a14:	0c2d      	mov.n	a2, a12
+     a16:	030c      	movi.n	a3, 0
+     a18:	fff201        	l32r	a0, 9e0 <lmacRecycleMPDU+0xbc>
+     a1b:	0000c0        	callx0	a0
+     a1e:	000186        	j	a28 <lmacRecycleMPDU+0x104>
+     a21:	030c      	movi.n	a3, 0
+     a23:	fffa85        	call0	9cc <lmacRecycleMPDU+0xa8>
+     a26:	020c      	movi.n	a2, 0
+     a28:	930c      	movi.n	a3, 9
+     a2a:	0108      	l32i.n	a0, a1, 0
+     a2c:	124c32        	s8i	a3, a12, 18
+     a2f:	11c8      	l32i.n	a12, a1, 4
+     a31:	10c112        	addi	a1, a1, 16
+     a34:	f00d      	ret.n
+     a36:	020c      	movi.n	a2, 0
+     a38:	040c      	movi.n	a4, 0
+     a3a:	0b4c42        	s8i	a4, a12, 11
+     a3d:	fff9c6        	j	a28 <lmacRecycleMPDU+0x104>
+	...
+     a48:	f0c112        	addi	a1, a1, -16
+     a4b:	11c9      	s32i.n	a12, a1, 4
+     a4d:	0109      	s32i.n	a0, a1, 0
+     a4f:	0b0202        	l8ui	a0, a2, 11
+     a52:	02cd      	mov.n	a12, a2
+     a54:	608c      	beqz.n	a0, a5e <lmacRecycleMPDU+0x13a>
+     a56:	020c      	movi.n	a2, 0
+     a58:	0b4c22        	s8i	a2, a12, 11
+     a5b:	000106        	j	a63 <lmacRecycleMPDU+0x13f>
+     a5e:	030c      	movi.n	a3, 0
+     a60:	fff685        	call0	9cc <lmacRecycleMPDU+0xa8>
+     a63:	fff721        	l32r	a2, a40 <lmacRecycleMPDU+0x11c>
+     a66:	9228      	l32i.n	a2, a2, 36
+     a68:	fff701        	l32r	a0, a44 <lmacRecycleMPDU+0x120>
+     a6b:	0000c0        	callx0	a0
+     a6e:	c30c      	movi.n	a3, 12
+     a70:	0108      	l32i.n	a0, a1, 0
+     a72:	124c32        	s8i	a3, a12, 18
+     a75:	11c8      	l32i.n	a12, a1, 4
+     a77:	10c112        	addi	a1, a1, 16
+     a7a:	f00d      	ret.n
+     a7c:	000000        	ill
+     a7f:	130c00        	excw
+     a82:	f0c112        	addi	a1, a1, -16
+     a85:	0109      	s32i.n	a0, a1, 0
+     a87:	11c9      	s32i.n	a12, a1, 4
+     a89:	fffc01        	l32r	a0, a7c <lmacRecycleMPDU+0x158>
+     a8c:	02cd      	mov.n	a12, a2
+     a8e:	9008      	l32i.n	a0, a0, 36
+     a90:	0209      	s32i.n	a0, a2, 0
+     a92:	006e85        	call0	117c <lmacMSDUAged+0x1d4>
+     a95:	b30c      	movi.n	a3, 11
+     a97:	0108      	l32i.n	a0, a1, 0
+     a99:	124c32        	s8i	a3, a12, 18
+     a9c:	11c8      	l32i.n	a12, a1, 4
+     a9e:	10c112        	addi	a1, a1, 16
+     aa1:	f00d      	ret.n
+	...
+     aab:	000800        	excw
+     aae:	000000        	ill
+     ab1:	000000        	ill
+     ab4:	0008      	l32i.n	a0, a0, 0
+     ab6:	000000        	ill
+     ab9:	000000        	ill
+     abc:	0008      	l32i.n	a0, a0, 0
+     abe:	000000        	ill
+     ac1:	000000        	ill
+     ac4:	0008      	l32i.n	a0, a0, 0
+     ac6:	000000        	ill
+     ac9:	000000        	ill
+     acc:	0008      	l32i.n	a0, a0, 0
+     ace:	000000        	ill
+     ad1:	000000        	ill
+     ad4:	0008      	l32i.n	a0, a0, 0
+     ad6:	000000        	ill
+     ad9:	000000        	ill
+     adc:	0008      	l32i.n	a0, a0, 0
+	...
+     ae6:	7c0000        	excw
+     ae9:	000011        	l32r	a1, fffc0aec <lmacRxDone+0xfffbf2c4>
+	...
+     b04:	117c      	movi.n	a1, -15
+     b06:	7c0000        	excw
+     b09:	000011        	l32r	a1, fffc0b0c <lmacRxDone+0xfffbf2e4>
+	...
+     b24:	340c      	movi.n	a4, 3
+     b26:	94a052        	movi	a5, 148
+     b29:	d0c112        	addi	a1, a1, -48
+     b2c:	71e9      	s32i.n	a14, a1, 28
+     b2e:	4109      	s32i.n	a0, a1, 16
+     b30:	51c9      	s32i.n	a12, a1, 20
+     b32:	81f9      	s32i.n	a15, a1, 32
+     b34:	61d9      	s32i.n	a13, a1, 24
+     b36:	0f0c      	movi.n	a15, 0
+     b38:	ffdbd1        	l32r	a13, aa4 <lmacRecycleMPDU+0x180>
+     b3b:	02cd      	mov.n	a12, a2
+     b3d:	110c02        	l8ui	a0, a12, 17
+     b40:	032d      	mov.n	a2, a3
+     b42:	d4a032        	movi	a3, 212
+     b45:	92ec      	bnez.n	a2, b72 <lmacRecycleMPDU+0x24e>
+     b47:	1e0c      	movi.n	a14, 1
+     b49:	fac022        	addi	a2, a0, -6
+     b4c:	092256        	bnez	a2, be2 <lmacRecycleMPDU+0x2be>
+     b4f:	114cf2        	s8i	a15, a12, 17
+     b52:	ad08      	l32i.n	a0, a13, 40
+     b54:	0c28      	l32i.n	a2, a12, 0
+     b56:	182056        	bnez	a0, cdc <lmacRecycleMPDU+0x3b8>
+     b59:	328c      	beqz.n	a2, b60 <lmacRecycleMPDU+0x23c>
+     b5b:	9d38      	l32i.n	a3, a13, 36
+     b5d:	30a316        	beqz	a3, e6b <lmacRecycleMPDU+0x547>
+     b60:	ffd221        	l32r	a2, aa8 <lmacRecycleMPDU+0x184>
+     b63:	ffd231        	l32r	a3, aac <lmacRecycleMPDU+0x188>
+     b66:	59a342        	movi	a4, 0x359
+     b69:	ffdd01        	l32r	a0, ae0 <lmacRecycleMPDU+0x1bc>
+     b6c:	0000c0        	callx0	a0
+     b6f:	ffff06        	j	b6f <lmacRecycleMPDU+0x24b>
+     b72:	142026        	beqi	a0, 2, b8a <lmacRecycleMPDU+0x266>
+     b75:	111026        	beqi	a0, 1, b8a <lmacRecycleMPDU+0x266>
+     b78:	ffce21        	l32r	a2, ab0 <lmacRecycleMPDU+0x18c>
+     b7b:	ffce31        	l32r	a3, ab4 <lmacRecycleMPDU+0x190>
+     b7e:	d2a342        	movi	a4, 0x3d2
+     b81:	ffd801        	l32r	a0, ae4 <lmacRecycleMPDU+0x1c0>
+     b84:	0000c0        	callx0	a0
+     b87:	ffff06        	j	b87 <lmacRecycleMPDU+0x263>
+     b8a:	ad08      	l32i.n	a0, a13, 40
+     b8c:	9d68      	l32i.n	a6, a13, 36
+     b8e:	70dc      	bnez.n	a0, ba9 <lmacRecycleMPDU+0x285>
+     b90:	0c2d      	mov.n	a2, a12
+     b92:	030c      	movi.n	a3, 0
+     b94:	340c      	movi.n	a4, 3
+     b96:	114c42        	s8i	a4, a12, 17
+     b99:	ffd301        	l32r	a0, ae8 <lmacRecycleMPDU+0x1c4>
+     b9c:	0000c0        	callx0	a0
+     b9f:	02ed      	mov.n	a14, a2
+     ba1:	500c      	movi.n	a0, 5
+     ba3:	124c02        	s8i	a0, a12, 18
+     ba6:	001a46        	j	c13 <lmacRecycleMPDU+0x2ef>
+     ba9:	e69c      	beqz.n	a6, bcb <lmacRecycleMPDU+0x2a7>
+     bab:	8078      	l32i.n	a7, a0, 32
+     bad:	0778      	l32i.n	a7, a7, 0
+     baf:	0c2d      	mov.n	a2, a12
+     bb1:	057970        	extui	a7, a7, 25, 1
+     bb4:	933570        	movnez	a3, a5, a7
+     bb7:	ff4e85        	call0	a0 <lmacIsIdle+0x88>
+     bba:	0e0c82        	l8ui	a8, a12, 14
+     bbd:	9d28      	l32i.n	a2, a13, 36
+     bbf:	07e856        	bnez	a8, c41 <lmacRecycleMPDU+0x31d>
+     bc2:	ffca01        	l32r	a0, aec <lmacRecycleMPDU+0x1c8>
+     bc5:	0000c0        	callx0	a0
+     bc8:	001ec6        	j	c47 <lmacRecycleMPDU+0x323>
+     bcb:	0c98      	l32i.n	a9, a12, 0
+     bcd:	090916        	beqz	a9, c61 <lmacRecycleMPDU+0x33d>
+     bd0:	ffba21        	l32r	a2, ab8 <lmacRecycleMPDU+0x194>
+     bd3:	ffba31        	l32r	a3, abc <lmacRecycleMPDU+0x198>
+     bd6:	e7a342        	movi	a4, 0x3e7
+     bd9:	ffc501        	l32r	a0, af0 <lmacRecycleMPDU+0x1cc>
+     bdc:	0000c0        	callx0	a0
+     bdf:	ffff06        	j	bdf <lmacRecycleMPDU+0x2bb>
+     be2:	195066        	bnei	a0, 5, bff <lmacRecycleMPDU+0x2db>
+     be5:	ad08      	l32i.n	a0, a13, 40
+     be7:	114cf2        	s8i	a15, a12, 17
+     bea:	0b2056        	bnez	a0, ca0 <lmacRecycleMPDU+0x37c>
+     bed:	ffb421        	l32r	a2, ac0 <lmacRecycleMPDU+0x19c>
+     bf0:	ffb531        	l32r	a3, ac4 <lmacRecycleMPDU+0x1a0>
+     bf3:	8ca342        	movi	a4, 0x38c
+     bf6:	ffbf01        	l32r	a0, af4 <lmacRecycleMPDU+0x1d0>
+     bf9:	0000c0        	callx0	a0
+     bfc:	ffff06        	j	bfc <lmacRecycleMPDU+0x2d8>
+     bff:	ffb221        	l32r	a2, ac8 <lmacRecycleMPDU+0x1a4>
+     c02:	ffb231        	l32r	a3, acc <lmacRecycleMPDU+0x1a8>
+     c05:	cca342        	movi	a4, 0x3cc
+     c08:	ffbc01        	l32r	a0, af8 <lmacRecycleMPDU+0x1d4>
+     c0b:	0000c0        	callx0	a0
+     c0e:	ffff06        	j	c0e <lmacRecycleMPDU+0x2ea>
+     c11:	0e0c      	movi.n	a14, 0
+     c13:	000c      	movi.n	a0, 0
+     c15:	adf9      	s32i.n	a15, a13, 40
+     c17:	0d0ca2        	l8ui	a10, a12, 13
+     c1a:	9d38      	l32i.n	a3, a13, 36
+     c1c:	000db2        	l8ui	a11, a13, 0
+     c1f:	820c      	movi.n	a2, 8
+     c21:	83b2e0        	moveqz	a11, a2, a14
+     c24:	833f00        	moveqz	a3, a15, a0
+     c27:	9d39      	s32i.n	a3, a13, 36
+     c29:	004db2        	s8i	a11, a13, 0
+     c2c:	10ba16        	beqz	a10, d3b <lmacRecycleMPDU+0x417>
+     c2f:	ffa821        	l32r	a2, ad0 <lmacRecycleMPDU+0x1ac>
+     c32:	ffa831        	l32r	a3, ad4 <lmacRecycleMPDU+0x1b0>
+     c35:	01a442        	movi	a4, 0x401
+     c38:	ffb101        	l32r	a0, afc <lmacRecycleMPDU+0x1d8>
+     c3b:	0000c0        	callx0	a0
+     c3e:	ffff06        	j	c3e <lmacRecycleMPDU+0x31a>
+     c41:	ffaf01        	l32r	a0, b00 <lmacRecycleMPDU+0x1dc>
+     c44:	0000c0        	callx0	a0
+     c47:	0c2d      	mov.n	a2, a12
+     c49:	030c      	movi.n	a3, 0
+     c4b:	ad48      	l32i.n	a4, a13, 40
+     c4d:	350c      	movi.n	a5, 3
+     c4f:	114c52        	s8i	a5, a12, 17
+     c52:	0c49      	s32i.n	a4, a12, 0
+     c54:	ffac01        	l32r	a0, b04 <lmacRecycleMPDU+0x1e0>
+     c57:	0000c0        	callx0	a0
+     c5a:	02ed      	mov.n	a14, a2
+     c5c:	600c      	movi.n	a0, 6
+     c5e:	ffd046        	j	ba3 <lmacRecycleMPDU+0x27f>
+     c61:	8028      	l32i.n	a2, a0, 32
+     c63:	0268      	l32i.n	a6, a2, 0
+     c65:	1976c7        	bbci	a6, 28, c82 <lmacRecycleMPDU+0x35e>
+     c68:	040222        	l8ui	a2, a2, 4
+     c6b:	412420        	srli	a2, a2, 4
+     c6e:	1012a6        	blti	a2, 1, c82 <lmacRecycleMPDU+0x35e>
+     c71:	0b1062        	l16ui	a6, a0, 22
+     c74:	0a1052        	l16ui	a5, a0, 20
+     c77:	071d32        	l16ui	a3, a13, 14
+     c7a:	556a      	add.n	a5, a5, a6
+     c7c:	912357        	blt	a3, a5, c11 <lmacRecycleMPDU+0x2ed>
+     c7f:	8e32e6        	bgei	a2, 3, c11 <lmacRecycleMPDU+0x2ed>
+     c82:	0c09      	s32i.n	a0, a12, 0
+     c84:	0b0c72        	l8ui	a7, a12, 11
+     c87:	114c42        	s8i	a4, a12, 17
+     c8a:	178c      	beqz.n	a7, c8f <lmacRecycleMPDU+0x36b>
+     c8c:	0b4cf2        	s8i	a15, a12, 11
+     c8f:	0c2d      	mov.n	a2, a12
+     c91:	030c      	movi.n	a3, 0
+     c93:	ff9d01        	l32r	a0, b08 <lmacRecycleMPDU+0x1e4>
+     c96:	0000c0        	callx0	a0
+     c99:	02ed      	mov.n	a14, a2
+     c9b:	700c      	movi.n	a0, 7
+     c9d:	ffc086        	j	ba3 <lmacRecycleMPDU+0x27f>
+     ca0:	9d88      	l32i.n	a8, a13, 36
+     ca2:	054816        	beqz	a8, cfa <lmacRecycleMPDU+0x3d6>
+     ca5:	8098      	l32i.n	a9, a0, 32
+     ca7:	0998      	l32i.n	a9, a9, 0
+     ca9:	0c2d      	mov.n	a2, a12
+     cab:	059990        	extui	a9, a9, 25, 1
+     cae:	933590        	movnez	a3, a5, a9
+     cb1:	2c4d32        	s8i	a3, a13, 44
+     cb4:	0e3d      	mov.n	a3, a14
+     cb6:	ffd145        	call0	9cc <lmacRecycleMPDU+0xa8>
+     cb9:	040c22        	l8ui	a2, a12, 4
+     cbc:	9da8      	l32i.n	a10, a13, 36
+     cbe:	0ca9      	s32i.n	a10, a12, 0
+     cc0:	ff9301        	l32r	a0, b0c <lmacRecycleMPDU+0x1e8>
+     cc3:	0000c0        	callx0	a0
+     cc6:	114ce2        	s8i	a14, a12, 17
+     cc9:	124cf2        	s8i	a15, a12, 18
+     ccc:	0c2d      	mov.n	a2, a12
+     cce:	ad38      	l32i.n	a3, a13, 40
+     cd0:	040c      	movi.n	a4, 0
+     cd2:	000005        	call0	cd4 <lmacRecycleMPDU+0x3b0>
+     cd5:	100c      	movi.n	a0, 1
+     cd7:	1e0c      	movi.n	a14, 1
+     cd9:	ffce06        	j	c15 <lmacRecycleMPDU+0x2f1>
+     cdc:	9db8      	l32i.n	a11, a13, 36
+     cde:	3109      	s32i.n	a0, a1, 12
+     ce0:	085b16        	beqz	a11, d69 <lmacRecycleMPDU+0x445>
+     ce3:	9109      	s32i.n	a0, a1, 36
+     ce5:	15d216        	beqz	a2, e46 <lmacRecycleMPDU+0x522>
+     ce8:	ff7c21        	l32r	a2, ad8 <lmacRecycleMPDU+0x1b4>
+     ceb:	ff7c31        	l32r	a3, adc <lmacRecycleMPDU+0x1b8>
+     cee:	5ea342        	movi	a4, 0x35e
+     cf1:	ff8701        	l32r	a0, b10 <lmacRecycleMPDU+0x1ec>
+     cf4:	0000c0        	callx0	a0
+     cf7:	ffff06        	j	cf7 <lmacRecycleMPDU+0x3d3>
+     cfa:	0c28      	l32i.n	a2, a12, 0
+     cfc:	04a256        	bnez	a2, d4a <lmacRecycleMPDU+0x426>
+     cff:	8038      	l32i.n	a3, a0, 32
+     d01:	0338      	l32i.n	a3, a3, 0
+     d03:	053930        	extui	a3, a3, 25, 1
+     d06:	10e316        	beqz	a3, e18 <lmacRecycleMPDU+0x4f4>
+     d09:	012d      	mov.n	a2, a1
+     d0b:	312b      	addi.n	a3, a1, 2
+     d0d:	414b      	addi.n	a4, a1, 4
+     d0f:	518b      	addi.n	a5, a1, 8
+     d11:	ff8001        	l32r	a0, b14 <lmacRecycleMPDU+0x1f0>
+     d14:	0000c0        	callx0	a0
+     d17:	2158      	l32i.n	a5, a1, 8
+     d19:	ad08      	l32i.n	a0, a13, 40
+     d1b:	1148      	l32i.n	a4, a1, 4
+     d1d:	8008      	l32i.n	a0, a0, 32
+     d1f:	011132        	l16ui	a3, a1, 2
+     d22:	000022        	l8ui	a2, a0, 0
+     d25:	0068      	l32i.n	a6, a0, 0
+     d27:	342220        	extui	a2, a2, 2, 4
+     d2a:	056b60        	extui	a6, a6, 27, 1
+     d2d:	0c9656        	bnez	a6, dfa <lmacRecycleMPDU+0x4d6>
+     d30:	060c      	movi.n	a6, 0
+     d32:	ff7901        	l32r	a0, b18 <lmacRecycleMPDU+0x1f4>
+     d35:	0000c0        	callx0	a0
+     d38:	0033c6        	j	e0b <lmacRecycleMPDU+0x4e7>
+     d3b:	51c8      	l32i.n	a12, a1, 20
+     d3d:	61d8      	l32i.n	a13, a1, 24
+     d3f:	71e8      	l32i.n	a14, a1, 28
+     d41:	81f8      	l32i.n	a15, a1, 32
+     d43:	4108      	l32i.n	a0, a1, 16
+     d45:	30c112        	addi	a1, a1, 48
+     d48:	f00d      	ret.n
+     d4a:	0c2d      	mov.n	a2, a12
+     d4c:	0e3d      	mov.n	a3, a14
+     d4e:	ffc7c5        	call0	9cc <lmacRecycleMPDU+0xa8>
+     d51:	114ce2        	s8i	a14, a12, 17
+     d54:	ad38      	l32i.n	a3, a13, 40
+     d56:	420c      	movi.n	a2, 4
+     d58:	040c      	movi.n	a4, 0
+     d5a:	124c22        	s8i	a2, a12, 18
+     d5d:	0c2d      	mov.n	a2, a12
+     d5f:	000005        	call0	d60 <lmacRecycleMPDU+0x43c>
+     d62:	1e0c      	movi.n	a14, 1
+     d64:	000c      	movi.n	a0, 0
+     d66:	ffaac6        	j	c15 <lmacRecycleMPDU+0x2f1>
+     d69:	72dc      	bnez.n	a2, d84 <lmacRecycleMPDU+0x460>
+     d6b:	0c2d      	mov.n	a2, a12
+     d6d:	0f3d      	mov.n	a3, a15
+     d6f:	ffc5c5        	call0	9cc <lmacRecycleMPDU+0xa8>
+     d72:	0b0c32        	l8ui	a3, a12, 11
+     d75:	138c      	beqz.n	a3, d7a <lmacRecycleMPDU+0x456>
+     d77:	0b4cf2        	s8i	a15, a12, 11
+     d7a:	0e0c      	movi.n	a14, 0
+     d7c:	a40c      	movi.n	a4, 10
+     d7e:	124c42        	s8i	a4, a12, 18
+     d81:	000486        	j	d97 <lmacRecycleMPDU+0x473>
+     d84:	0e3d      	mov.n	a3, a14
+     d86:	0c2d      	mov.n	a2, a12
+     d88:	ffc405        	call0	9cc <lmacRecycleMPDU+0xa8>
+     d8b:	1e0c      	movi.n	a14, 1
+     d8d:	d50c      	movi.n	a5, 13
+     d8f:	160c      	movi.n	a6, 1
+     d91:	114c62        	s8i	a6, a12, 17
+     d94:	124c52        	s8i	a5, a12, 18
+     d97:	3108      	l32i.n	a0, a1, 12
+     d99:	8028      	l32i.n	a2, a0, 32
+     d9b:	0278      	l32i.n	a7, a2, 0
+     d9d:	1977b7        	bbci	a7, 27, dba <lmacRecycleMPDU+0x496>
+     da0:	000242        	l8ui	a4, a2, 0
+     da3:	040232        	l8ui	a3, a2, 4
+     da6:	342240        	extui	a2, a4, 2, 4
+     da9:	413430        	srli	a3, a3, 4
+     dac:	332b      	addi.n	a3, a3, 2
+     dae:	743030        	extui	a3, a3, 0, 8
+     db1:	ff5a01        	l32r	a0, b1c <lmacRecycleMPDU+0x1f8>
+     db4:	0000c0        	callx0	a0
+     db7:	ffea46        	j	d64 <lmacRecycleMPDU+0x440>
+     dba:	0d0d72        	l8ui	a7, a13, 13
+     dbd:	110c92        	l8ui	a9, a12, 17
+     dc0:	180c      	movi.n	a8, 1
+     dc2:	050232        	l8ui	a3, a2, 5
+     dc5:	050c      	movi.n	a5, 0
+     dc7:	546030        	extui	a6, a3, 0, 6
+     dca:	835890        	moveqz	a5, a8, a9
+     dcd:	0b3677        	bltu	a6, a7, ddc <lmacRecycleMPDU+0x4b8>
+     dd0:	0c2d      	mov.n	a2, a12
+     dd2:	240c      	movi.n	a4, 2
+     dd4:	003d      	mov.n	a3, a0
+     dd6:	ffac05        	call0	898 <lmacProcessTxSuccess+0xe4>
+     dd9:	ffe1c6        	j	d64 <lmacRecycleMPDU+0x440>
+     ddc:	0602a2        	l8ui	a10, a2, 6
+     ddf:	0c0db2        	l8ui	a11, a13, 12
+     de2:	11aa80        	slli	a10, a10, 8
+     de5:	20aa30        	or	a10, a10, a3
+     de8:	54a6a0        	extui	a10, a10, 6, 6
+     deb:	4b3ab7        	bltu	a10, a11, e3a <lmacRecycleMPDU+0x516>
+     dee:	0c2d      	mov.n	a2, a12
+     df0:	340c      	movi.n	a4, 3
+     df2:	003d      	mov.n	a3, a0
+     df4:	ffaa05        	call0	898 <lmacProcessTxSuccess+0xe4>
+     df7:	ffda46        	j	d64 <lmacRecycleMPDU+0x440>
+     dfa:	040062        	l8ui	a6, a0, 4
+     dfd:	416460        	srli	a6, a6, 4
+     e00:	661b      	addi.n	a6, a6, 1
+     e02:	746060        	extui	a6, a6, 0, 8
+     e05:	ff4601        	l32r	a0, b20 <lmacRecycleMPDU+0x1fc>
+     e08:	0000c0        	callx0	a0
+     e0b:	0c2d      	mov.n	a2, a12
+     e0d:	030c      	movi.n	a3, 0
+     e0f:	ffbbc5        	call0	9cc <lmacRecycleMPDU+0xa8>
+     e12:	124ce2        	s8i	a14, a12, 18
+     e15:	000706        	j	e35 <lmacRecycleMPDU+0x511>
+     e18:	0c2d      	mov.n	a2, a12
+     e1a:	0f3d      	mov.n	a3, a15
+     e1c:	ffbac5        	call0	9cc <lmacRecycleMPDU+0xa8>
+     e1f:	0b0c72        	l8ui	a7, a12, 11
+     e22:	178c      	beqz.n	a7, e27 <lmacRecycleMPDU+0x503>
+     e24:	0b4cf2        	s8i	a15, a12, 11
+     e27:	0c2d      	mov.n	a2, a12
+     e29:	ad38      	l32i.n	a3, a13, 40
+     e2b:	140c      	movi.n	a4, 1
+     e2d:	380c      	movi.n	a8, 3
+     e2f:	124c82        	s8i	a8, a12, 18
+     e32:	000005        	call0	e34 <lmacRecycleMPDU+0x510>
+     e35:	0e0c      	movi.n	a14, 0
+     e37:	ffca46        	j	d64 <lmacRecycleMPDU+0x440>
+     e3a:	0c2d      	mov.n	a2, a12
+     e3c:	440c      	movi.n	a4, 4
+     e3e:	003d      	mov.n	a3, a0
+     e40:	ffa545        	call0	898 <lmacProcessTxSuccess+0xe4>
+     e43:	ffc746        	j	d64 <lmacRecycleMPDU+0x440>
+     e46:	8098      	l32i.n	a9, a0, 32
+     e48:	0c2d      	mov.n	a2, a12
+     e4a:	0998      	l32i.n	a9, a9, 0
+     e4c:	00ed      	mov.n	a14, a0
+     e4e:	059990        	extui	a9, a9, 25, 1
+     e51:	933590        	movnez	a3, a5, a9
+     e54:	ff2485        	call0	a0 <lmacIsIdle+0x88>
+     e57:	8e08      	l32i.n	a0, a14, 32
+     e59:	0008      	l32i.n	a0, a0, 0
+     e5b:	1860d7        	bbci	a0, 13, e77 <lmacRecycleMPDU+0x553>
+     e5e:	15e0c7        	bbsi	a0, 12, e77 <lmacRecycleMPDU+0x553>
+     e61:	0c2d      	mov.n	a2, a12
+     e63:	ffbe45        	call0	a48 <lmacRecycleMPDU+0x124>
+     e66:	0e0c      	movi.n	a14, 0
+     e68:	ffcac6        	j	d97 <lmacRecycleMPDU+0x473>
+     e6b:	3129      	s32i.n	a2, a1, 12
+     e6d:	0c2d      	mov.n	a2, a12
+     e6f:	ffb745        	call0	9e4 <lmacRecycleMPDU+0xc0>
+     e72:	02ed      	mov.n	a14, a2
+     e74:	ffc7c6        	j	d97 <lmacRecycleMPDU+0x473>
+     e77:	0c2d      	mov.n	a2, a12
+     e79:	ffc045        	call0	a80 <lmacRecycleMPDU+0x15c>
+     e7c:	02ed      	mov.n	a14, a2
+     e7e:	ffc546        	j	d97 <lmacRecycleMPDU+0x473>
+	...
+
+00000e94 <lmacProcessCollisions>:
+     e94:	e0c112        	addi	a1, a1, -32
+     e97:	11c9      	s32i.n	a12, a1, 4
+     e99:	21d9      	s32i.n	a13, a1, 8
+     e9b:	31e9      	s32i.n	a14, a1, 12
+     e9d:	41f9      	s32i.n	a15, a1, 16
+     e9f:	0109      	s32i.n	a0, a1, 0
+     ea1:	fff801        	l32r	a0, e84 <lmacRecycleMPDU+0x560>
+     ea4:	0000c0        	callx0	a0
+     ea7:	02cd      	mov.n	a12, a2
+     ea9:	c2bc      	beqz.n	a2, ee9 <lmacProcessCollisions+0x55>
+     eab:	1f0c      	movi.n	a15, 1
+     ead:	000806        	j	ed1 <lmacProcessCollisions+0x3d>
+     eb0:	74e0d0        	extui	a14, a13, 0, 8
+     eb3:	0e2d      	mov.n	a2, a14
+     eb5:	fff401        	l32r	a0, e88 <lmacRecycleMPDU+0x564>
+     eb8:	0000c0        	callx0	a0
+     ebb:	0e2d      	mov.n	a2, a14
+     ebd:	fff301        	l32r	a0, e8c <lmacRecycleMPDU+0x568>
+     ec0:	0000c0        	callx0	a0
+     ec3:	f07c      	movi.n	a0, -1
+     ec5:	401d00        	ssl	a13
+     ec8:	a12f00        	sll	a2, a15
+     ecb:	302200        	xor	a2, a2, a0
+     ece:	10cc20        	and	a12, a12, a2
+     ed1:	60d0c0        	neg	a13, a12
+     ed4:	10ddc0        	and	a13, a13, a12
+     ed7:	40fdd0        	nsau	a13, a13
+     eda:	60d0d0        	neg	a13, a13
+     edd:	1fcdd2        	addi	a13, a13, 31
+     ee0:	fccdd6        	bgez	a13, eb0 <lmacProcessCollisions+0x1c>
+     ee3:	ffeb01        	l32r	a0, e90 <lmacRecycleMPDU+0x56c>
+     ee6:	0000c0        	callx0	a0
+     ee9:	11c8      	l32i.n	a12, a1, 4
+     eeb:	21d8      	l32i.n	a13, a1, 8
+     eed:	31e8      	l32i.n	a14, a1, 12
+     eef:	41f8      	l32i.n	a15, a1, 16
+     ef1:	0108      	l32i.n	a0, a1, 0
+     ef3:	20c112        	addi	a1, a1, 32
+     ef6:	f00d      	ret.n
+     ef8:	000000        	ill
+     efb:	000800        	excw
+     efe:	300000        	xor	a0, a0, a0
+     f01:	000000        	ill
+     f04:	000000        	ill
+     f07:	000800        	excw
+     f0a:	000000        	ill
+     f0d:	000000        	ill
+     f10:	0008      	l32i.n	a0, a0, 0
+	...
+     f1e:	800000        	add	a0, a0, a0
+     f21:	000012        	l8ui	a1, a0, 0
+
+00000f24 <lmacProcessCollision>:
+     f24:	f0c112        	addi	a1, a1, -16
+     f27:	0109      	s32i.n	a0, a1, 0
+     f29:	1182b6        	bltui	a2, 8, f3e <lmacProcessCollision+0x1a>
+     f2c:	fff321        	l32r	a2, ef8 <lmacProcessCollisions+0x64>
+     f2f:	fff331        	l32r	a3, efc <lmacProcessCollisions+0x68>
+     f32:	21a442        	movi	a4, 0x421
+     f35:	fff701        	l32r	a0, f14 <lmacProcessCollisions+0x80>
+     f38:	0000c0        	callx0	a0
+     f3b:	ffff06        	j	f3b <lmacProcessCollision+0x17>
+     f3e:	fff061        	l32r	a6, f00 <lmacProcessCollisions+0x6c>
+     f41:	b02220        	addx8	a2, a2, a2
+     f44:	a02260        	addx4	a2, a2, a6
+     f47:	0238      	l32i.n	a3, a2, 0
+     f49:	03dc      	bnez.n	a3, f5d <lmacProcessCollision+0x39>
+     f4b:	ffee21        	l32r	a2, f04 <lmacProcessCollisions+0x70>
+     f4e:	ffee31        	l32r	a3, f08 <lmacProcessCollisions+0x74>
+     f51:	23a442        	movi	a4, 0x423
+     f54:	fff101        	l32r	a0, f18 <lmacProcessCollisions+0x84>
+     f57:	0000c0        	callx0	a0
+     f5a:	ffff06        	j	f5a <lmacProcessCollision+0x36>
+     f5d:	110242        	l8ui	a4, a2, 17
+     f60:	111426        	beqi	a4, 1, f75 <lmacProcessCollision+0x51>
+     f63:	ffea21        	l32r	a2, f0c <lmacProcessCollisions+0x78>
+     f66:	ffea31        	l32r	a3, f10 <lmacProcessCollisions+0x7c>
+     f69:	24a442        	movi	a4, 0x424
+     f6c:	ffec01        	l32r	a0, f1c <lmacProcessCollisions+0x88>
+     f6f:	0000c0        	callx0	a0
+     f72:	ffff06        	j	f72 <lmacProcessCollision+0x4e>
+     f75:	8358      	l32i.n	a5, a3, 32
+     f77:	0b1392        	l16ui	a9, a3, 22
+     f7a:	0558      	l32i.n	a5, a5, 0
+     f7c:	00a372        	movi	a7, 0x300
+     f7f:	415650        	srli	a5, a5, 6
+     f82:	1a8577        	bany	a5, a7, fa0 <lmacProcessCollision+0x7c>
+     f85:	0a1382        	l16ui	a8, a3, 20
+     f88:	d0c672        	addi	a7, a6, -48
+     f8b:	071772        	l16ui	a7, a7, 14
+     f8e:	889a      	add.n	a8, a8, a9
+     f90:	0ca787        	bge	a7, a8, fa0 <lmacProcessCollision+0x7c>
+     f93:	ffe301        	l32r	a0, f20 <lmacProcessCollisions+0x8c>
+     f96:	0000c0        	callx0	a0
+     f99:	0108      	l32i.n	a0, a1, 0
+     f9b:	10c112        	addi	a1, a1, 16
+     f9e:	f00d      	ret.n
+     fa0:	140c      	movi.n	a4, 1
+     fa2:	000485        	call0	fec <lmacMSDUAged+0x44>
+     fa5:	fffc06        	j	f99 <lmacProcessCollision+0x75>
+
+00000fa8 <lmacMSDUAged>:
+     fa8:	020c      	movi.n	a2, 0
+     faa:	f00d      	ret.n
+     fac:	000000        	ill
+     faf:	000800        	excw
+	...
+     fba:	080000        	excw
+	...
+     fc9:	000000        	ill
+     fcc:	0008      	l32i.n	a0, a0, 0
+     fce:	100000        	and	a0, a0, a0
+	...
+     fe5:	000000        	ill
+     fe8:	117c      	movi.n	a1, -15
+     fea:	120000        	excw
+     fed:	09f0c1        	l32r	a12, fffc37b0 <lmacRxDone+0xfffc1f88>
+     ff0:	11c901        	l32r	a0, fffc5714 <lmacRxDone+0xfffc3eec>
+     ff3:	21d9      	s32i.n	a13, a1, 8
+     ff5:	02cd      	mov.n	a12, a2
+     ff7:	03dd      	mov.n	a13, a3
+     ff9:	03dc      	bnez.n	a3, 100d <lmacMSDUAged+0x65>
+     ffb:	ffec21        	l32r	a2, fac <lmacMSDUAged+0x4>
+     ffe:	ffec31        	l32r	a3, fb0 <lmacMSDUAged+0x8>
+    1001:	41a442        	movi	a4, 0x441
+    1004:	fff401        	l32r	a0, fd4 <lmacMSDUAged+0x2c>
+    1007:	0000c0        	callx0	a0
+    100a:	ffff06        	j	100a <lmacMSDUAged+0x62>
+    100d:	ffe901        	l32r	a0, fb4 <lmacMSDUAged+0xc>
+    1010:	090272        	l8ui	a7, a2, 9
+    1013:	0d0022        	l8ui	a2, a0, 13
+    1016:	073d      	mov.n	a3, a7
+    1018:	0ab727        	bgeu	a7, a2, 1026 <lmacMSDUAged+0x7e>
+    101b:	371b      	addi.n	a3, a7, 1
+    101d:	094c32        	s8i	a3, a12, 9
+    1020:	0d0022        	l8ui	a2, a0, 13
+    1023:	743030        	extui	a3, a3, 0, 8
+    1026:	10b327        	bgeu	a3, a2, 103a <lmacMSDUAged+0x92>
+    1029:	060c22        	l8ui	a2, a12, 6
+    102c:	080c52        	l8ui	a5, a12, 8
+    102f:	621b      	addi.n	a6, a2, 1
+    1031:	0bb257        	bgeu	a2, a5, 1040 <lmacMSDUAged+0x98>
+    1034:	064c62        	s8i	a6, a12, 6
+    1037:	000146        	j	1040 <lmacMSDUAged+0x98>
+    103a:	070c72        	l8ui	a7, a12, 7
+    103d:	064c72        	s8i	a7, a12, 6
+    1040:	8db8      	l32i.n	a11, a13, 32
+    1042:	000082        	l8ui	a8, a0, 0
+    1045:	050b22        	l8ui	a2, a11, 5
+    1048:	c0a0a2        	movi	a10, 192
+    104b:	10a2a0        	and	a10, a2, a10
+    104e:	542020        	extui	a2, a2, 0, 6
+    1051:	221b      	addi.n	a2, a2, 1
+    1053:	542020        	extui	a2, a2, 0, 6
+    1056:	20aa20        	or	a10, a10, a2
+    1059:	054ba2        	s8i	a10, a11, 5
+    105c:	040c92        	l8ui	a9, a12, 4
+    105f:	289897        	bne	a8, a9, 108b <lmacMSDUAged+0xe3>
+    1062:	8d28      	l32i.n	a2, a13, 32
+    1064:	040272        	l8ui	a7, a2, 4
+    1067:	0502b2        	l8ui	a11, a2, 5
+    106a:	413470        	srli	a3, a7, 4
+    106d:	948c      	beqz.n	a4, 107a <lmacMSDUAged+0xd2>
+    106f:	54b0b0        	extui	a11, a11, 0, 6
+    1072:	17a3b7        	bge	a3, a11, 108d <lmacMSDUAged+0xe5>
+    1075:	0248      	l32i.n	a4, a2, 0
+    1077:	12f4c7        	bbsi	a4, 28, 108d <lmacMSDUAged+0xe5>
+    107a:	345070        	extui	a5, a7, 0, 4
+    107d:	631b      	addi.n	a6, a3, 1
+    107f:	346060        	extui	a6, a6, 0, 4
+    1082:	1166c0        	slli	a6, a6, 4
+    1085:	205560        	or	a5, a5, a6
+    1088:	044252        	s8i	a5, a2, 4
+    108b:	8d28      	l32i.n	a2, a13, 32
+    108d:	110c32        	l8ui	a3, a12, 17
+    1090:	142326        	beqi	a3, 2, 10a8 <lmacMSDUAged+0x100>
+    1093:	111326        	beqi	a3, 1, 10a8 <lmacMSDUAged+0x100>
+    1096:	ffc821        	l32r	a2, fb8 <lmacMSDUAged+0x10>
+    1099:	ffc831        	l32r	a3, fbc <lmacMSDUAged+0x14>
+    109c:	52a442        	movi	a4, 0x452
+    109f:	ffce01        	l32r	a0, fd8 <lmacMSDUAged+0x30>
+    10a2:	0000c0        	callx0	a0
+    10a5:	ffff06        	j	10a5 <lmacMSDUAged+0xfd>
+    10a8:	ffcd01        	l32r	a0, fdc <lmacMSDUAged+0x34>
+    10ab:	0000c0        	callx0	a0
+    10ae:	ffc401        	l32r	a0, fc0 <lmacMSDUAged+0x18>
+    10b1:	62dc      	bnez.n	a2, 10cb <lmacMSDUAged+0x123>
+    10b3:	8d78      	l32i.n	a7, a13, 32
+    10b5:	050772        	l8ui	a7, a7, 5
+    10b8:	0d0082        	l8ui	a8, a0, 13
+    10bb:	547070        	extui	a7, a7, 0, 6
+    10be:	09b787        	bgeu	a7, a8, 10cb <lmacMSDUAged+0x123>
+    10c1:	0d2d      	mov.n	a2, a13
+    10c3:	000005        	call0	10c4 <lmacMSDUAged+0x11c>
+    10c6:	ffbf01        	l32r	a0, fc4 <lmacMSDUAged+0x1c>
+    10c9:	62ac      	beqz.n	a2, 10f3 <lmacMSDUAged+0x14b>
+    10cb:	040c92        	l8ui	a9, a12, 4
+    10ce:	6a0c      	movi.n	a10, 6
+    10d0:	000082        	l8ui	a8, a0, 0
+    10d3:	114ca2        	s8i	a10, a12, 17
+    10d6:	099897        	bne	a8, a9, 10e3 <lmacMSDUAged+0x13b>
+    10d9:	0c2d      	mov.n	a2, a12
+    10db:	030c      	movi.n	a3, 0
+    10dd:	ffa445        	call0	b24 <lmacRecycleMPDU+0x200>
+    10e0:	000106        	j	10e8 <lmacMSDUAged+0x140>
+    10e3:	0c2d      	mov.n	a2, a12
+    10e5:	ff8745        	call0	95c <lmacRecycleMPDU+0x38>
+    10e8:	11c8      	l32i.n	a12, a1, 4
+    10ea:	21d8      	l32i.n	a13, a1, 8
+    10ec:	0108      	l32i.n	a0, a1, 0
+    10ee:	10c112        	addi	a1, a1, 16
+    10f1:	f00d      	ret.n
+    10f3:	040c22        	l8ui	a2, a12, 4
+    10f6:	0000b2        	l8ui	a11, a0, 0
+    10f9:	259b27        	bne	a11, a2, 1122 <lmacMSDUAged+0x17a>
+    10fc:	a038      	l32i.n	a3, a0, 40
+    10fe:	1693d7        	bne	a3, a13, 1118 <lmacMSDUAged+0x170>
+    1101:	8d08      	l32i.n	a0, a13, 32
+    1103:	0008      	l32i.n	a0, a0, 0
+    1105:	0ff0c7        	bbsi	a0, 28, 1118 <lmacMSDUAged+0x170>
+    1108:	0cf0b7        	bbsi	a0, 27, 1118 <lmacMSDUAged+0x170>
+    110b:	4d38      	l32i.n	a3, a13, 16
+    110d:	010322        	l8ui	a2, a3, 1
+    1110:	840c      	movi.n	a4, 8
+    1112:	202240        	or	a2, a2, a4
+    1115:	014322        	s8i	a2, a3, 1
+    1118:	0c2d      	mov.n	a2, a12
+    111a:	130c      	movi.n	a3, 1
+    111c:	ffa045        	call0	b24 <lmacRecycleMPDU+0x200>
+    111f:	fff146        	j	10e8 <lmacMSDUAged+0x140>
+    1122:	110c52        	l8ui	a5, a12, 17
+    1125:	111526        	beqi	a5, 1, 113a <lmacMSDUAged+0x192>
+    1128:	ffa821        	l32r	a2, fc8 <lmacMSDUAged+0x20>
+    112b:	ffa831        	l32r	a3, fcc <lmacMSDUAged+0x24>
+    112e:	76a442        	movi	a4, 0x476
+    1131:	ffab01        	l32r	a0, fe0 <lmacMSDUAged+0x38>
+    1134:	0000c0        	callx0	a0
+    1137:	ffff06        	j	1137 <lmacMSDUAged+0x18f>
+    113a:	ffa521        	l32r	a2, fd0 <lmacMSDUAged+0x28>
+    113d:	430c      	movi.n	a3, 4
+    113f:	114c32        	s8i	a3, a12, 17
+    1142:	ffa801        	l32r	a0, fe4 <lmacMSDUAged+0x3c>
+    1145:	0000c0        	callx0	a0
+    1148:	0c2d      	mov.n	a2, a12
+    114a:	030c      	movi.n	a3, 0
+    114c:	ffa701        	l32r	a0, fe8 <lmacMSDUAged+0x40>
+    114f:	0000c0        	callx0	a0
+    1152:	ffe486        	j	10e8 <lmacMSDUAged+0x140>
+	...
+    1169:	000000        	ill
+    116c:	001790        	excw
+	...
+    117b:	c11200        	mul16u	a1, a2, a0
+    117e:	21c9f0        	srai	a12, a15, 9
+    1181:	1109      	s32i.n	a0, a1, 4
+    1183:	0e0202        	l8ui	a0, a2, 14
+    1186:	02cd      	mov.n	a12, a2
+    1188:	d0ec      	bnez.n	a0, 11b9 <lmacMSDUAged+0x211>
+    118a:	0b0202        	l8ui	a0, a2, 11
+    118d:	041316        	beqz	a3, 11d2 <lmacMSDUAged+0x22a>
+    1190:	092016        	beqz	a0, 1226 <lmacMSDUAged+0x27e>
+    1193:	040222        	l8ui	a2, a2, 4
+    1196:	fff001        	l32r	a0, 1158 <lmacMSDUAged+0x1b0>
+    1199:	0000c0        	callx0	a0
+    119c:	030c      	movi.n	a3, 0
+    119e:	120c      	movi.n	a2, 1
+    11a0:	040c      	movi.n	a4, 0
+    11a2:	114c22        	s8i	a2, a12, 17
+    11a5:	040c22        	l8ui	a2, a12, 4
+    11a8:	ffed01        	l32r	a0, 115c <lmacMSDUAged+0x1b4>
+    11ab:	0000c0        	callx0	a0
+    11ae:	120c      	movi.n	a2, 1
+    11b0:	21c8      	l32i.n	a12, a1, 8
+    11b2:	1108      	l32i.n	a0, a1, 4
+    11b4:	10c112        	addi	a1, a1, 16
+    11b7:	f00d      	ret.n
+    11b9:	030c      	movi.n	a3, 0
+    11bb:	0e4232        	s8i	a3, a2, 14
+    11be:	0228      	l32i.n	a2, a2, 0
+    11c0:	ffe801        	l32r	a0, 1160 <lmacMSDUAged+0x1b8>
+    11c3:	0000c0        	callx0	a0
+    11c6:	020c      	movi.n	a2, 0
+    11c8:	040c      	movi.n	a4, 0
+    11ca:	0c49      	s32i.n	a4, a12, 0
+    11cc:	114c42        	s8i	a4, a12, 17
+    11cf:	fff746        	j	11b0 <lmacMSDUAged+0x208>
+    11d2:	065016        	beqz	a0, 123b <lmacMSDUAged+0x293>
+    11d5:	0228      	l32i.n	a2, a2, 0
+    11d7:	8238      	l32i.n	a3, a2, 32
+    11d9:	6228      	l32i.n	a2, a2, 24
+    11db:	031342        	l16ui	a4, a3, 6
+    11de:	080352        	l8ui	a5, a3, 8
+    11e1:	0159      	s32i.n	a5, a1, 0
+    11e3:	414740        	srli	a4, a4, 7
+    11e6:	0b5c42        	s16i	a4, a12, 22
+    11e9:	ffde01        	l32r	a0, 1164 <lmacMSDUAged+0x1bc>
+    11ec:	0000c0        	callx0	a0
+    11ef:	0c28      	l32i.n	a2, a12, 0
+    11f1:	8208      	l32i.n	a0, a2, 32
+    11f3:	0178      	l32i.n	a7, a1, 0
+    11f5:	080062        	l8ui	a6, a0, 8
+    11f8:	091677        	beq	a6, a7, 1205 <lmacMSDUAged+0x25d>
+    11fb:	ffdb01        	l32r	a0, 1168 <lmacMSDUAged+0x1c0>
+    11fe:	0000c0        	callx0	a0
+    1201:	0c08      	l32i.n	a0, a12, 0
+    1203:	8008      	l32i.n	a0, a0, 32
+    1205:	0b9c22        	l16si	a2, a12, 22
+    1208:	031042        	l16ui	a4, a0, 6
+    120b:	051032        	l16ui	a3, a0, 10
+    120e:	414740        	srli	a4, a4, 7
+    1211:	c03340        	sub	a3, a3, a4
+    1214:	223a      	add.n	a2, a2, a3
+    1216:	0b5c22        	s16i	a2, a12, 22
+    1219:	0c2d      	mov.n	a2, a12
+    121b:	ffd401        	l32r	a0, 116c <lmacMSDUAged+0x1c4>
+    121e:	0000c0        	callx0	a0
+    1221:	120c      	movi.n	a2, 1
+    1223:	ffe246        	j	11b0 <lmacMSDUAged+0x208>
+    1226:	030c      	movi.n	a3, 0
+    1228:	ff7a05        	call0	9cc <lmacRecycleMPDU+0xa8>
+    122b:	0c28      	l32i.n	a2, a12, 0
+    122d:	040c32        	l8ui	a3, a12, 4
+    1230:	ffd001        	l32r	a0, 1170 <lmacMSDUAged+0x1c8>
+    1233:	0000c0        	callx0	a0
+    1236:	020c      	movi.n	a2, 0
+    1238:	ffdd06        	j	11b0 <lmacMSDUAged+0x208>
+    123b:	030c      	movi.n	a3, 0
+    123d:	ff78c5        	call0	9cc <lmacRecycleMPDU+0xa8>
+    1240:	0c38      	l32i.n	a3, a12, 0
+    1242:	6328      	l32i.n	a2, a3, 24
+    1244:	8338      	l32i.n	a3, a3, 32
+    1246:	ffcb01        	l32r	a0, 1174 <lmacMSDUAged+0x1cc>
+    1249:	0000c0        	callx0	a0
+    124c:	0c28      	l32i.n	a2, a12, 0
+    124e:	040c32        	l8ui	a3, a12, 4
+    1251:	ffc901        	l32r	a0, 1178 <lmacMSDUAged+0x1d0>
+    1254:	0000c0        	callx0	a0
+    1257:	020c      	movi.n	a2, 0
+    1259:	ffd4c6        	j	11b0 <lmacMSDUAged+0x208>
+    125c:	000000        	ill
+    125f:	f03f00        	subx8	a3, a15, a0
+    1262:	000000        	ill
+    1265:	000000        	ill
+    1268:	0008      	l32i.n	a0, a0, 0
+    126a:	000000        	ill
+    126d:	000000        	ill
+    1270:	0008      	l32i.n	a0, a0, 0
+	...
+    127e:	120000        	excw
+    1281:	52f0c1        	l32r	a12, fffd5e44 <lmacRxDone+0xfffd461c>
+    1284:	090a02        	l8ui	a0, a10, 9
+    1287:	11c901        	l32r	a0, fffc59ac <lmacRxDone+0xfffc4184>
+    128a:	21d9      	s32i.n	a13, a1, 8
+    128c:	fff4d1        	l32r	a13, 125c <lmacMSDUAged+0x2b4>
+    128f:	02cd      	mov.n	a12, a2
+    1291:	0c0d02        	l8ui	a0, a13, 12
+    1294:	052d      	mov.n	a2, a5
+    1296:	0ab507        	bgeu	a5, a0, 12a4 <lmacMSDUAged+0x2fc>
+    1299:	251b      	addi.n	a2, a5, 1
+    129b:	0a4c22        	s8i	a2, a12, 10
+    129e:	0c0d02        	l8ui	a0, a13, 12
+    12a1:	742020        	extui	a2, a2, 0, 8
+    12a4:	10b207        	bgeu	a2, a0, 12b8 <lmacMSDUAged+0x310>
+    12a7:	060c02        	l8ui	a0, a12, 6
+    12aa:	080c32        	l8ui	a3, a12, 8
+    12ad:	401b      	addi.n	a4, a0, 1
+    12af:	0bb037        	bgeu	a0, a3, 12be <lmacMSDUAged+0x316>
+    12b2:	064c42        	s8i	a4, a12, 6
+    12b5:	000146        	j	12be <lmacMSDUAged+0x316>
+    12b8:	070c52        	l8ui	a5, a12, 7
+    12bb:	064c52        	s8i	a5, a12, 6
+    12be:	ad28      	l32i.n	a2, a13, 40
+    12c0:	000d62        	l8ui	a6, a13, 0
+    12c3:	8298      	l32i.n	a9, a2, 32
+    12c5:	ffe681        	l32r	a8, 1260 <lmacMSDUAged+0x2b8>
+    12c8:	0609a2        	l8ui	a10, a9, 6
+    12cb:	0509b2        	l8ui	a11, a9, 5
+    12ce:	11aa80        	slli	a10, a10, 8
+    12d1:	20aab0        	or	a10, a10, a11
+    12d4:	108a80        	and	a8, a10, a8
+    12d7:	54a6a0        	extui	a10, a10, 6, 6
+    12da:	aa1b      	addi.n	a10, a10, 1
+    12dc:	54a0a0        	extui	a10, a10, 0, 6
+    12df:	11aaa0        	slli	a10, a10, 6
+    12e2:	2088a0        	or	a8, a8, a10
+    12e5:	054982        	s8i	a8, a9, 5
+    12e8:	418880        	srli	a8, a8, 8
+    12eb:	064982        	s8i	a8, a9, 6
+    12ee:	040c72        	l8ui	a7, a12, 4
+    12f1:	189677        	bne	a6, a7, 130d <lmacMSDUAged+0x365>
+    12f4:	8208      	l32i.n	a0, a2, 32
+    12f6:	040032        	l8ui	a3, a0, 4
+    12f9:	34b030        	extui	a11, a3, 0, 4
+    12fc:	413430        	srli	a3, a3, 4
+    12ff:	331b      	addi.n	a3, a3, 1
+    1301:	343030        	extui	a3, a3, 0, 4
+    1304:	1133c0        	slli	a3, a3, 4
+    1307:	20bb30        	or	a11, a11, a3
+    130a:	0440b2        	s8i	a11, a0, 4
+    130d:	110c02        	l8ui	a0, a12, 17
+    1310:	142026        	beqi	a0, 2, 1328 <lmacMSDUAged+0x380>
+    1313:	111026        	beqi	a0, 1, 1328 <lmacMSDUAged+0x380>
+    1316:	ffd321        	l32r	a2, 1264 <lmacMSDUAged+0x2bc>
+    1319:	ffd331        	l32r	a3, 1268 <lmacMSDUAged+0x2c0>
+    131c:	caa442        	movi	a4, 0x4ca
+    131f:	ffd501        	l32r	a0, 1274 <lmacMSDUAged+0x2cc>
+    1322:	0000c0        	callx0	a0
+    1325:	ffff06        	j	1325 <lmacMSDUAged+0x37d>
+    1328:	8228      	l32i.n	a2, a2, 32
+    132a:	ffd301        	l32r	a0, 1278 <lmacMSDUAged+0x2d0>
+    132d:	0000c0        	callx0	a0
+    1330:	c2dc      	bnez.n	a2, 1350 <lmacMSDUAged+0x3a8>
+    1332:	ad28      	l32i.n	a2, a13, 40
+    1334:	8268      	l32i.n	a6, a2, 32
+    1336:	0c0d52        	l8ui	a5, a13, 12
+    1339:	060642        	l8ui	a4, a6, 6
+    133c:	050662        	l8ui	a6, a6, 5
+    133f:	114480        	slli	a4, a4, 8
+    1342:	204460        	or	a4, a4, a6
+    1345:	544640        	extui	a4, a4, 6, 6
+    1348:	04b457        	bgeu	a4, a5, 1350 <lmacMSDUAged+0x3a8>
+    134b:	000005        	call0	134c <lmacMSDUAged+0x3a4>
+    134e:	62ac      	beqz.n	a2, 1378 <lmacMSDUAged+0x3d0>
+    1350:	040c82        	l8ui	a8, a12, 4
+    1353:	690c      	movi.n	a9, 6
+    1355:	000d72        	l8ui	a7, a13, 0
+    1358:	114c92        	s8i	a9, a12, 17
+    135b:	099787        	bne	a7, a8, 1368 <lmacMSDUAged+0x3c0>
+    135e:	0c2d      	mov.n	a2, a12
+    1360:	030c      	movi.n	a3, 0
+    1362:	ff7c05        	call0	b24 <lmacRecycleMPDU+0x200>
+    1365:	000106        	j	136d <lmacMSDUAged+0x3c5>
+    1368:	0c2d      	mov.n	a2, a12
+    136a:	ff5f05        	call0	95c <lmacRecycleMPDU+0x38>
+    136d:	11c8      	l32i.n	a12, a1, 4
+    136f:	21d8      	l32i.n	a13, a1, 8
+    1371:	0108      	l32i.n	a0, a1, 0
+    1373:	10c112        	addi	a1, a1, 16
+    1376:	f00d      	ret.n
+    1378:	040cb2        	l8ui	a11, a12, 4
+    137b:	000da2        	l8ui	a10, a13, 0
+    137e:	1f9ab7        	bne	a10, a11, 13a1 <lmacMSDUAged+0x3f9>
+    1381:	ad28      	l32i.n	a2, a13, 40
+    1383:	8208      	l32i.n	a0, a2, 32
+    1385:	0008      	l32i.n	a0, a0, 0
+    1387:	0cf0c7        	bbsi	a0, 28, 1397 <lmacMSDUAged+0x3ef>
+    138a:	4248      	l32i.n	a4, a2, 16
+    138c:	010432        	l8ui	a3, a4, 1
+    138f:	850c      	movi.n	a5, 8
+    1391:	203350        	or	a3, a3, a5
+    1394:	014432        	s8i	a3, a4, 1
+    1397:	0c2d      	mov.n	a2, a12
+    1399:	130c      	movi.n	a3, 1
+    139b:	ff7885        	call0	b24 <lmacRecycleMPDU+0x200>
+    139e:	fff2c6        	j	136d <lmacMSDUAged+0x3c5>
+    13a1:	110c62        	l8ui	a6, a12, 17
+    13a4:	111626        	beqi	a6, 1, 13b9 <lmacMSDUAged+0x411>
+    13a7:	ffb121        	l32r	a2, 126c <lmacMSDUAged+0x2c4>
+    13aa:	ffb131        	l32r	a3, 1270 <lmacMSDUAged+0x2c8>
+    13ad:	e1a442        	movi	a4, 0x4e1
+    13b0:	ffb301        	l32r	a0, 127c <lmacMSDUAged+0x2d4>
+    13b3:	0000c0        	callx0	a0
+    13b6:	ffff06        	j	13b6 <lmacMSDUAged+0x40e>
+    13b9:	0c2d      	mov.n	a2, a12
+    13bb:	030c      	movi.n	a3, 0
+    13bd:	470c      	movi.n	a7, 4
+    13bf:	114c72        	s8i	a7, a12, 17
+    13c2:	ffdb85        	call0	117c <lmacMSDUAged+0x1d4>
+    13c5:	ffe906        	j	136d <lmacMSDUAged+0x3c5>
+    13c8:	000030        	excw
+    13cb:	000000        	ill
+    13ce:	080000        	excw
+    13d1:	000000        	ill
+    13d4:	000000        	ill
+    13d7:	000800        	excw
+	...
+
+000013e4 <lmacProcessCtsTimeout>:
+    13e4:	fff931        	l32r	a3, 13c8 <lmacMSDUAged+0x420>
+    13e7:	f0c112        	addi	a1, a1, -16
+    13ea:	0109      	s32i.n	a0, a1, 0
+    13ec:	b00220        	addx8	a0, a2, a2
+    13ef:	a02030        	addx4	a2, a0, a3
+    13f2:	0238      	l32i.n	a3, a2, 0
+    13f4:	03dc      	bnez.n	a3, 1408 <lmacProcessCtsTimeout+0x24>
+    13f6:	fff521        	l32r	a2, 13cc <lmacMSDUAged+0x424>
+    13f9:	fff531        	l32r	a3, 13d0 <lmacMSDUAged+0x428>
+    13fc:	f8a442        	movi	a4, 0x4f8
+    13ff:	fff701        	l32r	a0, 13dc <lmacMSDUAged+0x434>
+    1402:	0000c0        	callx0	a0
+    1405:	ffff06        	j	1405 <lmacProcessCtsTimeout+0x21>
+    1408:	110242        	l8ui	a4, a2, 17
+    140b:	111426        	beqi	a4, 1, 1420 <lmacProcessCtsTimeout+0x3c>
+    140e:	fff121        	l32r	a2, 13d4 <lmacMSDUAged+0x42c>
+    1411:	fff131        	l32r	a3, 13d8 <lmacMSDUAged+0x430>
+    1414:	f9a442        	movi	a4, 0x4f9
+    1417:	fff201        	l32r	a0, 13e0 <lmacMSDUAged+0x438>
+    141a:	0000c0        	callx0	a0
+    141d:	ffff06        	j	141d <lmacProcessCtsTimeout+0x39>
+    1420:	140c      	movi.n	a4, 1
+    1422:	ffbc85        	call0	fec <lmacMSDUAged+0x44>
+    1425:	0108      	l32i.n	a0, a1, 0
+    1427:	10c112        	addi	a1, a1, 16
+    142a:	f00d      	ret.n
+    142c:	000000        	ill
+    142f:	000800        	excw
+	...
+
+0000143c <lmacProcessAckTimeout>:
+    143c:	f0c112        	addi	a1, a1, -16
+    143f:	0109      	s32i.n	a0, a1, 0
+    1441:	000005        	call0	1444 <lmacProcessAckTimeout+0x8>
+    1444:	02dc      	bnez.n	a2, 1458 <lmacProcessAckTimeout+0x1c>
+    1446:	fff921        	l32r	a2, 142c <lmacProcessCtsTimeout+0x48>
+    1449:	fff931        	l32r	a3, 1430 <lmacProcessCtsTimeout+0x4c>
+    144c:	0aa542        	movi	a4, 0x50a
+    144f:	fffa01        	l32r	a0, 1438 <lmacProcessCtsTimeout+0x54>
+    1452:	0000c0        	callx0	a0
+    1455:	ffff06        	j	1455 <lmacProcessAckTimeout+0x19>
+    1458:	fff741        	l32r	a4, 1434 <lmacProcessCtsTimeout+0x50>
+    145b:	a438      	l32i.n	a3, a4, 40
+    145d:	000422        	l8ui	a2, a4, 0
+    1460:	000452        	l8ui	a5, a4, 0
+    1463:	8308      	l32i.n	a0, a3, 32
+    1465:	30c442        	addi	a4, a4, 48
+    1468:	b02250        	addx8	a2, a2, a5
+    146b:	0008      	l32i.n	a0, a0, 0
+    146d:	a02240        	addx4	a2, a2, a4
+    1470:	1060e7        	bbci	a0, 14, 1484 <lmacProcessAckTimeout+0x48>
+    1473:	060c      	movi.n	a6, 0
+    1475:	070272        	l8ui	a7, a2, 7
+    1478:	064272        	s8i	a7, a2, 6
+    147b:	094262        	s8i	a6, a2, 9
+    147e:	ffe005        	call0	1280 <lmacMSDUAged+0x2d8>
+    1481:	000106        	j	1489 <lmacProcessAckTimeout+0x4d>
+    1484:	040c      	movi.n	a4, 0
+    1486:	ffb645        	call0	fec <lmacMSDUAged+0x44>
+    1489:	0108      	l32i.n	a0, a1, 0
+    148b:	10c112        	addi	a1, a1, 16
+    148e:	f00d      	ret.n
+    1490:	000000        	ill
+	...
+
+00001494 <lmacProcessRtsStart>:
+    1494:	ffff31        	l32r	a3, 1490 <lmacProcessAckTimeout+0x54>
+    1497:	004322        	s8i	a2, a3, 0
+    149a:	f00d      	ret.n
+    149c:	000000        	ill
+    149f:	000800        	excw
+	...
+    14aa:	080000        	excw
+    14ad:	000000        	ill
+    14b0:	0018      	l32i.n	a1, a0, 0
+    14b2:	000000        	ill
+    14b5:	000000        	ill
+    14b8:	0008      	l32i.n	a0, a0, 0
+    14ba:	300000        	xor	a0, a0, a0
+	...
+
+000014d0 <lmacProcessTxRtsError>:
+    14d0:	f0c112        	addi	a1, a1, -16
+    14d3:	0109      	s32i.n	a0, a1, 0
+    14d5:	11c9      	s32i.n	a12, a1, 4
+    14d7:	21d9      	s32i.n	a13, a1, 8
+    14d9:	02cd      	mov.n	a12, a2
+    14db:	03dd      	mov.n	a13, a3
+    14dd:	000005        	call0	14e0 <lmacProcessTxRtsError+0x10>
+    14e0:	02dc      	bnez.n	a2, 14f4 <lmacProcessTxRtsError+0x24>
+    14e2:	ffee21        	l32r	a2, 149c <lmacProcessRtsStart+0x8>
+    14e5:	ffee31        	l32r	a3, 14a0 <lmacProcessRtsStart+0xc>
+    14e8:	28a542        	movi	a4, 0x528
+    14eb:	fff501        	l32r	a0, 14c0 <lmacProcessRtsStart+0x2c>
+    14ee:	0000c0        	callx0	a0
+    14f1:	ffff06        	j	14f1 <lmacProcessTxRtsError+0x21>
+    14f4:	ffec01        	l32r	a0, 14a4 <lmacProcessRtsStart+0x10>
+    14f7:	000002        	l8ui	a0, a0, 0
+    14fa:	111d07        	beq	a13, a0, 150f <lmacProcessTxRtsError+0x3f>
+    14fd:	ffea21        	l32r	a2, 14a8 <lmacProcessRtsStart+0x14>
+    1500:	ffeb31        	l32r	a3, 14ac <lmacProcessRtsStart+0x18>
+    1503:	29a542        	movi	a4, 0x529
+    1506:	ffef01        	l32r	a0, 14c4 <lmacProcessRtsStart+0x30>
+    1509:	0000c0        	callx0	a0
+    150c:	ffff06        	j	150c <lmacProcessTxRtsError+0x3c>
+    150f:	431c26        	beqi	a12, 1, 1556 <lmacProcessTxRtsError+0x86>
+    1512:	403c26        	beqi	a12, 3, 1556 <lmacProcessTxRtsError+0x86>
+    1515:	121c      	movi.n	a2, 17
+    1517:	0222c7        	blt	a2, a12, 151d <lmacProcessTxRtsError+0x4d>
+    151a:	22bce6        	bgei	a12, 16, 1540 <lmacProcessTxRtsError+0x70>
+    151d:	c0a032        	movi	a3, 192
+    1520:	1c1c37        	beq	a12, a3, 1540 <lmacProcessTxRtsError+0x70>
+    1523:	ffe321        	l32r	a2, 14b0 <lmacProcessRtsStart+0x1c>
+    1526:	0c3d      	mov.n	a3, a12
+    1528:	ffe801        	l32r	a0, 14c8 <lmacProcessRtsStart+0x34>
+    152b:	0000c0        	callx0	a0
+    152e:	ffe121        	l32r	a2, 14b4 <lmacProcessRtsStart+0x20>
+    1531:	ffe131        	l32r	a3, 14b8 <lmacProcessRtsStart+0x24>
+    1534:	3da542        	movi	a4, 0x53d
+    1537:	ffe501        	l32r	a0, 14cc <lmacProcessRtsStart+0x38>
+    153a:	0000c0        	callx0	a0
+    153d:	ffff06        	j	153d <lmacProcessTxRtsError+0x6d>
+    1540:	640c      	movi.n	a4, 6
+    1542:	ffde31        	l32r	a3, 14bc <lmacProcessRtsStart+0x28>
+    1545:	b02000        	addx8	a2, a0, a0
+    1548:	a02230        	addx4	a2, a2, a3
+    154b:	114242        	s8i	a4, a2, 17
+    154e:	030c      	movi.n	a3, 0
+    1550:	ff5d05        	call0	b24 <lmacRecycleMPDU+0x200>
+    1553:	000106        	j	155b <lmacProcessTxRtsError+0x8b>
+    1556:	0d2d      	mov.n	a2, a13
+    1558:	000005        	call0	155c <lmacProcessTxRtsError+0x8c>
+    155b:	11c8      	l32i.n	a12, a1, 4
+    155d:	21d8      	l32i.n	a13, a1, 8
+    155f:	0108      	l32i.n	a0, a1, 0
+    1561:	10c112        	addi	a1, a1, 16
+    1564:	f00d      	ret.n
+    1566:	000000        	ill
+    1569:	000000        	ill
+    156c:	0008      	l32i.n	a0, a0, 0
+    156e:	2c0000        	excw
+    1571:	000000        	ill
+    1574:	000000        	ill
+    1577:	000800        	excw
+	...
+
+0000158c <lmacProcessTxError>:
+    158c:	f0c112        	addi	a1, a1, -16
+    158f:	11c9      	s32i.n	a12, a1, 4
+    1591:	0109      	s32i.n	a0, a1, 0
+    1593:	02cd      	mov.n	a12, a2
+    1595:	000005        	call0	1598 <lmacProcessTxError+0xc>
+    1598:	02dc      	bnez.n	a2, 15ac <lmacProcessTxError+0x20>
+    159a:	fff321        	l32r	a2, 1568 <lmacProcessTxRtsError+0x98>
+    159d:	fff331        	l32r	a3, 156c <lmacProcessTxRtsError+0x9c>
+    15a0:	50a542        	movi	a4, 0x550
+    15a3:	fff701        	l32r	a0, 1580 <lmacProcessTxRtsError+0xb0>
+    15a6:	0000c0        	callx0	a0
+    15a9:	ffff06        	j	15a9 <lmacProcessTxError+0x1d>
+    15ac:	521c26        	beqi	a12, 1, 1602 <lmacProcessTxError+0x76>
+    15af:	4f3c26        	beqi	a12, 3, 1602 <lmacProcessTxError+0x76>
+    15b2:	101c      	movi.n	a0, 17
+    15b4:	0220c7        	blt	a0, a12, 15ba <lmacProcessTxError+0x2e>
+    15b7:	28bce6        	bgei	a12, 16, 15e3 <lmacProcessTxError+0x57>
+    15ba:	c1a022        	movi	a2, 193
+    15bd:	0522c7        	blt	a2, a12, 15c6 <lmacProcessTxError+0x3a>
+    15c0:	c0a032        	movi	a3, 192
+    15c3:	1cac37        	bge	a12, a3, 15e3 <lmacProcessTxError+0x57>
+    15c6:	ffea21        	l32r	a2, 1570 <lmacProcessTxRtsError+0xa0>
+    15c9:	0c3d      	mov.n	a3, a12
+    15cb:	ffee01        	l32r	a0, 1584 <lmacProcessTxRtsError+0xb4>
+    15ce:	0000c0        	callx0	a0
+    15d1:	ffe821        	l32r	a2, 1574 <lmacProcessTxRtsError+0xa4>
+    15d4:	ffe931        	l32r	a3, 1578 <lmacProcessTxRtsError+0xa8>
+    15d7:	65a542        	movi	a4, 0x565
+    15da:	ffeb01        	l32r	a0, 1588 <lmacProcessTxRtsError+0xb8>
+    15dd:	0000c0        	callx0	a0
+    15e0:	ffff06        	j	15e0 <lmacProcessTxError+0x54>
+    15e3:	030c      	movi.n	a3, 0
+    15e5:	ffe551        	l32r	a5, 157c <lmacProcessTxRtsError+0xac>
+    15e8:	640c      	movi.n	a4, 6
+    15ea:	000522        	l8ui	a2, a5, 0
+    15ed:	000562        	l8ui	a6, a5, 0
+    15f0:	30c552        	addi	a5, a5, 48
+    15f3:	b02260        	addx8	a2, a2, a6
+    15f6:	a02250        	addx4	a2, a2, a5
+    15f9:	114242        	s8i	a4, a2, 17
+    15fc:	ff5245        	call0	b24 <lmacRecycleMPDU+0x200>
+    15ff:	000086        	j	1605 <lmacProcessTxError+0x79>
+    1602:	000005        	call0	1604 <lmacProcessTxError+0x78>
+    1605:	11c8      	l32i.n	a12, a1, 4
+    1607:	0108      	l32i.n	a0, a1, 0
+    1609:	10c112        	addi	a1, a1, 16
+    160c:	f00d      	ret.n
+    160e:	300000        	xor	a0, a0, a0
+    1611:	000000        	ill
+    1614:	000000        	ill
+    1617:	000800        	excw
+    161a:	000000        	ill
+    161d:	000000        	ill
+    1620:	0008      	l32i.n	a0, a0, 0
+    1622:	000000        	ill
+    1625:	000000        	ill
+    1628:	0008      	l32i.n	a0, a0, 0
+    162a:	000000        	ill
+    162d:	000000        	ill
+    1630:	ff          	.byte 0xff
+    1631:	ef          	.byte 0xef
+    1632:	ff          	.byte 0xff
+    1633:	f03f03        	excw
+	...
+
+0000164c <lmacTxFrame>:
+    164c:	f0c112        	addi	a1, a1, -16
+    164f:	21c9      	s32i.n	a12, a1, 8
+    1651:	1109      	s32i.n	a0, a1, 4
+    1653:	ffef01        	l32r	a0, 1610 <lmacProcessTxError+0x84>
+    1656:	b0c330        	addx8	a12, a3, a3
+    1659:	a0cc00        	addx4	a12, a12, a0
+    165c:	110c02        	l8ui	a0, a12, 17
+    165f:	609c      	beqz.n	a0, 1679 <lmacTxFrame+0x2d>
+    1661:	143026        	beqi	a0, 3, 1679 <lmacTxFrame+0x2d>
+    1664:	2a4026        	beqi	a0, 4, 1692 <lmacTxFrame+0x46>
+    1667:	ffeb21        	l32r	a2, 1614 <lmacProcessTxError+0x88>
+    166a:	ffeb31        	l32r	a3, 1618 <lmacProcessTxError+0x8c>
+    166d:	04a642        	movi	a4, 0x604
+    1670:	fff201        	l32r	a0, 1638 <lmacProcessTxError+0xac>
+    1673:	0000c0        	callx0	a0
+    1676:	ffff06        	j	1676 <lmacTxFrame+0x2a>
+    1679:	154026        	beqi	a0, 4, 1692 <lmacTxFrame+0x46>
+    167c:	0c29      	s32i.n	a2, a12, 0
+    167e:	a2ec      	bnez.n	a2, 16ac <lmacTxFrame+0x60>
+    1680:	ffe721        	l32r	a2, 161c <lmacProcessTxError+0x90>
+    1683:	ffe731        	l32r	a3, 1620 <lmacProcessTxError+0x94>
+    1686:	0ca642        	movi	a4, 0x60c
+    1689:	ffec01        	l32r	a0, 163c <lmacProcessTxError+0xb0>
+    168c:	0000c0        	callx0	a0
+    168f:	ffff06        	j	168f <lmacTxFrame+0x43>
+    1692:	0c38      	l32i.n	a3, a12, 0
+    1694:	c03320        	sub	a3, a3, a2
+    1697:	0ba316        	beqz	a3, 1755 <lmacTxFrame+0x109>
+    169a:	ffe221        	l32r	a2, 1624 <lmacProcessTxError+0x98>
+    169d:	ffe231        	l32r	a3, 1628 <lmacProcessTxError+0x9c>
+    16a0:	07a642        	movi	a4, 0x607
+    16a3:	ffe701        	l32r	a0, 1640 <lmacProcessTxError+0xb4>
+    16a6:	0000c0        	callx0	a0
+    16a9:	ffff06        	j	16a9 <lmacTxFrame+0x5d>
+    16ac:	00a182        	movi	a8, 0x100
+    16af:	0b1262        	l16ui	a6, a2, 22
+    16b2:	0a1252        	l16ui	a5, a2, 20
+    16b5:	ffde71        	l32r	a7, 1630 <lmacProcessTxError+0xa4>
+    16b8:	556a      	add.n	a5, a5, a6
+    16ba:	8268      	l32i.n	a6, a2, 32
+    16bc:	ffdc41        	l32r	a4, 162c <lmacProcessTxError+0xa0>
+    16bf:	0638      	l32i.n	a3, a6, 0
+    16c1:	071442        	l16ui	a4, a4, 14
+    16c4:	410630        	srli	a0, a3, 6
+    16c7:	22a457        	bge	a4, a5, 16ed <lmacTxFrame+0xa1>
+    16ca:	1fe377        	bbsi	a3, 7, 16ed <lmacTxFrame+0xa1>
+    16cd:	205080        	or	a5, a0, a8
+    16d0:	544030        	extui	a4, a3, 0, 6
+    16d3:	1155a0        	slli	a5, a5, 6
+    16d6:	204450        	or	a4, a4, a5
+    16d9:	543040        	extui	a3, a4, 0, 6
+    16dc:	414640        	srli	a4, a4, 6
+    16df:	104470        	and	a4, a4, a7
+    16e2:	1144a0        	slli	a4, a4, 6
+    16e5:	203340        	or	a3, a3, a4
+    16e8:	0639      	s32i.n	a3, a6, 0
+    16ea:	410630        	srli	a0, a3, 6
+    16ed:	5d60c7        	bbci	a0, 12, 174e <lmacTxFrame+0x102>
+    16f0:	110c92        	l8ui	a9, a12, 17
+    16f3:	573966        	bnei	a9, 3, 174e <lmacTxFrame+0x102>
+    16f6:	0406a2        	l8ui	a10, a6, 4
+    16f9:	41a4a0        	srli	a10, a10, 4
+    16fc:	4e3aa6        	blti	a10, 3, 174e <lmacTxFrame+0x102>
+    16ff:	ffcd41        	l32r	a4, 1634 <lmacProcessTxError+0xa8>
+    1702:	549030        	extui	a9, a3, 0, 6
+    1705:	050652        	l8ui	a5, a6, 5
+    1708:	20a080        	or	a10, a0, a8
+    170b:	11aaa0        	slli	a10, a10, 6
+    170e:	54b050        	extui	a11, a5, 0, 6
+    1711:	2099a0        	or	a9, a9, a10
+    1714:	41a690        	srli	a10, a9, 6
+    1717:	10aa70        	and	a10, a10, a7
+    171a:	549090        	extui	a9, a9, 0, 6
+    171d:	11aaa0        	slli	a10, a10, 6
+    1720:	2099a0        	or	a9, a9, a10
+    1723:	0606a2        	l8ui	a10, a6, 6
+    1726:	11bba0        	slli	a11, a11, 6
+    1729:	11aa80        	slli	a10, a10, 8
+    172c:	20aa50        	or	a10, a10, a5
+    172f:	10aa40        	and	a10, a10, a4
+    1732:	20aab0        	or	a10, a10, a11
+    1735:	0546a2        	s8i	a10, a6, 5
+    1738:	41a8a0        	srli	a10, a10, 8
+    173b:	0646a2        	s8i	a10, a6, 6
+    173e:	8248      	l32i.n	a4, a2, 32
+    1740:	0699      	s32i.n	a9, a6, 0
+    1742:	0504b2        	l8ui	a11, a4, 5
+    1745:	c0a052        	movi	a5, 192
+    1748:	10bb50        	and	a11, a11, a5
+    174b:	0544b2        	s8i	a11, a4, 5
+    174e:	0c2d      	mov.n	a2, a12
+    1750:	030c      	movi.n	a3, 0
+    1752:	fe9dc5        	call0	130 <lmacIsIdle+0x118>
+    1755:	060cb2        	l8ui	a11, a12, 6
+    1758:	01b9      	s32i.n	a11, a1, 0
+    175a:	ffba01        	l32r	a0, 1644 <lmacProcessTxError+0xb8>
+    175d:	0000c0        	callx0	a0
+    1760:	050c32        	l8ui	a3, a12, 5
+    1763:	0178      	l32i.n	a7, a1, 0
+    1765:	f61c      	movi.n	a6, 31
+    1767:	150c      	movi.n	a5, 1
+    1769:	114c52        	s8i	a5, a12, 17
+    176c:	c06670        	sub	a6, a6, a7
+    176f:	400600        	ssr	a6
+    1772:	b14020        	sra	a4, a2
+    1775:	040c22        	l8ui	a2, a12, 4
+    1778:	f44040        	extui	a4, a4, 0, 16
+    177b:	ffb301        	l32r	a0, 1648 <lmacProcessTxError+0xbc>
+    177e:	0000c0        	callx0	a0
+    1781:	21c8      	l32i.n	a12, a1, 8
+    1783:	1108      	l32i.n	a0, a1, 4
+    1785:	10c112        	addi	a1, a1, 16
+    1788:	f00d      	ret.n
+    178a:	000000        	ill
+    178d:	000000        	ill
+    1790:	030c      	movi.n	a3, 0
+    1792:	f0c112        	addi	a1, a1, -16
+    1795:	11c9      	s32i.n	a12, a1, 4
+    1797:	0109      	s32i.n	a0, a1, 0
+    1799:	02cd      	mov.n	a12, a2
+    179b:	fe9945        	call0	130 <lmacIsIdle+0x118>
+    179e:	040c22        	l8ui	a2, a12, 4
+    17a1:	030c      	movi.n	a3, 0
+    17a3:	040c      	movi.n	a4, 0
+    17a5:	100c      	movi.n	a0, 1
+    17a7:	114c02        	s8i	a0, a12, 17
+    17aa:	fff801        	l32r	a0, 178c <lmacTxFrame+0x140>
+    17ad:	0000c0        	callx0	a0
+    17b0:	11c8      	l32i.n	a12, a1, 4
+    17b2:	0108      	l32i.n	a0, a1, 0
+    17b4:	10c112        	addi	a1, a1, 16
+    17b7:	f00d      	ret.n
+	...
+    17c9:	000000        	ill
+    17cc:	f0c112        	addi	a1, a1, -16
+    17cf:	0139      	s32i.n	a3, a1, 0
+    17d1:	21c9      	s32i.n	a12, a1, 8
+    17d3:	1109      	s32i.n	a0, a1, 4
+    17d5:	02cd      	mov.n	a12, a2
+    17d7:	fff901        	l32r	a0, 17bc <lmacTxFrame+0x170>
+    17da:	0000c0        	callx0	a0
+    17dd:	8c38      	l32i.n	a3, a12, 32
+    17df:	0308      	l32i.n	a0, a3, 0
+    17e1:	0a6097        	bbci	a0, 9, 17ef <lmacTxFrame+0x1a3>
+    17e4:	07f0c7        	bbsi	a0, 28, 17ef <lmacTxFrame+0x1a3>
+    17e7:	6c28      	l32i.n	a2, a12, 24
+    17e9:	fff501        	l32r	a0, 17c0 <lmacTxFrame+0x174>
+    17ec:	0000c0        	callx0	a0
+    17ef:	420c      	movi.n	a2, 4
+    17f1:	fff401        	l32r	a0, 17c4 <lmacTxFrame+0x178>
+    17f4:	0000c0        	callx0	a0
+    17f7:	0108      	l32i.n	a0, a1, 0
+    17f9:	909c      	beqz.n	a0, 1816 <lmacTxFrame+0x1ca>
+    17fb:	8c28      	l32i.n	a2, a12, 32
+    17fd:	060222        	l8ui	a2, a2, 6
+    1800:	242420        	extui	a2, a2, 4, 3
+    1803:	000005        	call0	1804 <lmacTxFrame+0x1b8>
+    1806:	c28c      	beqz.n	a2, 1816 <lmacTxFrame+0x1ca>
+    1808:	8c28      	l32i.n	a2, a12, 32
+    180a:	060222        	l8ui	a2, a2, 6
+    180d:	242420        	extui	a2, a2, 4, 3
+    1810:	ffee01        	l32r	a0, 17c8 <lmacTxFrame+0x17c>
+    1813:	0000c0        	callx0	a0
+    1816:	21c8      	l32i.n	a12, a1, 8
+    1818:	1108      	l32i.n	a0, a1, 4
+    181a:	10c112        	addi	a1, a1, 16
+    181d:	f00d      	ret.n
+	...
+
+00001828 <lmacRxDone>:
+    1828:	f0c112        	addi	a1, a1, -16
+    182b:	0109      	s32i.n	a0, a1, 0
+    182d:	fffc01        	l32r	a0, 1820 <lmacTxFrame+0x1d4>
+    1830:	0000c0        	callx0	a0
+    1833:	520c      	movi.n	a2, 5
+    1835:	fffb01        	l32r	a0, 1824 <lmacTxFrame+0x1d8>
+    1838:	0000c0        	callx0	a0
+    183b:	0108      	l32i.n	a0, a1, 0
+    183d:	10c112        	addi	a1, a1, 16
+    1840:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <lmacInitAc-0x4>:
+   0:	000030        	excw
+	...
+
+00000004 <lmacInitAc>:
+   4:	070c      	movi.n	a7, 0
+   6:	fffe91        	l32r	a9, 0 <lmacInitAc-0x4>
+   9:	b08220        	addx8	a8, a2, a2
+   c:	a08890        	addx4	a8, a8, a9
+   f:	044822        	s8i	a2, a8, 4
+  12:	054832        	s8i	a3, a8, 5
+  15:	084852        	s8i	a5, a8, 8
+  18:	074842        	s8i	a4, a8, 7
+  1b:	064842        	s8i	a4, a8, 6
+  1e:	0c5862        	s16i	a6, a8, 24
+  21:	094872        	s8i	a7, a8, 9
+  24:	0a4872        	s8i	a7, a8, 10
+  27:	114872        	s8i	a7, a8, 17
+  2a:	7879      	s32i.n	a7, a8, 28
+  2c:	8879      	s32i.n	a7, a8, 32
+  2e:	f00d      	ret.n
+  30:	000bc0        	callx0	a11
+	...
+
+00000040 <lmacInit>:
+  40:	f0c112        	addi	a1, a1, -16
+  43:	0109      	s32i.n	a0, a1, 0
+  45:	0007c5        	call0	c4 <lmacInit+0x84>
+  48:	220c      	movi.n	a2, 2
+  4a:	330c      	movi.n	a3, 3
+  4c:	440c      	movi.n	a4, 4
+  4e:	a50c      	movi.n	a5, 10
+  50:	060c      	movi.n	a6, 0
+  52:	000005        	call0	54 <lmacInit+0x14>
+  55:	320c      	movi.n	a2, 3
+  57:	730c      	movi.n	a3, 7
+  59:	440c      	movi.n	a4, 4
+  5b:	a50c      	movi.n	a5, 10
+  5d:	060c      	movi.n	a6, 0
+  5f:	000005        	call0	60 <lmacInit+0x20>
+  62:	120c      	movi.n	a2, 1
+  64:	230c      	movi.n	a3, 2
+  66:	340c      	movi.n	a4, 3
+  68:	450c      	movi.n	a5, 4
+  6a:	fff161        	l32r	a6, 30 <lmacInitAc+0x2c>
+  6d:	000005        	call0	70 <lmacInit+0x30>
+  70:	020c      	movi.n	a2, 0
+  72:	230c      	movi.n	a3, 2
+  74:	240c      	movi.n	a4, 2
+  76:	350c      	movi.n	a5, 3
+  78:	e0a562        	movi	a6, 0x5e0
+  7b:	000005        	call0	7c <lmacInit+0x3c>
+  7e:	420c      	movi.n	a2, 4
+  80:	230c      	movi.n	a3, 2
+  82:	440c      	movi.n	a4, 4
+  84:	a50c      	movi.n	a5, 10
+  86:	060c      	movi.n	a6, 0
+  88:	000005        	call0	8c <lmacInit+0x4c>
+  8b:	720c      	movi.n	a2, 7
+  8d:	230c      	movi.n	a3, 2
+  8f:	540c      	movi.n	a4, 5
+  91:	a50c      	movi.n	a5, 10
+  93:	060c      	movi.n	a6, 0
+  95:	000005        	call0	98 <lmacInit+0x58>
+  98:	ffe721        	l32r	a2, 34 <lmacInitAc+0x30>
+  9b:	830c      	movi.n	a3, 8
+  9d:	004232        	s8i	a3, a2, 0
+  a0:	0e1222        	l16ui	a2, a2, 28
+  a3:	130c      	movi.n	a3, 1
+  a5:	ffe401        	l32r	a0, 38 <lmacInitAc+0x34>
+  a8:	0000c0        	callx0	a0
+  ab:	ffe401        	l32r	a0, 3c <lmacInitAc+0x38>
+  ae:	0000c0        	callx0	a0
+  b1:	0108      	l32i.n	a0, a1, 0
+  b3:	10c112        	addi	a1, a1, 16
+  b6:	f00d      	ret.n
+  b8:	000000        	ill
+  bb:	092a00        	excw
+  be:	ff0000        	excw
+  c1:	0f          	.byte 0xf
+  c2:	210000        	srai	a0, a0, 0
+  c5:	ff          	.byte 0xff
+  c6:	ff          	.byte 0xff
+  c7:	5fa142        	movi	a4, 0x15f
+  ca:	950c      	movi.n	a5, 9
+  cc:	fffc61        	l32r	a6, bc <lmacInit+0x7c>
+  cf:	770c      	movi.n	a7, 7
+  d1:	fff931        	l32r	a3, b8 <lmacInit+0x78>
+  d4:	00a282        	movi	a8, 0x200
+  d7:	1389      	s32i.n	a8, a3, 4
+  d9:	2389      	s32i.n	a8, a3, 8
+  db:	0d4372        	s8i	a7, a3, 13
+  de:	0c4372        	s8i	a7, a3, 12
+  e1:	085362        	s16i	a6, a3, 16
+  e4:	075362        	s16i	a6, a3, 14
+  e7:	0a5352        	s16i	a5, a3, 20
+  ea:	0e5342        	s16i	a4, a3, 28
+  ed:	0f5322        	s16i	a2, a3, 30
+  f0:	f00d      	ret.n

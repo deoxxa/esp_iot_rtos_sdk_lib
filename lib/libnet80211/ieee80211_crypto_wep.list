@@ -1,0 +1,57 @@
+
+ieee80211_crypto_wep.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <.irom0.text>:
+   0:	000000        	ill
+   3:	33cc00        	excw
+   6:	030c      	movi.n	a3, 0
+   8:	001346        	j	59 <.irom0.text+0x59>
+   b:	242252        	l32i	a5, a2, 144
+   e:	0b1362        	l16ui	a6, a3, 22
+  11:	fffb71        	l32r	a7, 0 <.irom0.text>
+  14:	1388      	l32i.n	a8, a3, 4
+  16:	17a8      	l32i.n	a10, a7, 4
+  18:	1778      	l32i.n	a7, a7, 4
+  1a:	1898      	l32i.n	a9, a8, 4
+  1c:	667a      	add.n	a6, a6, a7
+  1e:	c099a0        	sub	a9, a9, a10
+  21:	252272        	l32i	a7, a2, 148
+  24:	1899      	s32i.n	a9, a8, 4
+  26:	0b5362        	s16i	a6, a3, 22
+  29:	851b      	addi.n	a8, a5, 1
+  2b:	01b857        	bgeu	a8, a5, 30 <.irom0.text+0x30>
+  2e:	771b      	addi.n	a7, a7, 1
+  30:	130c      	movi.n	a3, 1
+  32:	256272        	s32i	a7, a2, 148
+  35:	246282        	s32i	a8, a2, 144
+  38:	404010        	ssai	16
+  3b:	816780        	src	a6, a7, a8
+  3e:	024962        	s8i	a6, a9, 2
+  41:	242252        	l32i	a5, a2, 144
+  44:	2522b2        	l32i	a11, a2, 148
+  47:	404800        	ssai	8
+  4a:	81bb50        	src	a11, a11, a5
+  4d:	0149b2        	s8i	a11, a9, 1
+  50:	2422a2        	l32i	a10, a2, 144
+  53:	0049a2        	s8i	a10, a9, 0
+  56:	034942        	s8i	a4, a9, 3
+  59:	032d      	mov.n	a2, a3
+  5b:	f00d      	ret.n
+  5d:	000000        	ill
+  60:	262252        	l32i	a5, a2, 152
+  63:	1388      	l32i.n	a8, a3, 4
+  65:	0b1322        	l16ui	a2, a3, 22
+  68:	1878      	l32i.n	a7, a8, 4
+  6a:	1568      	l32i.n	a6, a5, 4
+  6c:	2558      	l32i.n	a5, a5, 8
+  6e:	946a      	add.n	a9, a4, a6
+  70:	779a      	add.n	a7, a7, a9
+  72:	556a      	add.n	a5, a5, a6
+  74:	c02250        	sub	a2, a2, a5
+  77:	1879      	s32i.n	a7, a8, 4
+  79:	0b5322        	s16i	a2, a3, 22
+  7c:	120c      	movi.n	a2, 1
+  7e:	f00d      	ret.n

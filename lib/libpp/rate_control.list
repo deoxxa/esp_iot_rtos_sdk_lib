@@ -1,0 +1,366 @@
+
+rate_control.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <RC_GetAckRate-0x20>:
+   0:	1352b6        	bltui	a2, 5, 17 <RC_GetAckRate-0x9>
+   3:	0982b6        	bltui	a2, 8, 10 <RC_GetAckRate-0x10>
+   6:	442c      	movi.n	a4, 36
+   8:	07b2f6        	bgeui	a2, 16, 13 <RC_GetAckRate-0xd>
+   b:	441c      	movi.n	a4, 20
+   d:	000086        	j	13 <RC_GetAckRate-0xd>
+  10:	60a042        	movi	a4, 96
+  13:	042d      	mov.n	a2, a4
+  15:	f00d      	ret.n
+  17:	c0a022        	movi	a2, 192
+  1a:	f00d      	ret.n
+  1c:	000000        	ill
+	...
+
+00000020 <RC_GetAckRate>:
+  20:	ffff31        	l32r	a3, 1c <RC_GetAckRate-0x4>
+  23:	b02230        	addx8	a2, a2, a3
+  26:	050222        	l8ui	a2, a2, 5
+  29:	f00d      	ret.n
+  2b:	000000        	ill
+	...
+
+00000030 <RC_GetRtsRate>:
+  30:	ffff31        	l32r	a3, 2c <RC_GetAckRate+0xc>
+  33:	b02230        	addx8	a2, a2, a3
+  36:	040222        	l8ui	a2, a2, 4
+  39:	f00d      	ret.n
+	...
+
+00000044 <RC_GetAckTime>:
+  44:	fffe31        	l32r	a3, 3c <RC_GetRtsRate+0xc>
+  47:	b02230        	addx8	a2, a2, a3
+  4a:	fffd31        	l32r	a3, 40 <RC_GetRtsRate+0x10>
+  4d:	050222        	l8ui	a2, a2, 5
+  50:	902230        	addx2	a2, a2, a3
+  53:	001222        	l16ui	a2, a2, 0
+  56:	f00d      	ret.n
+
+00000058 <RC_GetCtsTime>:
+  58:	e0c112        	addi	a1, a1, -32
+  5b:	0139      	s32i.n	a3, a1, 0
+  5d:	1149      	s32i.n	a4, a1, 4
+  5f:	31c9      	s32i.n	a12, a1, 12
+  61:	2109      	s32i.n	a0, a1, 8
+  63:	02cd      	mov.n	a12, a2
+  65:	fff985        	call0	0 <RC_GetAckRate-0x20>
+  68:	4129      	s32i.n	a2, a1, 16
+  6a:	0138      	l32i.n	a3, a1, 0
+  6c:	0c2d      	mov.n	a2, a12
+  6e:	000685        	call0	d8 <RC_GetBlockAckTime+0x44>
+  71:	4108      	l32i.n	a0, a1, 16
+  73:	1138      	l32i.n	a3, a1, 4
+  75:	a40c      	movi.n	a4, 10
+  77:	232a      	add.n	a2, a3, a2
+  79:	018cb6        	bltui	a12, 8, 7e <RC_GetCtsTime+0x26>
+  7c:	041c      	movi.n	a4, 16
+  7e:	31c8      	l32i.n	a12, a1, 12
+  80:	504a      	add.n	a5, a0, a4
+  82:	225a      	add.n	a2, a2, a5
+  84:	2108      	l32i.n	a0, a1, 8
+  86:	20c112        	addi	a1, a1, 32
+  89:	f42020        	extui	a2, a2, 0, 16
+  8c:	f00d      	ret.n
+  8e:	000000        	ill
+  91:	000000        	ill
+
+00000094 <RC_GetBlockAckTime>:
+  94:	f0c112        	addi	a1, a1, -16
+  97:	31c9      	s32i.n	a12, a1, 12
+  99:	2109      	s32i.n	a0, a1, 8
+  9b:	fffd01        	l32r	a0, 90 <RC_GetCtsTime+0x38>
+  9e:	ac0c      	movi.n	a12, 10
+  a0:	b00200        	addx8	a0, a2, a0
+  a3:	050022        	l8ui	a2, a0, 5
+  a6:	0109      	s32i.n	a0, a1, 0
+  a8:	0182b6        	bltui	a2, 8, ad <RC_GetBlockAckTime+0x19>
+  ab:	0c1c      	movi.n	a12, 16
+  ad:	fff505        	call0	0 <RC_GetAckRate-0x20>
+  b0:	1129      	s32i.n	a2, a1, 4
+  b2:	0128      	l32i.n	a2, a1, 0
+  b4:	032c      	movi.n	a3, 32
+  b6:	050222        	l8ui	a2, a2, 5
+  b9:	0001c5        	call0	d8 <RC_GetBlockAckTime+0x44>
+  bc:	1138      	l32i.n	a3, a1, 4
+  be:	2108      	l32i.n	a0, a1, 8
+  c0:	3c3a      	add.n	a3, a12, a3
+  c2:	31c8      	l32i.n	a12, a1, 12
+  c4:	223a      	add.n	a2, a2, a3
+  c6:	f42020        	extui	a2, a2, 0, 16
+  c9:	10c112        	addi	a1, a1, 16
+  cc:	f00d      	ret.n
+  ce:	000000        	ill
+  d1:	000000        	ill
+  d4:	ff          	.byte 0xff
+  d5:	ff          	.byte 0xff
+  d6:	d00003        	excw
+  d9:	511143        	excw
+  dc:	fffd      	excw
+  de:	f43040        	extui	a3, a4, 0, 16
+  e1:	fffc41        	l32r	a4, d4 <RC_GetBlockAckTime+0x40>
+  e4:	b05250        	addx8	a5, a2, a5
+  e7:	0558      	l32i.n	a5, a5, 0
+  e9:	0582b6        	bltui	a2, 8, f2 <RC_GetBlockAckTime+0x5e>
+  ec:	16c332        	addi	a3, a3, 22
+  ef:	f43030        	extui	a3, a3, 0, 16
+  f2:	823530        	mull	a3, a5, a3
+  f5:	334a      	add.n	a3, a3, a4
+  f7:	d53230        	extui	a3, a3, 18, 14
+  fa:	0682b6        	bltui	a2, 8, 104 <RC_GetBlockAckTime+0x70>
+  fd:	c47c      	movi.n	a4, -4
+  ff:	333b      	addi.n	a3, a3, 3
+ 101:	103340        	and	a3, a3, a4
+ 104:	f42030        	extui	a2, a3, 0, 16
+ 107:	f00d      	ret.n
+
+Disassembly of section .irom0.text:
+
+00000000 <RC_SetBasicRate-0x258>:
+   0:	000000        	ill
+   3:	000000        	ill
+   6:	000004        	excw
+   9:	000200        	excw
+   c:	2e          	.byte 0x2e
+   d:	00ba      	add.n	a0, a0, a11
+   f:	5d1700        	excw
+  12:	c00000        	sub	a0, a0, a0
+  15:	0f          	.byte 0xf
+  16:	aa0000        	excw
+  19:	00aa      	add.n	a0, a0, a10
+  1b:	71c700        	excw
+  1e:	550000        	extui	a0, a0, 16, 6
+  21:	000055        	excw
+  24:	0038e3        	excw
+  27:	2aaa00        	excw
+  2a:	710000        	excw
+  2d:	001c      	movi.n	a0, 16
+  2f:	155500        	extui	a5, a0, 21, 2
+  32:	f60000        	excw
+  35:	000012        	l8ui	a1, a0, 0
+  38:	9d89      	s32i.n	a8, a13, 36
+  3a:	c40000        	extui	a0, a0, 0, 13
+  3d:	4e          	.byte 0x4e
+  3e:	830000        	moveqz	a0, a0, a0
+  41:	000034        	excw
+  44:	002762        	l32i	a6, a7, 0
+  47:	1a4100        	excw
+  4a:	b10000        	sra	a0, a0
+  4d:	000013        	excw
+  50:	001181        	l32r	a8, fffc0094 <RC_SetBasicRate+0xfffbfe3c>
+  53:	8dc800        	excw
+  56:	e40000        	extui	a0, a0, 0, 15
+  59:	000046        	j	5e <RC_SetBasicRate-0x1fa>
+  5c:	002f42        	l32i	a4, a15, 0
+  5f:	237200        	excw
+  62:	a10000        	sll	a0, a0
+  65:	000017        	bnone	a0, a1, 69 <RC_SetBasicRate-0x1ef>
+  68:	11b9      	s32i.n	a11, a1, 4
+  6a:	2d0000        	excw
+  6d:	0e          	.byte 0xe
+  6e:	910000        	srl	a0, a0
+  71:	41ffe7        	bbsi	a15, 30, b6 <RC_SetBasicRate-0x1a2>
+  74:	b1ffe4        	excw
+  77:	71ffe4        	excw
+  7a:	0cffe5        	excw
+  7d:	360c75        	excw
+  80:	020c      	movi.n	a2, 0
+  82:	1a0c      	movi.n	a10, 1
+  84:	ffdf31        	l32r	a3, 0 <RC_SetBasicRate-0x258>
+  87:	280c      	movi.n	a8, 2
+  89:	364382        	s8i	a8, a3, 54
+  8c:	144382        	s8i	a8, a3, 20
+  8f:	154382        	s8i	a8, a3, 21
+  92:	164382        	s8i	a8, a3, 22
+  95:	2e43a2        	s8i	a10, a3, 46
+  98:	0c43a2        	s8i	a10, a3, 12
+  9b:	0d43a2        	s8i	a10, a3, 13
+  9e:	0e43a2        	s8i	a10, a3, 14
+  a1:	044322        	s8i	a2, a3, 4
+  a4:	054322        	s8i	a2, a3, 5
+  a7:	064322        	s8i	a2, a3, 6
+  aa:	264322        	s8i	a2, a3, 38
+  ad:	3e4362        	s8i	a6, a3, 62
+  b0:	1c4362        	s8i	a6, a3, 28
+  b3:	1d4362        	s8i	a6, a3, 29
+  b6:	1e4362        	s8i	a6, a3, 30
+  b9:	3c4352        	s8i	a5, a3, 60
+  bc:	3d4352        	s8i	a5, a3, 61
+  bf:	464352        	s8i	a5, a3, 70
+  c2:	664352        	s8i	a5, a3, 102
+  c5:	e379      	s32i.n	a7, a3, 56
+  c7:	6379      	s32i.n	a7, a3, 24
+  c9:	a3b9      	s32i.n	a11, a3, 40
+  cb:	23b9      	s32i.n	a11, a3, 8
+  cd:	0349      	s32i.n	a4, a3, 0
+  cf:	c399      	s32i.n	a9, a3, 48
+  d1:	4399      	s32i.n	a9, a3, 16
+  d3:	8349      	s32i.n	a4, a3, 32
+  d5:	ffcf91        	l32r	a9, 14 <RC_SetBasicRate-0x244>
+  d8:	b40c      	movi.n	a4, 11
+  da:	ab0c      	movi.n	a11, 10
+  dc:	670c      	movi.n	a7, 6
+  de:	344372        	s8i	a7, a3, 52
+  e1:	354372        	s8i	a7, a3, 53
+  e4:	4e4372        	s8i	a7, a3, 78
+  e7:	6e4372        	s8i	a7, a3, 110
+  ea:	9e4372        	s8i	a7, a3, 158
+  ed:	a64372        	s8i	a7, a3, 166
+  f0:	ae4372        	s8i	a7, a3, 174
+  f3:	b64372        	s8i	a7, a3, 182
+  f6:	be4372        	s8i	a7, a3, 190
+  f9:	de4372        	s8i	a7, a3, 222
+  fc:	e64372        	s8i	a7, a3, 230
+  ff:	ee4372        	s8i	a7, a3, 238
+ 102:	f64372        	s8i	a7, a3, 246
+ 105:	fe4372        	s8i	a7, a3, 254
+ 108:	5443b2        	s8i	a11, a3, 84
+ 10b:	5543b2        	s8i	a11, a3, 85
+ 10e:	7443b2        	s8i	a11, a3, 116
+ 111:	7543b2        	s8i	a11, a3, 117
+ 114:	8c43b2        	s8i	a11, a3, 140
+ 117:	8d43b2        	s8i	a11, a3, 141
+ 11a:	9443b2        	s8i	a11, a3, 148
+ 11d:	9543b2        	s8i	a11, a3, 149
+ 120:	cc43b2        	s8i	a11, a3, 204
+ 123:	cd43b2        	s8i	a11, a3, 205
+ 126:	d443b2        	s8i	a11, a3, 212
+ 129:	d543b2        	s8i	a11, a3, 213
+ 12c:	5c4342        	s8i	a4, a3, 92
+ 12f:	5d4342        	s8i	a4, a3, 93
+ 132:	7c4342        	s8i	a4, a3, 124
+ 135:	7d4342        	s8i	a4, a3, 125
+ 138:	844342        	s8i	a4, a3, 132
+ 13b:	854342        	s8i	a4, a3, 133
+ 13e:	c44342        	s8i	a4, a3, 196
+ 141:	c54342        	s8i	a4, a3, 197
+ 144:	2e6392        	s32i	a9, a3, 184
+ 147:	3c6392        	s32i	a9, a3, 240
+ 14a:	ffb451        	l32r	a5, 1c <RC_SetBasicRate-0x23c>
+ 14d:	ffb261        	l32r	a6, 18 <RC_SetBasicRate-0x240>
+ 150:	420c      	movi.n	a2, 4
+ 152:	5a0c      	movi.n	a10, 5
+ 154:	980c      	movi.n	a8, 9
+ 156:	4c4382        	s8i	a8, a3, 76
+ 159:	4d4382        	s8i	a8, a3, 77
+ 15c:	6c4382        	s8i	a8, a3, 108
+ 15f:	6d4382        	s8i	a8, a3, 109
+ 162:	444382        	s8i	a8, a3, 68
+ 165:	454382        	s8i	a8, a3, 69
+ 168:	644382        	s8i	a8, a3, 100
+ 16b:	654382        	s8i	a8, a3, 101
+ 16e:	9c4382        	s8i	a8, a3, 156
+ 171:	9d4382        	s8i	a8, a3, 157
+ 174:	a44382        	s8i	a8, a3, 164
+ 177:	a54382        	s8i	a8, a3, 165
+ 17a:	ac4382        	s8i	a8, a3, 172
+ 17d:	ad4382        	s8i	a8, a3, 173
+ 180:	b44382        	s8i	a8, a3, 180
+ 183:	b54382        	s8i	a8, a3, 181
+ 186:	bc4382        	s8i	a8, a3, 188
+ 189:	bd4382        	s8i	a8, a3, 189
+ 18c:	dc4382        	s8i	a8, a3, 220
+ 18f:	dd4382        	s8i	a8, a3, 221
+ 192:	e44382        	s8i	a8, a3, 228
+ 195:	e54382        	s8i	a8, a3, 229
+ 198:	ec4382        	s8i	a8, a3, 236
+ 19b:	ed4382        	s8i	a8, a3, 237
+ 19e:	f44382        	s8i	a8, a3, 244
+ 1a1:	f54382        	s8i	a8, a3, 245
+ 1a4:	fc4382        	s8i	a8, a3, 252
+ 1a7:	fd4382        	s8i	a8, a3, 253
+ 1aa:	2c43a2        	s8i	a10, a3, 44
+ 1ad:	2d43a2        	s8i	a10, a3, 45
+ 1b0:	5643a2        	s8i	a10, a3, 86
+ 1b3:	7643a2        	s8i	a10, a3, 118
+ 1b6:	8e43a2        	s8i	a10, a3, 142
+ 1b9:	9643a2        	s8i	a10, a3, 150
+ 1bc:	ce43a2        	s8i	a10, a3, 206
+ 1bf:	d643a2        	s8i	a10, a3, 214
+ 1c2:	244322        	s8i	a2, a3, 36
+ 1c5:	254322        	s8i	a2, a3, 37
+ 1c8:	5e4322        	s8i	a2, a3, 94
+ 1cb:	7e4322        	s8i	a2, a3, 126
+ 1ce:	864322        	s8i	a2, a3, 134
+ 1d1:	c64322        	s8i	a2, a3, 198
+ 1d4:	166362        	s32i	a6, a3, 88
+ 1d7:	1e6352        	s32i	a5, a3, 120
+ 1da:	ff9591        	l32r	a9, 30 <RC_SetBasicRate-0x228>
+ 1dd:	106392        	s32i	a9, a3, 64
+ 1e0:	ff9851        	l32r	a5, 40 <RC_SetBasicRate-0x218>
+ 1e3:	ff9661        	l32r	a6, 3c <RC_SetBasicRate-0x21c>
+ 1e6:	226362        	s32i	a6, a3, 136
+ 1e9:	246352        	s32i	a5, a3, 144
+ 1ec:	ff9a91        	l32r	a9, 54 <RC_SetBasicRate-0x204>
+ 1ef:	306392        	s32i	a9, a3, 192
+ 1f2:	ff9c51        	l32r	a5, 64 <RC_SetBasicRate-0x1f4>
+ 1f5:	ff9a61        	l32r	a6, 60 <RC_SetBasicRate-0x1f8>
+ 1f8:	366362        	s32i	a6, a3, 216
+ 1fb:	386352        	s32i	a5, a3, 224
+ 1fe:	ff8921        	l32r	a2, 24 <RC_SetBasicRate-0x234>
+ 201:	ff8741        	l32r	a4, 20 <RC_SetBasicRate-0x238>
+ 204:	146342        	s32i	a4, a3, 80
+ 207:	1c6322        	s32i	a2, a3, 112
+ 20a:	ff8e41        	l32r	a4, 44 <RC_SetBasicRate-0x214>
+ 20d:	ff8e21        	l32r	a2, 48 <RC_SetBasicRate-0x210>
+ 210:	ff87a1        	l32r	a10, 2c <RC_SetBasicRate-0x22c>
+ 213:	1a63a2        	s32i	a10, a3, 104
+ 216:	286322        	s32i	a2, a3, 160
+ 219:	266342        	s32i	a4, a3, 152
+ 21c:	ff9421        	l32r	a2, 6c <RC_SetBasicRate-0x1ec>
+ 21f:	ff82b1        	l32r	a11, 28 <RC_SetBasicRate-0x230>
+ 222:	ff9141        	l32r	a4, 68 <RC_SetBasicRate-0x1f0>
+ 225:	ff8aa1        	l32r	a10, 50 <RC_SetBasicRate-0x208>
+ 228:	2c63a2        	s32i	a10, a3, 176
+ 22b:	3a6342        	s32i	a4, a3, 232
+ 22e:	1263b2        	s32i	a11, a3, 72
+ 231:	3e6322        	s32i	a2, a3, 248
+ 234:	ff86b1        	l32r	a11, 4c <RC_SetBasicRate-0x20c>
+ 237:	ff8071        	l32r	a7, 38 <RC_SetBasicRate-0x220>
+ 23a:	206372        	s32i	a7, a3, 128
+ 23d:	2a63b2        	s32i	a11, a3, 168
+ 240:	ff8771        	l32r	a7, 5c <RC_SetBasicRate-0x1fc>
+ 243:	346372        	s32i	a7, a3, 208
+ 246:	ff7b81        	l32r	a8, 34 <RC_SetBasicRate-0x224>
+ 249:	186382        	s32i	a8, a3, 96
+ 24c:	ff8381        	l32r	a8, 58 <RC_SetBasicRate-0x200>
+ 24f:	326382        	s32i	a8, a3, 200
+ 252:	f00d      	ret.n
+ 254:	000000        	ill
+	...
+
+00000258 <RC_SetBasicRate>:
+ 258:	f0c112        	addi	a1, a1, -16
+ 25b:	0109      	s32i.n	a0, a1, 0
+ 25d:	5fa102        	movi	a0, 0x15f
+ 260:	05c207        	bnall	a2, a0, 269 <RC_SetBasicRate+0x11>
+ 263:	ffe0c5        	call0	70 <RC_SetBasicRate-0x1e8>
+ 266:	000bc6        	j	299 <RC_SetBasicRate+0x41>
+ 269:	fffa41        	l32r	a4, 254 <RC_SetBasicRate-0x4>
+ 26c:	580c      	movi.n	a8, 5
+ 26e:	750c      	movi.n	a5, 7
+ 270:	320c      	movi.n	a2, 3
+ 272:	930b      	addi.n	a9, a3, -1
+ 274:	170c      	movi.n	a7, 1
+ 276:	060c      	movi.n	a6, 0
+ 278:	836790        	moveqz	a6, a7, a9
+ 27b:	932560        	movnez	a2, a5, a6
+ 27e:	937860        	movnez	a7, a8, a6
+ 281:	5c4472        	s8i	a7, a4, 92
+ 284:	7c4472        	s8i	a7, a4, 124
+ 287:	544472        	s8i	a7, a4, 84
+ 28a:	744422        	s8i	a2, a4, 116
+ 28d:	4c4422        	s8i	a2, a4, 76
+ 290:	6c4422        	s8i	a2, a4, 108
+ 293:	444422        	s8i	a2, a4, 68
+ 296:	644422        	s8i	a2, a4, 100
+ 299:	020c      	movi.n	a2, 0
+ 29b:	0108      	l32i.n	a0, a1, 0
+ 29d:	10c112        	addi	a1, a1, 16
+ 2a0:	f00d      	ret.n

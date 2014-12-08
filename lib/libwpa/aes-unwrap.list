@@ -1,0 +1,108 @@
+
+aes-unwrap.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .irom0.text:
+
+00000000 <aes_unwrap-0x24>:
+	...
+
+00000024 <aes_unwrap>:
+  24:	b0c112        	addi	a1, a1, -80
+  27:	c1f9      	s32i.n	a15, a1, 48
+  29:	8109      	s32i.n	a0, a1, 32
+  2b:	91c9      	s32i.n	a12, a1, 36
+  2d:	b1e9      	s32i.n	a14, a1, 44
+  2f:	a1d9      	s32i.n	a13, a1, 40
+  31:	f139      	s32i.n	a3, a1, 60
+  33:	05dd      	mov.n	a13, a5
+  35:	043d      	mov.n	a3, a4
+  37:	02ed      	mov.n	a14, a2
+  39:	04cd      	mov.n	a12, a4
+  3b:	012d      	mov.n	a2, a1
+  3d:	840c      	movi.n	a4, 8
+  3f:	fff001        	l32r	a0, 0 <aes_unwrap-0x24>
+  42:	0000c0        	callx0	a0
+  45:	3c8b      	addi.n	a3, a12, 8
+  47:	f1c8      	l32i.n	a12, a1, 60
+  49:	0d2d      	mov.n	a2, a13
+  4b:	11ccd0        	slli	a12, a12, 3
+  4e:	0c4d      	mov.n	a4, a12
+  50:	ffed01        	l32r	a0, 4 <aes_unwrap-0x20>
+  53:	0000c0        	callx0	a0
+  56:	0e2d      	mov.n	a2, a14
+  58:	031c      	movi.n	a3, 16
+  5a:	ffeb01        	l32r	a0, 8 <aes_unwrap-0x1c>
+  5d:	0000c0        	callx0	a0
+  60:	020d      	mov.n	a0, a2
+  62:	0a9216        	beqz	a2, 10f <aes_unwrap+0xeb>
+  65:	18c1e2        	addi	a14, a1, 24
+  68:	106102        	s32i	a0, a1, 64
+  6b:	f1f8      	l32i.n	a15, a1, 60
+  6d:	2cda      	add.n	a2, a12, a13
+  6f:	530c      	movi.n	a3, 5
+  71:	e139      	s32i.n	a3, a1, 56
+  73:	f8c222        	addi	a2, a2, -8
+  76:	a0fff0        	addx4	a15, a15, a15
+  79:	d129      	s32i.n	a2, a1, 52
+  7b:	f108      	l32i.n	a0, a1, 60
+  7d:	d1c8      	l32i.n	a12, a1, 52
+  7f:	5210a6        	blti	a0, 1, d5 <aes_unwrap+0xb1>
+  82:	df0a      	add.n	a13, a15, a0
+  84:	10c122        	addi	a2, a1, 16
+  87:	013d      	mov.n	a3, a1
+  89:	840c      	movi.n	a4, 8
+  8b:	ffe001        	l32r	a0, c <aes_unwrap-0x18>
+  8e:	0000c0        	callx0	a0
+  91:	0e2d      	mov.n	a2, a14
+  93:	0c3d      	mov.n	a3, a12
+  95:	170102        	l8ui	a0, a1, 23
+  98:	840c      	movi.n	a4, 8
+  9a:	300d00        	xor	a0, a13, a0
+  9d:	174102        	s8i	a0, a1, 23
+  a0:	ffdc01        	l32r	a0, 10 <aes_unwrap-0x14>
+  a3:	0000c0        	callx0	a0
+  a6:	102122        	l32i	a2, a1, 64
+  a9:	10c132        	addi	a3, a1, 16
+  ac:	034d      	mov.n	a4, a3
+  ae:	ffd901        	l32r	a0, 14 <aes_unwrap-0x10>
+  b1:	0000c0        	callx0	a0
+  b4:	012d      	mov.n	a2, a1
+  b6:	10c132        	addi	a3, a1, 16
+  b9:	840c      	movi.n	a4, 8
+  bb:	ffd701        	l32r	a0, 18 <aes_unwrap-0xc>
+  be:	0000c0        	callx0	a0
+  c1:	0c2d      	mov.n	a2, a12
+  c3:	0e3d      	mov.n	a3, a14
+  c5:	840c      	movi.n	a4, 8
+  c7:	ffd501        	l32r	a0, 1c <aes_unwrap-0x8>
+  ca:	0000c0        	callx0	a0
+  cd:	f8ccc2        	addi	a12, a12, -8
+  d0:	dd0b      	addi.n	a13, a13, -1
+  d2:	ae9fd7        	bne	a15, a13, 84 <aes_unwrap+0x60>
+  d5:	f138      	l32i.n	a3, a1, 60
+  d7:	e128      	l32i.n	a2, a1, 56
+  d9:	c0ff30        	sub	a15, a15, a3
+  dc:	220b      	addi.n	a2, a2, -1
+  de:	e129      	s32i.n	a2, a1, 56
+  e0:	970266        	bnei	a2, -1, 7b <aes_unwrap+0x57>
+  e3:	102122        	l32i	a2, a1, 64
+  e6:	ffce01        	l32r	a0, 20 <aes_unwrap-0x4>
+  e9:	0000c0        	callx0	a0
+  ec:	010d      	mov.n	a0, a1
+  ee:	218b      	addi.n	a2, a1, 8
+  f0:	a6a032        	movi	a3, 166
+  f3:	000042        	l8ui	a4, a0, 0
+  f6:	001b      	addi.n	a0, a0, 1
+  f8:	139437        	bne	a4, a3, 10f <aes_unwrap+0xeb>
+  fb:	f49027        	bne	a0, a2, f3 <aes_unwrap+0xcf>
+  fe:	020c      	movi.n	a2, 0
+ 100:	91c8      	l32i.n	a12, a1, 36
+ 102:	a1d8      	l32i.n	a13, a1, 40
+ 104:	b1e8      	l32i.n	a14, a1, 44
+ 106:	c1f8      	l32i.n	a15, a1, 48
+ 108:	8108      	l32i.n	a0, a1, 32
+ 10a:	50c112        	addi	a1, a1, 80
+ 10d:	f00d      	ret.n
+ 10f:	f27c      	movi.n	a2, -1
+ 111:	fffac6        	j	100 <aes_unwrap+0xdc>
