@@ -1,0 +1,16 @@
+
+mmu.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <xthal_static_v2p>:
+   0:	0329      	s32i.n	a2, a3, 0
+   2:	020c      	movi.n	a2, 0
+   4:	f00d      	ret.n
+	...
+
+00000008 <xthal_static_p2v>:
+   8:	0329      	s32i.n	a2, a3, 0
+   a:	020c      	movi.n	a2, 0
+   c:	f00d      	ret.n

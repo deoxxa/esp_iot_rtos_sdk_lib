@@ -1,0 +1,59 @@
+
+int_asm--get_intpending_nw.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_get_intpending_nw>:
+   0:	03e240        	rsr.interrupt	a4
+   3:	03e420        	rsr.intenable	a2
+   6:	000031        	l32r	a3, fffc0008 <gipfail+0xfffbff9c>
+   9:	104240        	and	a4, a2, a4
+   c:	05c416        	beqz	a4, 6c <gipfail>
+   f:	035d      	mov.n	a5, a3
+  11:	3c2522        	l32i	a2, a5, 240
+  14:	f03d      	nop.n
+  16:	020247        	bnone	a2, a4, 1c <xthal_get_intpending_nw+0x1c>
+  19:	20c552        	addi	a5, a5, 32
+  1c:	382522        	l32i	a2, a5, 224
+  1f:	020247        	bnone	a2, a4, 25 <xthal_get_intpending_nw+0x25>
+  22:	10c552        	addi	a5, a5, 16
+  25:	362522        	l32i	a2, a5, 216
+  28:	010247        	bnone	a2, a4, 2d <xthal_get_intpending_nw+0x2d>
+  2b:	558b      	addi.n	a5, a5, 8
+  2d:	352522        	l32i	a2, a5, 212
+  30:	010247        	bnone	a2, a4, 35 <xthal_get_intpending_nw+0x35>
+  33:	554b      	addi.n	a5, a5, 4
+  35:	132522        	l32i	a2, a5, 76
+  38:	104240        	and	a4, a2, a4
+  3b:	142522        	l32i	a2, a5, 80
+  3e:	1368      	l32i.n	a6, a3, 4
+  40:	c05530        	sub	a5, a5, a3
+  43:	102260        	and	a2, a2, a6
+  46:	13e420        	wsr.intenable	a2
+  49:	000362        	l8ui	a6, a3, 0
+  4c:	415250        	srli	a5, a5, 2
+  4f:	10c552        	addi	a5, a5, 16
+  52:	004352        	s8i	a5, a3, 0
+  55:	043d      	mov.n	a3, a4
+  57:	602040        	neg	a2, a4
+  5a:	104240        	and	a4, a2, a4
+  5d:	13e340        	wsr.intclear	a4
+  60:	f21c      	movi.n	a2, 31
+  62:	40f440        	nsau	a4, a4
+  65:	c02240        	sub	a2, a2, a4
+  68:	f00d      	ret.n
+	...
+
+0000006c <gipfail>:
+  6c:	000362        	l8ui	a6, a3, 0
+  6f:	065d      	mov.n	a5, a6
+  71:	f27c      	movi.n	a2, -1
+  73:	030c      	movi.n	a3, 0
+  75:	f00d      	ret.n

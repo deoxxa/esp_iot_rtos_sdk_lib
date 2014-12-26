@@ -1,0 +1,72 @@
+
+interrupts--trampolines.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_set_tram_trigger_func>:
+   0:	000031        	l32r	a3, fffc0000 <xthal_tram_done+0xfffbffa0>
+   3:	0348      	l32i.n	a4, a3, 0
+   5:	0329      	s32i.n	a2, a3, 0
+   7:	042d      	mov.n	a2, a4
+   9:	f00d      	ret.n
+	...
+
+0000000c <xthal_tram_set_sync>:
+   c:	e40c      	movi.n	a4, 14
+   e:	1b3427        	bltu	a4, a2, 2d <xthal_tram_set_sync+0x21>
+  11:	401200        	ssl	a2
+  14:	000071        	l32r	a7, fffc0014 <xthal_tram_done+0xfffbffb4>
+  17:	180c      	movi.n	a8, 1
+  19:	0758      	l32i.n	a5, a7, 0
+  1b:	a16800        	sll	a6, a8
+  1e:	102650        	and	a2, a6, a5
+  21:	932820        	movnez	a2, a8, a2
+  24:	938c      	beqz.n	a3, 31 <xthal_tram_set_sync+0x25>
+  26:	209650        	or	a9, a6, a5
+  29:	0799      	s32i.n	a9, a7, 0
+  2b:	f00d      	ret.n
+  2d:	f27c      	movi.n	a2, -1
+  2f:	f00d      	ret.n
+  31:	fa7c      	movi.n	a10, -1
+  33:	30a6a0        	xor	a10, a6, a10
+  36:	10a5a0        	and	a10, a5, a10
+  39:	07a9      	s32i.n	a10, a7, 0
+  3b:	f00d      	ret.n
+  3d:	000000        	ill
+
+00000040 <xthal_tram_pending_to_service>:
+  40:	000051        	l32r	a5, fffc0040 <xthal_tram_done+0xfffbffe0>
+  43:	000041        	l32r	a4, fffc0044 <xthal_tram_done+0xfffbffe4>
+  46:	1558      	l32i.n	a5, a5, 4
+  48:	1428      	l32i.n	a2, a4, 4
+  4a:	2438      	l32i.n	a3, a4, 8
+  4c:	202250        	or	a2, a2, a5
+  4f:	f57c      	movi.n	a5, -1
+  51:	102230        	and	a2, a2, a3
+  54:	305250        	xor	a5, a2, a5
+  57:	103350        	and	a3, a3, a5
+  5a:	2439      	s32i.n	a3, a4, 8
+  5c:	f00d      	ret.n
+	...
+
+00000060 <xthal_tram_done>:
+  60:	f57c      	movi.n	a5, -1
+  62:	000041        	l32r	a4, fffc0064 <xthal_tram_done+0xfffc0004>
+  65:	f0c112        	addi	a1, a1, -16
+  68:	1438      	l32i.n	a3, a4, 4
+  6a:	0109      	s32i.n	a0, a1, 0
+  6c:	102230        	and	a2, a2, a3
+  6f:	305250        	xor	a5, a2, a5
+  72:	103350        	and	a3, a3, a5
+  75:	1439      	s32i.n	a3, a4, 4
+  77:	000001        	l32r	a0, fffc0078 <xthal_tram_done+0xfffc0018>
+  7a:	0000c0        	callx0	a0
+  7d:	0108      	l32i.n	a0, a1, 0
+  7f:	10c112        	addi	a1, a1, 16
+  82:	f00d      	ret.n

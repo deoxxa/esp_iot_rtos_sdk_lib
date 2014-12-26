@@ -1,0 +1,32 @@
+
+state--init_mem_cp.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_init_mem_cp>:
+   0:	2a83e6        	bgei	a3, 8, 2e <xthal_init_mem_cp+0x2e>
+   3:	000061        	l32r	a6, fffc0004 <xthal_init_mem_cp+0xfffc0004>
+   6:	a06360        	addx4	a6, a3, a6
+   9:	0668      	l32i.n	a6, a6, 0
+   b:	362a      	add.n	a3, a6, a2
+   d:	1db237        	bgeu	a2, a3, 2e <xthal_init_mem_cp+0x2e>
+  10:	763b      	addi.n	a7, a6, 3
+  12:	00a062        	movi	a6, 0
+  15:	415270        	srli	a5, a7, 2
+  18:	046727        	bbci	a7, 2, 20 <xthal_init_mem_cp+0x20>
+  1b:	0269      	s32i.n	a6, a2, 0
+  1d:	04c222        	addi	a2, a2, 4
+  20:	418150        	srli	a8, a5, 1
+  23:	788c      	beqz.n	a8, 2e <xthal_init_mem_cp+0x2e>
+  25:	0269      	s32i.n	a6, a2, 0
+  27:	1269      	s32i.n	a6, a2, 4
+  29:	228b      	addi.n	a2, a2, 8
+  2b:	f63237        	bltu	a2, a3, 25 <xthal_init_mem_cp+0x25>
+  2e:	f00d      	ret.n

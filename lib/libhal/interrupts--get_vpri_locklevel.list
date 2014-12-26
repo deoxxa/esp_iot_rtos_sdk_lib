@@ -1,0 +1,16 @@
+
+interrupts--get_vpri_locklevel.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_get_vpri_locklevel>:
+   0:	000021        	l32r	a2, fffc0000 <xthal_get_vpri_locklevel+0xfffc0000>
+   3:	010222        	l8ui	a2, a2, 1
+   6:	f00d      	ret.n

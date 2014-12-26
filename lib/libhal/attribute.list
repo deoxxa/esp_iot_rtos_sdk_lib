@@ -1,0 +1,156 @@
+
+attribute.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	ff          	.byte 0xff
+   1:	ff          	.byte 0xff
+   2:	ff          	.byte 0xff
+   3:	1f          	.byte 0x1f
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_set_region_attribute>:
+   0:	e0c112        	addi	a1, a1, -32
+   3:	31d9      	s32i.n	a13, a1, 12
+   5:	51f9      	s32i.n	a15, a1, 20
+   7:	1109      	s32i.n	a0, a1, 4
+   9:	21c9      	s32i.n	a12, a1, 8
+   b:	41e9      	s32i.n	a14, a1, 16
+   d:	04cd      	mov.n	a12, a4
+   f:	05ed      	mov.n	a14, a5
+  11:	127316        	beqz	a3, 13c <xthal_set_region_attribute+0x13c>
+  14:	323a      	add.n	a3, a2, a3
+  16:	030b      	addi.n	a0, a3, -1
+  18:	02b027        	bgeu	a0, a2, 1e <xthal_set_region_attribute+0x1e>
+  1b:	0042c6        	j	12a <xthal_set_region_attribute+0x12a>
+  1e:	045950        	extui	a5, a5, 9, 1
+  21:	631b      	addi.n	a6, a3, 1
+  23:	fd7c      	movi.n	a13, -1
+  25:	000031        	l32r	a3, fffc0028 <xthal_set_region_attribute+0xfffc0028>
+  28:	830d60        	moveqz	a0, a13, a6
+  2b:	004d      	mov.n	a4, a0
+  2d:	25fd00        	extui	a15, a0, 29, 3
+  30:	250d20        	extui	a0, a2, 29, 3
+  33:	0c6516        	beqz	a5, fd <xthal_set_region_attribute+0xfd>
+  36:	020237        	bnone	a2, a3, 3c <xthal_set_region_attribute+0x3c>
+  39:	004406        	j	14d <xthal_set_region_attribute+0x14d>
+  3c:	066102        	s32i	a0, a1, 24
+  3f:	01c472        	addi	a7, a4, 1
+  42:	020377        	bnone	a3, a7, 48 <xthal_set_region_attribute+0x48>
+  45:	004106        	j	14d <xthal_set_region_attribute+0x14d>
+  48:	000001        	l32r	a0, fffc0048 <xthal_set_region_attribute+0xfffc0048>
+  4b:	0000c0        	callx0	a0
+  4e:	fb0c      	movi.n	a11, 15
+  50:	6108      	l32i.n	a0, a1, 24
+  52:	34c0c0        	extui	a12, a12, 0, 4
+  55:	003d      	mov.n	a3, a0
+  57:	051c26        	beqi	a12, 1, 60 <xthal_set_region_attribute+0x60>
+  5a:	024c26        	beqi	a12, 4, 60 <xthal_set_region_attribute+0x60>
+  5d:	015c66        	bnei	a12, 5, 62 <xthal_set_region_attribute+0x62>
+  60:	2c0c      	movi.n	a12, 2
+  62:	01e9      	s32i.n	a14, a1, 0
+  64:	02bf07        	bgeu	a15, a0, 6a <xthal_set_region_attribute+0x6a>
+  67:	003cc6        	j	15e <xthal_set_region_attribute+0x15e>
+  6a:	0e0c      	movi.n	a14, 0
+  6c:	00a102        	movi	a0, 0x100
+  6f:	9f1b      	addi.n	a9, a15, 1
+  71:	01a8      	l32i.n	a10, a1, 0
+  73:	0000f1        	l32r	a15, fffc0074 <xthal_set_region_attribute+0xfffc0074>
+  76:	10aa00        	and	a10, a10, a0
+  79:	200cc0        	or	a0, a12, a12
+  7c:	1143e0        	slli	a4, a3, 2
+  7f:	3aac      	beqz.n	a10, a6 <xthal_set_region_attribute+0xa6>
+  81:	400400        	ssr	a4
+  84:	5cfa      	add.n	a5, a12, a15
+  86:	000552        	l8ui	a5, a5, 0
+  89:	918020        	srl	a8, a2
+  8c:	348080        	extui	a8, a8, 0, 4
+  8f:	015580        	slli	a5, a5, 24
+  92:	68fa      	add.n	a6, a8, a15
+  94:	000662        	l8ui	a6, a6, 0
+  97:	315850        	srai	a5, a5, 24
+  9a:	016680        	slli	a6, a6, 24
+  9d:	316860        	srai	a6, a6, 24
+  a0:	02a567        	bge	a5, a6, a6 <xthal_set_region_attribute+0xa6>
+  a3:	200880        	or	a0, a8, a8
+  a6:	331b      	addi.n	a3, a3, 1
+  a8:	0d2066        	bnei	a0, 2, b9 <xthal_set_region_attribute+0xb9>
+  ab:	400400        	ssr	a4
+  ae:	916020        	srl	a6, a2
+  b1:	346060        	extui	a6, a6, 0, 4
+  b4:	012626        	beqi	a6, 2, b9 <xthal_set_region_attribute+0xb9>
+  b7:	1e0c      	movi.n	a14, 1
+  b9:	401400        	ssl	a4
+  bc:	a15000        	sll	a5, a0
+  bf:	a16b00        	sll	a6, a11
+  c2:	0c0d      	mov.n	a0, a12
+  c4:	3066d0        	xor	a6, a6, a13
+  c7:	102260        	and	a2, a2, a6
+  ca:	202250        	or	a2, a2, a5
+  cd:	ab9937        	bne	a9, a3, 7c <xthal_set_region_attribute+0x7c>
+  d0:	000001        	l32r	a0, fffc00d0 <xthal_set_region_attribute+0xfffc00d0>
+  d3:	0000c0        	callx0	a0
+  d6:	062e16        	beqz	a14, 13c <xthal_set_region_attribute+0x13c>
+  d9:	0178      	l32i.n	a7, a1, 0
+  db:	5de7c7        	bbsi	a7, 12, 13c <xthal_set_region_attribute+0x13c>
+  de:	000001        	l32r	a0, fffc00e0 <xthal_set_region_attribute+0xfffc00e0>
+  e1:	0000c0        	callx0	a0
+  e4:	000001        	l32r	a0, fffc00e4 <xthal_set_region_attribute+0xfffc00e4>
+  e7:	0000c0        	callx0	a0
+  ea:	020c      	movi.n	a2, 0
+  ec:	21c8      	l32i.n	a12, a1, 8
+  ee:	31d8      	l32i.n	a13, a1, 12
+  f0:	41e8      	l32i.n	a14, a1, 16
+  f2:	51f8      	l32i.n	a15, a1, 20
+  f4:	1108      	l32i.n	a0, a1, 4
+  f6:	20c112        	addi	a1, a1, 32
+  f9:	f00d      	ret.n
+  fb:	090000        	excw
+  fe:	8ae061        	l32r	a6, fffe2c80 <xthal_set_region_attribute+0xfffe2c80>
+ 101:	281604        	excw
+ 104:	941bf4        	excw
+ 107:	010327        	bnone	a3, a2, 10c <xthal_set_region_attribute+0x10c>
+ 10a:	001b      	addi.n	a0, a0, 1
+ 10c:	010397        	bnone	a3, a9, 111 <xthal_set_region_attribute+0x111>
+ 10f:	ff0b      	addi.n	a15, a15, -1
+ 111:	6109      	s32i.n	a0, a1, 24
+ 113:	023f07        	bltu	a15, a0, 119 <xthal_set_region_attribute+0x119>
+ 116:	ffcb86        	j	48 <xthal_set_region_attribute+0x48>
+ 119:	f27c      	movi.n	a2, -1
+ 11b:	21c8      	l32i.n	a12, a1, 8
+ 11d:	31d8      	l32i.n	a13, a1, 12
+ 11f:	41e8      	l32i.n	a14, a1, 16
+ 121:	51f8      	l32i.n	a15, a1, 20
+ 123:	1108      	l32i.n	a0, a1, 4
+ 125:	20c112        	addi	a1, a1, 32
+ 128:	f00d      	ret.n
+ 12a:	d27c      	movi.n	a2, -3
+ 12c:	21c8      	l32i.n	a12, a1, 8
+ 12e:	31d8      	l32i.n	a13, a1, 12
+ 130:	41e8      	l32i.n	a14, a1, 16
+ 132:	51f8      	l32i.n	a15, a1, 20
+ 134:	1108      	l32i.n	a0, a1, 4
+ 136:	20c112        	addi	a1, a1, 32
+ 139:	f00d      	ret.n
+ 13b:	020c00        	excw
+ 13e:	21c8      	l32i.n	a12, a1, 8
+ 140:	31d8      	l32i.n	a13, a1, 12
+ 142:	41e8      	l32i.n	a14, a1, 16
+ 144:	51f8      	l32i.n	a15, a1, 20
+ 146:	1108      	l32i.n	a0, a1, 4
+ 148:	20c112        	addi	a1, a1, 32
+ 14b:	f00d      	ret.n
+ 14d:	e27c      	movi.n	a2, -2
+ 14f:	21c8      	l32i.n	a12, a1, 8
+ 151:	31d8      	l32i.n	a13, a1, 12
+ 153:	41e8      	l32i.n	a14, a1, 16
+ 155:	51f8      	l32i.n	a15, a1, 20
+ 157:	1108      	l32i.n	a0, a1, 4
+ 159:	20c112        	addi	a1, a1, 32
+ 15c:	f00d      	ret.n
+ 15e:	0e0c      	movi.n	a14, 0
+ 160:	ffdb06        	j	d0 <xthal_set_region_attribute+0xd0>

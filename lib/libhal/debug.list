@@ -1,0 +1,56 @@
+
+debug.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_set_soft_break>:
+   0:	f0c112        	addi	a1, a1, -16
+   3:	11c9      	s32i.n	a12, a1, 4
+   5:	0109      	s32i.n	a0, a1, 0
+   7:	20c220        	or	a12, a2, a2
+   a:	000001        	l32r	a0, fffc000c <xthal_remove_soft_break+0xfffbffbc>
+   d:	0000c0        	callx0	a0
+  10:	000c02        	l8ui	a0, a12, 0
+  13:	020c32        	l8ui	a3, a12, 2
+  16:	010c42        	l8ui	a4, a12, 1
+  19:	113300        	slli	a3, a3, 16
+  1c:	114480        	slli	a4, a4, 8
+  1f:	004a      	add.n	a0, a0, a4
+  21:	003a      	add.n	a0, a0, a3
+  23:	113226        	beqi	a2, 3, 38 <xthal_set_soft_break+0x38>
+  26:	057c      	movi.n	a5, -16
+  28:	020c      	movi.n	a2, 0
+  2a:	014c52        	s8i	a5, a12, 1
+  2d:	0c09      	s32i.n	a0, a12, 0
+  2f:	11c8      	l32i.n	a12, a1, 4
+  31:	0108      	l32i.n	a0, a1, 0
+  33:	10c112        	addi	a1, a1, 16
+  36:	f00d      	ret.n
+  38:	064c      	movi.n	a6, 64
+  3a:	020c      	movi.n	a2, 0
+  3c:	024c22        	s8i	a2, a12, 2
+  3f:	014c62        	s8i	a6, a12, 1
+  42:	0c09      	s32i.n	a0, a12, 0
+  44:	11c8      	l32i.n	a12, a1, 4
+  46:	0108      	l32i.n	a0, a1, 0
+  48:	10c112        	addi	a1, a1, 16
+  4b:	f00d      	ret.n
+  4d:	000000        	ill
+
+00000050 <xthal_remove_soft_break>:
+  50:	004232        	s8i	a3, a2, 0
+  53:	414830        	srli	a4, a3, 8
+  56:	014242        	s8i	a4, a2, 1
+  59:	003396        	bltz	a3, 60 <xthal_remove_soft_break+0x10>
+  5c:	f00d      	ret.n
+  5e:	300000        	xor	a0, a0, a0
+  61:	52f550        	excw
+  64:	0d0242        	l8ui	a4, a2, 13
+  67:	f0          	.byte 0xf0

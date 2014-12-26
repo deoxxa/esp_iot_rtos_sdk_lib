@@ -1,0 +1,9 @@
+
+interrupts--vpri_to_intlevel.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text:
+
+00000000 <xthal_vpri_to_intlevel>:
+   0:	342420        	extui	a2, a2, 4, 4
+   3:	f00d      	ret.n

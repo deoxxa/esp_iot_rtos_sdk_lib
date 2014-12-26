@@ -1,0 +1,52 @@
+
+interrupts--vpri_int_enable.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_int_enable>:
+   0:	f0c112        	addi	a1, a1, -16
+   3:	21c9      	s32i.n	a12, a1, 8
+   5:	1109      	s32i.n	a0, a1, 4
+   7:	20c220        	or	a12, a2, a2
+   a:	000001        	l32r	a0, fffc000c <xthal_int_enable+0xfffc000c>
+   d:	0000c0        	callx0	a0
+  10:	000021        	l32r	a2, fffc0010 <xthal_int_enable+0xfffc0010>
+  13:	000031        	l32r	a3, fffc0014 <xthal_int_enable+0xfffc0014>
+  16:	000081        	l32r	a8, fffc0018 <xthal_int_enable+0xfffc0018>
+  19:	000001        	l32r	a0, fffc001c <xthal_int_enable+0xfffc001c>
+  1c:	0878      	l32i.n	a7, a8, 0
+  1e:	1058      	l32i.n	a5, a0, 4
+  20:	0338      	l32i.n	a3, a3, 0
+  22:	0228      	l32i.n	a2, a2, 0
+  24:	1033c0        	and	a3, a3, a12
+  27:	106230        	and	a6, a2, a3
+  2a:	204570        	or	a4, a5, a7
+  2d:	0149      	s32i.n	a4, a1, 0
+  2f:	198237        	bany	a2, a3, 4c <xthal_int_enable+0x4c>
+  32:	204c50        	or	a4, a12, a5
+  35:	1049      	s32i.n	a4, a0, 4
+  37:	000001        	l32r	a0, fffc0038 <xthal_int_enable+0xfffc0038>
+  3a:	0000c0        	callx0	a0
+  3d:	0128      	l32i.n	a2, a1, 0
+  3f:	1158      	l32i.n	a5, a1, 4
+  41:	21c8      	l32i.n	a12, a1, 8
+  43:	050d      	mov.n	a0, a5
+  45:	10c112        	addi	a1, a1, 16
+  48:	f00d      	ret.n
+  4a:	010000        	slli	a0, a0, 32
+  4d:	7c0000        	excw
+  50:	3670f2        	excw
+  53:	083920        	excw
+  56:	302620        	xor	a2, a6, a2
+  59:	0008      	l32i.n	a0, a0, 0
+  5b:	10cc20        	and	a12, a12, a2
+  5e:	0000c0        	callx0	a0
+  61:	000001        	l32r	a0, fffc0064 <xthal_int_enable+0xfffc0064>
+  64:	1058      	l32i.n	a5, a0, 4
+  66:	fff206        	j	32 <xthal_int_enable+0x32>

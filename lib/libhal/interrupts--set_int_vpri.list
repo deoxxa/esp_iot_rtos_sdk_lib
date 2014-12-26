@@ -1,0 +1,165 @@
+
+interrupts--set_int_vpri.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_set_int_vpri>:
+   0:	e0c112        	addi	a1, a1, -32
+   3:	31d9      	s32i.n	a13, a1, 12
+   5:	1109      	s32i.n	a0, a1, 4
+   7:	41e9      	s32i.n	a14, a1, 16
+   9:	21c9      	s32i.n	a12, a1, 8
+   b:	02ed      	mov.n	a14, a2
+   d:	03cd      	mov.n	a12, a3
+   f:	e00c      	movi.n	a0, 14
+  11:	02b027        	bgeu	a0, a2, 17 <xthal_set_int_vpri+0x17>
+  14:	005506        	j	16c <xthal_set_int_vpri+0x16c>
+  17:	02f3b6        	bltui	a3, 0x100, 1d <xthal_set_int_vpri+0x1d>
+  1a:	005386        	j	16c <xthal_set_int_vpri+0x16c>
+  1d:	000001        	l32r	a0, fffc0020 <xthal_set_int_vpri+0xfffc0020>
+  20:	020a      	add.n	a0, a2, a0
+  22:	000002        	l8ui	a0, a0, 0
+  25:	143016        	beqz	a0, 16c <xthal_set_int_vpri+0x16c>
+  28:	0230b6        	bltui	a0, 3, 2e <xthal_set_int_vpri+0x2e>
+  2b:	004f46        	j	16c <xthal_set_int_vpri+0x16c>
+  2e:	11d0c0        	slli	a13, a0, 4
+  31:	0109      	s32i.n	a0, a1, 0
+  33:	0eb3a6        	blti	a3, 16, 45 <xthal_set_int_vpri+0x45>
+  36:	f0a022        	movi	a2, 240
+  39:	102320        	and	a2, a3, a2
+  3c:	c02d20        	sub	a2, a13, a2
+  3f:	129256        	bnez	a2, 16c <xthal_set_int_vpri+0x16c>
+  42:	34c030        	extui	a12, a3, 0, 4
+  45:	000001        	l32r	a0, fffc0048 <xthal_set_int_vpri+0xfffc0048>
+  48:	0000c0        	callx0	a0
+  4b:	150c      	movi.n	a5, 1
+  4d:	f97c      	movi.n	a9, -1
+  4f:	000071        	l32r	a7, fffc0050 <xthal_set_int_vpri+0xfffc0050>
+  52:	000041        	l32r	a4, fffc0054 <xthal_set_int_vpri+0xfffc0054>
+  55:	203cd0        	or	a3, a12, a13
+  58:	4e4a      	add.n	a4, a14, a4
+  5a:	000422        	l8ui	a2, a4, 0
+  5d:	004432        	s8i	a3, a4, 0
+  60:	11ec16        	beqz	a12, 182 <xthal_set_int_vpri+0x182>
+  63:	000c      	movi.n	a0, 0
+  65:	116de0        	slli	a6, a13, 2
+  68:	0c3d      	mov.n	a3, a12
+  6a:	401e00        	ssl	a14
+  6d:	a18500        	sll	a8, a5
+  70:	41b130        	srli	a11, a3, 1
+  73:	667a      	add.n	a6, a6, a7
+  75:	0d6c07        	bbci	a12, 0, 86 <xthal_set_int_vpri+0x86>
+  78:	050d      	mov.n	a0, a5
+  7a:	dd1b      	addi.n	a13, a13, 1
+  7c:	46a8      	l32i.n	a10, a6, 16
+  7e:	664b      	addi.n	a6, a6, 4
+  80:	20a8a0        	or	a10, a8, a10
+  83:	0366a2        	s32i	a10, a6, 12
+  86:	018b16        	beqz	a11, a2 <xthal_set_int_vpri+0xa2>
+  89:	dd2b      	addi.n	a13, a13, 2
+  8b:	002b      	addi.n	a0, a0, 2
+  8d:	56e8      	l32i.n	a14, a6, 20
+  8f:	4638      	l32i.n	a3, a6, 16
+  91:	20e8e0        	or	a14, a8, a14
+  94:	668b      	addi.n	a6, a6, 8
+  96:	203830        	or	a3, a8, a3
+  99:	026632        	s32i	a3, a6, 8
+  9c:	0366e2        	s32i	a14, a6, 12
+  9f:	e69c07        	bne	a12, a0, 89 <xthal_set_int_vpri+0x89>
+  a2:	0c0d      	mov.n	a0, a12
+  a4:	02bcb6        	bltui	a12, 16, aa <xthal_set_int_vpri+0xaa>
+  a7:	003446        	j	17c <xthal_set_int_vpri+0x17c>
+  aa:	a06d70        	addx4	a6, a13, a7
+  ad:	303890        	xor	a3, a8, a9
+  b0:	051c      	movi.n	a5, 16
+  b2:	c05500        	sub	a5, a5, a0
+  b5:	0b6507        	bbci	a5, 0, c4 <xthal_set_int_vpri+0xc4>
+  b8:	001b      	addi.n	a0, a0, 1
+  ba:	4698      	l32i.n	a9, a6, 16
+  bc:	664b      	addi.n	a6, a6, 4
+  be:	109930        	and	a9, a9, a3
+  c1:	036692        	s32i	a9, a6, 12
+  c4:	41a150        	srli	a10, a5, 1
+  c7:	3a9c      	beqz.n	a10, de <xthal_set_int_vpri+0xde>
+  c9:	002b      	addi.n	a0, a0, 2
+  cb:	56b8      	l32i.n	a11, a6, 20
+  cd:	46d8      	l32i.n	a13, a6, 16
+  cf:	10bb30        	and	a11, a11, a3
+  d2:	668b      	addi.n	a6, a6, 8
+  d4:	10dd30        	and	a13, a13, a3
+  d7:	26d9      	s32i.n	a13, a6, 8
+  d9:	36b9      	s32i.n	a11, a6, 12
+  db:	eab066        	bnei	a0, 16, c9 <xthal_set_int_vpri+0xc9>
+  de:	0168      	l32i.n	a6, a1, 0
+  e0:	000091        	l32r	a9, fffc00e0 <xthal_set_int_vpri+0xfffc00e0>
+  e3:	1166a0        	slli	a6, a6, 6
+  e6:	767a      	add.n	a7, a6, a7
+  e8:	669a      	add.n	a6, a6, a9
+  ea:	070d      	mov.n	a0, a7
+  ec:	252092        	l32i	a9, a0, 148
+  ef:	2420a2        	l32i	a10, a0, 144
+  f2:	109930        	and	a9, a9, a3
+  f5:	008b      	addi.n	a0, a0, 8
+  f7:	10aa30        	and	a10, a10, a3
+  fa:	2260a2        	s32i	a10, a0, 136
+  fd:	236092        	s32i	a9, a0, 140
+ 100:	e89067        	bne	a0, a6, ec <xthal_set_int_vpri+0xec>
+ 103:	0d6c07        	bbci	a12, 0, 114 <xthal_set_int_vpri+0x114>
+ 106:	a0bc70        	addx4	a11, a12, a7
+ 109:	242ba2        	l32i	a10, a11, 144
+ 10c:	f03d      	nop.n
+ 10e:	20a8a0        	or	a10, a8, a10
+ 111:	246ba2        	s32i	a10, a11, 144
+ 114:	106c17        	bbci	a12, 1, 128 <xthal_set_int_vpri+0x128>
+ 117:	ed0c      	movi.n	a13, 14
+ 119:	10dcd0        	and	a13, a12, a13
+ 11c:	a0dd70        	addx4	a13, a13, a7
+ 11f:	242db2        	l32i	a11, a13, 144
+ 122:	20b8b0        	or	a11, a8, a11
+ 125:	246db2        	s32i	a11, a13, 144
+ 128:	106c27        	bbci	a12, 2, 13c <xthal_set_int_vpri+0x13c>
+ 12b:	c00c      	movi.n	a0, 12
+ 12d:	100c00        	and	a0, a12, a0
+ 130:	a00070        	addx4	a0, a0, a7
+ 133:	2420e2        	l32i	a14, a0, 144
+ 136:	20e8e0        	or	a14, a8, a14
+ 139:	2460e2        	s32i	a14, a0, 144
+ 13c:	800c      	movi.n	a0, 8
+ 13e:	100c00        	and	a0, a12, a0
+ 141:	0b6c37        	bbci	a12, 3, 150 <xthal_set_int_vpri+0x150>
+ 144:	a04070        	addx4	a4, a0, a7
+ 147:	242432        	l32i	a3, a4, 144
+ 14a:	203830        	or	a3, a8, a3
+ 14d:	246432        	s32i	a3, a4, 144
+ 150:	5129      	s32i.n	a2, a1, 20
+ 152:	000001        	l32r	a0, fffc0154 <xthal_set_int_vpri+0xfffc0154>
+ 155:	0000c0        	callx0	a0
+ 158:	21c8      	l32i.n	a12, a1, 8
+ 15a:	31d8      	l32i.n	a13, a1, 12
+ 15c:	41e8      	l32i.n	a14, a1, 16
+ 15e:	5108      	l32i.n	a0, a1, 20
+ 160:	1148      	l32i.n	a4, a1, 4
+ 162:	002d      	mov.n	a2, a0
+ 164:	040d      	mov.n	a0, a4
+ 166:	20c112        	addi	a1, a1, 32
+ 169:	f00d      	ret.n
+ 16b:	020c00        	excw
+ 16e:	21c8      	l32i.n	a12, a1, 8
+ 170:	31d8      	l32i.n	a13, a1, 12
+ 172:	41e8      	l32i.n	a14, a1, 16
+ 174:	1108      	l32i.n	a0, a1, 4
+ 176:	20c112        	addi	a1, a1, 32
+ 179:	f00d      	ret.n
+ 17b:	389000        	excw
+ 17e:	d6c630        	excw
+ 181:	ff          	.byte 0xff
+ 182:	000c      	movi.n	a0, 0
+ 184:	401e00        	ssl	a14
+ 187:	a18500        	sll	a8, a5
+ 18a:	ffc706        	j	aa <xthal_set_int_vpri+0xaa>

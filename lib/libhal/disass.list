@@ -1,0 +1,164 @@
+
+disass.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+   3:	001000        	excw
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_disassemble_size>:
+   0:	000222        	l8ui	a2, a2, 0
+   3:	000031        	l32r	a3, fffc0004 <xthal_disassemble+0xfffbfff4>
+   6:	342020        	extui	a2, a2, 0, 4
+   9:	223a      	add.n	a2, a2, a3
+   b:	000222        	l8ui	a2, a2, 0
+   e:	f00d      	ret.n
+
+00000010 <xthal_disassemble>:
+  10:	e0c112        	addi	a1, a1, -32
+  13:	0139      	s32i.n	a3, a1, 0
+  15:	6159      	s32i.n	a5, a1, 24
+  17:	1109      	s32i.n	a0, a1, 4
+  19:	31d9      	s32i.n	a13, a1, 12
+  1b:	7129      	s32i.n	a2, a1, 28
+  1d:	51f9      	s32i.n	a15, a1, 20
+  1f:	21c9      	s32i.n	a12, a1, 8
+  21:	41e9      	s32i.n	a14, a1, 16
+  23:	04cd      	mov.n	a12, a4
+  25:	06ed      	mov.n	a14, a6
+  27:	71f8      	l32i.n	a15, a1, 28
+  29:	04dd      	mov.n	a13, a4
+  2b:	0f2d      	mov.n	a2, a15
+  2d:	000005        	call0	30 <xthal_disassemble+0x20>
+  30:	000061        	l32r	a6, fffc0030 <xthal_disassemble+0xfffc0020>
+  33:	092c      	movi.n	a9, 32
+  35:	0400e0        	extui	a0, a14, 0, 1
+  38:	10c016        	beqz	a0, 148 <xthal_disassemble+0x138>
+  3b:	040c      	movi.n	a4, 0
+  3d:	6108      	l32i.n	a0, a1, 24
+  3f:	0138      	l32i.n	a3, a1, 0
+  41:	0d0a      	add.n	a0, a13, a0
+  43:	ffc002        	addi	a0, a0, -1
+  46:	441b      	addi.n	a4, a4, 1
+  48:	0abc07        	bgeu	a12, a0, 56 <xthal_disassemble+0x46>
+  4b:	355c30        	extui	a5, a3, 28, 4
+  4e:	565a      	add.n	a5, a6, a5
+  50:	000552        	l8ui	a5, a5, 0
+  53:	004c52        	s8i	a5, a12, 0
+  56:	cc1b      	addi.n	a12, a12, 1
+  58:	1133c0        	slli	a3, a3, 4
+  5b:	e78466        	bnei	a4, 8, 46 <xthal_disassemble+0x36>
+  5e:	5a6e17        	bbci	a14, 1, bc <xthal_disassemble+0xac>
+  61:	07bdc7        	bgeu	a13, a12, 6c <xthal_disassemble+0x5c>
+  64:	02bc07        	bgeu	a12, a0, 6a <xthal_disassemble+0x5a>
+  67:	004c92        	s8i	a9, a12, 0
+  6a:	cc1b      	addi.n	a12, a12, 1
+  6c:	040c      	movi.n	a4, 0
+  6e:	01cc32        	addi	a3, a12, 1
+  71:	37a427        	bge	a4, a2, ac <xthal_disassemble+0x9c>
+  74:	0dbc07        	bgeu	a12, a0, 85 <xthal_disassemble+0x75>
+  77:	000f72        	l8ui	a7, a15, 0
+  7a:	347470        	extui	a7, a7, 4, 4
+  7d:	767a      	add.n	a7, a6, a7
+  7f:	000772        	l8ui	a7, a7, 0
+  82:	004c72        	s8i	a7, a12, 0
+  85:	0fb307        	bgeu	a3, a0, 98 <xthal_disassemble+0x88>
+  88:	000f82        	l8ui	a8, a15, 0
+  8b:	ff1b      	addi.n	a15, a15, 1
+  8d:	348080        	extui	a8, a8, 0, 4
+  90:	868a      	add.n	a8, a6, a8
+  92:	000882        	l8ui	a8, a8, 0
+  95:	014c82        	s8i	a8, a12, 1
+  98:	441b      	addi.n	a4, a4, 1
+  9a:	3c2b      	addi.n	a3, a12, 2
+  9c:	02b307        	bgeu	a3, a0, a2 <xthal_disassemble+0x92>
+  9f:	024c92        	s8i	a9, a12, 2
+  a2:	c31b      	addi.n	a12, a3, 1
+  a4:	3c1b      	addi.n	a3, a12, 1
+  a6:	c73466        	bnei	a4, 3, 71 <xthal_disassemble+0x61>
+  a9:	0003c6        	j	bc <xthal_disassemble+0xac>
+  ac:	02bc07        	bgeu	a12, a0, b2 <xthal_disassemble+0xa2>
+  af:	004c92        	s8i	a9, a12, 0
+  b2:	e2b307        	bgeu	a3, a0, 98 <xthal_disassemble+0x88>
+  b5:	014c92        	s8i	a9, a12, 1
+  b8:	fff706        	j	98 <xthal_disassemble+0x88>
+  bb:	f23c00        	excw
+  be:	426e27        	bbci	a14, 2, 104 <xthal_disassemble+0xf4>
+  c1:	07bdc7        	bgeu	a13, a12, cc <xthal_disassemble+0xbc>
+  c4:	02bc07        	bgeu	a12, a0, ca <xthal_disassemble+0xba>
+  c7:	004c92        	s8i	a9, a12, 0
+  ca:	cc1b      	addi.n	a12, a12, 1
+  cc:	02bc07        	bgeu	a12, a0, d2 <xthal_disassemble+0xc2>
+  cf:	004c22        	s8i	a2, a12, 0
+  d2:	bc2b      	addi.n	a11, a12, 2
+  d4:	ac1b      	addi.n	a10, a12, 1
+  d6:	02ba07        	bgeu	a10, a0, dc <xthal_disassemble+0xcc>
+  d9:	014c22        	s8i	a2, a12, 1
+  dc:	fc3b      	addi.n	a15, a12, 3
+  de:	02bb07        	bgeu	a11, a0, e4 <xthal_disassemble+0xd4>
+  e1:	024c22        	s8i	a2, a12, 2
+  e4:	3c4b      	addi.n	a3, a12, 4
+  e6:	02bf07        	bgeu	a15, a0, ec <xthal_disassemble+0xdc>
+  e9:	034c92        	s8i	a9, a12, 3
+  ec:	4c5b      	addi.n	a4, a12, 5
+  ee:	02b307        	bgeu	a3, a0, f4 <xthal_disassemble+0xe4>
+  f1:	044c92        	s8i	a9, a12, 4
+  f4:	5c6b      	addi.n	a5, a12, 6
+  f6:	02b407        	bgeu	a4, a0, fc <xthal_disassemble+0xec>
+  f9:	054c92        	s8i	a9, a12, 5
+  fc:	02b507        	bgeu	a5, a0, 102 <xthal_disassemble+0xf2>
+  ff:	064c92        	s8i	a9, a12, 6
+ 102:	cc7b      	addi.n	a12, a12, 7
+ 104:	226e37        	bbci	a14, 3, 12a <xthal_disassemble+0x11a>
+ 107:	07bdc7        	bgeu	a13, a12, 112 <xthal_disassemble+0x102>
+ 10a:	02bc07        	bgeu	a12, a0, 110 <xthal_disassemble+0x100>
+ 10d:	004c92        	s8i	a9, a12, 0
+ 110:	cc1b      	addi.n	a12, a12, 1
+ 112:	02bc07        	bgeu	a12, a0, 118 <xthal_disassemble+0x108>
+ 115:	004c22        	s8i	a2, a12, 0
+ 118:	7c2b      	addi.n	a7, a12, 2
+ 11a:	6c1b      	addi.n	a6, a12, 1
+ 11c:	02b607        	bgeu	a6, a0, 122 <xthal_disassemble+0x112>
+ 11f:	014c22        	s8i	a2, a12, 1
+ 122:	02b707        	bgeu	a7, a0, 128 <xthal_disassemble+0x118>
+ 125:	024c22        	s8i	a2, a12, 2
+ 128:	cc3b      	addi.n	a12, a12, 3
+ 12a:	020c      	movi.n	a2, 0
+ 12c:	213c07        	bltu	a12, a0, 151 <xthal_disassemble+0x141>
+ 12f:	6188      	l32i.n	a8, a1, 24
+ 131:	41e8      	l32i.n	a14, a1, 16
+ 133:	f8ac      	beqz.n	a8, 166 <xthal_disassemble+0x156>
+ 135:	004022        	s8i	a2, a0, 0
+ 138:	51f8      	l32i.n	a15, a1, 20
+ 13a:	c02cd0        	sub	a2, a12, a13
+ 13d:	21c8      	l32i.n	a12, a1, 8
+ 13f:	31d8      	l32i.n	a13, a1, 12
+ 141:	1108      	l32i.n	a0, a1, 4
+ 143:	20c112        	addi	a1, a1, 32
+ 146:	f00d      	ret.n
+ 148:	6108      	l32i.n	a0, a1, 24
+ 14a:	0d0a      	add.n	a0, a13, a0
+ 14c:	000b      	addi.n	a0, a0, -1
+ 14e:	ffc306        	j	5e <xthal_disassemble+0x4e>
+ 151:	1108      	l32i.n	a0, a1, 4
+ 153:	41e8      	l32i.n	a14, a1, 16
+ 155:	004c22        	s8i	a2, a12, 0
+ 158:	51f8      	l32i.n	a15, a1, 20
+ 15a:	c02cd0        	sub	a2, a12, a13
+ 15d:	21c8      	l32i.n	a12, a1, 8
+ 15f:	31d8      	l32i.n	a13, a1, 12
+ 161:	20c112        	addi	a1, a1, 32
+ 164:	f00d      	ret.n
+ 166:	1108      	l32i.n	a0, a1, 4
+ 168:	41e8      	l32i.n	a14, a1, 16
+ 16a:	c02cd0        	sub	a2, a12, a13
+ 16d:	51f8      	l32i.n	a15, a1, 20
+ 16f:	21c8      	l32i.n	a12, a1, 8
+ 171:	31d8      	l32i.n	a13, a1, 12
+ 173:	20c112        	addi	a1, a1, 32
+ 176:	f00d      	ret.n

@@ -1,0 +1,37 @@
+
+interrupts--vpri_int_disable.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_int_disable>:
+   0:	f0c112        	addi	a1, a1, -16
+   3:	0129      	s32i.n	a2, a1, 0
+   5:	1109      	s32i.n	a0, a1, 4
+   7:	000001        	l32r	a0, fffc0008 <xthal_int_disable+0xfffc0008>
+   a:	0000c0        	callx0	a0
+   d:	000061        	l32r	a6, fffc0010 <xthal_int_disable+0xfffc0010>
+  10:	0138      	l32i.n	a3, a1, 0
+  12:	f47c      	movi.n	a4, -1
+  14:	303340        	xor	a3, a3, a4
+  17:	1608      	l32i.n	a0, a6, 4
+  19:	000041        	l32r	a4, fffc001c <xthal_int_disable+0xfffc001c>
+  1c:	105300        	and	a5, a3, a0
+  1f:	0428      	l32i.n	a2, a4, 0
+  21:	1659      	s32i.n	a5, a6, 4
+  23:	200020        	or	a0, a0, a2
+  26:	103320        	and	a3, a3, a2
+  29:	0439      	s32i.n	a3, a4, 0
+  2b:	026102        	s32i	a0, a1, 8
+  2e:	000001        	l32r	a0, fffc0030 <xthal_int_disable+0xfffc0030>
+  31:	0000c0        	callx0	a0
+  34:	1158      	l32i.n	a5, a1, 4
+  36:	2128      	l32i.n	a2, a1, 8
+  38:	050d      	mov.n	a0, a5
+  3a:	10c112        	addi	a1, a1, 16
+  3d:	f00d      	ret.n

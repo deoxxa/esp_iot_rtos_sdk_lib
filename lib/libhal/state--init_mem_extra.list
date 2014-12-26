@@ -1,0 +1,30 @@
+
+state--init_mem_extra.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_init_mem_extra>:
+   0:	000061        	l32r	a6, fffc0000 <xthal_init_mem_extra+0xfffc0000>
+   3:	0668      	l32i.n	a6, a6, 0
+   5:	526a      	add.n	a5, a2, a6
+   7:	1db257        	bgeu	a2, a5, 28 <xthal_init_mem_extra+0x28>
+   a:	763b      	addi.n	a7, a6, 3
+   c:	060c      	movi.n	a6, 0
+   e:	414270        	srli	a4, a7, 2
+  11:	418140        	srli	a8, a4, 1
+  14:	046727        	bbci	a7, 2, 1c <xthal_init_mem_extra+0x1c>
+  17:	006262        	s32i	a6, a2, 0
+  1a:	224b      	addi.n	a2, a2, 4
+  1c:	888c      	beqz.n	a8, 28 <xthal_init_mem_extra+0x28>
+  1e:	0269      	s32i.n	a6, a2, 0
+  20:	1269      	s32i.n	a6, a2, 4
+  22:	08c222        	addi	a2, a2, 8
+  25:	f53257        	bltu	a2, a5, 1e <xthal_init_mem_extra+0x1e>
+  28:	f00d      	ret.n

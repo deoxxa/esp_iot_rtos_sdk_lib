@@ -1,0 +1,21 @@
+
+interrupts--get_int_vpri.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal:
+
+00000000 <.literal>:
+   0:	000000        	ill
+	...
+
+Disassembly of section .text:
+
+00000000 <xthal_get_int_vpri>:
+   0:	e30c      	movi.n	a3, 14
+   2:	03b327        	bgeu	a3, a2, 9 <xthal_get_int_vpri+0x9>
+   5:	020c      	movi.n	a2, 0
+   7:	f00d      	ret.n
+   9:	000031        	l32r	a3, fffc000c <xthal_get_int_vpri+0xfffc000c>
+   c:	223a      	add.n	a2, a2, a3
+   e:	000222        	l8ui	a2, a2, 0
+  11:	f00d      	ret.n
