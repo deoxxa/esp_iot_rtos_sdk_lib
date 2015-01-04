@@ -642,7 +642,7 @@ Disassembly of section .irom0.text:
  34c:	ffed31        	l32r	a3, 300 <wdt_task+0x38>
  34f:	80a042        	movi	a4, 128
  352:	050c      	movi.n	a5, 0
- 354:	160c      	movi.n	a6, 1
+ 354:	561c      	movi.n	a6, 21
  356:	070c      	movi.n	a7, 0
  358:	020c      	movi.n	a2, 0
  35a:	0129      	s32i.n	a2, a1, 0
@@ -853,12 +853,12 @@ Disassembly of section .irom0.text:
  5fd:	ffc721        	l32r	a2, 51c <user_init_task+0xcc>
  600:	ffc831        	l32r	a3, 520 <user_init_task+0xd0>
  603:	050c      	movi.n	a5, 0
- 605:	260c      	movi.n	a6, 2
+ 605:	561c      	movi.n	a6, 21
  607:	ffc771        	l32r	a7, 524 <user_init_task+0xd4>
  60a:	040c      	movi.n	a4, 0
  60c:	0149      	s32i.n	a4, a1, 0
  60e:	1149      	s32i.n	a4, a1, 4
- 610:	00a142        	movi	a4, 0x100
+ 610:	00a442        	movi	a4, 0x400
  613:	ffcf01        	l32r	a0, 550 <user_init_task+0x100>
  616:	0000c0        	callx0	a0
  619:	ffce01        	l32r	a0, 554 <user_init_task+0x104>
